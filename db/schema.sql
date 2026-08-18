@@ -44,7 +44,10 @@ create unique index if not exists events_hash_idx on public.events (hash) where 
 
 -- Сайту отдаём только одобренное и уже с раскрытой площадкой,
 -- в той форме, которую фронтенд читает без преобразований.
-create or replace view public.events_public as
+-- create or replace не умеет менять типы колонок представления, поэтому пересоздаём.
+drop view if exists public.events_public;
+
+create view public.events_public as
 select e.id, e.title, e.short, e."desc",
        to_char(e.date, 'YYYY-MM-DD') as date,
        e.wd, e.time, e.dur,
