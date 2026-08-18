@@ -1,0 +1,42 @@
+name: Собрать афишу
+
+on:
+  schedule:
+    - cron: '10 4 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  collect:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Установить зависимости
+        working-directory: collector
+        run: |
+          npm install --no-audit --no-fund
+          npx playwright install --with-deps chromium
+
+      - name: Собрать события
+        working-directory: collector
+        env:
+          IG_OEMBED_TOKEN: ${{ secrets.IG_OEMBED_TOKEN }}
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE_SERVICE_KEY: ${{ secrets.SUPABASE_SERVICE_KEY }}
+          # MODERATION: '1'   # раскомментируйте, если новые события должны ждать одобрения
+        run: npm run collect
+
+      - name: Закоммитить data/
+        run: |
+          git config user.name  "klubok-bot"
+          git config user.email "bot@users.noreply.github.com"
+          git add data
+          git diff --staged --quiet || git commit -m "Афиша: обновление $(date -u +%F)"
+          git push
