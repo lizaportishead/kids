@@ -1,0 +1,14 @@
+{
+  "name": "klubok-collector",
+  "private": true,
+  "type": "module",
+  "version": "1.0.0",
+  "description": "Собирает детские события Белграда из открытых источников в data/events.json",
+  "scripts": {
+    "collect": "node index.mjs",
+    "collect:no-browser": "SKIP_BROWSER=1 node index.mjs"
+  },
+  "dependencies": {
+    "playwright": "^1.47.0"
+  }
+}
