@@ -18,21 +18,5 @@
     "cta": "Записаться на сайте Kinder Garden",
     "place": "Kinder Garden",
     "address": "Нови Београд"
-  },
-  {
-    "id": "ig-DZuvdMejdSV",
-    "type": "instagram",
-    "name": "Instagram",
-    "kind": "Инстаграм-пост",
-    "url": "https://www.instagram.com/p/DZuvdMejdSV/",
-    "cta": "Открыть пост в Instagram"
-  },
-  {
-    "id": "ig-DZ4rvVqDbY7",
-    "type": "instagram",
-    "name": "Instagram",
-    "kind": "Инстаграм-пост",
-    "url": "https://www.instagram.com/p/DZ4rvVqDbY7/",
-    "cta": "Открыть пост в Instagram"
   }
 ]
