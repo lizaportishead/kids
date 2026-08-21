@@ -1,7 +1,7 @@
 {
-  "updatedAt": "2026-08-21T12:56:19.397Z",
+  "updatedAt": "2026-08-21T13:08:24.194Z",
   "city": "Белград",
-  "count": 26,
+  "count": 30,
   "report": [
     {
       "source": "prodlenka",
@@ -15,13 +15,13 @@
     },
     {
       "source": "enter",
-      "status": "error",
-      "reason": "String.prototype.matchAll called with a non-global RegExp argument"
+      "status": "ok",
+      "events": 4
     },
     {
       "source": "supabase",
       "status": "ok",
-      "events": 34
+      "events": 38
     }
   ],
   "events": [
@@ -110,34 +110,6 @@
       }
     },
     {
-      "id": "966e83e0c03e",
-      "title": "«Фантастические существа» Summer Camp",
-      "short": "Смена проходит с 24 по 28 Августа.\nВ стоимость не включено питание. \nСтоимость питания – 3 500 RSD\n\nМесто в смене бронируется за ребенком после внесен",
-      "desc": "Смена проходит с 24 по 28 Августа.\nВ стоимость не включено питание. \nСтоимость питания – 3 500 RSD\n\nМесто в смене бронируется за ребенком после внесения оплаты. \nИнформация о способах оплаты будет отправлена администратором, после регистрации.",
-      "date": "2026-08-24",
-      "wd": null,
-      "time": "10:00",
-      "dur": "1 час",
-      "place": "Продлёнка",
-      "address": "Kneza Danila 54, Belgrade",
-      "placePhone": null,
-      "placeLink": null,
-      "age": [
-        3,
-        10
-      ],
-      "ageLabel": "3–10 лет",
-      "price": "23000 RSD",
-      "image": "https://base44.app/api/apps/6a048c57a9fe367e5ba1a2e6/files/mp/public/6a048c57a9fe367e5ba1a2e6/2c4453e62_.png",
-      "source": {
-        "id": "prodlenka",
-        "cta": "Записаться на сайте Продлёнки",
-        "url": "https://reg.prodlenka.me/location/prodlenka",
-        "kind": "Сайт записи",
-        "name": "Продлёнка"
-      }
-    },
-    {
       "id": "0992f4947387",
       "title": "Свой Большой Проект. Summer Camp (7 – 12 лет)",
       "short": "ЛЕТНИЙ ЛАГЕРЬ ПРОДЛЁНКИ ДЛЯ ДЕТЕЙ 7–12 ЛЕТ В САМОМ ЦЕНТРЕ БЕЛГРАДА.   \n\nКаждая неделя - отдельный тематический мир. Много движения, развития коммуника",
@@ -157,6 +129,34 @@
       "ageLabel": "7–12 лет",
       "price": "20000 RSD",
       "image": "https://base44.app/api/apps/6a048c57a9fe367e5ba1a2e6/files/mp/public/6a048c57a9fe367e5ba1a2e6/7436a3e39_53540512.png",
+      "source": {
+        "id": "prodlenka",
+        "cta": "Записаться на сайте Продлёнки",
+        "url": "https://reg.prodlenka.me/location/prodlenka",
+        "kind": "Сайт записи",
+        "name": "Продлёнка"
+      }
+    },
+    {
+      "id": "966e83e0c03e",
+      "title": "«Фантастические существа» Summer Camp",
+      "short": "Смена проходит с 24 по 28 Августа.\nВ стоимость не включено питание. \nСтоимость питания – 3 500 RSD\n\nМесто в смене бронируется за ребенком после внесен",
+      "desc": "Смена проходит с 24 по 28 Августа.\nВ стоимость не включено питание. \nСтоимость питания – 3 500 RSD\n\nМесто в смене бронируется за ребенком после внесения оплаты. \nИнформация о способах оплаты будет отправлена администратором, после регистрации.",
+      "date": "2026-08-24",
+      "wd": null,
+      "time": "10:00",
+      "dur": "1 час",
+      "place": "Продлёнка",
+      "address": "Kneza Danila 54, Belgrade",
+      "placePhone": null,
+      "placeLink": null,
+      "age": [
+        3,
+        10
+      ],
+      "ageLabel": "3–10 лет",
+      "price": "23000 RSD",
+      "image": "https://base44.app/api/apps/6a048c57a9fe367e5ba1a2e6/files/mp/public/6a048c57a9fe367e5ba1a2e6/2c4453e62_.png",
       "source": {
         "id": "prodlenka",
         "cta": "Записаться на сайте Продлёнки",
@@ -288,36 +288,6 @@
       }
     },
     {
-      "id": "indigo-robotics-6",
-      "title": "Робототехника",
-      "short": null,
-      "desc": null,
-      "date": null,
-      "wd": [
-        5
-      ],
-      "time": "11:00",
-      "dur": null,
-      "place": "Индиго",
-      "address": "Врачар, ул. Милешевска 3a, кв 3",
-      "placePhone": null,
-      "placeLink": null,
-      "age": [
-        6,
-        17
-      ],
-      "ageLabel": "6+",
-      "price": null,
-      "image": null,
-      "source": {
-        "id": "manual-indigo",
-        "cta": null,
-        "url": null,
-        "kind": "Расписание студии",
-        "name": "Индиго"
-      }
-    },
-    {
       "id": "indigo-ballet-3",
       "title": "Балет",
       "short": null,
@@ -378,6 +348,96 @@
       }
     },
     {
+      "id": "6b97d03e7001",
+      "title": "Baby english",
+      "short": "Занятие, на котором малыши играют, поют песни, читают сказки и творят на английском языке. Потому что мы свято верим, что вместо того, чтобы учить язы",
+      "desc": "Занятие, на котором малыши играют, поют песни, читают сказки и творят на английском языке. Потому что мы свято верим, что вместо того, чтобы учить язык, нужно на нем жить и говорить.",
+      "date": null,
+      "wd": [
+        5
+      ],
+      "time": "11:00",
+      "dur": "60 минут",
+      "place": "Enter",
+      "address": "Ресавска 34, Врачар, Белград",
+      "placePhone": null,
+      "placeLink": null,
+      "age": [
+        2,
+        4
+      ],
+      "ageLabel": "2–4 года",
+      "price": "1500 RSD (разовое), абонемент от 5400 RSD за 4 занятия",
+      "image": "data/images/enter-baby-english-5.png",
+      "source": {
+        "id": "enter",
+        "cta": "Записаться на сайте Enter",
+        "url": "https://enterspace.rs/classes/baby-english",
+        "kind": "Сайт студии",
+        "name": "Enter"
+      }
+    },
+    {
+      "id": "indigo-robotics-6",
+      "title": "Робототехника",
+      "short": null,
+      "desc": null,
+      "date": null,
+      "wd": [
+        5
+      ],
+      "time": "11:00",
+      "dur": null,
+      "place": "Индиго",
+      "address": "Врачар, ул. Милешевска 3a, кв 3",
+      "placePhone": null,
+      "placeLink": null,
+      "age": [
+        6,
+        17
+      ],
+      "ageLabel": "6+",
+      "price": null,
+      "image": null,
+      "source": {
+        "id": "manual-indigo",
+        "cta": null,
+        "url": null,
+        "kind": "Расписание студии",
+        "name": "Индиго"
+      }
+    },
+    {
+      "id": "b871516e1e0f",
+      "title": "Мама и малыш",
+      "short": "Группа для малышей, которым уже скучно дома! Здесь мы пробуем окружающий мир на ощупь, знакомимся с другими детьми, активно двигаемся и привыкаем к но",
+      "desc": "Группа для малышей, которым уже скучно дома! Здесь мы пробуем окружающий мир на ощупь, знакомимся с другими детьми, активно двигаемся и привыкаем к новому пространству в безопасной атмосфере.",
+      "date": null,
+      "wd": [
+        2
+      ],
+      "time": "17:00",
+      "dur": "60 минут",
+      "place": "Enter",
+      "address": "Ресавска 34, Врачар, Белград",
+      "placePhone": null,
+      "placeLink": null,
+      "age": [
+        3,
+        10
+      ],
+      "ageLabel": "3–10 лет",
+      "price": "1500 RSD (разовое), абонемент от 5400 RSD за 4 занятия",
+      "image": "data/images/enter-mama-i-malysh-2.png",
+      "source": {
+        "id": "enter",
+        "cta": "Записаться на сайте Enter",
+        "url": "https://enterspace.rs/classes/mama-i-malysh",
+        "kind": "Сайт студии",
+        "name": "Enter"
+      }
+    },
+    {
       "id": "indigo-vocal-3-6",
       "title": "Вокал",
       "short": null,
@@ -398,6 +458,36 @@
         6
       ],
       "ageLabel": "3–6 лет",
+      "price": null,
+      "image": null,
+      "source": {
+        "id": "manual-indigo",
+        "cta": null,
+        "url": null,
+        "kind": "Расписание студии",
+        "name": "Индиго"
+      }
+    },
+    {
+      "id": "indigo-painting-wed-4-7-elena",
+      "title": "Живопись (Елена)",
+      "short": null,
+      "desc": null,
+      "date": null,
+      "wd": [
+        2
+      ],
+      "time": "17:00",
+      "dur": null,
+      "place": "Индиго",
+      "address": "Врачар, ул. Милешевска 3a, кв 3",
+      "placePhone": null,
+      "placeLink": null,
+      "age": [
+        4,
+        17
+      ],
+      "ageLabel": "4+ и 7+",
       "price": null,
       "image": null,
       "source": {
@@ -469,68 +559,68 @@
       }
     },
     {
-      "id": "indigo-painting-wed-4-7-elena",
-      "title": "Живопись (Елена)",
-      "short": null,
-      "desc": null,
+      "id": "0a22f93efa7d",
+      "title": "Гимнастика",
+      "short": "Мягкое знакомство со спортом через интерес и поддержку. Здесь дети учатся чувствовать своё тело, развивают ловкость и уверенность в комфортной атмосфе",
+      "desc": "Мягкое знакомство со спортом через интерес и поддержку. Здесь дети учатся чувствовать своё тело, развивают ловкость и уверенность в комфортной атмосфере.",
       "date": null,
       "wd": [
         2
       ],
       "time": "17:00",
-      "dur": null,
-      "place": "Индиго",
-      "address": "Врачар, ул. Милешевска 3a, кв 3",
+      "dur": "1 час",
+      "place": "Enter",
+      "address": "Ресавска 34, Врачар, Белград",
       "placePhone": null,
       "placeLink": null,
       "age": [
-        4,
-        17
+        2,
+        4
       ],
-      "ageLabel": "4+ и 7+",
-      "price": null,
-      "image": null,
+      "ageLabel": "2–4 года",
+      "price": "1500 RSD (разовое), абонемент от 5400 RSD за 4 занятия",
+      "image": "data/images/enter-gymnastika-2.png",
       "source": {
-        "id": "manual-indigo",
-        "cta": null,
-        "url": null,
-        "kind": "Расписание студии",
-        "name": "Индиго"
+        "id": "enter",
+        "cta": "Записаться на сайте Enter",
+        "url": "https://enterspace.rs/classes/gymnastika",
+        "kind": "Сайт студии",
+        "name": "Enter"
       }
     },
     {
-      "id": "indigo-painting-tue-4-alina",
-      "title": "Живопись для детей (Алина)",
-      "short": null,
-      "desc": null,
+      "id": "fc9701fa80ba",
+      "title": "Гимнастика",
+      "short": "Мягкое знакомство со спортом через интерес и поддержку. Здесь дети учатся чувствовать своё тело, развивают ловкость и уверенность в комфортной атмосфе",
+      "desc": "Мягкое знакомство со спортом через интерес и поддержку. Здесь дети учатся чувствовать своё тело, развивают ловкость и уверенность в комфортной атмосфере.",
       "date": null,
       "wd": [
-        1
+        4
       ],
-      "time": "17:30",
-      "dur": null,
-      "place": "Индиго",
-      "address": "Врачар, ул. Милешевска 3a, кв 3",
+      "time": "17:00",
+      "dur": "1 час",
+      "place": "Enter",
+      "address": "Ресавска 34, Врачар, Белград",
       "placePhone": null,
       "placeLink": null,
       "age": [
-        4,
-        17
+        2,
+        4
       ],
-      "ageLabel": "4+",
-      "price": null,
-      "image": null,
+      "ageLabel": "2–4 года",
+      "price": "1500 RSD (разовое), абонемент от 5400 RSD за 4 занятия",
+      "image": "data/images/enter-gymnastika-4.png",
       "source": {
-        "id": "manual-indigo",
-        "cta": null,
-        "url": null,
-        "kind": "Расписание студии",
-        "name": "Индиго"
+        "id": "enter",
+        "cta": "Записаться на сайте Enter",
+        "url": "https://enterspace.rs/classes/gymnastika",
+        "kind": "Сайт студии",
+        "name": "Enter"
       }
     },
     {
-      "id": "indigo-ceramics-5",
-      "title": "Керамика для детей",
+      "id": "indigo-robotics-3-6",
+      "title": "Робототехника",
       "short": null,
       "desc": null,
       "date": null,
@@ -544,10 +634,10 @@
       "placePhone": null,
       "placeLink": null,
       "age": [
-        5,
-        17
+        3,
+        6
       ],
-      "ageLabel": "5+",
+      "ageLabel": "3–6 лет",
       "price": null,
       "image": null,
       "source": {
@@ -589,8 +679,38 @@
       }
     },
     {
-      "id": "indigo-robotics-3-6",
+      "id": "indigo-robotics-3plus",
       "title": "Робототехника",
+      "short": null,
+      "desc": null,
+      "date": null,
+      "wd": [
+        4
+      ],
+      "time": "17:30",
+      "dur": null,
+      "place": "Индиго",
+      "address": "Врачар, ул. Милешевска 3a, кв 3",
+      "placePhone": null,
+      "placeLink": null,
+      "age": [
+        3,
+        17
+      ],
+      "ageLabel": "3+",
+      "price": null,
+      "image": null,
+      "source": {
+        "id": "manual-indigo",
+        "cta": null,
+        "url": null,
+        "kind": "Расписание студии",
+        "name": "Индиго"
+      }
+    },
+    {
+      "id": "indigo-ceramics-5",
+      "title": "Керамика для детей",
       "short": null,
       "desc": null,
       "date": null,
@@ -604,10 +724,10 @@
       "placePhone": null,
       "placeLink": null,
       "age": [
-        3,
-        6
+        5,
+        17
       ],
-      "ageLabel": "3–6 лет",
+      "ageLabel": "5+",
       "price": null,
       "image": null,
       "source": {
@@ -650,13 +770,13 @@
       }
     },
     {
-      "id": "indigo-robotics-3plus",
-      "title": "Робототехника",
+      "id": "indigo-painting-tue-4-alina",
+      "title": "Живопись для детей (Алина)",
       "short": null,
       "desc": null,
       "date": null,
       "wd": [
-        4
+        1
       ],
       "time": "17:30",
       "dur": null,
@@ -665,10 +785,10 @@
       "placePhone": null,
       "placeLink": null,
       "age": [
-        3,
+        4,
         17
       ],
-      "ageLabel": "3+",
+      "ageLabel": "4+",
       "price": null,
       "image": null,
       "source": {
@@ -710,13 +830,13 @@
       }
     },
     {
-      "id": "indigo-texture-painting-8plus",
-      "title": "Текстурная живопись",
+      "id": "indigo-sketching-6",
+      "title": "Скетчинг",
       "short": null,
       "desc": null,
       "date": null,
       "wd": [
-        4
+        1
       ],
       "time": "18:30",
       "dur": null,
@@ -725,10 +845,10 @@
       "placePhone": null,
       "placeLink": null,
       "age": [
-        8,
-        99
+        6,
+        17
       ],
-      "ageLabel": "8+ лет и взрослые",
+      "ageLabel": "6+",
       "price": null,
       "image": null,
       "source": {
@@ -771,13 +891,13 @@
       }
     },
     {
-      "id": "indigo-sketching-6",
-      "title": "Скетчинг",
+      "id": "indigo-texture-painting-8plus",
+      "title": "Текстурная живопись",
       "short": null,
       "desc": null,
       "date": null,
       "wd": [
-        1
+        4
       ],
       "time": "18:30",
       "dur": null,
@@ -786,10 +906,10 @@
       "placePhone": null,
       "placeLink": null,
       "age": [
-        6,
-        17
+        8,
+        99
       ],
-      "ageLabel": "6+",
+      "ageLabel": "8+ лет и взрослые",
       "price": null,
       "image": null,
       "source": {
