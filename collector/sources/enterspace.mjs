@@ -30,8 +30,7 @@ export async function collectEnterspace(source, now = new Date()) {
 }
 
 function parseClassPage(html, url, source, now) {
-  const lines = [...html.matchAll(/<title>([^<]*)<\/title>/)];
-  const titleTag = lines[0] ? decode(lines[0][1]) : '';
+  const titleTag = decode((html.match(/<title>([^<]*)<\/title>/) || [])[1] || '');
   const metaDesc = decode((html.match(/<meta name="description" content="([^"]*)"/) || [])[1] || '');
 
   const textLines = html
