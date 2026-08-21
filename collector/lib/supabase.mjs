@@ -46,3 +46,14 @@ export async function pushEvents(events, { status = process.env.MODERATION ? 'pe
   if (!res.ok) throw new Error('Supabase ' + res.status + ': ' + (await res.text()).slice(0, 300));
   return { written: rows.length };
 }
+
+// Полная афиша из базы: в отличие от только что собранного, включает и площадки,
+// заведённые вручную мимо коллектора (например, добавленные напрямую в Supabase).
+export async function fetchPublicEvents() {
+  if (!supabaseEnabled) return null;
+  const res = await fetch(URL_.replace(/\/$/, '') + '/rest/v1/events_public?select=*', {
+    headers: { apikey: KEY, Authorization: 'Bearer ' + KEY }
+  });
+  if (!res.ok) throw new Error('Supabase ' + res.status + ': ' + (await res.text()).slice(0, 300));
+  return res.json();
+}

@@ -3,16 +3,17 @@ import { dirname, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { collectInstagram } from './sources/instagram.mjs';
 import { collectProdlenka } from './sources/prodlenka.mjs';
+import { collectEnterspace } from './sources/enterspace.mjs';
 import { dedupe } from './lib/normalize.mjs';
 import { saveImage } from './lib/images.mjs';
-import { pushEvents, supabaseEnabled } from './lib/supabase.mjs';
+import { fetchPublicEvents, pushEvents, supabaseEnabled } from './lib/supabase.mjs';
 
 const here = dirname(fileURLToPath(import.meta.url));
 const root = resolve(here, '..');
 const OUT = resolve(root, 'data/events.json');
 const IMG_DIR = resolve(root, 'data/images');
 
-const RUNNERS = { instagram: collectInstagram, prodlenka: collectProdlenka };
+const RUNNERS = { instagram: collectInstagram, prodlenka: collectProdlenka, enterspace: collectEnterspace };
 
 const now = new Date();
 const sources = JSON.parse(await readFile(resolve(here, 'sources.json'), 'utf8'));
@@ -64,6 +65,21 @@ if (supabaseEnabled && events.length) {
   console.error('SUPABASE_URL/SUPABASE_SERVICE_KEY не заданы — пишу только data/events.json');
 }
 
+// Зеркалим data/events.json с базы: там могут быть площадки, заведённые
+// вручную мимо коллектора (например, Индиго) — их не потерять при перезаписи.
+let mirrored = 0;
+if (supabaseEnabled) {
+  try {
+    const all = await fetchPublicEvents();
+    if (Array.isArray(all) && all.length) {
+      await writeFile(OUT, JSON.stringify({ updatedAt: now.toISOString(), city: 'Белград', count: all.length, report, events: all }, null, 2) + '\n');
+      mirrored = all.length;
+    }
+  } catch (err) {
+    report.push({ source: 'supabase-mirror', status: 'error', reason: String(err.message || err) });
+  }
+}
+
 console.table(report);
-console.log('Событий в афише:', events.length);
-if (report.some((r) => r.status === 'error') && !events.length) process.exitCode = 1;
+console.log('Событий в афише:', mirrored || events.length);
+if (report.some((r) => r.status === 'error') && !events.length && !mirrored) process.exitCode = 1;

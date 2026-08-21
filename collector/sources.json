@@ -18,5 +18,15 @@
     "cta": "Записаться на сайте Kinder Garden",
     "place": "Kinder Garden",
     "address": "Нови Београд"
+  },
+  {
+    "id": "enter",
+    "type": "enterspace",
+    "name": "Enter",
+    "kind": "Сайт студии",
+    "url": "https://enterspace.rs/classes",
+    "cta": "Записаться на сайте Enter",
+    "place": "Enter",
+    "address": "Ресавска 34, Врачар, Белград"
   }
 ]
