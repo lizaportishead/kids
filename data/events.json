@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-21T13:08:24.194Z",
+  "updatedAt": "2026-08-22T04:47:01.146Z",
   "city": "Белград",
   "count": 30,
   "report": [
@@ -408,31 +408,31 @@
       }
     },
     {
-      "id": "b871516e1e0f",
-      "title": "Мама и малыш",
-      "short": "Группа для малышей, которым уже скучно дома! Здесь мы пробуем окружающий мир на ощупь, знакомимся с другими детьми, активно двигаемся и привыкаем к но",
-      "desc": "Группа для малышей, которым уже скучно дома! Здесь мы пробуем окружающий мир на ощупь, знакомимся с другими детьми, активно двигаемся и привыкаем к новому пространству в безопасной атмосфере.",
+      "id": "fc9701fa80ba",
+      "title": "Гимнастика",
+      "short": "Мягкое знакомство со спортом через интерес и поддержку. Здесь дети учатся чувствовать своё тело, развивают ловкость и уверенность в комфортной атмосфе",
+      "desc": "Мягкое знакомство со спортом через интерес и поддержку. Здесь дети учатся чувствовать своё тело, развивают ловкость и уверенность в комфортной атмосфере.",
       "date": null,
       "wd": [
-        2
+        4
       ],
       "time": "17:00",
-      "dur": "60 минут",
+      "dur": "1 час",
       "place": "Enter",
       "address": "Ресавска 34, Врачар, Белград",
       "placePhone": null,
       "placeLink": null,
       "age": [
-        3,
-        10
+        2,
+        4
       ],
-      "ageLabel": "3–10 лет",
+      "ageLabel": "2–4 года",
       "price": "1500 RSD (разовое), абонемент от 5400 RSD за 4 занятия",
-      "image": "data/images/enter-mama-i-malysh-2.png",
+      "image": "data/images/enter-gymnastika-4.png",
       "source": {
         "id": "enter",
         "cta": "Записаться на сайте Enter",
-        "url": "https://enterspace.rs/classes/mama-i-malysh",
+        "url": "https://enterspace.rs/classes/gymnastika",
         "kind": "Сайт студии",
         "name": "Enter"
       }
@@ -589,43 +589,43 @@
       }
     },
     {
-      "id": "fc9701fa80ba",
-      "title": "Гимнастика",
-      "short": "Мягкое знакомство со спортом через интерес и поддержку. Здесь дети учатся чувствовать своё тело, развивают ловкость и уверенность в комфортной атмосфе",
-      "desc": "Мягкое знакомство со спортом через интерес и поддержку. Здесь дети учатся чувствовать своё тело, развивают ловкость и уверенность в комфортной атмосфере.",
+      "id": "b871516e1e0f",
+      "title": "Мама и малыш",
+      "short": "Группа для малышей, которым уже скучно дома! Здесь мы пробуем окружающий мир на ощупь, знакомимся с другими детьми, активно двигаемся и привыкаем к но",
+      "desc": "Группа для малышей, которым уже скучно дома! Здесь мы пробуем окружающий мир на ощупь, знакомимся с другими детьми, активно двигаемся и привыкаем к новому пространству в безопасной атмосфере.",
       "date": null,
       "wd": [
-        4
+        2
       ],
       "time": "17:00",
-      "dur": "1 час",
+      "dur": "60 минут",
       "place": "Enter",
       "address": "Ресавска 34, Врачар, Белград",
       "placePhone": null,
       "placeLink": null,
       "age": [
-        2,
-        4
+        3,
+        10
       ],
-      "ageLabel": "2–4 года",
+      "ageLabel": "3–10 лет",
       "price": "1500 RSD (разовое), абонемент от 5400 RSD за 4 занятия",
-      "image": "data/images/enter-gymnastika-4.png",
+      "image": "data/images/enter-mama-i-malysh-2.png",
       "source": {
         "id": "enter",
         "cta": "Записаться на сайте Enter",
-        "url": "https://enterspace.rs/classes/gymnastika",
+        "url": "https://enterspace.rs/classes/mama-i-malysh",
         "kind": "Сайт студии",
         "name": "Enter"
       }
     },
     {
-      "id": "indigo-robotics-3-6",
-      "title": "Робототехника",
+      "id": "indigo-painting-tue-4-alina",
+      "title": "Живопись для детей (Алина)",
       "short": null,
       "desc": null,
       "date": null,
       "wd": [
-        0
+        1
       ],
       "time": "17:30",
       "dur": null,
@@ -634,10 +634,10 @@
       "placePhone": null,
       "placeLink": null,
       "age": [
-        3,
-        6
+        4,
+        17
       ],
-      "ageLabel": "3–6 лет",
+      "ageLabel": "4+",
       "price": null,
       "image": null,
       "source": {
@@ -770,13 +770,13 @@
       }
     },
     {
-      "id": "indigo-painting-tue-4-alina",
-      "title": "Живопись для детей (Алина)",
+      "id": "indigo-robotics-3-6",
+      "title": "Робототехника",
       "short": null,
       "desc": null,
       "date": null,
       "wd": [
-        1
+        0
       ],
       "time": "17:30",
       "dur": null,
@@ -785,10 +785,10 @@
       "placePhone": null,
       "placeLink": null,
       "age": [
-        4,
-        17
+        3,
+        6
       ],
-      "ageLabel": "4+",
+      "ageLabel": "3–6 лет",
       "price": null,
       "image": null,
       "source": {
@@ -860,6 +860,36 @@
       }
     },
     {
+      "id": "indigo-texture-painting-8plus",
+      "title": "Текстурная живопись",
+      "short": null,
+      "desc": null,
+      "date": null,
+      "wd": [
+        4
+      ],
+      "time": "18:30",
+      "dur": null,
+      "place": "Индиго",
+      "address": "Врачар, ул. Милешевска 3a, кв 3",
+      "placePhone": null,
+      "placeLink": null,
+      "age": [
+        8,
+        99
+      ],
+      "ageLabel": "8+ лет и взрослые",
+      "price": null,
+      "image": null,
+      "source": {
+        "id": "manual-indigo",
+        "cta": null,
+        "url": null,
+        "kind": "Расписание студии",
+        "name": "Индиго"
+      }
+    },
+    {
       "id": "indigo-ballet-6",
       "title": "Балет",
       "short": null,
@@ -880,36 +910,6 @@
         17
       ],
       "ageLabel": "6+",
-      "price": null,
-      "image": null,
-      "source": {
-        "id": "manual-indigo",
-        "cta": null,
-        "url": null,
-        "kind": "Расписание студии",
-        "name": "Индиго"
-      }
-    },
-    {
-      "id": "indigo-texture-painting-8plus",
-      "title": "Текстурная живопись",
-      "short": null,
-      "desc": null,
-      "date": null,
-      "wd": [
-        4
-      ],
-      "time": "18:30",
-      "dur": null,
-      "place": "Индиго",
-      "address": "Врачар, ул. Милешевска 3a, кв 3",
-      "placePhone": null,
-      "placeLink": null,
-      "age": [
-        8,
-        99
-      ],
-      "ageLabel": "8+ лет и взрослые",
       "price": null,
       "image": null,
       "source": {
