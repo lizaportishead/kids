@@ -5,7 +5,7 @@ import { collectInstagram } from './sources/instagram.mjs';
 import { collectProdlenka } from './sources/prodlenka.mjs';
 import { collectEnterspace } from './sources/enterspace.mjs';
 import { collectMathline } from './sources/mathline.mjs';
-import { dedupe } from './lib/normalize.mjs';
+import { dedupe, filterEvents } from './lib/normalize.mjs';
 import { saveImage } from './lib/images.mjs';
 import { fetchPublicEvents, pushEvents, supabaseEnabled } from './lib/supabase.mjs';
 
@@ -40,7 +40,7 @@ for (const source of sources) {
   }
 }
 
-const events = dedupe(collected);
+const events = filterEvents(dedupe(collected));
 
 // Пустой прогон не должен обнулять афишу — оставляем прошлый файл.
 let previous = null;
@@ -71,7 +71,7 @@ if (supabaseEnabled && events.length) {
 let mirrored = 0;
 if (supabaseEnabled) {
   try {
-    const all = await fetchPublicEvents();
+    const all = filterEvents(await fetchPublicEvents());
     if (Array.isArray(all) && all.length) {
       await writeFile(OUT, JSON.stringify({ updatedAt: now.toISOString(), city: 'Белград', count: all.length, report, events: all }, null, 2) + '\n');
       mirrored = all.length;

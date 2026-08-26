@@ -62,3 +62,30 @@ export function dedupe(events) {
   }
   return [...seen.values()].sort((a, b) => (a.date || '9999').localeCompare(b.date || '9999') || a.time.localeCompare(b.time));
 }
+
+function durationMinutes(dur) {
+  if (!dur) return null;
+  const t = dur.toLowerCase();
+  const mMin = t.match(/(\d{1,4})\s*минут/);
+  if (mMin) return Number(mMin[1]);
+  const mHour = t.match(/(\d+(?:[.,]\d+)?)\s*час/);
+  if (mHour) return Math.round(Number(mHour[1].replace(',', '.')) * 60);
+  return null;
+}
+
+// На сайте показываем только разовые занятия, на которые можно прийти один
+// раз — не садики/лагеря/ночёвки (это подписки на месяц или многодневные
+// программы) и не что-либо длиннее 5 часов.
+export function isExcludedEvent(ev) {
+  const title = (ev.title || '').toLowerCase();
+  if (/лагерь|\bcamp\b/i.test(title)) return true;
+  if (/сад/.test(title)) return true;
+  if (/ночевк|ночёвк/.test(title)) return true;
+  const minutes = durationMinutes(ev.dur);
+  if (minutes && minutes > 300) return true;
+  return false;
+}
+
+export function filterEvents(events) {
+  return events.filter((e) => !isExcludedEvent(e));
+}
