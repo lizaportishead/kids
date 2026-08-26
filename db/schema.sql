@@ -28,6 +28,8 @@ create table if not exists public.events (
   age_label   text,
   price       text,
   image       text,
+  category       text,                         -- см. collector/lib/category.mjs
+  category_label text,
   source      jsonb not null default '{}',     -- {id,name,kind,url,cta}
   source_url  text generated always as (source->>'url') stored,
   hash        text,                            -- ключ дедупликации между источниками
@@ -57,7 +59,7 @@ select e.id, e.title, e.short, e."desc",
        p.link    as "placeLink",
        array[e.age_min, e.age_max] as age,
        e.age_label as "ageLabel",
-       e.price, e.image, e.source
+       e.price, e.image, e.category, e.category_label as "categoryLabel", e.source
 from public.events e
 left join public.place p on p.id = e.place
 where e.status = 'approved'
@@ -100,12 +102,13 @@ begin
   create temp table _incoming on commit drop as
   select p.id, p.title, p.short, p."desc", p.date, p.wd, p.time, p.dur,
          public.resolve_place(p.place_name, p.place_address) as place,
-         p.age_min, p.age_max, p.age_label, p.price, p.image, p.source,
+         p.age_min, p.age_max, p.age_label, p.price, p.image, p.category, p.category_label, p.source,
          p.hash, p.status, p.fetched_at
   from jsonb_to_recordset(payload) as p(
     id text, title text, short text, "desc" text, date date, wd smallint[],
     time text, dur text, place_name text, place_address text,
     age_min smallint, age_max smallint, age_label text, price text, image text,
+    category text, category_label text,
     source jsonb, hash text, status text, fetched_at timestamptz
   );
 
@@ -121,28 +124,30 @@ begin
 
   insert into public.events as e
     (id, title, short, "desc", date, wd, time, dur, place,
-     age_min, age_max, age_label, price, image, source, hash, status, fetched_at, updated_at)
+     age_min, age_max, age_label, price, image, category, category_label, source, hash, status, fetched_at, updated_at)
   select id, title, short, "desc", date, wd, time, dur, place,
-         age_min, age_max, age_label, price, image, source, hash, status, fetched_at, now()
+         age_min, age_max, age_label, price, image, category, category_label, source, hash, status, fetched_at, now()
   from _incoming
   on conflict (id) do update set
-    title      = excluded.title,
-    short      = excluded.short,
-    "desc"     = excluded."desc",
-    date       = excluded.date,
-    wd         = excluded.wd,
-    time       = excluded.time,
-    dur        = excluded.dur,
-    place      = coalesce(excluded.place, e.place),
-    age_min    = excluded.age_min,
-    age_max    = excluded.age_max,
-    age_label  = excluded.age_label,
-    price      = excluded.price,
-    image      = coalesce(excluded.image, e.image),
-    source     = excluded.source,
-    hash       = excluded.hash,
-    fetched_at = excluded.fetched_at,
-    updated_at = now();
+    title          = excluded.title,
+    short          = excluded.short,
+    "desc"         = excluded."desc",
+    date           = excluded.date,
+    wd             = excluded.wd,
+    time           = excluded.time,
+    dur            = excluded.dur,
+    place          = coalesce(excluded.place, e.place),
+    age_min        = excluded.age_min,
+    age_max        = excluded.age_max,
+    age_label      = excluded.age_label,
+    price          = excluded.price,
+    image          = coalesce(excluded.image, e.image),
+    category       = excluded.category,
+    category_label = excluded.category_label,
+    source         = excluded.source,
+    hash           = excluded.hash,
+    fetched_at     = excluded.fetched_at,
+    updated_at     = now();
   get diagnostics n = row_count;
   return n;
 end;

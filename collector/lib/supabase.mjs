@@ -21,6 +21,8 @@ function rowOf(ev, status) {
     age_label: ev.ageLabel,
     price: ev.price,
     image: ev.image,
+    category: ev.category || null,
+    category_label: ev.categoryLabel || null,
     source: ev.source,
     hash: ev.hash || null,
     status,
