@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-25T04:51:39.422Z",
+  "updatedAt": "2026-08-26T04:54:11.730Z",
   "city": "Белград",
   "count": 27,
   "report": [
@@ -26,34 +26,6 @@
   ],
   "events": [
     {
-      "id": "966e83e0c03e",
-      "title": "«Фантастические существа» Summer Camp",
-      "short": "Смена проходит с 24 по 28 Августа.\nВ стоимость не включено питание. \nСтоимость питания – 3 500 RSD\n\nМесто в смене бронируется за ребенком после внесен",
-      "desc": "Смена проходит с 24 по 28 Августа.\nВ стоимость не включено питание. \nСтоимость питания – 3 500 RSD\n\nМесто в смене бронируется за ребенком после внесения оплаты. \nИнформация о способах оплаты будет отправлена администратором, после регистрации.",
-      "date": "2026-08-24",
-      "wd": null,
-      "time": "10:00",
-      "dur": "1 час",
-      "place": "Продлёнка",
-      "address": "Kneza Danila 54, Belgrade",
-      "placePhone": null,
-      "placeLink": null,
-      "age": [
-        3,
-        10
-      ],
-      "ageLabel": "3–10 лет",
-      "price": "23000 RSD",
-      "image": "https://base44.app/api/apps/6a048c57a9fe367e5ba1a2e6/files/mp/public/6a048c57a9fe367e5ba1a2e6/2c4453e62_.png",
-      "source": {
-        "id": "prodlenka",
-        "cta": "Записаться на сайте Продлёнки",
-        "url": "https://reg.prodlenka.me/location/prodlenka",
-        "kind": "Сайт записи",
-        "name": "Продлёнка"
-      }
-    },
-    {
       "id": "0992f4947387",
       "title": "Свой Большой Проект. Summer Camp (7 – 12 лет)",
       "short": "ЛЕТНИЙ ЛАГЕРЬ ПРОДЛЁНКИ ДЛЯ ДЕТЕЙ 7–12 ЛЕТ В САМОМ ЦЕНТРЕ БЕЛГРАДА.   \n\nКаждая неделя - отдельный тематический мир. Много движения, развития коммуника",
@@ -73,6 +45,34 @@
       "ageLabel": "7–12 лет",
       "price": "20000 RSD",
       "image": "https://base44.app/api/apps/6a048c57a9fe367e5ba1a2e6/files/mp/public/6a048c57a9fe367e5ba1a2e6/7436a3e39_53540512.png",
+      "source": {
+        "id": "prodlenka",
+        "cta": "Записаться на сайте Продлёнки",
+        "url": "https://reg.prodlenka.me/location/prodlenka",
+        "kind": "Сайт записи",
+        "name": "Продлёнка"
+      }
+    },
+    {
+      "id": "966e83e0c03e",
+      "title": "«Фантастические существа» Summer Camp",
+      "short": "Смена проходит с 24 по 28 Августа.\nВ стоимость не включено питание. \nСтоимость питания – 3 500 RSD\n\nМесто в смене бронируется за ребенком после внесен",
+      "desc": "Смена проходит с 24 по 28 Августа.\nВ стоимость не включено питание. \nСтоимость питания – 3 500 RSD\n\nМесто в смене бронируется за ребенком после внесения оплаты. \nИнформация о способах оплаты будет отправлена администратором, после регистрации.",
+      "date": "2026-08-24",
+      "wd": null,
+      "time": "10:00",
+      "dur": "1 час",
+      "place": "Продлёнка",
+      "address": "Kneza Danila 54, Belgrade",
+      "placePhone": null,
+      "placeLink": null,
+      "age": [
+        3,
+        10
+      ],
+      "ageLabel": "3–10 лет",
+      "price": "23000 RSD",
+      "image": "https://base44.app/api/apps/6a048c57a9fe367e5ba1a2e6/files/mp/public/6a048c57a9fe367e5ba1a2e6/2c4453e62_.png",
       "source": {
         "id": "prodlenka",
         "cta": "Записаться на сайте Продлёнки",
@@ -565,36 +565,6 @@
       }
     },
     {
-      "id": "indigo-painting-tue-4-alina",
-      "title": "Живопись для детей (Алина)",
-      "short": null,
-      "desc": null,
-      "date": null,
-      "wd": [
-        1
-      ],
-      "time": "17:30",
-      "dur": null,
-      "place": "Индиго",
-      "address": "Врачар, ул. Милешевска 3a, кв 3",
-      "placePhone": null,
-      "placeLink": null,
-      "age": [
-        4,
-        17
-      ],
-      "ageLabel": "4+",
-      "price": null,
-      "image": null,
-      "source": {
-        "id": "manual-indigo",
-        "cta": null,
-        "url": null,
-        "kind": "Расписание студии",
-        "name": "Индиго"
-      }
-    },
-    {
       "id": "indigo-ceramics-5",
       "title": "Керамика для детей",
       "short": null,
@@ -614,6 +584,36 @@
         17
       ],
       "ageLabel": "5+",
+      "price": null,
+      "image": null,
+      "source": {
+        "id": "manual-indigo",
+        "cta": null,
+        "url": null,
+        "kind": "Расписание студии",
+        "name": "Индиго"
+      }
+    },
+    {
+      "id": "indigo-painting-tue-4-alina",
+      "title": "Живопись для детей (Алина)",
+      "short": null,
+      "desc": null,
+      "date": null,
+      "wd": [
+        1
+      ],
+      "time": "17:30",
+      "dur": null,
+      "place": "Индиго",
+      "address": "Врачар, ул. Милешевска 3a, кв 3",
+      "placePhone": null,
+      "placeLink": null,
+      "age": [
+        4,
+        17
+      ],
+      "ageLabel": "4+",
       "price": null,
       "image": null,
       "source": {
