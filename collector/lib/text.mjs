@@ -71,16 +71,47 @@ export function parseAge(text) {
   return null;
 }
 
-export function parsePrice(text) {
-  const m = text.match(/(\d[\d\s]{1,6})\s*(rsd|дин|динар[а-я]*|€|eur|евро)/i);
+const PRICE_COMBO_RE = /(\d[\d\s]*)\s*RSD\s*разовое\s*занятие(?:\s*\/\s*(\d[\d\s]*)\s*RSD\s*абонемент[^.]*)?\.?/i;
+const PRICE_SUBSCRIPTION_RE = /Стоимость абонемента\s*-?\s*(\d[\d\s]*)\s*RSD\s*для детей сада,\s*(\d[\d\s]*)\s*RSD\s*для остальных детей\.?/i;
+const PRICE_SIMPLE_RE = /(\d[\d\s]{1,6})\s*(rsd|дин|динар[а-я]*|€|eur|евро)\.?/i;
+const PRICE_FREE_RE = /\bбесплатн[а-я]*\.?/i;
+const PRICE_DONATE_RE = /\b(донат|по желанию)\.?/i;
+
+// Находит упоминание цены в тексте и возвращает распознанное значение вместе
+// с исходным фрагментом (raw), чтобы вызывающий код мог вырезать его из
+// описания и не дублировать цену на странице дважды.
+export function matchPrice(text) {
+  let m = text.match(PRICE_COMBO_RE);
+  if (m) {
+    let price = m[1].replace(/\s/g, '') + ' RSD (разовое)';
+    if (m[2]) price += ', абонемент от ' + m[2].replace(/\s/g, '') + ' RSD за 4 занятия';
+    return { price, raw: m[0] };
+  }
+  m = text.match(PRICE_SUBSCRIPTION_RE);
+  if (m) return { price: 'абонемент ' + m[1].replace(/\s/g, '') + ' RSD (дети сада) / ' + m[2].replace(/\s/g, '') + ' RSD (остальные)', raw: m[0] };
+  m = text.match(PRICE_SIMPLE_RE);
   if (m) {
     const n = m[1].replace(/\s/g, '');
     const unit = /€|eur|евро/i.test(m[2]) ? '€' : 'RSD';
-    return unit === '€' ? n + ' €' : n + ' RSD';
+    return { price: unit === '€' ? n + ' €' : n + ' RSD', raw: m[0] };
   }
-  if (/\bбесплатн/i.test(text)) return 'бесплатно';
-  if (/\bдонат|по желанию/i.test(text)) return 'донейшн';
+  m = text.match(PRICE_FREE_RE);
+  if (m) return { price: 'бесплатно', raw: m[0] };
+  m = text.match(PRICE_DONATE_RE);
+  if (m) return { price: 'донейшн', raw: m[0] };
   return null;
+}
+
+export function parsePrice(text) {
+  const m = matchPrice(text);
+  return m ? m.price : null;
+}
+
+// Вырезает найденный ранее фрагмент цены из текста описания, чтобы она не
+// повторялась дважды: и в отдельном поле price, и в самом описании.
+export function stripMatch(text, m) {
+  if (!m) return text;
+  return text.replace(m.raw, ' ').replace(/[ \t]{2,}/g, ' ').replace(/\s+([.,;:])/g, '$1').trim();
 }
 
 export function parseDuration(text) {

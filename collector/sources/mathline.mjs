@@ -1,6 +1,6 @@
 import { UA } from '../lib/images.mjs';
 import { normalize } from '../lib/normalize.mjs';
-import { parseAge, parsePrice } from '../lib/text.mjs';
+import { parseAge, matchPrice, stripMatch } from '../lib/text.mjs';
 
 // math-line.ru — статичный Tilda-сайт с виджетом табов (T395): расписания обеих
 // локаций лежат в исходном HTML одной страницы (просто скрыты CSS), поэтому
@@ -72,9 +72,11 @@ function parseSchedule(blockHtml, source, now) {
     const durMin = (Number(h2) * 60 + Number(min2)) - (Number(h1) * 60 + Number(min1));
     const dur = durMin > 0 ? String(durMin) + ' минут' : null;
 
-    const { title, desc } = splitTitleDesc(rest);
+    const { title, desc: descRaw } = splitTitleDesc(rest);
     const age = extractAge(rest);
-    const price = extractPrice(desc) || parsePrice(desc);
+    const priceMatch = matchPrice(descRaw);
+    const price = priceMatch ? priceMatch.price : null;
+    const desc = stripMatch(descRaw, priceMatch) || title;
 
     const raw = { title, desc, short: desc.slice(0, 150), wd: [currentWd], time, dur, price, age, url: source.url };
     const ev = normalize(source, raw, now);
@@ -100,19 +102,6 @@ function extractAge(rest) {
   const source = ageParen ? ageParen[1] : rest;
   // "1,5-3 лет" / "5,5-7 лет" — дробный возраст мешает регулярке parseAge, огрубляем до целого.
   return parseAge(source.replace(/(\d{1,2}),\d/g, '$1'));
-}
-
-// "N RSD разовое занятие / M RSD абонемент на 4 занятия" — частый формат на math-line.ru.
-function extractPrice(desc) {
-  const combo = desc.match(/(\d[\d\s]*)\s*RSD\s*разовое\s*занятие(?:\s*\/\s*(\d[\d\s]*)\s*RSD\s*абонемент[^.]*)?/i);
-  if (combo) {
-    let price = combo[1].replace(/\s/g, '') + ' RSD (разовое)';
-    if (combo[2]) price += ', абонемент от ' + combo[2].replace(/\s/g, '') + ' RSD за 4 занятия';
-    return price;
-  }
-  const sub = desc.match(/Стоимость абонемента\s*-?\s*(\d[\d\s]*)\s*RSD\s*для детей сада,\s*(\d[\d\s]*)\s*RSD\s*для остальных детей/i);
-  if (sub) return 'абонемент ' + sub[1].replace(/\s/g, '') + ' RSD (дети сада) / ' + sub[2].replace(/\s/g, '') + ' RSD (остальные)';
-  return null;
 }
 
 async function fetchPage(url) {
