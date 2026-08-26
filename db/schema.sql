@@ -39,6 +39,11 @@ create table if not exists public.events (
   updated_at  timestamptz default now()
 );
 
+-- create table if not exists не трогает уже существующую таблицу,
+-- поэтому новые колонки добавляем отдельно.
+alter table public.events add column if not exists category       text;
+alter table public.events add column if not exists category_label text;
+
 create index if not exists events_date_idx   on public.events (date);
 create index if not exists events_status_idx on public.events (status);
 create index if not exists events_place_idx  on public.events (place);
