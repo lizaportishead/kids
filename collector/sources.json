@@ -43,12 +43,32 @@
   {
     "id": "mathline-dorcol",
     "type": "mathline",
-    "name": "Mathline (Дорчол)",
+    "name": "Mathline",
     "kind": "Сайт студии",
     "url": "https://math-line.ru/beograde/reg#!/tab/1251358096-2",
     "tabNumber": 2,
     "cta": "Записаться на сайте Mathline",
-    "place": "Mathline (Дорчол)",
+    "place": "Mathline",
     "address": "Дорчол, Тадеуша Кошћушка 63"
+  },
+  {
+    "id": "indigo-vracar",
+    "type": "telegram",
+    "name": "Индиго (Врачар)",
+    "kind": "Расписание студии",
+    "url": "https://t.me/indigoartstudiobelgrade/2927",
+    "cta": "Записаться в Индиго",
+    "place": "Индиго (Врачар)",
+    "address": "Врачар, ул. Милешевска 3a, кв 3"
+  },
+  {
+    "id": "indigo-novi-beograd",
+    "type": "telegram",
+    "name": "Индиго (Новый Белград)",
+    "kind": "Расписание студии",
+    "url": "https://t.me/indigoartstudiobelgrade/2928",
+    "cta": "Записаться в Индиго",
+    "place": "Индиго (Новый Белград)",
+    "address": "Новый Белград, Антифашистичке борбе 17"
   }
 ]
