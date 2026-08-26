@@ -4,7 +4,7 @@
 const RULES = [
   ['school_prep', /подготовка к школ|математик/i],
   ['robotics', /робот|lego/i],
-  ['dance', /балет|танц/i],
+  ['dance', /балет|танц|хореограф/i],
   ['music', /вокал|музык/i],
   ['reading', /чита|чтени/i],
   ['languages', /английск|english|язык/i],
