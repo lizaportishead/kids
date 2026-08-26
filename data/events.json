@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-26T13:54:35.103Z",
+  "updatedAt": "2026-08-26T14:26:17.647Z",
   "city": "Белград",
   "count": 49,
   "report": [
@@ -31,7 +31,7 @@
     {
       "source": "supabase",
       "status": "ok",
-      "events": 68
+      "events": 35
     }
   ],
   "events": [
@@ -63,96 +63,6 @@
         "url": null,
         "kind": "Расписание студии",
         "name": "Индиго"
-      }
-    },
-    {
-      "id": "3fb800be0978",
-      "title": "Сказочная логоритмика",
-      "short": "Сказочная логоритмика (3-6 лет)",
-      "desc": "Сказочная логоритмика (3-6 лет)",
-      "date": null,
-      "wd": [
-        4
-      ],
-      "time": "10:30",
-      "dur": "60 минут",
-      "place": "Sreda Kids",
-      "address": "Старый Град, Косовска 32",
-      "placePhone": null,
-      "placeLink": null,
-      "age": [
-        3,
-        6
-      ],
-      "ageLabel": "3–6 лет",
-      "price": "уточняется",
-      "image": null,
-      "source": {
-        "id": "mathline-stari-grad",
-        "cta": "Записаться на сайте Mathline",
-        "url": "https://math-line.ru/beograde/reg#!/tab/1251358096-1",
-        "kind": "Сайт студии",
-        "name": "Sreda Kids"
-      }
-    },
-    {
-      "id": "969167b8afc9",
-      "title": "Клуб Английского языка FunnyEnglish",
-      "short": "Клуб Английского языка FunnyEnglish (3-6 лет)",
-      "desc": "Клуб Английского языка FunnyEnglish (3-6 лет)",
-      "date": null,
-      "wd": [
-        1
-      ],
-      "time": "10:30",
-      "dur": "60 минут",
-      "place": "Mathline (Дорчол)",
-      "address": "Дорчол, Тадеуша Кошћушка 63",
-      "placePhone": null,
-      "placeLink": null,
-      "age": [
-        3,
-        6
-      ],
-      "ageLabel": "3–6 лет",
-      "price": "уточняется",
-      "image": null,
-      "source": {
-        "id": "mathline-dorcol",
-        "cta": "Записаться на сайте Mathline",
-        "url": "https://math-line.ru/beograde/reg#!/tab/1251358096-2",
-        "kind": "Сайт студии",
-        "name": "Mathline (Дорчол)"
-      }
-    },
-    {
-      "id": "1e76b18607ef",
-      "title": "Сказочная логоритмика с нейропсихологом",
-      "short": "Сказочная логоритмика с нейропсихологом ( 3-5 лет)",
-      "desc": "Сказочная логоритмика с нейропсихологом ( 3-5 лет)",
-      "date": null,
-      "wd": [
-        2
-      ],
-      "time": "10:30",
-      "dur": "30 минут",
-      "place": "Mathline (Дорчол)",
-      "address": "Дорчол, Тадеуша Кошћушка 63",
-      "placePhone": null,
-      "placeLink": null,
-      "age": [
-        3,
-        5
-      ],
-      "ageLabel": "3–5 лет",
-      "price": "уточняется",
-      "image": null,
-      "source": {
-        "id": "mathline-dorcol",
-        "cta": "Записаться на сайте Mathline",
-        "url": "https://math-line.ru/beograde/reg#!/tab/1251358096-2",
-        "kind": "Сайт студии",
-        "name": "Mathline (Дорчол)"
       }
     },
     {
@@ -276,6 +186,36 @@
       }
     },
     {
+      "id": "3fb800be0978",
+      "title": "Сказочная логоритмика",
+      "short": "Сказочная логоритмика (3-6 лет)",
+      "desc": "Сказочная логоритмика (3-6 лет)",
+      "date": null,
+      "wd": [
+        4
+      ],
+      "time": "10:30",
+      "dur": "60 минут",
+      "place": "Sreda Kids",
+      "address": "Старый Град, Косовска 32",
+      "placePhone": null,
+      "placeLink": null,
+      "age": [
+        3,
+        6
+      ],
+      "ageLabel": "3–6 лет",
+      "price": "уточняется",
+      "image": null,
+      "source": {
+        "id": "mathline-stari-grad",
+        "cta": "Записаться на сайте Mathline",
+        "url": "https://math-line.ru/beograde/reg#!/tab/1251358096-1",
+        "kind": "Сайт студии",
+        "name": "Sreda Kids"
+      }
+    },
+    {
       "id": "5a25e5e721dd",
       "title": "Арт занятие: керамика, живопись",
       "short": "Арт занятие: керамика, живопись (4-6 лет)",
@@ -295,6 +235,66 @@
         6
       ],
       "ageLabel": "4–6 лет",
+      "price": "уточняется",
+      "image": null,
+      "source": {
+        "id": "mathline-dorcol",
+        "cta": "Записаться на сайте Mathline",
+        "url": "https://math-line.ru/beograde/reg#!/tab/1251358096-2",
+        "kind": "Сайт студии",
+        "name": "Mathline (Дорчол)"
+      }
+    },
+    {
+      "id": "969167b8afc9",
+      "title": "Клуб Английского языка FunnyEnglish",
+      "short": "Клуб Английского языка FunnyEnglish (3-6 лет)",
+      "desc": "Клуб Английского языка FunnyEnglish (3-6 лет)",
+      "date": null,
+      "wd": [
+        1
+      ],
+      "time": "10:30",
+      "dur": "60 минут",
+      "place": "Mathline (Дорчол)",
+      "address": "Дорчол, Тадеуша Кошћушка 63",
+      "placePhone": null,
+      "placeLink": null,
+      "age": [
+        3,
+        6
+      ],
+      "ageLabel": "3–6 лет",
+      "price": "уточняется",
+      "image": null,
+      "source": {
+        "id": "mathline-dorcol",
+        "cta": "Записаться на сайте Mathline",
+        "url": "https://math-line.ru/beograde/reg#!/tab/1251358096-2",
+        "kind": "Сайт студии",
+        "name": "Mathline (Дорчол)"
+      }
+    },
+    {
+      "id": "1e76b18607ef",
+      "title": "Сказочная логоритмика с нейропсихологом",
+      "short": "Сказочная логоритмика с нейропсихологом ( 3-5 лет)",
+      "desc": "Сказочная логоритмика с нейропсихологом ( 3-5 лет)",
+      "date": null,
+      "wd": [
+        2
+      ],
+      "time": "10:30",
+      "dur": "30 минут",
+      "place": "Mathline (Дорчол)",
+      "address": "Дорчол, Тадеуша Кошћушка 63",
+      "placePhone": null,
+      "placeLink": null,
+      "age": [
+        3,
+        5
+      ],
+      "ageLabel": "3–5 лет",
       "price": "уточняется",
       "image": null,
       "source": {
@@ -546,33 +546,33 @@
       }
     },
     {
-      "id": "0c682a8aa285",
-      "title": "Олимпиадная математика",
-      "short": "Олимпиадная математика (от 9 лет)",
-      "desc": "Олимпиадная математика (от 9 лет)",
+      "id": "f6cb57ccdad3",
+      "title": "Робототехника",
+      "short": "Робототехника (4-5 лет)",
+      "desc": "Робототехника (4-5 лет)",
       "date": null,
       "wd": [
-        5
+        1
       ],
       "time": "15:00",
       "dur": "60 минут",
-      "place": "Sreda Kids",
-      "address": "Старый Град, Косовска 32",
+      "place": "Mathline (Дорчол)",
+      "address": "Дорчол, Тадеуша Кошћушка 63",
       "placePhone": null,
       "placeLink": null,
       "age": [
-        3,
-        10
+        4,
+        5
       ],
-      "ageLabel": "3–10 лет",
-      "price": "1700 RSD (разовое), абонемент от 6000 RSD за 4 занятия",
+      "ageLabel": "4–5 лет",
+      "price": "уточняется",
       "image": null,
       "source": {
-        "id": "mathline-stari-grad",
+        "id": "mathline-dorcol",
         "cta": "Записаться на сайте Mathline",
-        "url": "https://math-line.ru/beograde/reg#!/tab/1251358096-1",
+        "url": "https://math-line.ru/beograde/reg#!/tab/1251358096-2",
         "kind": "Сайт студии",
-        "name": "Sreda Kids"
+        "name": "Mathline (Дорчол)"
       }
     },
     {
@@ -606,33 +606,33 @@
       }
     },
     {
-      "id": "f6cb57ccdad3",
-      "title": "Робототехника",
-      "short": "Робототехника (4-5 лет)",
-      "desc": "Робототехника (4-5 лет)",
+      "id": "0c682a8aa285",
+      "title": "Олимпиадная математика",
+      "short": "Олимпиадная математика (от 9 лет)",
+      "desc": "Олимпиадная математика (от 9 лет)",
       "date": null,
       "wd": [
-        1
+        5
       ],
       "time": "15:00",
       "dur": "60 минут",
-      "place": "Mathline (Дорчол)",
-      "address": "Дорчол, Тадеуша Кошћушка 63",
+      "place": "Sreda Kids",
+      "address": "Старый Град, Косовска 32",
       "placePhone": null,
       "placeLink": null,
       "age": [
-        4,
-        5
+        3,
+        10
       ],
-      "ageLabel": "4–5 лет",
-      "price": "уточняется",
+      "ageLabel": "3–10 лет",
+      "price": "1700 RSD (разовое), абонемент от 6000 RSD за 4 занятия",
       "image": null,
       "source": {
-        "id": "mathline-dorcol",
+        "id": "mathline-stari-grad",
         "cta": "Записаться на сайте Mathline",
-        "url": "https://math-line.ru/beograde/reg#!/tab/1251358096-2",
+        "url": "https://math-line.ru/beograde/reg#!/tab/1251358096-1",
         "kind": "Сайт студии",
-        "name": "Mathline (Дорчол)"
+        "name": "Sreda Kids"
       }
     },
     {
@@ -696,36 +696,6 @@
       }
     },
     {
-      "id": "8f8cb592b20c",
-      "title": "Зачитайка",
-      "short": "Зачитайка (4-5 лет) учимся читать с помощь кубиков Зайцева.",
-      "desc": "Зачитайка (4-5 лет) учимся читать с помощь кубиков Зайцева.",
-      "date": null,
-      "wd": [
-        1
-      ],
-      "time": "16:00",
-      "dur": "60 минут",
-      "place": "Sreda Kids",
-      "address": "Старый Град, Косовска 32",
-      "placePhone": null,
-      "placeLink": null,
-      "age": [
-        4,
-        5
-      ],
-      "ageLabel": "4–5 лет",
-      "price": "абонемент 4800 RSD (дети сада) / 6000 RSD (остальные)",
-      "image": null,
-      "source": {
-        "id": "mathline-stari-grad",
-        "cta": "Записаться на сайте Mathline",
-        "url": "https://math-line.ru/beograde/reg#!/tab/1251358096-1",
-        "kind": "Сайт студии",
-        "name": "Sreda Kids"
-      }
-    },
-    {
       "id": "911109df74f2",
       "title": "Робототехника",
       "short": "Робототехника (5-6 лет)",
@@ -776,6 +746,36 @@
       ],
       "ageLabel": "4–7 лет",
       "price": "1500 RSD (разовое), абонемент от 5000 RSD за 4 занятия",
+      "image": null,
+      "source": {
+        "id": "mathline-stari-grad",
+        "cta": "Записаться на сайте Mathline",
+        "url": "https://math-line.ru/beograde/reg#!/tab/1251358096-1",
+        "kind": "Сайт студии",
+        "name": "Sreda Kids"
+      }
+    },
+    {
+      "id": "8f8cb592b20c",
+      "title": "Зачитайка",
+      "short": "Зачитайка (4-5 лет) учимся читать с помощь кубиков Зайцева.",
+      "desc": "Зачитайка (4-5 лет) учимся читать с помощь кубиков Зайцева.",
+      "date": null,
+      "wd": [
+        1
+      ],
+      "time": "16:00",
+      "dur": "60 минут",
+      "place": "Sreda Kids",
+      "address": "Старый Град, Косовска 32",
+      "placePhone": null,
+      "placeLink": null,
+      "age": [
+        4,
+        5
+      ],
+      "ageLabel": "4–5 лет",
+      "price": "абонемент 4800 RSD (дети сада) / 6000 RSD (остальные)",
       "image": null,
       "source": {
         "id": "mathline-stari-grad",
@@ -934,36 +934,6 @@
         "url": null,
         "kind": "Расписание студии",
         "name": "Индиго"
-      }
-    },
-    {
-      "id": "0a22f93efa7d",
-      "title": "Гимнастика",
-      "short": "Мягкое знакомство со спортом через интерес и поддержку. Здесь дети учатся чувствовать своё тело, развивают ловкость и уверенность в комфортной атмосфе",
-      "desc": "Мягкое знакомство со спортом через интерес и поддержку. Здесь дети учатся чувствовать своё тело, развивают ловкость и уверенность в комфортной атмосфере.",
-      "date": null,
-      "wd": [
-        2
-      ],
-      "time": "17:00",
-      "dur": "1 час",
-      "place": "Enter",
-      "address": "Ресавска 34, Врачар, Белград",
-      "placePhone": null,
-      "placeLink": null,
-      "age": [
-        2,
-        4
-      ],
-      "ageLabel": "2–4 года",
-      "price": "1500 RSD (разовое), абонемент от 5400 RSD за 4 занятия",
-      "image": "data/images/enter-gymnastika-2.png",
-      "source": {
-        "id": "enter",
-        "cta": "Записаться на сайте Enter",
-        "url": "https://enterspace.rs/classes/gymnastika",
-        "kind": "Сайт студии",
-        "name": "Enter"
       }
     },
     {
@@ -1177,6 +1147,36 @@
       }
     },
     {
+      "id": "0a22f93efa7d",
+      "title": "Гимнастика",
+      "short": "Мягкое знакомство со спортом через интерес и поддержку. Здесь дети учатся чувствовать своё тело, развивают ловкость и уверенность в комфортной атмосфе",
+      "desc": "Мягкое знакомство со спортом через интерес и поддержку. Здесь дети учатся чувствовать своё тело, развивают ловкость и уверенность в комфортной атмосфере.",
+      "date": null,
+      "wd": [
+        2
+      ],
+      "time": "17:00",
+      "dur": "1 час",
+      "place": "Enter",
+      "address": "Ресавска 34, Врачар, Белград",
+      "placePhone": null,
+      "placeLink": null,
+      "age": [
+        2,
+        4
+      ],
+      "ageLabel": "2–4 года",
+      "price": "1500 RSD (разовое), абонемент от 5400 RSD за 4 занятия",
+      "image": "data/images/enter-gymnastika-2.png",
+      "source": {
+        "id": "enter",
+        "cta": "Записаться на сайте Enter",
+        "url": "https://enterspace.rs/classes/gymnastika",
+        "kind": "Сайт студии",
+        "name": "Enter"
+      }
+    },
+    {
       "id": "b871516e1e0f",
       "title": "Мама и малыш",
       "short": "Группа для малышей, которым уже скучно дома! Здесь мы пробуем окружающий мир на ощупь, знакомимся с другими детьми, активно двигаемся и привыкаем к но",
@@ -1207,36 +1207,6 @@
       }
     },
     {
-      "id": "indigo-painting-tue-4-alina",
-      "title": "Живопись для детей (Алина)",
-      "short": null,
-      "desc": null,
-      "date": null,
-      "wd": [
-        1
-      ],
-      "time": "17:30",
-      "dur": null,
-      "place": "Индиго",
-      "address": "Врачар, ул. Милешевска 3a, кв 3",
-      "placePhone": null,
-      "placeLink": null,
-      "age": [
-        4,
-        17
-      ],
-      "ageLabel": "4+",
-      "price": null,
-      "image": null,
-      "source": {
-        "id": "manual-indigo",
-        "cta": null,
-        "url": null,
-        "kind": "Расписание студии",
-        "name": "Индиго"
-      }
-    },
-    {
       "id": "indigo-ceramics-5",
       "title": "Керамика для детей",
       "short": null,
@@ -1256,36 +1226,6 @@
         17
       ],
       "ageLabel": "5+",
-      "price": null,
-      "image": null,
-      "source": {
-        "id": "manual-indigo",
-        "cta": null,
-        "url": null,
-        "kind": "Расписание студии",
-        "name": "Индиго"
-      }
-    },
-    {
-      "id": "indigo-graphics-7-alina",
-      "title": "Графика (Алина)",
-      "short": null,
-      "desc": null,
-      "date": null,
-      "wd": [
-        4
-      ],
-      "time": "17:30",
-      "dur": null,
-      "place": "Индиго",
-      "address": "Врачар, ул. Милешевска 3a, кв 3",
-      "placePhone": null,
-      "placeLink": null,
-      "age": [
-        7,
-        17
-      ],
-      "ageLabel": "7+",
       "price": null,
       "image": null,
       "source": {
@@ -1358,6 +1298,36 @@
       }
     },
     {
+      "id": "indigo-painting-tue-4-alina",
+      "title": "Живопись для детей (Алина)",
+      "short": null,
+      "desc": null,
+      "date": null,
+      "wd": [
+        1
+      ],
+      "time": "17:30",
+      "dur": null,
+      "place": "Индиго",
+      "address": "Врачар, ул. Милешевска 3a, кв 3",
+      "placePhone": null,
+      "placeLink": null,
+      "age": [
+        4,
+        17
+      ],
+      "ageLabel": "4+",
+      "price": null,
+      "image": null,
+      "source": {
+        "id": "manual-indigo",
+        "cta": null,
+        "url": null,
+        "kind": "Расписание студии",
+        "name": "Индиго"
+      }
+    },
+    {
       "id": "indigo-robotics-3-6",
       "title": "Робототехника",
       "short": null,
@@ -1377,6 +1347,36 @@
         6
       ],
       "ageLabel": "3–6 лет",
+      "price": null,
+      "image": null,
+      "source": {
+        "id": "manual-indigo",
+        "cta": null,
+        "url": null,
+        "kind": "Расписание студии",
+        "name": "Индиго"
+      }
+    },
+    {
+      "id": "indigo-graphics-7-alina",
+      "title": "Графика (Алина)",
+      "short": null,
+      "desc": null,
+      "date": null,
+      "wd": [
+        4
+      ],
+      "time": "17:30",
+      "dur": null,
+      "place": "Индиго",
+      "address": "Врачар, ул. Милешевска 3a, кв 3",
+      "placePhone": null,
+      "placeLink": null,
+      "age": [
+        7,
+        17
+      ],
+      "ageLabel": "7+",
       "price": null,
       "image": null,
       "source": {
@@ -1448,14 +1448,13 @@
       }
     },
     {
-      "id": "indigo-ballet-6",
-      "title": "Балет",
+      "id": "indigo-sketching-6",
+      "title": "Скетчинг",
       "short": null,
       "desc": null,
       "date": null,
       "wd": [
-        2,
-        4
+        1
       ],
       "time": "18:30",
       "dur": null,
@@ -1479,13 +1478,14 @@
       }
     },
     {
-      "id": "indigo-sketching-6",
-      "title": "Скетчинг",
+      "id": "indigo-ballet-6",
+      "title": "Балет",
       "short": null,
       "desc": null,
       "date": null,
       "wd": [
-        1
+        2,
+        4
       ],
       "time": "18:30",
       "dur": null,
