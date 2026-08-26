@@ -1,7 +1,7 @@
 {
-  "updatedAt": "2026-08-26T16:15:55.090Z",
+  "updatedAt": "2026-08-26T16:20:08.275Z",
   "city": "Белград",
-  "count": 49,
+  "count": 63,
   "report": [
     {
       "source": "prodlenka",
@@ -29,170 +29,52 @@
       "events": 6
     },
     {
+      "source": "indigo-vracar",
+      "status": "ok",
+      "events": 21
+    },
+    {
+      "source": "indigo-novi-beograd",
+      "status": "ok",
+      "events": 13
+    },
+    {
       "source": "supabase",
       "status": "ok",
-      "events": 35
+      "events": 68
     }
   ],
   "events": [
     {
-      "id": "indigo-painting-sat-4",
-      "title": "Живопись",
-      "short": null,
-      "desc": null,
+      "id": "bf2e8b22e567",
+      "title": "Живопись 4+",
+      "short": "Живопись 4+",
+      "desc": "Живопись 4+",
       "date": null,
       "wd": [
         5
       ],
       "time": "10:00",
-      "dur": null,
-      "place": "Индиго",
+      "dur": "1 час",
+      "place": "Индиго (Врачар)",
       "address": "Врачар, ул. Милешевска 3a, кв 3",
       "placePhone": null,
       "placeLink": null,
       "age": [
         4,
-        17
+        16
       ],
-      "ageLabel": "4+",
-      "price": null,
+      "ageLabel": "4+ лет",
+      "price": "уточняется",
       "image": null,
-      "category": null,
-      "categoryLabel": null,
+      "category": "art",
+      "categoryLabel": "Творчество",
       "source": {
-        "id": "manual-indigo",
-        "cta": null,
-        "url": null,
+        "id": "indigo-vracar",
+        "cta": "Записаться в Индиго",
+        "url": "https://t.me/indigoartstudiobelgrade/2927",
         "kind": "Расписание студии",
-        "name": "Индиго"
-      }
-    },
-    {
-      "id": "7c863ac762f1",
-      "title": "Клуб Английского языка FunnyEnglish",
-      "short": "Клуб Английского языка FunnyEnglish (3-6 лет)",
-      "desc": "Клуб Английского языка FunnyEnglish (3-6 лет)",
-      "date": null,
-      "wd": [
-        2
-      ],
-      "time": "10:30",
-      "dur": "60 минут",
-      "place": "Sreda Kids",
-      "address": "Старый Град, Косовска 32",
-      "placePhone": null,
-      "placeLink": null,
-      "age": [
-        3,
-        6
-      ],
-      "ageLabel": "3–6 лет",
-      "price": "уточняется",
-      "image": null,
-      "category": "languages",
-      "categoryLabel": "Языки",
-      "source": {
-        "id": "mathline-stari-grad",
-        "cta": "Записаться на сайте Mathline",
-        "url": "https://math-line.ru/beograde/reg#!/tab/1251358096-1",
-        "kind": "Сайт студии",
-        "name": "Sreda Kids"
-      }
-    },
-    {
-      "id": "indigo-art-1_5-3-elena",
-      "title": "Арт-занятие (Елена)",
-      "short": null,
-      "desc": null,
-      "date": null,
-      "wd": [
-        2
-      ],
-      "time": "10:30",
-      "dur": null,
-      "place": "Индиго",
-      "address": "Врачар, ул. Милешевска 3a, кв 3",
-      "placePhone": null,
-      "placeLink": null,
-      "age": [
-        1,
-        3
-      ],
-      "ageLabel": "1,5–3 года",
-      "price": null,
-      "image": null,
-      "category": null,
-      "categoryLabel": null,
-      "source": {
-        "id": "manual-indigo",
-        "cta": null,
-        "url": null,
-        "kind": "Расписание студии",
-        "name": "Индиго"
-      }
-    },
-    {
-      "id": "d8fb129a75ca",
-      "title": "Клуб Английского языка FunnyEnglish",
-      "short": "Клуб Английского языка FunnyEnglish (3-6 лет)",
-      "desc": "Клуб Английского языка FunnyEnglish (3-6 лет)",
-      "date": null,
-      "wd": [
-        0
-      ],
-      "time": "10:30",
-      "dur": "60 минут",
-      "place": "Sreda Kids",
-      "address": "Старый Град, Косовска 32",
-      "placePhone": null,
-      "placeLink": null,
-      "age": [
-        3,
-        6
-      ],
-      "ageLabel": "3–6 лет",
-      "price": "уточняется",
-      "image": null,
-      "category": "languages",
-      "categoryLabel": "Языки",
-      "source": {
-        "id": "mathline-stari-grad",
-        "cta": "Записаться на сайте Mathline",
-        "url": "https://math-line.ru/beograde/reg#!/tab/1251358096-1",
-        "kind": "Сайт студии",
-        "name": "Sreda Kids"
-      }
-    },
-    {
-      "id": "3fb800be0978",
-      "title": "Сказочная логоритмика",
-      "short": "Сказочная логоритмика (3-6 лет)",
-      "desc": "Сказочная логоритмика (3-6 лет)",
-      "date": null,
-      "wd": [
-        4
-      ],
-      "time": "10:30",
-      "dur": "60 минут",
-      "place": "Sreda Kids",
-      "address": "Старый Град, Косовска 32",
-      "placePhone": null,
-      "placeLink": null,
-      "age": [
-        3,
-        6
-      ],
-      "ageLabel": "3–6 лет",
-      "price": "уточняется",
-      "image": null,
-      "category": "early_dev",
-      "categoryLabel": "Раннее развитие",
-      "source": {
-        "id": "mathline-stari-grad",
-        "cta": "Записаться на сайте Mathline",
-        "url": "https://math-line.ru/beograde/reg#!/tab/1251358096-1",
-        "kind": "Сайт студии",
-        "name": "Sreda Kids"
+        "name": "Индиго (Врачар)"
       }
     },
     {
@@ -292,6 +174,166 @@
       }
     },
     {
+      "id": "45e8c3999193",
+      "title": "Арт-занятие дети 1,5-3 (Елена)",
+      "short": "Арт-занятие дети 1,5-3 (Елена)",
+      "desc": "Арт-занятие дети 1,5-3 (Елена)",
+      "date": null,
+      "wd": [
+        2
+      ],
+      "time": "10:30",
+      "dur": "1 час",
+      "place": "Индиго (Врачар)",
+      "address": "Врачар, ул. Милешевска 3a, кв 3",
+      "placePhone": null,
+      "placeLink": null,
+      "age": [
+        1,
+        3
+      ],
+      "ageLabel": "1–3 года",
+      "price": "уточняется",
+      "image": null,
+      "category": "art",
+      "categoryLabel": "Творчество",
+      "source": {
+        "id": "indigo-vracar",
+        "cta": "Записаться в Индиго",
+        "url": "https://t.me/indigoartstudiobelgrade/2927",
+        "kind": "Расписание студии",
+        "name": "Индиго (Врачар)"
+      }
+    },
+    {
+      "id": "411c236cf860",
+      "title": "Хореография вместе с мамой 2-3 года",
+      "short": "Хореография вместе с мамой 2-3 года",
+      "desc": "Хореография вместе с мамой 2-3 года",
+      "date": null,
+      "wd": [
+        1
+      ],
+      "time": "10:30",
+      "dur": "1 час",
+      "place": "Индиго (Новый Белград)",
+      "address": "Новый Белград, Антифашистичке борбе 17",
+      "placePhone": null,
+      "placeLink": null,
+      "age": [
+        2,
+        3
+      ],
+      "ageLabel": "2–3 года",
+      "price": "уточняется",
+      "image": null,
+      "category": null,
+      "categoryLabel": null,
+      "source": {
+        "id": "indigo-novi-beograd",
+        "cta": "Записаться в Индиго",
+        "url": "https://t.me/indigoartstudiobelgrade/2928",
+        "kind": "Расписание студии",
+        "name": "Индиго (Новый Белград)"
+      }
+    },
+    {
+      "id": "d8fb129a75ca",
+      "title": "Клуб Английского языка FunnyEnglish",
+      "short": "Клуб Английского языка FunnyEnglish (3-6 лет)",
+      "desc": "Клуб Английского языка FunnyEnglish (3-6 лет)",
+      "date": null,
+      "wd": [
+        0
+      ],
+      "time": "10:30",
+      "dur": "60 минут",
+      "place": "Sreda Kids",
+      "address": "Старый Град, Косовска 32",
+      "placePhone": null,
+      "placeLink": null,
+      "age": [
+        3,
+        6
+      ],
+      "ageLabel": "3–6 лет",
+      "price": "уточняется",
+      "image": null,
+      "category": "languages",
+      "categoryLabel": "Языки",
+      "source": {
+        "id": "mathline-stari-grad",
+        "cta": "Записаться на сайте Mathline",
+        "url": "https://math-line.ru/beograde/reg#!/tab/1251358096-1",
+        "kind": "Сайт студии",
+        "name": "Sreda Kids"
+      }
+    },
+    {
+      "id": "7c863ac762f1",
+      "title": "Клуб Английского языка FunnyEnglish",
+      "short": "Клуб Английского языка FunnyEnglish (3-6 лет)",
+      "desc": "Клуб Английского языка FunnyEnglish (3-6 лет)",
+      "date": null,
+      "wd": [
+        2
+      ],
+      "time": "10:30",
+      "dur": "60 минут",
+      "place": "Sreda Kids",
+      "address": "Старый Град, Косовска 32",
+      "placePhone": null,
+      "placeLink": null,
+      "age": [
+        3,
+        6
+      ],
+      "ageLabel": "3–6 лет",
+      "price": "уточняется",
+      "image": null,
+      "category": "languages",
+      "categoryLabel": "Языки",
+      "source": {
+        "id": "mathline-stari-grad",
+        "cta": "Записаться на сайте Mathline",
+        "url": "https://math-line.ru/beograde/reg#!/tab/1251358096-1",
+        "kind": "Сайт студии",
+        "name": "Sreda Kids"
+      }
+    },
+    {
+      "id": "3fb800be0978",
+      "title": "Сказочная логоритмика",
+      "short": "Сказочная логоритмика (3-6 лет)",
+      "desc": "Сказочная логоритмика (3-6 лет)",
+      "date": null,
+      "wd": [
+        4
+      ],
+      "time": "10:30",
+      "dur": "60 минут",
+      "place": "Sreda Kids",
+      "address": "Старый Град, Косовска 32",
+      "placePhone": null,
+      "placeLink": null,
+      "age": [
+        3,
+        6
+      ],
+      "ageLabel": "3–6 лет",
+      "price": "уточняется",
+      "image": null,
+      "category": "early_dev",
+      "categoryLabel": "Раннее развитие",
+      "source": {
+        "id": "mathline-stari-grad",
+        "cta": "Записаться на сайте Mathline",
+        "url": "https://math-line.ru/beograde/reg#!/tab/1251358096-1",
+        "kind": "Сайт студии",
+        "name": "Sreda Kids"
+      }
+    },
+    {
       "id": "f1fba855adfa",
       "title": "ToddlerClass Вместе с мамой",
       "short": "ToddlerClass Вместе с мамой (1,5-3 лет)",
@@ -324,67 +366,35 @@
       }
     },
     {
-      "id": "indigo-ballet-3",
-      "title": "Балет",
-      "short": null,
-      "desc": null,
+      "id": "ab18a0512555",
+      "title": "Робототехника 6+",
+      "short": "Робототехника 6+",
+      "desc": "Робототехника 6+",
       "date": null,
       "wd": [
         5
       ],
       "time": "11:00",
-      "dur": null,
-      "place": "Индиго",
-      "address": "Врачар, ул. Милешевска 3a, кв 3",
-      "placePhone": null,
-      "placeLink": null,
-      "age": [
-        3,
-        17
-      ],
-      "ageLabel": "3+",
-      "price": null,
-      "image": null,
-      "category": null,
-      "categoryLabel": null,
-      "source": {
-        "id": "manual-indigo",
-        "cta": null,
-        "url": null,
-        "kind": "Расписание студии",
-        "name": "Индиго"
-      }
-    },
-    {
-      "id": "indigo-robotics-6",
-      "title": "Робототехника",
-      "short": null,
-      "desc": null,
-      "date": null,
-      "wd": [
-        5
-      ],
-      "time": "11:00",
-      "dur": null,
-      "place": "Индиго",
+      "dur": "1 час",
+      "place": "Индиго (Врачар)",
       "address": "Врачар, ул. Милешевска 3a, кв 3",
       "placePhone": null,
       "placeLink": null,
       "age": [
         6,
-        17
+        16
       ],
-      "ageLabel": "6+",
-      "price": null,
+      "ageLabel": "6+ лет",
+      "price": "уточняется",
       "image": null,
-      "category": null,
-      "categoryLabel": null,
+      "category": "robotics",
+      "categoryLabel": "Робототехника",
       "source": {
-        "id": "manual-indigo",
-        "cta": null,
-        "url": null,
+        "id": "indigo-vracar",
+        "cta": "Записаться в Индиго",
+        "url": "https://t.me/indigoartstudiobelgrade/2927",
         "kind": "Расписание студии",
-        "name": "Индиго"
+        "name": "Индиго (Врачар)"
       }
     },
     {
@@ -420,17 +430,17 @@
       }
     },
     {
-      "id": "indigo-clay-2-3",
-      "title": "Лепка из глины",
-      "short": null,
-      "desc": null,
+      "id": "ba1fa74d17cb",
+      "title": "Лепка из глины 2-3",
+      "short": "Лепка из глины 2-3",
+      "desc": "Лепка из глины 2-3",
       "date": null,
       "wd": [
         3
       ],
       "time": "11:00",
-      "dur": null,
-      "place": "Индиго",
+      "dur": "1 час",
+      "place": "Индиго (Врачар)",
       "address": "Врачар, ул. Милешевска 3a, кв 3",
       "placePhone": null,
       "placeLink": null,
@@ -439,16 +449,80 @@
         3
       ],
       "ageLabel": "2–3 года",
-      "price": null,
+      "price": "уточняется",
       "image": null,
-      "category": null,
-      "categoryLabel": null,
+      "category": "art",
+      "categoryLabel": "Творчество",
       "source": {
-        "id": "manual-indigo",
-        "cta": null,
-        "url": null,
+        "id": "indigo-vracar",
+        "cta": "Записаться в Индиго",
+        "url": "https://t.me/indigoartstudiobelgrade/2927",
         "kind": "Расписание студии",
-        "name": "Индиго"
+        "name": "Индиго (Врачар)"
+      }
+    },
+    {
+      "id": "e6d0034c2b3c",
+      "title": "Балет 3+",
+      "short": "Балет 3+",
+      "desc": "Балет 3+",
+      "date": null,
+      "wd": [
+        5
+      ],
+      "time": "11:00",
+      "dur": "1 час",
+      "place": "Индиго (Врачар)",
+      "address": "Врачар, ул. Милешевска 3a, кв 3",
+      "placePhone": null,
+      "placeLink": null,
+      "age": [
+        3,
+        16
+      ],
+      "ageLabel": "3+ лет",
+      "price": "уточняется",
+      "image": null,
+      "category": "dance",
+      "categoryLabel": "Танцы",
+      "source": {
+        "id": "indigo-vracar",
+        "cta": "Записаться в Индиго",
+        "url": "https://t.me/indigoartstudiobelgrade/2927",
+        "kind": "Расписание студии",
+        "name": "Индиго (Врачар)"
+      }
+    },
+    {
+      "id": "cdf161ff13d7",
+      "title": "Лепка из глины 2-3",
+      "short": "Лепка из глины 2-3",
+      "desc": "Лепка из глины 2-3",
+      "date": null,
+      "wd": [
+        4
+      ],
+      "time": "11:30",
+      "dur": "1 час",
+      "place": "Индиго (Новый Белград)",
+      "address": "Новый Белград, Антифашистичке борбе 17",
+      "placePhone": null,
+      "placeLink": null,
+      "age": [
+        2,
+        3
+      ],
+      "ageLabel": "2–3 года",
+      "price": "уточняется",
+      "image": null,
+      "category": "art",
+      "categoryLabel": "Творчество",
+      "source": {
+        "id": "indigo-novi-beograd",
+        "cta": "Записаться в Индиго",
+        "url": "https://t.me/indigoartstudiobelgrade/2928",
+        "kind": "Расписание студии",
+        "name": "Индиго (Новый Белград)"
       }
     },
     {
@@ -481,6 +555,38 @@
         "url": "https://math-line.ru/beograde/reg#!/tab/1251358096-2",
         "kind": "Сайт студии",
         "name": "Mathline"
+      }
+    },
+    {
+      "id": "bdd741864d57",
+      "title": "Живопись 3+",
+      "short": "Живопись 3+",
+      "desc": "Живопись 3+",
+      "date": null,
+      "wd": [
+        5
+      ],
+      "time": "12:30",
+      "dur": "1 час",
+      "place": "Индиго (Новый Белград)",
+      "address": "Новый Белград, Антифашистичке борбе 17",
+      "placePhone": null,
+      "placeLink": null,
+      "age": [
+        3,
+        16
+      ],
+      "ageLabel": "3+ лет",
+      "price": "уточняется",
+      "image": null,
+      "category": "art",
+      "categoryLabel": "Творчество",
+      "source": {
+        "id": "indigo-novi-beograd",
+        "cta": "Записаться в Индиго",
+        "url": "https://t.me/indigoartstudiobelgrade/2928",
+        "kind": "Расписание студии",
+        "name": "Индиго (Новый Белград)"
       }
     },
     {
@@ -612,38 +718,6 @@
       }
     },
     {
-      "id": "0c682a8aa285",
-      "title": "Олимпиадная математика",
-      "short": "Олимпиадная математика (от 9 лет)",
-      "desc": "Олимпиадная математика (от 9 лет)",
-      "date": null,
-      "wd": [
-        5
-      ],
-      "time": "15:00",
-      "dur": "60 минут",
-      "place": "Sreda Kids",
-      "address": "Старый Град, Косовска 32",
-      "placePhone": null,
-      "placeLink": null,
-      "age": [
-        3,
-        10
-      ],
-      "ageLabel": "3–10 лет",
-      "price": "1700 RSD (разовое), абонемент от 6000 RSD за 4 занятия",
-      "image": null,
-      "category": "school_prep",
-      "categoryLabel": "Подготовка к школе",
-      "source": {
-        "id": "mathline-stari-grad",
-        "cta": "Записаться на сайте Mathline",
-        "url": "https://math-line.ru/beograde/reg#!/tab/1251358096-1",
-        "kind": "Сайт студии",
-        "name": "Sreda Kids"
-      }
-    },
-    {
       "id": "f6cb57ccdad3",
       "title": "Робототехника",
       "short": "Робототехника (4-5 лет)",
@@ -676,15 +750,15 @@
       }
     },
     {
-      "id": "bfa19324cba3",
-      "title": "Русский язык (1-2 класс)",
-      "short": "Русский язык (1-2 класс)",
-      "desc": "Русский язык (1-2 класс)",
+      "id": "0c682a8aa285",
+      "title": "Олимпиадная математика",
+      "short": "Олимпиадная математика (от 9 лет)",
+      "desc": "Олимпиадная математика (от 9 лет)",
       "date": null,
       "wd": [
-        2
+        5
       ],
-      "time": "15:30",
+      "time": "15:00",
       "dur": "60 минут",
       "place": "Sreda Kids",
       "address": "Старый Град, Косовска 32",
@@ -695,10 +769,10 @@
         10
       ],
       "ageLabel": "3–10 лет",
-      "price": "уточняется",
+      "price": "1700 RSD (разовое), абонемент от 6000 RSD за 4 занятия",
       "image": null,
-      "category": "languages",
-      "categoryLabel": "Языки",
+      "category": "school_prep",
+      "categoryLabel": "Подготовка к школе",
       "source": {
         "id": "mathline-stari-grad",
         "cta": "Записаться на сайте Mathline",
@@ -740,6 +814,38 @@
       }
     },
     {
+      "id": "bfa19324cba3",
+      "title": "Русский язык (1-2 класс)",
+      "short": "Русский язык (1-2 класс)",
+      "desc": "Русский язык (1-2 класс)",
+      "date": null,
+      "wd": [
+        2
+      ],
+      "time": "15:30",
+      "dur": "60 минут",
+      "place": "Sreda Kids",
+      "address": "Старый Град, Косовска 32",
+      "placePhone": null,
+      "placeLink": null,
+      "age": [
+        3,
+        10
+      ],
+      "ageLabel": "3–10 лет",
+      "price": "уточняется",
+      "image": null,
+      "category": "languages",
+      "categoryLabel": "Языки",
+      "source": {
+        "id": "mathline-stari-grad",
+        "cta": "Записаться на сайте Mathline",
+        "url": "https://math-line.ru/beograde/reg#!/tab/1251358096-1",
+        "kind": "Сайт студии",
+        "name": "Sreda Kids"
+      }
+    },
+    {
       "id": "911109df74f2",
       "title": "Робототехника",
       "short": "Робототехника (5-6 лет)",
@@ -769,38 +875,6 @@
         "url": "https://math-line.ru/beograde/reg#!/tab/1251358096-2",
         "kind": "Сайт студии",
         "name": "Mathline"
-      }
-    },
-    {
-      "id": "dfd15b39561f",
-      "title": "Танцевально-театральная студия Софит",
-      "short": "Танцевально-театральная студия Софит (4-7 лет)",
-      "desc": "Танцевально-театральная студия Софит (4-7 лет)",
-      "date": null,
-      "wd": [
-        4
-      ],
-      "time": "16:00",
-      "dur": "60 минут",
-      "place": "Sreda Kids",
-      "address": "Старый Град, Косовска 32",
-      "placePhone": null,
-      "placeLink": null,
-      "age": [
-        4,
-        7
-      ],
-      "ageLabel": "4–7 лет",
-      "price": "1500 RSD (разовое), абонемент от 5000 RSD за 4 занятия",
-      "image": null,
-      "category": "dance",
-      "categoryLabel": "Танцы",
-      "source": {
-        "id": "mathline-stari-grad",
-        "cta": "Записаться на сайте Mathline",
-        "url": "https://math-line.ru/beograde/reg#!/tab/1251358096-1",
-        "kind": "Сайт студии",
-        "name": "Sreda Kids"
       }
     },
     {
@@ -836,79 +910,15 @@
       }
     },
     {
-      "id": "9b0f01e20bd7",
-      "title": "Сербский язык",
-      "short": "Сербский язык (4-6 лет)",
-      "desc": "Сербский язык (4-6 лет)",
+      "id": "dfd15b39561f",
+      "title": "Танцевально-театральная студия Софит",
+      "short": "Танцевально-театральная студия Софит (4-7 лет)",
+      "desc": "Танцевально-театральная студия Софит (4-7 лет)",
       "date": null,
       "wd": [
-        0
+        4
       ],
-      "time": "17:00",
-      "dur": "60 минут",
-      "place": "Sreda Kids",
-      "address": "Старый Град, Косовска 32",
-      "placePhone": null,
-      "placeLink": null,
-      "age": [
-        4,
-        6
-      ],
-      "ageLabel": "4–6 лет",
-      "price": "уточняется",
-      "image": null,
-      "category": "languages",
-      "categoryLabel": "Языки",
-      "source": {
-        "id": "mathline-stari-grad",
-        "cta": "Записаться на сайте Mathline",
-        "url": "https://math-line.ru/beograde/reg#!/tab/1251358096-1",
-        "kind": "Сайт студии",
-        "name": "Sreda Kids"
-      }
-    },
-    {
-      "id": "fb27d47f3cb5",
-      "title": "Робототехника Lego WeDo",
-      "short": "Робототехника Lego WeDo (4-6 лет)",
-      "desc": "Робототехника Lego WeDo (4-6 лет)",
-      "date": null,
-      "wd": [
-        0
-      ],
-      "time": "17:00",
-      "dur": "60 минут",
-      "place": "Sreda Kids",
-      "address": "Старый Град, Косовска 32",
-      "placePhone": null,
-      "placeLink": null,
-      "age": [
-        4,
-        6
-      ],
-      "ageLabel": "4–6 лет",
-      "price": "уточняется",
-      "image": null,
-      "category": "robotics",
-      "categoryLabel": "Робототехника",
-      "source": {
-        "id": "mathline-stari-grad",
-        "cta": "Записаться на сайте Mathline",
-        "url": "https://math-line.ru/beograde/reg#!/tab/1251358096-1",
-        "kind": "Сайт студии",
-        "name": "Sreda Kids"
-      }
-    },
-    {
-      "id": "1bb6b0df72c8",
-      "title": "Гимнастика",
-      "short": "Гимнастика (4-7 лет)",
-      "desc": "Гимнастика (4-7 лет)",
-      "date": null,
-      "wd": [
-        0
-      ],
-      "time": "17:00",
+      "time": "16:00",
       "dur": "60 минут",
       "place": "Sreda Kids",
       "address": "Старый Град, Косовска 32",
@@ -919,10 +929,10 @@
         7
       ],
       "ageLabel": "4–7 лет",
-      "price": "уточняется",
+      "price": "1500 RSD (разовое), абонемент от 5000 RSD за 4 занятия",
       "image": null,
-      "category": "sport",
-      "categoryLabel": "Спорт",
+      "category": "dance",
+      "categoryLabel": "Танцы",
       "source": {
         "id": "mathline-stari-grad",
         "cta": "Записаться на сайте Mathline",
@@ -932,115 +942,50 @@
       }
     },
     {
-      "id": "indigo-pleinair-5-elena",
-      "title": "Пленер для детей (Елена)",
-      "short": null,
-      "desc": null,
+      "id": "196d931fa3bb",
+      "title": "Спортивная гимнастика 3-5",
+      "short": "Спортивная гимнастика 3-5",
+      "desc": "Спортивная гимнастика 3-5",
       "date": null,
       "wd": [
-        4
+        1
       ],
-      "time": "17:00",
-      "dur": null,
-      "place": "Индиго",
-      "address": "Врачар, ул. Милешевска 3a, кв 3",
-      "placePhone": null,
-      "placeLink": null,
-      "age": [
-        5,
-        17
-      ],
-      "ageLabel": "5+",
-      "price": null,
-      "image": null,
-      "category": null,
-      "categoryLabel": null,
-      "source": {
-        "id": "manual-indigo",
-        "cta": null,
-        "url": null,
-        "kind": "Расписание студии",
-        "name": "Индиго"
-      }
-    },
-    {
-      "id": "indigo-compgraphics-8-elena",
-      "title": "Компьютерная графика (Елена)",
-      "short": null,
-      "desc": null,
-      "date": null,
-      "wd": [
-        3
-      ],
-      "time": "17:00",
-      "dur": null,
-      "place": "Индиго",
-      "address": "Врачар, ул. Милешевска 3a, кв 3",
-      "placePhone": null,
-      "placeLink": null,
-      "age": [
-        8,
-        17
-      ],
-      "ageLabel": "8+",
-      "price": null,
-      "image": null,
-      "category": null,
-      "categoryLabel": null,
-      "source": {
-        "id": "manual-indigo",
-        "cta": null,
-        "url": null,
-        "kind": "Расписание студии",
-        "name": "Индиго"
-      }
-    },
-    {
-      "id": "b871516e1e0f",
-      "title": "Мама и малыш",
-      "short": "Группа для малышей, которым уже скучно дома! Здесь мы пробуем окружающий мир на ощупь, знакомимся с другими детьми, активно двигаемся и привыкаем к но",
-      "desc": "Группа для малышей, которым уже скучно дома! Здесь мы пробуем окружающий мир на ощупь, знакомимся с другими детьми, активно двигаемся и привыкаем к новому пространству в безопасной атмосфере.",
-      "date": null,
-      "wd": [
-        2
-      ],
-      "time": "17:00",
-      "dur": "60 минут",
-      "place": "Enter",
-      "address": "Ресавска 34, Врачар, Белград",
+      "time": "16:00",
+      "dur": "1 час",
+      "place": "Индиго (Новый Белград)",
+      "address": "Новый Белград, Антифашистичке борбе 17",
       "placePhone": null,
       "placeLink": null,
       "age": [
         3,
-        10
+        5
       ],
-      "ageLabel": "3–10 лет",
-      "price": "1500 RSD (разовое), абонемент от 5400 RSD за 4 занятия",
-      "image": "data/images/enter-mama-i-malysh-2.png",
-      "category": "early_dev",
-      "categoryLabel": "Раннее развитие",
+      "ageLabel": "3–5 лет",
+      "price": "уточняется",
+      "image": null,
+      "category": "sport",
+      "categoryLabel": "Спорт",
       "source": {
-        "id": "enter",
-        "cta": "Записаться на сайте Enter",
-        "url": "https://enterspace.rs/classes/mama-i-malysh",
-        "kind": "Сайт студии",
-        "name": "Enter"
+        "id": "indigo-novi-beograd",
+        "cta": "Записаться в Индиго",
+        "url": "https://t.me/indigoartstudiobelgrade/2928",
+        "kind": "Расписание студии",
+        "name": "Индиго (Новый Белград)"
       }
     },
     {
-      "id": "indigo-vocal-3-6",
-      "title": "Вокал",
-      "short": null,
-      "desc": null,
+      "id": "0f61c4569a1d",
+      "title": "Робототехника 3-6 лет",
+      "short": "Робототехника 3-6 лет",
+      "desc": "Робототехника 3-6 лет",
       "date": null,
       "wd": [
-        0,
         2
       ],
       "time": "17:00",
-      "dur": null,
-      "place": "Индиго",
-      "address": "Врачар, ул. Милешевска 3a, кв 3",
+      "dur": "1 час",
+      "place": "Индиго (Новый Белград)",
+      "address": "Новый Белград, Антифашистичке борбе 17",
       "placePhone": null,
       "placeLink": null,
       "age": [
@@ -1048,48 +993,16 @@
         6
       ],
       "ageLabel": "3–6 лет",
-      "price": null,
+      "price": "уточняется",
       "image": null,
-      "category": null,
-      "categoryLabel": null,
+      "category": "robotics",
+      "categoryLabel": "Робототехника",
       "source": {
-        "id": "manual-indigo",
-        "cta": null,
-        "url": null,
+        "id": "indigo-novi-beograd",
+        "cta": "Записаться в Индиго",
+        "url": "https://t.me/indigoartstudiobelgrade/2928",
         "kind": "Расписание студии",
-        "name": "Индиго"
-      }
-    },
-    {
-      "id": "fc9701fa80ba",
-      "title": "Гимнастика",
-      "short": "Мягкое знакомство со спортом через интерес и поддержку. Здесь дети учатся чувствовать своё тело, развивают ловкость и уверенность в комфортной атмосфе",
-      "desc": "Мягкое знакомство со спортом через интерес и поддержку. Здесь дети учатся чувствовать своё тело, развивают ловкость и уверенность в комфортной атмосфере.",
-      "date": null,
-      "wd": [
-        4
-      ],
-      "time": "17:00",
-      "dur": "1 час",
-      "place": "Enter",
-      "address": "Ресавска 34, Врачар, Белград",
-      "placePhone": null,
-      "placeLink": null,
-      "age": [
-        2,
-        4
-      ],
-      "ageLabel": "2–4 года",
-      "price": "1500 RSD (разовое), абонемент от 5400 RSD за 4 занятия",
-      "image": "data/images/enter-gymnastika-4.png",
-      "category": "sport",
-      "categoryLabel": "Спорт",
-      "source": {
-        "id": "enter",
-        "cta": "Записаться на сайте Enter",
-        "url": "https://enterspace.rs/classes/gymnastika",
-        "kind": "Сайт студии",
-        "name": "Enter"
+        "name": "Индиго (Новый Белград)"
       }
     },
     {
@@ -1148,6 +1061,134 @@
       "image": null,
       "category": "languages",
       "categoryLabel": "Языки",
+      "source": {
+        "id": "mathline-stari-grad",
+        "cta": "Записаться на сайте Mathline",
+        "url": "https://math-line.ru/beograde/reg#!/tab/1251358096-1",
+        "kind": "Сайт студии",
+        "name": "Sreda Kids"
+      }
+    },
+    {
+      "id": "0a22f93efa7d",
+      "title": "Гимнастика",
+      "short": "Мягкое знакомство со спортом через интерес и поддержку. Здесь дети учатся чувствовать своё тело, развивают ловкость и уверенность в комфортной атмосфе",
+      "desc": "Мягкое знакомство со спортом через интерес и поддержку. Здесь дети учатся чувствовать своё тело, развивают ловкость и уверенность в комфортной атмосфере.",
+      "date": null,
+      "wd": [
+        2
+      ],
+      "time": "17:00",
+      "dur": "1 час",
+      "place": "Enter",
+      "address": "Ресавска 34, Врачар, Белград",
+      "placePhone": null,
+      "placeLink": null,
+      "age": [
+        2,
+        4
+      ],
+      "ageLabel": "2–4 года",
+      "price": "1500 RSD (разовое), абонемент от 5400 RSD за 4 занятия",
+      "image": "data/images/enter-gymnastika-2.png",
+      "category": "sport",
+      "categoryLabel": "Спорт",
+      "source": {
+        "id": "enter",
+        "cta": "Записаться на сайте Enter",
+        "url": "https://enterspace.rs/classes/gymnastika",
+        "kind": "Сайт студии",
+        "name": "Enter"
+      }
+    },
+    {
+      "id": "9b0f01e20bd7",
+      "title": "Сербский язык",
+      "short": "Сербский язык (4-6 лет)",
+      "desc": "Сербский язык (4-6 лет)",
+      "date": null,
+      "wd": [
+        0
+      ],
+      "time": "17:00",
+      "dur": "60 минут",
+      "place": "Sreda Kids",
+      "address": "Старый Град, Косовска 32",
+      "placePhone": null,
+      "placeLink": null,
+      "age": [
+        4,
+        6
+      ],
+      "ageLabel": "4–6 лет",
+      "price": "уточняется",
+      "image": null,
+      "category": "languages",
+      "categoryLabel": "Языки",
+      "source": {
+        "id": "mathline-stari-grad",
+        "cta": "Записаться на сайте Mathline",
+        "url": "https://math-line.ru/beograde/reg#!/tab/1251358096-1",
+        "kind": "Сайт студии",
+        "name": "Sreda Kids"
+      }
+    },
+    {
+      "id": "1bb6b0df72c8",
+      "title": "Гимнастика",
+      "short": "Гимнастика (4-7 лет)",
+      "desc": "Гимнастика (4-7 лет)",
+      "date": null,
+      "wd": [
+        0
+      ],
+      "time": "17:00",
+      "dur": "60 минут",
+      "place": "Sreda Kids",
+      "address": "Старый Град, Косовска 32",
+      "placePhone": null,
+      "placeLink": null,
+      "age": [
+        4,
+        7
+      ],
+      "ageLabel": "4–7 лет",
+      "price": "уточняется",
+      "image": null,
+      "category": "sport",
+      "categoryLabel": "Спорт",
+      "source": {
+        "id": "mathline-stari-grad",
+        "cta": "Записаться на сайте Mathline",
+        "url": "https://math-line.ru/beograde/reg#!/tab/1251358096-1",
+        "kind": "Сайт студии",
+        "name": "Sreda Kids"
+      }
+    },
+    {
+      "id": "fb27d47f3cb5",
+      "title": "Робототехника Lego WeDo",
+      "short": "Робототехника Lego WeDo (4-6 лет)",
+      "desc": "Робототехника Lego WeDo (4-6 лет)",
+      "date": null,
+      "wd": [
+        0
+      ],
+      "time": "17:00",
+      "dur": "60 минут",
+      "place": "Sreda Kids",
+      "address": "Старый Град, Косовска 32",
+      "placePhone": null,
+      "placeLink": null,
+      "age": [
+        4,
+        6
+      ],
+      "ageLabel": "4–6 лет",
+      "price": "уточняется",
+      "image": null,
+      "category": "robotics",
+      "categoryLabel": "Робототехника",
       "source": {
         "id": "mathline-stari-grad",
         "cta": "Записаться на сайте Mathline",
@@ -1221,45 +1262,365 @@
       }
     },
     {
-      "id": "indigo-painting-wed-4-7-elena",
-      "title": "Живопись (Елена)",
-      "short": null,
-      "desc": null,
+      "id": "948bb9d2e594",
+      "title": "Вокал 3-6 лет",
+      "short": "Вокал 3-6 лет",
+      "desc": "Вокал 3-6 лет",
+      "date": null,
+      "wd": [
+        0
+      ],
+      "time": "17:00",
+      "dur": "1 час",
+      "place": "Индиго (Врачар)",
+      "address": "Врачар, ул. Милешевска 3a, кв 3",
+      "placePhone": null,
+      "placeLink": null,
+      "age": [
+        3,
+        6
+      ],
+      "ageLabel": "3–6 лет",
+      "price": "уточняется",
+      "image": null,
+      "category": "music",
+      "categoryLabel": "Музыка",
+      "source": {
+        "id": "indigo-vracar",
+        "cta": "Записаться в Индиго",
+        "url": "https://t.me/indigoartstudiobelgrade/2927",
+        "kind": "Расписание студии",
+        "name": "Индиго (Врачар)"
+      }
+    },
+    {
+      "id": "d1100a71be1a",
+      "title": "Живопись 4+ и 7+(Елена)",
+      "short": "Живопись 4+ и 7+(Елена)",
+      "desc": "Живопись 4+ и 7+(Елена)",
       "date": null,
       "wd": [
         2
       ],
       "time": "17:00",
-      "dur": null,
-      "place": "Индиго",
+      "dur": "1 час",
+      "place": "Индиго (Врачар)",
       "address": "Врачар, ул. Милешевска 3a, кв 3",
       "placePhone": null,
       "placeLink": null,
       "age": [
         4,
-        17
+        16
       ],
-      "ageLabel": "4+ и 7+",
-      "price": null,
+      "ageLabel": "4+ лет",
+      "price": "уточняется",
+      "image": null,
+      "category": "art",
+      "categoryLabel": "Творчество",
+      "source": {
+        "id": "indigo-vracar",
+        "cta": "Записаться в Индиго",
+        "url": "https://t.me/indigoartstudiobelgrade/2927",
+        "kind": "Расписание студии",
+        "name": "Индиго (Врачар)"
+      }
+    },
+    {
+      "id": "ca1f9b727a5a",
+      "title": "Вокал 3-6 лет",
+      "short": "Вокал 3-6 лет",
+      "desc": "Вокал 3-6 лет",
+      "date": null,
+      "wd": [
+        2
+      ],
+      "time": "17:00",
+      "dur": "1 час",
+      "place": "Индиго (Врачар)",
+      "address": "Врачар, ул. Милешевска 3a, кв 3",
+      "placePhone": null,
+      "placeLink": null,
+      "age": [
+        3,
+        6
+      ],
+      "ageLabel": "3–6 лет",
+      "price": "уточняется",
+      "image": null,
+      "category": "music",
+      "categoryLabel": "Музыка",
+      "source": {
+        "id": "indigo-vracar",
+        "cta": "Записаться в Индиго",
+        "url": "https://t.me/indigoartstudiobelgrade/2927",
+        "kind": "Расписание студии",
+        "name": "Индиго (Врачар)"
+      }
+    },
+    {
+      "id": "520d805577e8",
+      "title": "Компьютерная графика 8+ (Елена)",
+      "short": "Компьютерная графика 8+ (Елена)",
+      "desc": "Компьютерная графика 8+ (Елена)",
+      "date": null,
+      "wd": [
+        3
+      ],
+      "time": "17:00",
+      "dur": "1 час",
+      "place": "Индиго (Врачар)",
+      "address": "Врачар, ул. Милешевска 3a, кв 3",
+      "placePhone": null,
+      "placeLink": null,
+      "age": [
+        8,
+        16
+      ],
+      "ageLabel": "8+ лет",
+      "price": "уточняется",
+      "image": null,
+      "category": "art",
+      "categoryLabel": "Творчество",
+      "source": {
+        "id": "indigo-vracar",
+        "cta": "Записаться в Индиго",
+        "url": "https://t.me/indigoartstudiobelgrade/2927",
+        "kind": "Расписание студии",
+        "name": "Индиго (Врачар)"
+      }
+    },
+    {
+      "id": "8920922f8eeb",
+      "title": "Пленер для детей 5+ (Елена)",
+      "short": "Пленер для детей 5+ (Елена)",
+      "desc": "Пленер для детей 5+ (Елена)",
+      "date": null,
+      "wd": [
+        4
+      ],
+      "time": "17:00",
+      "dur": "1 час",
+      "place": "Индиго (Врачар)",
+      "address": "Врачар, ул. Милешевска 3a, кв 3",
+      "placePhone": null,
+      "placeLink": null,
+      "age": [
+        5,
+        16
+      ],
+      "ageLabel": "5+ лет",
+      "price": "уточняется",
+      "image": null,
+      "category": "art",
+      "categoryLabel": "Творчество",
+      "source": {
+        "id": "indigo-vracar",
+        "cta": "Записаться в Индиго",
+        "url": "https://t.me/indigoartstudiobelgrade/2927",
+        "kind": "Расписание студии",
+        "name": "Индиго (Врачар)"
+      }
+    },
+    {
+      "id": "4df8e20f9c9f",
+      "title": "Хореография 3-4",
+      "short": "Хореография 3-4",
+      "desc": "Хореография 3-4",
+      "date": null,
+      "wd": [
+        1
+      ],
+      "time": "17:00",
+      "dur": "1 час",
+      "place": "Индиго (Новый Белград)",
+      "address": "Новый Белград, Антифашистичке борбе 17",
+      "placePhone": null,
+      "placeLink": null,
+      "age": [
+        3,
+        4
+      ],
+      "ageLabel": "3–4 года",
+      "price": "уточняется",
       "image": null,
       "category": null,
       "categoryLabel": null,
       "source": {
-        "id": "manual-indigo",
-        "cta": null,
-        "url": null,
+        "id": "indigo-novi-beograd",
+        "cta": "Записаться в Индиго",
+        "url": "https://t.me/indigoartstudiobelgrade/2928",
         "kind": "Расписание студии",
-        "name": "Индиго"
+        "name": "Индиго (Новый Белград)"
       }
     },
     {
-      "id": "0a22f93efa7d",
+      "id": "7b30fc2ee2ab",
+      "title": "Живопись 4+ (Алина)",
+      "short": "Живопись 4+ (Алина)",
+      "desc": "Живопись 4+ (Алина)",
+      "date": null,
+      "wd": [
+        3
+      ],
+      "time": "17:00",
+      "dur": "1 час",
+      "place": "Индиго (Новый Белград)",
+      "address": "Новый Белград, Антифашистичке борбе 17",
+      "placePhone": null,
+      "placeLink": null,
+      "age": [
+        4,
+        16
+      ],
+      "ageLabel": "4+ лет",
+      "price": "уточняется",
+      "image": null,
+      "category": "art",
+      "categoryLabel": "Творчество",
+      "source": {
+        "id": "indigo-novi-beograd",
+        "cta": "Записаться в Индиго",
+        "url": "https://t.me/indigoartstudiobelgrade/2928",
+        "kind": "Расписание студии",
+        "name": "Индиго (Новый Белград)"
+      }
+    },
+    {
+      "id": "8b590f94250a",
+      "title": "Спортивная гимнастика 3-5",
+      "short": "Спортивная гимнастика 3-5",
+      "desc": "Спортивная гимнастика 3-5",
+      "date": null,
+      "wd": [
+        3
+      ],
+      "time": "17:00",
+      "dur": "1 час",
+      "place": "Индиго (Новый Белград)",
+      "address": "Новый Белград, Антифашистичке борбе 17",
+      "placePhone": null,
+      "placeLink": null,
+      "age": [
+        3,
+        5
+      ],
+      "ageLabel": "3–5 лет",
+      "price": "уточняется",
+      "image": null,
+      "category": "sport",
+      "categoryLabel": "Спорт",
+      "source": {
+        "id": "indigo-novi-beograd",
+        "cta": "Записаться в Индиго",
+        "url": "https://t.me/indigoartstudiobelgrade/2928",
+        "kind": "Расписание студии",
+        "name": "Индиго (Новый Белград)"
+      }
+    },
+    {
+      "id": "73f9c3e7f66f",
+      "title": "Керамика 5+ (2 часа)",
+      "short": "Керамика 5+ (2 часа)",
+      "desc": "Керамика 5+ (2 часа)",
+      "date": null,
+      "wd": [
+        4
+      ],
+      "time": "17:00",
+      "dur": "1 час",
+      "place": "Индиго (Новый Белград)",
+      "address": "Новый Белград, Антифашистичке борбе 17",
+      "placePhone": null,
+      "placeLink": null,
+      "age": [
+        5,
+        16
+      ],
+      "ageLabel": "5+ лет",
+      "price": "уточняется",
+      "image": null,
+      "category": "art",
+      "categoryLabel": "Творчество",
+      "source": {
+        "id": "indigo-novi-beograd",
+        "cta": "Записаться в Индиго",
+        "url": "https://t.me/indigoartstudiobelgrade/2928",
+        "kind": "Расписание студии",
+        "name": "Индиго (Новый Белград)"
+      }
+    },
+    {
+      "id": "90ba8d64f24b",
+      "title": "Хореография 3-4",
+      "short": "Хореография 3-4",
+      "desc": "Хореография 3-4",
+      "date": null,
+      "wd": [
+        4
+      ],
+      "time": "17:00",
+      "dur": "1 час",
+      "place": "Индиго (Новый Белград)",
+      "address": "Новый Белград, Антифашистичке борбе 17",
+      "placePhone": null,
+      "placeLink": null,
+      "age": [
+        3,
+        4
+      ],
+      "ageLabel": "3–4 года",
+      "price": "уточняется",
+      "image": null,
+      "category": null,
+      "categoryLabel": null,
+      "source": {
+        "id": "indigo-novi-beograd",
+        "cta": "Записаться в Индиго",
+        "url": "https://t.me/indigoartstudiobelgrade/2928",
+        "kind": "Расписание студии",
+        "name": "Индиго (Новый Белград)"
+      }
+    },
+    {
+      "id": "b871516e1e0f",
+      "title": "Мама и малыш",
+      "short": "Группа для малышей, которым уже скучно дома! Здесь мы пробуем окружающий мир на ощупь, знакомимся с другими детьми, активно двигаемся и привыкаем к но",
+      "desc": "Группа для малышей, которым уже скучно дома! Здесь мы пробуем окружающий мир на ощупь, знакомимся с другими детьми, активно двигаемся и привыкаем к новому пространству в безопасной атмосфере.",
+      "date": null,
+      "wd": [
+        2
+      ],
+      "time": "17:00",
+      "dur": "60 минут",
+      "place": "Enter",
+      "address": "Ресавска 34, Врачар, Белград",
+      "placePhone": null,
+      "placeLink": null,
+      "age": [
+        3,
+        10
+      ],
+      "ageLabel": "3–10 лет",
+      "price": "1500 RSD (разовое), абонемент от 5400 RSD за 4 занятия",
+      "image": "data/images/enter-mama-i-malysh-2.png",
+      "category": "early_dev",
+      "categoryLabel": "Раннее развитие",
+      "source": {
+        "id": "enter",
+        "cta": "Записаться на сайте Enter",
+        "url": "https://enterspace.rs/classes/mama-i-malysh",
+        "kind": "Сайт студии",
+        "name": "Enter"
+      }
+    },
+    {
+      "id": "fc9701fa80ba",
       "title": "Гимнастика",
       "short": "Мягкое знакомство со спортом через интерес и поддержку. Здесь дети учатся чувствовать своё тело, развивают ловкость и уверенность в комфортной атмосфе",
       "desc": "Мягкое знакомство со спортом через интерес и поддержку. Здесь дети учатся чувствовать своё тело, развивают ловкость и уверенность в комфортной атмосфере.",
       "date": null,
       "wd": [
-        2
+        4
       ],
       "time": "17:00",
       "dur": "1 час",
@@ -1273,7 +1634,7 @@
       ],
       "ageLabel": "2–4 года",
       "price": "1500 RSD (разовое), абонемент от 5400 RSD за 4 занятия",
-      "image": "data/images/enter-gymnastika-2.png",
+      "image": "data/images/enter-gymnastika-4.png",
       "category": "sport",
       "categoryLabel": "Спорт",
       "source": {
@@ -1285,17 +1646,113 @@
       }
     },
     {
-      "id": "indigo-robotics-3-6",
-      "title": "Робототехника",
-      "short": null,
-      "desc": null,
+      "id": "9ba4697b9b0f",
+      "title": "Балет 5+",
+      "short": "Балет 5+",
+      "desc": "Балет 5+",
+      "date": null,
+      "wd": [
+        2
+      ],
+      "time": "17:30",
+      "dur": "1 час",
+      "place": "Индиго (Врачар)",
+      "address": "Врачар, ул. Милешевска 3a, кв 3",
+      "placePhone": null,
+      "placeLink": null,
+      "age": [
+        5,
+        16
+      ],
+      "ageLabel": "5+ лет",
+      "price": "уточняется",
+      "image": null,
+      "category": "dance",
+      "categoryLabel": "Танцы",
+      "source": {
+        "id": "indigo-vracar",
+        "cta": "Записаться в Индиго",
+        "url": "https://t.me/indigoartstudiobelgrade/2927",
+        "kind": "Расписание студии",
+        "name": "Индиго (Врачар)"
+      }
+    },
+    {
+      "id": "ca4c23fae906",
+      "title": "Балет 5+",
+      "short": "Балет 5+",
+      "desc": "Балет 5+",
+      "date": null,
+      "wd": [
+        4
+      ],
+      "time": "17:30",
+      "dur": "1 час",
+      "place": "Индиго (Врачар)",
+      "address": "Врачар, ул. Милешевска 3a, кв 3",
+      "placePhone": null,
+      "placeLink": null,
+      "age": [
+        5,
+        16
+      ],
+      "ageLabel": "5+ лет",
+      "price": "уточняется",
+      "image": null,
+      "category": "dance",
+      "categoryLabel": "Танцы",
+      "source": {
+        "id": "indigo-vracar",
+        "cta": "Записаться в Индиго",
+        "url": "https://t.me/indigoartstudiobelgrade/2927",
+        "kind": "Расписание студии",
+        "name": "Индиго (Врачар)"
+      }
+    },
+    {
+      "id": "608e8883076d",
+      "title": "Керамика для детей 5+",
+      "short": "Керамика для детей 5+",
+      "desc": "Керамика для детей 5+",
       "date": null,
       "wd": [
         0
       ],
       "time": "17:30",
-      "dur": null,
-      "place": "Индиго",
+      "dur": "1 час",
+      "place": "Индиго (Врачар)",
+      "address": "Врачар, ул. Милешевска 3a, кв 3",
+      "placePhone": null,
+      "placeLink": null,
+      "age": [
+        5,
+        16
+      ],
+      "ageLabel": "5+ лет",
+      "price": "уточняется",
+      "image": null,
+      "category": "art",
+      "categoryLabel": "Творчество",
+      "source": {
+        "id": "indigo-vracar",
+        "cta": "Записаться в Индиго",
+        "url": "https://t.me/indigoartstudiobelgrade/2927",
+        "kind": "Расписание студии",
+        "name": "Индиго (Врачар)"
+      }
+    },
+    {
+      "id": "9ff0cac44ca9",
+      "title": "Робототехника 3-6 лет",
+      "short": "Робототехника 3-6 лет",
+      "desc": "Робототехника 3-6 лет",
+      "date": null,
+      "wd": [
+        0
+      ],
+      "time": "17:30",
+      "dur": "1 час",
+      "place": "Индиго (Врачар)",
       "address": "Врачар, ул. Милешевска 3a, кв 3",
       "placePhone": null,
       "placeLink": null,
@@ -1304,306 +1761,304 @@
         6
       ],
       "ageLabel": "3–6 лет",
-      "price": null,
+      "price": "уточняется",
       "image": null,
-      "category": null,
-      "categoryLabel": null,
+      "category": "robotics",
+      "categoryLabel": "Робототехника",
       "source": {
-        "id": "manual-indigo",
-        "cta": null,
-        "url": null,
+        "id": "indigo-vracar",
+        "cta": "Записаться в Индиго",
+        "url": "https://t.me/indigoartstudiobelgrade/2927",
         "kind": "Расписание студии",
-        "name": "Индиго"
+        "name": "Индиго (Врачар)"
       }
     },
     {
-      "id": "indigo-ceramics-5",
-      "title": "Керамика для детей",
-      "short": null,
-      "desc": null,
-      "date": null,
-      "wd": [
-        0
-      ],
-      "time": "17:30",
-      "dur": null,
-      "place": "Индиго",
-      "address": "Врачар, ул. Милешевска 3a, кв 3",
-      "placePhone": null,
-      "placeLink": null,
-      "age": [
-        5,
-        17
-      ],
-      "ageLabel": "5+",
-      "price": null,
-      "image": null,
-      "category": null,
-      "categoryLabel": null,
-      "source": {
-        "id": "manual-indigo",
-        "cta": null,
-        "url": null,
-        "kind": "Расписание студии",
-        "name": "Индиго"
-      }
-    },
-    {
-      "id": "indigo-ballet-5",
-      "title": "Балет",
-      "short": null,
-      "desc": null,
-      "date": null,
-      "wd": [
-        2,
-        4
-      ],
-      "time": "17:30",
-      "dur": null,
-      "place": "Индиго",
-      "address": "Врачар, ул. Милешевска 3a, кв 3",
-      "placePhone": null,
-      "placeLink": null,
-      "age": [
-        5,
-        17
-      ],
-      "ageLabel": "5+",
-      "price": null,
-      "image": null,
-      "category": null,
-      "categoryLabel": null,
-      "source": {
-        "id": "manual-indigo",
-        "cta": null,
-        "url": null,
-        "kind": "Расписание студии",
-        "name": "Индиго"
-      }
-    },
-    {
-      "id": "indigo-painting-tue-4-alina",
-      "title": "Живопись для детей (Алина)",
-      "short": null,
-      "desc": null,
+      "id": "b759b90d1f25",
+      "title": "Живопись для детей 4+ (Алина)",
+      "short": "Живопись для детей 4+ (Алина)",
+      "desc": "Живопись для детей 4+ (Алина)",
       "date": null,
       "wd": [
         1
       ],
       "time": "17:30",
-      "dur": null,
-      "place": "Индиго",
+      "dur": "1 час",
+      "place": "Индиго (Врачар)",
       "address": "Врачар, ул. Милешевска 3a, кв 3",
       "placePhone": null,
       "placeLink": null,
       "age": [
         4,
-        17
+        16
       ],
-      "ageLabel": "4+",
-      "price": null,
+      "ageLabel": "4+ лет",
+      "price": "уточняется",
       "image": null,
-      "category": null,
-      "categoryLabel": null,
+      "category": "art",
+      "categoryLabel": "Творчество",
       "source": {
-        "id": "manual-indigo",
-        "cta": null,
-        "url": null,
+        "id": "indigo-vracar",
+        "cta": "Записаться в Индиго",
+        "url": "https://t.me/indigoartstudiobelgrade/2927",
         "kind": "Расписание студии",
-        "name": "Индиго"
+        "name": "Индиго (Врачар)"
       }
     },
     {
-      "id": "indigo-robotics-3plus",
-      "title": "Робототехника",
-      "short": null,
-      "desc": null,
+      "id": "8d5e4a7c2d64",
+      "title": "Робототехника 3+",
+      "short": "Робототехника 3+",
+      "desc": "Робототехника 3+",
       "date": null,
       "wd": [
         4
       ],
       "time": "17:30",
-      "dur": null,
-      "place": "Индиго",
+      "dur": "1 час",
+      "place": "Индиго (Врачар)",
       "address": "Врачар, ул. Милешевска 3a, кв 3",
       "placePhone": null,
       "placeLink": null,
       "age": [
         3,
-        17
+        16
       ],
-      "ageLabel": "3+",
-      "price": null,
+      "ageLabel": "3+ лет",
+      "price": "уточняется",
       "image": null,
-      "category": null,
-      "categoryLabel": null,
+      "category": "robotics",
+      "categoryLabel": "Робототехника",
       "source": {
-        "id": "manual-indigo",
-        "cta": null,
-        "url": null,
+        "id": "indigo-vracar",
+        "cta": "Записаться в Индиго",
+        "url": "https://t.me/indigoartstudiobelgrade/2927",
         "kind": "Расписание студии",
-        "name": "Индиго"
+        "name": "Индиго (Врачар)"
       }
     },
     {
-      "id": "indigo-graphics-7-alina",
-      "title": "Графика (Алина)",
-      "short": null,
-      "desc": null,
+      "id": "580d7895c04c",
+      "title": "Графика 7+ (Алина)",
+      "short": "Графика 7+ (Алина)",
+      "desc": "Графика 7+ (Алина)",
       "date": null,
       "wd": [
         4
       ],
       "time": "17:30",
-      "dur": null,
-      "place": "Индиго",
+      "dur": "1 час",
+      "place": "Индиго (Врачар)",
       "address": "Врачар, ул. Милешевска 3a, кв 3",
       "placePhone": null,
       "placeLink": null,
       "age": [
         7,
-        17
+        16
       ],
-      "ageLabel": "7+",
-      "price": null,
+      "ageLabel": "7+ лет",
+      "price": "уточняется",
       "image": null,
-      "category": null,
-      "categoryLabel": null,
+      "category": "art",
+      "categoryLabel": "Творчество",
       "source": {
-        "id": "manual-indigo",
-        "cta": null,
-        "url": null,
+        "id": "indigo-vracar",
+        "cta": "Записаться в Индиго",
+        "url": "https://t.me/indigoartstudiobelgrade/2927",
         "kind": "Расписание студии",
-        "name": "Индиго"
+        "name": "Индиго (Врачар)"
       }
     },
     {
-      "id": "indigo-ceramics-adults",
-      "title": "Керамика (взрослые)",
-      "short": null,
-      "desc": null,
-      "date": null,
-      "wd": [
-        6
-      ],
-      "time": "18:00",
-      "dur": null,
-      "place": "Индиго",
-      "address": "Врачар, ул. Милешевска 3a, кв 3",
-      "placePhone": null,
-      "placeLink": null,
-      "age": [
-        18,
-        99
-      ],
-      "ageLabel": "Взрослые",
-      "price": null,
-      "image": null,
-      "category": null,
-      "categoryLabel": null,
-      "source": {
-        "id": "manual-indigo",
-        "cta": null,
-        "url": null,
-        "kind": "Расписание студии",
-        "name": "Индиго"
-      }
-    },
-    {
-      "id": "indigo-ballet-6",
-      "title": "Балет",
-      "short": null,
-      "desc": null,
-      "date": null,
-      "wd": [
-        2,
-        4
-      ],
-      "time": "18:30",
-      "dur": null,
-      "place": "Индиго",
-      "address": "Врачар, ул. Милешевска 3a, кв 3",
-      "placePhone": null,
-      "placeLink": null,
-      "age": [
-        6,
-        17
-      ],
-      "ageLabel": "6+",
-      "price": null,
-      "image": null,
-      "category": null,
-      "categoryLabel": null,
-      "source": {
-        "id": "manual-indigo",
-        "cta": null,
-        "url": null,
-        "kind": "Расписание студии",
-        "name": "Индиго"
-      }
-    },
-    {
-      "id": "indigo-sketching-6",
-      "title": "Скетчинг",
-      "short": null,
-      "desc": null,
+      "id": "3c38abfb6a50",
+      "title": "Хореография 5-6",
+      "short": "Хореография 5-6",
+      "desc": "Хореография 5-6",
       "date": null,
       "wd": [
         1
       ],
-      "time": "18:30",
-      "dur": null,
-      "place": "Индиго",
-      "address": "Врачар, ул. Милешевска 3a, кв 3",
+      "time": "18:00",
+      "dur": "1 час",
+      "place": "Индиго (Новый Белград)",
+      "address": "Новый Белград, Антифашистичке борбе 17",
       "placePhone": null,
       "placeLink": null,
       "age": [
-        6,
-        17
+        5,
+        6
       ],
-      "ageLabel": "6+",
-      "price": null,
+      "ageLabel": "5–6 лет",
+      "price": "уточняется",
       "image": null,
       "category": null,
       "categoryLabel": null,
       "source": {
-        "id": "manual-indigo",
-        "cta": null,
-        "url": null,
+        "id": "indigo-novi-beograd",
+        "cta": "Записаться в Индиго",
+        "url": "https://t.me/indigoartstudiobelgrade/2928",
         "kind": "Расписание студии",
-        "name": "Индиго"
+        "name": "Индиго (Новый Белград)"
       }
     },
     {
-      "id": "indigo-texture-painting-8plus",
-      "title": "Текстурная живопись",
-      "short": null,
-      "desc": null,
+      "id": "e7b7850dbcd2",
+      "title": "Хореография 5-6",
+      "short": "Хореография 5-6",
+      "desc": "Хореография 5-6",
+      "date": null,
+      "wd": [
+        4
+      ],
+      "time": "18:00",
+      "dur": "1 час",
+      "place": "Индиго (Новый Белград)",
+      "address": "Новый Белград, Антифашистичке борбе 17",
+      "placePhone": null,
+      "placeLink": null,
+      "age": [
+        5,
+        6
+      ],
+      "ageLabel": "5–6 лет",
+      "price": "уточняется",
+      "image": null,
+      "category": null,
+      "categoryLabel": null,
+      "source": {
+        "id": "indigo-novi-beograd",
+        "cta": "Записаться в Индиго",
+        "url": "https://t.me/indigoartstudiobelgrade/2928",
+        "kind": "Расписание студии",
+        "name": "Индиго (Новый Белград)"
+      }
+    },
+    {
+      "id": "afeb79c3cc76",
+      "title": "Текстурная живопись 8+ лет и взрослые",
+      "short": "Текстурная живопись 8+ лет и взрослые",
+      "desc": "Текстурная живопись 8+ лет и взрослые",
       "date": null,
       "wd": [
         4
       ],
       "time": "18:30",
-      "dur": null,
-      "place": "Индиго",
+      "dur": "1 час",
+      "place": "Индиго (Врачар)",
       "address": "Врачар, ул. Милешевска 3a, кв 3",
       "placePhone": null,
       "placeLink": null,
       "age": [
         8,
-        99
+        16
       ],
-      "ageLabel": "8+ лет и взрослые",
-      "price": null,
+      "ageLabel": "8+ лет",
+      "price": "уточняется",
       "image": null,
-      "category": null,
-      "categoryLabel": null,
+      "category": "art",
+      "categoryLabel": "Творчество",
       "source": {
-        "id": "manual-indigo",
-        "cta": null,
-        "url": null,
+        "id": "indigo-vracar",
+        "cta": "Записаться в Индиго",
+        "url": "https://t.me/indigoartstudiobelgrade/2927",
         "kind": "Расписание студии",
-        "name": "Индиго"
+        "name": "Индиго (Врачар)"
+      }
+    },
+    {
+      "id": "4d789a4624e7",
+      "title": "Балет 6+",
+      "short": "Балет 6+",
+      "desc": "Балет 6+",
+      "date": null,
+      "wd": [
+        2
+      ],
+      "time": "18:30",
+      "dur": "1 час",
+      "place": "Индиго (Врачар)",
+      "address": "Врачар, ул. Милешевска 3a, кв 3",
+      "placePhone": null,
+      "placeLink": null,
+      "age": [
+        6,
+        16
+      ],
+      "ageLabel": "6+ лет",
+      "price": "уточняется",
+      "image": null,
+      "category": "dance",
+      "categoryLabel": "Танцы",
+      "source": {
+        "id": "indigo-vracar",
+        "cta": "Записаться в Индиго",
+        "url": "https://t.me/indigoartstudiobelgrade/2927",
+        "kind": "Расписание студии",
+        "name": "Индиго (Врачар)"
+      }
+    },
+    {
+      "id": "ef4641bbc52e",
+      "title": "Скетчинг 6+",
+      "short": "Скетчинг 6+",
+      "desc": "Скетчинг 6+",
+      "date": null,
+      "wd": [
+        1
+      ],
+      "time": "18:30",
+      "dur": "1 час",
+      "place": "Индиго (Врачар)",
+      "address": "Врачар, ул. Милешевска 3a, кв 3",
+      "placePhone": null,
+      "placeLink": null,
+      "age": [
+        6,
+        16
+      ],
+      "ageLabel": "6+ лет",
+      "price": "уточняется",
+      "image": null,
+      "category": "art",
+      "categoryLabel": "Творчество",
+      "source": {
+        "id": "indigo-vracar",
+        "cta": "Записаться в Индиго",
+        "url": "https://t.me/indigoartstudiobelgrade/2927",
+        "kind": "Расписание студии",
+        "name": "Индиго (Врачар)"
+      }
+    },
+    {
+      "id": "3dd9e9a525ad",
+      "title": "Балет 6+",
+      "short": "Балет 6+",
+      "desc": "Балет 6+",
+      "date": null,
+      "wd": [
+        4
+      ],
+      "time": "18:30",
+      "dur": "1 час",
+      "place": "Индиго (Врачар)",
+      "address": "Врачар, ул. Милешевска 3a, кв 3",
+      "placePhone": null,
+      "placeLink": null,
+      "age": [
+        6,
+        16
+      ],
+      "ageLabel": "6+ лет",
+      "price": "уточняется",
+      "image": null,
+      "category": "dance",
+      "categoryLabel": "Танцы",
+      "source": {
+        "id": "indigo-vracar",
+        "cta": "Записаться в Индиго",
+        "url": "https://t.me/indigoartstudiobelgrade/2927",
+        "kind": "Расписание студии",
+        "name": "Индиго (Врачар)"
       }
     }
   ]
