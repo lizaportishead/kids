@@ -28,5 +28,27 @@
     "cta": "Записаться на сайте Enter",
     "place": "Enter",
     "address": "Ресавска 34, Врачар, Белград"
+  },
+  {
+    "id": "mathline-stari-grad",
+    "type": "mathline",
+    "name": "Sreda Kids",
+    "kind": "Сайт студии",
+    "url": "https://math-line.ru/beograde/reg#!/tab/1251358096-1",
+    "tabNumber": 1,
+    "cta": "Записаться на сайте Mathline",
+    "place": "Sreda Kids",
+    "address": "Старый Град, Косовска 32"
+  },
+  {
+    "id": "mathline-dorcol",
+    "type": "mathline",
+    "name": "Mathline (Дорчол)",
+    "kind": "Сайт студии",
+    "url": "https://math-line.ru/beograde/reg#!/tab/1251358096-2",
+    "tabNumber": 2,
+    "cta": "Записаться на сайте Mathline",
+    "place": "Mathline (Дорчол)",
+    "address": "Дорчол, Тадеуша Кошћушка 63"
   }
 ]

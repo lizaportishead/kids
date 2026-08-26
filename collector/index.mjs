@@ -4,6 +4,7 @@ import { fileURLToPath } from 'node:url';
 import { collectInstagram } from './sources/instagram.mjs';
 import { collectProdlenka } from './sources/prodlenka.mjs';
 import { collectEnterspace } from './sources/enterspace.mjs';
+import { collectMathline } from './sources/mathline.mjs';
 import { dedupe } from './lib/normalize.mjs';
 import { saveImage } from './lib/images.mjs';
 import { fetchPublicEvents, pushEvents, supabaseEnabled } from './lib/supabase.mjs';
@@ -13,7 +14,7 @@ const root = resolve(here, '..');
 const OUT = resolve(root, 'data/events.json');
 const IMG_DIR = resolve(root, 'data/images');
 
-const RUNNERS = { instagram: collectInstagram, prodlenka: collectProdlenka, enterspace: collectEnterspace };
+const RUNNERS = { instagram: collectInstagram, prodlenka: collectProdlenka, enterspace: collectEnterspace, mathline: collectMathline };
 
 const now = new Date();
 const sources = JSON.parse(await readFile(resolve(here, 'sources.json'), 'utf8'));
