@@ -4,20 +4,22 @@
     "type": "prodlenka",
     "name": "Продлёнка",
     "kind": "Сайт записи",
-    "url": "https://reg.prodlenka.me/location/prodlenka",
+    "url": "https://reg.prodlenka.me/schedule",
     "cta": "Записаться на сайте Продлёнки",
     "place": "Продлёнка",
-    "address": "Врачар, Белград"
+    "address": "Кнеза Данила 54, Врачар, Белград",
+    "locationSlug": "prodlenka"
   },
   {
     "id": "kinder-garden",
     "type": "prodlenka",
     "name": "Kinder Garden",
     "kind": "Сайт записи",
-    "url": "https://reg.prodlenka.me/location/kinder-garden",
+    "url": "https://reg.prodlenka.me/schedule",
     "cta": "Записаться на сайте Kinder Garden",
     "place": "Kinder Garden",
-    "address": "Нови Београд"
+    "address": "Булевар војводе Путника 68a, Сењак (Савски венац), Белград",
+    "locationSlug": "kinder-garden"
   },
   {
     "id": "enter",

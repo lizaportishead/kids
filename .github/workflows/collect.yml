@@ -24,9 +24,7 @@ jobs:
 
       - name: Установить зависимости
         working-directory: collector
-        run: |
-          npm install --no-audit --no-fund
-          npx playwright install --with-deps chromium
+        run: npm install --no-audit --no-fund
 
       - name: Собрать события
         working-directory: collector

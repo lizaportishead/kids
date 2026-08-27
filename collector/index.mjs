@@ -25,7 +25,6 @@ const report = [];
 for (const source of sources) {
   const run = RUNNERS[source.type];
   if (!run) { report.push({ source: source.id, status: 'skipped', reason: 'нет обработчика для типа ' + source.type }); continue; }
-  if (source.type === 'prodlenka' && process.env.SKIP_BROWSER) { report.push({ source: source.id, status: 'skipped', reason: 'SKIP_BROWSER=1' }); continue; }
   try {
     const events = await run(source, now);
     for (const ev of events) {
