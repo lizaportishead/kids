@@ -9,6 +9,7 @@ import { collectTelegram } from './sources/telegram.mjs';
 import { dedupe, filterEvents } from './lib/normalize.mjs';
 import { saveImage } from './lib/images.mjs';
 import { fetchPublicEvents, pushEvents, supabaseEnabled } from './lib/supabase.mjs';
+import { sendRunReport } from './lib/notify.mjs';
 
 const here = dirname(fileURLToPath(import.meta.url));
 const root = resolve(here, '..');
@@ -83,4 +84,12 @@ if (supabaseEnabled) {
 
 console.table(report);
 console.log('Событий в афише:', mirrored || events.length);
+
+try {
+  const res = await sendRunReport(report, sources, { total: mirrored || events.length, now });
+  if (res.sent) console.log('Отчёт отправлен в Telegram');
+} catch (err) {
+  console.error('Не удалось отправить отчёт в Telegram:', err.message || err);
+}
+
 if (report.some((r) => r.status === 'error') && !events.length && !mirrored) process.exitCode = 1;

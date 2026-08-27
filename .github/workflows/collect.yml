@@ -32,6 +32,9 @@ jobs:
           IG_OEMBED_TOKEN: ${{ secrets.IG_OEMBED_TOKEN }}
           SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
           SUPABASE_SERVICE_KEY: ${{ secrets.SUPABASE_SERVICE_KEY }}
+          # Отчёт о прогоне в Telegram (необязательно): список площадок и счётчики.
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
           # MODERATION: '1'   # раскомментируйте, если новые события должны ждать одобрения
         run: npm run collect
 
