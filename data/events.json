@@ -1,7 +1,7 @@
 {
   "updatedAt": "2026-08-28T09:56:42.827Z",
   "city": "Белград",
-  "count": 91,
+  "count": 106,
   "report": [
     {
       "source": "prodlenka",
@@ -3081,6 +3081,486 @@
         "url": "https://www.instagram.com/dance_kids_belgrad/",
         "kind": "Расписание студии",
         "name": "Студия танцев Procvat"
+      }
+    },
+    {
+      "id": "swimyou-small-4-5-vt",
+      "title": "Плавание",
+      "short": "Плавание для детей 4–5 лет в бассейне SwimYou",
+      "desc": "Занятия плаванием в школе SwimYou (малый бассейн): солёная вода, глубина 80 см, температура воды 30 °C, занятие 45 минут. Группа 4–5 лет.",
+      "date": null,
+      "wd": [
+        1
+      ],
+      "time": "19:45",
+      "dur": "45 минут",
+      "place": "SwimYou",
+      "address": "Табановачка 3, Аутокоманда, Вождовац, Белград",
+      "placePhone": null,
+      "placeLink": null,
+      "age": [
+        4,
+        5
+      ],
+      "ageLabel": "4–5 лет",
+      "price": "уточняется",
+      "image": null,
+      "category": "swimming",
+      "categoryLabel": "Плаванье",
+      "source": {
+        "id": "swimyou",
+        "name": "SwimYou",
+        "kind": "Расписание школы",
+        "url": "https://www.instagram.com/swimyou.club/",
+        "cta": "Записаться в SwimYou"
+      }
+    },
+    {
+      "id": "swimyou-small-4-5-cht",
+      "title": "Плавание",
+      "short": "Плавание для детей 4–5 лет в бассейне SwimYou",
+      "desc": "Занятия плаванием в школе SwimYou (малый бассейн): солёная вода, глубина 80 см, температура воды 30 °C, занятие 45 минут. Группа 4–5 лет.",
+      "date": null,
+      "wd": [
+        3
+      ],
+      "time": "19:45",
+      "dur": "45 минут",
+      "place": "SwimYou",
+      "address": "Табановачка 3, Аутокоманда, Вождовац, Белград",
+      "placePhone": null,
+      "placeLink": null,
+      "age": [
+        4,
+        5
+      ],
+      "ageLabel": "4–5 лет",
+      "price": "уточняется",
+      "image": null,
+      "category": "swimming",
+      "categoryLabel": "Плаванье",
+      "source": {
+        "id": "swimyou",
+        "name": "SwimYou",
+        "kind": "Расписание школы",
+        "url": "https://www.instagram.com/swimyou.club/",
+        "cta": "Записаться в SwimYou"
+      }
+    },
+    {
+      "id": "swimyou-small-4-5-sb",
+      "title": "Плавание",
+      "short": "Плавание для детей 4–5 лет в бассейне SwimYou",
+      "desc": "Занятия плаванием в школе SwimYou (малый бассейн): солёная вода, глубина 80 см, температура воды 30 °C, занятие 45 минут. Группа 4–5 лет.",
+      "date": null,
+      "wd": [
+        5
+      ],
+      "time": "13:30",
+      "dur": "45 минут",
+      "place": "SwimYou",
+      "address": "Табановачка 3, Аутокоманда, Вождовац, Белград",
+      "placePhone": null,
+      "placeLink": null,
+      "age": [
+        4,
+        5
+      ],
+      "ageLabel": "4–5 лет",
+      "price": "уточняется",
+      "image": null,
+      "category": "swimming",
+      "categoryLabel": "Плаванье",
+      "source": {
+        "id": "swimyou",
+        "name": "SwimYou",
+        "kind": "Расписание школы",
+        "url": "https://www.instagram.com/swimyou.club/",
+        "cta": "Записаться в SwimYou"
+      }
+    },
+    {
+      "id": "swimyou-small-5-7-vt",
+      "title": "Плавание",
+      "short": "Плавание для детей 5–7 лет в бассейне SwimYou",
+      "desc": "Занятия плаванием в школе SwimYou (малый бассейн): солёная вода, глубина 80 см, температура воды 30 °C, занятие 45 минут. Группа 5–7 лет.",
+      "date": null,
+      "wd": [
+        1
+      ],
+      "time": "19:00",
+      "dur": "45 минут",
+      "place": "SwimYou",
+      "address": "Табановачка 3, Аутокоманда, Вождовац, Белград",
+      "placePhone": null,
+      "placeLink": null,
+      "age": [
+        5,
+        7
+      ],
+      "ageLabel": "5–7 лет",
+      "price": "уточняется",
+      "image": null,
+      "category": "swimming",
+      "categoryLabel": "Плаванье",
+      "source": {
+        "id": "swimyou",
+        "name": "SwimYou",
+        "kind": "Расписание школы",
+        "url": "https://www.instagram.com/swimyou.club/",
+        "cta": "Записаться в SwimYou"
+      }
+    },
+    {
+      "id": "swimyou-small-5-7-cht",
+      "title": "Плавание",
+      "short": "Плавание для детей 5–7 лет в бассейне SwimYou",
+      "desc": "Занятия плаванием в школе SwimYou (малый бассейн): солёная вода, глубина 80 см, температура воды 30 °C, занятие 45 минут. Группа 5–7 лет.",
+      "date": null,
+      "wd": [
+        3
+      ],
+      "time": "19:00",
+      "dur": "45 минут",
+      "place": "SwimYou",
+      "address": "Табановачка 3, Аутокоманда, Вождовац, Белград",
+      "placePhone": null,
+      "placeLink": null,
+      "age": [
+        5,
+        7
+      ],
+      "ageLabel": "5–7 лет",
+      "price": "уточняется",
+      "image": null,
+      "category": "swimming",
+      "categoryLabel": "Плаванье",
+      "source": {
+        "id": "swimyou",
+        "name": "SwimYou",
+        "kind": "Расписание школы",
+        "url": "https://www.instagram.com/swimyou.club/",
+        "cta": "Записаться в SwimYou"
+      }
+    },
+    {
+      "id": "swimyou-small-5-7-sb",
+      "title": "Плавание",
+      "short": "Плавание для детей 5–7 лет в бассейне SwimYou",
+      "desc": "Занятия плаванием в школе SwimYou (малый бассейн): солёная вода, глубина 80 см, температура воды 30 °C, занятие 45 минут. Группа 5–7 лет.",
+      "date": null,
+      "wd": [
+        5
+      ],
+      "time": "14:15",
+      "dur": "45 минут",
+      "place": "SwimYou",
+      "address": "Табановачка 3, Аутокоманда, Вождовац, Белград",
+      "placePhone": null,
+      "placeLink": null,
+      "age": [
+        5,
+        7
+      ],
+      "ageLabel": "5–7 лет",
+      "price": "уточняется",
+      "image": null,
+      "category": "swimming",
+      "categoryLabel": "Плаванье",
+      "source": {
+        "id": "swimyou",
+        "name": "SwimYou",
+        "kind": "Расписание школы",
+        "url": "https://www.instagram.com/swimyou.club/",
+        "cta": "Записаться в SwimYou"
+      }
+    },
+    {
+      "id": "swimyou-big-5-7-sr",
+      "title": "Плавание",
+      "short": "Плавание для детей 5–7 лет в бассейне SwimYou",
+      "desc": "Занятия плаванием в школе SwimYou (большой бассейн): солёная вода, глубина от 80 до 120 см, температура воды 30 °C, занятие 45 минут. Группа 5–7 лет.",
+      "date": null,
+      "wd": [
+        2
+      ],
+      "time": "18:45",
+      "dur": "45 минут",
+      "place": "SwimYou",
+      "address": "Табановачка 3, Аутокоманда, Вождовац, Белград",
+      "placePhone": null,
+      "placeLink": null,
+      "age": [
+        5,
+        7
+      ],
+      "ageLabel": "5–7 лет",
+      "price": "уточняется",
+      "image": null,
+      "category": "swimming",
+      "categoryLabel": "Плаванье",
+      "source": {
+        "id": "swimyou",
+        "name": "SwimYou",
+        "kind": "Расписание школы",
+        "url": "https://www.instagram.com/swimyou.club/",
+        "cta": "Записаться в SwimYou"
+      }
+    },
+    {
+      "id": "swimyou-big-5-7-sb",
+      "title": "Плавание",
+      "short": "Плавание для детей 5–7 лет в бассейне SwimYou",
+      "desc": "Занятия плаванием в школе SwimYou (большой бассейн): солёная вода, глубина от 80 до 120 см, температура воды 30 °C, занятие 45 минут. Группа 5–7 лет.",
+      "date": null,
+      "wd": [
+        5
+      ],
+      "time": "15:15",
+      "dur": "45 минут",
+      "place": "SwimYou",
+      "address": "Табановачка 3, Аутокоманда, Вождовац, Белград",
+      "placePhone": null,
+      "placeLink": null,
+      "age": [
+        5,
+        7
+      ],
+      "ageLabel": "5–7 лет",
+      "price": "уточняется",
+      "image": null,
+      "category": "swimming",
+      "categoryLabel": "Плаванье",
+      "source": {
+        "id": "swimyou",
+        "name": "SwimYou",
+        "kind": "Расписание школы",
+        "url": "https://www.instagram.com/swimyou.club/",
+        "cta": "Записаться в SwimYou"
+      }
+    },
+    {
+      "id": "swimyou-big-5-7-vs",
+      "title": "Плавание",
+      "short": "Плавание для детей 5–7 лет в бассейне SwimYou",
+      "desc": "Занятия плаванием в школе SwimYou (большой бассейн): солёная вода, глубина от 80 до 120 см, температура воды 30 °C, занятие 45 минут. Группа 5–7 лет.",
+      "date": null,
+      "wd": [
+        6
+      ],
+      "time": "18:00",
+      "dur": "45 минут",
+      "place": "SwimYou",
+      "address": "Табановачка 3, Аутокоманда, Вождовац, Белград",
+      "placePhone": null,
+      "placeLink": null,
+      "age": [
+        5,
+        7
+      ],
+      "ageLabel": "5–7 лет",
+      "price": "уточняется",
+      "image": null,
+      "category": "swimming",
+      "categoryLabel": "Плаванье",
+      "source": {
+        "id": "swimyou",
+        "name": "SwimYou",
+        "kind": "Расписание школы",
+        "url": "https://www.instagram.com/swimyou.club/",
+        "cta": "Записаться в SwimYou"
+      }
+    },
+    {
+      "id": "swimyou-big-7-10-sr",
+      "title": "Плавание",
+      "short": "Плавание для детей 7–10 лет в бассейне SwimYou",
+      "desc": "Занятия плаванием в школе SwimYou (большой бассейн): солёная вода, глубина от 80 до 120 см, температура воды 30 °C, занятие 45 минут. Группа 7–10 лет.",
+      "date": null,
+      "wd": [
+        2
+      ],
+      "time": "19:30",
+      "dur": "45 минут",
+      "place": "SwimYou",
+      "address": "Табановачка 3, Аутокоманда, Вождовац, Белград",
+      "placePhone": null,
+      "placeLink": null,
+      "age": [
+        7,
+        10
+      ],
+      "ageLabel": "7–10 лет",
+      "price": "уточняется",
+      "image": null,
+      "category": "swimming",
+      "categoryLabel": "Плаванье",
+      "source": {
+        "id": "swimyou",
+        "name": "SwimYou",
+        "kind": "Расписание школы",
+        "url": "https://www.instagram.com/swimyou.club/",
+        "cta": "Записаться в SwimYou"
+      }
+    },
+    {
+      "id": "swimyou-big-7-10-sb",
+      "title": "Плавание",
+      "short": "Плавание для детей 7–10 лет в бассейне SwimYou",
+      "desc": "Занятия плаванием в школе SwimYou (большой бассейн): солёная вода, глубина от 80 до 120 см, температура воды 30 °C, занятие 45 минут. Группа 7–10 лет.",
+      "date": null,
+      "wd": [
+        5
+      ],
+      "time": "13:45",
+      "dur": "45 минут",
+      "place": "SwimYou",
+      "address": "Табановачка 3, Аутокоманда, Вождовац, Белград",
+      "placePhone": null,
+      "placeLink": null,
+      "age": [
+        7,
+        10
+      ],
+      "ageLabel": "7–10 лет",
+      "price": "уточняется",
+      "image": null,
+      "category": "swimming",
+      "categoryLabel": "Плаванье",
+      "source": {
+        "id": "swimyou",
+        "name": "SwimYou",
+        "kind": "Расписание школы",
+        "url": "https://www.instagram.com/swimyou.club/",
+        "cta": "Записаться в SwimYou"
+      }
+    },
+    {
+      "id": "swimyou-big-7-10-vs",
+      "title": "Плавание",
+      "short": "Плавание для детей 7–10 лет в бассейне SwimYou",
+      "desc": "Занятия плаванием в школе SwimYou (большой бассейн): солёная вода, глубина от 80 до 120 см, температура воды 30 °C, занятие 45 минут. Группа 7–10 лет.",
+      "date": null,
+      "wd": [
+        6
+      ],
+      "time": "18:45",
+      "dur": "45 минут",
+      "place": "SwimYou",
+      "address": "Табановачка 3, Аутокоманда, Вождовац, Белград",
+      "placePhone": null,
+      "placeLink": null,
+      "age": [
+        7,
+        10
+      ],
+      "ageLabel": "7–10 лет",
+      "price": "уточняется",
+      "image": null,
+      "category": "swimming",
+      "categoryLabel": "Плаванье",
+      "source": {
+        "id": "swimyou",
+        "name": "SwimYou",
+        "kind": "Расписание школы",
+        "url": "https://www.instagram.com/swimyou.club/",
+        "cta": "Записаться в SwimYou"
+      }
+    },
+    {
+      "id": "swimyou-big-10-14-sr",
+      "title": "Плавание",
+      "short": "Плавание для детей 10–14 лет в бассейне SwimYou",
+      "desc": "Занятия плаванием в школе SwimYou (большой бассейн): солёная вода, глубина от 80 до 120 см, температура воды 30 °C, занятие 45 минут. Группа 10–14 лет.",
+      "date": null,
+      "wd": [
+        2
+      ],
+      "time": "20:15",
+      "dur": "45 минут",
+      "place": "SwimYou",
+      "address": "Табановачка 3, Аутокоманда, Вождовац, Белград",
+      "placePhone": null,
+      "placeLink": null,
+      "age": [
+        10,
+        14
+      ],
+      "ageLabel": "10–14 лет",
+      "price": "уточняется",
+      "image": null,
+      "category": "swimming",
+      "categoryLabel": "Плаванье",
+      "source": {
+        "id": "swimyou",
+        "name": "SwimYou",
+        "kind": "Расписание школы",
+        "url": "https://www.instagram.com/swimyou.club/",
+        "cta": "Записаться в SwimYou"
+      }
+    },
+    {
+      "id": "swimyou-big-10-14-sb",
+      "title": "Плавание",
+      "short": "Плавание для детей 10–14 лет в бассейне SwimYou",
+      "desc": "Занятия плаванием в школе SwimYou (большой бассейн): солёная вода, глубина от 80 до 120 см, температура воды 30 °C, занятие 45 минут. Группа 10–14 лет.",
+      "date": null,
+      "wd": [
+        5
+      ],
+      "time": "14:30",
+      "dur": "45 минут",
+      "place": "SwimYou",
+      "address": "Табановачка 3, Аутокоманда, Вождовац, Белград",
+      "placePhone": null,
+      "placeLink": null,
+      "age": [
+        10,
+        14
+      ],
+      "ageLabel": "10–14 лет",
+      "price": "уточняется",
+      "image": null,
+      "category": "swimming",
+      "categoryLabel": "Плаванье",
+      "source": {
+        "id": "swimyou",
+        "name": "SwimYou",
+        "kind": "Расписание школы",
+        "url": "https://www.instagram.com/swimyou.club/",
+        "cta": "Записаться в SwimYou"
+      }
+    },
+    {
+      "id": "swimyou-big-10-14-vs",
+      "title": "Плавание",
+      "short": "Плавание для детей 10–14 лет в бассейне SwimYou",
+      "desc": "Занятия плаванием в школе SwimYou (большой бассейн): солёная вода, глубина от 80 до 120 см, температура воды 30 °C, занятие 45 минут. Группа 10–14 лет.",
+      "date": null,
+      "wd": [
+        6
+      ],
+      "time": "19:30",
+      "dur": "45 минут",
+      "place": "SwimYou",
+      "address": "Табановачка 3, Аутокоманда, Вождовац, Белград",
+      "placePhone": null,
+      "placeLink": null,
+      "age": [
+        10,
+        14
+      ],
+      "ageLabel": "10–14 лет",
+      "price": "уточняется",
+      "image": null,
+      "category": "swimming",
+      "categoryLabel": "Плаванье",
+      "source": {
+        "id": "swimyou",
+        "name": "SwimYou",
+        "kind": "Расписание школы",
+        "url": "https://www.instagram.com/swimyou.club/",
+        "cta": "Записаться в SwimYou"
       }
     }
   ]
