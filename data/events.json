@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-27T19:41:26.974Z",
+  "updatedAt": "2026-08-28T09:56:42.827Z",
   "city": "Белград",
   "count": 86,
   "report": [
@@ -11,7 +11,7 @@
     {
       "source": "kinder-garden",
       "status": "ok",
-      "events": 23
+      "events": 22
     },
     {
       "source": "enter",
@@ -41,7 +41,7 @@
     {
       "source": "supabase",
       "status": "ok",
-      "events": 86
+      "events": 85
     }
   ],
   "events": [
@@ -58,6 +58,8 @@
       "address": "Булевар војводе Путника 68a, Сењак (Савски венац), Белград",
       "placePhone": null,
       "placeLink": null,
+      "lat": null,
+      "lng": null,
       "age": [
         3,
         10
@@ -88,6 +90,8 @@
       "address": "Булевар војводе Путника 68a, Сењак (Савски венац), Белград",
       "placePhone": null,
       "placeLink": null,
+      "lat": null,
+      "lng": null,
       "age": [
         4,
         7
@@ -118,6 +122,8 @@
       "address": "Булевар војводе Путника 68a, Сењак (Савски венац), Белград",
       "placePhone": null,
       "placeLink": null,
+      "lat": null,
+      "lng": null,
       "age": [
         4,
         5
@@ -148,6 +154,8 @@
       "address": "Булевар војводе Путника 68a, Сењак (Савски венац), Белград",
       "placePhone": null,
       "placeLink": null,
+      "lat": null,
+      "lng": null,
       "age": [
         5,
         8
@@ -178,6 +186,8 @@
       "address": "Булевар војводе Путника 68a, Сењак (Савски венац), Белград",
       "placePhone": null,
       "placeLink": null,
+      "lat": null,
+      "lng": null,
       "age": [
         3,
         10
@@ -208,6 +218,8 @@
       "address": "Булевар војводе Путника 68a, Сењак (Савски венац), Белград",
       "placePhone": null,
       "placeLink": null,
+      "lat": null,
+      "lng": null,
       "age": [
         5,
         16
@@ -238,6 +250,8 @@
       "address": "Булевар војводе Путника 68a, Сењак (Савски венац), Белград",
       "placePhone": null,
       "placeLink": null,
+      "lat": null,
+      "lng": null,
       "age": [
         3,
         10
@@ -247,36 +261,6 @@
       "image": "data/images/prodlenka-zhovoy-rasskaz.png",
       "category": "reading",
       "categoryLabel": "Чтение",
-      "source": {
-        "id": "kinder-garden",
-        "cta": "Записаться на сайте Kinder Garden",
-        "url": "https://reg.prodlenka.me/schedule",
-        "kind": "Сайт записи",
-        "name": "Kinder Garden"
-      }
-    },
-    {
-      "id": "9b93ef5ab153",
-      "title": "Игра в глину (4-5)",
-      "short": "Игра в глину - творческий метод Алексея Лельчука, свободной творческой лепки с дошкольниками и школьниками, сочетающий в себе арт-терапию, глинотерапию и игротерапию.",
-      "desc": "Игра в глину - творческий метод Алексея Лельчука, свободной творческой лепки с дошкольниками и школьниками, сочетающий в себе арт-терапию, глинотерапию и игротерапию.\n\nВ игре в глину мы лепим не предметы, а миры. Наша задача не научиться лепить самолет или чашку, а участвовать в процессе создания истории. Все действия объединены общей рамочной темой, где каждый из детей чувствует себя частью общего процесса.\n\nМы учимся лепить образы и чувства, превращать кусочек глины в целый мир. Стараемся работать не только пальцами, развивая мелкую моторику, но и всем телом, используя много материала, задействуя тем самым глубокие мышцы крупной моторики. В отличии от пластилина, глину можно использовать в больших количествах, строить огромные замки и длинные реки, воплощать любые свои идеи. После окончания занятия мы всегда прощаемся со своим персонажем и своей постройкой, оставляя глину в стенах студии. Мы учим наслаждаться процессом, а не результатом.\n\nРазовое занятие - 1700 RSD\nАбонемент на 4 занятия - 6000 RSD\n\nСвободно мест: 8 из 8",
-      "date": "2026-09-02",
-      "wd": null,
-      "time": "17:30",
-      "dur": "1 час",
-      "place": "Kinder Garden",
-      "address": "Булевар војводе Путника 68a, Сењак (Савски венац), Белград",
-      "placePhone": null,
-      "placeLink": null,
-      "age": [
-        4,
-        5
-      ],
-      "ageLabel": "4–5 лет",
-      "price": "1500 RSD",
-      "image": "data/images/prodlenka-igry-v-glinu.png",
-      "category": "art",
-      "categoryLabel": "Творчество",
       "source": {
         "id": "kinder-garden",
         "cta": "Записаться на сайте Kinder Garden",
@@ -298,6 +282,8 @@
       "address": "Булевар војводе Путника 68a, Сењак (Савски венац), Белград",
       "placePhone": null,
       "placeLink": null,
+      "lat": null,
+      "lng": null,
       "age": [
         4,
         7
@@ -305,6 +291,38 @@
       "ageLabel": "4–7 лет",
       "price": "2000 RSD",
       "image": "data/images/prodlenka-stolyarnaya-masterskaya68.png",
+      "category": "art",
+      "categoryLabel": "Творчество",
+      "source": {
+        "id": "kinder-garden",
+        "cta": "Записаться на сайте Kinder Garden",
+        "url": "https://reg.prodlenka.me/schedule",
+        "kind": "Сайт записи",
+        "name": "Kinder Garden"
+      }
+    },
+    {
+      "id": "9b93ef5ab153",
+      "title": "Игра в глину (4-5)",
+      "short": "Игра в глину - творческий метод Алексея Лельчука, свободной творческой лепки с дошкольниками и школьниками, сочетающий в себе арт-терапию, глинотерапию и игротерапию.",
+      "desc": "Игра в глину - творческий метод Алексея Лельчука, свободной творческой лепки с дошкольниками и школьниками, сочетающий в себе арт-терапию, глинотерапию и игротерапию.\n\nВ игре в глину мы лепим не предметы, а миры. Наша задача не научиться лепить самолет или чашку, а участвовать в процессе создания истории. Все действия объединены общей рамочной темой, где каждый из детей чувствует себя частью общего процесса.\n\nМы учимся лепить образы и чувства, превращать кусочек глины в целый мир. Стараемся работать не только пальцами, развивая мелкую моторику, но и всем телом, используя много материала, задействуя тем самым глубокие мышцы крупной моторики. В отличии от пластилина, глину можно использовать в больших количествах, строить огромные замки и длинные реки, воплощать любые свои идеи. После окончания занятия мы всегда прощаемся со своим персонажем и своей постройкой, оставляя глину в стенах студии. Мы учим наслаждаться процессом, а не результатом.\n\nРазовое занятие - 1700 RSD\nАбонемент на 4 занятия - 6000 RSD\n\nСвободно мест: 8 из 8",
+      "date": "2026-09-02",
+      "wd": null,
+      "time": "17:30",
+      "dur": "1 час",
+      "place": "Kinder Garden",
+      "address": "Булевар војводе Путника 68a, Сењак (Савски венац), Белград",
+      "placePhone": null,
+      "placeLink": null,
+      "lat": null,
+      "lng": null,
+      "age": [
+        4,
+        5
+      ],
+      "ageLabel": "4–5 лет",
+      "price": "1500 RSD",
+      "image": "data/images/prodlenka-igry-v-glinu.png",
       "category": "art",
       "categoryLabel": "Творчество",
       "source": {
@@ -328,6 +346,8 @@
       "address": "Булевар војводе Путника 68a, Сењак (Савски венац), Белград",
       "placePhone": null,
       "placeLink": null,
+      "lat": null,
+      "lng": null,
       "age": [
         4,
         7
@@ -358,6 +378,8 @@
       "address": "Булевар војводе Путника 68a, Сењак (Савски венац), Белград",
       "placePhone": null,
       "placeLink": null,
+      "lat": null,
+      "lng": null,
       "age": [
         4,
         5
@@ -388,6 +410,8 @@
       "address": "Булевар војводе Путника 68a, Сењак (Савски венац), Белград",
       "placePhone": null,
       "placeLink": null,
+      "lat": null,
+      "lng": null,
       "age": [
         5,
         8
@@ -418,6 +442,8 @@
       "address": "Булевар војводе Путника 68a, Сењак (Савски венац), Белград",
       "placePhone": null,
       "placeLink": null,
+      "lat": null,
+      "lng": null,
       "age": [
         4,
         5
@@ -448,6 +474,8 @@
       "address": "Булевар војводе Путника 68a, Сењак (Савски венац), Белград",
       "placePhone": null,
       "placeLink": null,
+      "lat": null,
+      "lng": null,
       "age": [
         4,
         7
@@ -478,6 +506,8 @@
       "address": "Булевар војводе Путника 68a, Сењак (Савски венац), Белград",
       "placePhone": null,
       "placeLink": null,
+      "lat": null,
+      "lng": null,
       "age": [
         4,
         7
@@ -508,6 +538,8 @@
       "address": "Булевар војводе Путника 68a, Сењак (Савски венац), Белград",
       "placePhone": null,
       "placeLink": null,
+      "lat": null,
+      "lng": null,
       "age": [
         4,
         5
@@ -538,6 +570,8 @@
       "address": "Булевар војводе Путника 68a, Сењак (Савски венац), Белград",
       "placePhone": null,
       "placeLink": null,
+      "lat": null,
+      "lng": null,
       "age": [
         5,
         8
@@ -568,6 +602,8 @@
       "address": "Булевар војводе Путника 68a, Сењак (Савски венац), Белград",
       "placePhone": null,
       "placeLink": null,
+      "lat": null,
+      "lng": null,
       "age": [
         4,
         7
@@ -598,6 +634,8 @@
       "address": "Булевар војводе Путника 68a, Сењак (Савски венац), Белград",
       "placePhone": null,
       "placeLink": null,
+      "lat": null,
+      "lng": null,
       "age": [
         4,
         5
@@ -628,6 +666,8 @@
       "address": "Булевар војводе Путника 68a, Сењак (Савски венац), Белград",
       "placePhone": null,
       "placeLink": null,
+      "lat": null,
+      "lng": null,
       "age": [
         4,
         7
@@ -658,6 +698,8 @@
       "address": "Булевар војводе Путника 68a, Сењак (Савски венац), Белград",
       "placePhone": null,
       "placeLink": null,
+      "lat": null,
+      "lng": null,
       "age": [
         4,
         5
@@ -688,6 +730,8 @@
       "address": "Булевар војводе Путника 68a, Сењак (Савски венац), Белград",
       "placePhone": null,
       "placeLink": null,
+      "lat": null,
+      "lng": null,
       "age": [
         5,
         8
@@ -718,6 +762,8 @@
       "address": "Булевар војводе Путника 68a, Сењак (Савски венац), Белград",
       "placePhone": null,
       "placeLink": null,
+      "lat": null,
+      "lng": null,
       "age": [
         4,
         5
@@ -750,6 +796,8 @@
       "address": "Врачар, ул. Милешевска 3a, кв 3",
       "placePhone": null,
       "placeLink": null,
+      "lat": null,
+      "lng": null,
       "age": [
         4,
         16
@@ -768,6 +816,40 @@
       }
     },
     {
+      "id": "f1fba855adfa",
+      "title": "ToddlerClass Вместе с мамой",
+      "short": "ToddlerClass Вместе с мамой (1,5-3 лет)",
+      "desc": "ToddlerClass Вместе с мамой (1,5-3 лет)",
+      "date": null,
+      "wd": [
+        5
+      ],
+      "time": "10:30",
+      "dur": "60 минут",
+      "place": "Sreda Kids",
+      "address": "Стари Град, Косовска 32",
+      "placePhone": null,
+      "placeLink": null,
+      "lat": null,
+      "lng": null,
+      "age": [
+        1,
+        3
+      ],
+      "ageLabel": "1–3 года",
+      "price": "уточняется",
+      "image": null,
+      "category": "early_dev",
+      "categoryLabel": "Раннее развитие",
+      "source": {
+        "id": "mathline-stari-grad",
+        "cta": "Записаться на сайте Mathline",
+        "url": "https://math-line.ru/beograde/reg#!/tab/1251358096-1",
+        "kind": "Сайт студии",
+        "name": "Sreda Kids"
+      }
+    },
+    {
       "id": "45e8c3999193",
       "title": "Арт-занятие дети 1,5-3 (Елена)",
       "short": "Арт-занятие дети 1,5-3 (Елена)",
@@ -782,6 +864,8 @@
       "address": "Врачар, ул. Милешевска 3a, кв 3",
       "placePhone": null,
       "placeLink": null,
+      "lat": null,
+      "lng": null,
       "age": [
         1,
         3
@@ -800,6 +884,74 @@
       }
     },
     {
+      "id": "411c236cf860",
+      "title": "Хореография вместе с мамой 2-3 года",
+      "short": "Хореография вместе с мамой 2-3 года",
+      "desc": "Хореография вместе с мамой 2-3 года",
+      "date": null,
+      "wd": [
+        1
+      ],
+      "time": "10:30",
+      "dur": "1 час",
+      "place": "Индиго (Новый Белград)",
+      "address": "Новый Белград, Антифашистичке борбе 17",
+      "placePhone": null,
+      "placeLink": null,
+      "lat": null,
+      "lng": null,
+      "age": [
+        2,
+        3
+      ],
+      "ageLabel": "2–3 года",
+      "price": "уточняется",
+      "image": null,
+      "category": "dance",
+      "categoryLabel": "Танцы",
+      "source": {
+        "id": "indigo-novi-beograd",
+        "cta": "Записаться в Индиго",
+        "url": "https://t.me/indigoartstudiobelgrade/2928",
+        "kind": "Расписание студии",
+        "name": "Индиго (Новый Белград)"
+      }
+    },
+    {
+      "id": "d8fb129a75ca",
+      "title": "Клуб Английского языка FunnyEnglish",
+      "short": "Клуб Английского языка FunnyEnglish (3-6 лет)",
+      "desc": "Клуб Английского языка FunnyEnglish (3-6 лет)",
+      "date": null,
+      "wd": [
+        0
+      ],
+      "time": "10:30",
+      "dur": "60 минут",
+      "place": "Sreda Kids",
+      "address": "Стари Град, Косовска 32",
+      "placePhone": null,
+      "placeLink": null,
+      "lat": null,
+      "lng": null,
+      "age": [
+        3,
+        6
+      ],
+      "ageLabel": "3–6 лет",
+      "price": "уточняется",
+      "image": null,
+      "category": "languages",
+      "categoryLabel": "Языки",
+      "source": {
+        "id": "mathline-stari-grad",
+        "cta": "Записаться на сайте Mathline",
+        "url": "https://math-line.ru/beograde/reg#!/tab/1251358096-1",
+        "kind": "Сайт студии",
+        "name": "Sreda Kids"
+      }
+    },
+    {
       "id": "7c863ac762f1",
       "title": "Клуб Английского языка FunnyEnglish",
       "short": "Клуб Английского языка FunnyEnglish (3-6 лет)",
@@ -814,6 +966,8 @@
       "address": "Стари Град, Косовска 32",
       "placePhone": null,
       "placeLink": null,
+      "lat": null,
+      "lng": null,
       "age": [
         3,
         6
@@ -846,6 +1000,8 @@
       "address": "Стари Град, Косовска 32",
       "placePhone": null,
       "placeLink": null,
+      "lat": null,
+      "lng": null,
       "age": [
         3,
         6
@@ -864,70 +1020,6 @@
       }
     },
     {
-      "id": "f1fba855adfa",
-      "title": "ToddlerClass Вместе с мамой",
-      "short": "ToddlerClass Вместе с мамой (1,5-3 лет)",
-      "desc": "ToddlerClass Вместе с мамой (1,5-3 лет)",
-      "date": null,
-      "wd": [
-        5
-      ],
-      "time": "10:30",
-      "dur": "60 минут",
-      "place": "Sreda Kids",
-      "address": "Стари Град, Косовска 32",
-      "placePhone": null,
-      "placeLink": null,
-      "age": [
-        1,
-        3
-      ],
-      "ageLabel": "1–3 года",
-      "price": "уточняется",
-      "image": null,
-      "category": "early_dev",
-      "categoryLabel": "Раннее развитие",
-      "source": {
-        "id": "mathline-stari-grad",
-        "cta": "Записаться на сайте Mathline",
-        "url": "https://math-line.ru/beograde/reg#!/tab/1251358096-1",
-        "kind": "Сайт студии",
-        "name": "Sreda Kids"
-      }
-    },
-    {
-      "id": "411c236cf860",
-      "title": "Хореография вместе с мамой 2-3 года",
-      "short": "Хореография вместе с мамой 2-3 года",
-      "desc": "Хореография вместе с мамой 2-3 года",
-      "date": null,
-      "wd": [
-        1
-      ],
-      "time": "10:30",
-      "dur": "1 час",
-      "place": "Индиго (Новый Белград)",
-      "address": "Новый Белград, Антифашистичке борбе 17",
-      "placePhone": null,
-      "placeLink": null,
-      "age": [
-        2,
-        3
-      ],
-      "ageLabel": "2–3 года",
-      "price": "уточняется",
-      "image": null,
-      "category": "dance",
-      "categoryLabel": "Танцы",
-      "source": {
-        "id": "indigo-novi-beograd",
-        "cta": "Записаться в Индиго",
-        "url": "https://t.me/indigoartstudiobelgrade/2928",
-        "kind": "Расписание студии",
-        "name": "Индиго (Новый Белград)"
-      }
-    },
-    {
       "id": "5a25e5e721dd",
       "title": "Арт занятие: керамика, живопись",
       "short": "Арт занятие: керамика, живопись (4-6 лет)",
@@ -942,6 +1034,8 @@
       "address": "Дорчол, Тадеуша Кошћушка 63",
       "placePhone": null,
       "placeLink": null,
+      "lat": null,
+      "lng": null,
       "age": [
         4,
         6
@@ -974,6 +1068,8 @@
       "address": "Дорчол, Тадеуша Кошћушка 63",
       "placePhone": null,
       "placeLink": null,
+      "lat": null,
+      "lng": null,
       "age": [
         3,
         6
@@ -1006,6 +1102,8 @@
       "address": "Дорчол, Тадеуша Кошћушка 63",
       "placePhone": null,
       "placeLink": null,
+      "lat": null,
+      "lng": null,
       "age": [
         3,
         5
@@ -1024,35 +1122,37 @@
       }
     },
     {
-      "id": "d8fb129a75ca",
-      "title": "Клуб Английского языка FunnyEnglish",
-      "short": "Клуб Английского языка FunnyEnglish (3-6 лет)",
-      "desc": "Клуб Английского языка FunnyEnglish (3-6 лет)",
+      "id": "ba1fa74d17cb",
+      "title": "Лепка из глины 2-3",
+      "short": "Лепка из глины 2-3",
+      "desc": "Лепка из глины 2-3",
       "date": null,
       "wd": [
-        0
+        3
       ],
-      "time": "10:30",
-      "dur": "60 минут",
-      "place": "Sreda Kids",
-      "address": "Стари Град, Косовска 32",
+      "time": "11:00",
+      "dur": "1 час",
+      "place": "Индиго (Врачар)",
+      "address": "Врачар, ул. Милешевска 3a, кв 3",
       "placePhone": null,
       "placeLink": null,
+      "lat": null,
+      "lng": null,
       "age": [
-        3,
-        6
+        2,
+        3
       ],
-      "ageLabel": "3–6 лет",
+      "ageLabel": "2–3 года",
       "price": "уточняется",
       "image": null,
-      "category": "languages",
-      "categoryLabel": "Языки",
+      "category": "art",
+      "categoryLabel": "Творчество",
       "source": {
-        "id": "mathline-stari-grad",
-        "cta": "Записаться на сайте Mathline",
-        "url": "https://math-line.ru/beograde/reg#!/tab/1251358096-1",
-        "kind": "Сайт студии",
-        "name": "Sreda Kids"
+        "id": "indigo-vracar",
+        "cta": "Записаться в Индиго",
+        "url": "https://t.me/indigoartstudiobelgrade/2927",
+        "kind": "Расписание студии",
+        "name": "Индиго (Врачар)"
       }
     },
     {
@@ -1070,6 +1170,8 @@
       "address": "Ресавска 34, Врачар, Белград",
       "placePhone": null,
       "placeLink": null,
+      "lat": null,
+      "lng": null,
       "age": [
         2,
         4
@@ -1088,13 +1190,13 @@
       }
     },
     {
-      "id": "ba1fa74d17cb",
-      "title": "Лепка из глины 2-3",
-      "short": "Лепка из глины 2-3",
-      "desc": "Лепка из глины 2-3",
+      "id": "ab18a0512555",
+      "title": "Робототехника 6+",
+      "short": "Робототехника 6+",
+      "desc": "Робототехника 6+",
       "date": null,
       "wd": [
-        3
+        5
       ],
       "time": "11:00",
       "dur": "1 час",
@@ -1102,15 +1204,17 @@
       "address": "Врачар, ул. Милешевска 3a, кв 3",
       "placePhone": null,
       "placeLink": null,
+      "lat": null,
+      "lng": null,
       "age": [
-        2,
-        3
+        6,
+        16
       ],
-      "ageLabel": "2–3 года",
+      "ageLabel": "6+ лет",
       "price": "уточняется",
       "image": null,
-      "category": "art",
-      "categoryLabel": "Творчество",
+      "category": "robotics",
+      "categoryLabel": "Робототехника",
       "source": {
         "id": "indigo-vracar",
         "cta": "Записаться в Индиго",
@@ -1134,6 +1238,8 @@
       "address": "Врачар, ул. Милешевска 3a, кв 3",
       "placePhone": null,
       "placeLink": null,
+      "lat": null,
+      "lng": null,
       "age": [
         3,
         16
@@ -1143,38 +1249,6 @@
       "image": null,
       "category": "dance",
       "categoryLabel": "Танцы",
-      "source": {
-        "id": "indigo-vracar",
-        "cta": "Записаться в Индиго",
-        "url": "https://t.me/indigoartstudiobelgrade/2927",
-        "kind": "Расписание студии",
-        "name": "Индиго (Врачар)"
-      }
-    },
-    {
-      "id": "ab18a0512555",
-      "title": "Робототехника 6+",
-      "short": "Робототехника 6+",
-      "desc": "Робототехника 6+",
-      "date": null,
-      "wd": [
-        5
-      ],
-      "time": "11:00",
-      "dur": "1 час",
-      "place": "Индиго (Врачар)",
-      "address": "Врачар, ул. Милешевска 3a, кв 3",
-      "placePhone": null,
-      "placeLink": null,
-      "age": [
-        6,
-        16
-      ],
-      "ageLabel": "6+ лет",
-      "price": "уточняется",
-      "image": null,
-      "category": "robotics",
-      "categoryLabel": "Робототехника",
       "source": {
         "id": "indigo-vracar",
         "cta": "Записаться в Индиго",
@@ -1198,6 +1272,8 @@
       "address": "Новый Белград, Антифашистичке борбе 17",
       "placePhone": null,
       "placeLink": null,
+      "lat": null,
+      "lng": null,
       "age": [
         2,
         3
@@ -1230,6 +1306,8 @@
       "address": "Дорчол, Тадеуша Кошћушка 63",
       "placePhone": null,
       "placeLink": null,
+      "lat": null,
+      "lng": null,
       "age": [
         5,
         6
@@ -1262,6 +1340,8 @@
       "address": "Новый Белград, Антифашистичке борбе 17",
       "placePhone": null,
       "placeLink": null,
+      "lat": null,
+      "lng": null,
       "age": [
         3,
         16
@@ -1294,44 +1374,14 @@
       "address": "Стари Град, Косовска 32",
       "placePhone": null,
       "placeLink": null,
+      "lat": null,
+      "lng": null,
       "age": [
         4,
         6
       ],
       "ageLabel": "4–6 лет",
       "price": "1700 RSD (разовое), абонемент от 6000 RSD за 4 занятия",
-      "image": null,
-      "category": "school_prep",
-      "categoryLabel": "Подготовка к школе",
-      "source": {
-        "id": "mathline-stari-grad",
-        "cta": "Записаться на сайте Mathline",
-        "url": "https://math-line.ru/beograde/reg#!/tab/1251358096-1",
-        "kind": "Сайт студии",
-        "name": "Sreda Kids"
-      }
-    },
-    {
-      "id": "226523df154f",
-      "title": "Математика Интеллектуал",
-      "short": "Математика Интеллектуал (7-9 лет)",
-      "desc": "Математика Интеллектуал (7-9 лет)",
-      "date": null,
-      "wd": [
-        5
-      ],
-      "time": "14:00",
-      "dur": "90 минут",
-      "place": "Sreda Kids",
-      "address": "Стари Град, Косовска 32",
-      "placePhone": null,
-      "placeLink": null,
-      "age": [
-        7,
-        9
-      ],
-      "ageLabel": "7–9 лет",
-      "price": "уточняется",
       "image": null,
       "category": "school_prep",
       "categoryLabel": "Подготовка к школе",
@@ -1358,6 +1408,8 @@
       "address": "Стари Град, Косовска 32",
       "placePhone": null,
       "placeLink": null,
+      "lat": null,
+      "lng": null,
       "age": [
         5,
         7
@@ -1367,6 +1419,74 @@
       "image": null,
       "category": "robotics",
       "categoryLabel": "Робототехника",
+      "source": {
+        "id": "mathline-stari-grad",
+        "cta": "Записаться на сайте Mathline",
+        "url": "https://math-line.ru/beograde/reg#!/tab/1251358096-1",
+        "kind": "Сайт студии",
+        "name": "Sreda Kids"
+      }
+    },
+    {
+      "id": "226523df154f",
+      "title": "Математика Интеллектуал",
+      "short": "Математика Интеллектуал (7-9 лет)",
+      "desc": "Математика Интеллектуал (7-9 лет)",
+      "date": null,
+      "wd": [
+        5
+      ],
+      "time": "14:00",
+      "dur": "90 минут",
+      "place": "Sreda Kids",
+      "address": "Стари Град, Косовска 32",
+      "placePhone": null,
+      "placeLink": null,
+      "lat": null,
+      "lng": null,
+      "age": [
+        7,
+        9
+      ],
+      "ageLabel": "7–9 лет",
+      "price": "уточняется",
+      "image": null,
+      "category": "school_prep",
+      "categoryLabel": "Подготовка к школе",
+      "source": {
+        "id": "mathline-stari-grad",
+        "cta": "Записаться на сайте Mathline",
+        "url": "https://math-line.ru/beograde/reg#!/tab/1251358096-1",
+        "kind": "Сайт студии",
+        "name": "Sreda Kids"
+      }
+    },
+    {
+      "id": "2afb42638479",
+      "title": "Русский язык",
+      "short": "Русский язык (8-9 лет)",
+      "desc": "Русский язык (8-9 лет)",
+      "date": null,
+      "wd": [
+        5
+      ],
+      "time": "15:00",
+      "dur": "60 минут",
+      "place": "Sreda Kids",
+      "address": "Стари Град, Косовска 32",
+      "placePhone": null,
+      "placeLink": null,
+      "lat": null,
+      "lng": null,
+      "age": [
+        8,
+        9
+      ],
+      "ageLabel": "8–9 лет",
+      "price": "уточняется",
+      "image": null,
+      "category": "languages",
+      "categoryLabel": "Языки",
       "source": {
         "id": "mathline-stari-grad",
         "cta": "Записаться на сайте Mathline",
@@ -1390,6 +1510,8 @@
       "address": "Дорчол, Тадеуша Кошћушка 63",
       "placePhone": null,
       "placeLink": null,
+      "lat": null,
+      "lng": null,
       "age": [
         4,
         5
@@ -1422,6 +1544,8 @@
       "address": "Стари Град, Косовска 32",
       "placePhone": null,
       "placeLink": null,
+      "lat": null,
+      "lng": null,
       "age": [
         3,
         10
@@ -1431,38 +1555,6 @@
       "image": null,
       "category": "school_prep",
       "categoryLabel": "Подготовка к школе",
-      "source": {
-        "id": "mathline-stari-grad",
-        "cta": "Записаться на сайте Mathline",
-        "url": "https://math-line.ru/beograde/reg#!/tab/1251358096-1",
-        "kind": "Сайт студии",
-        "name": "Sreda Kids"
-      }
-    },
-    {
-      "id": "2afb42638479",
-      "title": "Русский язык",
-      "short": "Русский язык (8-9 лет)",
-      "desc": "Русский язык (8-9 лет)",
-      "date": null,
-      "wd": [
-        5
-      ],
-      "time": "15:00",
-      "dur": "60 минут",
-      "place": "Sreda Kids",
-      "address": "Стари Град, Косовска 32",
-      "placePhone": null,
-      "placeLink": null,
-      "age": [
-        8,
-        9
-      ],
-      "ageLabel": "8–9 лет",
-      "price": "уточняется",
-      "image": null,
-      "category": "languages",
-      "categoryLabel": "Языки",
       "source": {
         "id": "mathline-stari-grad",
         "cta": "Записаться на сайте Mathline",
@@ -1486,6 +1578,8 @@
       "address": "Стари Град, Косовска 32",
       "placePhone": null,
       "placeLink": null,
+      "lat": null,
+      "lng": null,
       "age": [
         3,
         10
@@ -1518,6 +1612,8 @@
       "address": "Стари Град, Косовска 32",
       "placePhone": null,
       "placeLink": null,
+      "lat": null,
+      "lng": null,
       "age": [
         3,
         10
@@ -1527,38 +1623,6 @@
       "image": null,
       "category": "languages",
       "categoryLabel": "Языки",
-      "source": {
-        "id": "mathline-stari-grad",
-        "cta": "Записаться на сайте Mathline",
-        "url": "https://math-line.ru/beograde/reg#!/tab/1251358096-1",
-        "kind": "Сайт студии",
-        "name": "Sreda Kids"
-      }
-    },
-    {
-      "id": "dfd15b39561f",
-      "title": "Танцевально-театральная студия Софит",
-      "short": "Танцевально-театральная студия Софит (4-7 лет)",
-      "desc": "Танцевально-театральная студия Софит (4-7 лет)",
-      "date": null,
-      "wd": [
-        4
-      ],
-      "time": "16:00",
-      "dur": "60 минут",
-      "place": "Sreda Kids",
-      "address": "Стари Град, Косовска 32",
-      "placePhone": null,
-      "placeLink": null,
-      "age": [
-        4,
-        7
-      ],
-      "ageLabel": "4–7 лет",
-      "price": "1500 RSD (разовое), абонемент от 5000 RSD за 4 занятия",
-      "image": null,
-      "category": "dance",
-      "categoryLabel": "Танцы",
       "source": {
         "id": "mathline-stari-grad",
         "cta": "Записаться на сайте Mathline",
@@ -1582,6 +1646,8 @@
       "address": "Дорчол, Тадеуша Кошћушка 63",
       "placePhone": null,
       "placeLink": null,
+      "lat": null,
+      "lng": null,
       "age": [
         5,
         6
@@ -1614,6 +1680,8 @@
       "address": "Стари Град, Косовска 32",
       "placePhone": null,
       "placeLink": null,
+      "lat": null,
+      "lng": null,
       "age": [
         4,
         5
@@ -1646,6 +1714,8 @@
       "address": "Новый Белград, Антифашистичке борбе 17",
       "placePhone": null,
       "placeLink": null,
+      "lat": null,
+      "lng": null,
       "age": [
         3,
         5
@@ -1664,45 +1734,47 @@
       }
     },
     {
-      "id": "948bb9d2e594",
-      "title": "Вокал 3-6 лет",
-      "short": "Вокал 3-6 лет",
-      "desc": "Вокал 3-6 лет",
+      "id": "dfd15b39561f",
+      "title": "Танцевально-театральная студия Софит",
+      "short": "Танцевально-театральная студия Софит (4-7 лет)",
+      "desc": "Танцевально-театральная студия Софит (4-7 лет)",
       "date": null,
       "wd": [
-        0
+        4
       ],
-      "time": "17:00",
-      "dur": "1 час",
-      "place": "Индиго (Врачар)",
-      "address": "Врачар, ул. Милешевска 3a, кв 3",
+      "time": "16:00",
+      "dur": "60 минут",
+      "place": "Sreda Kids",
+      "address": "Стари Град, Косовска 32",
       "placePhone": null,
       "placeLink": null,
+      "lat": null,
+      "lng": null,
       "age": [
-        3,
-        6
+        4,
+        7
       ],
-      "ageLabel": "3–6 лет",
-      "price": "уточняется",
+      "ageLabel": "4–7 лет",
+      "price": "1500 RSD (разовое), абонемент от 5000 RSD за 4 занятия",
       "image": null,
-      "category": "music",
-      "categoryLabel": "Музыка",
+      "category": "dance",
+      "categoryLabel": "Танцы",
       "source": {
-        "id": "indigo-vracar",
-        "cta": "Записаться в Индиго",
-        "url": "https://t.me/indigoartstudiobelgrade/2927",
-        "kind": "Расписание студии",
-        "name": "Индиго (Врачар)"
+        "id": "mathline-stari-grad",
+        "cta": "Записаться на сайте Mathline",
+        "url": "https://math-line.ru/beograde/reg#!/tab/1251358096-1",
+        "kind": "Сайт студии",
+        "name": "Sreda Kids"
       }
     },
     {
-      "id": "d1100a71be1a",
-      "title": "Живопись 4+ и 7+(Елена)",
-      "short": "Живопись 4+ и 7+(Елена)",
-      "desc": "Живопись 4+ и 7+(Елена)",
+      "id": "8920922f8eeb",
+      "title": "Пленер для детей 5+ (Елена)",
+      "short": "Пленер для детей 5+ (Елена)",
+      "desc": "Пленер для детей 5+ (Елена)",
       "date": null,
       "wd": [
-        2
+        4
       ],
       "time": "17:00",
       "dur": "1 час",
@@ -1710,11 +1782,13 @@
       "address": "Врачар, ул. Милешевска 3a, кв 3",
       "placePhone": null,
       "placeLink": null,
+      "lat": null,
+      "lng": null,
       "age": [
-        4,
+        5,
         16
       ],
-      "ageLabel": "4+ лет",
+      "ageLabel": "5+ лет",
       "price": "уточняется",
       "image": null,
       "category": "art",
@@ -1742,6 +1816,8 @@
       "address": "Врачар, ул. Милешевска 3a, кв 3",
       "placePhone": null,
       "placeLink": null,
+      "lat": null,
+      "lng": null,
       "age": [
         3,
         6
@@ -1760,52 +1836,22 @@
       }
     },
     {
-      "id": "520d805577e8",
-      "title": "Компьютерная графика 8+ (Елена)",
-      "short": "Компьютерная графика 8+ (Елена)",
-      "desc": "Компьютерная графика 8+ (Елена)",
-      "date": null,
-      "wd": [
-        3
-      ],
-      "time": "17:00",
-      "dur": "1 час",
-      "place": "Индиго (Врачар)",
-      "address": "Врачар, ул. Милешевска 3a, кв 3",
-      "placePhone": null,
-      "placeLink": null,
-      "age": [
-        8,
-        16
-      ],
-      "ageLabel": "8+ лет",
-      "price": "уточняется",
-      "image": null,
-      "category": "art",
-      "categoryLabel": "Творчество",
-      "source": {
-        "id": "indigo-vracar",
-        "cta": "Записаться в Индиго",
-        "url": "https://t.me/indigoartstudiobelgrade/2927",
-        "kind": "Расписание студии",
-        "name": "Индиго (Врачар)"
-      }
-    },
-    {
-      "id": "8920922f8eeb",
-      "title": "Пленер для детей 5+ (Елена)",
-      "short": "Пленер для детей 5+ (Елена)",
-      "desc": "Пленер для детей 5+ (Елена)",
+      "id": "73f9c3e7f66f",
+      "title": "Керамика 5+ (2 часа)",
+      "short": "Керамика 5+ (2 часа)",
+      "desc": "Керамика 5+ (2 часа)",
       "date": null,
       "wd": [
         4
       ],
       "time": "17:00",
       "dur": "1 час",
-      "place": "Индиго (Врачар)",
-      "address": "Врачар, ул. Милешевска 3a, кв 3",
+      "place": "Индиго (Новый Белград)",
+      "address": "Новый Белград, Антифашистичке борбе 17",
       "placePhone": null,
       "placeLink": null,
+      "lat": null,
+      "lng": null,
       "age": [
         5,
         16
@@ -1816,6 +1862,40 @@
       "category": "art",
       "categoryLabel": "Творчество",
       "source": {
+        "id": "indigo-novi-beograd",
+        "cta": "Записаться в Индиго",
+        "url": "https://t.me/indigoartstudiobelgrade/2928",
+        "kind": "Расписание студии",
+        "name": "Индиго (Новый Белград)"
+      }
+    },
+    {
+      "id": "d1100a71be1a",
+      "title": "Живопись 4+ и 7+(Елена)",
+      "short": "Живопись 4+ и 7+(Елена)",
+      "desc": "Живопись 4+ и 7+(Елена)",
+      "date": null,
+      "wd": [
+        2
+      ],
+      "time": "17:00",
+      "dur": "1 час",
+      "place": "Индиго (Врачар)",
+      "address": "Врачар, ул. Милешевска 3a, кв 3",
+      "placePhone": null,
+      "placeLink": null,
+      "lat": null,
+      "lng": null,
+      "age": [
+        4,
+        16
+      ],
+      "ageLabel": "4+ лет",
+      "price": "уточняется",
+      "image": null,
+      "category": "art",
+      "categoryLabel": "Творчество",
+      "source": {
         "id": "indigo-vracar",
         "cta": "Записаться в Индиго",
         "url": "https://t.me/indigoartstudiobelgrade/2927",
@@ -1824,20 +1904,22 @@
       }
     },
     {
-      "id": "0f61c4569a1d",
-      "title": "Робототехника 3-6 лет",
-      "short": "Робототехника 3-6 лет",
-      "desc": "Робототехника 3-6 лет",
+      "id": "948bb9d2e594",
+      "title": "Вокал 3-6 лет",
+      "short": "Вокал 3-6 лет",
+      "desc": "Вокал 3-6 лет",
       "date": null,
       "wd": [
-        2
+        0
       ],
       "time": "17:00",
       "dur": "1 час",
-      "place": "Индиго (Новый Белград)",
-      "address": "Новый Белград, Антифашистичке борбе 17",
+      "place": "Индиго (Врачар)",
+      "address": "Врачар, ул. Милешевска 3a, кв 3",
       "placePhone": null,
       "placeLink": null,
+      "lat": null,
+      "lng": null,
       "age": [
         3,
         6
@@ -1845,110 +1927,48 @@
       "ageLabel": "3–6 лет",
       "price": "уточняется",
       "image": null,
-      "category": "robotics",
-      "categoryLabel": "Робототехника",
+      "category": "music",
+      "categoryLabel": "Музыка",
       "source": {
-        "id": "indigo-novi-beograd",
+        "id": "indigo-vracar",
         "cta": "Записаться в Индиго",
-        "url": "https://t.me/indigoartstudiobelgrade/2928",
+        "url": "https://t.me/indigoartstudiobelgrade/2927",
         "kind": "Расписание студии",
-        "name": "Индиго (Новый Белград)"
+        "name": "Индиго (Врачар)"
       }
     },
     {
-      "id": "90ba8d64f24b",
-      "title": "Хореография 3-4",
-      "short": "Хореография 3-4",
-      "desc": "Хореография 3-4",
+      "id": "50a78e945fb9",
+      "title": "Семейный читакль",
+      "short": "Семейный читакль",
+      "desc": "Семейный читакль",
       "date": null,
       "wd": [
         4
-      ],
-      "time": "17:00",
-      "dur": "1 час",
-      "place": "Индиго (Новый Белград)",
-      "address": "Новый Белград, Антифашистичке борбе 17",
-      "placePhone": null,
-      "placeLink": null,
-      "age": [
-        3,
-        4
-      ],
-      "ageLabel": "3–4 года",
-      "price": "уточняется",
-      "image": null,
-      "category": "dance",
-      "categoryLabel": "Танцы",
-      "source": {
-        "id": "indigo-novi-beograd",
-        "cta": "Записаться в Индиго",
-        "url": "https://t.me/indigoartstudiobelgrade/2928",
-        "kind": "Расписание студии",
-        "name": "Индиго (Новый Белград)"
-      }
-    },
-    {
-      "id": "fc9701fa80ba",
-      "title": "Гимнастика",
-      "short": "Мягкое знакомство со спортом через интерес и поддержку. Здесь дети учатся чувствовать своё тело, развивают ловкость и уверенность в комфортной атмосфе",
-      "desc": "Мягкое знакомство со спортом через интерес и поддержку. Здесь дети учатся чувствовать своё тело, развивают ловкость и уверенность в комфортной атмосфере.",
-      "date": null,
-      "wd": [
-        4
-      ],
-      "time": "17:00",
-      "dur": "1 час",
-      "place": "Enter",
-      "address": "Ресавска 34, Врачар, Белград",
-      "placePhone": null,
-      "placeLink": null,
-      "age": [
-        2,
-        4
-      ],
-      "ageLabel": "2–4 года",
-      "price": "1500 RSD (разовое), абонемент от 5400 RSD за 4 занятия",
-      "image": "data/images/enter-gymnastika-4.png",
-      "category": "sport",
-      "categoryLabel": "Спорт",
-      "source": {
-        "id": "enter",
-        "cta": "Записаться на сайте Enter",
-        "url": "https://enterspace.rs/classes/gymnastika",
-        "kind": "Сайт студии",
-        "name": "Enter"
-      }
-    },
-    {
-      "id": "b871516e1e0f",
-      "title": "Мама и малыш",
-      "short": "Группа для малышей, которым уже скучно дома! Здесь мы пробуем окружающий мир на ощупь, знакомимся с другими детьми, активно двигаемся и привыкаем к но",
-      "desc": "Группа для малышей, которым уже скучно дома! Здесь мы пробуем окружающий мир на ощупь, знакомимся с другими детьми, активно двигаемся и привыкаем к новому пространству в безопасной атмосфере.",
-      "date": null,
-      "wd": [
-        2
       ],
       "time": "17:00",
       "dur": "60 минут",
-      "place": "Enter",
-      "address": "Ресавска 34, Врачар, Белград",
+      "place": "Sreda Kids",
+      "address": "Стари Град, Косовска 32",
       "placePhone": null,
       "placeLink": null,
+      "lat": null,
+      "lng": null,
       "age": [
         3,
         10
       ],
       "ageLabel": "3–10 лет",
-      "price": "1500 RSD (разовое), абонемент от 5400 RSD за 4 занятия",
-      "image": "data/images/enter-mama-i-malysh-2.png",
-      "category": "early_dev",
-      "categoryLabel": "Раннее развитие",
+      "price": "уточняется",
+      "image": null,
+      "category": "reading",
+      "categoryLabel": "Чтение",
       "source": {
-        "id": "enter",
-        "cta": "Записаться на сайте Enter",
-        "url": "https://enterspace.rs/classes/mama-i-malysh",
+        "id": "mathline-stari-grad",
+        "cta": "Записаться на сайте Mathline",
+        "url": "https://math-line.ru/beograde/reg#!/tab/1251358096-1",
         "kind": "Сайт студии",
-        "name": "Enter"
+        "name": "Sreda Kids"
       }
     },
     {
@@ -1966,6 +1986,8 @@
       "address": "Ресавска 34, Врачар, Белград",
       "placePhone": null,
       "placeLink": null,
+      "lat": null,
+      "lng": null,
       "age": [
         2,
         4
@@ -1998,6 +2020,8 @@
       "address": "Стари Град, Косовска 32",
       "placePhone": null,
       "placeLink": null,
+      "lat": null,
+      "lng": null,
       "age": [
         4,
         6
@@ -2007,6 +2031,40 @@
       "image": null,
       "category": "languages",
       "categoryLabel": "Языки",
+      "source": {
+        "id": "mathline-stari-grad",
+        "cta": "Записаться на сайте Mathline",
+        "url": "https://math-line.ru/beograde/reg#!/tab/1251358096-1",
+        "kind": "Сайт студии",
+        "name": "Sreda Kids"
+      }
+    },
+    {
+      "id": "6cc6563b92a9",
+      "title": "Живопись",
+      "short": "Живопись (4-7 лет)",
+      "desc": "Живопись (4-7 лет)",
+      "date": null,
+      "wd": [
+        2
+      ],
+      "time": "17:00",
+      "dur": "60 минут",
+      "place": "Sreda Kids",
+      "address": "Стари Град, Косовска 32",
+      "placePhone": null,
+      "placeLink": null,
+      "lat": null,
+      "lng": null,
+      "age": [
+        4,
+        7
+      ],
+      "ageLabel": "4–7 лет",
+      "price": "уточняется",
+      "image": null,
+      "category": "art",
+      "categoryLabel": "Творчество",
       "source": {
         "id": "mathline-stari-grad",
         "cta": "Записаться на сайте Mathline",
@@ -2030,6 +2088,8 @@
       "address": "Стари Град, Косовска 32",
       "placePhone": null,
       "placeLink": null,
+      "lat": null,
+      "lng": null,
       "age": [
         4,
         7
@@ -2039,70 +2099,6 @@
       "image": null,
       "category": "sport",
       "categoryLabel": "Спорт",
-      "source": {
-        "id": "mathline-stari-grad",
-        "cta": "Записаться на сайте Mathline",
-        "url": "https://math-line.ru/beograde/reg#!/tab/1251358096-1",
-        "kind": "Сайт студии",
-        "name": "Sreda Kids"
-      }
-    },
-    {
-      "id": "fb27d47f3cb5",
-      "title": "Робототехника Lego WeDo",
-      "short": "Робототехника Lego WeDo (4-6 лет)",
-      "desc": "Робототехника Lego WeDo (4-6 лет)",
-      "date": null,
-      "wd": [
-        0
-      ],
-      "time": "17:00",
-      "dur": "60 минут",
-      "place": "Sreda Kids",
-      "address": "Стари Град, Косовска 32",
-      "placePhone": null,
-      "placeLink": null,
-      "age": [
-        4,
-        6
-      ],
-      "ageLabel": "4–6 лет",
-      "price": "уточняется",
-      "image": null,
-      "category": "robotics",
-      "categoryLabel": "Робототехника",
-      "source": {
-        "id": "mathline-stari-grad",
-        "cta": "Записаться на сайте Mathline",
-        "url": "https://math-line.ru/beograde/reg#!/tab/1251358096-1",
-        "kind": "Сайт студии",
-        "name": "Sreda Kids"
-      }
-    },
-    {
-      "id": "eaad766b4bd8",
-      "title": "Подготовка к школе с нейропсихологом",
-      "short": "Подготовка к школе с нейропсихологом (5-6 лет)",
-      "desc": "Подготовка к школе с нейропсихологом (5-6 лет)",
-      "date": null,
-      "wd": [
-        1
-      ],
-      "time": "17:00",
-      "dur": "60 минут",
-      "place": "Sreda Kids",
-      "address": "Стари Град, Косовска 32",
-      "placePhone": null,
-      "placeLink": null,
-      "age": [
-        5,
-        6
-      ],
-      "ageLabel": "5–6 лет",
-      "price": "уточняется",
-      "image": null,
-      "category": "school_prep",
-      "categoryLabel": "Подготовка к школе",
       "source": {
         "id": "mathline-stari-grad",
         "cta": "Записаться на сайте Mathline",
@@ -2126,6 +2122,8 @@
       "address": "Стари Град, Косовска 32",
       "placePhone": null,
       "placeLink": null,
+      "lat": null,
+      "lng": null,
       "age": [
         4,
         6
@@ -2144,13 +2142,81 @@
       }
     },
     {
-      "id": "4df8e20f9c9f",
+      "id": "eaad766b4bd8",
+      "title": "Подготовка к школе с нейропсихологом",
+      "short": "Подготовка к школе с нейропсихологом (5-6 лет)",
+      "desc": "Подготовка к школе с нейропсихологом (5-6 лет)",
+      "date": null,
+      "wd": [
+        1
+      ],
+      "time": "17:00",
+      "dur": "60 минут",
+      "place": "Sreda Kids",
+      "address": "Стари Град, Косовска 32",
+      "placePhone": null,
+      "placeLink": null,
+      "lat": null,
+      "lng": null,
+      "age": [
+        5,
+        6
+      ],
+      "ageLabel": "5–6 лет",
+      "price": "уточняется",
+      "image": null,
+      "category": "school_prep",
+      "categoryLabel": "Подготовка к школе",
+      "source": {
+        "id": "mathline-stari-grad",
+        "cta": "Записаться на сайте Mathline",
+        "url": "https://math-line.ru/beograde/reg#!/tab/1251358096-1",
+        "kind": "Сайт студии",
+        "name": "Sreda Kids"
+      }
+    },
+    {
+      "id": "fb27d47f3cb5",
+      "title": "Робототехника Lego WeDo",
+      "short": "Робототехника Lego WeDo (4-6 лет)",
+      "desc": "Робототехника Lego WeDo (4-6 лет)",
+      "date": null,
+      "wd": [
+        0
+      ],
+      "time": "17:00",
+      "dur": "60 минут",
+      "place": "Sreda Kids",
+      "address": "Стари Град, Косовска 32",
+      "placePhone": null,
+      "placeLink": null,
+      "lat": null,
+      "lng": null,
+      "age": [
+        4,
+        6
+      ],
+      "ageLabel": "4–6 лет",
+      "price": "уточняется",
+      "image": null,
+      "category": "robotics",
+      "categoryLabel": "Робототехника",
+      "source": {
+        "id": "mathline-stari-grad",
+        "cta": "Записаться на сайте Mathline",
+        "url": "https://math-line.ru/beograde/reg#!/tab/1251358096-1",
+        "kind": "Сайт студии",
+        "name": "Sreda Kids"
+      }
+    },
+    {
+      "id": "90ba8d64f24b",
       "title": "Хореография 3-4",
       "short": "Хореография 3-4",
       "desc": "Хореография 3-4",
       "date": null,
       "wd": [
-        1
+        4
       ],
       "time": "17:00",
       "dur": "1 час",
@@ -2158,6 +2224,8 @@
       "address": "Новый Белград, Антифашистичке борбе 17",
       "placePhone": null,
       "placeLink": null,
+      "lat": null,
+      "lng": null,
       "age": [
         3,
         4
@@ -2176,67 +2244,37 @@
       }
     },
     {
-      "id": "6cc6563b92a9",
-      "title": "Живопись",
-      "short": "Живопись (4-7 лет)",
-      "desc": "Живопись (4-7 лет)",
-      "date": null,
-      "wd": [
-        2
-      ],
-      "time": "17:00",
-      "dur": "60 минут",
-      "place": "Sreda Kids",
-      "address": "Стари Град, Косовска 32",
-      "placePhone": null,
-      "placeLink": null,
-      "age": [
-        4,
-        7
-      ],
-      "ageLabel": "4–7 лет",
-      "price": "уточняется",
-      "image": null,
-      "category": "art",
-      "categoryLabel": "Творчество",
-      "source": {
-        "id": "mathline-stari-grad",
-        "cta": "Записаться на сайте Mathline",
-        "url": "https://math-line.ru/beograde/reg#!/tab/1251358096-1",
-        "kind": "Сайт студии",
-        "name": "Sreda Kids"
-      }
-    },
-    {
-      "id": "50a78e945fb9",
-      "title": "Семейный читакль",
-      "short": "Семейный читакль",
-      "desc": "Семейный читакль",
+      "id": "fc9701fa80ba",
+      "title": "Гимнастика",
+      "short": "Мягкое знакомство со спортом через интерес и поддержку. Здесь дети учатся чувствовать своё тело, развивают ловкость и уверенность в комфортной атмосфе",
+      "desc": "Мягкое знакомство со спортом через интерес и поддержку. Здесь дети учатся чувствовать своё тело, развивают ловкость и уверенность в комфортной атмосфере.",
       "date": null,
       "wd": [
         4
       ],
       "time": "17:00",
-      "dur": "60 минут",
-      "place": "Sreda Kids",
-      "address": "Стари Град, Косовска 32",
+      "dur": "1 час",
+      "place": "Enter",
+      "address": "Ресавска 34, Врачар, Белград",
       "placePhone": null,
       "placeLink": null,
+      "lat": null,
+      "lng": null,
       "age": [
-        3,
-        10
+        2,
+        4
       ],
-      "ageLabel": "3–10 лет",
-      "price": "уточняется",
-      "image": null,
-      "category": "reading",
-      "categoryLabel": "Чтение",
+      "ageLabel": "2–4 года",
+      "price": "1500 RSD (разовое), абонемент от 5400 RSD за 4 занятия",
+      "image": "data/images/enter-gymnastika-4.png",
+      "category": "sport",
+      "categoryLabel": "Спорт",
       "source": {
-        "id": "mathline-stari-grad",
-        "cta": "Записаться на сайте Mathline",
-        "url": "https://math-line.ru/beograde/reg#!/tab/1251358096-1",
+        "id": "enter",
+        "cta": "Записаться на сайте Enter",
+        "url": "https://enterspace.rs/classes/gymnastika",
         "kind": "Сайт студии",
-        "name": "Sreda Kids"
+        "name": "Enter"
       }
     },
     {
@@ -2254,6 +2292,8 @@
       "address": "Новый Белград, Антифашистичке борбе 17",
       "placePhone": null,
       "placeLink": null,
+      "lat": null,
+      "lng": null,
       "age": [
         4,
         16
@@ -2286,6 +2326,8 @@
       "address": "Новый Белград, Антифашистичке борбе 17",
       "placePhone": null,
       "placeLink": null,
+      "lat": null,
+      "lng": null,
       "age": [
         3,
         5
@@ -2304,13 +2346,13 @@
       }
     },
     {
-      "id": "73f9c3e7f66f",
-      "title": "Керамика 5+ (2 часа)",
-      "short": "Керамика 5+ (2 часа)",
-      "desc": "Керамика 5+ (2 часа)",
+      "id": "0f61c4569a1d",
+      "title": "Робототехника 3-6 лет",
+      "short": "Робототехника 3-6 лет",
+      "desc": "Робототехника 3-6 лет",
       "date": null,
       "wd": [
-        4
+        2
       ],
       "time": "17:00",
       "dur": "1 час",
@@ -2318,21 +2360,125 @@
       "address": "Новый Белград, Антифашистичке борбе 17",
       "placePhone": null,
       "placeLink": null,
+      "lat": null,
+      "lng": null,
       "age": [
-        5,
-        16
+        3,
+        6
       ],
-      "ageLabel": "5+ лет",
+      "ageLabel": "3–6 лет",
       "price": "уточняется",
       "image": null,
-      "category": "art",
-      "categoryLabel": "Творчество",
+      "category": "robotics",
+      "categoryLabel": "Робототехника",
       "source": {
         "id": "indigo-novi-beograd",
         "cta": "Записаться в Индиго",
         "url": "https://t.me/indigoartstudiobelgrade/2928",
         "kind": "Расписание студии",
         "name": "Индиго (Новый Белград)"
+      }
+    },
+    {
+      "id": "4df8e20f9c9f",
+      "title": "Хореография 3-4",
+      "short": "Хореография 3-4",
+      "desc": "Хореография 3-4",
+      "date": null,
+      "wd": [
+        1
+      ],
+      "time": "17:00",
+      "dur": "1 час",
+      "place": "Индиго (Новый Белград)",
+      "address": "Новый Белград, Антифашистичке борбе 17",
+      "placePhone": null,
+      "placeLink": null,
+      "lat": null,
+      "lng": null,
+      "age": [
+        3,
+        4
+      ],
+      "ageLabel": "3–4 года",
+      "price": "уточняется",
+      "image": null,
+      "category": "dance",
+      "categoryLabel": "Танцы",
+      "source": {
+        "id": "indigo-novi-beograd",
+        "cta": "Записаться в Индиго",
+        "url": "https://t.me/indigoartstudiobelgrade/2928",
+        "kind": "Расписание студии",
+        "name": "Индиго (Новый Белград)"
+      }
+    },
+    {
+      "id": "b871516e1e0f",
+      "title": "Мама и малыш",
+      "short": "Группа для малышей, которым уже скучно дома! Здесь мы пробуем окружающий мир на ощупь, знакомимся с другими детьми, активно двигаемся и привыкаем к но",
+      "desc": "Группа для малышей, которым уже скучно дома! Здесь мы пробуем окружающий мир на ощупь, знакомимся с другими детьми, активно двигаемся и привыкаем к новому пространству в безопасной атмосфере.",
+      "date": null,
+      "wd": [
+        2
+      ],
+      "time": "17:00",
+      "dur": "60 минут",
+      "place": "Enter",
+      "address": "Ресавска 34, Врачар, Белград",
+      "placePhone": null,
+      "placeLink": null,
+      "lat": null,
+      "lng": null,
+      "age": [
+        3,
+        10
+      ],
+      "ageLabel": "3–10 лет",
+      "price": "1500 RSD (разовое), абонемент от 5400 RSD за 4 занятия",
+      "image": "data/images/enter-mama-i-malysh-2.png",
+      "category": "early_dev",
+      "categoryLabel": "Раннее развитие",
+      "source": {
+        "id": "enter",
+        "cta": "Записаться на сайте Enter",
+        "url": "https://enterspace.rs/classes/mama-i-malysh",
+        "kind": "Сайт студии",
+        "name": "Enter"
+      }
+    },
+    {
+      "id": "520d805577e8",
+      "title": "Компьютерная графика 8+ (Елена)",
+      "short": "Компьютерная графика 8+ (Елена)",
+      "desc": "Компьютерная графика 8+ (Елена)",
+      "date": null,
+      "wd": [
+        3
+      ],
+      "time": "17:00",
+      "dur": "1 час",
+      "place": "Индиго (Врачар)",
+      "address": "Врачар, ул. Милешевска 3a, кв 3",
+      "placePhone": null,
+      "placeLink": null,
+      "lat": null,
+      "lng": null,
+      "age": [
+        8,
+        16
+      ],
+      "ageLabel": "8+ лет",
+      "price": "уточняется",
+      "image": null,
+      "category": "art",
+      "categoryLabel": "Творчество",
+      "source": {
+        "id": "indigo-vracar",
+        "cta": "Записаться в Индиго",
+        "url": "https://t.me/indigoartstudiobelgrade/2927",
+        "kind": "Расписание студии",
+        "name": "Индиго (Врачар)"
       }
     },
     {
@@ -2350,11 +2496,47 @@
       "address": "Врачар, ул. Милешевска 3a, кв 3",
       "placePhone": null,
       "placeLink": null,
+      "lat": null,
+      "lng": null,
       "age": [
         5,
         16
       ],
       "ageLabel": "5+ лет",
+      "price": "уточняется",
+      "image": null,
+      "category": "art",
+      "categoryLabel": "Творчество",
+      "source": {
+        "id": "indigo-vracar",
+        "cta": "Записаться в Индиго",
+        "url": "https://t.me/indigoartstudiobelgrade/2927",
+        "kind": "Расписание студии",
+        "name": "Индиго (Врачар)"
+      }
+    },
+    {
+      "id": "580d7895c04c",
+      "title": "Графика 7+ (Алина)",
+      "short": "Графика 7+ (Алина)",
+      "desc": "Графика 7+ (Алина)",
+      "date": null,
+      "wd": [
+        4
+      ],
+      "time": "17:30",
+      "dur": "1 час",
+      "place": "Индиго (Врачар)",
+      "address": "Врачар, ул. Милешевска 3a, кв 3",
+      "placePhone": null,
+      "placeLink": null,
+      "lat": null,
+      "lng": null,
+      "age": [
+        7,
+        16
+      ],
+      "ageLabel": "7+ лет",
       "price": "уточняется",
       "image": null,
       "category": "art",
@@ -2382,6 +2564,8 @@
       "address": "Врачар, ул. Милешевска 3a, кв 3",
       "placePhone": null,
       "placeLink": null,
+      "lat": null,
+      "lng": null,
       "age": [
         5,
         16
@@ -2391,38 +2575,6 @@
       "image": null,
       "category": "dance",
       "categoryLabel": "Танцы",
-      "source": {
-        "id": "indigo-vracar",
-        "cta": "Записаться в Индиго",
-        "url": "https://t.me/indigoartstudiobelgrade/2927",
-        "kind": "Расписание студии",
-        "name": "Индиго (Врачар)"
-      }
-    },
-    {
-      "id": "580d7895c04c",
-      "title": "Графика 7+ (Алина)",
-      "short": "Графика 7+ (Алина)",
-      "desc": "Графика 7+ (Алина)",
-      "date": null,
-      "wd": [
-        4
-      ],
-      "time": "17:30",
-      "dur": "1 час",
-      "place": "Индиго (Врачар)",
-      "address": "Врачар, ул. Милешевска 3a, кв 3",
-      "placePhone": null,
-      "placeLink": null,
-      "age": [
-        7,
-        16
-      ],
-      "ageLabel": "7+ лет",
-      "price": "уточняется",
-      "image": null,
-      "category": "art",
-      "categoryLabel": "Творчество",
       "source": {
         "id": "indigo-vracar",
         "cta": "Записаться в Индиго",
@@ -2446,6 +2598,8 @@
       "address": "Врачар, ул. Милешевска 3a, кв 3",
       "placePhone": null,
       "placeLink": null,
+      "lat": null,
+      "lng": null,
       "age": [
         4,
         16
@@ -2478,6 +2632,8 @@
       "address": "Врачар, ул. Милешевска 3a, кв 3",
       "placePhone": null,
       "placeLink": null,
+      "lat": null,
+      "lng": null,
       "age": [
         3,
         6
@@ -2510,6 +2666,8 @@
       "address": "Врачар, ул. Милешевска 3a, кв 3",
       "placePhone": null,
       "placeLink": null,
+      "lat": null,
+      "lng": null,
       "age": [
         3,
         16
@@ -2542,6 +2700,8 @@
       "address": "Врачар, ул. Милешевска 3a, кв 3",
       "placePhone": null,
       "placeLink": null,
+      "lat": null,
+      "lng": null,
       "age": [
         5,
         16
@@ -2574,6 +2734,8 @@
       "address": "Новый Белград, Антифашистичке борбе 17",
       "placePhone": null,
       "placeLink": null,
+      "lat": null,
+      "lng": null,
       "age": [
         5,
         6
@@ -2606,6 +2768,8 @@
       "address": "Новый Белград, Антифашистичке борбе 17",
       "placePhone": null,
       "placeLink": null,
+      "lat": null,
+      "lng": null,
       "age": [
         5,
         6
@@ -2638,6 +2802,8 @@
       "address": "Врачар, ул. Милешевска 3a, кв 3",
       "placePhone": null,
       "placeLink": null,
+      "lat": null,
+      "lng": null,
       "age": [
         8,
         16
@@ -2670,6 +2836,8 @@
       "address": "Врачар, ул. Милешевска 3a, кв 3",
       "placePhone": null,
       "placeLink": null,
+      "lat": null,
+      "lng": null,
       "age": [
         6,
         16
@@ -2702,6 +2870,8 @@
       "address": "Врачар, ул. Милешевска 3a, кв 3",
       "placePhone": null,
       "placeLink": null,
+      "lat": null,
+      "lng": null,
       "age": [
         6,
         16
@@ -2734,6 +2904,8 @@
       "address": "Врачар, ул. Милешевска 3a, кв 3",
       "placePhone": null,
       "placeLink": null,
+      "lat": null,
+      "lng": null,
       "age": [
         6,
         16
