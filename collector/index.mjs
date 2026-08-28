@@ -7,6 +7,7 @@ import { collectEnterspace } from './sources/enterspace.mjs';
 import { collectMathline } from './sources/mathline.mjs';
 import { collectTelegram } from './sources/telegram.mjs';
 import { dedupe, filterEvents } from './lib/normalize.mjs';
+import { attachGeo } from './lib/geo.mjs';
 import { saveImage } from './lib/images.mjs';
 import { fetchPublicEvents, pushEvents, supabaseEnabled } from './lib/supabase.mjs';
 import { sendRunReport } from './lib/notify.mjs';
@@ -41,7 +42,7 @@ for (const source of sources) {
   }
 }
 
-const events = filterEvents(dedupe(collected));
+const events = attachGeo(filterEvents(dedupe(collected)));
 
 // Пустой прогон не должен обнулять афишу — оставляем прошлый файл.
 let previous = null;

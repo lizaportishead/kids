@@ -7,11 +7,18 @@ create table if not exists public.place (
   name    varchar not null,
   address varchar,
   phone   varchar,
-  link    varchar
+  link    varchar,
+  lat     double precision,
+  lng     double precision
 );
 
 -- Имя площадки — ключ сопоставления при сборе, поэтому оно уникально.
 create unique index if not exists place_name_idx on public.place (lower(name));
+
+-- Координаты для карты «Площадки» на сайте. create table if not exists не трогает
+-- существующую таблицу, поэтому добавляем отдельно.
+alter table public.place add column if not exists lat double precision;
+alter table public.place add column if not exists lng double precision;
 
 create table if not exists public.events (
   id          text primary key,               -- sha1-хэш из коллектора
@@ -62,6 +69,8 @@ select e.id, e.title, e.short, e."desc",
        p.address as address,
        p.phone   as "placePhone",
        p.link    as "placeLink",
+       p.lat     as lat,
+       p.lng     as lng,
        array[e.age_min, e.age_max] as age,
        e.age_label as "ageLabel",
        e.price, e.image, e.category, e.category_label as "categoryLabel", e.source
@@ -72,9 +81,16 @@ where e.status = 'approved'
   and (e.date is null or e.date >= date_trunc('week', current_date)::date)
 order by e.date nulls last, e.time;
 
--- Площадка по имени: находим существующую или создаём. Адрес дополняем, но не затираем
--- вручную выправленный (coalesce от текущего значения).
-create or replace function public.resolve_place(p_name text, p_address text)
+-- Площадка по имени: находим существующую или создаём. Адрес и координаты дополняем,
+-- но не затираем вручную выправленные (coalesce от текущего значения).
+-- Раньше функция была на два аргумента — сносим старую сигнатуру перед пересозданием.
+drop function if exists public.resolve_place(text, text);
+create or replace function public.resolve_place(
+  p_name    text,
+  p_address text,
+  p_lat     double precision default null,
+  p_lng     double precision default null
+)
 returns bigint
 language plpgsql
 security definer
@@ -86,9 +102,15 @@ begin
 
   select id into v_id from public.place where lower(name) = lower(btrim(p_name));
   if v_id is null then
-    insert into public.place (name, address) values (btrim(p_name), p_address) returning id into v_id;
-  elsif p_address is not null then
-    update public.place set address = coalesce(address, p_address) where id = v_id;
+    insert into public.place (name, address, lat, lng)
+    values (btrim(p_name), p_address, p_lat, p_lng)
+    returning id into v_id;
+  elsif p_address is not null or p_lat is not null or p_lng is not null then
+    update public.place set
+      address = coalesce(address, p_address),
+      lat     = coalesce(lat, p_lat),
+      lng     = coalesce(lng, p_lng)
+    where id = v_id;
   end if;
   return v_id;
 end;
@@ -106,12 +128,13 @@ declare n integer;
 begin
   create temp table _incoming on commit drop as
   select p.id, p.title, p.short, p."desc", p.date, p.wd, p.time, p.dur,
-         public.resolve_place(p.place_name, p.place_address) as place,
+         public.resolve_place(p.place_name, p.place_address, p.place_lat, p.place_lng) as place,
          p.age_min, p.age_max, p.age_label, p.price, p.image, p.category, p.category_label, p.source,
          p.hash, p.status, p.fetched_at
   from jsonb_to_recordset(payload) as p(
     id text, title text, short text, "desc" text, date date, wd smallint[],
     time text, dur text, place_name text, place_address text,
+    place_lat double precision, place_lng double precision,
     age_min smallint, age_max smallint, age_label text, price text, image text,
     category text, category_label text,
     source jsonb, hash text, status text, fetched_at timestamptz
@@ -159,7 +182,7 @@ end;
 $$;
 
 revoke all on function public.upsert_events(jsonb) from public, anon, authenticated;
-revoke all on function public.resolve_place(text, text) from public, anon, authenticated;
+revoke all on function public.resolve_place(text, text, double precision, double precision) from public, anon, authenticated;
 grant execute on function public.upsert_events(jsonb) to service_role;
 
 alter table public.events enable row level security;

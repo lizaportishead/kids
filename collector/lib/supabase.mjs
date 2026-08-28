@@ -16,6 +16,8 @@ function rowOf(ev, status) {
     dur: ev.dur,
     place_name: ev.place,
     place_address: ev.address,
+    place_lat: ev.lat ?? null,
+    place_lng: ev.lng ?? null,
     age_min: ev.age?.[0] ?? 3,
     age_max: ev.age?.[1] ?? 10,
     age_label: ev.ageLabel,
