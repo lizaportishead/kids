@@ -1,7 +1,7 @@
 {
   "updatedAt": "2026-08-28T09:56:42.827Z",
   "city": "Белград",
-  "count": 86,
+  "count": 91,
   "report": [
     {
       "source": "prodlenka",
@@ -2921,6 +2921,166 @@
         "url": "https://t.me/indigoartstudiobelgrade/2927",
         "kind": "Расписание студии",
         "name": "Индиго (Врачар)"
+      }
+    },
+    {
+      "id": "procvat-deti-3-4-pn",
+      "title": "Танцы",
+      "short": "Танцы для детей 3–4 лет в студии Procvat",
+      "desc": "Занятия танцами для детей 3–4 лет в студии танцев Procvat на Врачаре.",
+      "date": null,
+      "wd": [
+        0
+      ],
+      "time": "17:00",
+      "dur": "1 час",
+      "place": "Студия танцев Procvat",
+      "address": "Грчича Миленка 19, Врачар, Белград",
+      "placePhone": null,
+      "placeLink": null,
+      "age": [
+        3,
+        4
+      ],
+      "ageLabel": "3–4 года",
+      "price": "уточняется",
+      "image": null,
+      "category": "dance",
+      "categoryLabel": "Танцы",
+      "source": {
+        "id": "procvat",
+        "cta": "Записаться в Procvat",
+        "url": "https://www.instagram.com/dance_kids_belgrad/",
+        "kind": "Расписание студии",
+        "name": "Студия танцев Procvat"
+      }
+    },
+    {
+      "id": "procvat-rastyazhka-ofp-8-10-sr",
+      "title": "Растяжка и ОФП",
+      "short": "Растяжка и ОФП для детей 8–10 лет в студии Procvat",
+      "desc": "Растяжка и общая физическая подготовка для детей 8–10 лет в студии танцев Procvat на Врачаре.",
+      "date": null,
+      "wd": [
+        2
+      ],
+      "time": "17:00",
+      "dur": "1 час 30 минут",
+      "place": "Студия танцев Procvat",
+      "address": "Грчича Миленка 19, Врачар, Белград",
+      "placePhone": null,
+      "placeLink": null,
+      "age": [
+        8,
+        10
+      ],
+      "ageLabel": "8–10 лет",
+      "price": "уточняется",
+      "image": null,
+      "category": "sport",
+      "categoryLabel": "Спорт",
+      "source": {
+        "id": "procvat",
+        "cta": "Записаться в Procvat",
+        "url": "https://www.instagram.com/dance_kids_belgrad/",
+        "kind": "Расписание студии",
+        "name": "Студия танцев Procvat"
+      }
+    },
+    {
+      "id": "procvat-deti-5-6-pn",
+      "title": "Танцы",
+      "short": "Танцы для детей 5–6 лет в студии Procvat",
+      "desc": "Занятия танцами для детей 5–6 лет в студии танцев Procvat на Врачаре.",
+      "date": null,
+      "wd": [
+        0
+      ],
+      "time": "18:00",
+      "dur": "1 час 30 минут",
+      "place": "Студия танцев Procvat",
+      "address": "Грчича Миленка 19, Врачар, Белград",
+      "placePhone": null,
+      "placeLink": null,
+      "age": [
+        5,
+        6
+      ],
+      "ageLabel": "5–6 лет",
+      "price": "уточняется",
+      "image": null,
+      "category": "dance",
+      "categoryLabel": "Танцы",
+      "source": {
+        "id": "procvat",
+        "cta": "Записаться в Procvat",
+        "url": "https://www.instagram.com/dance_kids_belgrad/",
+        "kind": "Расписание студии",
+        "name": "Студия танцев Procvat"
+      }
+    },
+    {
+      "id": "procvat-deti-3-4-cht",
+      "title": "Танцы",
+      "short": "Танцы для детей 3–4 лет в студии Procvat",
+      "desc": "Занятия танцами для детей 3–4 лет в студии танцев Procvat на Врачаре.",
+      "date": null,
+      "wd": [
+        3
+      ],
+      "time": "18:30",
+      "dur": "1 час",
+      "place": "Студия танцев Procvat",
+      "address": "Грчича Миленка 19, Врачар, Белград",
+      "placePhone": null,
+      "placeLink": null,
+      "age": [
+        3,
+        4
+      ],
+      "ageLabel": "3–4 года",
+      "price": "уточняется",
+      "image": null,
+      "category": "dance",
+      "categoryLabel": "Танцы",
+      "source": {
+        "id": "procvat",
+        "cta": "Записаться в Procvat",
+        "url": "https://www.instagram.com/dance_kids_belgrad/",
+        "kind": "Расписание студии",
+        "name": "Студия танцев Procvat"
+      }
+    },
+    {
+      "id": "procvat-deti-5-6-sr",
+      "title": "Танцы",
+      "short": "Танцы для детей 5–6 лет в студии Procvat",
+      "desc": "Занятия танцами для детей 5–6 лет в студии танцев Procvat на Врачаре.",
+      "date": null,
+      "wd": [
+        2
+      ],
+      "time": "18:30",
+      "dur": "1 час",
+      "place": "Студия танцев Procvat",
+      "address": "Грчича Миленка 19, Врачар, Белград",
+      "placePhone": null,
+      "placeLink": null,
+      "age": [
+        5,
+        6
+      ],
+      "ageLabel": "5–6 лет",
+      "price": "уточняется",
+      "image": null,
+      "category": "dance",
+      "categoryLabel": "Танцы",
+      "source": {
+        "id": "procvat",
+        "cta": "Записаться в Procvat",
+        "url": "https://www.instagram.com/dance_kids_belgrad/",
+        "kind": "Расписание студии",
+        "name": "Студия танцев Procvat"
       }
     }
   ]
