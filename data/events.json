@@ -1,7 +1,7 @@
 {
   "updatedAt": "2026-08-30T09:54:57.479Z",
   "city": "Белград",
-  "count": 108,
+  "count": 111,
   "report": [
     {
       "source": "prodlenka",
@@ -3665,6 +3665,102 @@
         "url": "https://www.instagram.com/swimyou.club/",
         "kind": "Расписание школы",
         "name": "SwimYou"
+      }
+    },
+    {
+      "id": "besmart-syrnik-party-2026-09-06",
+      "title": "Syrnik Party",
+      "short": "Семейный праздник: провожаем лето, рисуем и готовим сырники",
+      "desc": "Наше «фирменное» семейное мероприятие: провожаем лето, вспоминаем приключения и сочиняем свою историю «Как я провёл лето». С рисунками, фантазией и, конечно, сырниками. Будут игры и интерактивы для детей.",
+      "date": "2026-09-06",
+      "wd": null,
+      "time": "11:00",
+      "dur": "2 часа",
+      "place": "Be Smart",
+      "address": "Хаджи Милентьева 78, Врачар, Белград",
+      "placePhone": null,
+      "placeLink": null,
+      "lat": null,
+      "lng": null,
+      "age": [
+        3,
+        10
+      ],
+      "ageLabel": "для всей семьи",
+      "price": "донат от 500 дин за ребёнка, взрослые бесплатно",
+      "image": null,
+      "category": "art",
+      "categoryLabel": "Творчество",
+      "source": {
+        "id": "besmart",
+        "name": "Be Smart",
+        "kind": "Телеграм-канал Be Smart",
+        "url": "https://t.me/besmart_belgrade",
+        "cta": "Записаться у @BeSmartSerbia"
+      }
+    },
+    {
+      "id": "besmart-spektakl-masha-2026-09-20",
+      "title": "Спектакль «Как Маша уснуть не могла»",
+      "short": "Тёплый камерный интерактивный спектакль для самых маленьких",
+      "desc": "Тёплый камерный интерактивный спектакль для самых маленьких — про Машу, которой никак не удаётся заснуть, и как же всё-таки она справилась.",
+      "date": "2026-09-20",
+      "wd": null,
+      "time": "17:00",
+      "dur": "1 час",
+      "place": "Be Smart",
+      "address": "Хаджи Милентьева 78, Врачар, Белград",
+      "placePhone": null,
+      "placeLink": null,
+      "lat": null,
+      "lng": null,
+      "age": [
+        3,
+        10
+      ],
+      "ageLabel": "3+",
+      "price": "2000 дин ребёнок, 1000 дин взрослый",
+      "image": null,
+      "category": null,
+      "categoryLabel": null,
+      "source": {
+        "id": "besmart",
+        "name": "Be Smart",
+        "kind": "Телеграм-канал Be Smart",
+        "url": "https://t.me/besmart_belgrade",
+        "cta": "Записаться у @BeSmartSerbia"
+      }
+    },
+    {
+      "id": "besmart-kvest-hogwarts-2026-09-27",
+      "title": "Квест «Ключи от Хогвартса» с Асей Штейн",
+      "short": "Лаборатория-квест для детей 8–12 лет",
+      "desc": "Лаборатория-квест для детей 8–12 лет. Юные алхимики ищут ключи к тайнам Хогвартса и разбирают самые неожиданные документы и сюжеты: алхимические трактаты Николаса Фламеля, архивные истории о привидениях в британских школах, загадочные места Лондона.",
+      "date": "2026-09-27",
+      "wd": null,
+      "time": "10:00",
+      "dur": "2 часа",
+      "place": "Be Smart",
+      "address": "Хаджи Милентьева 78, Врачар, Белград",
+      "placePhone": null,
+      "placeLink": null,
+      "lat": null,
+      "lng": null,
+      "age": [
+        8,
+        12
+      ],
+      "ageLabel": "8–12 лет",
+      "price": "2500 дин",
+      "image": null,
+      "category": "reading",
+      "categoryLabel": "Чтение",
+      "source": {
+        "id": "besmart",
+        "name": "Be Smart",
+        "kind": "Телеграм-канал Be Smart",
+        "url": "https://t.me/besmart_belgrade",
+        "cta": "Записаться у @BeSmartSerbia"
       }
     }
   ]
