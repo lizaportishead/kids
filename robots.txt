@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+Disallow: /collector/
+Disallow: /db/
+Disallow: /supabase/
+
+Sitemap: https://klubok.kids/sitemap.xml
