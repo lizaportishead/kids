@@ -6,6 +6,7 @@ import { collectProdlenka } from './sources/prodlenka.mjs';
 import { collectEnterspace } from './sources/enterspace.mjs';
 import { collectMathline } from './sources/mathline.mjs';
 import { collectTelegram } from './sources/telegram.mjs';
+import { collectBeopinokio } from './sources/beopinokio.mjs';
 import { dedupe, filterEvents } from './lib/normalize.mjs';
 import { saveImage } from './lib/images.mjs';
 import { fetchPublicEvents, pushEvents, supabaseEnabled } from './lib/supabase.mjs';
@@ -16,7 +17,7 @@ const root = resolve(here, '..');
 const OUT = resolve(root, 'data/events.json');
 const IMG_DIR = resolve(root, 'data/images');
 
-const RUNNERS = { instagram: collectInstagram, prodlenka: collectProdlenka, enterspace: collectEnterspace, mathline: collectMathline, telegram: collectTelegram };
+const RUNNERS = { instagram: collectInstagram, prodlenka: collectProdlenka, enterspace: collectEnterspace, mathline: collectMathline, telegram: collectTelegram, beopinokio: collectBeopinokio };
 
 const now = new Date();
 const sources = JSON.parse(await readFile(resolve(here, 'sources.json'), 'utf8'));

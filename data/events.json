@@ -1,7 +1,7 @@
 {
   "updatedAt": "2026-08-31T10:48:21.184Z",
   "city": "Белград",
-  "count": 106,
+  "count": 117,
   "report": [
     {
       "source": "prodlenka",
@@ -3601,6 +3601,364 @@
         "url": "https://www.instagram.com/swimyou.club/",
         "kind": "Расписание школы",
         "name": "SwimYou"
+      }
+    },
+    {
+      "id": "000d3ea735a7",
+      "title": "ЭРУДИТЫ",
+      "short": "ЭРУДИТЫ - курс русского языка для билингвов, расширение общего кругозора детей 8-9 лет",
+      "desc": "ЭРУДИТЫ - курс русского языка для билингвов, расширение общего кругозора детей 8-9 лет",
+      "date": null,
+      "wd": [
+        0,
+        2
+      ],
+      "time": "18:10",
+      "dur": "1 час",
+      "place": "ЛаборатоРиЯ",
+      "address": "Новый Белград, Булевар Црвене армије 9б, ст 5 (Белвил)",
+      "placePhone": null,
+      "placeLink": null,
+      "age": [
+        8,
+        9
+      ],
+      "ageLabel": "8–9 лет",
+      "price": "уточняется",
+      "image": null,
+      "category": "reading",
+      "categoryLabel": "Чтение",
+      "source": {
+        "id": "laboratoriya",
+        "cta": "Записаться на сайте ЛаборатоРиЯ",
+        "url": "https://www.beopinokio.rs/reg",
+        "kind": "Сайт студии",
+        "name": "ЛаборатоРиЯ"
+      }
+    },
+    {
+      "id": "3d10749176f1",
+      "title": "Арт-студия КЛАССИЧЕСКАЯ ХУДОЖКА",
+      "short": "Арт-студия КЛАССИЧЕСКАЯ ХУДОЖКА 9-12 лет",
+      "desc": "Арт-студия КЛАССИЧЕСКАЯ ХУДОЖКА 9-12 лет",
+      "date": null,
+      "wd": [
+        0
+      ],
+      "time": "18:00",
+      "dur": "1 час",
+      "place": "ЛаборатоРиЯ",
+      "address": "Новый Белград, Булевар Црвене армије 9б, ст 5 (Белвил)",
+      "placePhone": null,
+      "placeLink": null,
+      "age": [
+        9,
+        12
+      ],
+      "ageLabel": "9–12 лет",
+      "price": "уточняется",
+      "image": null,
+      "category": "art",
+      "categoryLabel": "Творчество",
+      "source": {
+        "id": "laboratoriya",
+        "cta": "Записаться на сайте ЛаборатоРиЯ",
+        "url": "https://www.beopinokio.rs/reg",
+        "kind": "Сайт студии",
+        "name": "ЛаборатоРиЯ"
+      }
+    },
+    {
+      "id": "5d78322c7f20",
+      "title": "ДЗЮДО для детей",
+      "short": "ДЗЮДО для детей 5-6 лет",
+      "desc": "ДЗЮДО для детей 5-6 лет",
+      "date": null,
+      "wd": [
+        0,
+        2,
+        4
+      ],
+      "time": "18:15",
+      "dur": "1 час",
+      "place": "ЛаборатоРиЯ",
+      "address": "Новый Белград, Булевар Црвене армије 9б, ст 5 (Белвил)",
+      "placePhone": null,
+      "placeLink": null,
+      "age": [
+        5,
+        6
+      ],
+      "ageLabel": "5–6 лет",
+      "price": "уточняется",
+      "image": null,
+      "category": "sport",
+      "categoryLabel": "Спорт",
+      "source": {
+        "id": "laboratoriya",
+        "cta": "Записаться на сайте ЛаборатоРиЯ",
+        "url": "https://www.beopinokio.rs/reg",
+        "kind": "Сайт студии",
+        "name": "ЛаборатоРиЯ"
+      }
+    },
+    {
+      "id": "32ec20f1266c",
+      "title": "ДЗЮДО для детей",
+      "short": "ДЗЮДО для детей 7-9 лет",
+      "desc": "ДЗЮДО для детей 7-9 лет",
+      "date": null,
+      "wd": [
+        0,
+        2,
+        4
+      ],
+      "time": "19:15",
+      "dur": "1 час",
+      "place": "ЛаборатоРиЯ",
+      "address": "Новый Белград, Булевар Црвене армије 9б, ст 5 (Белвил)",
+      "placePhone": null,
+      "placeLink": null,
+      "age": [
+        7,
+        9
+      ],
+      "ageLabel": "7–9 лет",
+      "price": "уточняется",
+      "image": null,
+      "category": "sport",
+      "categoryLabel": "Спорт",
+      "source": {
+        "id": "laboratoriya",
+        "cta": "Записаться на сайте ЛаборатоРиЯ",
+        "url": "https://www.beopinokio.rs/reg",
+        "kind": "Сайт студии",
+        "name": "ЛаборатоРиЯ"
+      }
+    },
+    {
+      "id": "2efb50671e9d",
+      "title": "Подготовка к школе ПЯТНАШКИ",
+      "short": "Подготовка к школе ПЯТНАШКИ 6-7 лет (чтение, математика, речь, логика)",
+      "desc": "Подготовка к школе ПЯТНАШКИ 6-7 лет (чтение, математика, речь, логика)",
+      "date": null,
+      "wd": [
+        1,
+        3
+      ],
+      "time": "17:00",
+      "dur": "1 час",
+      "place": "ЛаборатоРиЯ",
+      "address": "Новый Белград, Булевар Црвене армије 9б, ст 5 (Белвил)",
+      "placePhone": null,
+      "placeLink": null,
+      "age": [
+        6,
+        7
+      ],
+      "ageLabel": "6–7 лет",
+      "price": "уточняется",
+      "image": null,
+      "category": "school_prep",
+      "categoryLabel": "Подготовка к школе",
+      "source": {
+        "id": "laboratoriya",
+        "cta": "Записаться на сайте ЛаборатоРиЯ",
+        "url": "https://www.beopinokio.rs/reg",
+        "kind": "Сайт студии",
+        "name": "ЛаборатоРиЯ"
+      }
+    },
+    {
+      "id": "2f7d57e3735c",
+      "title": "ТОПОТУШКИ для детей",
+      "short": "ТОПОТУШКИ для детей от 3 лет",
+      "desc": "ТОПОТУШКИ для детей от 3 лет",
+      "date": null,
+      "wd": [
+        2
+      ],
+      "time": "17:00",
+      "dur": "1 час",
+      "place": "ЛаборатоРиЯ",
+      "address": "Новый Белград, Булевар Црвене армије 9б, ст 5 (Белвил)",
+      "placePhone": null,
+      "placeLink": null,
+      "age": [
+        3,
+        7
+      ],
+      "ageLabel": "3–7 лет",
+      "price": "уточняется",
+      "image": null,
+      "category": "reading",
+      "categoryLabel": "Чтение",
+      "source": {
+        "id": "laboratoriya",
+        "cta": "Записаться на сайте ЛаборатоРиЯ",
+        "url": "https://www.beopinokio.rs/reg",
+        "kind": "Сайт студии",
+        "name": "ЛаборатоРиЯ"
+      }
+    },
+    {
+      "id": "91a1c9ed7c8e",
+      "title": "Арт-студия РИСОВАНИЕ ДЛЯ ДУШИ",
+      "short": "Арт-студия РИСОВАНИЕ ДЛЯ ДУШИ",
+      "desc": "Арт-студия РИСОВАНИЕ ДЛЯ ДУШИ",
+      "date": null,
+      "wd": [
+        3
+      ],
+      "time": "18:00",
+      "dur": "1 час",
+      "place": "ЛаборатоРиЯ",
+      "address": "Новый Белград, Булевар Црвене армије 9б, ст 5 (Белвил)",
+      "placePhone": null,
+      "placeLink": null,
+      "age": [
+        3,
+        10
+      ],
+      "ageLabel": "3–10 лет",
+      "price": "уточняется",
+      "image": null,
+      "category": "art",
+      "categoryLabel": "Творчество",
+      "source": {
+        "id": "laboratoriya",
+        "cta": "Записаться на сайте ЛаборатоРиЯ",
+        "url": "https://www.beopinokio.rs/reg",
+        "kind": "Сайт студии",
+        "name": "ЛаборатоРиЯ"
+      }
+    },
+    {
+      "id": "f39768cd9bfc",
+      "title": "КЕРАМИКА",
+      "short": "КЕРАМИКА 7-12 лет",
+      "desc": "КЕРАМИКА 7-12 лет",
+      "date": null,
+      "wd": [
+        4
+      ],
+      "time": "18:30",
+      "dur": "1 час",
+      "place": "ЛаборатоРиЯ",
+      "address": "Новый Белград, Булевар Црвене армије 9б, ст 5 (Белвил)",
+      "placePhone": null,
+      "placeLink": null,
+      "age": [
+        7,
+        12
+      ],
+      "ageLabel": "7–12 лет",
+      "price": "уточняется",
+      "image": null,
+      "category": "art",
+      "categoryLabel": "Творчество",
+      "source": {
+        "id": "laboratoriya",
+        "cta": "Записаться на сайте ЛаборатоРиЯ",
+        "url": "https://www.beopinokio.rs/reg",
+        "kind": "Сайт студии",
+        "name": "ЛаборатоРиЯ"
+      }
+    },
+    {
+      "id": "eb504dc46e88",
+      "title": "Интенсив по ЛОГОРИТМИКЕ",
+      "short": "Интенсив по ЛОГОРИТМИКЕ - занятие совместно с мамой или папой для детей 1,5 до 3 лет",
+      "desc": "Интенсив по ЛОГОРИТМИКЕ - занятие совместно с мамой или папой для детей 1,5 до 3 лет",
+      "date": null,
+      "wd": [
+        5
+      ],
+      "time": "11:00",
+      "dur": "45 минут",
+      "place": "ЛаборатоРиЯ",
+      "address": "Новый Белград, Булевар Црвене армије 9б, ст 5 (Белвил)",
+      "placePhone": null,
+      "placeLink": null,
+      "age": [
+        1,
+        3
+      ],
+      "ageLabel": "1–3 года",
+      "price": "уточняется",
+      "image": null,
+      "category": "early_dev",
+      "categoryLabel": "Раннее развитие",
+      "source": {
+        "id": "laboratoriya",
+        "cta": "Записаться на сайте ЛаборатоРиЯ",
+        "url": "https://www.beopinokio.rs/reg",
+        "kind": "Сайт студии",
+        "name": "ЛаборатоРиЯ"
+      }
+    },
+    {
+      "id": "fad4eed00e16",
+      "title": "Арт-терапевтическое занятие ИГРА В ГЛИНУ",
+      "short": "Арт-терапевтическое занятие ИГРА В ГЛИНУ 4-6 лет",
+      "desc": "Арт-терапевтическое занятие ИГРА В ГЛИНУ 4-6 лет",
+      "date": null,
+      "wd": [
+        6
+      ],
+      "time": "12:00",
+      "dur": "1 час",
+      "place": "ЛаборатоРиЯ",
+      "address": "Новый Белград, Булевар Црвене армије 9б, ст 5 (Белвил)",
+      "placePhone": null,
+      "placeLink": null,
+      "age": [
+        4,
+        6
+      ],
+      "ageLabel": "4–6 лет",
+      "price": "уточняется",
+      "image": null,
+      "category": "art",
+      "categoryLabel": "Творчество",
+      "source": {
+        "id": "laboratoriya",
+        "cta": "Записаться на сайте ЛаборатоРиЯ",
+        "url": "https://www.beopinokio.rs/reg",
+        "kind": "Сайт студии",
+        "name": "ЛаборатоРиЯ"
+      }
+    },
+    {
+      "id": "75be9cdf2c2e",
+      "title": "Профориентация КАРТА МОЕГО ПУТИ для подростков",
+      "short": "Профориентация КАРТА МОЕГО ПУТИ для подростков 12-16 лет",
+      "desc": "Профориентация КАРТА МОЕГО ПУТИ для подростков 12-16 лет",
+      "date": null,
+      "wd": [
+        6
+      ],
+      "time": "15:00",
+      "dur": "1 час",
+      "place": "ЛаборатоРиЯ",
+      "address": "Новый Белград, Булевар Црвене армије 9б, ст 5 (Белвил)",
+      "placePhone": null,
+      "placeLink": null,
+      "age": [
+        12,
+        16
+      ],
+      "ageLabel": "12+ лет",
+      "price": "уточняется",
+      "image": null,
+      "category": "reading",
+      "categoryLabel": "Чтение",
+      "source": {
+        "id": "laboratoriya",
+        "cta": "Записаться на сайте ЛаборатоРиЯ",
+        "url": "https://www.beopinokio.rs/reg",
+        "kind": "Сайт студии",
+        "name": "ЛаборатоРиЯ"
       }
     }
   ]
