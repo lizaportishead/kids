@@ -1,0 +1,486 @@
+openapi: 3.1.0
+
+info:
+  title: Клубок — API афиши детских занятий
+  version: "1.0.0"
+  description: |
+    HTTP-поверхность проекта «Клубок» (детская афиша, Белград).
+
+    Три части:
+
+    1. **Edge-функция `suggest-event`** — принимает заявку с формы
+       «Добавить событие» на сайте и пересылает её в Telegram.
+       В базу ничего не пишет. Код: `supabase/functions/suggest-event/index.ts`.
+    2. **Supabase REST (PostgREST)** — публичное чтение одобренных событий
+       через представление `events_public` и служебный upsert из ночного
+       коллектора (`rpc/upsert_events`, только service_role).
+       Схема: `db/schema.sql`.
+    3. **Статический фид `data/events.json`** — то, что реально читает сайт.
+       Регенерируется коллектором раз в сутки (GitHub Actions).
+       Схема ответа описана как `EventsFeed`.
+
+    Аутентификация пользователя нигде не требуется: форма шлёт заявку без JWT
+    (функция задеплоена с `--no-verify-jwt`), а чтение афиши идёт под общим
+    анонимным ключом Supabase.
+
+servers:
+  - url: https://atteifmwatognibmzyac.functions.supabase.co
+    description: Supabase Edge Functions (project-ref atteifmwatognibmzyac)
+  - url: https://atteifmwatognibmzyac.supabase.co/rest/v1
+    description: Supabase REST / PostgREST
+  - url: https://lizaportishead.github.io/kids
+    description: Статический сайт GitHub Pages (может отличаться — см. настройки Pages)
+
+tags:
+  - name: suggest-event
+    description: Заявка с формы «Добавить событие»
+  - name: events
+    description: Чтение афиши
+  - name: collector
+    description: Служебное — запись из ночного коллектора
+  - name: feed
+    description: Статический JSON-фид сайта
+
+paths:
+  /suggest-event:
+    post:
+      tags: [suggest-event]
+      summary: Отправить заявку на событие
+      description: |
+        Браузер шлёт JSON с формы. Функция обрезает поля по длине, требует,
+        чтобы было заполнено хотя бы одно из `link` / `desc`, и отправляет
+        текстовое сообщение в Telegram. Ответ — только статус доставки.
+      operationId: suggestEvent
+      security: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/SuggestRequest"
+            examples:
+              ссылка:
+                value:
+                  link: "https://instagram.com/p/xxxx"
+                  when: "5 сентября в 17:00"
+                  place: "Kinder Garden, Сењак"
+                  desc: "Мастер-класс по керамике для детей 4+"
+                  page: "https://lizaportishead.github.io/kids/#art"
+      responses:
+        "200":
+          description: Заявка доставлена в Telegram
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/OkResponse"
+        "400":
+          description: |
+            Тело не является JSON (`bad json`) либо пустая заявка —
+            нет ни `link`, ни `desc` (`empty`).
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ErrorResponse"
+              examples:
+                bad-json:
+                  value: { error: "bad json" }
+                empty:
+                  value: { error: "empty" }
+        "405":
+          description: Метод не POST и не OPTIONS
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ErrorResponse"
+              example: { error: "method not allowed" }
+        "502":
+          description: Telegram не принял сообщение
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ErrorResponse"
+              example: { error: "delivery failed" }
+    options:
+      tags: [suggest-event]
+      summary: CORS preflight
+      operationId: suggestEventPreflight
+      security: []
+      responses:
+        "200":
+          description: |
+            Возвращает тело `ok` и заголовки CORS
+            (`Access-Control-Allow-Origin: *`, методы `POST, OPTIONS`,
+            заголовок `content-type`).
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: ok
+
+  /events_public:
+    get:
+      tags: [events]
+      summary: Одобренные события (представление PostgREST)
+      description: |
+        Представление `public.events_public`: только `status = 'approved'`,
+        площадка уже подставлена (join `place`), даты от начала текущей недели,
+        сортировка по дате и времени. Поддерживает
+        [синтаксис запросов PostgREST](https://postgrest.org/en/stable/references/api/tables_views.html):
+        `select`, `order`, `limit`, `offset` и фильтры вида `id=eq.<id>`.
+        На сайте напрямую не используется — сайт читает `data/events.json`;
+        этим эндпоинтом пользуется коллектор (`collector/lib/supabase.mjs`).
+      operationId: listEventsPublic
+      parameters:
+        - name: select
+          in: query
+          description: Список колонок PostgREST. По умолчанию `*`.
+          schema:
+            type: string
+          example: "*"
+        - name: order
+          in: query
+          schema:
+            type: string
+          example: "date.asc,time.asc"
+        - name: id
+          in: query
+          description: Фильтр PostgREST, напр. `eq.9fa8803de1b0`.
+          schema:
+            type: string
+        - name: limit
+          in: query
+          schema:
+            type: integer
+        - name: offset
+          in: query
+          schema:
+            type: integer
+      responses:
+        "200":
+          description: Массив событий
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/EventPublic"
+        "401":
+          description: Нет или неверный `apikey`
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/PostgrestError"
+
+  /rpc/upsert_events:
+    post:
+      tags: [collector]
+      summary: Пакетный upsert событий (только коллектор)
+      description: |
+        Функция `public.upsert_events(payload jsonb)`. Обновляет содержимое,
+        но **не трогает** `status`, поэтому ручное одобрение/скрытие переживает
+        ночные прогоны. Дубли по `hash` из другого источника удаляются.
+        Право `execute` есть только у `service_role` — ключ `anon` получит 403.
+      operationId: upsertEvents
+      security:
+        - serviceKey: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required: [payload]
+              properties:
+                payload:
+                  type: array
+                  items:
+                    $ref: "#/components/schemas/EventUpsertRow"
+      responses:
+        "200":
+          description: Количество вставленных/обновлённых строк
+          content:
+            application/json:
+              schema:
+                type: integer
+                example: 86
+        "401":
+          description: Нет ключа
+        "403":
+          description: Ключ не `service_role`
+
+  /data/events.json:
+    servers:
+      - url: https://lizaportishead.github.io/kids
+        description: Статический сайт GitHub Pages
+    get:
+      tags: [feed]
+      summary: Статический фид афиши
+      description: |
+        Файл, который фактически загружает `index.html`. Коммитится
+        коллектором раз в сутки. Помимо `events` содержит метаданные прогона.
+      operationId: getEventsFeed
+      security: []
+      responses:
+        "200":
+          description: Фид
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/EventsFeed"
+
+components:
+  securitySchemes:
+    anonKey:
+      type: apiKey
+      in: header
+      name: apikey
+      description: |
+        Публичный анонимный ключ Supabase. Нужен и в заголовке `apikey`,
+        и в `Authorization: Bearer <ключ>`. Даёт только чтение `events_public`.
+    serviceKey:
+      type: apiKey
+      in: header
+      name: apikey
+      description: |
+        `service_role`-ключ Supabase (секрет, только на бэкенде коллектора).
+        Так же дублируется в `Authorization: Bearer <ключ>`.
+
+  schemas:
+    SuggestRequest:
+      type: object
+      description: |
+        Все поля необязательны и строковые; лишнее игнорируется. Должно быть
+        заполнено хотя бы одно из `link` / `desc`, иначе `400 empty`.
+        Значения обрезаются по длине на сервере.
+      properties:
+        link:
+          type: string
+          maxLength: 1500
+          description: Ссылка на источник (пост, страница записи)
+        when:
+          type: string
+          maxLength: 200
+          description: Дата/время свободным текстом
+        place:
+          type: string
+          maxLength: 300
+        desc:
+          type: string
+          maxLength: 2000
+          description: Описание события
+        page:
+          type: string
+          maxLength: 300
+          description: Страница сайта, с которой отправлена заявка
+      example:
+        link: "https://t.me/somechannel/123"
+        when: "каждую субботу, 11:00"
+        place: "Библиотека, Врачар"
+        desc: "Чтения вслух для 3–6 лет"
+        page: "https://lizaportishead.github.io/kids/"
+
+    OkResponse:
+      type: object
+      properties:
+        ok:
+          type: boolean
+          const: true
+      required: [ok]
+
+    ErrorResponse:
+      type: object
+      properties:
+        error:
+          type: string
+          enum: ["bad json", "empty", "method not allowed", "delivery failed"]
+      required: [error]
+
+    PostgrestError:
+      type: object
+      properties:
+        message: { type: string }
+        code: { type: string }
+        details: { type: [string, "null"] }
+        hint: { type: [string, "null"] }
+
+    Source:
+      type: object
+      description: Откуда взято событие и как на него записаться (`events.source`).
+      properties:
+        id:
+          type: string
+          example: kinder-garden
+        name:
+          type: string
+          example: Kinder Garden
+        kind:
+          type: string
+          description: Тип источника
+          example: Сайт записи
+        url:
+          type: string
+          format: uri
+        cta:
+          type: string
+          description: Подпись кнопки
+          example: Записаться на сайте Kinder Garden
+
+    EventPublic:
+      type: object
+      description: |
+        Строка представления `events_public` — она же формат элементов
+        `EventsFeed.events`.
+      properties:
+        id:
+          type: string
+          description: sha1-хэш из коллектора
+          example: 9fa8803de1b0
+        title: { type: string }
+        short:
+          type: [string, "null"]
+          description: Короткий анонс
+        desc:
+          type: [string, "null"]
+          description: Полное описание (может содержать переводы строк)
+        date:
+          type: [string, "null"]
+          format: date
+          description: Дата разового события; `null` у регулярных
+          example: "2026-08-27"
+        wd:
+          type: [array, "null"]
+          items:
+            type: integer
+            minimum: 0
+            maximum: 6
+          description: Дни недели для регулярного события, 0 = понедельник
+          example: [2]
+        time:
+          type: string
+          example: "17:30"
+        dur:
+          type: [string, "null"]
+          description: Длительность свободным текстом
+          example: "1 час 30 минут"
+        place:
+          type: [string, "null"]
+          example: Kinder Garden
+        address:
+          type: [string, "null"]
+        placePhone:
+          type: [string, "null"]
+        placeLink:
+          type: [string, "null"]
+          format: uri
+        age:
+          type: array
+          items: { type: integer }
+          minItems: 2
+          maxItems: 2
+          description: "[age_min, age_max] в годах"
+          example: [3, 10]
+        ageLabel:
+          type: [string, "null"]
+          example: "3–10 лет"
+        price:
+          type: [string, "null"]
+          example: "2000 RSD"
+        image:
+          type: [string, "null"]
+          description: Путь к картинке (относительный к сайту) или URL
+          example: data/images/prodlenka-izostudia-kg.png
+        category:
+          type: [string, "null"]
+          description: Код категории — см. `collector/lib/category.mjs`
+          example: art
+        categoryLabel:
+          type: [string, "null"]
+          example: Творчество
+        source:
+          $ref: "#/components/schemas/Source"
+      required: [id, title, time, age, source]
+
+    EventUpsertRow:
+      type: object
+      description: |
+        Элемент `payload` для `rpc/upsert_events`. Плоский, с `place_name` /
+        `place_address` вместо вложенной площадки — сервер сам резолвит её
+        в `place.id` (`resolve_place`). Формируется в `collector/lib/supabase.mjs`.
+      properties:
+        id: { type: string }
+        title: { type: string }
+        short: { type: [string, "null"] }
+        desc: { type: [string, "null"] }
+        date: { type: [string, "null"], format: date }
+        wd:
+          type: [array, "null"]
+          items: { type: integer }
+        time: { type: string }
+        dur: { type: [string, "null"] }
+        place_name: { type: [string, "null"] }
+        place_address: { type: [string, "null"] }
+        age_min: { type: integer, default: 3 }
+        age_max: { type: integer, default: 10 }
+        age_label: { type: [string, "null"] }
+        price: { type: [string, "null"] }
+        image: { type: [string, "null"] }
+        category: { type: [string, "null"] }
+        category_label: { type: [string, "null"] }
+        source:
+          $ref: "#/components/schemas/Source"
+        hash:
+          type: [string, "null"]
+          description: Ключ дедупликации между источниками
+        status:
+          type: string
+          enum: [pending, approved, hidden]
+          default: approved
+        fetched_at:
+          type: string
+          format: date-time
+      required: [id, title, time]
+
+    RunReportItem:
+      type: object
+      description: Итог по одному источнику за прогон коллектора.
+      properties:
+        source:
+          type: string
+          example: kinder-garden
+        status:
+          type: string
+          enum: [ok, skipped, error]
+        events:
+          type: integer
+          description: Сколько событий собрано (при `status = ok`)
+        reason:
+          type: string
+          description: Причина для `skipped` / `error`
+      required: [source, status]
+
+    EventsFeed:
+      type: object
+      description: Содержимое `data/events.json`.
+      properties:
+        updatedAt:
+          type: string
+          format: date-time
+        city:
+          type: string
+          example: Белград
+        count:
+          type: integer
+          description: Число событий в `events`
+          example: 86
+        report:
+          type: array
+          items:
+            $ref: "#/components/schemas/RunReportItem"
+        events:
+          type: array
+          items:
+            $ref: "#/components/schemas/EventPublic"
+      required: [updatedAt, city, count, events]
+
+security:
+  - anonKey: []

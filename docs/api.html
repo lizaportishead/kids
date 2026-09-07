@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Клубок — API</title>
+  <!--
+    Просмотрщик openapi.yaml на Redoc. Открывать не двойным кликом, а по HTTP —
+    иначе браузер не даст загрузить соседний файл:
+        cd docs && python3 -m http.server 8080   →  http://localhost:8080/api.html
+    Redoc тянется с CDN, нужен интернет. Сама спека — docs/openapi.yaml,
+    она самодостаточна и открывается где угодно (editor.swagger.io, плагин IDE).
+  -->
+</head>
+<body>
+  <redoc spec-url="./openapi.yaml"></redoc>
+  <script src="https://cdn.jsdelivr.net/npm/redoc@2/bundles/redoc.standalone.js"></script>
+</body>
+</html>
