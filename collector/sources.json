@@ -82,5 +82,15 @@
     "cta": "Записаться на сайте ЛаборатоРиЯ",
     "place": "ЛаборатоРиЯ",
     "address": "Новый Белград, Булевар Црвене армије 9б, ст 5 (Белвил)"
+  },
+  {
+    "id": "besmart",
+    "type": "besmart",
+    "name": "BeSmart",
+    "kind": "Сайт студии",
+    "url": "https://besmartserbia.com/lessons",
+    "cta": "Записаться на сайте BeSmart",
+    "place": "BeSmart",
+    "address": "Хаджи Милентьева 78, Врачар, Белград"
   }
 ]
