@@ -640,7 +640,7 @@
       "wd": null,
       "time": "17:00",
       "dur": "1 час",
-      "place": "Be Smart",
+      "place": "BeSmart",
       "address": "Хаджи Милентьева 78, Врачар, Белград",
       "placePhone": null,
       "placeLink": null,
@@ -659,8 +659,8 @@
         "id": "besmart",
         "cta": "Записаться у @BeSmartSerbia",
         "url": "https://t.me/besmart_belgrade",
-        "kind": "Телеграм-канал Be Smart",
-        "name": "Be Smart"
+        "kind": "Телеграм-канал BeSmart",
+        "name": "BeSmart"
       }
     },
     {
@@ -832,7 +832,7 @@
       "wd": null,
       "time": "10:00",
       "dur": "2 часа",
-      "place": "Be Smart",
+      "place": "BeSmart",
       "address": "Хаджи Милентьева 78, Врачар, Белград",
       "placePhone": null,
       "placeLink": null,
@@ -851,8 +851,8 @@
         "id": "besmart",
         "cta": "Записаться у @BeSmartSerbia",
         "url": "https://t.me/besmart_belgrade",
-        "kind": "Телеграм-канал Be Smart",
-        "name": "Be Smart"
+        "kind": "Телеграм-канал BeSmart",
+        "name": "BeSmart"
       }
     },
     {
