@@ -1,7 +1,7 @@
 {
   "updatedAt": "2026-09-09T08:56:33.197Z",
   "city": "Белград",
-  "count": 168,
+  "count": 178,
   "report": [
     {
       "source": "prodlenka",
@@ -5736,6 +5736,346 @@
         "url": "https://www.instagram.com/swimyou.club/",
         "kind": "Расписание школы",
         "name": "SwimYou"
+      }
+    },
+    {
+      "id": "artlightkids-vracar-3-4-1200",
+      "title": "Вокал",
+      "short": "Вокал для детей 3–4 года в студии Art Light Kids на Врачаре",
+      "desc": "Занятия вокалом и сценическим мастерством для детей 3–4 года в вокальной студии Art Light Kids на Врачаре. Группа занимается раз в неделю, по субботам.",
+      "date": null,
+      "wd": [
+        5
+      ],
+      "time": "12:00",
+      "dur": "1 час",
+      "place": "Art Light Kids (Врачар)",
+      "address": "Милешевска 3А, Врачар, Белград",
+      "placePhone": null,
+      "placeLink": null,
+      "lat": null,
+      "lng": null,
+      "age": [
+        3,
+        4
+      ],
+      "ageLabel": "3–4 года",
+      "price": "уточняется",
+      "image": null,
+      "category": "music",
+      "categoryLabel": "Музыка",
+      "source": {
+        "id": "artlightkids",
+        "name": "Art Light Kids",
+        "kind": "Расписание студии",
+        "url": "https://www.instagram.com/artlightkids/",
+        "cta": "Записаться в Art Light Kids"
+      }
+    },
+    {
+      "id": "artlightkids-vracar-5-6-1300",
+      "title": "Вокал",
+      "short": "Вокал для детей 5–6 лет в студии Art Light Kids на Врачаре",
+      "desc": "Занятия вокалом и сценическим мастерством для детей 5–6 лет в вокальной студии Art Light Kids на Врачаре. Группа занимается раз в неделю, по субботам.",
+      "date": null,
+      "wd": [
+        5
+      ],
+      "time": "13:00",
+      "dur": "1 час",
+      "place": "Art Light Kids (Врачар)",
+      "address": "Милешевска 3А, Врачар, Белград",
+      "placePhone": null,
+      "placeLink": null,
+      "lat": null,
+      "lng": null,
+      "age": [
+        5,
+        6
+      ],
+      "ageLabel": "5–6 лет",
+      "price": "уточняется",
+      "image": null,
+      "category": "music",
+      "categoryLabel": "Музыка",
+      "source": {
+        "id": "artlightkids",
+        "name": "Art Light Kids",
+        "kind": "Расписание студии",
+        "url": "https://www.instagram.com/artlightkids/",
+        "cta": "Записаться в Art Light Kids"
+      }
+    },
+    {
+      "id": "artlightkids-vracar-6-7-1400",
+      "title": "Вокал",
+      "short": "Вокал для детей 6–7 лет в студии Art Light Kids на Врачаре",
+      "desc": "Занятия вокалом и сценическим мастерством для детей 6–7 лет в вокальной студии Art Light Kids на Врачаре. Группа занимается раз в неделю, по субботам.",
+      "date": null,
+      "wd": [
+        5
+      ],
+      "time": "14:00",
+      "dur": "1 час",
+      "place": "Art Light Kids (Врачар)",
+      "address": "Милешевска 3А, Врачар, Белград",
+      "placePhone": null,
+      "placeLink": null,
+      "lat": null,
+      "lng": null,
+      "age": [
+        6,
+        7
+      ],
+      "ageLabel": "6–7 лет",
+      "price": "уточняется",
+      "image": null,
+      "category": "music",
+      "categoryLabel": "Музыка",
+      "source": {
+        "id": "artlightkids",
+        "name": "Art Light Kids",
+        "kind": "Расписание студии",
+        "url": "https://www.instagram.com/artlightkids/",
+        "cta": "Записаться в Art Light Kids"
+      }
+    },
+    {
+      "id": "artlightkids-vracar-8-12-1500",
+      "title": "Вокал",
+      "short": "Вокал для детей 8–12 лет в студии Art Light Kids на Врачаре",
+      "desc": "Занятия вокалом и сценическим мастерством для детей 8–12 лет в вокальной студии Art Light Kids на Врачаре. Группа занимается раз в неделю, по субботам.",
+      "date": null,
+      "wd": [
+        5
+      ],
+      "time": "15:00",
+      "dur": "1 час",
+      "place": "Art Light Kids (Врачар)",
+      "address": "Милешевска 3А, Врачар, Белград",
+      "placePhone": null,
+      "placeLink": null,
+      "lat": null,
+      "lng": null,
+      "age": [
+        8,
+        12
+      ],
+      "ageLabel": "8–12 лет",
+      "price": "уточняется",
+      "image": null,
+      "category": "music",
+      "categoryLabel": "Музыка",
+      "source": {
+        "id": "artlightkids",
+        "name": "Art Light Kids",
+        "kind": "Расписание студии",
+        "url": "https://www.instagram.com/artlightkids/",
+        "cta": "Записаться в Art Light Kids"
+      }
+    },
+    {
+      "id": "artlightkids-centar-5-6-1800",
+      "title": "Вокал",
+      "short": "Вокал для детей 5–6 лет в студии Art Light Kids в центре",
+      "desc": "Занятия вокалом и сценическим мастерством для детей 5–6 лет в вокальной студии Art Light Kids в центре. Группа занимается раз в неделю, по средам.",
+      "date": null,
+      "wd": [
+        2
+      ],
+      "time": "18:00",
+      "dur": "1 час",
+      "place": "Art Light Kids (Центр)",
+      "address": "Дунавска 59, Палилула, Белград",
+      "placePhone": null,
+      "placeLink": null,
+      "lat": null,
+      "lng": null,
+      "age": [
+        5,
+        6
+      ],
+      "ageLabel": "5–6 лет",
+      "price": "уточняется",
+      "image": null,
+      "category": "music",
+      "categoryLabel": "Музыка",
+      "source": {
+        "id": "artlightkids",
+        "name": "Art Light Kids",
+        "kind": "Расписание студии",
+        "url": "https://www.instagram.com/artlightkids/",
+        "cta": "Записаться в Art Light Kids"
+      }
+    },
+    {
+      "id": "artlightkids-centar-7-12-1900",
+      "title": "Вокал",
+      "short": "Вокал для детей 7–12 лет в студии Art Light Kids в центре",
+      "desc": "Занятия вокалом и сценическим мастерством для детей 7–12 лет в вокальной студии Art Light Kids в центре. Группа занимается раз в неделю, по средам.",
+      "date": null,
+      "wd": [
+        2
+      ],
+      "time": "19:00",
+      "dur": "1 час",
+      "place": "Art Light Kids (Центр)",
+      "address": "Дунавска 59, Палилула, Белград",
+      "placePhone": null,
+      "placeLink": null,
+      "lat": null,
+      "lng": null,
+      "age": [
+        7,
+        12
+      ],
+      "ageLabel": "7–12 лет",
+      "price": "уточняется",
+      "image": null,
+      "category": "music",
+      "categoryLabel": "Музыка",
+      "source": {
+        "id": "artlightkids",
+        "name": "Art Light Kids",
+        "kind": "Расписание студии",
+        "url": "https://www.instagram.com/artlightkids/",
+        "cta": "Записаться в Art Light Kids"
+      }
+    },
+    {
+      "id": "artlightkids-nbg-3-4-1700",
+      "title": "Вокал",
+      "short": "Вокал для детей 3–4 года в студии Art Light Kids в Новом Белграде",
+      "desc": "Занятия вокалом и сценическим мастерством для детей 3–4 года в вокальной студии Art Light Kids в Новом Белграде. Группа занимается раз в неделю, по четвергам.",
+      "date": null,
+      "wd": [
+        3
+      ],
+      "time": "17:00",
+      "dur": "1 час",
+      "place": "Art Light Kids (Новый Белград)",
+      "address": "Блок 70, Нови Београд, Белград",
+      "placePhone": null,
+      "placeLink": null,
+      "lat": null,
+      "lng": null,
+      "age": [
+        3,
+        4
+      ],
+      "ageLabel": "3–4 года",
+      "price": "уточняется",
+      "image": null,
+      "category": "music",
+      "categoryLabel": "Музыка",
+      "source": {
+        "id": "artlightkids",
+        "name": "Art Light Kids",
+        "kind": "Расписание студии",
+        "url": "https://www.instagram.com/artlightkids/",
+        "cta": "Записаться в Art Light Kids"
+      }
+    },
+    {
+      "id": "artlightkids-nbg-5-6-1800",
+      "title": "Вокал",
+      "short": "Вокал для детей 5–6 лет в студии Art Light Kids в Новом Белграде",
+      "desc": "Занятия вокалом и сценическим мастерством для детей 5–6 лет в вокальной студии Art Light Kids в Новом Белграде. Группа занимается раз в неделю, по четвергам.",
+      "date": null,
+      "wd": [
+        3
+      ],
+      "time": "18:00",
+      "dur": "1 час",
+      "place": "Art Light Kids (Новый Белград)",
+      "address": "Блок 70, Нови Београд, Белград",
+      "placePhone": null,
+      "placeLink": null,
+      "lat": null,
+      "lng": null,
+      "age": [
+        5,
+        6
+      ],
+      "ageLabel": "5–6 лет",
+      "price": "уточняется",
+      "image": null,
+      "category": "music",
+      "categoryLabel": "Музыка",
+      "source": {
+        "id": "artlightkids",
+        "name": "Art Light Kids",
+        "kind": "Расписание студии",
+        "url": "https://www.instagram.com/artlightkids/",
+        "cta": "Записаться в Art Light Kids"
+      }
+    },
+    {
+      "id": "artlightkids-nbg-7-12-1900",
+      "title": "Вокал",
+      "short": "Вокал для детей 7–12 лет в студии Art Light Kids в Новом Белграде",
+      "desc": "Занятия вокалом и сценическим мастерством для детей 7–12 лет в вокальной студии Art Light Kids в Новом Белграде. Группа занимается раз в неделю, по четвергам.",
+      "date": null,
+      "wd": [
+        3
+      ],
+      "time": "19:00",
+      "dur": "1 час",
+      "place": "Art Light Kids (Новый Белград)",
+      "address": "Блок 70, Нови Београд, Белград",
+      "placePhone": null,
+      "placeLink": null,
+      "lat": null,
+      "lng": null,
+      "age": [
+        7,
+        12
+      ],
+      "ageLabel": "7–12 лет",
+      "price": "уточняется",
+      "image": null,
+      "category": "music",
+      "categoryLabel": "Музыка",
+      "source": {
+        "id": "artlightkids",
+        "name": "Art Light Kids",
+        "kind": "Расписание студии",
+        "url": "https://www.instagram.com/artlightkids/",
+        "cta": "Записаться в Art Light Kids"
+      }
+    },
+    {
+      "id": "artlightkids-nbg-13-17-2000",
+      "title": "Вокал",
+      "short": "Вокал для детей 13–17 лет в студии Art Light Kids в Новом Белграде",
+      "desc": "Занятия вокалом и сценическим мастерством для детей 13–17 лет в вокальной студии Art Light Kids в Новом Белграде. Группа занимается раз в неделю, по четвергам.",
+      "date": null,
+      "wd": [
+        3
+      ],
+      "time": "20:00",
+      "dur": "1 час",
+      "place": "Art Light Kids (Новый Белград)",
+      "address": "Блок 70, Нови Београд, Белград",
+      "placePhone": null,
+      "placeLink": null,
+      "lat": null,
+      "lng": null,
+      "age": [
+        13,
+        17
+      ],
+      "ageLabel": "13–17 лет",
+      "price": "уточняется",
+      "image": null,
+      "category": "music",
+      "categoryLabel": "Музыка",
+      "source": {
+        "id": "artlightkids",
+        "name": "Art Light Kids",
+        "kind": "Расписание студии",
+        "url": "https://www.instagram.com/artlightkids/",
+        "cta": "Записаться в Art Light Kids"
       }
     }
   ]
