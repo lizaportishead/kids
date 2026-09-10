@@ -6580,7 +6580,7 @@
       ],
       "ageLabel": "6–9 лет",
       "price": "бесплатно",
-      "image": null,
+      "image": "data/images/mkid-sis-milija.jpg",
       "category": null,
       "categoryLabel": null,
       "source": {
@@ -6612,7 +6612,7 @@
       ],
       "ageLabel": "для детей",
       "price": "бесплатно",
-      "image": null,
+      "image": "data/images/mkid-chudesny-les.jpg",
       "category": null,
       "categoryLabel": null,
       "source": {
@@ -6644,7 +6644,7 @@
       ],
       "ageLabel": "для детей",
       "price": "1500 дин (до 12 мес — бесплатно)",
-      "image": null,
+      "image": "data/images/mkid-marko-luis-krokovu.jpg",
       "category": null,
       "categoryLabel": null,
       "source": {
@@ -6676,7 +6676,7 @@
       ],
       "ageLabel": "для детей",
       "price": "1500 дин",
-      "image": null,
+      "image": "data/images/mkid-fabrika-oblakov.jpg",
       "category": null,
       "categoryLabel": null,
       "source": {
@@ -6708,7 +6708,7 @@
       ],
       "ageLabel": "для всей семьи",
       "price": "бесплатно",
-      "image": null,
+      "image": "data/images/mkid-koncert-mykitenko.jpg",
       "category": null,
       "categoryLabel": null,
       "source": {
@@ -6740,7 +6740,7 @@
       ],
       "ageLabel": "7–10 лет",
       "price": "1000 дин",
-      "image": null,
+      "image": "data/images/mkid-teatralny-mk.jpg",
       "category": null,
       "categoryLabel": null,
       "source": {
@@ -6804,7 +6804,7 @@
       ],
       "ageLabel": "для всей семьи",
       "price": "детский 2000 дин, взрослый 1000 дин",
-      "image": null,
+      "image": "data/images/mkid-koncert-deti-roditeli.jpg",
       "category": null,
       "categoryLabel": null,
       "source": {
@@ -6836,7 +6836,7 @@
       ],
       "ageLabel": "1,5–3 года",
       "price": "2500 дин",
-      "image": null,
+      "image": "data/images/mkid-vse-naoborot.jpg",
       "category": null,
       "categoryLabel": null,
       "source": {
