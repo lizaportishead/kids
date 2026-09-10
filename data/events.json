@@ -1,7 +1,7 @@
 {
   "updatedAt": "2026-09-10T15:54:50.876179+00:00",
   "city": "Белград",
-  "count": 193,
+  "count": 202,
   "report": [
     {
       "source": "prodlenka",
@@ -6557,6 +6557,294 @@
         "url": "https://www.instagram.com/swimyou.club/",
         "kind": "Расписание школы",
         "name": "SwimYou"
+      }
+    },
+    {
+      "id": "mkid-sis-milija-2026-09-12",
+      "title": "Спектакль «Šiš Milija» (бесплатный)",
+      "short": "Бесплатный спектакль для детей 6–9 лет и родителей в библиотеке «Bora Stanković».",
+      "desc": "Бесплатный спектакль для детей от 6 до 9 лет и их родителей.\n\nВход бесплатный, количество мест ограничено — обязательна предварительная регистрация (написать в сообщении или позвонить по телефону 011/7614-591).\n\nАнонс: t.me/mamakudaidem/2224",
+      "date": "2026-09-12",
+      "wd": null,
+      "time": "11:00",
+      "dur": "1 час",
+      "place": "Библиотека «Bora Stanković»",
+      "address": "Гаврила Принципа 40, Савски венац, Београд",
+      "placePhone": null,
+      "placeLink": null,
+      "lat": null,
+      "lng": null,
+      "age": [
+        6,
+        9
+      ],
+      "ageLabel": "6–9 лет",
+      "price": "бесплатно",
+      "image": null,
+      "category": null,
+      "categoryLabel": null,
+      "source": {
+        "id": "biblioteka-bora-stankovic",
+        "cta": "Регистрация по тел. 011/7614-591",
+        "url": "https://t.me/mamakudaidem/2224",
+        "kind": "Библиотека",
+        "name": "Библиотека «Bora Stanković»"
+      }
+    },
+    {
+      "id": "mkid-chudesny-les-2026-09-12",
+      "title": "Спектакль «Чудесный лес» (бесплатный)",
+      "short": "Добрый спектакль о смелости, дружбе и скрытой магии — на летней сцене «Шумице».",
+      "desc": "Добрый и забавный спектакль о ребёнке, который отправляется в путешествие, способное изменить всё. В истории раскрываются темы смелости, дружбы и скрытой магии, которая есть в каждом ребёнке.\n\nЛетняя сцена «Шумице». Вход бесплатный.\n\nАнонс: t.me/mamakudaidem/2230",
+      "date": "2026-09-12",
+      "wd": null,
+      "time": "18:30",
+      "dur": "1 час",
+      "place": "Летняя сцена «Шумице»",
+      "address": "Устаничка 125/1, Вождовац, Београд",
+      "placePhone": null,
+      "placeLink": null,
+      "lat": null,
+      "lng": null,
+      "age": [
+        3,
+        12
+      ],
+      "ageLabel": "для детей",
+      "price": "бесплатно",
+      "image": null,
+      "category": null,
+      "categoryLabel": null,
+      "source": {
+        "id": "shumice-letnyaya-scena",
+        "cta": "Вход свободный",
+        "url": "https://t.me/mamakudaidem/2230",
+        "kind": "Городская программа",
+        "name": "Летняя сцена «Шумице»"
+      }
+    },
+    {
+      "id": "mkid-marko-luis-krokovu-2026-09-13",
+      "title": "Марко Луис и «Крокову» в «Медоносном саду»",
+      "short": "Мастер-класс «Крокову любит пчёл» (10:30) и концерт Марко Луиса (12:00) в Medonosni vrt.",
+      "desc": "10:30 — мастер-класс «Крокову любит пчёл»: через историю Крокову, игры и творческие активности заглянем в мир пчёл.\n12:00 — концерт Марко Луиса: песни из детского альбома «Ja se zovem slon» и спектакля «Krokovu — pola krokodil, pola vuk».\n\nБилет 1 500 дин с человека, дети до 12 месяцев — бесплатно. Билеты на shop.beecenter.rs. Регистрация на мастер-класс обязательна.\n\nАнонс: t.me/mamakudaidem/2116",
+      "date": "2026-09-13",
+      "wd": null,
+      "time": "10:30",
+      "dur": "1,5 часа",
+      "place": "Medonosni vrt",
+      "address": "Silosi, Београд",
+      "placePhone": null,
+      "placeLink": null,
+      "lat": null,
+      "lng": null,
+      "age": [
+        0,
+        12
+      ],
+      "ageLabel": "для детей",
+      "price": "1500 дин (до 12 мес — бесплатно)",
+      "image": null,
+      "category": null,
+      "categoryLabel": null,
+      "source": {
+        "id": "medonosni-vrt",
+        "cta": "Билеты на shop.beecenter.rs",
+        "url": "https://shop.beecenter.rs/",
+        "kind": "Площадка",
+        "name": "Medonosni vrt (Bee Center)"
+      }
+    },
+    {
+      "id": "mkid-fabrika-oblakov-2026-09-13",
+      "title": "Пенная вечеринка «Фабрика облаков» + мастер-класс",
+      "short": "Творческий мастер-класс (16:00) и пенная вечеринка (17:00) во дворе Общественного аквариума.",
+      "desc": "16:00–17:00 — сбор гостей и творческий мастер-класс: делаем животных из бумаги.\n17:00 — пенная вечеринка «Фабрика облаков»: пена, мыльные пузыри, игры, танцы. При плохой погоде — Bubble Show.\n\nСтоимость 1 500 дин. Запись и бронирование: 063/654-686.\n\nАнонс: t.me/mamakudaidem/2206",
+      "date": "2026-09-13",
+      "wd": null,
+      "time": "16:00",
+      "dur": "1 час",
+      "place": "Javni akvarijum i tropikarijum",
+      "address": "Миленка Веснића 3, Београд",
+      "placePhone": null,
+      "placeLink": null,
+      "lat": null,
+      "lng": null,
+      "age": [
+        2,
+        12
+      ],
+      "ageLabel": "для детей",
+      "price": "1500 дин",
+      "image": null,
+      "category": null,
+      "categoryLabel": null,
+      "source": {
+        "id": "javni-akvarijum",
+        "cta": "Бронь: 063/654-686",
+        "url": "https://www.instagram.com/javniakvarijum",
+        "kind": "Площадка",
+        "name": "Javni akvarijum i tropikarijum"
+      }
+    },
+    {
+      "id": "mkid-koncert-mykitenko-2026-09-15",
+      "title": "Сольный концерт Алексея и Ксении Мыкитенко",
+      "short": "Русские народные и авторские песни, музыка советской эстрады, инструментальные номера. Вход свободный.",
+      "desc": "В программе: русские народные и авторские песни, музыка советской эстрады, инструментальные номера. Участвуют русские и сербские музыканты: Марина Байгерова, Симонида Станкович, Екатерина Иваненко, Юлия Казанцева, ансамбль «Земляника Фолк».\n\nРусский дом. Вход бесплатный.\n\nАнонс: t.me/mamakudaidem/2200",
+      "date": "2026-09-15",
+      "wd": null,
+      "time": "19:00",
+      "dur": "1,5 часа",
+      "place": "Русский дом",
+      "address": "Краљице Наталије 33, Београд",
+      "placePhone": null,
+      "placeLink": null,
+      "lat": null,
+      "lng": null,
+      "age": [
+        0,
+        16
+      ],
+      "ageLabel": "для всей семьи",
+      "price": "бесплатно",
+      "image": null,
+      "category": null,
+      "categoryLabel": null,
+      "source": {
+        "id": "ruskiy-dom",
+        "cta": "Вход свободный",
+        "url": "https://t.me/mamakudaidem/2200",
+        "kind": "Площадка",
+        "name": "Русский дом"
+      }
+    },
+    {
+      "id": "mkid-teatralny-mk-2026-09-15",
+      "title": "Театральный мастер-класс для детей 7–10 лет",
+      "short": "Театральный мастер-класс от BeSmart для детей 7–10 лет.",
+      "desc": "Театральный мастер-класс для детей 7–10 лет.\n\nСтоимость: 1000 дин. Запись у @BeSmartSerbia.\n\nАнонс: t.me/mamakudaidem/2109",
+      "date": "2026-09-15",
+      "wd": null,
+      "time": "18:00",
+      "dur": "1 час",
+      "place": "BeSmart",
+      "address": "Хаджи Милентьева 78, Врачар, Белград",
+      "placePhone": null,
+      "placeLink": null,
+      "lat": null,
+      "lng": null,
+      "age": [
+        7,
+        10
+      ],
+      "ageLabel": "7–10 лет",
+      "price": "1000 дин",
+      "image": null,
+      "category": null,
+      "categoryLabel": null,
+      "source": {
+        "id": "besmart",
+        "cta": "Запись у @BeSmartSerbia",
+        "url": "https://t.me/BeSmartSerbia",
+        "kind": "Телеграм-канал BeSmart",
+        "name": "BeSmart"
+      }
+    },
+    {
+      "id": "mkid-kovcheg-chemodan-2026-09-19",
+      "title": "Семейный спектакль «Ковчег»",
+      "short": "Спектакль театра ČEMODAN THEATRE — добрая, смешная и трогательная история о дружбе, семье и взаимопомощи. Для детей и взрослых 6+.",
+      "desc": "«Ковчег» — добрая, смешная и трогательная история о дружбе, семье, взаимопомощи и о том, что вместе мы можем больше. Спектакль для детей и взрослых 6+.\n\nПродолжительность: 50 минут. Билет 1500 дин, для братьев и сестёр — 1000 дин. Запись и бронирование в Instagram @chemodan_theatre.\n\nАнонс: t.me/mamakudaidem/2221",
+      "date": "2026-09-19",
+      "wd": null,
+      "time": "19:00",
+      "dur": "50 минут",
+      "place": "ČEMODAN THEATRE",
+      "address": "Светогорска 46, Стари Град, Београд",
+      "placePhone": null,
+      "placeLink": null,
+      "lat": null,
+      "lng": null,
+      "age": [
+        6,
+        16
+      ],
+      "ageLabel": "6+ лет",
+      "price": "1500 дин (детям из одной семьи — 1000 дин)",
+      "image": null,
+      "category": null,
+      "categoryLabel": null,
+      "source": {
+        "id": "chemodan-theatre",
+        "cta": "Бронь в Instagram @chemodan_theatre",
+        "url": "https://www.instagram.com/chemodan_theatre",
+        "kind": "Театральная студия",
+        "name": "ČEMODAN THEATRE"
+      }
+    },
+    {
+      "id": "mkid-koncert-deti-roditeli-2026-09-20",
+      "title": "Концерт для детей и их родителей",
+      "short": "Музыка, танцы и мелодии, под которые сложно усидеть на месте — Артём Юровский и Алексей Мыкитенко.",
+      "desc": "Музыка, танцы и мелодии, под которые сложно усидеть на месте: на концерте можно танцевать, двигаться, играть и участвовать вместе с музыкантами. На сцене — Артём Юровский и Алексей Мыкитенко. После концерта инструменты можно рассмотреть вблизи и попробовать себя в роли музыканта.\n\nПродолжительность 45 минут. Билеты: детский 2000 дин, 2 ребёнка из одной семьи 3000 дин, взрослый 1000 дин. Бронь: tally.so/r/1AeRWb.\n\nАнонс: t.me/mamakudaidem/2216",
+      "date": "2026-09-20",
+      "wd": null,
+      "time": "11:00",
+      "dur": "45 минут",
+      "place": "Концертный зал (Светогорска 4)",
+      "address": "Светогорска 4, Стари Град, Београд",
+      "placePhone": null,
+      "placeLink": null,
+      "lat": null,
+      "lng": null,
+      "age": [
+        0,
+        16
+      ],
+      "ageLabel": "для всей семьи",
+      "price": "детский 2000 дин, взрослый 1000 дин",
+      "image": null,
+      "category": null,
+      "categoryLabel": null,
+      "source": {
+        "id": "koncert-svetogorska-4",
+        "cta": "Бронь по ссылке",
+        "url": "https://tally.so/r/1AeRWb",
+        "kind": "Событие",
+        "name": "Концерт (Светогорска 4)"
+      }
+    },
+    {
+      "id": "mkid-vse-naoborot-2026-09-27",
+      "title": "Спектакль для малышей «Все Наоборот»",
+      "short": "Волшебное путешествие с Феей Как Надо и Феей Наоборот. Театр теней + игры с феями. Для малышей 1,5–3 года.",
+      "desc": "Волшебное путешествие с Феей Как Надо и Феей, которая всё делает наоборот. Малыши отправятся по заколдованному лесу, зажгут звёзды на небе и помогут Фее Наоборот найти свой путь.\n\nДве части: театр теней (25 минут) и игры с феями (25 минут). Для мам, пап и малышей 1,5–3 года. Стоимость 2500 дин. Бронь в Instagram @enter_beograd.\n\nАнонс: t.me/mamakudaidem/2240",
+      "date": "2026-09-27",
+      "wd": null,
+      "time": "10:30",
+      "dur": "50 минут",
+      "place": "Enter",
+      "address": "Ресавска 34, Врачар, Белград",
+      "placePhone": null,
+      "placeLink": null,
+      "lat": null,
+      "lng": null,
+      "age": [
+        1,
+        3
+      ],
+      "ageLabel": "1,5–3 года",
+      "price": "2500 дин",
+      "image": null,
+      "category": null,
+      "categoryLabel": null,
+      "source": {
+        "id": "enter",
+        "cta": "Бронь в Instagram @enter_beograd",
+        "url": "https://www.instagram.com/enter_beograd",
+        "kind": "Студия",
+        "name": "Enter"
       }
     }
   ]
