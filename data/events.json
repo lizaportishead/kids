@@ -6196,7 +6196,7 @@
       ],
       "ageLabel": "для родителей",
       "price": "800 динар за одного, 1200 — за двоих",
-      "image": null,
+      "image": "data/images/karton-roditelskoe-sobranie.png",
       "category": null,
       "categoryLabel": null,
       "source": {
