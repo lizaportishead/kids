@@ -1,7 +1,7 @@
 {
   "updatedAt": "2026-09-10T08:55:23.857Z",
   "city": "Белград",
-  "count": 199,
+  "count": 203,
   "report": [
     {
       "source": "prodlenka",
@@ -6779,6 +6779,126 @@
         "kind": "Расписание студии",
         "url": "https://t.me/+xJwDSStnI4A0MDIy",
         "cta": "Записаться в Prosto'R"
+      }
+    },
+    {
+      "id": "crnobelamacka-rannee-razvitie-2-3-2026-09-12",
+      "title": "Раннее развитие (2–3 года)",
+      "short": "Занятие по раннему развитию для детей 2–3 лет в центре «Crno-bela mačka» в Скадарлии, 12 сентября в 10:00.",
+      "desc": "Занятие по раннему развитию для малышей 2–3 лет в центре «Crno-bela mačka» (Скадарлия, Стари Град). Игры на моторику, речь, сенсорику и общение в небольшой группе. Разовое занятие 12 сентября в 10:00, продолжительность 45 минут.",
+      "date": "2026-09-12",
+      "wd": null,
+      "time": "10:00",
+      "dur": "45 минут",
+      "place": "Crno-bela mačka",
+      "address": "Миће Поповића 1, Стари Град, Белград",
+      "placePhone": null,
+      "placeLink": null,
+      "age": [
+        2,
+        3
+      ],
+      "ageLabel": "2–3 года",
+      "price": "уточняется",
+      "image": null,
+      "category": "early_dev",
+      "categoryLabel": "Раннее развитие",
+      "source": {
+        "id": "crnobelamacka",
+        "cta": "Записаться в «Crno-bela mačka»",
+        "url": "https://www.instagram.com/crnobelamacka_centar",
+        "kind": "Расписание студии",
+        "name": "Crno-bela mačka"
+      }
+    },
+    {
+      "id": "crnobelamacka-rannee-razvitie-35-45-2026-09-12",
+      "title": "Раннее развитие (3,5–4,5 года)",
+      "short": "Занятие по раннему развитию для детей 3,5–4,5 лет в центре «Crno-bela mačka» в Скадарлии, 12 сентября в 11:15.",
+      "desc": "Занятие по раннему развитию для детей 3,5–4,5 лет в центре «Crno-bela mačka» (Скадарлия, Стари Град). Развитие речи, внимания, мелкой моторики и навыков общения через игру. Разовое занятие 12 сентября в 11:15, продолжительность 45 минут.",
+      "date": "2026-09-12",
+      "wd": null,
+      "time": "11:15",
+      "dur": "45 минут",
+      "place": "Crno-bela mačka",
+      "address": "Миће Поповића 1, Стари Град, Белград",
+      "placePhone": null,
+      "placeLink": null,
+      "age": [
+        3,
+        4
+      ],
+      "ageLabel": "3,5–4,5 года",
+      "price": "уточняется",
+      "image": null,
+      "category": "early_dev",
+      "categoryLabel": "Раннее развитие",
+      "source": {
+        "id": "crnobelamacka",
+        "cta": "Записаться в «Crno-bela mačka»",
+        "url": "https://www.instagram.com/crnobelamacka_centar",
+        "kind": "Расписание студии",
+        "name": "Crno-bela mačka"
+      }
+    },
+    {
+      "id": "crnobelamacka-serbskiy-7-12-2026-09-12",
+      "title": "Сербский язык (7–12 лет)",
+      "short": "Занятие по сербскому языку для детей 7–12 лет в центре «Crno-bela mačka» в Скадарлии, 12 сентября в 12:00.",
+      "desc": "Занятие по сербскому языку для детей 7–12 лет в центре «Crno-bela mačka» (Скадарлия, Стари Град). Разговорная практика, лексика и грамматика в игровом формате. Разовое занятие 12 сентября в 12:00, продолжительность 45 минут.",
+      "date": "2026-09-12",
+      "wd": null,
+      "time": "12:00",
+      "dur": "45 минут",
+      "place": "Crno-bela mačka",
+      "address": "Миће Поповића 1, Стари Град, Белград",
+      "placePhone": null,
+      "placeLink": null,
+      "age": [
+        7,
+        12
+      ],
+      "ageLabel": "7–12 лет",
+      "price": "уточняется",
+      "image": null,
+      "category": "languages",
+      "categoryLabel": "Языки",
+      "source": {
+        "id": "crnobelamacka",
+        "cta": "Записаться в «Crno-bela mačka»",
+        "url": "https://www.instagram.com/crnobelamacka_centar",
+        "kind": "Расписание студии",
+        "name": "Crno-bela mačka"
+      }
+    },
+    {
+      "id": "crnobelamacka-tvorcheskaya-studiya-2026-09-12",
+      "title": "Творческая студия (5,5–12 лет)",
+      "short": "Творческая студия для детей 5,5–12 лет в центре «Crno-bela mačka» в Скадарлии, 12 сентября в 13:00.",
+      "desc": "Творческая студия для детей 5,5–12 лет в центре «Crno-bela mačka» (Скадарлия, Стари Град). Рисование, работа с разными материалами и техниками, самостоятельные творческие проекты. Разовое занятие 12 сентября в 13:00, продолжительность 1 час.",
+      "date": "2026-09-12",
+      "wd": null,
+      "time": "13:00",
+      "dur": "1 час",
+      "place": "Crno-bela mačka",
+      "address": "Миће Поповића 1, Стари Град, Белград",
+      "placePhone": null,
+      "placeLink": null,
+      "age": [
+        5,
+        12
+      ],
+      "ageLabel": "5,5–12 лет",
+      "price": "уточняется",
+      "image": null,
+      "category": "art",
+      "categoryLabel": "Творчество",
+      "source": {
+        "id": "crnobelamacka",
+        "cta": "Записаться в «Crno-bela mačka»",
+        "url": "https://www.instagram.com/crnobelamacka_centar",
+        "kind": "Расписание студии",
+        "name": "Crno-bela mačka"
       }
     }
   ]
