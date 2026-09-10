@@ -1,7 +1,7 @@
 {
   "updatedAt": "2026-09-10T08:55:23.857Z",
   "city": "Белград",
-  "count": 190,
+  "count": 199,
   "report": [
     {
       "source": "prodlenka",
@@ -6473,6 +6473,312 @@
         "url": "https://t.me/+xJwDSStnI4A0MDIy",
         "kind": "Событие площадки",
         "name": "Prosto'R"
+      }
+    },
+    {
+      "id": "prostor-italiya-12-pn-1730",
+      "title": "Художественный курс «Италия»",
+      "short": "Художественный курс «Италия» для подростков от 12 лет в клубе Prosto'R. Идёт набор, старт в октябре.",
+      "desc": "Художественный курс «Италия» для подростков от 12 лет: рисунок, живопись и история искусства через культуру Италии. Занятия в клубе Prosto'R в Новом Белграде по понедельникам в 17:30. Идёт набор группы, старт — в октябре.",
+      "date": null,
+      "wd": [
+        0
+      ],
+      "time": "17:30",
+      "dur": "1 час 30 минут",
+      "place": "Prosto'R",
+      "address": "Новый Белград, блок 44, ул. Нехруова 51А, 108",
+      "placePhone": null,
+      "placeLink": null,
+      "lat": null,
+      "lng": null,
+      "age": [
+        12,
+        17
+      ],
+      "ageLabel": "12+ лет",
+      "price": "уточняется",
+      "image": null,
+      "category": "art",
+      "categoryLabel": "Творчество",
+      "source": {
+        "id": "prostor",
+        "name": "Prosto'R",
+        "kind": "Расписание студии",
+        "url": "https://t.me/+xJwDSStnI4A0MDIy",
+        "cta": "Записаться в Prosto'R"
+      }
+    },
+    {
+      "id": "prostor-kompdizayn-14-sr-1900",
+      "title": "Клуб компьютерного дизайна",
+      "short": "Клуб компьютерного дизайна для подростков от 14 лет в клубе Prosto'R по средам. Идёт набор.",
+      "desc": "Клуб компьютерного дизайна для подростков от 14 лет: основы графического дизайна и работа в редакторах. Занятия в клубе Prosto'R в Новом Белграде по средам в 19:00. Идёт набор группы.",
+      "date": null,
+      "wd": [
+        2
+      ],
+      "time": "19:00",
+      "dur": "1 час 30 минут",
+      "place": "Prosto'R",
+      "address": "Новый Белград, блок 44, ул. Нехруова 51А, 108",
+      "placePhone": null,
+      "placeLink": null,
+      "lat": null,
+      "lng": null,
+      "age": [
+        14,
+        17
+      ],
+      "ageLabel": "14+ лет",
+      "price": "уточняется",
+      "image": null,
+      "category": null,
+      "categoryLabel": null,
+      "source": {
+        "id": "prostor",
+        "name": "Prosto'R",
+        "kind": "Расписание студии",
+        "url": "https://t.me/+xJwDSStnI4A0MDIy",
+        "cta": "Записаться в Prosto'R"
+      }
+    },
+    {
+      "id": "prostor-shahmaty-6-sr-1930",
+      "title": "Шахматы",
+      "short": "Шахматы для детей от 6 лет в клубе Prosto'R по средам. Идёт набор.",
+      "desc": "Шахматный кружок для детей от 6 лет: от основ до турнирной игры. Занятия в клубе Prosto'R в Новом Белграде по средам в 19:30. Идёт набор группы.",
+      "date": null,
+      "wd": [
+        2
+      ],
+      "time": "19:30",
+      "dur": "1 час",
+      "place": "Prosto'R",
+      "address": "Новый Белград, блок 44, ул. Нехруова 51А, 108",
+      "placePhone": null,
+      "placeLink": null,
+      "lat": null,
+      "lng": null,
+      "age": [
+        6,
+        16
+      ],
+      "ageLabel": "6+ лет",
+      "price": "уточняется",
+      "image": null,
+      "category": null,
+      "categoryLabel": null,
+      "source": {
+        "id": "prostor",
+        "name": "Prosto'R",
+        "kind": "Расписание студии",
+        "url": "https://t.me/+xJwDSStnI4A0MDIy",
+        "cta": "Записаться в Prosto'R"
+      }
+    },
+    {
+      "id": "prostor-shahmaty-6-sb-1300",
+      "title": "Шахматы",
+      "short": "Шахматы для детей от 6 лет в клубе Prosto'R по субботам.",
+      "desc": "Шахматный кружок для детей от 6 лет: от основ до турнирной игры. Занятия в клубе Prosto'R в Новом Белграде по субботам в 13:00.",
+      "date": null,
+      "wd": [
+        5
+      ],
+      "time": "13:00",
+      "dur": "1 час",
+      "place": "Prosto'R",
+      "address": "Новый Белград, блок 44, ул. Нехруова 51А, 108",
+      "placePhone": null,
+      "placeLink": null,
+      "lat": null,
+      "lng": null,
+      "age": [
+        6,
+        16
+      ],
+      "ageLabel": "6+ лет",
+      "price": "уточняется",
+      "image": null,
+      "category": null,
+      "categoryLabel": null,
+      "source": {
+        "id": "prostor",
+        "name": "Prosto'R",
+        "kind": "Расписание студии",
+        "url": "https://t.me/+xJwDSStnI4A0MDIy",
+        "cta": "Записаться в Prosto'R"
+      }
+    },
+    {
+      "id": "prostor-dnd-10-sb-1400",
+      "title": "D&D",
+      "short": "Настольная ролевая игра Dungeons & Dragons для детей от 10 лет. По субботам в клубе Prosto'R.",
+      "desc": "Dungeons & Dragons — настольная ролевая игра для детей от 10 лет: приключения, командная игра и воображение под руководством ведущего. Встречи в клубе Prosto'R в Новом Белграде по субботам в 14:00.",
+      "date": null,
+      "wd": [
+        5
+      ],
+      "time": "14:00",
+      "dur": "2 часа",
+      "place": "Prosto'R",
+      "address": "Новый Белград, блок 44, ул. Нехруова 51А, 108",
+      "placePhone": null,
+      "placeLink": null,
+      "lat": null,
+      "lng": null,
+      "age": [
+        10,
+        16
+      ],
+      "ageLabel": "10+ лет",
+      "price": "уточняется",
+      "image": null,
+      "category": null,
+      "categoryLabel": null,
+      "source": {
+        "id": "prostor",
+        "name": "Prosto'R",
+        "kind": "Расписание студии",
+        "url": "https://t.me/+xJwDSStnI4A0MDIy",
+        "cta": "Записаться в Prosto'R"
+      }
+    },
+    {
+      "id": "prostor-dnd-10-vs-1100",
+      "title": "D&D",
+      "short": "Настольная ролевая игра Dungeons & Dragons для детей от 10 лет. По воскресеньям в клубе Prosto'R.",
+      "desc": "Dungeons & Dragons — настольная ролевая игра для детей от 10 лет: приключения, командная игра и воображение под руководством ведущего. Встречи в клубе Prosto'R в Новом Белграде по воскресеньям в 11:00.",
+      "date": null,
+      "wd": [
+        6
+      ],
+      "time": "11:00",
+      "dur": "2 часа",
+      "place": "Prosto'R",
+      "address": "Новый Белград, блок 44, ул. Нехруова 51А, 108",
+      "placePhone": null,
+      "placeLink": null,
+      "lat": null,
+      "lng": null,
+      "age": [
+        10,
+        16
+      ],
+      "ageLabel": "10+ лет",
+      "price": "уточняется",
+      "image": null,
+      "category": null,
+      "categoryLabel": null,
+      "source": {
+        "id": "prostor",
+        "name": "Prosto'R",
+        "kind": "Расписание студии",
+        "url": "https://t.me/+xJwDSStnI4A0MDIy",
+        "cta": "Записаться в Prosto'R"
+      }
+    },
+    {
+      "id": "prostor-speaking-club-mladshie-10-13-vs-1215",
+      "title": "Speaking Club. Младшие подростки",
+      "short": "Разговорный клуб английского для младших подростков 10–13 лет. По воскресеньям в клубе Prosto'R.",
+      "desc": "Разговорный клуб английского языка для младших подростков 10–13 лет: живое общение, игры и обсуждения на английском в небольшой группе. Встречи в клубе Prosto'R в Новом Белграде по воскресеньям в 12:15.",
+      "date": null,
+      "wd": [
+        6
+      ],
+      "time": "12:15",
+      "dur": "1 час",
+      "place": "Prosto'R",
+      "address": "Новый Белград, блок 44, ул. Нехруова 51А, 108",
+      "placePhone": null,
+      "placeLink": null,
+      "lat": null,
+      "lng": null,
+      "age": [
+        10,
+        13
+      ],
+      "ageLabel": "10–13 лет",
+      "price": "уточняется",
+      "image": null,
+      "category": "languages",
+      "categoryLabel": "Языки",
+      "source": {
+        "id": "prostor",
+        "name": "Prosto'R",
+        "kind": "Расписание студии",
+        "url": "https://t.me/+xJwDSStnI4A0MDIy",
+        "cta": "Записаться в Prosto'R"
+      }
+    },
+    {
+      "id": "prostor-nastolki-6-10-vs-1430",
+      "title": "Настольные игры для детей",
+      "short": "Настольные игры для детей 6–10 лет по воскресеньям в клубе Prosto'R. Идёт набор.",
+      "desc": "Настольные игры для детей 6–10 лет: знакомство с новыми играми в компании ровесников под присмотром ведущего. Встречи в клубе Prosto'R в Новом Белграде по воскресеньям в 14:30. Идёт набор группы.",
+      "date": null,
+      "wd": [
+        6
+      ],
+      "time": "14:30",
+      "dur": "1 час",
+      "place": "Prosto'R",
+      "address": "Новый Белград, блок 44, ул. Нехруова 51А, 108",
+      "placePhone": null,
+      "placeLink": null,
+      "lat": null,
+      "lng": null,
+      "age": [
+        6,
+        10
+      ],
+      "ageLabel": "6–10 лет",
+      "price": "уточняется",
+      "image": null,
+      "category": null,
+      "categoryLabel": null,
+      "source": {
+        "id": "prostor",
+        "name": "Prosto'R",
+        "kind": "Расписание студии",
+        "url": "https://t.me/+xJwDSStnI4A0MDIy",
+        "cta": "Записаться в Prosto'R"
+      }
+    },
+    {
+      "id": "prostor-speaking-club-starshie-14-vs-1700",
+      "title": "Speaking Club. Старшие подростки",
+      "short": "Разговорный клуб английского для старших подростков от 14 лет. По воскресеньям в клубе Prosto'R.",
+      "desc": "Разговорный клуб английского языка для старших подростков от 14 лет: живое общение, дискуссии и разбор тем на английском в небольшой группе. Встречи в клубе Prosto'R в Новом Белграде по воскресеньям в 17:00.",
+      "date": null,
+      "wd": [
+        6
+      ],
+      "time": "17:00",
+      "dur": "1 час",
+      "place": "Prosto'R",
+      "address": "Новый Белград, блок 44, ул. Нехруова 51А, 108",
+      "placePhone": null,
+      "placeLink": null,
+      "lat": null,
+      "lng": null,
+      "age": [
+        14,
+        17
+      ],
+      "ageLabel": "14+ лет",
+      "price": "уточняется",
+      "image": null,
+      "category": "languages",
+      "categoryLabel": "Языки",
+      "source": {
+        "id": "prostor",
+        "name": "Prosto'R",
+        "kind": "Расписание студии",
+        "url": "https://t.me/+xJwDSStnI4A0MDIy",
+        "cta": "Записаться в Prosto'R"
       }
     }
   ]
