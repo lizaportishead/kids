@@ -3189,7 +3189,7 @@
       ],
       "ageLabel": "9+ лет",
       "price": "уточняется",
-      "image": null,
+      "image": "data/images/prostor-kitayskiy.jpg",
       "category": "languages",
       "categoryLabel": "Языки",
       "source": {
@@ -3291,7 +3291,7 @@
       ],
       "ageLabel": "10+ лет",
       "price": "уточняется",
-      "image": null,
+      "image": "data/images/prostor-dnd.jpg",
       "category": null,
       "categoryLabel": null,
       "source": {
@@ -3462,7 +3462,7 @@
       ],
       "ageLabel": "9+ лет",
       "price": "уточняется",
-      "image": null,
+      "image": "data/images/prostor-kitayskiy.jpg",
       "category": "languages",
       "categoryLabel": "Языки",
       "source": {
@@ -3769,7 +3769,7 @@
       ],
       "ageLabel": "10–13 лет",
       "price": "уточняется",
-      "image": null,
+      "image": "data/images/prostor-speaking-club.jpg",
       "category": "languages",
       "categoryLabel": "Языки",
       "source": {
@@ -3905,7 +3905,7 @@
       ],
       "ageLabel": "6+ лет",
       "price": "уточняется",
-      "image": null,
+      "image": "data/images/prostor-shahmaty-sb.jpg",
       "category": null,
       "categoryLabel": null,
       "source": {
@@ -4279,7 +4279,7 @@
       ],
       "ageLabel": "10+ лет",
       "price": "уточняется",
-      "image": null,
+      "image": "data/images/prostor-dnd.jpg",
       "category": null,
       "categoryLabel": null,
       "source": {
@@ -4347,7 +4347,7 @@
       ],
       "ageLabel": "6–10 лет",
       "price": "уточняется",
-      "image": null,
+      "image": "data/images/prostor-nastolki.jpg",
       "category": null,
       "categoryLabel": null,
       "source": {
@@ -4925,7 +4925,7 @@
       ],
       "ageLabel": "9+ лет",
       "price": "уточняется",
-      "image": null,
+      "image": "data/images/prostor-kitayskiy.jpg",
       "category": "languages",
       "categoryLabel": "Языки",
       "source": {
@@ -5061,7 +5061,7 @@
       ],
       "ageLabel": "9+ лет",
       "price": "уточняется",
-      "image": null,
+      "image": "data/images/prostor-kitayskiy.jpg",
       "category": "languages",
       "categoryLabel": "Языки",
       "source": {
@@ -6223,7 +6223,7 @@
       ],
       "ageLabel": "14+ лет",
       "price": "уточняется",
-      "image": null,
+      "image": "data/images/prostor-speaking-club.jpg",
       "category": "languages",
       "categoryLabel": "Языки",
       "source": {
@@ -7145,7 +7145,7 @@
       ],
       "ageLabel": "12+ лет",
       "price": "уточняется",
-      "image": null,
+      "image": "data/images/prostor-italiya.jpg",
       "category": "art",
       "categoryLabel": "Творчество",
       "source": {
@@ -8145,7 +8145,7 @@
       ],
       "ageLabel": "14+ лет",
       "price": "уточняется",
-      "image": null,
+      "image": "data/images/prostor-kompdizayn.jpg",
       "category": null,
       "categoryLabel": null,
       "source": {
@@ -8318,7 +8318,7 @@
       ],
       "ageLabel": "11+ лет",
       "price": "уточняется",
-      "image": null,
+      "image": "data/images/prostor-zhivopis.jpg",
       "category": "art",
       "categoryLabel": "Творчество",
       "source": {
@@ -8386,7 +8386,7 @@
       ],
       "ageLabel": "6+ лет",
       "price": "уточняется",
-      "image": null,
+      "image": "data/images/prostor-shahmaty-sr.jpg",
       "category": null,
       "categoryLabel": null,
       "source": {
@@ -8590,7 +8590,7 @@
       ],
       "ageLabel": "10+ лет",
       "price": "уточняется",
-      "image": null,
+      "image": "data/images/prostor-matematika.jpg",
       "category": "school_prep",
       "categoryLabel": "Подготовка к школе",
       "source": {
