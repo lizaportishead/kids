@@ -1,7 +1,7 @@
 {
   "updatedAt": "2026-09-11T08:53:30.374Z",
   "city": "Белград",
-  "count": 253,
+  "count": 254,
   "report": [
     {
       "source": "prodlenka",
@@ -3195,7 +3195,7 @@
       "source": {
         "id": "prostor",
         "cta": "Записаться в Prosto'R",
-        "url": "https://t.me/+xJwDSStnI4A0MDIy",
+        "url": "https://t.me/prostor_hub/606",
         "kind": "Расписание студии",
         "name": "Prosto'R"
       }
@@ -3297,7 +3297,7 @@
       "source": {
         "id": "prostor",
         "cta": "Записаться в Prosto'R",
-        "url": "https://t.me/+xJwDSStnI4A0MDIy",
+        "url": "https://t.me/prostor_hub/114",
         "kind": "Расписание студии",
         "name": "Prosto'R"
       }
@@ -3468,7 +3468,7 @@
       "source": {
         "id": "prostor",
         "cta": "Записаться в Prosto'R",
-        "url": "https://t.me/+xJwDSStnI4A0MDIy",
+        "url": "https://t.me/prostor_hub/606",
         "kind": "Расписание студии",
         "name": "Prosto'R"
       }
@@ -3775,7 +3775,7 @@
       "source": {
         "id": "prostor",
         "cta": "Записаться в Prosto'R",
-        "url": "https://t.me/+xJwDSStnI4A0MDIy",
+        "url": "https://t.me/prostor_hub/602",
         "kind": "Расписание студии",
         "name": "Prosto'R"
       }
@@ -3911,7 +3911,7 @@
       "source": {
         "id": "prostor",
         "cta": "Записаться в Prosto'R",
-        "url": "https://t.me/+xJwDSStnI4A0MDIy",
+        "url": "https://t.me/prostor_hub/612",
         "kind": "Расписание студии",
         "name": "Prosto'R"
       }
@@ -4285,7 +4285,7 @@
       "source": {
         "id": "prostor",
         "cta": "Записаться в Prosto'R",
-        "url": "https://t.me/+xJwDSStnI4A0MDIy",
+        "url": "https://t.me/prostor_hub/114",
         "kind": "Расписание студии",
         "name": "Prosto'R"
       }
@@ -4353,7 +4353,7 @@
       "source": {
         "id": "prostor",
         "cta": "Записаться в Prosto'R",
-        "url": "https://t.me/+xJwDSStnI4A0MDIy",
+        "url": "https://t.me/prostor_hub/151",
         "kind": "Расписание студии",
         "name": "Prosto'R"
       }
@@ -4931,7 +4931,7 @@
       "source": {
         "id": "prostor",
         "cta": "Записаться в Prosto'R",
-        "url": "https://t.me/+xJwDSStnI4A0MDIy",
+        "url": "https://t.me/prostor_hub/606",
         "kind": "Расписание студии",
         "name": "Prosto'R"
       }
@@ -5067,7 +5067,7 @@
       "source": {
         "id": "prostor",
         "cta": "Записаться в Prosto'R",
-        "url": "https://t.me/+xJwDSStnI4A0MDIy",
+        "url": "https://t.me/prostor_hub/606",
         "kind": "Расписание студии",
         "name": "Prosto'R"
       }
@@ -6229,7 +6229,7 @@
       "source": {
         "id": "prostor",
         "cta": "Записаться в Prosto'R",
-        "url": "https://t.me/+xJwDSStnI4A0MDIy",
+        "url": "https://t.me/prostor_hub/602",
         "kind": "Расписание студии",
         "name": "Prosto'R"
       }
@@ -7151,7 +7151,7 @@
       "source": {
         "id": "prostor",
         "cta": "Записаться в Prosto'R",
-        "url": "https://t.me/+xJwDSStnI4A0MDIy",
+        "url": "https://t.me/prostor_hub/603",
         "kind": "Расписание студии",
         "name": "Prosto'R"
       }
@@ -8151,7 +8151,7 @@
       "source": {
         "id": "prostor",
         "cta": "Записаться в Prosto'R",
-        "url": "https://t.me/+xJwDSStnI4A0MDIy",
+        "url": "https://t.me/prostor_hub/171",
         "kind": "Расписание студии",
         "name": "Prosto'R"
       }
@@ -8324,7 +8324,7 @@
       "source": {
         "id": "prostor",
         "cta": "Записаться в Prosto'R",
-        "url": "https://t.me/+xJwDSStnI4A0MDIy",
+        "url": "https://t.me/prostor_hub/86",
         "kind": "Расписание студии",
         "name": "Prosto'R"
       }
@@ -8392,7 +8392,7 @@
       "source": {
         "id": "prostor",
         "cta": "Записаться в Prosto'R",
-        "url": "https://t.me/+xJwDSStnI4A0MDIy",
+        "url": "https://t.me/prostor_hub/37",
         "kind": "Расписание студии",
         "name": "Prosto'R"
       }
@@ -8565,6 +8565,40 @@
         "url": "https://www.instagram.com/swimyou.club/",
         "kind": "Расписание школы",
         "name": "SwimYou"
+      }
+    },
+    {
+      "id": "prostor-matematika-10-sb-1000",
+      "title": "Олимпиадная математика",
+      "short": "Олимпиадная математика для детей от 10 лет в клубе Prosto'R по субботам. Есть свободные места.",
+      "desc": "Занятия олимпиадной математикой для детей от 10 лет: разбираем нестандартные задачи, готовимся к олимпиадам, развиваем логическое мышление. Клуб Prosto'R в Новом Белграде, по субботам в 10:00.",
+      "date": null,
+      "wd": [
+        5
+      ],
+      "time": "10:00",
+      "dur": "1 час 30 минут",
+      "place": "Prosto'R",
+      "address": "Новый Белград, блок 44, ул. Нехруова 51А, 108",
+      "placePhone": null,
+      "placeLink": null,
+      "lat": null,
+      "lng": null,
+      "age": [
+        10,
+        17
+      ],
+      "ageLabel": "10+ лет",
+      "price": "уточняется",
+      "image": null,
+      "category": "school_prep",
+      "categoryLabel": "Подготовка к школе",
+      "source": {
+        "id": "prostor",
+        "cta": "Записаться в Prosto'R",
+        "url": "https://t.me/prostor_hub/596",
+        "kind": "Расписание студии",
+        "name": "Prosto'R"
       }
     }
   ]
