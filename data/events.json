@@ -1041,7 +1041,7 @@
       ],
       "ageLabel": "3+",
       "price": "2000 дин ребёнок, 1000 дин взрослый",
-      "image": null,
+      "image": "data/images/besmart-spektakl-masha.jpg",
       "category": "theatre",
       "categoryLabel": "Спектакли",
       "source": {
