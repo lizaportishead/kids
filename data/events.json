@@ -1,7 +1,7 @@
 {
   "updatedAt": "2026-09-17T09:24:44.647Z",
   "city": "Белград",
-  "count": 312,
+  "count": 313,
   "report": [
     {
       "source": "prodlenka",
@@ -10476,6 +10476,36 @@
         "url": "https://www.instagram.com/swimyou.club/",
         "kind": "Расписание школы",
         "name": "SwimYou"
+      }
+    },
+    {
+      "id": "mostik-igra-v-glinu-2026-09-19",
+      "title": "Игра в глину",
+      "short": "Сказка на проекторе, игра в глину и чаепитие в Мостике. Разовое занятие.",
+      "desc": "Игра в глину в Мостике: сказка на проекторе, игра в глину, чаепитие. Продолжительность 1,5 часа.",
+      "date": "2026-09-19",
+      "wd": null,
+      "time": "10:30",
+      "dur": "1 час 30 минут",
+      "place": "Мостик",
+      "address": "Војводе Добрњца 34, Стари Град, Белград",
+      "placePhone": null,
+      "placeLink": null,
+      "age": [
+        3,
+        7
+      ],
+      "ageLabel": "3–7 лет",
+      "price": "1800 динар",
+      "image": "data/images/mostik-igra-v-glinu.jpg",
+      "category": "art",
+      "categoryLabel": "Творчество",
+      "source": {
+        "id": "mostik",
+        "cta": "Записаться в Мостик",
+        "url": "https://t.me/mostik_glina/40",
+        "kind": "Телеграм-канал",
+        "name": "Мостик"
       }
     }
   ]
