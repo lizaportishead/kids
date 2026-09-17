@@ -32,7 +32,7 @@ export function normalize(source, raw, now = new Date()) {
   if (!raw.date && !(raw.wd && raw.wd.length)) return null;
 
   const age = raw.age || parseAge(raw.desc || title) || [3, 10];
-  const { category, categoryLabel } = categorize(title);
+  const { category, categoryLabel } = categorize(title, source.id);
   const ev = {
     id: '',
     title,
