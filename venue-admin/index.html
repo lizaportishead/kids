@@ -1,0 +1,991 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Кабинет площадки — Клубок</title>
+<meta name="robots" content="noindex, nofollow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Figtree:wght@500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --cream:#FFF6EC;
+    --card:#ffffff;
+    --ink:#35312C;
+    --muted:rgba(53,49,44,.58);
+    --line:rgba(53,49,44,.10);
+    --orange:#FF6032;
+    --orange-dark:#E1501F;
+    --green:#96D63E;
+    --green-dark:#7DBE2A;
+    --red:#E0553D;
+    --shadow:0 2px 10px rgba(53,49,44,.06), 0 1px 2px rgba(53,49,44,.05);
+  }
+  *{box-sizing:border-box;}
+  body{margin:0;background:var(--cream);color:var(--ink);font-family:Figtree,system-ui,sans-serif;-webkit-font-smoothing:antialiased;}
+  button{font-family:inherit;}
+  input,textarea,select{font-family:inherit;}
+  a{color:inherit;}
+  [hidden]{display:none!important;}
+
+  /* ---------- layout shells ---------- */
+  #login-screen{min-height:100vh;display:flex;align-items:center;justify-content:center;padding:24px;}
+  #app-screen{min-height:100vh;}
+
+  .login-card{width:100%;max-width:380px;background:var(--card);border-radius:24px;box-shadow:var(--shadow);padding:36px 32px;text-align:center;}
+  .brand{display:flex;align-items:center;justify-content:center;gap:10px;margin-bottom:22px;}
+  .brand-badge{width:40px;height:40px;border-radius:50%;background:var(--orange);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:18px;}
+  .brand-name{font-weight:800;font-size:19px;letter-spacing:.2px;}
+  .login-card h1{font-size:17px;font-weight:700;margin:0 0 6px;}
+  .login-card p.hint{font-size:13px;color:var(--muted);margin:0 0 22px;line-height:1.5;}
+  .field{text-align:left;margin-bottom:14px;}
+  .field label{display:block;font-size:12.5px;font-weight:600;color:var(--muted);margin-bottom:6px;}
+  .field input,.field select,.field textarea{width:100%;border:1.5px solid var(--line);background:#fff;border-radius:12px;padding:11px 13px;font-size:14.5px;color:var(--ink);outline:none;transition:border-color .15s;}
+  .field input:focus,.field select:focus,.field textarea:focus{border-color:var(--orange);}
+  .field textarea{resize:vertical;min-height:74px;line-height:1.45;}
+  .btn{border:none;border-radius:999px;padding:12px 20px;font-weight:700;font-size:14.5px;cursor:pointer;display:inline-flex;align-items:center;justify-content:center;gap:6px;transition:transform .08s ease, opacity .15s;white-space:nowrap;}
+  .btn:active{transform:scale(.97);}
+  .btn-primary{background:var(--orange);color:#FFF6EC;}
+  .btn-primary:hover{background:var(--orange-dark);}
+  .btn-secondary{background:var(--cream);color:var(--ink);}
+  .btn-secondary:hover{background:#f3e9db;}
+  .btn-ghost{background:transparent;color:var(--muted);}
+  .btn-ghost:hover{background:var(--line);color:var(--ink);}
+  .btn-danger{background:#fff;color:var(--red);border:1.5px solid rgba(224,85,61,.35);}
+  .btn-danger:hover{background:rgba(224,85,61,.08);}
+  .btn-block{width:100%;}
+  .btn[disabled]{opacity:.45;cursor:not-allowed;}
+  .err-text{color:var(--red);font-size:12.5px;margin-top:8px;min-height:16px;}
+  .demo-note{margin-top:18px;font-size:12px;color:var(--muted);background:var(--cream);border-radius:10px;padding:9px 12px;}
+  .demo-note b{color:var(--ink);}
+
+  /* ---------- top bar ---------- */
+  .topbar{position:sticky;top:0;z-index:20;background:var(--cream);border-bottom:1px solid var(--line);padding:14px 24px;display:flex;align-items:center;justify-content:space-between;gap:12px;}
+  .topbar .brand{margin:0;}
+  .topbar .brand-badge{width:32px;height:32px;font-size:14px;}
+  .topbar .brand-name{font-size:15.5px;}
+  .topbar .sep{width:1px;height:22px;background:var(--line);margin:0 2px;}
+  .topbar .venue-tag{font-size:13.5px;font-weight:700;color:var(--muted);}
+  .topbar-right{display:flex;align-items:center;gap:10px;}
+
+  .mock-banner{background:#FFF0DC;border-bottom:1px solid rgba(255,96,50,.18);color:var(--orange-dark);font-size:12.5px;font-weight:600;text-align:center;padding:7px 16px;}
+  .mock-banner button{background:none;border:none;color:var(--orange-dark);text-decoration:underline;font-weight:700;font-size:12.5px;cursor:pointer;padding:0;margin-left:6px;}
+
+  .container{max-width:920px;margin:0 auto;padding:26px 24px 80px;}
+
+  /* ---------- venue card ---------- */
+  .venue-card{background:var(--card);border-radius:20px;box-shadow:var(--shadow);padding:22px 24px;display:flex;align-items:center;gap:18px;margin-bottom:26px;}
+  .venue-logo{width:64px;height:64px;border-radius:16px;background:var(--cream);display:flex;align-items:center;justify-content:center;font-weight:800;font-size:22px;color:var(--orange);flex-shrink:0;overflow:hidden;border:1px solid var(--line);}
+  .venue-logo img{width:100%;height:100%;object-fit:cover;display:block;}
+  .venue-info{flex:1;min-width:0;}
+  .venue-info h2{margin:0 0 4px;font-size:18px;font-weight:800;}
+  .venue-meta{display:flex;flex-wrap:wrap;gap:12px;font-size:13px;color:var(--muted);}
+  .venue-meta span{display:inline-flex;align-items:center;gap:5px;}
+
+  /* ---------- section header ---------- */
+  .section-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:14px;gap:10px;flex-wrap:wrap;}
+  .section-head h3{font-size:16px;font-weight:800;margin:0;}
+  .tabs{display:flex;gap:6px;background:var(--card);border-radius:999px;padding:4px;box-shadow:var(--shadow);}
+  .tab{border:none;background:none;padding:8px 16px;border-radius:999px;font-weight:700;font-size:13.5px;color:var(--muted);cursor:pointer;}
+  .tab.active{background:var(--ink);color:var(--cream);}
+
+  /* ---------- event list ---------- */
+  .group-label{font-size:12.5px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.04em;margin:22px 0 10px;}
+  .group-label:first-child{margin-top:0;}
+  .event-row{background:var(--card);border-radius:16px;box-shadow:var(--shadow);padding:14px 16px;display:flex;align-items:center;gap:14px;margin-bottom:10px;}
+  .event-thumb{width:52px;height:52px;border-radius:12px;object-fit:cover;flex-shrink:0;background:var(--cream);}
+  .event-main{flex:1;min-width:0;}
+  .event-title{font-weight:700;font-size:14.5px;margin:0 0 4px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
+  .event-meta{display:flex;flex-wrap:wrap;gap:8px;align-items:center;font-size:12.5px;color:var(--muted);}
+  .pill{display:inline-flex;align-items:center;gap:4px;background:var(--cream);border-radius:999px;padding:3px 10px;font-weight:600;font-size:12px;color:var(--ink);}
+  .pill.cat{background:rgba(150,214,62,.22);color:#4E7A16;}
+  .pill.wd{background:rgba(255,96,50,.12);color:var(--orange-dark);}
+  .event-actions{display:flex;gap:6px;flex-shrink:0;}
+  .icon-btn{width:34px;height:34px;border-radius:10px;border:none;background:var(--cream);color:var(--ink);cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:15px;}
+  .icon-btn:hover{background:var(--line);}
+  .icon-btn.del:hover{background:rgba(224,85,61,.12);color:var(--red);}
+
+  .empty-state{background:var(--card);border-radius:16px;padding:36px 20px;text-align:center;color:var(--muted);font-size:14px;box-shadow:var(--shadow);}
+
+  /* ---------- modal ---------- */
+  .modal-overlay{position:fixed;inset:0;background:rgba(53,49,44,.42);display:flex;align-items:flex-start;justify-content:center;padding:40px 16px;overflow-y:auto;z-index:100;}
+  .modal{background:var(--card);border-radius:22px;width:100%;max-width:560px;box-shadow:0 20px 50px rgba(53,49,44,.25);}
+  .modal-head{display:flex;align-items:center;justify-content:space-between;padding:20px 24px;border-bottom:1px solid var(--line);}
+  .modal-head h3{margin:0;font-size:16.5px;font-weight:800;}
+  .modal-close{width:32px;height:32px;border-radius:50%;border:none;background:var(--cream);cursor:pointer;font-size:15px;color:var(--muted);}
+  .modal-body{padding:22px 24px;max-height:65vh;overflow-y:auto;}
+  .modal-foot{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:16px 24px;border-top:1px solid var(--line);}
+  .modal-foot .right{display:flex;gap:8px;margin-left:auto;}
+  .modal.small .modal-body{padding-top:6px;}
+
+  .row2{display:grid;grid-template-columns:1fr 1fr;gap:12px;}
+  .segmented{display:flex;background:var(--cream);border-radius:12px;padding:4px;gap:4px;}
+  .segmented button{flex:1;border:none;background:none;padding:9px 10px;border-radius:9px;font-weight:700;font-size:13.5px;color:var(--muted);cursor:pointer;}
+  .segmented button.active{background:#fff;color:var(--ink);box-shadow:0 1px 3px rgba(53,49,44,.15);}
+
+  .weekday-picker{display:flex;gap:6px;flex-wrap:wrap;}
+  .wd-chip{width:42px;height:42px;border-radius:12px;border:1.5px solid var(--line);background:#fff;color:var(--ink);font-weight:700;font-size:12.5px;cursor:pointer;}
+  .wd-chip.active{background:var(--orange);border-color:var(--orange);color:#fff;}
+  .wd-chip.small{width:38px;height:38px;}
+  .wd-chip:disabled{opacity:.35;cursor:not-allowed;}
+
+  .schedule-slot{position:relative;border:1.5px solid var(--line);border-radius:14px;padding:14px 42px 14px 14px;margin-bottom:10px;}
+  .schedule-slot .weekday-picker{margin-bottom:10px;}
+  .schedule-slot .row2{margin:0;}
+  .schedule-slot .field{margin-bottom:0;}
+  .slot-remove{position:absolute;top:10px;right:10px;width:28px;height:28px;}
+
+  .upload-box{border:1.5px dashed var(--line);border-radius:14px;padding:14px;display:flex;align-items:center;gap:14px;}
+  .upload-preview{width:56px;height:56px;border-radius:12px;object-fit:cover;background:var(--cream);flex-shrink:0;}
+  .upload-preview.round{border-radius:50%;}
+  .upload-actions{display:flex;gap:8px;flex-wrap:wrap;}
+  .upload-actions .btn{padding:8px 14px;font-size:13px;}
+
+  .field-note{font-size:12px;color:var(--muted);margin-top:5px;}
+
+  /* ---------- toast ---------- */
+  #toast{position:fixed;left:50%;bottom:26px;transform:translate(-50%,20px);background:var(--ink);color:#fff;padding:12px 20px;border-radius:999px;font-size:13.5px;font-weight:600;box-shadow:0 8px 24px rgba(0,0,0,.25);opacity:0;pointer-events:none;transition:opacity .2s, transform .2s;z-index:200;}
+  #toast.show{opacity:1;transform:translate(-50%,0);}
+
+  @media (max-width:600px){
+    .row2{grid-template-columns:1fr;}
+    .venue-card{flex-wrap:wrap;}
+    .container{padding:18px 14px 70px;}
+  }
+</style>
+</head>
+<body>
+
+<!-- ============ LOGIN ============ -->
+<div id="login-screen">
+  <div class="login-card">
+    <div class="brand"><div class="brand-badge">К</div><div class="brand-name">Клубок</div></div>
+    <h1>Кабинет площадки</h1>
+    <p class="hint">Здесь можно управлять своими занятиями и карточкой площадки на «Клубке». Доступ по ссылке и паролю, которые мы присылаем вам лично.</p>
+    <form id="login-form">
+      <div class="field">
+        <label for="login-password">Пароль площадки</label>
+        <input id="login-password" type="password" placeholder="Введите пароль" autocomplete="current-password">
+      </div>
+      <button type="submit" class="btn btn-primary btn-block">Войти</button>
+      <div class="err-text" id="login-error"></div>
+    </form>
+    <div class="demo-note">Это макет интерфейса. Введите любой пароль (например <b>demo</b>), чтобы посмотреть кабинет — бэкенда и реальной проверки пароля пока нет.</div>
+  </div>
+</div>
+
+<!-- ============ APP ============ -->
+<div id="app-screen" hidden>
+  <div class="mock-banner">Макет интерфейса: изменения сохраняются только в этом браузере, для демонстрации. <button id="reset-demo">Сбросить демо-данные</button></div>
+  <div class="topbar">
+    <div style="display:flex;align-items:center;gap:12px;">
+      <div class="brand"><div class="brand-badge">К</div><div class="brand-name">Клубок</div></div>
+      <div class="sep"></div>
+      <div class="venue-tag" id="topbar-venue-name">—</div>
+    </div>
+    <div class="topbar-right">
+      <button class="btn btn-ghost" id="logout-btn">Выйти</button>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="venue-card">
+      <div class="venue-logo" id="venue-logo-box">К</div>
+      <div class="venue-info">
+        <h2 id="venue-name">—</h2>
+        <div class="venue-meta">
+          <span id="venue-address">—</span>
+          <span id="venue-phone">—</span>
+          <span id="venue-site" hidden></span>
+          <span id="venue-telegram" hidden></span>
+          <span id="venue-instagram" hidden></span>
+        </div>
+      </div>
+      <button class="btn btn-secondary" id="edit-venue-btn">Редактировать</button>
+    </div>
+
+    <div class="section-head">
+      <h3>События площадки</h3>
+      <div style="display:flex;gap:10px;flex-wrap:wrap;align-items:center;">
+        <div class="tabs" id="event-tabs">
+          <button class="tab active" data-filter="all">Все</button>
+          <button class="tab" data-filter="recurring">Регулярные</button>
+          <button class="tab" data-filter="oneoff">Разовые</button>
+        </div>
+        <button class="btn btn-primary" id="add-event-btn">+ Добавить событие</button>
+      </div>
+    </div>
+
+    <div id="events-list"></div>
+  </div>
+</div>
+
+<!-- ============ EVENT MODAL ============ -->
+<div class="modal-overlay" id="event-modal-overlay" hidden>
+  <div class="modal">
+    <div class="modal-head">
+      <h3 id="event-modal-title">Новое событие</h3>
+      <button class="modal-close" id="event-modal-close">✕</button>
+    </div>
+    <div class="modal-body">
+      <form id="event-form">
+        <div class="field">
+          <label>Тип события</label>
+          <div class="segmented" id="event-type-segmented">
+            <button type="button" class="active" data-type="oneoff">Разовое</button>
+            <button type="button" data-type="recurring">Регулярное</button>
+          </div>
+        </div>
+
+        <div class="field">
+          <label for="f-title">Название</label>
+          <input id="f-title" type="text" placeholder="Например: Английский для детей 3+">
+        </div>
+
+        <div class="field">
+          <label for="f-short">Короткое описание (для карточки)</label>
+          <input id="f-short" type="text" placeholder="Одна строка — видно в списке">
+        </div>
+
+        <div class="field">
+          <label for="f-desc">Полное описание</label>
+          <textarea id="f-desc" placeholder="Подробности для страницы события"></textarea>
+        </div>
+
+        <div class="field" id="field-date">
+          <label for="f-date">Дата</label>
+          <input id="f-date" type="date">
+        </div>
+
+        <div class="row2" id="field-time-dur">
+          <div class="field">
+            <label for="f-time">Время начала</label>
+            <input id="f-time" type="time">
+          </div>
+          <div class="field">
+            <label for="f-dur">Длительность</label>
+            <input id="f-dur" type="text" placeholder="Например: 1 час">
+          </div>
+        </div>
+
+        <div class="field" id="field-schedule" hidden>
+          <label>Дни и время</label>
+          <div class="field-note" style="margin:0 0 10px;">Если время разное в разные дни — добавьте ещё одно время и разнесите дни между ними.</div>
+          <div id="schedule-slots"></div>
+          <button type="button" class="btn btn-secondary" id="add-slot-btn" style="margin-top:2px;">+ Добавить время</button>
+        </div>
+
+        <div class="row2">
+          <div class="field">
+            <label for="f-age-min">Возраст от</label>
+            <input id="f-age-min" type="number" min="0" max="18" value="3">
+          </div>
+          <div class="field">
+            <label for="f-age-max">Возраст до</label>
+            <input id="f-age-max" type="number" min="0" max="18" value="10">
+          </div>
+        </div>
+
+        <div class="row2">
+          <div class="field">
+            <label for="f-category">Категория</label>
+            <select id="f-category">
+              <option value="school_prep">Подготовка к школе</option>
+              <option value="robotics">Робототехника</option>
+              <option value="dance">Танцы</option>
+              <option value="theatre">Спектакли</option>
+              <option value="music">Музыка</option>
+              <option value="reading">Чтение</option>
+              <option value="languages">Языки</option>
+              <option value="early_dev">Раннее развитие</option>
+              <option value="cooking">Кулинария</option>
+              <option value="art">Творчество</option>
+              <option value="swimming">Плавание</option>
+              <option value="sport">Спорт</option>
+              <option value="games">Шахматы и игры</option>
+              <option value="science">Наука и логика</option>
+              <option value="other">Другое</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="f-price">Цена</label>
+            <input id="f-price" type="text" placeholder="Например: 1200 дин.">
+          </div>
+        </div>
+
+        <div class="field">
+          <label>Фото события</label>
+          <div class="upload-box">
+            <img class="upload-preview" id="f-image-preview" alt="">
+            <div class="upload-actions">
+              <label class="btn btn-secondary">Загрузить фото<input type="file" accept="image/*" id="f-image-file" style="display:none;"></label>
+              <button type="button" class="btn btn-ghost" id="f-image-remove">Удалить</button>
+            </div>
+          </div>
+          <div class="field-note">Если фото нет, на сайте покажется заглушка категории.</div>
+        </div>
+
+        <div class="field">
+          <label for="f-link">Ссылка для записи (необязательно)</label>
+          <input id="f-link" type="text" placeholder="https:// или ссылка на Instagram/WhatsApp">
+        </div>
+
+        <div class="err-text" id="event-form-error"></div>
+      </form>
+    </div>
+    <div class="modal-foot">
+      <button class="btn btn-danger" id="event-delete-btn" hidden>Удалить событие</button>
+      <div class="right">
+        <button class="btn btn-ghost" id="event-cancel-btn">Отмена</button>
+        <button class="btn btn-primary" id="event-save-btn">Сохранить</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ============ VENUE EDIT MODAL ============ -->
+<div class="modal-overlay" id="venue-modal-overlay" hidden>
+  <div class="modal">
+    <div class="modal-head">
+      <h3>Карточка площадки</h3>
+      <button class="modal-close" id="venue-modal-close">✕</button>
+    </div>
+    <div class="modal-body">
+      <form id="venue-form">
+        <div class="field">
+          <label>Логотип</label>
+          <div class="upload-box">
+            <img class="upload-preview round" id="v-logo-preview" alt="">
+            <div class="upload-actions">
+              <label class="btn btn-secondary">Загрузить лого<input type="file" accept="image/*" id="v-logo-file" style="display:none;"></label>
+              <button type="button" class="btn btn-ghost" id="v-logo-remove">Удалить</button>
+            </div>
+          </div>
+        </div>
+        <div class="field">
+          <label for="v-name">Название площадки</label>
+          <input id="v-name" type="text">
+        </div>
+        <div class="field">
+          <label for="v-address">Адрес</label>
+          <input id="v-address" type="text">
+        </div>
+        <div class="row2">
+          <div class="field">
+            <label for="v-phone">Телефон</label>
+            <input id="v-phone" type="text" placeholder="+381...">
+          </div>
+          <div class="field">
+            <label for="v-site">Сайт</label>
+            <input id="v-site" type="text" placeholder="https://...">
+          </div>
+        </div>
+        <div class="row2">
+          <div class="field">
+            <label for="v-telegram">Telegram</label>
+            <input id="v-telegram" type="text" placeholder="@username или ссылка">
+          </div>
+          <div class="field">
+            <label for="v-instagram">Instagram</label>
+            <input id="v-instagram" type="text" placeholder="@username или ссылка">
+          </div>
+        </div>
+        <div class="err-text" id="venue-form-error"></div>
+      </form>
+    </div>
+    <div class="modal-foot">
+      <div class="right">
+        <button class="btn btn-ghost" id="venue-cancel-btn">Отмена</button>
+        <button class="btn btn-primary" id="venue-save-btn">Сохранить</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ============ CONFIRM DELETE MODAL ============ -->
+<div class="modal-overlay" id="confirm-modal-overlay" hidden>
+  <div class="modal small" style="max-width:400px;">
+    <div class="modal-head">
+      <h3>Удалить событие?</h3>
+      <button class="modal-close" id="confirm-modal-close">✕</button>
+    </div>
+    <div class="modal-body">
+      <p id="confirm-modal-text" style="margin:0;color:var(--muted);font-size:14px;line-height:1.5;"></p>
+    </div>
+    <div class="modal-foot">
+      <div class="right">
+        <button class="btn btn-ghost" id="confirm-cancel-btn">Отмена</button>
+        <button class="btn btn-danger" id="confirm-ok-btn">Удалить</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="toast"></div>
+
+<script>
+(function(){
+  "use strict";
+
+  var STORAGE_KEY = "klubok_venue_admin_mock_v2";
+  var WD_LABELS = ["Пн","Вт","Ср","Чт","Пт","Сб","Вс"];
+  var CAT_LABELS = {
+    school_prep:"Подготовка к школе", robotics:"Робототехника", dance:"Танцы",
+    theatre:"Спектакли", music:"Музыка", reading:"Чтение", languages:"Языки",
+    early_dev:"Раннее развитие", cooking:"Кулинария", art:"Творчество",
+    swimming:"Плавание", sport:"Спорт", games:"Шахматы и игры",
+    science:"Наука и логика", other:"Другое"
+  };
+
+  function seedData(){
+    return {
+      venue:{
+        name:"Студия «Ромашка»",
+        address:"Belgrade, Vračar, ul. Maksima Gorkog 15",
+        phone:"+381 60 123 4567",
+        site:"https://romashka.rs",
+        telegram:"@romashka_kids",
+        instagram:"@romashka.kids",
+        logo:null
+      },
+      events:[
+        {
+          id:"demo-1", title:"Монтессори: вместе с мамой", short:"Игровое занятие для малышей с родителем",
+          desc:"Развивающее занятие по методике Монтессори для детей с мамой или папой. Сенсорика, мелкая моторика, первые социальные навыки.",
+          type:"recurring", date:null,
+          schedule:[{wd:[0,2,4], time:"09:30", dur:"1 час"}],
+          age_min:1, age_max:2, category:"early_dev", price:"1500 дин.", image:null, link:""
+        },
+        {
+          id:"demo-2", title:"Английский для детей 3+", short:"Игровой английский в мини-группе",
+          desc:"Занятия английским через игру, песни и карточки. Мини-группы до 6 детей.",
+          type:"recurring", date:null,
+          schedule:[{wd:[1], time:"10:30", dur:"1 час"}, {wd:[4], time:"18:00", dur:"45 минут"}],
+          age_min:3, age_max:5, category:"languages", price:"1800 дин.", image:null, link:"https://instagram.com/romashka.kids"
+        },
+        {
+          id:"demo-3", title:"Осенний семейный мастер-класс", short:"Разовое творческое занятие для всей семьи",
+          desc:"Мастер-класс по осенним поделкам из природных материалов. Приходить можно один раз, абонемент не нужен.",
+          type:"oneoff", date: nextSaturday(), time:"11:00", dur:"1 час 30 минут",
+          age_min:3, age_max:8, category:"art", price:"2000 дин.", image:null, link:""
+        }
+      ]
+    };
+  }
+
+  function nextSaturday(){
+    var d = new Date();
+    var diff = (6 - d.getDay() + 7) % 7 || 7;
+    d.setDate(d.getDate() + diff);
+    return d.toISOString().slice(0,10);
+  }
+
+  function load(){
+    try{
+      var raw = localStorage.getItem(STORAGE_KEY);
+      if(raw) return JSON.parse(raw);
+    }catch(e){}
+    var seeded = seedData();
+    save(seeded);
+    return seeded;
+  }
+  function save(state){
+    try{ localStorage.setItem(STORAGE_KEY, JSON.stringify(state)); }catch(e){}
+  }
+
+  var state = load();
+  var currentFilter = "all";
+  var editingEventId = null;
+  var pendingDeleteId = null;
+  var eventImageData = null;
+  var venueLogoData = null;
+
+  // ---------- helpers ----------
+  function $(id){ return document.getElementById(id); }
+  function initials(name){
+    return (name||"?").trim().slice(0,1).toUpperCase();
+  }
+  function fmtDate(iso){
+    if(!iso) return "";
+    var d = new Date(iso+"T00:00:00");
+    return d.toLocaleDateString("ru-RU",{day:"numeric",month:"long"});
+  }
+  function toast(msg){
+    var t = $("toast");
+    t.textContent = msg;
+    t.classList.add("show");
+    clearTimeout(toast._tm);
+    toast._tm = setTimeout(function(){ t.classList.remove("show"); }, 2200);
+  }
+  function fileToDataUrl(file, cb){
+    var reader = new FileReader();
+    reader.onload = function(){ cb(reader.result); };
+    reader.readAsDataURL(file);
+  }
+  function setOptionalContact(id, text){
+    var el = $(id);
+    if(text){ el.textContent = text; el.hidden = false; }
+    else { el.textContent = ""; el.hidden = true; }
+  }
+
+  // ---------- login ----------
+  $("login-form").addEventListener("submit", function(e){
+    e.preventDefault();
+    var pw = $("login-password").value.trim();
+    if(!pw){
+      $("login-error").textContent = "Введите пароль";
+      return;
+    }
+    $("login-error").textContent = "";
+    $("login-screen").hidden = true;
+    $("app-screen").hidden = false;
+    renderVenue();
+    renderEvents();
+  });
+
+  $("logout-btn").addEventListener("click", function(){
+    $("app-screen").hidden = true;
+    $("login-screen").hidden = false;
+    $("login-password").value = "";
+  });
+
+  $("reset-demo").addEventListener("click", function(){
+    state = seedData();
+    save(state);
+    renderVenue();
+    renderEvents();
+    toast("Демо-данные сброшены");
+  });
+
+  // ---------- venue card render ----------
+  function renderVenue(){
+    var v = state.venue;
+    $("topbar-venue-name").textContent = v.name;
+    $("venue-name").textContent = v.name;
+    $("venue-address").textContent = v.address || "Адрес не указан";
+    $("venue-phone").textContent = v.phone || "Телефон не указан";
+    setOptionalContact("venue-site", v.site);
+    setOptionalContact("venue-telegram", v.telegram ? "Telegram: "+v.telegram : "");
+    setOptionalContact("venue-instagram", v.instagram ? "Instagram: "+v.instagram : "");
+    var box = $("venue-logo-box");
+    if(v.logo){
+      box.innerHTML = '<img src="'+v.logo+'" alt="">';
+    } else {
+      box.textContent = initials(v.name);
+    }
+  }
+
+  // ---------- events render ----------
+  function minTime(ev){
+    if(ev.type === "recurring"){
+      var times = (ev.schedule||[]).map(function(s){ return s.time||""; }).filter(Boolean).sort();
+      return times[0] || "";
+    }
+    return ev.time || "";
+  }
+
+  function sortedEvents(){
+    return state.events.slice().sort(function(a,b){
+      if(a.type !== b.type) return a.type === "recurring" ? -1 : 1;
+      return minTime(a).localeCompare(minTime(b));
+    });
+  }
+
+  function eventMetaLine(ev){
+    var parts = [];
+    if(ev.type === "recurring"){
+      var slots = ev.schedule || [];
+      if(!slots.length){
+        parts.push('<span class="pill wd">время не выбрано</span>');
+      } else {
+        slots.forEach(function(slot){
+          var days = (slot.wd||[]).slice().sort(function(a,b){return a-b;}).map(function(i){return WD_LABELS[i];}).join(", ");
+          parts.push('<span class="pill wd">'+(days||"дни не выбраны")+' · '+(slot.time||"—")+(slot.dur ? " · "+slot.dur : "")+'</span>');
+        });
+      }
+    } else {
+      parts.push('<span class="pill wd">'+(ev.date ? fmtDate(ev.date) : "дата не выбрана")+'</span>');
+      parts.push('<span class="pill">'+(ev.time||"—")+(ev.dur ? " · "+ev.dur : "")+'</span>');
+    }
+    parts.push('<span class="pill">'+ev.age_min+'–'+ev.age_max+' лет</span>');
+    parts.push('<span class="pill cat">'+(CAT_LABELS[ev.category]||"Другое")+'</span>');
+    if(ev.price) parts.push('<span class="pill">'+ev.price+'</span>');
+    return parts.join("");
+  }
+
+  function renderEvents(){
+    var list = $("events-list");
+    var items = sortedEvents().filter(function(ev){
+      if(currentFilter === "all") return true;
+      if(currentFilter === "recurring") return ev.type === "recurring";
+      return ev.type === "oneoff";
+    });
+
+    if(!items.length){
+      list.innerHTML = '<div class="empty-state">Пока нет событий в этой вкладке.<br>Нажмите «+ Добавить событие», чтобы создать первое.</div>';
+      return;
+    }
+
+    var html = "";
+    var lastGroup = null;
+    items.forEach(function(ev){
+      var group = ev.type === "recurring" ? "Регулярные" : "Разовые";
+      if(currentFilter === "all" && group !== lastGroup){
+        html += '<div class="group-label">'+group+'</div>';
+        lastGroup = group;
+      }
+      html += ''+
+        '<div class="event-row" data-id="'+ev.id+'">'+
+          (ev.image ? '<img class="event-thumb" src="'+ev.image+'" alt="">' : '<div class="event-thumb"></div>')+
+          '<div class="event-main">'+
+            '<p class="event-title">'+escapeHtml(ev.title||"Без названия")+'</p>'+
+            '<div class="event-meta">'+eventMetaLine(ev)+'</div>'+
+          '</div>'+
+          '<div class="event-actions">'+
+            '<button class="icon-btn" data-action="edit" title="Редактировать">✎</button>'+
+            '<button class="icon-btn del" data-action="delete" title="Удалить">🗑</button>'+
+          '</div>'+
+        '</div>';
+    });
+    list.innerHTML = html;
+  }
+
+  function escapeHtml(s){
+    return String(s).replace(/[&<>"']/g, function(c){
+      return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c];
+    });
+  }
+
+  $("events-list").addEventListener("click", function(e){
+    var btn = e.target.closest("[data-action]");
+    if(!btn) return;
+    var row = e.target.closest(".event-row");
+    var id = row.getAttribute("data-id");
+    if(btn.dataset.action === "edit") openEventModal(id);
+    if(btn.dataset.action === "delete") openConfirmDelete(id);
+  });
+
+  document.getElementById("event-tabs").addEventListener("click", function(e){
+    var btn = e.target.closest(".tab");
+    if(!btn) return;
+    document.querySelectorAll("#event-tabs .tab").forEach(function(t){ t.classList.remove("active"); });
+    btn.classList.add("active");
+    currentFilter = btn.dataset.filter;
+    renderEvents();
+  });
+
+  // ---------- event modal ----------
+  var eventType = "oneoff";
+  var scheduleSlots = [];
+  var slotSeq = 0;
+
+  function newSlot(days, time, dur){
+    slotSeq++;
+    return {id:"slot"+slotSeq, days: days || [], time: time || "10:00", dur: dur || "1 час"};
+  }
+
+  function loadSlotsFromSchedule(schedule){
+    if(!schedule || !schedule.length) return [newSlot([], "10:00", "1 час")];
+    return schedule.map(function(s){ return newSlot((s.wd||[]).slice(), s.time||"10:00", s.dur||""); });
+  }
+
+  function usedDaysExcluding(slotId){
+    var used = [];
+    scheduleSlots.forEach(function(s){
+      if(s.id !== slotId) used = used.concat(s.days);
+    });
+    return used;
+  }
+
+  function renderScheduleSlots(){
+    var box = $("schedule-slots");
+    box.innerHTML = scheduleSlots.map(function(slot){
+      var used = usedDaysExcluding(slot.id);
+      var chips = WD_LABELS.map(function(label, i){
+        var active = slot.days.indexOf(i) !== -1;
+        var disabled = !active && used.indexOf(i) !== -1;
+        return '<button type="button" class="wd-chip small'+(active?" active":"")+'" data-slot="'+slot.id+'" data-wd="'+i+'"'+(disabled?" disabled":"")+'>'+label+'</button>';
+      }).join("");
+      return ''+
+        '<div class="schedule-slot" data-slot-id="'+slot.id+'">'+
+          (scheduleSlots.length > 1 ? '<button type="button" class="icon-btn del slot-remove" data-slot="'+slot.id+'" title="Убрать это время">🗑</button>' : '')+
+          '<div class="weekday-picker">'+chips+'</div>'+
+          '<div class="row2">'+
+            '<div class="field"><label>Время</label><input type="time" class="slot-time" data-slot="'+slot.id+'" value="'+slot.time+'"></div>'+
+            '<div class="field"><label>Длительность</label><input type="text" class="slot-dur" data-slot="'+slot.id+'" value="'+escapeHtml(slot.dur)+'" placeholder="Например: 1 час"></div>'+
+          '</div>'+
+        '</div>';
+    }).join("");
+  }
+
+  $("schedule-slots").addEventListener("click", function(e){
+    var chip = e.target.closest(".wd-chip");
+    if(chip && !chip.disabled){
+      var slot = scheduleSlots.find(function(s){ return s.id === chip.dataset.slot; });
+      var wd = Number(chip.dataset.wd);
+      var idx = slot.days.indexOf(wd);
+      if(idx === -1) slot.days.push(wd); else slot.days.splice(idx,1);
+      renderScheduleSlots();
+      return;
+    }
+    var rm = e.target.closest(".slot-remove");
+    if(rm && scheduleSlots.length > 1){
+      scheduleSlots = scheduleSlots.filter(function(s){ return s.id !== rm.dataset.slot; });
+      renderScheduleSlots();
+    }
+  });
+
+  $("schedule-slots").addEventListener("input", function(e){
+    var slot = scheduleSlots.find(function(s){ return s.id === e.target.dataset.slot; });
+    if(!slot) return;
+    if(e.target.classList.contains("slot-time")) slot.time = e.target.value;
+    if(e.target.classList.contains("slot-dur")) slot.dur = e.target.value;
+  });
+
+  $("add-slot-btn").addEventListener("click", function(){
+    var lastDur = scheduleSlots.length ? scheduleSlots[scheduleSlots.length-1].dur : "1 час";
+    scheduleSlots.push(newSlot([], "10:00", lastDur));
+    renderScheduleSlots();
+  });
+
+  function setEventType(type){
+    eventType = type;
+    document.querySelectorAll("#event-type-segmented button").forEach(function(b){
+      b.classList.toggle("active", b.dataset.type === type);
+    });
+    $("field-date").hidden = type !== "oneoff";
+    $("field-time-dur").hidden = type !== "oneoff";
+    $("field-schedule").hidden = type !== "recurring";
+  }
+
+  $("event-type-segmented").addEventListener("click", function(e){
+    var btn = e.target.closest("button");
+    if(!btn) return;
+    setEventType(btn.dataset.type);
+  });
+
+  function resetEventForm(){
+    editingEventId = null;
+    eventImageData = null;
+    scheduleSlots = [newSlot([], "10:00", "1 час")];
+    $("event-form-error").textContent = "";
+    $("f-title").value = "";
+    $("f-short").value = "";
+    $("f-desc").value = "";
+    $("f-date").value = "";
+    $("f-time").value = "10:00";
+    $("f-dur").value = "1 час";
+    $("f-age-min").value = 3;
+    $("f-age-max").value = 10;
+    $("f-category").value = "other";
+    $("f-price").value = "";
+    $("f-link").value = "";
+    $("f-image-preview").src = "";
+    $("f-image-preview").style.visibility = "hidden";
+    renderScheduleSlots();
+    setEventType("oneoff");
+  }
+
+  function openEventModal(id){
+    resetEventForm();
+    if(id){
+      var ev = state.events.find(function(e){ return e.id === id; });
+      if(!ev) return;
+      editingEventId = id;
+      $("event-modal-title").textContent = "Редактировать событие";
+      $("event-delete-btn").hidden = false;
+      $("f-title").value = ev.title||"";
+      $("f-short").value = ev.short||"";
+      $("f-desc").value = ev.desc||"";
+      $("f-age-min").value = ev.age_min;
+      $("f-age-max").value = ev.age_max;
+      $("f-category").value = ev.category||"other";
+      $("f-price").value = ev.price||"";
+      $("f-link").value = ev.link||"";
+      setEventType(ev.type);
+      if(ev.type === "oneoff"){
+        $("f-date").value = ev.date||"";
+        $("f-time").value = ev.time||"10:00";
+        $("f-dur").value = ev.dur||"";
+      } else {
+        scheduleSlots = loadSlotsFromSchedule(ev.schedule);
+        renderScheduleSlots();
+      }
+      if(ev.image){
+        eventImageData = ev.image;
+        $("f-image-preview").src = ev.image;
+        $("f-image-preview").style.visibility = "visible";
+      }
+    } else {
+      $("event-modal-title").textContent = "Новое событие";
+      $("event-delete-btn").hidden = true;
+    }
+    $("event-modal-overlay").hidden = false;
+  }
+
+  function closeEventModal(){ $("event-modal-overlay").hidden = true; }
+
+  $("add-event-btn").addEventListener("click", function(){ openEventModal(null); });
+  $("event-modal-close").addEventListener("click", closeEventModal);
+  $("event-cancel-btn").addEventListener("click", closeEventModal);
+  $("event-modal-overlay").addEventListener("click", function(e){ if(e.target === this) closeEventModal(); });
+
+  $("f-image-file").addEventListener("change", function(e){
+    var file = e.target.files[0];
+    if(!file) return;
+    fileToDataUrl(file, function(url){
+      eventImageData = url;
+      $("f-image-preview").src = url;
+      $("f-image-preview").style.visibility = "visible";
+    });
+  });
+  $("f-image-remove").addEventListener("click", function(){
+    eventImageData = null;
+    $("f-image-preview").src = "";
+    $("f-image-preview").style.visibility = "hidden";
+  });
+
+  $("event-save-btn").addEventListener("click", function(){
+    var title = $("f-title").value.trim();
+    var ageMin = Number($("f-age-min").value);
+    var ageMax = Number($("f-age-max").value);
+    var errEl = $("event-form-error");
+
+    if(!title){ errEl.textContent = "Укажите название события"; return; }
+    if(eventType === "oneoff"){
+      if(!$("f-date").value){ errEl.textContent = "Выберите дату"; return; }
+      if(!$("f-time").value){ errEl.textContent = "Укажите время начала"; return; }
+    } else {
+      if(!scheduleSlots.length){ errEl.textContent = "Добавьте хотя бы одно время"; return; }
+      for(var i=0;i<scheduleSlots.length;i++){
+        if(!scheduleSlots[i].days.length){ errEl.textContent = "У каждого времени должен быть выбран хотя бы один день недели"; return; }
+        if(!scheduleSlots[i].time){ errEl.textContent = "Укажите время для каждой группы дней"; return; }
+      }
+    }
+    if(ageMax < ageMin){ errEl.textContent = "Возраст «до» не может быть меньше «от»"; return; }
+    errEl.textContent = "";
+
+    var payload = {
+      title: title,
+      short: $("f-short").value.trim(),
+      desc: $("f-desc").value.trim(),
+      type: eventType,
+      date: eventType === "oneoff" ? $("f-date").value : null,
+      time: eventType === "oneoff" ? $("f-time").value : null,
+      dur: eventType === "oneoff" ? $("f-dur").value.trim() : null,
+      schedule: eventType === "recurring" ? scheduleSlots.map(function(s){
+        return {wd: s.days.slice().sort(function(a,b){return a-b;}), time: s.time, dur: s.dur.trim()};
+      }) : null,
+      age_min: ageMin,
+      age_max: ageMax,
+      category: $("f-category").value,
+      price: $("f-price").value.trim(),
+      image: eventImageData,
+      link: $("f-link").value.trim()
+    };
+
+    if(editingEventId){
+      var idx = state.events.findIndex(function(e){ return e.id === editingEventId; });
+      state.events[idx] = Object.assign({id: editingEventId}, payload);
+      toast("Событие обновлено");
+    } else {
+      payload.id = "ev-" + Date.now();
+      state.events.push(payload);
+      toast("Событие добавлено");
+    }
+    save(state);
+    renderEvents();
+    closeEventModal();
+  });
+
+  $("event-delete-btn").addEventListener("click", function(){
+    if(!editingEventId) return;
+    closeEventModal();
+    openConfirmDelete(editingEventId);
+  });
+
+  // ---------- confirm delete ----------
+  function openConfirmDelete(id){
+    var ev = state.events.find(function(e){ return e.id === id; });
+    if(!ev) return;
+    pendingDeleteId = id;
+    $("confirm-modal-text").textContent = 'Удалить «'+ev.title+'»? Это действие нельзя отменить.';
+    $("confirm-modal-overlay").hidden = false;
+  }
+  function closeConfirm(){ $("confirm-modal-overlay").hidden = true; pendingDeleteId = null; }
+  $("confirm-modal-close").addEventListener("click", closeConfirm);
+  $("confirm-cancel-btn").addEventListener("click", closeConfirm);
+  $("confirm-modal-overlay").addEventListener("click", function(e){ if(e.target === this) closeConfirm(); });
+  $("confirm-ok-btn").addEventListener("click", function(){
+    if(!pendingDeleteId) return;
+    state.events = state.events.filter(function(e){ return e.id !== pendingDeleteId; });
+    save(state);
+    renderEvents();
+    toast("Событие удалено");
+    closeConfirm();
+  });
+
+  // ---------- venue modal ----------
+  function openVenueModal(){
+    var v = state.venue;
+    $("venue-form-error").textContent = "";
+    $("v-name").value = v.name||"";
+    $("v-address").value = v.address||"";
+    $("v-phone").value = v.phone||"";
+    $("v-site").value = v.site||"";
+    $("v-telegram").value = v.telegram||"";
+    $("v-instagram").value = v.instagram||"";
+    venueLogoData = v.logo||null;
+    if(venueLogoData){
+      $("v-logo-preview").src = venueLogoData;
+      $("v-logo-preview").style.visibility = "visible";
+    } else {
+      $("v-logo-preview").style.visibility = "hidden";
+    }
+    $("venue-modal-overlay").hidden = false;
+  }
+  function closeVenueModal(){ $("venue-modal-overlay").hidden = true; }
+
+  $("edit-venue-btn").addEventListener("click", openVenueModal);
+  $("venue-modal-close").addEventListener("click", closeVenueModal);
+  $("venue-cancel-btn").addEventListener("click", closeVenueModal);
+  $("venue-modal-overlay").addEventListener("click", function(e){ if(e.target === this) closeVenueModal(); });
+
+  $("v-logo-file").addEventListener("change", function(e){
+    var file = e.target.files[0];
+    if(!file) return;
+    fileToDataUrl(file, function(url){
+      venueLogoData = url;
+      $("v-logo-preview").src = url;
+      $("v-logo-preview").style.visibility = "visible";
+    });
+  });
+  $("v-logo-remove").addEventListener("click", function(){
+    venueLogoData = null;
+    $("v-logo-preview").src = "";
+    $("v-logo-preview").style.visibility = "hidden";
+  });
+
+  $("venue-save-btn").addEventListener("click", function(){
+    var name = $("v-name").value.trim();
+    if(!name){ $("venue-form-error").textContent = "Укажите название площадки"; return; }
+    state.venue = {
+      name: name,
+      address: $("v-address").value.trim(),
+      phone: $("v-phone").value.trim(),
+      site: $("v-site").value.trim(),
+      telegram: $("v-telegram").value.trim(),
+      instagram: $("v-instagram").value.trim(),
+      logo: venueLogoData
+    };
+    save(state);
+    renderVenue();
+    toast("Карточка площадки обновлена");
+    closeVenueModal();
+  });
+
+})();
+</script>
+</body>
+</html>
