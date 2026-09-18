@@ -8,9 +8,10 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20,500,0,0&display=block" rel="stylesheet">
 <style>
   :root{
-    --cream:#FFF6EC;
+    --cream:#F1F1F0;
     --card:#ffffff;
     --ink:#35312C;
     --muted:rgba(53,49,44,.58);
@@ -35,7 +36,7 @@
 
   .login-card{width:100%;max-width:380px;background:var(--card);border-radius:24px;box-shadow:var(--shadow);padding:36px 32px;text-align:center;}
   .brand{display:flex;align-items:center;justify-content:center;gap:10px;margin-bottom:22px;}
-  .brand-badge{width:40px;height:40px;border-radius:50%;background:var(--orange);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:18px;}
+  .brand-badge{width:40px;height:40px;display:block;object-fit:contain;}
   .brand-name{font-weight:800;font-size:19px;letter-spacing:.2px;}
   .login-card h1{font-size:17px;font-weight:700;margin:0 0 6px;}
   .login-card p.hint{font-size:13px;color:var(--muted);margin:0 0 22px;line-height:1.5;}
@@ -86,13 +87,13 @@
   /* ---------- section header ---------- */
   .section-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:14px;gap:10px;flex-wrap:wrap;}
   .section-head h3{font-size:16px;font-weight:800;margin:0;}
-  .tabs{display:flex;gap:6px;background:var(--card);border-radius:999px;padding:4px;box-shadow:var(--shadow);}
-  .tab{border:none;background:none;padding:8px 16px;border-radius:999px;font-weight:700;font-size:13.5px;color:var(--muted);cursor:pointer;}
-  .tab.active{background:var(--ink);color:var(--cream);}
 
   /* ---------- event list ---------- */
-  .group-label{font-size:12.5px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.04em;margin:22px 0 10px;}
-  .group-label:first-child{margin-top:0;}
+  .group-label{font-size:12.5px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.04em;margin:0 0 10px;}
+  .event-group{margin-top:22px;}
+  #events-list > .event-group:first-child{margin-top:0;}
+  .event-group-past{opacity:.5;}
+  .event-group-past:hover{opacity:.85;transition:opacity .15s;}
   .event-row{background:var(--card);border-radius:16px;box-shadow:var(--shadow);padding:14px 16px;display:flex;align-items:center;gap:14px;margin-bottom:10px;}
   .event-thumb{width:52px;height:52px;border-radius:12px;object-fit:cover;flex-shrink:0;background:var(--cream);}
   .event-main{flex:1;min-width:0;}
@@ -103,6 +104,8 @@
   .pill.wd{background:rgba(255,96,50,.12);color:var(--orange-dark);}
   .event-actions{display:flex;gap:6px;flex-shrink:0;}
   .icon-btn{width:34px;height:34px;border-radius:10px;border:none;background:var(--cream);color:var(--ink);cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:15px;}
+  .icon-btn .material-symbols-outlined{font-size:19px;}
+  .material-symbols-outlined{font-variation-settings:'FILL' 0,'wght' 500,'GRAD' 0,'opsz' 20;}
   .icon-btn:hover{background:var(--line);}
   .icon-btn.del:hover{background:rgba(224,85,61,.12);color:var(--red);}
 
@@ -160,18 +163,22 @@
 <!-- ============ LOGIN ============ -->
 <div id="login-screen">
   <div class="login-card">
-    <div class="brand"><div class="brand-badge">К</div><div class="brand-name">Клубок</div></div>
+    <div class="brand"><img class="brand-badge" src="assets/klubok-logo.png" alt="Клубок"><div class="brand-name">Клубок</div></div>
     <h1>Кабинет площадки</h1>
-    <p class="hint">Здесь можно управлять своими занятиями и карточкой площадки на «Клубке». Доступ по ссылке и паролю, которые мы присылаем вам лично.</p>
+    <p class="hint">Здесь можно управлять своими занятиями и карточкой площадки на «Клубке». Доступ по логину и паролю, которые мы присылаем вам лично.</p>
     <form id="login-form">
       <div class="field">
-        <label for="login-password">Пароль площадки</label>
+        <label for="login-username">Логин площадки</label>
+        <input id="login-username" type="text" placeholder="Введите логин" autocomplete="username">
+      </div>
+      <div class="field">
+        <label for="login-password">Пароль</label>
         <input id="login-password" type="password" placeholder="Введите пароль" autocomplete="current-password">
       </div>
       <button type="submit" class="btn btn-primary btn-block">Войти</button>
       <div class="err-text" id="login-error"></div>
     </form>
-    <div class="demo-note">Это макет интерфейса. Введите любой пароль (например <b>demo</b>), чтобы посмотреть кабинет — бэкенда и реальной проверки пароля пока нет.</div>
+    <div class="demo-note">Это макет интерфейса. Введите любые логин и пароль (например <b>demo</b> / <b>demo</b>), чтобы посмотреть кабинет — бэкенда и реальной проверки пока нет.</div>
   </div>
 </div>
 
@@ -180,7 +187,7 @@
   <div class="mock-banner">Макет интерфейса: изменения сохраняются только в этом браузере, для демонстрации. <button id="reset-demo">Сбросить демо-данные</button></div>
   <div class="topbar">
     <div style="display:flex;align-items:center;gap:12px;">
-      <div class="brand"><div class="brand-badge">К</div><div class="brand-name">Клубок</div></div>
+      <div class="brand"><img class="brand-badge" src="assets/klubok-logo.png" alt="Клубок"><div class="brand-name">Клубок</div></div>
       <div class="sep"></div>
       <div class="venue-tag" id="topbar-venue-name">—</div>
     </div>
@@ -208,11 +215,6 @@
     <div class="section-head">
       <h3>События площадки</h3>
       <div style="display:flex;gap:10px;flex-wrap:wrap;align-items:center;">
-        <div class="tabs" id="event-tabs">
-          <button class="tab active" data-filter="all">Все</button>
-          <button class="tab" data-filter="recurring">Регулярные</button>
-          <button class="tab" data-filter="oneoff">Разовые</button>
-        </div>
         <button class="btn btn-primary" id="add-event-btn">+ Добавить событие</button>
       </div>
     </div>
@@ -469,6 +471,12 @@
           desc:"Мастер-класс по осенним поделкам из природных материалов. Приходить можно один раз, абонемент не нужен.",
           type:"oneoff", date: nextSaturday(), time:"11:00", dur:"1 час 30 минут",
           age_min:3, age_max:8, category:"art", price:"2000 дин.", image:null, link:""
+        },
+        {
+          id:"demo-4", title:"День открытых дверей", short:"Знакомство с площадкой для новых семей",
+          desc:"Экскурсия по студии, знакомство с педагогами и пробное занятие.",
+          type:"oneoff", date: daysAgo(9), time:"12:00", dur:"1 час",
+          age_min:1, age_max:8, category:"other", price:"Бесплатно", image:null, link:""
         }
       ]
     };
@@ -478,6 +486,12 @@
     var d = new Date();
     var diff = (6 - d.getDay() + 7) % 7 || 7;
     d.setDate(d.getDate() + diff);
+    return d.toISOString().slice(0,10);
+  }
+
+  function daysAgo(n){
+    var d = new Date();
+    d.setDate(d.getDate() - n);
     return d.toISOString().slice(0,10);
   }
 
@@ -495,7 +509,6 @@
   }
 
   var state = load();
-  var currentFilter = "all";
   var editingEventId = null;
   var pendingDeleteId = null;
   var eventImageData = null;
@@ -532,7 +545,12 @@
   // ---------- login ----------
   $("login-form").addEventListener("submit", function(e){
     e.preventDefault();
+    var login = $("login-username").value.trim();
     var pw = $("login-password").value.trim();
+    if(!login){
+      $("login-error").textContent = "Введите логин";
+      return;
+    }
     if(!pw){
       $("login-error").textContent = "Введите пароль";
       return;
@@ -547,6 +565,7 @@
   $("logout-btn").addEventListener("click", function(){
     $("app-screen").hidden = true;
     $("login-screen").hidden = false;
+    $("login-username").value = "";
     $("login-password").value = "";
   });
 
@@ -614,41 +633,52 @@
     return parts.join("");
   }
 
+  function isPastEvent(ev){
+    if(ev.type !== "oneoff" || !ev.date) return false;
+    var today = new Date().toISOString().slice(0,10);
+    return ev.date < today;
+  }
+
+  function renderEventRow(ev){
+    return ''+
+      '<div class="event-row" data-id="'+ev.id+'">'+
+        (ev.image ? '<img class="event-thumb" src="'+ev.image+'" alt="">' : '<div class="event-thumb"></div>')+
+        '<div class="event-main">'+
+          '<p class="event-title">'+escapeHtml(ev.title||"Без названия")+'</p>'+
+          '<div class="event-meta">'+eventMetaLine(ev)+'</div>'+
+        '</div>'+
+        '<div class="event-actions">'+
+          '<button class="icon-btn" data-action="edit" title="Редактировать"><span class="material-symbols-outlined">edit</span></button>'+
+          '<button class="icon-btn del" data-action="delete" title="Удалить"><span class="material-symbols-outlined">delete</span></button>'+
+        '</div>'+
+      '</div>';
+  }
+
+  function renderGroup(label, items, isPastGroup){
+    if(!items.length) return "";
+    return '<div class="event-group'+(isPastGroup?" event-group-past":"")+'">'+
+      '<div class="group-label">'+label+'</div>'+
+      items.map(renderEventRow).join("")+
+    '</div>';
+  }
+
   function renderEvents(){
     var list = $("events-list");
-    var items = sortedEvents().filter(function(ev){
-      if(currentFilter === "all") return true;
-      if(currentFilter === "recurring") return ev.type === "recurring";
-      return ev.type === "oneoff";
-    });
+    var all = sortedEvents();
+    var recurring = all.filter(function(ev){ return ev.type === "recurring"; });
+    var upcoming = all.filter(function(ev){ return ev.type === "oneoff" && !isPastEvent(ev); });
+    var past = all.filter(function(ev){ return ev.type === "oneoff" && isPastEvent(ev); })
+      .sort(function(a,b){ return (b.date||"").localeCompare(a.date||""); });
 
-    if(!items.length){
-      list.innerHTML = '<div class="empty-state">Пока нет событий в этой вкладке.<br>Нажмите «+ Добавить событие», чтобы создать первое.</div>';
+    if(!recurring.length && !upcoming.length && !past.length){
+      list.innerHTML = '<div class="empty-state">Пока нет событий.<br>Нажмите «+ Добавить событие», чтобы создать первое.</div>';
       return;
     }
 
-    var html = "";
-    var lastGroup = null;
-    items.forEach(function(ev){
-      var group = ev.type === "recurring" ? "Регулярные" : "Разовые";
-      if(currentFilter === "all" && group !== lastGroup){
-        html += '<div class="group-label">'+group+'</div>';
-        lastGroup = group;
-      }
-      html += ''+
-        '<div class="event-row" data-id="'+ev.id+'">'+
-          (ev.image ? '<img class="event-thumb" src="'+ev.image+'" alt="">' : '<div class="event-thumb"></div>')+
-          '<div class="event-main">'+
-            '<p class="event-title">'+escapeHtml(ev.title||"Без названия")+'</p>'+
-            '<div class="event-meta">'+eventMetaLine(ev)+'</div>'+
-          '</div>'+
-          '<div class="event-actions">'+
-            '<button class="icon-btn" data-action="edit" title="Редактировать">✎</button>'+
-            '<button class="icon-btn del" data-action="delete" title="Удалить">🗑</button>'+
-          '</div>'+
-        '</div>';
-    });
-    list.innerHTML = html;
+    list.innerHTML =
+      renderGroup("Регулярные", recurring, false) +
+      renderGroup("Будущие", upcoming, false) +
+      renderGroup("Прошедшие", past, true);
   }
 
   function escapeHtml(s){
@@ -664,15 +694,6 @@
     var id = row.getAttribute("data-id");
     if(btn.dataset.action === "edit") openEventModal(id);
     if(btn.dataset.action === "delete") openConfirmDelete(id);
-  });
-
-  document.getElementById("event-tabs").addEventListener("click", function(e){
-    var btn = e.target.closest(".tab");
-    if(!btn) return;
-    document.querySelectorAll("#event-tabs .tab").forEach(function(t){ t.classList.remove("active"); });
-    btn.classList.add("active");
-    currentFilter = btn.dataset.filter;
-    renderEvents();
   });
 
   // ---------- event modal ----------
@@ -709,7 +730,7 @@
       }).join("");
       return ''+
         '<div class="schedule-slot" data-slot-id="'+slot.id+'">'+
-          (scheduleSlots.length > 1 ? '<button type="button" class="icon-btn del slot-remove" data-slot="'+slot.id+'" title="Убрать это время">🗑</button>' : '')+
+          (scheduleSlots.length > 1 ? '<button type="button" class="icon-btn del slot-remove" data-slot="'+slot.id+'" title="Убрать это время"><span class="material-symbols-outlined">delete</span></button>' : '')+
           '<div class="weekday-picker">'+chips+'</div>'+
           '<div class="row2">'+
             '<div class="field"><label>Время</label><input type="time" class="slot-time" data-slot="'+slot.id+'" value="'+slot.time+'"></div>'+
