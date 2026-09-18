@@ -25,7 +25,8 @@ const RULES = [
 // понять (например «Пинокио» — кукольный театр, а в заголовках только
 // названия сказок). source.id -> категория.
 const SOURCE_OVERRIDES = {
-  pinokio: 'theatre'
+  pinokio: 'theatre',
+  bgf: 'theatre'
 };
 
 const LABELS = {
