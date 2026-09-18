@@ -6062,40 +6062,6 @@
       }
     },
     {
-      "id": "bbbf623e3f43",
-      "title": "Сербский язык для взрослых (А2)",
-      "short": "Сербский язык для взрослых (А2). Идет набор!",
-      "desc": "Сербский язык для взрослых (А2). Идет набор!",
-      "date": null,
-      "wd": [
-        5
-      ],
-      "time": "14:00",
-      "dur": "120 минут",
-      "place": "Sreda Kids",
-      "address": "Стари Град, Косовска 32",
-      "placePhone": null,
-      "placeLink": null,
-      "lat": 44.81306,
-      "lng": 20.464867,
-      "age": [
-        3,
-        10
-      ],
-      "ageLabel": "3–10 лет",
-      "price": "уточняется",
-      "image": null,
-      "category": "languages",
-      "categoryLabel": "Языки",
-      "source": {
-        "id": "mathline-stari-grad",
-        "cta": "Записаться на сайте Mathline",
-        "url": "https://math-line.ru/beograde/reg#!/tab/1251358096-1",
-        "kind": "Сайт студии",
-        "name": "Sreda Kids"
-      }
-    },
-    {
       "id": "swimyou-small-5-7-sb",
       "title": "Плавание",
       "short": "Плавание для детей 5–7 лет в бассейне SwimYou",

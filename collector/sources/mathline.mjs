@@ -67,6 +67,9 @@ function parseSchedule(blockHtml, source, now) {
     const [, h1, min1, h2, min2, restRaw] = m;
     const rest = restRaw.trim();
     if (!rest) continue;
+    // Занятия для взрослых (например, язык А2) попадают в то же расписание —
+    // это не детский кружок, пропускаем, чтобы не получить [3,10] по умолчанию.
+    if (/для\s+взрослых/i.test(rest)) continue;
 
     const time = h1.padStart(2, '0') + ':' + min1;
     const durMin = (Number(h2) * 60 + Number(min2)) - (Number(h1) * 60 + Number(min1));
