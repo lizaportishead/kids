@@ -98,8 +98,9 @@
   .event-thumb{width:52px;height:52px;border-radius:12px;object-fit:cover;flex-shrink:0;background:var(--cream);}
   .event-main{flex:1;min-width:0;}
   .event-title{font-weight:700;font-size:14.5px;margin:0 0 4px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
-  .event-meta{display:flex;flex-wrap:wrap;gap:8px;align-items:center;font-size:12.5px;color:var(--muted);}
-  .pill{display:inline-flex;align-items:center;gap:4px;background:var(--cream);border-radius:999px;padding:3px 10px;font-weight:600;font-size:12px;color:var(--ink);}
+  .event-meta{display:grid;grid-template-columns:minmax(230px,1fr) 90px 120px;column-gap:14px;row-gap:6px;align-items:start;font-size:12.5px;color:var(--muted);}
+  .event-meta-col{display:flex;flex-wrap:wrap;gap:6px;align-items:center;min-height:24px;}
+  .pill{display:inline-flex;align-items:center;gap:4px;background:var(--cream);border-radius:999px;padding:3px 10px;font-weight:600;font-size:12px;color:var(--ink);white-space:nowrap;}
   .pill.cat{background:rgba(150,214,62,.22);color:#4E7A16;}
   .pill.wd{background:rgba(255,96,50,.12);color:var(--orange-dark);}
   .event-actions{display:flex;gap:6px;flex-shrink:0;}
@@ -109,7 +110,32 @@
   .icon-btn:hover{background:var(--line);}
   .icon-btn.del:hover{background:rgba(224,85,61,.12);color:var(--red);}
 
+  .event-title-row{display:flex;align-items:center;gap:8px;min-width:0;margin:0 0 4px;}
+  .event-title-row .event-title{margin:0;flex-shrink:1;}
+  .source-badge{flex-shrink:0;font-size:11px;font-weight:700;border-radius:999px;padding:2px 9px;white-space:nowrap;}
+  .source-badge.src-manual{background:rgba(53,49,44,.08);color:var(--muted);}
+  .source-badge.src-parser{background:rgba(47,111,224,.12);color:#2F6FE0;}
+  .source-badge.src-venue{background:rgba(255,96,50,.12);color:var(--orange-dark);}
+
   .empty-state{background:var(--card);border-radius:16px;padding:36px 20px;text-align:center;color:var(--muted);font-size:14px;box-shadow:var(--shadow);}
+
+  /* ---------- admin venues table ---------- */
+  .admin-search-input{width:280px;max-width:100%;border:1.5px solid var(--line);background:#fff;border-radius:12px;padding:10px 14px;font-size:14px;color:var(--ink);outline:none;}
+  .admin-search-input:focus{border-color:var(--orange);}
+  .venue-table-head{display:flex;align-items:center;gap:14px;padding:0 16px 8px;}
+  .venue-table-head .venue-table-head-logo{width:44px;flex-shrink:0;}
+  .venue-table-head .venue-row-main{flex:1;min-width:0;}
+  .venue-table-head .venue-row-chevron-spacer{width:20px;flex-shrink:0;}
+  .venue-row{background:var(--card);border-radius:16px;box-shadow:var(--shadow);padding:14px 16px;display:flex;align-items:center;gap:14px;margin-bottom:10px;cursor:pointer;transition:box-shadow .12s;}
+  .venue-row:hover{box-shadow:0 4px 18px rgba(53,49,44,.12);}
+  .venue-row .venue-logo{width:44px;height:44px;border-radius:12px;font-size:16px;flex-shrink:0;}
+  .venue-row-main{flex:1;min-width:0;}
+  .venue-row-name{font-weight:700;font-size:14.5px;margin:0 0 2px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
+  .venue-row-address{font-size:12.5px;color:var(--muted);margin:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
+  .venue-row-meta{display:grid;grid-template-columns:150px 100px 90px;column-gap:14px;align-items:center;font-size:12.5px;color:var(--muted);}
+  .pill.status-active{background:rgba(150,214,62,.22);color:#4E7A16;}
+  .pill.status-inactive{background:rgba(53,49,44,.10);color:var(--muted);}
+  .venue-row-chevron{color:var(--muted);flex-shrink:0;}
 
   /* ---------- modal ---------- */
   .modal-overlay{position:fixed;inset:0;background:rgba(53,49,44,.42);display:flex;align-items:flex-start;justify-content:center;padding:40px 16px;overflow-y:auto;z-index:100;}
@@ -155,6 +181,11 @@
     .row2{grid-template-columns:1fr;}
     .venue-card{flex-wrap:wrap;}
     .container{padding:18px 14px 70px;}
+    .event-meta{grid-template-columns:1fr;row-gap:4px;}
+    .venue-table-head{display:none;}
+    .venue-row{flex-wrap:wrap;}
+    .venue-row-meta{grid-template-columns:1fr 1fr 1fr;width:100%;margin-top:8px;column-gap:10px;row-gap:6px;}
+    .venue-row-chevron{display:none;}
   }
 </style>
 </head>
@@ -168,7 +199,7 @@
     <p class="hint">Здесь можно управлять своими занятиями и карточкой площадки на «Клубке». Доступ по логину и паролю, которые мы присылаем вам лично.</p>
     <form id="login-form">
       <div class="field">
-        <label for="login-username">Логин площадки</label>
+        <label for="login-username">Логин</label>
         <input id="login-username" type="text" placeholder="Введите логин" autocomplete="username">
       </div>
       <div class="field">
@@ -178,7 +209,7 @@
       <button type="submit" class="btn btn-primary btn-block">Войти</button>
       <div class="err-text" id="login-error"></div>
     </form>
-    <div class="demo-note">Это макет интерфейса. Введите любые логин и пароль (например <b>demo</b> / <b>demo</b>), чтобы посмотреть кабинет — бэкенда и реальной проверки пока нет.</div>
+    <div class="demo-note">Это макет интерфейса. Введите любой пароль. Логин <b>admin</b> открывает панель супер-админа со всеми площадками, любой другой логин (например <b>demo</b>) — кабинет отдельной площадки.</div>
   </div>
 </div>
 
@@ -192,6 +223,7 @@
       <div class="venue-tag" id="topbar-venue-name">—</div>
     </div>
     <div class="topbar-right">
+      <button class="btn btn-ghost" id="back-to-list-btn" hidden>← Все площадки</button>
       <button class="btn btn-ghost" id="logout-btn">Выйти</button>
     </div>
   </div>
@@ -220,6 +252,41 @@
     </div>
 
     <div id="events-list"></div>
+  </div>
+</div>
+
+<!-- ============ SUPERADMIN: ALL VENUES ============ -->
+<div id="admin-screen" hidden>
+  <div class="mock-banner">Макет интерфейса: изменения сохраняются только в этом браузере, для демонстрации. <button id="reset-demo-admin">Сбросить демо-данные</button></div>
+  <div class="topbar">
+    <div style="display:flex;align-items:center;gap:12px;">
+      <div class="brand"><img class="brand-badge" src="assets/klubok-logo.png" alt="Клубок"><div class="brand-name">Клубок</div></div>
+      <div class="sep"></div>
+      <div class="venue-tag">Супер-админ</div>
+    </div>
+    <div class="topbar-right">
+      <button class="btn btn-ghost" id="admin-logout-btn">Выйти</button>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="section-head">
+      <h3>Все площадки</h3>
+      <input type="text" id="admin-search" class="admin-search-input" placeholder="Поиск по названию или адресу">
+    </div>
+
+    <div class="venue-table-head">
+      <div class="venue-table-head-logo"></div>
+      <div class="venue-row-main"><span class="group-label" style="margin:0;">Площадка</span></div>
+      <div class="venue-row-meta">
+        <span class="group-label" style="margin:0;">События</span>
+        <span class="group-label" style="margin:0;">Статус</span>
+        <span class="group-label" style="margin:0;">Обновлено</span>
+      </div>
+      <div class="venue-row-chevron-spacer"></div>
+    </div>
+
+    <div id="venues-table"></div>
   </div>
 </div>
 
@@ -430,7 +497,7 @@
 (function(){
   "use strict";
 
-  var STORAGE_KEY = "klubok_venue_admin_mock_v2";
+  var STORAGE_KEY = "klubok_venue_admin_mock_v4";
   var WD_LABELS = ["Пн","Вт","Ср","Чт","Пт","Сб","Вс"];
   var CAT_LABELS = {
     school_prep:"Подготовка к школе", robotics:"Робототехника", dance:"Танцы",
@@ -439,44 +506,124 @@
     swimming:"Плавание", sport:"Спорт", games:"Шахматы и игры",
     science:"Наука и логика", other:"Другое"
   };
+  var SOURCE_LABELS = { manual:"Добавлено вручную", parser:"Из парсера", venue:"Добавлено площадкой" };
+  var STATUS_LABELS = { active:"Активна", inactive:"Неактивна" };
 
   function seedData(){
     return {
-      venue:{
-        name:"Студия «Ромашка»",
-        address:"Belgrade, Vračar, ul. Maksima Gorkog 15",
-        phone:"+381 60 123 4567",
-        site:"https://romashka.rs",
-        telegram:"@romashka_kids",
-        instagram:"@romashka.kids",
-        logo:null
-      },
-      events:[
+      venues:[
         {
-          id:"demo-1", title:"Монтессори: вместе с мамой", short:"Игровое занятие для малышей с родителем",
-          desc:"Развивающее занятие по методике Монтессори для детей с мамой или папой. Сенсорика, мелкая моторика, первые социальные навыки.",
-          type:"recurring", date:null,
-          schedule:[{wd:[0,2,4], time:"09:30", dur:"1 час"}],
-          age_min:1, age_max:2, category:"early_dev", price:"1500 дин.", image:null, link:""
+          id:"v1", name:"Студия «Ромашка»",
+          address:"Belgrade, Vračar, ul. Maksima Gorkog 15",
+          phone:"+381 60 123 4567", site:"https://romashka.rs",
+          telegram:"@romashka_kids", instagram:"@romashka.kids", logo:null,
+          status:"active", addedDate:"2026-02-10", updatedDate:"2026-09-15",
+          events:[
+            {
+              id:"demo-1", title:"Монтессори: вместе с мамой", short:"Игровое занятие для малышей с родителем",
+              desc:"Развивающее занятие по методике Монтессори для детей с мамой или папой. Сенсорика, мелкая моторика, первые социальные навыки.",
+              type:"recurring", date:null,
+              schedule:[{wd:[0,2,4], time:"09:30", dur:"1 час"}],
+              age_min:1, age_max:2, category:"early_dev", price:"1500 дин.", image:null, link:"", source:"venue"
+            },
+            {
+              id:"demo-2", title:"Английский для детей 3+", short:"Игровой английский в мини-группе",
+              desc:"Занятия английским через игру, песни и карточки. Мини-группы до 6 детей.",
+              type:"recurring", date:null,
+              schedule:[{wd:[1], time:"10:30", dur:"1 час"}, {wd:[4], time:"18:00", dur:"45 минут"}],
+              age_min:3, age_max:5, category:"languages", price:"1800 дин.", image:null, link:"https://instagram.com/romashka.kids", source:"manual"
+            },
+            {
+              id:"demo-3", title:"Осенний семейный мастер-класс", short:"Разовое творческое занятие для всей семьи",
+              desc:"Мастер-класс по осенним поделкам из природных материалов. Приходить можно один раз, абонемент не нужен.",
+              type:"oneoff", date: nextSaturday(), time:"11:00", dur:"1 час 30 минут",
+              age_min:3, age_max:8, category:"art", price:"2000 дин.", image:null, link:"", source:"parser"
+            },
+            {
+              id:"demo-4", title:"День открытых дверей", short:"Знакомство с площадкой для новых семей",
+              desc:"Экскурсия по студии, знакомство с педагогами и пробное занятие.",
+              type:"oneoff", date: daysAgo(9), time:"12:00", dur:"1 час",
+              age_min:1, age_max:8, category:"other", price:"Бесплатно", image:null, link:"", source:"manual"
+            }
+          ]
         },
         {
-          id:"demo-2", title:"Английский для детей 3+", short:"Игровой английский в мини-группе",
-          desc:"Занятия английским через игру, песни и карточки. Мини-группы до 6 детей.",
-          type:"recurring", date:null,
-          schedule:[{wd:[1], time:"10:30", dur:"1 час"}, {wd:[4], time:"18:00", dur:"45 минут"}],
-          age_min:3, age_max:5, category:"languages", price:"1800 дин.", image:null, link:"https://instagram.com/romashka.kids"
+          id:"v2", name:"Детский центр «Совёнок»",
+          address:"Novi Beograd, Bulevar Zorana Đinđića 42",
+          phone:"+381 63 222 1188", site:"https://sovenok.rs",
+          telegram:"@sovenok_bg", instagram:"", logo:null,
+          status:"active", addedDate:"2026-01-05", updatedDate:"2026-09-10",
+          events:[
+            {
+              id:"demo-5", title:"Робототехника для начинающих", short:"Первые шаги в конструировании и программировании",
+              desc:"Занятия на конструкторах Lego, основы алгоритмики в игровой форме.",
+              type:"recurring", date:null,
+              schedule:[{wd:[2], time:"17:00", dur:"1 час"}],
+              age_min:6, age_max:10, category:"robotics", price:"2200 дин.", image:null, link:"", source:"parser"
+            },
+            {
+              id:"demo-6", title:"Шахматный клуб", short:"Занятия шахматами для детей и подростков",
+              desc:"Группа для начинающих и продолжающих, разбор партий, турниры внутри клуба.",
+              type:"recurring", date:null,
+              schedule:[{wd:[0,3], time:"16:00", dur:"1 час"}],
+              age_min:5, age_max:14, category:"games", price:"1900 дин.", image:null, link:"", source:"manual"
+            },
+            {
+              id:"demo-7", title:"Открытый урок программирования", short:"Бесплатное пробное занятие",
+              desc:"Знакомство с центром, пробный урок по основам программирования на Scratch.",
+              type:"oneoff", date: daysFromNow(5), time:"15:00", dur:"45 минут",
+              age_min:7, age_max:12, category:"science", price:"Бесплатно", image:null, link:"", source:"venue"
+            }
+          ]
         },
         {
-          id:"demo-3", title:"Осенний семейный мастер-класс", short:"Разовое творческое занятие для всей семьи",
-          desc:"Мастер-класс по осенним поделкам из природных материалов. Приходить можно один раз, абонемент не нужен.",
-          type:"oneoff", date: nextSaturday(), time:"11:00", dur:"1 час 30 минут",
-          age_min:3, age_max:8, category:"art", price:"2000 дин.", image:null, link:""
+          id:"v3", name:"Плавательная школа «Дельфинёнок»",
+          address:"Zemun, ul. Cara Dušana 8",
+          phone:"+381 64 555 0912", site:"", telegram:"", instagram:"@delfinenok.zemun", logo:null,
+          status:"inactive", addedDate:"2025-11-20", updatedDate:"2026-07-01",
+          events:[
+            {
+              id:"demo-8", title:"Плавание для малышей", short:"Адаптация в воде с родителем",
+              desc:"Занятия в мини-бассейне для самых маленьких вместе с мамой или папой.",
+              type:"recurring", date:null,
+              schedule:[{wd:[1,4], time:"10:00", dur:"30 минут"}],
+              age_min:1, age_max:3, category:"swimming", price:"1600 дин.", image:null, link:"", source:"parser"
+            },
+            {
+              id:"demo-9", title:"Aqua-baby", short:"Групповое плавание для дошкольников",
+              desc:"Обучение плаванию в мини-группах, начальные навыки на воде.",
+              type:"recurring", date:null,
+              schedule:[{wd:[2,5], time:"11:00", dur:"45 минут"}],
+              age_min:4, age_max:6, category:"swimming", price:"1800 дин.", image:null, link:"", source:"parser"
+            }
+          ]
         },
         {
-          id:"demo-4", title:"День открытых дверей", short:"Знакомство с площадкой для новых семей",
-          desc:"Экскурсия по студии, знакомство с педагогами и пробное занятие.",
-          type:"oneoff", date: daysAgo(9), time:"12:00", dur:"1 час",
-          age_min:1, age_max:8, category:"other", price:"Бесплатно", image:null, link:""
+          id:"v4", name:"Театр кукол «Пинокио»",
+          address:"Stari Grad, ul. Kralja Petra 9",
+          phone:"+381 11 328 4410", site:"https://pinokio.rs", telegram:"", instagram:"@pinokioteatar", logo:null,
+          status:"active", addedDate:"2026-03-01", updatedDate:"2026-09-17",
+          events:[
+            {
+              id:"demo-10", title:"«Три поросёнка»", short:"Кукольный спектакль для дошкольников",
+              desc:"Классическая сказка в постановке кукольного театра.",
+              type:"oneoff", date: daysFromNow(2), time:"11:00", dur:"50 минут",
+              age_min:3, age_max:8, category:"theatre", price:"900 дин.", image:null, link:"", source:"parser"
+            },
+            {
+              id:"demo-11", title:"«Кот в сапогах»", short:"Кукольный спектакль",
+              desc:"Постановка по мотивам сказки Шарля Перро.",
+              type:"oneoff", date: daysFromNow(9), time:"12:00", dur:"55 минут",
+              age_min:3, age_max:9, category:"theatre", price:"900 дин.", image:null, link:"", source:"parser"
+            }
+          ]
+        },
+        {
+          id:"v5", name:"Творческая мастерская «Артишок»",
+          address:"Vračar, ul. Njegoševa 51",
+          phone:"+381 62 077 3345", site:"", telegram:"@artishok_studio", instagram:"@artishok.studio", logo:null,
+          status:"inactive", addedDate:daysAgo(3), updatedDate:daysAgo(3),
+          events:[]
         }
       ]
     };
@@ -492,6 +639,12 @@
   function daysAgo(n){
     var d = new Date();
     d.setDate(d.getDate() - n);
+    return d.toISOString().slice(0,10);
+  }
+
+  function daysFromNow(n){
+    var d = new Date();
+    d.setDate(d.getDate() + n);
     return d.toISOString().slice(0,10);
   }
 
@@ -513,9 +666,16 @@
   var pendingDeleteId = null;
   var eventImageData = null;
   var venueLogoData = null;
+  var currentRole = null;
+  var currentVenueId = null;
+  var ADMIN_LOGINS = ["admin", "superadmin", "супер-админ"];
 
   // ---------- helpers ----------
   function $(id){ return document.getElementById(id); }
+  function getVenue(){
+    return state.venues.find(function(v){ return v.id === currentVenueId; });
+  }
+  function todayIso(){ return new Date().toISOString().slice(0,10); }
   function initials(name){
     return (name||"?").trim().slice(0,1).toUpperCase();
   }
@@ -523,6 +683,11 @@
     if(!iso) return "";
     var d = new Date(iso+"T00:00:00");
     return d.toLocaleDateString("ru-RU",{day:"numeric",month:"long"});
+  }
+  function fmtDateShort(iso){
+    if(!iso) return "—";
+    var d = new Date(iso+"T00:00:00");
+    return d.toLocaleDateString("ru-RU",{day:"numeric",month:"short"});
   }
   function toast(msg){
     var t = $("toast");
@@ -557,29 +722,105 @@
     }
     $("login-error").textContent = "";
     $("login-screen").hidden = true;
+    currentRole = ADMIN_LOGINS.indexOf(login.toLowerCase()) !== -1 ? "admin" : "venue";
+    if(currentRole === "admin"){
+      $("admin-screen").hidden = false;
+      renderVenuesTable();
+    } else {
+      currentVenueId = state.venues[0].id;
+      $("back-to-list-btn").hidden = true;
+      $("app-screen").hidden = false;
+      renderVenue();
+      renderEvents();
+    }
+  });
+
+  function doLogout(){
+    currentRole = null;
+    currentVenueId = null;
+    $("app-screen").hidden = true;
+    $("admin-screen").hidden = true;
+    $("login-screen").hidden = false;
+    $("login-username").value = "";
+    $("login-password").value = "";
+  }
+  $("logout-btn").addEventListener("click", doLogout);
+  $("admin-logout-btn").addEventListener("click", doLogout);
+
+  $("back-to-list-btn").addEventListener("click", function(){
+    $("app-screen").hidden = true;
+    $("admin-screen").hidden = false;
+    renderVenuesTable();
+  });
+
+  function resetDemoData(){
+    state = seedData();
+    save(state);
+    if(!$("admin-screen").hidden) renderVenuesTable();
+    if(!$("app-screen").hidden){ renderVenue(); renderEvents(); }
+    toast("Демо-данные сброшены");
+  }
+  $("reset-demo").addEventListener("click", resetDemoData);
+  $("reset-demo-admin").addEventListener("click", resetDemoData);
+
+  // ---------- superadmin: venues table ----------
+  function venueEventsSummary(v){
+    var regular = v.events.filter(function(e){ return e.type === "recurring"; }).length;
+    var oneoff = v.events.filter(function(e){ return e.type === "oneoff"; }).length;
+    var parts = [];
+    if(regular) parts.push(regular + " рег.");
+    if(oneoff) parts.push(oneoff + " разовых");
+    return parts.length ? parts.join(" · ") : "нет событий";
+  }
+
+  function renderVenueRow(v){
+    return ''+
+      '<div class="venue-row" data-id="'+v.id+'">'+
+        (v.logo ? '<div class="venue-logo"><img src="'+v.logo+'" alt=""></div>' : '<div class="venue-logo">'+initials(v.name)+'</div>')+
+        '<div class="venue-row-main">'+
+          '<p class="venue-row-name">'+escapeHtml(v.name)+'</p>'+
+          '<p class="venue-row-address">'+escapeHtml(v.address||"Адрес не указан")+'</p>'+
+        '</div>'+
+        '<div class="venue-row-meta">'+
+          '<span>'+venueEventsSummary(v)+'</span>'+
+          '<span class="pill status-'+v.status+'">'+(STATUS_LABELS[v.status]||v.status)+'</span>'+
+          '<span>'+fmtDateShort(v.updatedDate)+'</span>'+
+        '</div>'+
+        '<span class="material-symbols-outlined venue-row-chevron">chevron_right</span>'+
+      '</div>';
+  }
+
+  function renderVenuesTable(){
+    var q = ($("admin-search").value||"").trim().toLowerCase();
+    var list = state.venues.filter(function(v){
+      if(!q) return true;
+      return (v.name||"").toLowerCase().indexOf(q) !== -1 || (v.address||"").toLowerCase().indexOf(q) !== -1;
+    });
+    var box = $("venues-table");
+    if(!list.length){
+      box.innerHTML = '<div class="empty-state">Ничего не найдено.</div>';
+      return;
+    }
+    box.innerHTML = list.map(renderVenueRow).join("");
+  }
+
+  $("admin-search").addEventListener("input", renderVenuesTable);
+
+  $("venues-table").addEventListener("click", function(e){
+    var row = e.target.closest(".venue-row");
+    if(!row) return;
+    currentVenueId = row.getAttribute("data-id");
+    $("admin-screen").hidden = true;
+    $("back-to-list-btn").hidden = false;
     $("app-screen").hidden = false;
     renderVenue();
     renderEvents();
   });
 
-  $("logout-btn").addEventListener("click", function(){
-    $("app-screen").hidden = true;
-    $("login-screen").hidden = false;
-    $("login-username").value = "";
-    $("login-password").value = "";
-  });
-
-  $("reset-demo").addEventListener("click", function(){
-    state = seedData();
-    save(state);
-    renderVenue();
-    renderEvents();
-    toast("Демо-данные сброшены");
-  });
-
   // ---------- venue card render ----------
   function renderVenue(){
-    var v = state.venue;
+    var v = getVenue();
+    if(!v) return;
     $("topbar-venue-name").textContent = v.name;
     $("venue-name").textContent = v.name;
     $("venue-address").textContent = v.address || "Адрес не указан";
@@ -605,32 +846,32 @@
   }
 
   function sortedEvents(){
-    return state.events.slice().sort(function(a,b){
+    return getVenue().events.slice().sort(function(a,b){
       if(a.type !== b.type) return a.type === "recurring" ? -1 : 1;
       return minTime(a).localeCompare(minTime(b));
     });
   }
 
   function eventMetaLine(ev){
-    var parts = [];
+    var schedule = [];
     if(ev.type === "recurring"){
       var slots = ev.schedule || [];
       if(!slots.length){
-        parts.push('<span class="pill wd">время не выбрано</span>');
+        schedule.push('<span class="pill wd">время не выбрано</span>');
       } else {
         slots.forEach(function(slot){
           var days = (slot.wd||[]).slice().sort(function(a,b){return a-b;}).map(function(i){return WD_LABELS[i];}).join(", ");
-          parts.push('<span class="pill wd">'+(days||"дни не выбраны")+' · '+(slot.time||"—")+(slot.dur ? " · "+slot.dur : "")+'</span>');
+          schedule.push('<span class="pill wd">'+(days||"дни не выбраны")+' · '+(slot.time||"—")+(slot.dur ? " · "+slot.dur : "")+'</span>');
         });
       }
     } else {
-      parts.push('<span class="pill wd">'+(ev.date ? fmtDate(ev.date) : "дата не выбрана")+'</span>');
-      parts.push('<span class="pill">'+(ev.time||"—")+(ev.dur ? " · "+ev.dur : "")+'</span>');
+      schedule.push('<span class="pill wd">'+(ev.date ? fmtDate(ev.date) : "дата не выбрана")+'</span>');
+      schedule.push('<span class="pill">'+(ev.time||"—")+(ev.dur ? " · "+ev.dur : "")+'</span>');
     }
-    parts.push('<span class="pill">'+ev.age_min+'–'+ev.age_max+' лет</span>');
-    parts.push('<span class="pill cat">'+(CAT_LABELS[ev.category]||"Другое")+'</span>');
-    if(ev.price) parts.push('<span class="pill">'+ev.price+'</span>');
-    return parts.join("");
+    return ''+
+      '<div class="event-meta-col event-meta-schedule">'+schedule.join("")+'</div>'+
+      '<div class="event-meta-col event-meta-age"><span class="pill">'+ev.age_min+'–'+ev.age_max+' лет</span></div>'+
+      '<div class="event-meta-col event-meta-price">'+(ev.price ? '<span class="pill">'+ev.price+'</span>' : '')+'</div>';
   }
 
   function isPastEvent(ev){
@@ -640,11 +881,15 @@
   }
 
   function renderEventRow(ev){
+    var sourceBadge = "";
+    if(currentRole === "admin" && ev.source){
+      sourceBadge = '<span class="source-badge src-'+ev.source+'">'+(SOURCE_LABELS[ev.source]||ev.source)+'</span>';
+    }
     return ''+
       '<div class="event-row" data-id="'+ev.id+'">'+
         (ev.image ? '<img class="event-thumb" src="'+ev.image+'" alt="">' : '<div class="event-thumb"></div>')+
         '<div class="event-main">'+
-          '<p class="event-title">'+escapeHtml(ev.title||"Без названия")+'</p>'+
+          '<div class="event-title-row"><p class="event-title">'+escapeHtml(ev.title||"Без названия")+'</p>'+sourceBadge+'</div>'+
           '<div class="event-meta">'+eventMetaLine(ev)+'</div>'+
         '</div>'+
         '<div class="event-actions">'+
@@ -811,7 +1056,7 @@
   function openEventModal(id){
     resetEventForm();
     if(id){
-      var ev = state.events.find(function(e){ return e.id === id; });
+      var ev = getVenue().events.find(function(e){ return e.id === id; });
       if(!ev) return;
       editingEventId = id;
       $("event-modal-title").textContent = "Редактировать событие";
@@ -906,15 +1151,19 @@
       link: $("f-link").value.trim()
     };
 
+    var venue = getVenue();
     if(editingEventId){
-      var idx = state.events.findIndex(function(e){ return e.id === editingEventId; });
-      state.events[idx] = Object.assign({id: editingEventId}, payload);
+      var idx = venue.events.findIndex(function(e){ return e.id === editingEventId; });
+      payload.source = venue.events[idx].source || "manual";
+      venue.events[idx] = Object.assign({id: editingEventId}, payload);
       toast("Событие обновлено");
     } else {
       payload.id = "ev-" + Date.now();
-      state.events.push(payload);
+      payload.source = currentRole === "admin" ? "manual" : "venue";
+      venue.events.push(payload);
       toast("Событие добавлено");
     }
+    venue.updatedDate = todayIso();
     save(state);
     renderEvents();
     closeEventModal();
@@ -928,7 +1177,7 @@
 
   // ---------- confirm delete ----------
   function openConfirmDelete(id){
-    var ev = state.events.find(function(e){ return e.id === id; });
+    var ev = getVenue().events.find(function(e){ return e.id === id; });
     if(!ev) return;
     pendingDeleteId = id;
     $("confirm-modal-text").textContent = 'Удалить «'+ev.title+'»? Это действие нельзя отменить.';
@@ -940,7 +1189,9 @@
   $("confirm-modal-overlay").addEventListener("click", function(e){ if(e.target === this) closeConfirm(); });
   $("confirm-ok-btn").addEventListener("click", function(){
     if(!pendingDeleteId) return;
-    state.events = state.events.filter(function(e){ return e.id !== pendingDeleteId; });
+    var venue = getVenue();
+    venue.events = venue.events.filter(function(e){ return e.id !== pendingDeleteId; });
+    venue.updatedDate = todayIso();
     save(state);
     renderEvents();
     toast("Событие удалено");
@@ -949,7 +1200,7 @@
 
   // ---------- venue modal ----------
   function openVenueModal(){
-    var v = state.venue;
+    var v = getVenue();
     $("venue-form-error").textContent = "";
     $("v-name").value = v.name||"";
     $("v-address").value = v.address||"";
@@ -991,15 +1242,15 @@
   $("venue-save-btn").addEventListener("click", function(){
     var name = $("v-name").value.trim();
     if(!name){ $("venue-form-error").textContent = "Укажите название площадки"; return; }
-    state.venue = {
-      name: name,
-      address: $("v-address").value.trim(),
-      phone: $("v-phone").value.trim(),
-      site: $("v-site").value.trim(),
-      telegram: $("v-telegram").value.trim(),
-      instagram: $("v-instagram").value.trim(),
-      logo: venueLogoData
-    };
+    var venue = getVenue();
+    venue.name = name;
+    venue.address = $("v-address").value.trim();
+    venue.phone = $("v-phone").value.trim();
+    venue.site = $("v-site").value.trim();
+    venue.telegram = $("v-telegram").value.trim();
+    venue.instagram = $("v-instagram").value.trim();
+    venue.logo = venueLogoData;
+    venue.updatedDate = todayIso();
     save(state);
     renderVenue();
     toast("Карточка площадки обновлена");
