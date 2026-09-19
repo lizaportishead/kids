@@ -8,6 +8,8 @@ import { UA } from '../lib/images.mjs';
 //   entities/Location          — площадки (Продлёнка на Кнеза Данила, Kinder Garden в Сеньяке)
 //   entities/Class             — занятия: название с возрастом, описание, цена, длительность, фото
 //   entities/Schedule          — конкретные проведения: дата + время + сколько мест занято
+//   entities/Event             — многодневные события; из них берём только категорию «Ночевки»
+//                                (лагеря и регаты остаются за бортом — см. isExcludedEvent)
 //   functions/getBookedCounts  — актуальная занятость мест по каждому расписанию
 //
 // Одна площадка = один источник в sources.json (поле locationSlug). На витрине
@@ -16,6 +18,7 @@ import { UA } from '../lib/images.mjs';
 
 const API = 'https://reg.prodlenka.me/api/apps/6a048c57a9fe367e5ba1a2e6';
 const DEFAULT_HORIZON_DAYS = 28; // сколько недель расписания вперёд разворачивать в афишу
+const STAY_HORIZON_DAYS = 150;   // ночёвки редкие (пара в месяц) — анонсируем заметно дальше
 
 export async function collectProdlenka(source, now = new Date()) {
   const [locations, classes] = await Promise.all([
@@ -42,7 +45,9 @@ export async function collectProdlenka(source, now = new Date()) {
 
   const classById = new Map(classes.map((c) => [c.id, c]));
 
-  return schedule
+  const overnights = await collectOvernights(source, location, now);
+
+  const classEvents = schedule
     .filter((s) => s.location_id === location.id && s.date >= today && s.date <= horizon)
     .map((s) => {
       const cls = classById.get(s.class_id);
@@ -76,6 +81,76 @@ export async function collectProdlenka(source, now = new Date()) {
       return ev;
     })
     .filter(Boolean);
+
+  return classEvents.concat(overnights);
+}
+
+// Ночёвки в Kinder Garden лежат не в Schedule, а в Event (категория «Ночевки»):
+// вечер с 17:30 до утра 9:30 следующего дня. Показываем их одной карточкой на дату заезда.
+async function collectOvernights(source, location, now) {
+  let cats, events;
+  try {
+    [cats, events] = await Promise.all([
+      apiGet('/entities/EventCategory?q=' + q({ is_active: true })),
+      apiGet('/entities/Event?q=' + q({ is_active: true, status: 'scheduled' }) + '&sort=date&limit=200')
+    ]);
+  } catch {
+    return []; // ночёвки — приятное дополнение, их отсутствие не должно ронять весь источник
+  }
+  const stayCats = new Set(cats.filter((c) => /ночевк|ночёвк/i.test(c.name)).map((c) => c.id));
+  const today = iso(now);
+  const horizon = iso(addDays(now, source.stayHorizonDays || STAY_HORIZON_DAYS));
+
+  return events
+    .filter((e) => stayCats.has(e.event_category_id) && e.location_id === location.id)
+    .filter((e) => e.show_on_schedule !== false && e.date >= today && e.date <= horizon)
+    .map((e) => {
+      const desc = cleanText(e.description) || e.title;
+      const times = Array.isArray(e.daily_times) ? e.daily_times : [];
+      const start = (times.find((t) => t.start_time) || {}).start_time || '17:30';
+      const spotsMax = num(e.max_spots);
+      const spotsTaken = num(e.booked_count);
+
+      const raw = {
+        title: e.title.replace(/\s*\|.*$/, '').replace(/kinder garden/i, 'Kinder Garden').replace(/\s{2,}/g, ' ').trim(),
+        desc: withSpots(withDates(desc, e), spotsMax, spotsTaken),
+        short: firstLine(desc, 180),
+        date: e.date,
+        time: start.slice(0, 5),
+        dur: 'ночь: с ' + start.slice(0, 5) + ' до 9:30',
+        price: stayPrice(e),
+        age: ageFromName(e.title) || parseAge(desc) || null,
+        place: source.place || location.name,
+        address: source.address || location.address || 'Белград',
+        url: source.url
+      };
+      const ev = normalize(source, raw, now);
+      if (!ev) return null;
+      if (e.image_url) {
+        ev.imageRemote = e.image_url;
+        ev.imageKey = 'prodlenka-' + (e.slug || e.id);
+      }
+      return ev;
+    })
+    .filter(Boolean);
+}
+
+function withDates(desc, e) {
+  const fmt = (d) => d.slice(8, 10) + '.' + d.slice(5, 7);
+  const end = e.end_date && e.end_date !== e.date ? e.end_date : null;
+  return (end ? 'Ночь с ' + fmt(e.date) + ' на ' + fmt(end) + '.\n\n' : '') + desc;
+}
+
+function stayPrice(e) {
+  const cur = /eur/i.test(e.currency || '') ? '€' : 'RSD';
+  const base = num(e.package_base_price) ?? num(e.price);
+  if (!base) return null;
+  let out = base + ' ' + cur;
+  if (e.packages_enabled && num(e.package_plus_price)) {
+    out += ', с Prodlenka Weekend — ' + num(e.package_plus_price) + ' ' + cur;
+    if (num(e.package_max_price)) out += ', с Weekend и изостудией — ' + num(e.package_max_price) + ' ' + cur;
+  }
+  return out;
 }
 
 async function apiGet(path) {

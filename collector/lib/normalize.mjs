@@ -80,8 +80,13 @@ function durationMinutes(dur) {
 // На сайте показываем только разовые занятия, на которые можно прийти один
 // раз — не садики/лагеря/ночёвки (это подписки на месяц или многодневные
 // программы) и не что-либо длиннее 5 часов.
+// Исключение — ночёвки Продлёнки/Kinder Garden: это разовые события на одну
+// ночь с открытой записью на дату, а не абонемент.
+const STAY_SOURCES = new Set(['kinder-garden', 'prodlenka']);
+
 export function isExcludedEvent(ev) {
   const title = (ev.title || '').toLowerCase();
+  if (/ночевк|ночёвк/.test(title) && STAY_SOURCES.has(ev.source && ev.source.id)) return false;
   if (/лагерь|\bcamp\b/i.test(title)) return true;
   if (/сад/.test(title)) return true;
   if (/ночевк|ночёвк/.test(title)) return true;
