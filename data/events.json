@@ -1,7 +1,7 @@
 {
   "updatedAt": "2026-09-20T10:28:34.654Z",
   "city": "Белград",
-  "count": 337,
+  "count": 338,
   "report": [
     {
       "source": "prodlenka",
@@ -11285,6 +11285,38 @@
         "url": "https://www.instagram.com/p/DdUN3g1NoVb/",
         "kind": "Instagram Sreda Kids",
         "name": "Sreda Kids"
+      }
+    },
+    {
+      "id": "enter-vse-naoborot-2026-09-27",
+      "title": "Спектакль для малышей «Все Наоборот»",
+      "short": "Волшебное путешествие с Феей Как Надо и Феей Наоборот: театр теней и игры. Для малышей 1,5–3 года.",
+      "desc": "Приглашаем в волшебное путешествие вместе с Феей Как Надо и Феей, которая делает всё наоборот. Малыши отправятся в заколдованный лес, зажгут звёзды на небе и помогут Фее Наоборот найти свой путь.\n\nПредставление состоит из двух частей:\n🟡 Театр теней — 25 минут\n🟡 Игры с Феями — 25 минут\n\nДля мам, пап и малышей 1,5–3 года.",
+      "date": "2026-09-27",
+      "wd": null,
+      "time": "10:30",
+      "dur": "50 минут",
+      "place": "Enter",
+      "address": "Ресавска 34, Врачар, Белград",
+      "placePhone": null,
+      "placeLink": null,
+      "lat": null,
+      "lng": null,
+      "age": [
+        1,
+        3
+      ],
+      "ageLabel": "1,5–3 года",
+      "price": "2500 RSD",
+      "image": "data/images/enter-vse-naoborot.jpg",
+      "category": "theatre",
+      "categoryLabel": "Спектакли",
+      "source": {
+        "id": "enter",
+        "name": "Enter",
+        "kind": "Телеграм-канал Enter",
+        "url": "https://t.me/enterfamily/415",
+        "cta": "Записаться в Enter"
       }
     }
   ]
