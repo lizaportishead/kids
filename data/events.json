@@ -1,7 +1,7 @@
 {
   "updatedAt": "2026-09-20T10:28:34.654Z",
   "city": "Белград",
-  "count": 338,
+  "count": 341,
   "report": [
     {
       "source": "prodlenka",
@@ -11317,6 +11317,102 @@
         "kind": "Телеграм-канал Enter",
         "url": "https://t.me/enterfamily/415",
         "cta": "Записаться в Enter"
+      }
+    },
+    {
+      "id": "c79bfe3768e3",
+      "title": "Carevo novo odelo",
+      "short": "Duhovita adaptacija bajke „Carevo novo odelo“, govori o jednom sujetnom kralju, njegovim licemernim podanicima i jednom koristoljubljivom krojaču.... ",
+      "desc": "Duhovita adaptacija bajke „Carevo novo odelo“, govori o jednom sujetnom kralju, njegovim licemernim podanicima i jednom koristoljubljivom krojaču.... Predstava je prožeta šaljivim replikama, gegovima i songovima, sa jasnom porukom da odelo ne čini čoveka...",
+      "date": "2026-09-20",
+      "wd": null,
+      "time": "12:00",
+      "dur": "1 час",
+      "place": "Пан театар",
+      "address": "Булевар краља Александра 298 (I этаж), Звездара, Белград",
+      "placePhone": null,
+      "placeLink": null,
+      "lat": null,
+      "lng": null,
+      "age": [
+        3,
+        16
+      ],
+      "ageLabel": "3+ лет",
+      "price": "уточняется",
+      "image": "data/images/panteatar-carevo-novo-odelo.webp",
+      "category": "theatre",
+      "categoryLabel": "Спектакли",
+      "source": {
+        "id": "panteatar",
+        "cta": "Купить билет на сайте театра",
+        "url": "https://panteatar.rs/predstave/carevo-novo-odelo?izvodjenje=12",
+        "kind": "Сайт театра",
+        "name": "Пан театар"
+      }
+    },
+    {
+      "id": "974c0f121b0b",
+      "title": "Alisa u zemlji oza",
+      "short": "Alisa, poznata junakinja iz zemlje Čuda, stiže u Zemlju radoznalog kralja i kraljice, gde susreće Mačka bez čizama (nekadašnjeg Mačka u čizmama). Uz n",
+      "desc": "Alisa, poznata junakinja iz zemlje Čuda, stiže u Zemlju radoznalog kralja i kraljice, gde susreće Mačka bez čizama (nekadašnjeg Mačka u čizmama). Uz njegovu pomoć, rešavajući mnoge “teške” zadatke koje joj postavljaju radoznali kralj i kraljica, Alisa odlazi dalje i usput sreće junake iz Zemlje Oza, Limenka, Strašilo i Plačljivog lava. Zajedno nastavljaju u susret velikom Čarobnjaku iz Oza...",
+      "date": "2026-09-26",
+      "wd": null,
+      "time": "17:00",
+      "dur": "1 час",
+      "place": "Пан театар",
+      "address": "Булевар краља Александра 298 (I этаж), Звездара, Белград",
+      "placePhone": null,
+      "placeLink": null,
+      "lat": null,
+      "lng": null,
+      "age": [
+        3,
+        16
+      ],
+      "ageLabel": "3+ лет",
+      "price": "уточняется",
+      "image": "data/images/panteatar-alisa-u-zemlji-oza.webp",
+      "category": "theatre",
+      "categoryLabel": "Спектакли",
+      "source": {
+        "id": "panteatar",
+        "cta": "Купить билет на сайте театра",
+        "url": "https://panteatar.rs/predstave/alisa-u-zemlji-oza?izvodjenje=13",
+        "kind": "Сайт театра",
+        "name": "Пан театар"
+      }
+    },
+    {
+      "id": "35bcde55e56a",
+      "title": "Crvenkapa",
+      "short": "U predstavi se sa decom druže braća Grim, koji pokušavaju, uz dečiju pomoć, da napišu bajku \"Crvenkapa\". Da li je Crvenkapa stvarno Crvenkapa ili je Ž",
+      "desc": "U predstavi se sa decom druže braća Grim, koji pokušavaju, uz dečiju pomoć, da napišu bajku \"Crvenkapa\". Da li je Crvenkapa stvarno Crvenkapa ili je Žutokapa, dali je Vuk stvarno tako zao ili je on jedna smotana kukavica,..... Na ta i još mnoga druga pitanja će braća Grim dati odgovore u ovoj kontakt predstavi, prožetoj songovima i igrom.",
+      "date": "2026-09-27",
+      "wd": null,
+      "time": "12:00",
+      "dur": "1 час",
+      "place": "Пан театар",
+      "address": "Булевар краља Александра 298 (I этаж), Звездара, Белград",
+      "placePhone": null,
+      "placeLink": null,
+      "lat": null,
+      "lng": null,
+      "age": [
+        2,
+        16
+      ],
+      "ageLabel": "2+ лет",
+      "price": "уточняется",
+      "image": "data/images/panteatar-crvenkapa.webp",
+      "category": "theatre",
+      "categoryLabel": "Спектакли",
+      "source": {
+        "id": "panteatar",
+        "cta": "Купить билет на сайте театра",
+        "url": "https://panteatar.rs/predstave/crvenkapa?izvodjenje=14",
+        "kind": "Сайт театра",
+        "name": "Пан театар"
       }
     }
   ]

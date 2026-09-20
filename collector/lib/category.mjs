@@ -26,6 +26,7 @@ const RULES = [
 // названия сказок). source.id -> категория.
 const SOURCE_OVERRIDES = {
   pinokio: 'theatre',
+  panteatar: 'theatre',
   bgf: 'theatre'
 };
 
