@@ -6,6 +6,27 @@ import { normalize } from '../lib/normalize.mjs';
 // закрытой для просмотра группы — достаточно знать id канала и сообщения.
 const WEEKDAYS = ['понедельник', 'вторник', 'среда', 'четверг', 'пятница', 'суббота', 'воскресенье'];
 
+// Цены студии Индиго — из её постов с расписанием по направлениям (в самих
+// постах 2927/2928 цен нет, поэтому сопоставляем по названию занятия).
+// «Хореография» и «Балет» — одно направление студии, цена общая.
+// Порядок важен: срабатывает первое совпавшее правило.
+const PRICE_RULES = [
+  { source: /^indigo-/, re: /Живопись.*Елена|Арт-занятие.*Елена/, price: '1750 RSD (1 час) или 2500 RSD (2 часа), абонемент на 4 занятия — 6000 / 8500 RSD' },
+  { source: /^indigo-/, re: /Живопись.*Алина/, price: '1500 RSD (разовое), абонемент 5000 RSD за 4 занятия' },
+  { source: /^indigo-novi-beograd$/, re: /^Живопись 3\+$/, price: 'от 1500 RSD (разовое)' },
+  { source: /^indigo-/, re: /Лепка из глины 2-3/, price: '1500 RSD (разовое), абонемент 5000 RSD за 4 занятия' },
+  { source: /^indigo-/, re: /Керамика.*5\+/, price: '2000 RSD (разовое), абонемент 7000 RSD за 4 занятия' },
+  { source: /^indigo-/, re: /Столярн/, price: '2000 RSD (разовое), абонемент 7000 RSD за 4 занятия' },
+  { source: /^indigo-/, re: /Робототехника 3-6/, price: '1500 RSD (разовое)' },
+  { source: /^indigo-/, re: /Хореография вместе с мамой/, price: '1500 RSD (разовое), абонемент 5000 RSD за 4 занятия' },
+  { source: /^indigo-/, re: /^(Хореография|Балет)/, price: '1200 RSD (разовое), абонемент 4000 RSD за 4 занятия или 8000 RSD за 8' }
+];
+
+function priceFor(source, title) {
+  const rule = PRICE_RULES.find((r) => r.source.test(source.id) && r.re.test(title));
+  return rule ? rule.price : null;
+}
+
 export async function collectTelegram(source, now = new Date()) {
   const m = source.url.match(/t\.me\/([^/?#]+)\/(\d+)/);
   if (!m) throw new Error('telegram: не разобрал канал/пост из url ' + source.url);
@@ -63,6 +84,7 @@ function parseSchedule(lines, source, now) {
       wd: [currentWd],
       time: h.padStart(2, '0') + ':' + min,
       age,
+      price: priceFor(source, title),
       url: source.url
     };
     const ev = normalize(source, raw, now);
