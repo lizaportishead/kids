@@ -58,7 +58,13 @@ const DIRECTION_INFO = [
   {
     re: /predškolski|predskolski/i,
     short: 'Подготовка к школе: математика и сербский язык для детей 5–7 лет.',
-    desc: 'Курс «Подготовка к школе» по изучению математики и сербского языка для детей 5–7 лет.'
+    desc: 'Сербский язык для детей 5–7 лет. Занятия проходят в игровой форме, без перегрузки и стресса: ребёнок учится через общение и вовлечённость. После занятий ребёнок становится увереннее в общении, быстрее привыкает к языковой среде, легче знакомится и общается с другими детьми, начинает понимать и использовать сербскую речь. Небольшие группы помогают уделить внимание каждому ребёнку. Разовое занятие — 2000 RSD, абонемент на 8 занятий — 12000 RSD.'
+  },
+  {
+    re: /toddlerclass/i,
+    short: 'Сенсорные занятия для малышей 1,5–3 лет вместе с мамой: игры, творчество, музыка и движение.',
+    desc: 'Сенсорные развивающие занятия для малышей 1,5–3 лет, где дети играют, исследуют, творят и знакомятся с окружающим миром. На занятиях: сенсорные игры и исследования, творчество, музыка и движение, развитие речи, знакомство с количеством, цифрами и формами. Рядом с мамой ребёнку проще расслабиться, играть и исследовать новое. Мини-группа 3–6 человек.',
+    price: '2000 RSD'
   },
   {
     re: /^русск\S* язык/i,
@@ -128,8 +134,8 @@ function parseSchedule(blockHtml, source, now) {
     const { title, desc: descRaw } = splitTitleDesc(rest);
     const age = extractAge(rest);
     const priceMatch = matchPrice(descRaw);
-    const price = priceMatch ? priceMatch.price : null;
     const info = DIRECTION_INFO.find((d) => d.re.test(title));
+    const price = (info && info.price) || (priceMatch ? priceMatch.price : null);
     const desc = info ? info.desc : stripMatch(descRaw, priceMatch) || title;
 
     const raw = { title, desc, short: info ? info.short : desc.slice(0, 150), wd: [currentWd], time, dur, price, age, url: source.url };
