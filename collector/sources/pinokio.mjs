@@ -123,6 +123,16 @@ async function fetchDetail(rawTitle) {
   // Drupal-поля), поэтому до <p> допускаем немного произвольной разметки.
   let descr = (html.match(/Опис представе[\s\S]{0,320}?<p[^>]*>([\s\S]*?)<\/p>/) || [])[1] || '';
   descr = decode(descr.replace(/<[^>]+>/g, ' ')).replace(/\s+/g, ' ').trim();
+  // Третий шаблон (напр. «Луна Луна Парк»): заголовок «О представи:» — обычный
+  // <p>, за ним абзацы текста до блока «Реч редитеља» (или конца записи).
+  if (descr.length < 40) {
+    const m = html.match(/О представи:?\s*<\/span><\/p>([\s\S]*?)(?:Реч редитеља|<\/article|<footer|$)/);
+    if (m) {
+      descr = [...m[1].matchAll(/<p[^>]*>([\s\S]*?)<\/p>/g)]
+        .map((x) => decode(x[1].replace(/<[^>]+>/g, ' ')).replace(/\s+/g, ' ').trim())
+        .filter(Boolean).join(' ');
+    }
+  }
   if (descr.length < 40) {
     descr = decode((html.match(/<meta name="description" content="([^"]*)"/) || [])[1] || '').trim();
   }
