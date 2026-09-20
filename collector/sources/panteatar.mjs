@@ -56,7 +56,7 @@ export async function collectPanteatar(source, now = new Date()) {
       dur: row.dur,
       age: row.age || (detail && detail.age) || null,
       price: null,
-      url: BASE + '/predstave/' + row.slug + '?izvodjenje=' + row.id
+      url: source.url
     };
     const ev = normalize(source, raw, now);
     if (!ev) continue;
