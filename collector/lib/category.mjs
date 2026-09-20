@@ -27,6 +27,7 @@ const RULES = [
 const SOURCE_OVERRIDES = {
   pinokio: 'theatre',
   panteatar: 'theatre',
+  puz: 'theatre',
   bgf: 'theatre'
 };
 

@@ -10,6 +10,7 @@ import { collectBeopinokio } from './sources/beopinokio.mjs';
 import { collectBesmart } from './sources/besmart.mjs';
 import { collectPinokio } from './sources/pinokio.mjs';
 import { collectPanteatar } from './sources/panteatar.mjs';
+import { collectPuz } from './sources/puz.mjs';
 import { collectBgf } from './sources/bgf.mjs';
 import { dedupe, filterEvents } from './lib/normalize.mjs';
 import { saveImage } from './lib/images.mjs';
@@ -21,7 +22,7 @@ const root = resolve(here, '..');
 const OUT = resolve(root, 'data/events.json');
 const IMG_DIR = resolve(root, 'data/images');
 
-const RUNNERS = { instagram: collectInstagram, prodlenka: collectProdlenka, enterspace: collectEnterspace, mathline: collectMathline, telegram: collectTelegram, beopinokio: collectBeopinokio, besmart: collectBesmart, pinokio: collectPinokio, panteatar: collectPanteatar, bgf: collectBgf };
+const RUNNERS = { instagram: collectInstagram, prodlenka: collectProdlenka, enterspace: collectEnterspace, mathline: collectMathline, telegram: collectTelegram, beopinokio: collectBeopinokio, besmart: collectBesmart, pinokio: collectPinokio, panteatar: collectPanteatar, puz: collectPuz, bgf: collectBgf };
 
 const now = new Date();
 const sources = JSON.parse(await readFile(resolve(here, 'sources.json'), 'utf8'));
