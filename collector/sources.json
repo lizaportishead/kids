@@ -36,8 +36,8 @@
     "type": "mathline",
     "name": "Sreda Kids",
     "kind": "Сайт студии",
-    "url": "https://math-line.ru/beograde/reg#!/tab/1251358096-1",
-    "tabNumber": 1,
+    "url": "https://math-line.ru/beograde/reg",
+    "formIndex": 0,
     "cta": "Записаться на сайте Mathline",
     "place": "Sreda Kids",
     "address": "Старый Град, Косовска 32"
@@ -47,8 +47,8 @@
     "type": "mathline",
     "name": "Mathline",
     "kind": "Сайт студии",
-    "url": "https://math-line.ru/beograde/reg#!/tab/1251358096-2",
-    "tabNumber": 2,
+    "url": "https://math-line.ru/beograde/reg",
+    "formIndex": 1,
     "cta": "Записаться на сайте Mathline",
     "place": "Mathline",
     "address": "Дорчол, Тадеуша Кошћушка 63"

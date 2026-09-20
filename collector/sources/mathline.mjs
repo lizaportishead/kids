@@ -2,14 +2,70 @@ import { UA } from '../lib/images.mjs';
 import { normalize } from '../lib/normalize.mjs';
 import { parseAge, matchPrice, stripMatch } from '../lib/text.mjs';
 
-// math-line.ru — статичный Tilda-сайт с виджетом табов (T395): расписания обеих
-// локаций лежат в исходном HTML одной страницы (просто скрыты CSS), поэтому
-// playwright не нужен — достаточно найти нужный rec-блок по data-tab-number.
+// math-line.ru/beograde/reg — статичный Tilda-сайт: расписание каждой локации — это
+// отдельная форма записи (rec-блок) с группами чекбоксов по дням недели, всё есть в
+// исходном HTML, playwright не нужен. Раньше формы были спрятаны в виджете табов
+// (T395), теперь лежат на странице подряд. Какая локация какая, на сайте не подписано:
+// по договорённости первая форма — Стари Град (Косовска 32; в ней поле event_kosovska),
+// вторая — Дорчол (Тадеуша Кошћушка 63). Порядок задаёт source.formIndex (0, 1).
 const WEEKDAYS = ['понедельник', 'вторник', 'среда', 'четверг', 'пятница', 'суббота', 'воскресенье'];
 // По просьбе — берём только эти дни недели, четверг и воскресенье пропускаем.
 const ALLOWED_WD = new Set([0, 1, 2, 4, 5]);
 // Заголовки, после которых начинается блок про продлёнку/сад, а не расписание.
 const STOP_HEADINGS = ['Продленка в MathLine', 'Продлёнка Weekend', 'Образовательная программа'];
+
+// Описания направлений со страниц меню «Направления» на math-line.ru
+// (/beograde/art — это «Робототехника», /beograde/math, /beograde/lingvo,
+// /beograde/science, /russian). В расписании у занятий есть только «Название (возраст)»,
+// поэтому описание подставляем по названию. У «Арт студий», «Читакля» и «Продлёнки»
+// отдельных страниц с описанием нет — они остаются как есть.
+const DIRECTION_INFO = [
+  {
+    re: /робототехник/i,
+    short: 'Собираем и программируем роботов из Lego WeDo 2.0 и в среде Scratch.',
+    desc: 'Занятия по робототехнике и программированию: на каждом занятии — теория, сборка и программирование робота из Lego Education WeDo 2.0 в визуальных средах WeDo и Scratch. Дети применяют на практике математику, физику и информатику, учатся основам логики, алгоритмики, проектному мышлению и работе в команде. Цикл — 12 занятий, в группе до 5 человек.'
+  },
+  {
+    re: /занимательн\S* математик/i,
+    short: 'Игровая математика для дошкольников: занятия в форме игры.',
+    desc: 'Занимательная (игровая) математика для детей 4–6 лет: занятия проходят в игровой форме.'
+  },
+  {
+    re: /математик\S* интеллектуал/i,
+    short: 'Математика + логика для 1–4 классов: задачи на смекалку, схемы, геометрия.',
+    desc: 'Программа «Интеллектуал» — математика и логика для 1–2 и 3–4 классов. В программе задачи на смекалку и схемы к задачам, умножение и деление, меры времени, периметр и площадь, геометрические фигуры, куб и его развёртки. Группа 4–5 человек, занятие раз в неделю по 90 минут.'
+  },
+  {
+    re: /олимпиадн\S* математик/i,
+    short: 'Олимпиадная математика: логические задачи, ребусы, шифры, признаки делимости.',
+    desc: 'Олимпиадная математика для школьников: арифметические конструкции и задачи на смекалку, чётность, математические ребусы, логические задачи, шифрование и кодирование, рыцари и лжецы, признаки делимости, текстовые задачи. Занятия по 60 минут, курс идёт блоками по 4 занятия.'
+  },
+  {
+    re: /научн\S* эксперимент/i,
+    short: 'Опыты и эксперименты для малышей: жидкости, сила Архимеда, химические реакции.',
+    desc: 'Научные эксперименты для детей 4–7 лет: изучаем свойства жидкостей, силу Архимеда и то, как летают воздушные шары, знакомимся с химией и делаем опыты — от «дождя из тучки» и домашнего вулкана до получения водорода и кислорода. Курс из 12 занятий.'
+  },
+  {
+    re: /занимательн\S* хими/i,
+    short: 'Химические опыты и эксперименты для школьников.',
+    desc: 'Занимательная химия для детей 8–12 лет в Научном клубе MathLine: химические реакции и опыты своими руками. Занятия по 60 минут, абонемент на 4 занятия.'
+  },
+  {
+    re: /разрушител\S* миф|занимательн\S* физик/i,
+    short: 'Физика на опытах: проверяем популярные мифы измерениями и экспериментами.',
+    desc: 'Курс «Разрушители мифов» по занимательной физике для детей 9–12 лет: проверяем известные утверждения — можно ли согнуть лист бумаги больше 8 раз, опасна ли упавшая с высоты монета, можно ли выдернуть скатерть из-под посуды — измерениями, расчётами и опытами.'
+  },
+  {
+    re: /predškolski|predskolski/i,
+    short: 'Подготовка к школе: математика и сербский язык для детей 5–7 лет.',
+    desc: 'Курс «Подготовка к школе» по изучению математики и сербского языка для детей 5–7 лет.'
+  },
+  {
+    re: /^русск\S* язык/i,
+    short: 'Русский язык по нейропедагогике: игры, речь, чтение и работа с текстом.',
+    desc: 'Русский язык по принципам нейропедагогики: занятия в игровом формате с аудио- и визуальными материалами и нейротехниками. Развиваем речь и словарный запас, учимся быстрее читать и лучше понимать текст, тренируем память и логику. Программу ведёт логопед-нейропсихолог Юлия Жадан.'
+  }
+];
 
 const pageCache = new Map();
 
@@ -21,26 +77,20 @@ export async function collectMathline(source, now = new Date()) {
     pageCache.set(pageUrl, html);
   }
 
-  const recId = findRecId(html, source.tabNumber);
-  if (!recId) throw new Error('mathline: не нашли rec-блок для tabNumber=' + source.tabNumber);
-  const block = extractBlock(html, recId);
+  const block = findScheduleBlocks(html)[source.formIndex];
+  if (!block) throw new Error('mathline: не нашли форму расписания formIndex=' + source.formIndex);
   return parseSchedule(block, source, now);
 }
 
-// Находит id блока с расписанием по номеру таба (data-tab-number="N" -> data-tab-rec-ids="...").
-function findRecId(html, tabNumber) {
-  const re = /data-tab-rec-ids="(\d+)"\s+data-tab-number="(\d+)"/g;
-  for (const m of html.matchAll(re)) {
-    if (Number(m[2]) === Number(tabNumber)) return 'rec' + m[1];
-  }
-  return null;
-}
-
-function extractBlock(html, recId) {
-  const start = html.indexOf('id="' + recId + '"');
-  if (start === -1) return '';
-  const next = html.indexOf('<div id="rec', start + 1);
-  return html.slice(start, next === -1 ? html.length : next);
+// Rec-блоки, в которых есть группы чекбоксов по дням недели, в порядке на странице.
+function findScheduleBlocks(html) {
+  const starts = [...html.matchAll(/<div id="rec\d+"/g)].map((m) => m.index);
+  const blocks = [];
+  starts.forEach((start, i) => {
+    const block = html.slice(start, i + 1 < starts.length ? starts[i + 1] : html.length);
+    if (/data-field-name="понедельник"/i.test(block)) blocks.push(block);
+  });
+  return blocks;
 }
 
 function parseSchedule(blockHtml, source, now) {
@@ -79,9 +129,10 @@ function parseSchedule(blockHtml, source, now) {
     const age = extractAge(rest);
     const priceMatch = matchPrice(descRaw);
     const price = priceMatch ? priceMatch.price : null;
-    const desc = stripMatch(descRaw, priceMatch) || title;
+    const info = DIRECTION_INFO.find((d) => d.re.test(title));
+    const desc = info ? info.desc : stripMatch(descRaw, priceMatch) || title;
 
-    const raw = { title, desc, short: desc.slice(0, 150), wd: [currentWd], time, dur, price, age, url: source.url };
+    const raw = { title, desc, short: info ? info.short : desc.slice(0, 150), wd: [currentWd], time, dur, price, age, url: source.url };
     const ev = normalize(source, raw, now);
     if (ev) events.push(ev);
   }
