@@ -38,11 +38,18 @@ jobs:
           # MODERATION: '1'   # раскомментируйте, если новые события должны ждать одобрения
         run: npm run collect
 
-      - name: Закоммитить data/
+      - name: Собрать статичные страницы для поиска
+        run: |
+          cp static-pages.txt /tmp/static-pages-prev.txt || true
+          python3 scripts/build_static_pages.py
+
+      - name: Закоммитить data/ и страницы для поиска
         run: |
           git config user.name  "klubok-bot"
           git config user.email "bot@users.noreply.github.com"
-          git add data
+          git add -A data venues category sitemap.xml static-pages.txt
+          # каталоги площадок лежат в корне сайта: и текущие, и удалённые с прошлого раза
+          for d in $(cat static-pages.txt /tmp/static-pages-prev.txt 2>/dev/null | sort -u); do git add -A -- "$d"; done
           git diff --staged --quiet || git commit -m "Афиша: обновление $(date -u +%F)"
           git fetch origin main
           git rebase origin/main
