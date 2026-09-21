@@ -175,6 +175,24 @@ VENUE_CONTACTS = {}
 for _m in re.finditer(r'^\s*"([^"\n]+)":\s*\{([^}\n]*)\}', _js_block(APP, "VENUE_CONTACTS"), re.M):
     VENUE_CONTACTS[_m.group(1)] = dict(re.findall(r'(\w+):\s*"([^"]*)"', _m.group(2)))
 
+# Поисковые заголовки категорий: slug -> (h1, «что это» для вступления, запросы для description)
+CAT_SEO = {
+    "art": ("Творческие студии и кружки для детей в Белграде", "рисование, лепка, рукоделие и мастер-классы", "рисование, лепка, творческие мастер-классы"),
+    "languages": ("Иностранные языки для детей в Белграде", "курсы и кружки иностранных языков", "английский, сербский, языковые кружки"),
+    "reading": ("Чтение и книжные занятия для детей в Белграде", "книжные встречи и занятия по чтению", "книжный клуб, чтение, литература"),
+    "swimming": ("Плавание для детей в Белграде: бассейны и школы плавания", "занятия плаванием для малышей и школьников", "бассейн, школа плавания, плавание для малышей"),
+    "early_dev": ("Раннее развитие: занятия для малышей в Белграде", "занятия для детей от года вместе с мамой и без", "занятия для малышей, монтессори, развитие с мамой"),
+    "dance": ("Студии танцев для детей в Белграде", "танцы, хореография и ритмика", "танцы, хореография, ритмика для детей"),
+    "music": ("Музыка для детей в Белграде: студии и занятия", "музыкальные занятия и логоритмика", "музыкальные занятия, вокал, музыкальная студия"),
+    "games": ("Шахматы и настольные игры для детей в Белграде", "шахматные секции, клубы настольных игр", "шахматы для детей, клуб настольных игр"),
+    "school_prep": ("Подготовка к школе в Белграде: занятия для дошкольников", "подготовка к школе и занятия для дошкольников", "подготовка к школе, занятия для дошкольников"),
+    "theatre": ("Детские спектакли в Белграде: афиша театров", "спектакли и представления для детей", "детский театр, спектакли, кукольный театр"),
+    "sport": ("Спортивные секции для детей в Белграде", "спортивные секции и активные занятия", "спортивные секции, детский спорт, ролики"),
+    "science": ("Наука и логика для детей в Белграде: математика и эксперименты", "математические кружки, логика и наука", "математический кружок, логика, наука для детей"),
+    "robotics": ("Робототехника и программирование для детей в Белграде", "конструирование, робототехника и программирование", "робототехника, программирование для детей"),
+    "cooking": ("Кулинарные мастер-классы для детей в Белграде", "детская кулинария и мастер-классы", "кулинарные мастер-классы для детей"),
+}
+
 PIN = ('<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#c05f45" stroke-width="2" '
        'stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/>'
        '<circle cx="12" cy="10" r="3"/></svg>')
@@ -422,7 +440,10 @@ def main():
         if address:
             addr_html = (f'<div class="lab">Адрес</div><p class="addr">{PIN}<span>{esc(address)}</span></p>'
                          f'<a class="pill" href="{esc(maps_url(address, name))}" rel="noopener">Открыть на карте</a>')
-        sub = f'<div class="lead">{esc(", ".join(cat_labels[:3]))}</div>' if cat_labels else ""
+        vcats = {e["category"]: e["categoryLabel"] for e in evs if e.get("category")}
+        sub = ('<div class="chips" style="margin-top:8px">' + "".join(
+            f'<a class="chip" href="/category/{esc(c)}/">{esc(l)}</a>' for c, l in sorted(vcats.items(), key=lambda kv: kv[1]))
+            + "</div>") if vcats else ""
         sections = ""
         if regular:
             sections += '<h2>Регулярные занятия</h2><ul class="cards">' + "".join(event_line(e, False) for e in regular) + "</ul>"
@@ -450,21 +471,67 @@ def main():
         for n in sorted(venues))
     page("venues", "Площадки: детские студии, кружки и клубы в Белграде | Клубок",
          "Русскоязычные детские студии, кружки, секции и театры в Белграде: адреса, расписание занятий, возраст и цены.",
-         f'<h1>Площадки в Белграде</h1><p class="lead">Детские студии, кружки, секции и театры</p><ul class="vgrid">{items}</ul>',
+         f'<h1>Площадки в Белграде</h1><p class="lead">Детские студии, кружки, секции и театры. <a href="/category/"><u>Смотреть по категориям</u></a></p><ul class="vgrid">{items}</ul>',
          "/venues/")
 
     # категории
-    for c, info in sorted(cats.items()):
+    def age_range(evs):
+        lo = [e["age"][0] for e in evs if isinstance(e.get("age"), list) and len(e["age"]) == 2 and e["age"][0] is not None]
+        hi = [e["age"][1] for e in evs if isinstance(e.get("age"), list) and len(e["age"]) == 2 and e["age"][1] is not None and e["age"][1] < 90]
+        return (min(lo), max(hi)) if lo and hi else None
+
+    def plural(n, forms):
+        m10, m100 = n % 10, n % 100
+        return forms[0] if m10 == 1 and m100 != 11 else forms[1] if 2 <= m10 <= 4 and not 12 <= m100 <= 14 else forms[2]
+
+    cat_links = []
+    for c, info in sorted(cats.items(), key=lambda kv: -len(kv[1]["events"])):
         evs = info["events"]
         label = info["label"]
-        body = (f'{crumbs_back("/", "Вся афиша")}'
-                f'<h1>{esc(label)} для детей в Белграде</h1>'
-                f'<p class="lead">Занятия и события в категории «{esc(label)}»: расписание, возраст, цены.</p>'
-                f'<ul class="cards">{"".join(event_line(e) for e in evs)}</ul>')
-        page(f"category/{c}", f"{label} для детей в Белграде — занятия и расписание | Клубок",
-             f"{label} для детей в Белграде: {len(evs)} занятий и событий, расписание, возраст и цены.",
-             body, f"/category/{c}/")
-        urls.append((f"/category/{c}/", "0.7"))
+        h1, what, kw = CAT_SEO.get(c, (f"{label} для детей в Белграде", label.lower(), label.lower()))
+        cat_venues = {}
+        for e in evs:
+            cat_venues.setdefault(e["place"], []).append(e)
+        n_ev, n_v = len(evs), len(cat_venues)
+        names = sorted(cat_venues)
+        shown = ", ".join(names[:6]) + (f" и ещё {len(names) - 6}" if len(names) > 6 else "")
+        ages = age_range(evs)
+        age_txt = f" Возраст детей — от {ages[0]} до {ages[1]} лет." if ages else ""
+        intro = (f"В афише Клубка — {n_ev} {plural(n_ev, ('занятие', 'занятия', 'занятий'))} и событий: {what}. "
+                 f"Площадки: {shown}.{age_txt} Расписание, цены и запись — на страницах занятий.")
+        vcards = "".join(
+            f'<li><a class="ecard" href="/{slugs[n]}/">{logo(n)}<div><div class="t">{esc(n)}</div>'
+            f'<div class="s">{esc(next((e["address"] for e in es if e.get("address")), ""))} · {len(es)} '
+            f'{plural(len(es), ("занятие", "занятия", "занятий"))}</div></div></a></li>'
+            for n, es in sorted(cat_venues.items()))
+        others = "".join(
+            f'<a class="chip" href="/category/{esc(oc)}/">{esc(oi["label"])}</a>'
+            for oc, oi in sorted(cats.items()) if oc != c)
+        body = (f'{crumbs_back("/category/", "Все категории")}'
+                f'<h1>{esc(h1)}</h1><p class="lead">{esc(intro)}</p>'
+                f'<h2>Где заниматься</h2><ul class="cards">{vcards}</ul>'
+                f'<h2>Все занятия</h2><ul class="cards">{"".join(event_line(e) for e in evs)}</ul>'
+                f'<h2>Другие категории</h2><div class="chips">{others}</div>')
+        ld = {"@context": "https://schema.org", "@type": "ItemList", "name": h1,
+              "itemListElement": [{"@type": "ListItem", "position": i + 1, "url": f"{SITE}/{slugs[n]}/", "name": n}
+                                  for i, n in enumerate(names)]}
+        page(f"category/{c}", f"{h1} — расписание и цены | Клубок",
+             f"{h1}: {n_v} {plural(n_v, ('площадка', 'площадки', 'площадок'))}, {n_ev} {plural(n_ev, ('занятие', 'занятия', 'занятий'))}. "
+             f"{kw.capitalize()}. Расписание, возраст и цены.",
+             body, f"/category/{c}/", None, ld)
+        urls.append((f"/category/{c}/", "0.8"))
+        cat_links.append((c, label, h1, n_ev))
+
+    # оглавление категорий
+    hub = "".join(
+        f'<li><a class="ecard" href="/category/{c}/"><div><div class="t">{esc(h1)}</div>'
+        f'<div class="s">{n} {plural(n, ("занятие", "занятия", "занятий"))}</div></div></a></li>'
+        for c, label, h1, n in cat_links)
+    page("category", "Занятия для детей в Белграде по категориям: танцы, языки, плавание, творчество | Клубок",
+         "Все виды детских занятий в Белграде: танцы, языки, плавание, творчество, музыка, спорт, шахматы, робототехника и подготовка к школе.",
+         f'<h1>Занятия для детей в Белграде по категориям</h1><p class="lead">Выберите направление — покажем площадки, расписание и цены.</p>'
+         f'<ul class="cards">{hub}</ul>', "/category/")
+    urls.append(("/category/", "0.8"))
 
     # sitemap
     lastmod = today.isoformat()

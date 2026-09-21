@@ -1763,71 +1763,76 @@
   <url>
     <loc>https://klubok.kids/category/art/</loc>
     <lastmod>2026-09-21</lastmod>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://klubok.kids/category/cooking/</loc>
-    <lastmod>2026-09-21</lastmod>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://klubok.kids/category/dance/</loc>
-    <lastmod>2026-09-21</lastmod>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://klubok.kids/category/early_dev/</loc>
-    <lastmod>2026-09-21</lastmod>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://klubok.kids/category/games/</loc>
-    <lastmod>2026-09-21</lastmod>
-    <priority>0.7</priority>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://klubok.kids/category/languages/</loc>
     <lastmod>2026-09-21</lastmod>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://klubok.kids/category/music/</loc>
-    <lastmod>2026-09-21</lastmod>
-    <priority>0.7</priority>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://klubok.kids/category/reading/</loc>
     <lastmod>2026-09-21</lastmod>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://klubok.kids/category/robotics/</loc>
-    <lastmod>2026-09-21</lastmod>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://klubok.kids/category/school_prep/</loc>
-    <lastmod>2026-09-21</lastmod>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://klubok.kids/category/science/</loc>
-    <lastmod>2026-09-21</lastmod>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://klubok.kids/category/sport/</loc>
-    <lastmod>2026-09-21</lastmod>
-    <priority>0.7</priority>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://klubok.kids/category/swimming/</loc>
     <lastmod>2026-09-21</lastmod>
-    <priority>0.7</priority>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://klubok.kids/category/early_dev/</loc>
+    <lastmod>2026-09-21</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://klubok.kids/category/music/</loc>
+    <lastmod>2026-09-21</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://klubok.kids/category/dance/</loc>
+    <lastmod>2026-09-21</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://klubok.kids/category/games/</loc>
+    <lastmod>2026-09-21</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://klubok.kids/category/school_prep/</loc>
+    <lastmod>2026-09-21</lastmod>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://klubok.kids/category/theatre/</loc>
     <lastmod>2026-09-21</lastmod>
-    <priority>0.7</priority>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://klubok.kids/category/sport/</loc>
+    <lastmod>2026-09-21</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://klubok.kids/category/science/</loc>
+    <lastmod>2026-09-21</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://klubok.kids/category/robotics/</loc>
+    <lastmod>2026-09-21</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://klubok.kids/category/cooking/</loc>
+    <lastmod>2026-09-21</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://klubok.kids/category/</loc>
+    <lastmod>2026-09-21</lastmod>
+    <priority>0.8</priority>
   </url>
 </urlset>
