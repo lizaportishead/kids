@@ -12,6 +12,8 @@ import { collectPinokio } from './sources/pinokio.mjs';
 import { collectPanteatar } from './sources/panteatar.mjs';
 import { collectPuz } from './sources/puz.mjs';
 import { collectBgf } from './sources/bgf.mjs';
+import { collectCkvladadivljan } from './sources/ckvladadivljan.mjs';
+import { collectUvcsumice } from './sources/uvcsumice.mjs';
 import { dedupe, filterEvents } from './lib/normalize.mjs';
 import { saveImage } from './lib/images.mjs';
 import { fetchPublicEvents, pushEvents, supabaseEnabled } from './lib/supabase.mjs';
@@ -22,7 +24,7 @@ const root = resolve(here, '..');
 const OUT = resolve(root, 'data/events.json');
 const IMG_DIR = resolve(root, 'data/images');
 
-const RUNNERS = { instagram: collectInstagram, prodlenka: collectProdlenka, enterspace: collectEnterspace, mathline: collectMathline, telegram: collectTelegram, beopinokio: collectBeopinokio, besmart: collectBesmart, pinokio: collectPinokio, panteatar: collectPanteatar, puz: collectPuz, bgf: collectBgf };
+const RUNNERS = { instagram: collectInstagram, prodlenka: collectProdlenka, enterspace: collectEnterspace, mathline: collectMathline, telegram: collectTelegram, beopinokio: collectBeopinokio, besmart: collectBesmart, pinokio: collectPinokio, panteatar: collectPanteatar, puz: collectPuz, bgf: collectBgf, ckvladadivljan: collectCkvladadivljan, uvcsumice: collectUvcsumice };
 
 const now = new Date();
 const sources = JSON.parse(await readFile(resolve(here, 'sources.json'), 'utf8'));

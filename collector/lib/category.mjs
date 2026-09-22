@@ -28,7 +28,9 @@ const SOURCE_OVERRIDES = {
   pinokio: 'theatre',
   panteatar: 'theatre',
   puz: 'theatre',
-  bgf: 'theatre'
+  bgf: 'theatre',
+  ckvladadivljan: 'theatre',
+  uvcsumice: 'theatre'
 };
 
 const LABELS = {
