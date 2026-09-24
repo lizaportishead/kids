@@ -1,15 +1,23 @@
 #!/usr/bin/env python3
-"""Генерирует статичные индексируемые страницы из data/events.json.
+"""Генерирует страницы сайта с готовым текстом из data/events.json.
 
-Приложение (index.html) — одностраничное, все разделы живут за «#», и для
-Google это один адрес. Чтобы поиск видел площадки и занятия, для каждой
-площадки, категории и события собирается обычная HTML-страница с текстом:
+Приложение (index.html) одно на весь сайт, но у каждого раздела свой адрес.
+Под каждый адрес здесь собирается HTML-страница: заголовок, описание и текст
+для поиска, а поверх — загрузка приложения (страница скачивает /index.html и
+подменяет им себя, приложение само открывает нужный раздел по адресу):
 
-  venues/               — список площадок
+  venues/               — «Площадки»
+  schedule/             — «Расписание»: регулярные занятия
+  events/all/           — все ближайшие события
+  favs/                 — «Избранное» (не индексируется)
   <venue>/              — площадка: адрес, расписание, ближайшие события
   <venue>/<event>/      — одно занятие или событие (без даты в адресе)
-  category/<cat>/       — занятия одной категории
+  category/<cat>/       — занятия одной категории (посадочная страница без
+                          приложения: такого раздела в приложении нет)
+  404.html              — всё остальное (например, /event/<id>/ для событий,
+                          появившихся после сборки) тоже открывает приложение
 
+Slug'и адресов пишутся в data/routes.json — по ним приложение строит ссылки.
 Также перезаписывается sitemap.xml. Каталоги площадок перечислены в
 static-pages.txt; venues/, category/ и всё из этого списка принадлежат
 скрипту и пересоздаются целиком — руками их не править.
@@ -26,11 +34,12 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 SITE = "https://klubok.kids"
-OWNED_DIRS = ("venues", "category", "events")
+OWNED_DIRS = ("venues", "category", "events", "schedule", "favs")
 MANIFEST = ROOT / "static-pages.txt"
 # Каталоги в корне сайта, которые нельзя занимать под slug площадки.
 RESERVED = {"en", "sr", "data", "docs", "db", "collector", "scripts", "supabase", "scratch",
-            "venues", "category", "events", "assets", "kids", "api", "static"}
+            "venues", "category", "events", "assets", "kids", "api", "static",
+            "schedule", "favs", "afisha", "event", "venue"}
 
 WEEKDAYS = ["Понедельник", "Вторник", "Среда", "Четверг", "Пятница", "Суббота", "Воскресенье"]
 WEEKDAYS_SHORT = ["пн", "вт", "ср", "чт", "пт", "сб", "вс"]
@@ -97,6 +106,12 @@ h2{font-size:22px;line-height:1.2;margin:36px 0 14px;font-weight:700}
 .vgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:12px;margin:0;padding:0;list-style:none}
 footer{border-top:1px solid #eee6d6;margin-top:24px;padding:24px 28px;font-size:14px;color:var(--muted);text-align:center}
 @media(max-width:900px){.detail{grid-template-columns:1fr;gap:28px}.detail h1{font-size:34px}}
+.boot{display:none}
+.booting .boot{display:flex;position:fixed;inset:0;z-index:9999;align-items:center;justify-content:center;background:#fffdf7}
+.boot div{width:96px;height:96px;animation:bob 1.9s cubic-bezier(.45,0,.55,1) infinite}
+.boot img{width:100%;height:100%;display:block;animation:spin 1.9s cubic-bezier(.65,0,.35,1) infinite}
+@keyframes spin{to{transform:rotate(360deg)}}@keyframes bob{50%{transform:translateY(-12px)}}
+@media(prefers-reduced-motion:reduce){.boot div,.boot img{animation:none}}
 @media(max-width:640px){.site{padding:12px 16px}.brand span{display:none}.brand img{height:44px}.nav a{padding:8px 10px;font-size:15px}.nav a.add{display:none}h1{font-size:28px}.vcard{padding:20px}}
 """
 
@@ -225,14 +240,28 @@ def crumbs_back(href, text):
 
 
 
-def page(path, title, description, body, canonical_path, image=None, jsonld=None, noindex=False, wide=False):
-    out = ROOT / path / "index.html"
+# Загрузка приложения: скачать /index.html и подменить им страницу. Приложение
+# разберёт адрес само; __KLUBOK_ROUTE подсказывает раздел, пока грузится
+# data/routes.json. Если приложение не скачалось, остаётся текст страницы.
+BOOT = """<script>document.documentElement.className+=" booting";window.__KLUBOK_ROUTE=%s;
+fetch("/index.html").then(function(r){if(!r.ok)throw r.status;return r.text()}).then(function(t){document.open();document.write(t);document.close()}).catch(function(){document.documentElement.classList.remove("booting")});</script>"""
+
+
+def page(path, title, description, body, canonical_path, image=None, jsonld=None, noindex=False, wide=False,
+         route=None, out=None):
+    """route — что открыть в приложении ({"id"|"venue"|"route": …}); None — страница без приложения."""
+    out = out or ROOT / path / "index.html"
     out.parent.mkdir(parents=True, exist_ok=True)
     url = SITE + canonical_path
     img = SITE + "/" + image if image else SITE + "/og-cover.png"
     ld = f'\n<script type="application/ld+json">{json.dumps(jsonld, ensure_ascii=False)}</script>' if jsonld else ""
     robots = "noindex, follow" if noindex else "index, follow, max-image-preview:large"
-    venues_on = ' class="on"' if path == "venues" else ""
+    boot = ""
+    if route is not None:
+        hint = dict(route, path=canonical_path, title=title) if route else {}
+        boot = "\n" + BOOT % json.dumps(hint, ensure_ascii=False).replace("</", "<\\/")
+    boot_img = '<div class="boot" aria-hidden="true"><div><img src="/loader.png" alt=""></div></div>\n' if route is not None else ""
+    on = lambda p: ' class="on"' if path == p else ""
     body = f'<main class="page{" wide" if wide else ""}">{body}</main>'
     out.write_text(f"""<!DOCTYPE html>
 <html lang="ru">
@@ -258,15 +287,15 @@ def page(path, title, description, body, canonical_path, image=None, jsonld=None
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<style>{CSS}</style>{ld}
+<style>{CSS}</style>{ld}{boot}
 </head>
 <body>
-<header class="site">
+{boot_img}<header class="site">
 <a class="brand" href="/"><img src="/logo.png" alt="Клубок"><span>Куда сходить с ребёнком в Белграде</span></a>
-<nav class="nav"><a href="/">Расписание</a><a href="/venues/"{venues_on}>Площадки</a><a class="add" href="/">Открыть афишу</a></nav>
+<nav class="nav"><a href="/">Афиша</a><a href="/schedule/"{on("schedule")}>Расписание</a><a href="/venues/"{on("venues")}>Площадки</a></nav>
 </header>
 {body}
-<footer>Клубок — афиша детских занятий и мероприятий в Белграде · <a href="/">Открыть афишу</a></footer>
+<footer>Клубок — афиша детских занятий и мероприятий в Белграде · <a href="/category/">Занятия по категориям</a></footer>
 </body>
 </html>
 """, encoding="utf-8")
@@ -390,7 +419,7 @@ def main():
 <hr class="rule">
 <a class="vrow" href="/{v_slug}/">{logo(e["place"])}<div><b>{esc(e["place"])} ›</b>{vaddr}</div></a>
 </div>
-<aside>{hero}<div class="pricecard">{price}{cta}<a class="btn alt" href="/#event/{quote(e["id"])}">Открыть в афише</a>{note}</div></aside>
+<aside>{hero}<div class="pricecard">{price}{cta}{note}</div></aside>
 </div>"""
         ld = None
         if e.get("date"):
@@ -404,7 +433,7 @@ def main():
                                            "addressLocality": "Belgrade", "addressCountry": "RS"}}}
             if image:
                 ld["image"] = f"{SITE}/{image}"
-        page(epath(e), title, desc, body, f"/{epath(e)}/", image, ld, wide=True)
+        page(epath(e), title, desc, body, f"/{epath(e)}/", image, ld, wide=True, route={"id": e["id"]})
         urls.append((f"/{epath(e)}/", "0.5"))
 
     # страницы площадок
@@ -456,7 +485,7 @@ def main():
 <div class="vcard">
 <div class="vhead">{logo(name)}<div><h1>{esc(name)}</h1>{sub}</div></div>
 {addr_html}
-<div class="pills">{pills}<a class="pill" href="/#venue/{quote(name)}">Открыть в афише</a></div>
+<div class="pills">{pills}</div>
 </div>
 {sections}"""
         ld = {"@context": "https://schema.org", "@type": "LocalBusiness", "name": name,
@@ -464,7 +493,7 @@ def main():
                           "addressCountry": "RS"}}
         if phone:
             ld["telephone"] = phone
-        page(s, title, desc, body, f"/{s}/", None, ld)
+        page(s, title, desc, body, f"/{s}/", None, ld, route={"venue": name})
         urls.append((f"/{s}/", "0.7"))
 
     # список площадок
@@ -475,7 +504,7 @@ def main():
     page("venues", "Площадки: детские студии, кружки и клубы в Белграде | Клубок",
          "Русскоязычные детские студии, кружки, секции и театры в Белграде: адреса, расписание занятий, возраст и цены.",
          f'<h1>Площадки в Белграде</h1><p class="lead">Детские студии, кружки, секции и театры. <a href="/category/"><u>Смотреть по категориям</u></a></p><ul class="vgrid">{items}</ul>',
-         "/venues/")
+         "/venues/", route={"route": "venues"})
 
     # категории
     def age_range(evs):
@@ -535,6 +564,42 @@ def main():
          f'<h1>Занятия для детей в Белграде по категориям</h1><p class="lead">Выберите направление — покажем площадки, расписание и цены.</p>'
          f'<ul class="cards">{hub}</ul>', "/category/")
     urls.append(("/category/", "0.8"))
+
+    # «Расписание»: регулярные занятия по дням недели
+    regular = [e for e in events if not e.get("date")]
+    by_wd = ""
+    for i, wd_name in enumerate(WEEKDAYS):
+        day = sorted((e for e in regular if i in (e.get("wd") or [])), key=lambda e: e.get("time") or "")
+        if day:
+            by_wd += f'<h2>{wd_name}</h2><ul class="cards">{"".join(event_line(e) for e in day)}</ul>'
+    page("schedule", "Расписание детских кружков и секций в Белграде по дням недели | Клубок",
+         f"Постоянные детские занятия в Белграде: {len(regular)} {plural(len(regular), ('занятие', 'занятия', 'занятий'))} "
+         "по дням недели — танцы, языки, плавание, творчество, спорт. Возраст, время, цены и запись.",
+         f'<h1>Расписание детских занятий в Белграде</h1><p class="lead">Постоянные кружки и секции по дням недели.</p>{by_wd}',
+         "/schedule/", route={"route": "schedule"}, wide=True)
+    urls.append(("/schedule/", "0.9"))
+
+    # все ближайшие события
+    dated = [e for e in events if e.get("date")]
+    page("events/all", "Детские события в Белграде: спектакли, мастер-классы, праздники | Клубок",
+         "Ближайшие разовые детские события в Белграде: спектакли, концерты, мастер-классы и праздники. Даты, возраст, цены и запись.",
+         f'<h1>Ближайшие детские события в Белграде</h1><p class="lead">Спектакли, мастер-классы, концерты и праздники.</p>'
+         f'<ul class="cards">{"".join(event_line(e) for e in dated)}</ul>',
+         "/events/all/", route={"route": "eventsAll"})
+    urls.append(("/events/all/", "0.9"))
+
+    page("favs", "Моё избранное | Клубок", "Сохранённые занятия и события.",
+         '<h1>Моё избранное</h1><p class="lead">Сохранённые занятия и события.</p>',
+         "/favs/", route={"route": "favs"}, noindex=True)
+
+    # Любой другой адрес: GitHub Pages отдаёт 404.html, приложение разбирает путь само.
+    page("", "Клубок — афиша детских занятий и мероприятий в Белграде",
+         "Детские кружки, секции и мероприятия в Белграде.",
+         '<h1>Страница не найдена</h1><p class="lead"><a href="/"><u>Открыть афишу</u></a></p>',
+         "/", route={}, noindex=True, out=ROOT / "404.html")
+
+    (ROOT / "data" / "routes.json").write_text(json.dumps(
+        {"v": slugs, "e": EPATHS}, ensure_ascii=False, sort_keys=True, separators=(",", ":")) + "\n", encoding="utf-8")
 
     # sitemap
     lastmod = today.isoformat()
