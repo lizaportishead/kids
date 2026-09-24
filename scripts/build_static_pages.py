@@ -171,6 +171,9 @@ def _js_block(src, name):
 
 APP = _app_source()
 VENUE_LOGO = dict(re.findall(r'"([^"\n]+)":\s*"(data/images/venue-[^"\n]+)"', _js_block(APP, "VENUE_LOGO")))
+# Не детские площадки (ТЦ, арены, организаторы квестов): нет в списке /venues/.
+_h = APP.find("const VENUE_HIDDEN = new Set([")
+VENUE_HIDDEN = set(re.findall(r'^\s*"([^"\n]+)"', APP[_h:APP.find("]);", _h)], re.M)) if _h >= 0 else set()
 VENUE_CONTACTS = {}
 for _m in re.finditer(r'^\s*"([^"\n]+)":\s*\{([^}\n]*)\}', _js_block(APP, "VENUE_CONTACTS"), re.M):
     VENUE_CONTACTS[_m.group(1)] = dict(re.findall(r'(\w+):\s*"([^"]*)"', _m.group(2)))
@@ -468,7 +471,7 @@ def main():
     items = "".join(
         f'<li><a class="ecard" href="/{slugs[n]}/">{logo(n)}<div><div class="t">{esc(n)}</div>'
         f'<div class="s">{esc(next((e["address"] for e in venues[n] if e.get("address")), ""))} · занятий: {len(venues[n])}</div></div></a></li>'
-        for n in sorted(venues))
+        for n in sorted(venues) if n not in VENUE_HIDDEN)
     page("venues", "Площадки: детские студии, кружки и клубы в Белграде | Клубок",
          "Русскоязычные детские студии, кружки, секции и театры в Белграде: адреса, расписание занятий, возраст и цены.",
          f'<h1>Площадки в Белграде</h1><p class="lead">Детские студии, кружки, секции и театры. <a href="/category/"><u>Смотреть по категориям</u></a></p><ul class="vgrid">{items}</ul>',
