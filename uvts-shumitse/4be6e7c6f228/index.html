@@ -76,14 +76,23 @@ h2{font-size:22px;line-height:1.2;margin:36px 0 14px;font-weight:700}
 .vgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:12px;margin:0;padding:0;list-style:none}
 footer{border-top:1px solid #eee6d6;margin-top:24px;padding:24px 28px;font-size:14px;color:var(--muted);text-align:center}
 @media(max-width:900px){.detail{grid-template-columns:1fr;gap:28px}.detail h1{font-size:34px}}
+.boot{display:none}
+.booting .boot{display:flex;position:fixed;inset:0;z-index:9999;align-items:center;justify-content:center;background:#fffdf7}
+.boot div{width:96px;height:96px;animation:bob 1.9s cubic-bezier(.45,0,.55,1) infinite}
+.boot img{width:100%;height:100%;display:block;animation:spin 1.9s cubic-bezier(.65,0,.35,1) infinite}
+@keyframes spin{to{transform:rotate(360deg)}}@keyframes bob{50%{transform:translateY(-12px)}}
+@media(prefers-reduced-motion:reduce){.boot div,.boot img{animation:none}}
 @media(max-width:640px){.site{padding:12px 16px}.brand span{display:none}.brand img{height:44px}.nav a{padding:8px 10px;font-size:15px}.nav a.add{display:none}h1{font-size:28px}.vcard{padding:20px}}
 </style>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Event", "name": "Легенда о зеленом граду", "startDate": "2026-09-26T18:30:00", "eventStatus": "https://schema.org/EventScheduled", "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode", "description": "У суботу, 26. септембра, на Летњој сцени УВЦ „Шумице“, малишане очекује бесплатна представа „Легенда о зеленом граду“, са почетком у 18.30 часова. У о", "location": {"@type": "Place", "name": "УВЦ «Шумице»", "address": {"@type": "PostalAddress", "streetAddress": "Устаничка 125/1, Вождовац, Белград", "addressLocality": "Belgrade", "addressCountry": "RS"}}, "image": "https://klubok.kids/data/images/uvcsumice-legenda-o-zelenom-gradu.jpg"}</script>
+<script>document.documentElement.className+=" booting";window.__KLUBOK_ROUTE={"id": "4be6e7c6f228", "path": "/uvts-shumitse/4be6e7c6f228/", "title": "Легенда о зеленом граду · 3–10 лет · 26 сентября 2026 в 18:30 — УВЦ «Шумице», Белград | Клубок"};
+fetch("/index.html").then(function(r){if(!r.ok)throw r.status;return r.text()}).then(function(t){document.open();document.write(t);document.close()}).catch(function(){document.documentElement.classList.remove("booting")});</script>
 </head>
 <body>
+<div class="boot" aria-hidden="true"><div><img src="/loader.png" alt=""></div></div>
 <header class="site">
 <a class="brand" href="/"><img src="/logo.png" alt="Клубок"><span>Куда сходить с ребёнком в Белграде</span></a>
-<nav class="nav"><a href="/">Расписание</a><a href="/venues/">Площадки</a><a class="add" href="/">Открыть афишу</a></nav>
+<nav class="nav"><a href="/">Афиша</a><a href="/schedule/">Расписание</a><a href="/venues/">Площадки</a></nav>
 </header>
 <main class="page wide"><a class="back" href="/uvts-shumitse/">‹ Назад к площадке</a>
 <div class="detail">
@@ -95,8 +104,8 @@ footer{border-top:1px solid #eee6d6;margin-top:24px;padding:24px 28px;font-size:
 <hr class="rule">
 <a class="vrow" href="/uvts-shumitse/"><div class="logo mono">У</div><div><b>УВЦ «Шумице» ›</b><div class="a">Устаничка 125/1, Вождовац, Белград</div></div></a>
 </div>
-<aside><img class="hero" src="/data/images/uvcsumice-legenda-o-zelenom-gradu.jpg" alt="Легенда о зеленом граду"><div class="pricecard"><div class="lab">Стоимость</div><div class="price">бесплатно</div><a class="btn" href="https://uvcsumice.rs/event/legenda-o-zelenom-gradu-besplatna-predstava-za-decu-u-sumicama/" rel="noopener">Подробнее на сайте центра</a><a class="btn alt" href="/#event/4be6e7c6f228">Открыть в афише</a><div class="note">Информация взята из открытого источника — УВЦ «Шумице»</div></div></aside>
+<aside><img class="hero" src="/data/images/uvcsumice-legenda-o-zelenom-gradu.jpg" alt="Легенда о зеленом граду"><div class="pricecard"><div class="lab">Стоимость</div><div class="price">бесплатно</div><a class="btn" href="https://uvcsumice.rs/event/legenda-o-zelenom-gradu-besplatna-predstava-za-decu-u-sumicama/" rel="noopener">Подробнее на сайте центра</a><div class="note">Информация взята из открытого источника — УВЦ «Шумице»</div></div></aside>
 </div></main>
-<footer>Клубок — афиша детских занятий и мероприятий в Белграде · <a href="/">Открыть афишу</a></footer>
+<footer>Клубок — афиша детских занятий и мероприятий в Белграде · <a href="/category/">Занятия по категориям</a></footer>
 </body>
 </html>

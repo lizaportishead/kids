@@ -47,7 +47,7 @@ jobs:
         run: |
           git config user.name  "klubok-bot"
           git config user.email "bot@users.noreply.github.com"
-          git add -A data venues category sitemap.xml static-pages.txt
+          git add -A data venues category events schedule favs 404.html sitemap.xml static-pages.txt
           # каталоги площадок лежат в корне сайта: и текущие, и удалённые с прошлого раза
           for d in $(cat static-pages.txt /tmp/static-pages-prev.txt 2>/dev/null | sort -u); do git add -A -- "$d"; done
           git diff --staged --quiet || git commit -m "Афиша: обновление $(date -u +%F)"
