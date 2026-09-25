@@ -56,12 +56,22 @@
     <priority>0.5</priority>
   </url>
   <url>
+    <loc>https://klubok.kids/crno-bela-ma-ka/rannee-razvitie-2-3-2026-09-26/</loc>
+    <lastmod>2026-09-25</lastmod>
+    <priority>0.5</priority>
+  </url>
+  <url>
     <loc>https://klubok.kids/biblioteka-bora-stankovi/dg-sis-milija-2026-09-26/</loc>
     <lastmod>2026-09-25</lastmod>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://klubok.kids/lozhionitsa/dg-lozionica-izrada-nakita-2026-09-26/</loc>
+    <lastmod>2026-09-25</lastmod>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://klubok.kids/crno-bela-ma-ka/rannee-razvitie-35-45-2026-09-26/</loc>
     <lastmod>2026-09-25</lastmod>
     <priority>0.5</priority>
   </url>
@@ -92,6 +102,16 @@
   </url>
   <url>
     <loc>https://klubok.kids/palata-nauke/dg-palata-suncev-sistem-2026-09-26/</loc>
+    <lastmod>2026-09-25</lastmod>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://klubok.kids/crno-bela-ma-ka/podgotovka-k-shkole-4-55-2026-09-26/</loc>
+    <lastmod>2026-09-25</lastmod>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://klubok.kids/crno-bela-ma-ka/robototehnika-4-7-2026-09-26/</loc>
     <lastmod>2026-09-25</lastmod>
     <priority>0.5</priority>
   </url>
@@ -1796,6 +1816,11 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://klubok.kids/crno-bela-ma-ka/</loc>
+    <lastmod>2026-09-25</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://klubok.kids/biblioteka-bora-stankovi/</loc>
     <lastmod>2026-09-25</lastmod>
     <priority>0.7</priority>
@@ -2001,12 +2026,17 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://klubok.kids/category/early_dev/</loc>
+    <lastmod>2026-09-25</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://klubok.kids/category/swimming/</loc>
     <lastmod>2026-09-25</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://klubok.kids/category/early_dev/</loc>
+    <loc>https://klubok.kids/category/school_prep/</loc>
     <lastmod>2026-09-25</lastmod>
     <priority>0.8</priority>
   </url>
@@ -2021,22 +2051,17 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://klubok.kids/category/school_prep/</loc>
-    <lastmod>2026-09-25</lastmod>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://klubok.kids/category/games/</loc>
     <lastmod>2026-09-25</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://klubok.kids/category/sport/</loc>
+    <loc>https://klubok.kids/category/robotics/</loc>
     <lastmod>2026-09-25</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://klubok.kids/category/robotics/</loc>
+    <loc>https://klubok.kids/category/sport/</loc>
     <lastmod>2026-09-25</lastmod>
     <priority>0.8</priority>
   </url>
@@ -2054,6 +2079,136 @@
     <loc>https://klubok.kids/schedule/</loc>
     <lastmod>2026-09-25</lastmod>
     <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://klubok.kids/schedule/?evlang=ru</loc>
+    <lastmod>2026-09-25</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://klubok.kids/schedule/?evlang=sr</loc>
+    <lastmod>2026-09-25</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://klubok.kids/schedule/?age=1</loc>
+    <lastmod>2026-09-25</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://klubok.kids/schedule/?age=2</loc>
+    <lastmod>2026-09-25</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://klubok.kids/schedule/?age=3</loc>
+    <lastmod>2026-09-25</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://klubok.kids/schedule/?age=4</loc>
+    <lastmod>2026-09-25</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://klubok.kids/schedule/?age=5</loc>
+    <lastmod>2026-09-25</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://klubok.kids/schedule/?age=6</loc>
+    <lastmod>2026-09-25</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://klubok.kids/schedule/?age=7</loc>
+    <lastmod>2026-09-25</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://klubok.kids/schedule/?age=8</loc>
+    <lastmod>2026-09-25</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://klubok.kids/schedule/?age=9</loc>
+    <lastmod>2026-09-25</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://klubok.kids/schedule/?age=10</loc>
+    <lastmod>2026-09-25</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://klubok.kids/schedule/?age=11</loc>
+    <lastmod>2026-09-25</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://klubok.kids/schedule/?age=12</loc>
+    <lastmod>2026-09-25</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://klubok.kids/schedule/?cat=art&amp;evlang=ru</loc>
+    <lastmod>2026-09-25</lastmod>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://klubok.kids/schedule/?cat=dance&amp;evlang=ru</loc>
+    <lastmod>2026-09-25</lastmod>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://klubok.kids/schedule/?cat=early_dev&amp;evlang=ru</loc>
+    <lastmod>2026-09-25</lastmod>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://klubok.kids/schedule/?cat=games&amp;evlang=ru</loc>
+    <lastmod>2026-09-25</lastmod>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://klubok.kids/schedule/?cat=languages&amp;evlang=ru</loc>
+    <lastmod>2026-09-25</lastmod>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://klubok.kids/schedule/?cat=music&amp;evlang=ru</loc>
+    <lastmod>2026-09-25</lastmod>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://klubok.kids/schedule/?cat=reading&amp;evlang=ru</loc>
+    <lastmod>2026-09-25</lastmod>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://klubok.kids/schedule/?cat=robotics&amp;evlang=ru</loc>
+    <lastmod>2026-09-25</lastmod>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://klubok.kids/schedule/?cat=school_prep&amp;evlang=ru</loc>
+    <lastmod>2026-09-25</lastmod>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://klubok.kids/schedule/?cat=science&amp;evlang=ru</loc>
+    <lastmod>2026-09-25</lastmod>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://klubok.kids/schedule/?cat=sport&amp;evlang=ru</loc>
+    <lastmod>2026-09-25</lastmod>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://klubok.kids/schedule/?cat=swimming&amp;evlang=ru</loc>
+    <lastmod>2026-09-25</lastmod>
+    <priority>0.5</priority>
   </url>
   <url>
     <loc>https://klubok.kids/events/all/</loc>

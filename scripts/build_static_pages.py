@@ -244,6 +244,7 @@ def crumbs_back(href, text):
 # разберёт адрес само; __KLUBOK_ROUTE подсказывает раздел, пока грузится
 # data/routes.json. Если приложение не скачалось, остаётся текст страницы.
 BOOT = """<script>document.documentElement.className+=" booting";window.__KLUBOK_ROUTE=%s;
+(function(){var q=function(s,a){var e=document.querySelector(s);return e?e.getAttribute(a):""};window.__KLUBOK_HEAD={path:window.__KLUBOK_ROUTE.path||"",canonical:q('link[rel="canonical"]',"href"),robots:q('meta[name="robots"]',"content"),description:q('meta[name="description"]',"content")}})();
 fetch("/index.html").then(function(r){if(!r.ok)throw r.status;return r.text()}).then(function(t){document.open();document.write(t);document.close()}).catch(function(){document.documentElement.classList.remove("booting")});</script>"""
 
 
@@ -578,6 +579,16 @@ def main():
          f'<h1>Расписание детских занятий в Белграде</h1><p class="lead">Постоянные кружки и секции по дням недели.</p>{by_wd}',
          "/schedule/", route={"route": "schedule"}, wide=True)
     urls.append(("/schedule/", "0.9"))
+    # Расписание с фильтрами: простые сочетания, у которых приложение ставит свой canonical
+    # (порядок параметров cat → age → evlang как в приложении). Мелкие (<3 занятий) не добавляем.
+    for lang in ("ru", "sr"):
+        urls.append((f"/schedule/?evlang={lang}", "0.6"))
+    for a in range(0, 13):
+        if sum(1 for e in regular if (e.get("age") or [0, 99])[0] <= a <= (e.get("age") or [0, 99])[1]) >= 3:
+            urls.append((f"/schedule/?age={a}", "0.6"))
+    for c in sorted({e.get("category") for e in regular if e.get("category")}):
+        if sum(1 for e in regular if e.get("category") == c) >= 3:
+            urls.append((f"/schedule/?cat={quote(c)}&evlang=ru", "0.5"))
 
     # все ближайшие события
     dated = [e for e in events if e.get("date")]
@@ -604,7 +615,7 @@ def main():
     # sitemap
     lastmod = today.isoformat()
     rows = "".join(
-        f"  <url>\n    <loc>{SITE}{u}</loc>\n    <lastmod>{lastmod}</lastmod>\n    <priority>{p}</priority>\n  </url>\n"
+        f"  <url>\n    <loc>{SITE}{u.replace('&', '&amp;')}</loc>\n    <lastmod>{lastmod}</lastmod>\n    <priority>{p}</priority>\n  </url>\n"
         for u, p in urls)
     (ROOT / "sitemap.xml").write_text(
         '<?xml version="1.0" encoding="UTF-8"?>\n'
