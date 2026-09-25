@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow, noarchive">
+<title>Иконки — дизайн-система Клубка</title>
+<link rel="icon" href="/favicon.ico">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700;800&display=swap">
+<link rel="stylesheet" href="site.css"></head>
+<body><div class="app"><aside class="side"><a class="brand" href="./"><img src="/logo.png" alt="Клубок"><span>Дизайн-система</span></a><nav class="nav"><div class="nav-h">Основы</div><a href="./">Обзор</a><a href="tokens.html">Токены</a><a href="content.html">Тексты и данные</a><a href="layout.html">Сетка и адаптив</a><a href="assets.html">Логотипы</a><div class="nav-h">Компоненты</div><a href="navigation.html">Навигация<small>4</small></a><a href="buttons.html">Кнопки<small>4</small></a><a href="filters.html">Фильтры<small>4</small></a><a href="calendar.html">Календарь<small>3</small></a><a href="cards.html">Карточки<small>7</small></a><a href="headings.html">Заголовки и метки<small>3</small></a><a href="event-page.html">Страница события<small>5</small></a><a href="overlays.html">Окна и состояния<small>4</small></a><a href="mobile.html">Мобильная версия<small>5</small></a><a href="icons.html" aria-current=page>Иконки<small>1</small></a></nav></aside>
+<main><div class="wrap"><h1>Иконки</h1><p class="lede">Разметка снята с живого сайта klubok.kids 25 сентября 2026 года. Все варианты показаны так, как они выглядят на сайте.</p>
+<div class="toc"><a href="#Icons">Icons</a></div>
+<section class="comp" id="Icons"><div class="comp-h"><h2>Icons</h2><a href="c/Icons.html" target="_blank" rel="noopener">открыть отдельно ↗</a></div><div class="prose"><p>Иконки — встроенные SVG в стиле Tabler: сетка 24×24, без заливки, скруглённые концы, толщина линии 1,8–2,4.</p>
+<ul><li>Размеры по месту: 12px (стрелка в чипе, линия 2,4), 14–15px (метка места), 16px (кнопки), 18–22px (сердце), 24px (категории, линия 1,8).</li><li>Цвет — <code>currentColor</code> или прямо в разметке: <code>brand-deep</code> для меток места и иконок категорий, <code>icon-idle</code> для неактивного сердца, <code>muted-2</code> для поиска.</li><li>Отдельных файлов иконок нет: SVG вставлены в шаблон. Эмодзи в интерфейсе не используются; из глифов — только ✕ и ☰.</li></ul></div><div class="stage" data-w="1100"><div class="stage-in" style="height:900px"><iframe src="c/Icons.html" loading="lazy" title="Icons" style="height:900px;width:100%"></iframe></div></div></section></div></main></div><script>
+(function(){
+  function fit(st){
+    var fr=st.querySelector('iframe'), inner=st.querySelector('.stage-in');
+    var w=+st.dataset.w||0, cw=st.clientWidth, lw=w||cw, s=Math.min(1,cw/lw);
+    fr.style.width=lw+'px'; fr.style.transform='scale('+s+')';
+    try{var d=fr.contentDocument; var h=Math.max(d.documentElement.scrollHeight,d.body?d.body.scrollHeight:0); if(h>40){fr.style.height=h+'px'; inner.style.height=Math.ceil(h*s)+'px';}}catch(e){}
+  }
+  var all=[].slice.call(document.querySelectorAll('.stage'));
+  all.forEach(function(st){var fr=st.querySelector('iframe'); fr.addEventListener('load',function(){fit(st); setTimeout(function(){fit(st)},600); setTimeout(function(){fit(st)},2000);});});
+  window.addEventListener('resize',function(){all.forEach(fit)});
+})();
+</script></body></html>

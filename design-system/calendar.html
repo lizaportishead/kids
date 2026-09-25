@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow, noarchive">
+<title>Календарь — дизайн-система Клубка</title>
+<link rel="icon" href="/favicon.ico">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700;800&display=swap">
+<link rel="stylesheet" href="site.css"></head>
+<body><div class="app"><aside class="side"><a class="brand" href="./"><img src="/logo.png" alt="Клубок"><span>Дизайн-система</span></a><nav class="nav"><div class="nav-h">Основы</div><a href="./">Обзор</a><a href="tokens.html">Токены</a><a href="content.html">Тексты и данные</a><a href="layout.html">Сетка и адаптив</a><a href="assets.html">Логотипы</a><div class="nav-h">Компоненты</div><a href="navigation.html">Навигация<small>4</small></a><a href="buttons.html">Кнопки<small>4</small></a><a href="filters.html">Фильтры<small>4</small></a><a href="calendar.html" aria-current=page>Календарь<small>3</small></a><a href="cards.html">Карточки<small>7</small></a><a href="headings.html">Заголовки и метки<small>3</small></a><a href="event-page.html">Страница события<small>5</small></a><a href="overlays.html">Окна и состояния<small>4</small></a><a href="mobile.html">Мобильная версия<small>5</small></a><a href="icons.html">Иконки<small>1</small></a></nav></aside>
+<main><div class="wrap"><h1>Календарь</h1><p class="lede">Разметка снята с живого сайта klubok.kids 25 сентября 2026 года. Все варианты показаны так, как они выглядят на сайте.</p>
+<div class="toc"><a href="#DateStrip">DateStrip</a><a href="#GroupDivider">GroupDivider</a><a href="#WeekdayStrip">WeekdayStrip</a></div>
+<section class="comp" id="DateStrip"><div class="comp-h"><h2>DateStrip</h2><a href="c/DateStrip.html" target="_blank" rel="noopener">открыть отдельно ↗</a></div><div class="prose"><p>Горизонтальная лента дат на главной (Афиша). Прилипает к верху при прокрутке.</p>
+<ul><li>День: сокращение 11px uppercase <code>muted-2</code> + число 20px/700.</li><li>Сегодня/выбранный — зелёная плашка <code>accent</code>, текст <code>ink-strong</code>.</li><li>Выходные — число <code>brand</code> (#ff6032). Прошедшие дни — <code>opacity: .6</code>.</li><li>Между месяцами — вертикальная подпись месяца («ОКТ»).</li><li>По краям — стрелки «Раньше / Позже».</li></ul></div><div class="stage" data-w="1440"><div class="stage-in" style="height:150px"><iframe src="c/DateStrip.html" loading="lazy" title="DateStrip" style="height:150px;width:100%"></iframe></div></div></section>
+<section class="comp" id="GroupDivider"><div class="comp-h"><h2>GroupDivider</h2><a href="c/GroupDivider.html" target="_blank" rel="noopener">открыть отдельно ↗</a></div><div class="prose"><p>Подзаголовок группы внутри ленты: день («ПТ, 25 СЕНТЯБРЯ») или время суток («УТРОМ / ДНЁМ / ВЕЧЕРОМ») + тонкая линия + счётчик справа.</p>
+<ul><li>Метка — 13px/700, uppercase, трекинг 1px, цвет <code>accent-label</code> (#8ba86b).</li><li>Линия — 1px <code>line</code>; счётчик — 14px <code>muted-2</code>.</li><li>Контраст <code>accent-label</code> на белом ≈ 2,6:1 — ниже нормы (так на сайте).</li></ul></div><div class="stage" data-w="1100"><div class="stage-in" style="height:260px"><iframe src="c/GroupDivider.html" loading="lazy" title="GroupDivider" style="height:260px;width:100%"></iframe></div></div></section>
+<section class="comp" id="WeekdayStrip"><div class="comp-h"><h2>WeekdayStrip</h2><a href="c/WeekdayStrip.html" target="_blank" rel="noopener">открыть отдельно ↗</a></div><div class="prose"><p>Переключатель дней недели в расписании кружков: полное название дня + счётчик занятий.</p>
+<ul><li>Выбранный день — текст <code>accent-deep</code> (#4c8a12) и зелёная линия снизу; выходные — <code>brand</code>.</li><li>Над текущим днём — маленький бейдж «Сегодня».</li><li>Если места мало (контейнер &lt;870px) — «Пн, Вт…», на телефоне — только «ПН» без счётчика.</li></ul></div><div class="stage" data-w="1280"><div class="stage-in" style="height:170px"><iframe src="c/WeekdayStrip.html" loading="lazy" title="WeekdayStrip" style="height:170px;width:100%"></iframe></div></div></section></div></main></div><script>
+(function(){
+  function fit(st){
+    var fr=st.querySelector('iframe'), inner=st.querySelector('.stage-in');
+    var w=+st.dataset.w||0, cw=st.clientWidth, lw=w||cw, s=Math.min(1,cw/lw);
+    fr.style.width=lw+'px'; fr.style.transform='scale('+s+')';
+    try{var d=fr.contentDocument; var h=Math.max(d.documentElement.scrollHeight,d.body?d.body.scrollHeight:0); if(h>40){fr.style.height=h+'px'; inner.style.height=Math.ceil(h*s)+'px';}}catch(e){}
+  }
+  var all=[].slice.call(document.querySelectorAll('.stage'));
+  all.forEach(function(st){var fr=st.querySelector('iframe'); fr.addEventListener('load',function(){fit(st); setTimeout(function(){fit(st)},600); setTimeout(function(){fit(st)},2000);});});
+  window.addEventListener('resize',function(){all.forEach(fit)});
+})();
+</script></body></html>

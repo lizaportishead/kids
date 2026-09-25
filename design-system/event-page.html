@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow, noarchive">
+<title>Страница события — дизайн-система Клубка</title>
+<link rel="icon" href="/favicon.ico">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700;800&display=swap">
+<link rel="stylesheet" href="site.css"></head>
+<body><div class="app"><aside class="side"><a class="brand" href="./"><img src="/logo.png" alt="Клубок"><span>Дизайн-система</span></a><nav class="nav"><div class="nav-h">Основы</div><a href="./">Обзор</a><a href="tokens.html">Токены</a><a href="content.html">Тексты и данные</a><a href="layout.html">Сетка и адаптив</a><a href="assets.html">Логотипы</a><div class="nav-h">Компоненты</div><a href="navigation.html">Навигация<small>4</small></a><a href="buttons.html">Кнопки<small>4</small></a><a href="filters.html">Фильтры<small>4</small></a><a href="calendar.html">Календарь<small>3</small></a><a href="cards.html">Карточки<small>7</small></a><a href="headings.html">Заголовки и метки<small>3</small></a><a href="event-page.html" aria-current=page>Страница события<small>5</small></a><a href="overlays.html">Окна и состояния<small>4</small></a><a href="mobile.html">Мобильная версия<small>5</small></a><a href="icons.html">Иконки<small>1</small></a></nav></aside>
+<main><div class="wrap"><h1>Страница события</h1><p class="lede">Разметка снята с живого сайта klubok.kids 25 сентября 2026 года. Все варианты показаны так, как они выглядят на сайте.</p>
+<div class="toc"><a href="#EventHeader">EventHeader</a><a href="#EventInfo">EventInfo</a><a href="#PriceCard">PriceCard</a><a href="#RelatedEvents">RelatedEvents</a><a href="#VenueHero">VenueHero</a></div>
+<section class="comp" id="EventHeader"><div class="comp-h"><h2>EventHeader</h2><a href="c/EventHeader.html" target="_blank" rel="noopener">открыть отдельно ↗</a></div><div class="prose"><p>Заголовок страницы события или занятия.</p>
+<ul><li>Название — 42px/800, трекинг −0,5px, <code>ink-strong</code>, <code>text-wrap: balance</code>.</li><li>Строка даты — 22px/800, <code>brand</code>. Для разовых — «Суббота, 26 сентября · 10:00», для постоянных — «по понедельникам и четвергам в 10:30».</li><li>На телефоне 27/33px и 18/24px.</li></ul></div><div class="stage" data-w="1200"><div class="stage-in" style="height:300px"><iframe src="c/EventHeader.html" loading="lazy" title="EventHeader" style="height:300px;width:100%"></iframe></div></div></section>
+<section class="comp" id="EventInfo"><div class="comp-h"><h2>EventInfo</h2><a href="c/EventInfo.html" target="_blank" rel="noopener">открыть отдельно ↗</a></div><div class="prose"><p>Тело страницы события: абзац описания (16px, <code>ink-soft</code>), атрибуты (возраст, длительность, язык), блок площадки с логотипом 58px и кнопками маршрута/ссылки, затем карта.</p></div><div class="stage" data-w="1200"><div class="stage-in" style="height:560px"><iframe src="c/EventInfo.html" loading="lazy" title="EventInfo" style="height:560px;width:100%"></iframe></div></div></section>
+<section class="comp" id="PriceCard"><div class="comp-h"><h2>PriceCard</h2><a href="c/PriceCard.html" target="_blank" rel="noopener">открыть отдельно ↗</a></div><div class="prose"><p>Правая колонка страницы события: большое фото (радиус 24px) и липкая карточка цены.</p>
+<ul><li>Карточка: рамка <code>line-soft</code>, радиус 20px, поля 22px, тень <code>shadow-card</code>.</li><li>«Цена» — подпись-атрибут, сумма 22px/800. Кнопка записи — основная крупная.</li><li>Под кнопкой — источник информации 12px <code>muted</code>.</li></ul></div><div class="stage" data-w="1200"><div class="stage-in" style="height:620px"><iframe src="c/PriceCard.html" loading="lazy" title="PriceCard" style="height:620px;width:100%"></iframe></div></div></section>
+<section class="comp" id="RelatedEvents"><div class="comp-h"><h2>RelatedEvents</h2><a href="c/RelatedEvents.html" target="_blank" rel="noopener">открыть отдельно ↗</a></div><div class="prose"><p>Горизонтальные подборки внизу страницы события («Другие события в этот день», «Похожие события») и блок «Разовые события» на странице площадки.</p>
+<ul><li>Заголовок h2 — 21px/800; карточки — уменьшенные <code>EventCard</code> (фото 122px), 4 в ряд; на ≤900px — горизонтальный скролл по 224px.</li></ul></div><div class="stage" data-w="1200"><div class="stage-in" style="height:760px"><iframe src="c/RelatedEvents.html" loading="lazy" title="RelatedEvents" style="height:760px;width:100%"></iframe></div></div></section>
+<section class="comp" id="VenueHero"><div class="comp-h"><h2>VenueHero</h2><a href="c/VenueHero.html" target="_blank" rel="noopener">открыть отдельно ↗</a></div><div class="prose"><p>Верхняя карточка страницы площадки: логотип 56px, название 30px/800, список категорий через «·», адрес, контакты, ссылки.</p>
+<ul><li>Карточка — радиус 24px, тень <code>shadow-soft</code>, поля 32px.</li></ul></div><div class="stage" data-w="1000"><div class="stage-in" style="height:460px"><iframe src="c/VenueHero.html" loading="lazy" title="VenueHero" style="height:460px;width:100%"></iframe></div></div></section></div></main></div><script>
+(function(){
+  function fit(st){
+    var fr=st.querySelector('iframe'), inner=st.querySelector('.stage-in');
+    var w=+st.dataset.w||0, cw=st.clientWidth, lw=w||cw, s=Math.min(1,cw/lw);
+    fr.style.width=lw+'px'; fr.style.transform='scale('+s+')';
+    try{var d=fr.contentDocument; var h=Math.max(d.documentElement.scrollHeight,d.body?d.body.scrollHeight:0); if(h>40){fr.style.height=h+'px'; inner.style.height=Math.ceil(h*s)+'px';}}catch(e){}
+  }
+  var all=[].slice.call(document.querySelectorAll('.stage'));
+  all.forEach(function(st){var fr=st.querySelector('iframe'); fr.addEventListener('load',function(){fit(st); setTimeout(function(){fit(st)},600); setTimeout(function(){fit(st)},2000);});});
+  window.addEventListener('resize',function(){all.forEach(fit)});
+})();
+</script></body></html>

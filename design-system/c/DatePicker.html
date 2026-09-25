@@ -1,0 +1,436 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex, nofollow, noarchive">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>DatePicker</title>
+<link rel="stylesheet" href="../tokens.css"><link rel="stylesheet" href="../bundle.css">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700;800;900&display=swap">
+</head>
+<body class="ds-body">
+<main class="ds-page">
+<section class="ds-var "><div class="ds-cap">Выбор дат · по умолчанию (сегодня обведено, у дней с событиями точка)</div><div class="ds-stage"><div style="width:464px;max-width:none;flex:0 0 464px;"><div data-modal-card="1" style="width: 100%; max-width: 420px; max-height: 88vh; overflow: auto; padding: 24px 22px 22px; border-radius: 24px; background: rgb(255, 255, 255); box-shadow: rgba(32, 30, 29, 0.28) 0px 24px 56px; display: flex; flex-direction: column; gap: 16px;">
+        <div style="display: flex; align-items: center; justify-content: space-between; gap: 16px;">
+          <span style="font-size: 22px; font-weight: 800; color: rgb(53, 49, 44);">Даты</span>
+          <button aria-label="Закрыть" style="width: 40px; height: 40px; border-width: medium; border-style: none; border-color: currentcolor; border-image: none; border-radius: 999px; background: rgb(241, 239, 230); cursor: pointer; font-family: Figtree, system-ui, sans-serif; font-size: 15px; color: rgb(32, 30, 29);">✕</button>
+        </div>
+        <div style="display: flex; flex-wrap: wrap; gap: 8px;">
+            <button type="button" style="flex: 0 0 auto; box-sizing: border-box; display: inline-flex; align-items: center; justify-content: center; border-radius: 999px; font-family: Figtree, system-ui, sans-serif; font-size: 14px; font-weight: 600; color: rgb(32, 30, 29); cursor: pointer; line-height: 1; border: 1px solid rgb(217, 201, 171); background: transparent; height: 34px; padding: 0px 14px;">Сегодня</button>
+            <button type="button" style="flex: 0 0 auto; box-sizing: border-box; display: inline-flex; align-items: center; justify-content: center; border-radius: 999px; font-family: Figtree, system-ui, sans-serif; font-size: 14px; font-weight: 600; color: rgb(32, 30, 29); cursor: pointer; line-height: 1; border: 1px solid rgb(217, 201, 171); background: transparent; height: 34px; padding: 0px 14px;">Завтра</button>
+            <button type="button" style="flex: 0 0 auto; box-sizing: border-box; display: inline-flex; align-items: center; justify-content: center; border-radius: 999px; font-family: Figtree, system-ui, sans-serif; font-size: 14px; font-weight: 600; color: rgb(32, 30, 29); cursor: pointer; line-height: 1; border: 1px solid rgb(217, 201, 171); background: transparent; height: 34px; padding: 0px 14px;">Выходные</button>
+        </div>
+        <div style="display: flex; align-items: center; justify-content: space-between; gap: 8px;">
+          <button type="button" aria-label="Раньше" style="width: 36px; height: 36px; border: 1px solid rgba(0, 0, 0, 0.12); border-radius: 999px; background: transparent; font-family: Figtree, system-ui, sans-serif; font-size: 16px; color: rgb(79, 72, 63); cursor: pointer; opacity: 0.3; pointer-events: none;">‹</button>
+          <span style="font-size: 17px; font-weight: 800; color: rgb(53, 49, 44);">Сентябрь 2026</span>
+          <button type="button" aria-label="Позже" style="width: 36px; height: 36px; border: 1px solid rgba(0, 0, 0, 0.12); border-radius: 999px; background: transparent; font-family: Figtree, system-ui, sans-serif; font-size: 16px; color: rgb(79, 72, 63); cursor: pointer;">›</button>
+        </div>
+        <div style="display: grid; grid-template-columns: repeat(7, minmax(0px, 1fr)); gap: 4px;">
+            <span style="text-align: center; font-size: 11px; font-weight: 500; letter-spacing: 0.5px; text-transform: uppercase; color: rgb(153, 153, 153);">Пн</span>
+            <span style="text-align: center; font-size: 11px; font-weight: 500; letter-spacing: 0.5px; text-transform: uppercase; color: rgb(153, 153, 153);">Вт</span>
+            <span style="text-align: center; font-size: 11px; font-weight: 500; letter-spacing: 0.5px; text-transform: uppercase; color: rgb(153, 153, 153);">Ср</span>
+            <span style="text-align: center; font-size: 11px; font-weight: 500; letter-spacing: 0.5px; text-transform: uppercase; color: rgb(153, 153, 153);">Чт</span>
+            <span style="text-align: center; font-size: 11px; font-weight: 500; letter-spacing: 0.5px; text-transform: uppercase; color: rgb(153, 153, 153);">Пт</span>
+            <span style="text-align: center; font-size: 11px; font-weight: 500; letter-spacing: 0.5px; text-transform: uppercase; color: rgb(153, 153, 153);">Сб</span>
+            <span style="text-align: center; font-size: 11px; font-weight: 500; letter-spacing: 0.5px; text-transform: uppercase; color: rgb(153, 153, 153);">Вс</span>
+            <div style="display: block; min-width: 0px;">
+            </div>
+            <div style="display: block; min-width: 0px;">
+                <button type="button" style="width: 100%; height: 44px; border-width: medium; border-style: none; border-color: currentcolor; border-image: none; border-radius: 10px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 3px; padding: 0px; font-family: Figtree, system-ui, sans-serif; font-size: 15px; font-weight: 700; cursor: default; color: rgb(201, 191, 174); background: transparent;">
+                  <span>1</span>
+                  <span style="width: 5px; height: 5px; border-radius: 999px; background: transparent;"></span>
+                </button>
+            </div>
+            <div style="display: block; min-width: 0px;">
+                <button type="button" style="width: 100%; height: 44px; border-width: medium; border-style: none; border-color: currentcolor; border-image: none; border-radius: 10px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 3px; padding: 0px; font-family: Figtree, system-ui, sans-serif; font-size: 15px; font-weight: 700; cursor: default; color: rgb(201, 191, 174); background: transparent;">
+                  <span>2</span>
+                  <span style="width: 5px; height: 5px; border-radius: 999px; background: transparent;"></span>
+                </button>
+            </div>
+            <div style="display: block; min-width: 0px;">
+                <button type="button" style="width: 100%; height: 44px; border-width: medium; border-style: none; border-color: currentcolor; border-image: none; border-radius: 10px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 3px; padding: 0px; font-family: Figtree, system-ui, sans-serif; font-size: 15px; font-weight: 700; cursor: default; color: rgb(201, 191, 174); background: transparent;">
+                  <span>3</span>
+                  <span style="width: 5px; height: 5px; border-radius: 999px; background: transparent;"></span>
+                </button>
+            </div>
+            <div style="display: block; min-width: 0px;">
+                <button type="button" style="width: 100%; height: 44px; border-width: medium; border-style: none; border-color: currentcolor; border-image: none; border-radius: 10px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 3px; padding: 0px; font-family: Figtree, system-ui, sans-serif; font-size: 15px; font-weight: 700; cursor: default; color: rgb(201, 191, 174); background: transparent;">
+                  <span>4</span>
+                  <span style="width: 5px; height: 5px; border-radius: 999px; background: transparent;"></span>
+                </button>
+            </div>
+            <div style="display: block; min-width: 0px;">
+                <button type="button" style="width: 100%; height: 44px; border-width: medium; border-style: none; border-color: currentcolor; border-image: none; border-radius: 10px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 3px; padding: 0px; font-family: Figtree, system-ui, sans-serif; font-size: 15px; font-weight: 700; cursor: default; color: rgb(201, 191, 174); background: transparent;">
+                  <span>5</span>
+                  <span style="width: 5px; height: 5px; border-radius: 999px; background: transparent;"></span>
+                </button>
+            </div>
+            <div style="display: block; min-width: 0px;">
+                <button type="button" style="width: 100%; height: 44px; border-width: medium; border-style: none; border-color: currentcolor; border-image: none; border-radius: 10px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 3px; padding: 0px; font-family: Figtree, system-ui, sans-serif; font-size: 15px; font-weight: 700; cursor: default; color: rgb(201, 191, 174); background: transparent;">
+                  <span>6</span>
+                  <span style="width: 5px; height: 5px; border-radius: 999px; background: transparent;"></span>
+                </button>
+            </div>
+            <div style="display: block; min-width: 0px;">
+                <button type="button" style="width: 100%; height: 44px; border-width: medium; border-style: none; border-color: currentcolor; border-image: none; border-radius: 10px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 3px; padding: 0px; font-family: Figtree, system-ui, sans-serif; font-size: 15px; font-weight: 700; cursor: default; color: rgb(201, 191, 174); background: transparent;">
+                  <span>7</span>
+                  <span style="width: 5px; height: 5px; border-radius: 999px; background: transparent;"></span>
+                </button>
+            </div>
+            <div style="display: block; min-width: 0px;">
+                <button type="button" style="width: 100%; height: 44px; border-width: medium; border-style: none; border-color: currentcolor; border-image: none; border-radius: 10px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 3px; padding: 0px; font-family: Figtree, system-ui, sans-serif; font-size: 15px; font-weight: 700; cursor: default; color: rgb(201, 191, 174); background: transparent;">
+                  <span>8</span>
+                  <span style="width: 5px; height: 5px; border-radius: 999px; background: transparent;"></span>
+                </button>
+            </div>
+            <div style="display: block; min-width: 0px;">
+                <button type="button" style="width: 100%; height: 44px; border-width: medium; border-style: none; border-color: currentcolor; border-image: none; border-radius: 10px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 3px; padding: 0px; font-family: Figtree, system-ui, sans-serif; font-size: 15px; font-weight: 700; cursor: default; color: rgb(201, 191, 174); background: transparent;">
+                  <span>9</span>
+                  <span style="width: 5px; height: 5px; border-radius: 999px; background: transparent;"></span>
+                </button>
+            </div>
+            <div style="display: block; min-width: 0px;">
+                <button type="button" style="width: 100%; height: 44px; border-width: medium; border-style: none; border-color: currentcolor; border-image: none; border-radius: 10px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 3px; padding: 0px; font-family: Figtree, system-ui, sans-serif; font-size: 15px; font-weight: 700; cursor: default; color: rgb(201, 191, 174); background: transparent;">
+                  <span>10</span>
+                  <span style="width: 5px; height: 5px; border-radius: 999px; background: transparent;"></span>
+                </button>
+            </div>
+            <div style="display: block; min-width: 0px;">
+                <button type="button" style="width: 100%; height: 44px; border-width: medium; border-style: none; border-color: currentcolor; border-image: none; border-radius: 10px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 3px; padding: 0px; font-family: Figtree, system-ui, sans-serif; font-size: 15px; font-weight: 700; cursor: default; color: rgb(201, 191, 174); background: transparent;">
+                  <span>11</span>
+                  <span style="width: 5px; height: 5px; border-radius: 999px; background: transparent;"></span>
+                </button>
+            </div>
+            <div style="display: block; min-width: 0px;">
+                <button type="button" style="width: 100%; height: 44px; border-width: medium; border-style: none; border-color: currentcolor; border-image: none; border-radius: 10px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 3px; padding: 0px; font-family: Figtree, system-ui, sans-serif; font-size: 15px; font-weight: 700; cursor: default; color: rgb(201, 191, 174); background: transparent;">
+                  <span>12</span>
+                  <span style="width: 5px; height: 5px; border-radius: 999px; background: transparent;"></span>
+                </button>
+            </div>
+            <div style="display: block; min-width: 0px;">
+                <button type="button" style="width: 100%; height: 44px; border-width: medium; border-style: none; border-color: currentcolor; border-image: none; border-radius: 10px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 3px; padding: 0px; font-family: Figtree, system-ui, sans-serif; font-size: 15px; font-weight: 700; cursor: default; color: rgb(201, 191, 174); background: transparent;">
+                  <span>13</span>
+                  <span style="width: 5px; height: 5px; border-radius: 999px; background: transparent;"></span>
+                </button>
+            </div>
+            <div style="display: block; min-width: 0px;">
+                <button type="button" style="width: 100%; height: 44px; border-width: medium; border-style: none; border-color: currentcolor; border-image: none; border-radius: 10px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 3px; padding: 0px; font-family: Figtree, system-ui, sans-serif; font-size: 15px; font-weight: 700; cursor: default; color: rgb(201, 191, 174); background: transparent;">
+                  <span>14</span>
+                  <span style="width: 5px; height: 5px; border-radius: 999px; background: transparent;"></span>
+                </button>
+            </div>
+            <div style="display: block; min-width: 0px;">
+                <button type="button" style="width: 100%; height: 44px; border-width: medium; border-style: none; border-color: currentcolor; border-image: none; border-radius: 10px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 3px; padding: 0px; font-family: Figtree, system-ui, sans-serif; font-size: 15px; font-weight: 700; cursor: default; color: rgb(201, 191, 174); background: transparent;">
+                  <span>15</span>
+                  <span style="width: 5px; height: 5px; border-radius: 999px; background: transparent;"></span>
+                </button>
+            </div>
+            <div style="display: block; min-width: 0px;">
+                <button type="button" style="width: 100%; height: 44px; border-width: medium; border-style: none; border-color: currentcolor; border-image: none; border-radius: 10px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 3px; padding: 0px; font-family: Figtree, system-ui, sans-serif; font-size: 15px; font-weight: 700; cursor: default; color: rgb(201, 191, 174); background: transparent;">
+                  <span>16</span>
+                  <span style="width: 5px; height: 5px; border-radius: 999px; background: transparent;"></span>
+                </button>
+            </div>
+            <div style="display: block; min-width: 0px;">
+                <button type="button" style="width: 100%; height: 44px; border-width: medium; border-style: none; border-color: currentcolor; border-image: none; border-radius: 10px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 3px; padding: 0px; font-family: Figtree, system-ui, sans-serif; font-size: 15px; font-weight: 700; cursor: default; color: rgb(201, 191, 174); background: transparent;">
+                  <span>17</span>
+                  <span style="width: 5px; height: 5px; border-radius: 999px; background: transparent;"></span>
+                </button>
+            </div>
+            <div style="display: block; min-width: 0px;">
+                <button type="button" style="width: 100%; height: 44px; border-width: medium; border-style: none; border-color: currentcolor; border-image: none; border-radius: 10px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 3px; padding: 0px; font-family: Figtree, system-ui, sans-serif; font-size: 15px; font-weight: 700; cursor: default; color: rgb(201, 191, 174); background: transparent;">
+                  <span>18</span>
+                  <span style="width: 5px; height: 5px; border-radius: 999px; background: transparent;"></span>
+                </button>
+            </div>
+            <div style="display: block; min-width: 0px;">
+                <button type="button" style="width: 100%; height: 44px; border-width: medium; border-style: none; border-color: currentcolor; border-image: none; border-radius: 10px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 3px; padding: 0px; font-family: Figtree, system-ui, sans-serif; font-size: 15px; font-weight: 700; cursor: default; color: rgb(201, 191, 174); background: transparent;">
+                  <span>19</span>
+                  <span style="width: 5px; height: 5px; border-radius: 999px; background: transparent;"></span>
+                </button>
+            </div>
+            <div style="display: block; min-width: 0px;">
+                <button type="button" style="width: 100%; height: 44px; border-width: medium; border-style: none; border-color: currentcolor; border-image: none; border-radius: 10px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 3px; padding: 0px; font-family: Figtree, system-ui, sans-serif; font-size: 15px; font-weight: 700; cursor: default; color: rgb(201, 191, 174); background: transparent;">
+                  <span>20</span>
+                  <span style="width: 5px; height: 5px; border-radius: 999px; background: transparent;"></span>
+                </button>
+            </div>
+            <div style="display: block; min-width: 0px;">
+                <button type="button" style="width: 100%; height: 44px; border-width: medium; border-style: none; border-color: currentcolor; border-image: none; border-radius: 10px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 3px; padding: 0px; font-family: Figtree, system-ui, sans-serif; font-size: 15px; font-weight: 700; cursor: default; color: rgb(201, 191, 174); background: transparent;">
+                  <span>21</span>
+                  <span style="width: 5px; height: 5px; border-radius: 999px; background: transparent;"></span>
+                </button>
+            </div>
+            <div style="display: block; min-width: 0px;">
+                <button type="button" style="width: 100%; height: 44px; border-width: medium; border-style: none; border-color: currentcolor; border-image: none; border-radius: 10px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 3px; padding: 0px; font-family: Figtree, system-ui, sans-serif; font-size: 15px; font-weight: 700; cursor: default; color: rgb(201, 191, 174); background: transparent;">
+                  <span>22</span>
+                  <span style="width: 5px; height: 5px; border-radius: 999px; background: transparent;"></span>
+                </button>
+            </div>
+            <div style="display: block; min-width: 0px;">
+                <button type="button" style="width: 100%; height: 44px; border-width: medium; border-style: none; border-color: currentcolor; border-image: none; border-radius: 10px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 3px; padding: 0px; font-family: Figtree, system-ui, sans-serif; font-size: 15px; font-weight: 700; cursor: default; color: rgb(201, 191, 174); background: transparent;">
+                  <span>23</span>
+                  <span style="width: 5px; height: 5px; border-radius: 999px; background: transparent;"></span>
+                </button>
+            </div>
+            <div style="display: block; min-width: 0px;">
+                <button type="button" style="width: 100%; height: 44px; border-width: medium; border-style: none; border-color: currentcolor; border-image: none; border-radius: 10px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 3px; padding: 0px; font-family: Figtree, system-ui, sans-serif; font-size: 15px; font-weight: 700; cursor: default; color: rgb(201, 191, 174); background: transparent;">
+                  <span>24</span>
+                  <span style="width: 5px; height: 5px; border-radius: 999px; background: transparent;"></span>
+                </button>
+            </div>
+            <div style="display: block; min-width: 0px;">
+                <button type="button" style="width: 100%; height: 44px; border-width: medium; border-style: none; border-color: currentcolor; border-image: none; border-radius: 10px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 3px; padding: 0px; font-family: Figtree, system-ui, sans-serif; font-size: 15px; font-weight: 700; cursor: pointer; color: rgb(32, 30, 29); background: transparent; box-shadow: rgb(150, 214, 62) 0px 0px 0px 1px inset;">
+                  <span>25</span>
+                  <span style="width: 5px; height: 5px; border-radius: 999px; background: rgb(192, 95, 69);"></span>
+                </button>
+            </div>
+            <div style="display: block; min-width: 0px;">
+                <button type="button" style="width: 100%; height: 44px; border-width: medium; border-style: none; border-color: currentcolor; border-image: none; border-radius: 10px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 3px; padding: 0px; font-family: Figtree, system-ui, sans-serif; font-size: 15px; font-weight: 700; cursor: pointer; color: rgb(32, 30, 29); background: transparent;">
+                  <span>26</span>
+                  <span style="width: 5px; height: 5px; border-radius: 999px; background: rgb(192, 95, 69);"></span>
+                </button>
+            </div>
+            <div style="display: block; min-width: 0px;">
+                <button type="button" style="width: 100%; height: 44px; border-width: medium; border-style: none; border-color: currentcolor; border-image: none; border-radius: 10px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 3px; padding: 0px; font-family: Figtree, system-ui, sans-serif; font-size: 15px; font-weight: 700; cursor: pointer; color: rgb(32, 30, 29); background: transparent;">
+                  <span>27</span>
+                  <span style="width: 5px; height: 5px; border-radius: 999px; background: rgb(192, 95, 69);"></span>
+                </button>
+            </div>
+            <div style="display: block; min-width: 0px;">
+                <button type="button" style="width: 100%; height: 44px; border-width: medium; border-style: none; border-color: currentcolor; border-image: none; border-radius: 10px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 3px; padding: 0px; font-family: Figtree, system-ui, sans-serif; font-size: 15px; font-weight: 700; cursor: pointer; color: rgb(32, 30, 29); background: transparent;">
+                  <span>28</span>
+                  <span style="width: 5px; height: 5px; border-radius: 999px; background: rgb(192, 95, 69);"></span>
+                </button>
+            </div>
+            <div style="display: block; min-width: 0px;">
+                <button type="button" style="width: 100%; height: 44px; border-width: medium; border-style: none; border-color: currentcolor; border-image: none; border-radius: 10px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 3px; padding: 0px; font-family: Figtree, system-ui, sans-serif; font-size: 15px; font-weight: 700; cursor: pointer; color: rgb(32, 30, 29); background: transparent;">
+                  <span>29</span>
+                  <span style="width: 5px; height: 5px; border-radius: 999px; background: transparent;"></span>
+                </button>
+            </div>
+            <div style="display: block; min-width: 0px;">
+                <button type="button" style="width: 100%; height: 44px; border-width: medium; border-style: none; border-color: currentcolor; border-image: none; border-radius: 10px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 3px; padding: 0px; font-family: Figtree, system-ui, sans-serif; font-size: 15px; font-weight: 700; cursor: pointer; color: rgb(32, 30, 29); background: transparent;">
+                  <span>30</span>
+                  <span style="width: 5px; height: 5px; border-radius: 999px; background: rgb(192, 95, 69);"></span>
+                </button>
+            </div>
+        </div>
+        <div style="display: flex; align-items: center; gap: 12px; padding-top: 6px; border-top: 1px solid rgba(0, 0, 0, 0.08);">
+          <button style="margin-left: auto; padding: 11px 22px; border-width: medium; border-style: none; border-color: currentcolor; border-image: none; border-radius: 999px; background: rgb(255, 96, 50); color: rgb(255, 246, 236); font-family: Figtree, system-ui, sans-serif; font-size: 15px; font-weight: 700; cursor: pointer;">Готово</button>
+        </div>
+      </div></div></div></section>
+<section class="ds-var "><div class="ds-cap">Быстрый выбор «Выходные» · диапазон 26–27 выделен</div><div class="ds-stage"><div style="width:464px;max-width:none;flex:0 0 464px;"><div data-modal-card="1" style="width: 100%; max-width: 420px; max-height: 88vh; overflow: auto; padding: 24px 22px 22px; border-radius: 24px; background: rgb(255, 255, 255); box-shadow: rgba(32, 30, 29, 0.28) 0px 24px 56px; display: flex; flex-direction: column; gap: 16px;">
+        <div style="display: flex; align-items: center; justify-content: space-between; gap: 16px;">
+          <span style="font-size: 22px; font-weight: 800; color: rgb(53, 49, 44);">Даты</span>
+          <button aria-label="Закрыть" style="width: 40px; height: 40px; border-width: medium; border-style: none; border-color: currentcolor; border-image: none; border-radius: 999px; background: rgb(241, 239, 230); cursor: pointer; font-family: Figtree, system-ui, sans-serif; font-size: 15px; color: rgb(32, 30, 29);">✕</button>
+        </div>
+        <div style="display: flex; flex-wrap: wrap; gap: 8px;">
+            <button type="button" style="flex: 0 0 auto; box-sizing: border-box; display: inline-flex; align-items: center; justify-content: center; border-radius: 999px; font-family: Figtree, system-ui, sans-serif; font-size: 14px; font-weight: 600; color: rgb(32, 30, 29); cursor: pointer; line-height: 1; border: 1px solid rgb(217, 201, 171); background: transparent; height: 34px; padding: 0px 14px;">Сегодня</button>
+            <button type="button" style="flex: 0 0 auto; box-sizing: border-box; display: inline-flex; align-items: center; justify-content: center; border-radius: 999px; font-family: Figtree, system-ui, sans-serif; font-size: 14px; font-weight: 600; color: rgb(32, 30, 29); cursor: pointer; line-height: 1; border: 1px solid rgb(217, 201, 171); background: transparent; height: 34px; padding: 0px 14px;">Завтра</button>
+            <button type="button" style="flex: 0 0 auto; box-sizing: border-box; display: inline-flex; align-items: center; justify-content: center; border-radius: 999px; font-family: Figtree, system-ui, sans-serif; font-size: 14px; font-weight: 600; color: rgb(32, 30, 29); cursor: pointer; line-height: 1; border: 1px solid rgb(150, 214, 62); background: rgb(150, 214, 62); height: 34px; padding: 0px 14px;">Выходные</button>
+        </div>
+        <div style="display: flex; align-items: center; justify-content: space-between; gap: 8px;">
+          <button type="button" aria-label="Раньше" style="width: 36px; height: 36px; border: 1px solid rgba(0, 0, 0, 0.12); border-radius: 999px; background: transparent; font-family: Figtree, system-ui, sans-serif; font-size: 16px; color: rgb(79, 72, 63); cursor: pointer; opacity: 0.3; pointer-events: none;">‹</button>
+          <span style="font-size: 17px; font-weight: 800; color: rgb(53, 49, 44);">Сентябрь 2026</span>
+          <button type="button" aria-label="Позже" style="width: 36px; height: 36px; border: 1px solid rgba(0, 0, 0, 0.12); border-radius: 999px; background: transparent; font-family: Figtree, system-ui, sans-serif; font-size: 16px; color: rgb(79, 72, 63); cursor: pointer;">›</button>
+        </div>
+        <div style="display: grid; grid-template-columns: repeat(7, minmax(0px, 1fr)); gap: 4px;">
+            <span style="text-align: center; font-size: 11px; font-weight: 500; letter-spacing: 0.5px; text-transform: uppercase; color: rgb(153, 153, 153);">Пн</span>
+            <span style="text-align: center; font-size: 11px; font-weight: 500; letter-spacing: 0.5px; text-transform: uppercase; color: rgb(153, 153, 153);">Вт</span>
+            <span style="text-align: center; font-size: 11px; font-weight: 500; letter-spacing: 0.5px; text-transform: uppercase; color: rgb(153, 153, 153);">Ср</span>
+            <span style="text-align: center; font-size: 11px; font-weight: 500; letter-spacing: 0.5px; text-transform: uppercase; color: rgb(153, 153, 153);">Чт</span>
+            <span style="text-align: center; font-size: 11px; font-weight: 500; letter-spacing: 0.5px; text-transform: uppercase; color: rgb(153, 153, 153);">Пт</span>
+            <span style="text-align: center; font-size: 11px; font-weight: 500; letter-spacing: 0.5px; text-transform: uppercase; color: rgb(153, 153, 153);">Сб</span>
+            <span style="text-align: center; font-size: 11px; font-weight: 500; letter-spacing: 0.5px; text-transform: uppercase; color: rgb(153, 153, 153);">Вс</span>
+            <div style="display: block; min-width: 0px;">
+            </div>
+            <div style="display: block; min-width: 0px;">
+                <button type="button" style="width: 100%; height: 44px; border-width: medium; border-style: none; border-color: currentcolor; border-image: none; border-radius: 10px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 3px; padding: 0px; font-family: Figtree, system-ui, sans-serif; font-size: 15px; font-weight: 700; cursor: default; color: rgb(201, 191, 174); background: transparent;">
+                  <span>1</span>
+                  <span style="width: 5px; height: 5px; border-radius: 999px; background: transparent;"></span>
+                </button>
+            </div>
+            <div style="display: block; min-width: 0px;">
+                <button type="button" style="width: 100%; height: 44px; border-width: medium; border-style: none; border-color: currentcolor; border-image: none; border-radius: 10px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 3px; padding: 0px; font-family: Figtree, system-ui, sans-serif; font-size: 15px; font-weight: 700; cursor: default; color: rgb(201, 191, 174); background: transparent;">
+                  <span>2</span>
+                  <span style="width: 5px; height: 5px; border-radius: 999px; background: transparent;"></span>
+                </button>
+            </div>
+            <div style="display: block; min-width: 0px;">
+                <button type="button" style="width: 100%; height: 44px; border-width: medium; border-style: none; border-color: currentcolor; border-image: none; border-radius: 10px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 3px; padding: 0px; font-family: Figtree, system-ui, sans-serif; font-size: 15px; font-weight: 700; cursor: default; color: rgb(201, 191, 174); background: transparent;">
+                  <span>3</span>
+                  <span style="width: 5px; height: 5px; border-radius: 999px; background: transparent;"></span>
+                </button>
+            </div>
+            <div style="display: block; min-width: 0px;">
+                <button type="button" style="width: 100%; height: 44px; border-width: medium; border-style: none; border-color: currentcolor; border-image: none; border-radius: 10px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 3px; padding: 0px; font-family: Figtree, system-ui, sans-serif; font-size: 15px; font-weight: 700; cursor: default; color: rgb(201, 191, 174); background: transparent;">
+                  <span>4</span>
+                  <span style="width: 5px; height: 5px; border-radius: 999px; background: transparent;"></span>
+                </button>
+            </div>
+            <div style="display: block; min-width: 0px;">
+                <button type="button" style="width: 100%; height: 44px; border-width: medium; border-style: none; border-color: currentcolor; border-image: none; border-radius: 10px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 3px; padding: 0px; font-family: Figtree, system-ui, sans-serif; font-size: 15px; font-weight: 700; cursor: default; color: rgb(201, 191, 174); background: transparent;">
+                  <span>5</span>
+                  <span style="width: 5px; height: 5px; border-radius: 999px; background: transparent;"></span>
+                </button>
+            </div>
+            <div style="display: block; min-width: 0px;">
+                <button type="button" style="width: 100%; height: 44px; border-width: medium; border-style: none; border-color: currentcolor; border-image: none; border-radius: 10px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 3px; padding: 0px; font-family: Figtree, system-ui, sans-serif; font-size: 15px; font-weight: 700; cursor: default; color: rgb(201, 191, 174); background: transparent;">
+                  <span>6</span>
+                  <span style="width: 5px; height: 5px; border-radius: 999px; background: transparent;"></span>
+                </button>
+            </div>
+            <div style="display: block; min-width: 0px;">
+                <button type="button" style="width: 100%; height: 44px; border-width: medium; border-style: none; border-color: currentcolor; border-image: none; border-radius: 10px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 3px; padding: 0px; font-family: Figtree, system-ui, sans-serif; font-size: 15px; font-weight: 700; cursor: default; color: rgb(201, 191, 174); background: transparent;">
+                  <span>7</span>
+                  <span style="width: 5px; height: 5px; border-radius: 999px; background: transparent;"></span>
+                </button>
+            </div>
+            <div style="display: block; min-width: 0px;">
+                <button type="button" style="width: 100%; height: 44px; border-width: medium; border-style: none; border-color: currentcolor; border-image: none; border-radius: 10px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 3px; padding: 0px; font-family: Figtree, system-ui, sans-serif; font-size: 15px; font-weight: 700; cursor: default; color: rgb(201, 191, 174); background: transparent;">
+                  <span>8</span>
+                  <span style="width: 5px; height: 5px; border-radius: 999px; background: transparent;"></span>
+                </button>
+            </div>
+            <div style="display: block; min-width: 0px;">
+                <button type="button" style="width: 100%; height: 44px; border-width: medium; border-style: none; border-color: currentcolor; border-image: none; border-radius: 10px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 3px; padding: 0px; font-family: Figtree, system-ui, sans-serif; font-size: 15px; font-weight: 700; cursor: default; color: rgb(201, 191, 174); background: transparent;">
+                  <span>9</span>
+                  <span style="width: 5px; height: 5px; border-radius: 999px; background: transparent;"></span>
+                </button>
+            </div>
+            <div style="display: block; min-width: 0px;">
+                <button type="button" style="width: 100%; height: 44px; border-width: medium; border-style: none; border-color: currentcolor; border-image: none; border-radius: 10px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 3px; padding: 0px; font-family: Figtree, system-ui, sans-serif; font-size: 15px; font-weight: 700; cursor: default; color: rgb(201, 191, 174); background: transparent;">
+                  <span>10</span>
+                  <span style="width: 5px; height: 5px; border-radius: 999px; background: transparent;"></span>
+                </button>
+            </div>
+            <div style="display: block; min-width: 0px;">
+                <button type="button" style="width: 100%; height: 44px; border-width: medium; border-style: none; border-color: currentcolor; border-image: none; border-radius: 10px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 3px; padding: 0px; font-family: Figtree, system-ui, sans-serif; font-size: 15px; font-weight: 700; cursor: default; color: rgb(201, 191, 174); background: transparent;">
+                  <span>11</span>
+                  <span style="width: 5px; height: 5px; border-radius: 999px; background: transparent;"></span>
+                </button>
+            </div>
+            <div style="display: block; min-width: 0px;">
+                <button type="button" style="width: 100%; height: 44px; border-width: medium; border-style: none; border-color: currentcolor; border-image: none; border-radius: 10px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 3px; padding: 0px; font-family: Figtree, system-ui, sans-serif; font-size: 15px; font-weight: 700; cursor: default; color: rgb(201, 191, 174); background: transparent;">
+                  <span>12</span>
+                  <span style="width: 5px; height: 5px; border-radius: 999px; background: transparent;"></span>
+                </button>
+            </div>
+            <div style="display: block; min-width: 0px;">
+                <button type="button" style="width: 100%; height: 44px; border-width: medium; border-style: none; border-color: currentcolor; border-image: none; border-radius: 10px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 3px; padding: 0px; font-family: Figtree, system-ui, sans-serif; font-size: 15px; font-weight: 700; cursor: default; color: rgb(201, 191, 174); background: transparent;">
+                  <span>13</span>
+                  <span style="width: 5px; height: 5px; border-radius: 999px; background: transparent;"></span>
+                </button>
+            </div>
+            <div style="display: block; min-width: 0px;">
+                <button type="button" style="width: 100%; height: 44px; border-width: medium; border-style: none; border-color: currentcolor; border-image: none; border-radius: 10px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 3px; padding: 0px; font-family: Figtree, system-ui, sans-serif; font-size: 15px; font-weight: 700; cursor: default; color: rgb(201, 191, 174); background: transparent;">
+                  <span>14</span>
+                  <span style="width: 5px; height: 5px; border-radius: 999px; background: transparent;"></span>
+                </button>
+            </div>
+            <div style="display: block; min-width: 0px;">
+                <button type="button" style="width: 100%; height: 44px; border-width: medium; border-style: none; border-color: currentcolor; border-image: none; border-radius: 10px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 3px; padding: 0px; font-family: Figtree, system-ui, sans-serif; font-size: 15px; font-weight: 700; cursor: default; color: rgb(201, 191, 174); background: transparent;">
+                  <span>15</span>
+                  <span style="width: 5px; height: 5px; border-radius: 999px; background: transparent;"></span>
+                </button>
+            </div>
+            <div style="display: block; min-width: 0px;">
+                <button type="button" style="width: 100%; height: 44px; border-width: medium; border-style: none; border-color: currentcolor; border-image: none; border-radius: 10px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 3px; padding: 0px; font-family: Figtree, system-ui, sans-serif; font-size: 15px; font-weight: 700; cursor: default; color: rgb(201, 191, 174); background: transparent;">
+                  <span>16</span>
+                  <span style="width: 5px; height: 5px; border-radius: 999px; background: transparent;"></span>
+                </button>
+            </div>
+            <div style="display: block; min-width: 0px;">
+                <button type="button" style="width: 100%; height: 44px; border-width: medium; border-style: none; border-color: currentcolor; border-image: none; border-radius: 10px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 3px; padding: 0px; font-family: Figtree, system-ui, sans-serif; font-size: 15px; font-weight: 700; cursor: default; color: rgb(201, 191, 174); background: transparent;">
+                  <span>17</span>
+                  <span style="width: 5px; height: 5px; border-radius: 999px; background: transparent;"></span>
+                </button>
+            </div>
+            <div style="display: block; min-width: 0px;">
+                <button type="button" style="width: 100%; height: 44px; border-width: medium; border-style: none; border-color: currentcolor; border-image: none; border-radius: 10px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 3px; padding: 0px; font-family: Figtree, system-ui, sans-serif; font-size: 15px; font-weight: 700; cursor: default; color: rgb(201, 191, 174); background: transparent;">
+                  <span>18</span>
+                  <span style="width: 5px; height: 5px; border-radius: 999px; background: transparent;"></span>
+                </button>
+            </div>
+            <div style="display: block; min-width: 0px;">
+                <button type="button" style="width: 100%; height: 44px; border-width: medium; border-style: none; border-color: currentcolor; border-image: none; border-radius: 10px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 3px; padding: 0px; font-family: Figtree, system-ui, sans-serif; font-size: 15px; font-weight: 700; cursor: default; color: rgb(201, 191, 174); background: transparent;">
+                  <span>19</span>
+                  <span style="width: 5px; height: 5px; border-radius: 999px; background: transparent;"></span>
+                </button>
+            </div>
+            <div style="display: block; min-width: 0px;">
+                <button type="button" style="width: 100%; height: 44px; border-width: medium; border-style: none; border-color: currentcolor; border-image: none; border-radius: 10px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 3px; padding: 0px; font-family: Figtree, system-ui, sans-serif; font-size: 15px; font-weight: 700; cursor: default; color: rgb(201, 191, 174); background: transparent;">
+                  <span>20</span>
+                  <span style="width: 5px; height: 5px; border-radius: 999px; background: transparent;"></span>
+                </button>
+            </div>
+            <div style="display: block; min-width: 0px;">
+                <button type="button" style="width: 100%; height: 44px; border-width: medium; border-style: none; border-color: currentcolor; border-image: none; border-radius: 10px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 3px; padding: 0px; font-family: Figtree, system-ui, sans-serif; font-size: 15px; font-weight: 700; cursor: default; color: rgb(201, 191, 174); background: transparent;">
+                  <span>21</span>
+                  <span style="width: 5px; height: 5px; border-radius: 999px; background: transparent;"></span>
+                </button>
+            </div>
+            <div style="display: block; min-width: 0px;">
+                <button type="button" style="width: 100%; height: 44px; border-width: medium; border-style: none; border-color: currentcolor; border-image: none; border-radius: 10px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 3px; padding: 0px; font-family: Figtree, system-ui, sans-serif; font-size: 15px; font-weight: 700; cursor: default; color: rgb(201, 191, 174); background: transparent;">
+                  <span>22</span>
+                  <span style="width: 5px; height: 5px; border-radius: 999px; background: transparent;"></span>
+                </button>
+            </div>
+            <div style="display: block; min-width: 0px;">
+                <button type="button" style="width: 100%; height: 44px; border-width: medium; border-style: none; border-color: currentcolor; border-image: none; border-radius: 10px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 3px; padding: 0px; font-family: Figtree, system-ui, sans-serif; font-size: 15px; font-weight: 700; cursor: default; color: rgb(201, 191, 174); background: transparent;">
+                  <span>23</span>
+                  <span style="width: 5px; height: 5px; border-radius: 999px; background: transparent;"></span>
+                </button>
+            </div>
+            <div style="display: block; min-width: 0px;">
+                <button type="button" style="width: 100%; height: 44px; border-width: medium; border-style: none; border-color: currentcolor; border-image: none; border-radius: 10px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 3px; padding: 0px; font-family: Figtree, system-ui, sans-serif; font-size: 15px; font-weight: 700; cursor: default; color: rgb(201, 191, 174); background: transparent;">
+                  <span>24</span>
+                  <span style="width: 5px; height: 5px; border-radius: 999px; background: transparent;"></span>
+                </button>
+            </div>
+            <div style="display: block; min-width: 0px;">
+                <button type="button" style="width: 100%; height: 44px; border-width: medium; border-style: none; border-color: currentcolor; border-image: none; border-radius: 10px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 3px; padding: 0px; font-family: Figtree, system-ui, sans-serif; font-size: 15px; font-weight: 700; cursor: pointer; color: rgb(32, 30, 29); background: transparent; box-shadow: rgb(150, 214, 62) 0px 0px 0px 1px inset;">
+                  <span>25</span>
+                  <span style="width: 5px; height: 5px; border-radius: 999px; background: rgb(192, 95, 69);"></span>
+                </button>
+            </div>
+            <div style="display: block; min-width: 0px;">
+                <button type="button" style="width: 100%; height: 44px; border-width: medium; border-style: none; border-color: currentcolor; border-image: none; border-radius: 10px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 3px; padding: 0px; font-family: Figtree, system-ui, sans-serif; font-size: 15px; font-weight: 700; cursor: pointer; color: rgb(32, 30, 29); background: rgb(150, 214, 62);">
+                  <span>26</span>
+                  <span style="width: 5px; height: 5px; border-radius: 999px; background: rgb(32, 30, 29);"></span>
+                </button>
+            </div>
+            <div style="display: block; min-width: 0px;">
+                <button type="button" style="width: 100%; height: 44px; border-width: medium; border-style: none; border-color: currentcolor; border-image: none; border-radius: 10px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 3px; padding: 0px; font-family: Figtree, system-ui, sans-serif; font-size: 15px; font-weight: 700; cursor: pointer; color: rgb(32, 30, 29); background: rgb(150, 214, 62);">
+                  <span>27</span>
+                  <span style="width: 5px; height: 5px; border-radius: 999px; background: rgb(32, 30, 29);"></span>
+                </button>
+            </div>
+            <div style="display: block; min-width: 0px;">
+                <button type="button" style="width: 100%; height: 44px; border-width: medium; border-style: none; border-color: currentcolor; border-image: none; border-radius: 10px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 3px; padding: 0px; font-family: Figtree, system-ui, sans-serif; font-size: 15px; font-weight: 700; cursor: pointer; color: rgb(32, 30, 29); background: transparent;">
+                  <span>28</span>
+                  <span style="width: 5px; height: 5px; border-radius: 999px; background: rgb(192, 95, 69);"></span>
+                </button>
+            </div>
+            <div style="display: block; min-width: 0px;">
+                <button type="button" style="width: 100%; height: 44px; border-width: medium; border-style: none; border-color: currentcolor; border-image: none; border-radius: 10px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 3px; padding: 0px; font-family: Figtree, system-ui, sans-serif; font-size: 15px; font-weight: 700; cursor: pointer; color: rgb(32, 30, 29); background: transparent;">
+                  <span>29</span>
+                  <span style="width: 5px; height: 5px; border-radius: 999px; background: transparent;"></span>
+                </button>
+            </div>
+            <div style="display: block; min-width: 0px;">
+                <button type="button" style="width: 100%; height: 44px; border-width: medium; border-style: none; border-color: currentcolor; border-image: none; border-radius: 10px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 3px; padding: 0px; font-family: Figtree, system-ui, sans-serif; font-size: 15px; font-weight: 700; cursor: pointer; color: rgb(32, 30, 29); background: transparent;">
+                  <span>30</span>
+                  <span style="width: 5px; height: 5px; border-radius: 999px; background: rgb(192, 95, 69);"></span>
+                </button>
+            </div>
+        </div>
+        <div style="display: flex; align-items: center; gap: 12px; padding-top: 6px; border-top: 1px solid rgba(0, 0, 0, 0.08);">
+            <button type="button" style="padding: 9px 16px; border-radius: 999px; cursor: pointer; border: 1px solid rgb(217, 201, 171); background: transparent; font-family: Figtree, system-ui, sans-serif; font-size: 14px; font-weight: 500; color: rgb(109, 99, 87);">Сбросить фильтры</button>
+          <button style="margin-left: auto; padding: 11px 22px; border-width: medium; border-style: none; border-color: currentcolor; border-image: none; border-radius: 999px; background: rgb(255, 96, 50); color: rgb(255, 246, 236); font-family: Figtree, system-ui, sans-serif; font-size: 15px; font-weight: 700; cursor: pointer;">Готово</button>
+        </div>
+      </div></div></div></section>
+</main>
+</body>
+</html>

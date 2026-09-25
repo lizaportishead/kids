@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow, noarchive">
+<title>Навигация — дизайн-система Клубка</title>
+<link rel="icon" href="/favicon.ico">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700;800&display=swap">
+<link rel="stylesheet" href="site.css"></head>
+<body><div class="app"><aside class="side"><a class="brand" href="./"><img src="/logo.png" alt="Клубок"><span>Дизайн-система</span></a><nav class="nav"><div class="nav-h">Основы</div><a href="./">Обзор</a><a href="tokens.html">Токены</a><a href="content.html">Тексты и данные</a><a href="layout.html">Сетка и адаптив</a><a href="assets.html">Логотипы</a><div class="nav-h">Компоненты</div><a href="navigation.html" aria-current=page>Навигация<small>4</small></a><a href="buttons.html">Кнопки<small>4</small></a><a href="filters.html">Фильтры<small>4</small></a><a href="calendar.html">Календарь<small>3</small></a><a href="cards.html">Карточки<small>7</small></a><a href="headings.html">Заголовки и метки<small>3</small></a><a href="event-page.html">Страница события<small>5</small></a><a href="overlays.html">Окна и состояния<small>4</small></a><a href="mobile.html">Мобильная версия<small>5</small></a><a href="icons.html">Иконки<small>1</small></a></nav></aside>
+<main><div class="wrap"><h1>Навигация</h1><p class="lede">Разметка снята с живого сайта klubok.kids 25 сентября 2026 года. Все варианты показаны так, как они выглядят на сайте.</p>
+<div class="toc"><a href="#BackButton">BackButton</a><a href="#Footer">Footer</a><a href="#Header">Header</a><a href="#WeekdayTabs">WeekdayTabs</a></div>
+<section class="comp" id="BackButton"><div class="comp-h"><h2>BackButton</h2><a href="c/BackButton.html" target="_blank" rel="noopener">открыть отдельно ↗</a></div><div class="prose"><p>Кнопка возврата на страницах события, занятия и площадки; рядом справа — круглая кнопка избранного 44px.</p>
+<ul><li>Контурная пилюля: рамка <code>line-control</code>, 15px/500, иконка-шеврон 16px.</li><li>На странице «Все ближайшие события» вместо кнопки — лёгкая ссылка «‹ Афиша» без рамки.</li><li>Состояние избранного: серое сердце <code>icon-idle</code> → залитое <code>danger</code> (#ff3b30).</li></ul></div><div class="stage" data-w="1200"><div class="stage-in" style="height:250px"><iframe src="c/BackButton.html" loading="lazy" title="BackButton" style="height:250px;width:100%"></iframe></div></div></section>
+<section class="comp" id="Footer"><div class="comp-h"><h2>Footer</h2><a href="c/Footer.html" target="_blank" rel="noopener">открыть отдельно ↗</a></div><div class="prose"><p>Подвал: дата последнего обновления расписания, ссылка «Обратная связь» и плашка-рекомендация Telegram-канала.</p>
+<ul><li>Тот же градиентный фон, что у шапки, сверху линия <code>line-footer</code>.</li><li>Текст 13px <code>muted</code>; ссылка «Обратная связь» подчёркнута (offset 2px).</li><li>Плашка канала — белая карточка с радиусом <code>radius-sm</code> (8px) и аватаркой 36px.</li></ul></div><div class="stage" data-w="1280"><div class="stage-in" style="height:130px"><iframe src="c/Footer.html" loading="lazy" title="Footer" style="height:130px;width:100%"></iframe></div></div></section>
+<section class="comp" id="Header"><div class="comp-h"><h2>Header</h2><a href="c/Header.html" target="_blank" rel="noopener">открыть отдельно ↗</a></div><div class="prose"><p>Шапка сайта: логотип-клубок с подписью, три раздела, переключатель языка интерфейса, сердечко «Моё избранное» и оранжевая кнопка «Добавить событие».</p>
+<ul><li>Фон — фирменный радиальный градиент (<code>header-glow-green</code> → <code>header-glow-mist</code> → <code>header-glow-sun</code> поверх <code>surface</code>); тот же градиент у подвала.</li><li>Пункты меню — пилюли без фона, <code>ink-soft</code>, 15px. Текущий раздел выделяется только весом шрифта (700 вместо 500), без подчёркивания и заливки.</li><li>Высота 72px, поля <code>page-gutter</code> (28px) по бокам.</li><li>При ширине ≤760px меню, язык и кнопка скрываются, появляется бургер ☰ — см. <code>MobileHeader</code>.</li></ul></div><div class="stage" data-w="1280"><div class="stage-in" style="height:150px"><iframe src="c/Header.html" loading="lazy" title="Header" style="height:150px;width:100%"></iframe></div></div></section>
+<section class="comp" id="WeekdayTabs"><div class="comp-h"><h2>WeekdayTabs</h2><a href="c/WeekdayTabs.html" target="_blank" rel="noopener">открыть отдельно ↗</a></div><div class="prose"><p>Вкладки дней недели в блоке «Постоянные занятия» на странице площадки.</p>
+<ul><li>Выбранный день — зелёная пилюля <code>accent</code> с тёмным текстом; остальные — контурные.</li><li>На узких экранах полные названия («Понедельник») заменяются сокращениями («Пн») через <code>data-wd-full</code> / <code>data-wd-short</code>.</li></ul></div><div class="stage" data-w="1200"><div class="stage-in" style="height:110px"><iframe src="c/WeekdayTabs.html" loading="lazy" title="WeekdayTabs" style="height:110px;width:100%"></iframe></div></div></section></div></main></div><script>
+(function(){
+  function fit(st){
+    var fr=st.querySelector('iframe'), inner=st.querySelector('.stage-in');
+    var w=+st.dataset.w||0, cw=st.clientWidth, lw=w||cw, s=Math.min(1,cw/lw);
+    fr.style.width=lw+'px'; fr.style.transform='scale('+s+')';
+    try{var d=fr.contentDocument; var h=Math.max(d.documentElement.scrollHeight,d.body?d.body.scrollHeight:0); if(h>40){fr.style.height=h+'px'; inner.style.height=Math.ceil(h*s)+'px';}}catch(e){}
+  }
+  var all=[].slice.call(document.querySelectorAll('.stage'));
+  all.forEach(function(st){var fr=st.querySelector('iframe'); fr.addEventListener('load',function(){fit(st); setTimeout(function(){fit(st)},600); setTimeout(function(){fit(st)},2000);});});
+  window.addEventListener('resize',function(){all.forEach(fit)});
+})();
+</script></body></html>

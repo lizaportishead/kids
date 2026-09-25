@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow, noarchive">
+<title>Мобильная версия — дизайн-система Клубка</title>
+<link rel="icon" href="/favicon.ico">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700;800&display=swap">
+<link rel="stylesheet" href="site.css"></head>
+<body><div class="app"><aside class="side"><a class="brand" href="./"><img src="/logo.png" alt="Клубок"><span>Дизайн-система</span></a><nav class="nav"><div class="nav-h">Основы</div><a href="./">Обзор</a><a href="tokens.html">Токены</a><a href="content.html">Тексты и данные</a><a href="layout.html">Сетка и адаптив</a><a href="assets.html">Логотипы</a><div class="nav-h">Компоненты</div><a href="navigation.html">Навигация<small>4</small></a><a href="buttons.html">Кнопки<small>4</small></a><a href="filters.html">Фильтры<small>4</small></a><a href="calendar.html">Календарь<small>3</small></a><a href="cards.html">Карточки<small>7</small></a><a href="headings.html">Заголовки и метки<small>3</small></a><a href="event-page.html">Страница события<small>5</small></a><a href="overlays.html">Окна и состояния<small>4</small></a><a href="mobile.html" aria-current=page>Мобильная версия<small>5</small></a><a href="icons.html">Иконки<small>1</small></a></nav></aside>
+<main><div class="wrap"><h1>Мобильная версия</h1><p class="lede">Разметка снята с живого сайта klubok.kids 25 сентября 2026 года. Все варианты показаны так, как они выглядят на сайте.</p>
+<div class="toc"><a href="#MobileCards">MobileCards</a><a href="#MobileFilterBar">MobileFilterBar</a><a href="#MobileFilterModal">MobileFilterModal</a><a href="#MobileHeader">MobileHeader</a><a href="#MobileToolbar">MobileToolbar</a></div>
+<section class="comp" id="MobileCards"><div class="comp-h"><h2>MobileCards</h2><a href="c/MobileCards.html" target="_blank" rel="noopener">открыть отдельно ↗</a></div><div class="prose"><p>Карточки на телефоне: одна колонка на всю ширину с полями 16px.</p></div><div class="stage phone"><div class="stage-in" style="height:520px"><iframe src="c/MobileCards.html" loading="lazy" title="MobileCards" style="height:520px;width:100%"></iframe></div></div></section>
+<section class="comp" id="MobileFilterBar"><div class="comp-h"><h2>MobileFilterBar</h2><a href="c/MobileFilterBar.html" target="_blank" rel="noopener">открыть отдельно ↗</a></div><div class="prose"><p>На телефоне и планшете (≤1200px) боковая панель фильтров превращается в одну строку чипов с иконкой поиска слева. Чип открывает окно одного фильтра.</p></div><div class="stage phone"><div class="stage-in" style="height:200px"><iframe src="c/MobileFilterBar.html" loading="lazy" title="MobileFilterBar" style="height:200px;width:100%"></iframe></div></div></section>
+<section class="comp" id="MobileFilterModal"><div class="comp-h"><h2>MobileFilterModal</h2><a href="c/MobileFilterModal.html" target="_blank" rel="noopener">открыть отдельно ↗</a></div><div class="prose"><p>Окно фильтра на телефоне: поля 10px от краёв экрана, высота до 100dvh−20px, список прокручивается внутри.</p></div><div class="stage phone"><div class="stage-in" style="height:760px"><iframe src="c/MobileFilterModal.html" loading="lazy" title="MobileFilterModal" style="height:760px;width:100%"></iframe></div></div></section>
+<section class="comp" id="MobileHeader"><div class="comp-h"><h2>MobileHeader</h2><a href="c/MobileHeader.html" target="_blank" rel="noopener">открыть отдельно ↗</a></div><div class="prose"><p>Шапка на телефоне (≤760px): логотип, подпись в две строки и бургер ☰ 44px. Меню выпадает под шапкой: разделы, «Моё избранное», «Добавить событие», переключатель языка; тень <code>shadow-menu</code>.</p></div><div class="stage phone"><div class="stage-in" style="height:520px"><iframe src="c/MobileHeader.html" loading="lazy" title="MobileHeader" style="height:520px;width:100%"></iframe></div></div></section>
+<section class="comp" id="MobileToolbar"><div class="comp-h"><h2>MobileToolbar</h2><a href="c/MobileToolbar.html" target="_blank" rel="noopener">открыть отдельно ↗</a></div><div class="prose"><p>Верх страниц на телефоне: заголовок 27px переносится, из кнопок остаётся только «Календарь»; лента дат сжимается до 46px на день.</p></div><div class="stage phone"><div class="stage-in" style="height:260px"><iframe src="c/MobileToolbar.html" loading="lazy" title="MobileToolbar" style="height:260px;width:100%"></iframe></div></div></section></div></main></div><script>
+(function(){
+  function fit(st){
+    var fr=st.querySelector('iframe'), inner=st.querySelector('.stage-in');
+    var w=+st.dataset.w||0, cw=st.clientWidth, lw=w||cw, s=Math.min(1,cw/lw);
+    fr.style.width=lw+'px'; fr.style.transform='scale('+s+')';
+    try{var d=fr.contentDocument; var h=Math.max(d.documentElement.scrollHeight,d.body?d.body.scrollHeight:0); if(h>40){fr.style.height=h+'px'; inner.style.height=Math.ceil(h*s)+'px';}}catch(e){}
+  }
+  var all=[].slice.call(document.querySelectorAll('.stage'));
+  all.forEach(function(st){var fr=st.querySelector('iframe'); fr.addEventListener('load',function(){fit(st); setTimeout(function(){fit(st)},600); setTimeout(function(){fit(st)},2000);});});
+  window.addEventListener('resize',function(){all.forEach(fit)});
+})();
+</script></body></html>

@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow, noarchive">
+<title>Сетка и адаптив — дизайн-система Клубка</title>
+<link rel="icon" href="/favicon.ico">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700;800&display=swap">
+<link rel="stylesheet" href="site.css"></head>
+<body><div class="app"><aside class="side"><a class="brand" href="./"><img src="/logo.png" alt="Клубок"><span>Дизайн-система</span></a><nav class="nav"><div class="nav-h">Основы</div><a href="./">Обзор</a><a href="tokens.html">Токены</a><a href="content.html">Тексты и данные</a><a href="layout.html" aria-current=page>Сетка и адаптив</a><a href="assets.html">Логотипы</a><div class="nav-h">Компоненты</div><a href="navigation.html">Навигация<small>4</small></a><a href="buttons.html">Кнопки<small>4</small></a><a href="filters.html">Фильтры<small>4</small></a><a href="calendar.html">Календарь<small>3</small></a><a href="cards.html">Карточки<small>7</small></a><a href="headings.html">Заголовки и метки<small>3</small></a><a href="event-page.html">Страница события<small>5</small></a><a href="overlays.html">Окна и состояния<small>4</small></a><a href="mobile.html">Мобильная версия<small>5</small></a><a href="icons.html">Иконки<small>1</small></a></nav></aside>
+<main><div class="wrap"><h1>Сетка и адаптив</h1><div class="prose"><h3>Каркас</h3>
+<ul><li>Страница — колонка на всю ширину: шапка 72px → заголовок раздела → лента дат (прилипает) → блоки → подвал.</li><li>Поля по бокам — <code>page-gutter</code> 28px; на телефоне — <code>page-gutter-mobile</code> 16px.</li><li>Между блоками главной — <code>space-48</code> сверху у каждого заголовка блока.</li><li>Расписание кружков: лента слева, панель фильтров 288px справа, между ними <code>space-56</code>. Панель липкая.</li><li>Страница события: две колонки — текст 638px и правая колонка 426px (фото + карточка цены), между ними 80px, по вертикали 40px; максимум 1200px по центру.</li><li>Площадки: список 480px слева, карта справа на всю высоту.</li></ul>
+<h3>Сетки карточек</h3>
+<div class="tbl"><table><thead><tr><th>Где</th><th>Колонки</th><th>Зазор</th></tr></thead><tbody><tr><td>События (Афиша)</td><td>3 → 4 (≥1024) → 5 (≥1480) → 6 (≥1800)</td><td>32px</td></tr><tr><td>Все ближайшие события на главной</td><td>4 (2 ряда) → 5 (≥1600) → 3 (≤1100) → 1 (≤760)</td><td>32px</td></tr><tr><td>Расписание (с панелью)</td><td>3 → 4 (≥1560) → 5 (≥1900)</td><td>32px</td></tr><tr><td>«Другие события в этот день»</td><td>4; на ≤900 — скролл по 224px</td><td>16px</td></tr><tr><td>Кружки сегодня</td><td>4</td><td>20px</td></tr><tr><td>Категории</td><td>auto-fill от 200px; 2 на телефоне</td><td>14px</td></tr></tbody></table></div>
+<h3>Точки перелома</h3>
+<ul><li><strong>≤1200px</strong> — панель фильтров превращается в строку чипов, лента на всю ширину.</li><li><strong>≤1100px</strong> — блок «Все ближайшие события» — 3 колонки.</li><li><strong>≤900px</strong> — страница события в одну колонку (заголовок → фото и цена → описание), подборки «Другие события» скроллятся вбок по 224px.</li><li><strong>≤760px (телефон)</strong> — бургер вместо меню, поля 16px, заголовки переносятся, одна колонка карточек, в списке скрываются миниатюры и колонка места, окна прижимаются к краям с отступом 10px.</li><li><strong>≤480px</strong> — подсказки (info-tip) выравниваются по правому краю.</li></ul>
+<p>Адаптив на сайте сделан через <code>data-*</code>-атрибуты с <code>!important</code>-правилами в общем <code>&lt;style&gt;</code> (см. <code>components/bundle.css</code>): разметка одна, правила переключаются по ширине.</p></div></div></main></div><script>
+(function(){
+  function fit(st){
+    var fr=st.querySelector('iframe'), inner=st.querySelector('.stage-in');
+    var w=+st.dataset.w||0, cw=st.clientWidth, lw=w||cw, s=Math.min(1,cw/lw);
+    fr.style.width=lw+'px'; fr.style.transform='scale('+s+')';
+    try{var d=fr.contentDocument; var h=Math.max(d.documentElement.scrollHeight,d.body?d.body.scrollHeight:0); if(h>40){fr.style.height=h+'px'; inner.style.height=Math.ceil(h*s)+'px';}}catch(e){}
+  }
+  var all=[].slice.call(document.querySelectorAll('.stage'));
+  all.forEach(function(st){var fr=st.querySelector('iframe'); fr.addEventListener('load',function(){fit(st); setTimeout(function(){fit(st)},600); setTimeout(function(){fit(st)},2000);});});
+  window.addEventListener('resize',function(){all.forEach(fit)});
+})();
+</script></body></html>

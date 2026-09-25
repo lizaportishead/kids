@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow, noarchive">
+<title>Кнопки — дизайн-система Клубка</title>
+<link rel="icon" href="/favicon.ico">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700;800&display=swap">
+<link rel="stylesheet" href="site.css"></head>
+<body><div class="app"><aside class="side"><a class="brand" href="./"><img src="/logo.png" alt="Клубок"><span>Дизайн-система</span></a><nav class="nav"><div class="nav-h">Основы</div><a href="./">Обзор</a><a href="tokens.html">Токены</a><a href="content.html">Тексты и данные</a><a href="layout.html">Сетка и адаптив</a><a href="assets.html">Логотипы</a><div class="nav-h">Компоненты</div><a href="navigation.html">Навигация<small>4</small></a><a href="buttons.html" aria-current=page>Кнопки<small>4</small></a><a href="filters.html">Фильтры<small>4</small></a><a href="calendar.html">Календарь<small>3</small></a><a href="cards.html">Карточки<small>7</small></a><a href="headings.html">Заголовки и метки<small>3</small></a><a href="event-page.html">Страница события<small>5</small></a><a href="overlays.html">Окна и состояния<small>4</small></a><a href="mobile.html">Мобильная версия<small>5</small></a><a href="icons.html">Иконки<small>1</small></a></nav></aside>
+<main><div class="wrap"><h1>Кнопки</h1><p class="lede">Разметка снята с живого сайта klubok.kids 25 сентября 2026 года. Все варианты показаны так, как они выглядят на сайте.</p>
+<div class="toc"><a href="#Button">Button</a><a href="#FavButton">FavButton</a><a href="#LanguageSelect">LanguageSelect</a><a href="#ViewToggle">ViewToggle</a></div>
+<section class="comp" id="Button"><div class="comp-h"><h2>Button</h2><a href="c/Button.html" target="_blank" rel="noopener">открыть отдельно ↗</a></div><div class="prose"><p>Кнопки сайта — всегда пилюли (<code>radius-pill</code>, 999px). Три вида по весу.</p>
+<ul><li><strong>Основная</strong> — заливка <code>brand</code> (#ff6032), текст <code>on-brand</code> (#fff6ec), 15px/700 (16px в карточке цены). Одна на экран: «Добавить событие», «Отправить», «Записаться…», «Показать N событий».</li><li><strong>Контурная</strong> — прозрачный фон, рамка 1px <code>line-control</code>, текст <code>ink</code>, 15px/500. Для вспомогательных действий: «Сегодня», «Календарь», «Назад…». Вариант 700 — «Смотреть все N занятий» под подборками.</li><li><strong>Второстепенная в форме</strong> — контурная, текст <code>ink-soft</code>, 600 («Отмена»).</li><li><strong>Закрыть</strong> — круг 40px на <code>surface-sunken</code> с глифом ✕.</li><li>Пункты меню шапки — пилюли без рамки; активный отличается только весом 700.</li></ul>
+<p>Контраст: <code>on-brand</code> на <code>brand</code> ≈ 2,9:1 — ниже 4,5:1 для 15px текста (так на сайте, см. README).</p></div><div class="stage" data-w="1000"><div class="stage-in" style="height:520px"><iframe src="c/Button.html" loading="lazy" title="Button" style="height:520px;width:100%"></iframe></div></div></section>
+<section class="comp" id="FavButton"><div class="comp-h"><h2>FavButton</h2><a href="c/FavButton.html" target="_blank" rel="noopener">открыть отдельно ↗</a></div><div class="prose"><p>Сердечко «В избранное». Избранное хранится только в браузере (localStorage).</p>
+<ul><li>На карточке: круг 34px в правом верхнем углу фото, подложка <code>rgba(255,255,255,.92)</code>, тень <code>shadow-float</code>, контур сердца <code>icon-idle</code>.</li><li>На странице события: круг 44px с рамкой <code>line-control</code>, сердце 22px.</li><li>Включено: сердце залито <code>danger</code> (#ff3b30); после клика снизу появляется <code>Toast</code>.</li></ul></div><div class="stage" data-w="0"><div class="stage-in" style="height:150px"><iframe src="c/FavButton.html" loading="lazy" title="FavButton" style="height:150px;width:100%"></iframe></div></div></section>
+<section class="comp" id="LanguageSelect"><div class="comp-h"><h2>LanguageSelect</h2><a href="c/LanguageSelect.html" target="_blank" rel="noopener">открыть отдельно ↗</a></div><div class="prose"><p>Переключатель языка интерфейса в шапке — нативный <code>&lt;select&gt;</code> без рамки со стрелкой-картинкой. Переводится только интерфейс; тексты событий остаются на языке источника.</p></div><div class="stage" data-w="0"><div class="stage-in" style="height:90px"><iframe src="c/LanguageSelect.html" loading="lazy" title="LanguageSelect" style="height:90px;width:100%"></iframe></div></div></section>
+<section class="comp" id="ViewToggle"><div class="comp-h"><h2>ViewToggle</h2><a href="c/ViewToggle.html" target="_blank" rel="noopener">открыть отдельно ↗</a></div><div class="prose"><p>Сегментный переключатель вида расписания: плитка / список. Состояние сохраняется, ссылка <code>?view=list</code> открывает список.</p>
+<ul><li>Две кнопки 42×32 в общей пилюле; выбранная — зелёная <code>accent</code>.</li></ul></div><div class="stage" data-w="0"><div class="stage-in" style="height:120px"><iframe src="c/ViewToggle.html" loading="lazy" title="ViewToggle" style="height:120px;width:100%"></iframe></div></div></section></div></main></div><script>
+(function(){
+  function fit(st){
+    var fr=st.querySelector('iframe'), inner=st.querySelector('.stage-in');
+    var w=+st.dataset.w||0, cw=st.clientWidth, lw=w||cw, s=Math.min(1,cw/lw);
+    fr.style.width=lw+'px'; fr.style.transform='scale('+s+')';
+    try{var d=fr.contentDocument; var h=Math.max(d.documentElement.scrollHeight,d.body?d.body.scrollHeight:0); if(h>40){fr.style.height=h+'px'; inner.style.height=Math.ceil(h*s)+'px';}}catch(e){}
+  }
+  var all=[].slice.call(document.querySelectorAll('.stage'));
+  all.forEach(function(st){var fr=st.querySelector('iframe'); fr.addEventListener('load',function(){fit(st); setTimeout(function(){fit(st)},600); setTimeout(function(){fit(st)},2000);});});
+  window.addEventListener('resize',function(){all.forEach(fit)});
+})();
+</script></body></html>

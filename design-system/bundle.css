@@ -1,0 +1,216 @@
+/* ===== Клубок — глобальные правила сайта (скопировано из шаблона index.html как есть) ===== */
+  body { margin: 0; background: #ffffff; }
+  a { color: #c05f45; text-decoration: none; }
+  a:hover { color: #ff6032; }
+  [data-onb-card][data-onb-w="1"] { height: auto !important; }
+  [data-onb-head] { margin-top: auto; }
+  @media (max-width: 760px) {
+    [data-onb-card] { padding: 28px 18px 18px !important; height: min(600px, calc(100dvh - 32px)) !important; max-height: none !important; }
+    [data-onb-langs] { grid-template-columns: 1fr !important; gap: 8px !important; }
+    [data-onb-langs] > button { flex-direction: row !important; justify-content: flex-start !important; gap: 12px !important; padding: 14px 16px !important; border-radius: 14px !important; }
+    [data-onb-langs] > button > span:first-child { display: none !important; }
+    [data-onb-langs] > button > span:last-child { margin-left: auto; }
+    [data-onb-card] > div:first-child { align-items: center !important; }
+    [data-onb-card] > div:first-child > div { align-self: center !important; }
+    [data-onb-head] { align-items: center; text-align: center; }
+    [data-onb-chips] { justify-content: center; }
+    [data-onb-foot] { flex-wrap: wrap !important; justify-content: center !important; gap: 10px !important; }
+    [data-onb-foot] > span:empty { display: none; }
+    [data-onb-foot] > button:first-child { order: 1; flex: none; }
+    [data-onb-right] { display: contents !important; }
+    [data-onb-main] { order: 2; flex: 1 1 0; min-width: 0; white-space: nowrap; padding: 12px 14px !important; }
+    [data-onb-right] > button:not([data-onb-main]) { order: 3; flex: 1 1 100%; padding: 4px 10px !important; }
+    [data-deco] { display: none; }
+    [data-hero] { padding: 26px 18px 22px !important; }
+    [data-hero] h1 { font-size: 29px !important; line-height: 35px !important; }
+    [data-hero] p { font-size: 16px !important; line-height: 25px !important; }
+    [data-pad] { padding-left: 16px !important; padding-right: 16px !important; }
+    [data-toolbar] { flex-direction: column !important; align-items: stretch !important; gap: 12px !important; }
+    [data-toolbar] > div { flex-wrap: wrap !important; }
+    [data-toolbar] > div[data-tb-controls] { flex-wrap: nowrap !important; gap: 6px !important; }
+    [data-tb-controls] > button { padding: 8px 11px !important; gap: 6px !important; flex: 0 1 auto; min-width: 0; white-space: nowrap; }
+    [data-tb-controls] > [role="group"] { flex: none !important; }
+    [data-tb-controls] > [role="group"] button { width: 34px !important; height: 30px !important; }
+    [data-brand] { flex-wrap: nowrap !important; min-width: 0 !important; gap: 8px !important; }
+    [data-brand] span { display: block !important; white-space: normal !important; overflow: visible !important; text-overflow: unset !important; margin-top: 0 !important; font-size: 11px !important; line-height: 13px !important; max-width: 185px !important; }
+    [data-lang] { display: none !important; }
+    [data-add] { padding: 8px 14px 9px !important; font-size: 14px !important; }
+    [data-nav] { display: none !important; }
+    [data-burger] { display: flex !important; }
+    [data-strip] { padding: 0 !important; }
+    [data-list-thumb] { display: none !important; }
+    [data-events-list][data-pad] { padding-left: 0 !important; padding-right: 0 !important; margin-left: -16px; margin-right: -16px; width: auto !important; max-width: none !important; }
+    [data-afisha-main] { overflow-x: visible !important; }
+    [data-events-list] article, [data-events-list] [data-list-head] { padding-left: 12px !important; padding-right: 12px !important; }
+    [data-list-place] { display: none !important; }
+    [data-list-meta-place] { display: inline-flex !important; }
+    [data-list-age] { display: none !important; }
+    [data-list-meta-age] { display: inline-flex !important; }
+    [data-modal] { padding: 10px !important; }
+    [data-modal-card] { box-sizing: border-box !important; max-height: 94vh !important; max-height: calc(100dvh - 20px) !important; padding: 20px 18px 22px !important; }
+    [data-cta] { display: none !important; }
+    [data-detail-hero] { max-height: 260px !important; }
+    [data-evt-head] h1 { font-size: 27px !important; line-height: 33px !important; letter-spacing: 0 !important; }
+    [data-evt-dateline] { font-size: 18px !important; line-height: 24px !important; margin-top: -6px !important; }
+    [data-detail-main] h1 { font-size: 27px !important; line-height: 33px !important; }
+    [data-detail-body] { padding: 22px 18px 26px !important; }
+    [data-detail-body] h1 { font-size: 27px !important; line-height: 33px !important; }
+    [data-map] { height: 170px !important; }
+    [data-filters] { width: 100% !important; flex-wrap: nowrap !important; }
+    [data-filters] select { flex: 1 1 0 !important; min-width: 0 !important; text-overflow: ellipsis !important; overflow: hidden !important; white-space: nowrap !important; }
+    [data-age-filter] { width: 100% !important; flex-wrap: nowrap !important; }
+    [data-age-chips] { flex-wrap: nowrap !important; overflow-x: auto !important; -webkit-overflow-scrolling: touch; scrollbar-width: none; padding-bottom: 2px; }
+    [data-age-chips]::-webkit-scrollbar { display: none; }
+    [data-age-chip-ext="1"] { display: none !important; }
+    [data-venues] { height: auto !important; overflow: visible !important; }
+    [data-venues-grid] { grid-template-columns: 1fr !important; height: auto !important; }
+    [data-venues-col] { order: 2 !important; height: auto !important; }
+    [data-venues-list] { flex: none !important; min-height: 0 !important; overflow: visible !important; }
+    [data-venues-map] { height: 46vh !important; min-height: 260px !important; order: 1 !important; }
+    [data-wd-full] { display: none !important; }
+    [data-wd-short] { display: inline !important; }
+  }
+  @media (max-width: 900px) {
+    [data-detail-cols] { grid-template-columns: 1fr !important; gap: 24px !important; }
+    [data-detail-rail] { position: static !important; }
+    [data-rel-row] { display: flex !important; overflow-x: auto !important; padding-bottom: 6px !important; scrollbar-width: thin; }
+    [data-rel-row] > article { flex: 0 0 224px !important; width: 224px !important; }
+    [data-evt-cols] { grid-template-columns: minmax(0, 1fr) !important; grid-template-rows: auto !important; grid-template-areas: 'head' 'rail' 'body' !important; row-gap: 22px !important; }
+    [data-evt-card] { position: static !important; }
+    [data-evt-head] h1 { font-size: 30px !important; line-height: 36px !important; }
+  }
+  #vn-map { font-family: Figtree, system-ui, sans-serif; position: relative; z-index: 0; isolation: isolate; }
+  #vn-map .leaflet-popup-content { margin: 10px 12px; font-size: 13px; line-height: 18px; }
+  #vn-map .leaflet-container { background: #f2f2f0; }
+  @media (min-width: 1024px) {
+    [data-events-grid] { grid-template-columns: repeat(4, 1fr) !important; }
+  }
+  @media (min-width: 1480px) {
+    [data-events-grid] { grid-template-columns: repeat(5, 1fr) !important; }
+  }
+  @media (min-width: 1800px) {
+    [data-events-grid] { grid-template-columns: repeat(6, 1fr) !important; }
+  }
+  /* --- filters-left layout (feat/afisha-filters-left) --- */
+  [data-afisha-cols] { display: flex; flex-direction: row-reverse; align-items: flex-start; gap: 56px; margin-top: -52px; }
+  [data-filter-rail] { box-sizing: border-box; flex: 0 0 288px; position: sticky; top: 14px; max-height: calc(100vh - 130px); overflow-y: auto; overscroll-behavior: contain; scrollbar-width: thin; display: flex; flex-direction: column; gap: 24px; padding: 20px; border: 1px solid #e7dec9; border-radius: 16px; }
+  [data-afisha-main] { flex: 1 1 0; min-width: 0; display: flex; flex-direction: column; gap: 14px; padding-top: 52px; }
+  /* [data-afisha-cols] is pulled up 52px (margin-top:-52px) so the sticky rail
+     aligns with the toolbar; [data-afisha-main]'s 52px top padding then overlays
+     the toolbar controls and eats their clicks. Lift the controls back on top. */
+  [data-tb-controls] { position: relative; z-index: 2; }
+  [data-afisha-main] [data-pad] { padding-left: 0 !important; padding-right: 0 !important; }
+  [data-rail-group] { display: flex; flex-direction: column; gap: 10px; align-items: stretch; }
+  [data-rail-heading] { font-size: 16px; font-weight: 700; letter-spacing: 0; text-transform: none; color: #201e1d; }
+  [data-check-list] { display: flex; flex-direction: column; gap: 1px; }
+  [data-check-row]:hover { background: #f4f0e6 !important; }
+  [data-showall] { align-self: flex-start; margin: 2px 0 0 8px; padding: 2px 0; border: none; background: none; cursor: pointer; font-family: Figtree, system-ui, sans-serif; font-size: 13px; font-weight: 600; color: #6a8f3c; text-decoration: underline; text-underline-offset: 2px; }
+  [data-showall]:hover { color: #557029; }
+  @media (min-width: 1201px) { [data-afisha-main] [data-events-grid] { grid-template-columns: repeat(3, 1fr) !important; } }
+  @media (min-width: 1560px) { [data-afisha-main] [data-events-grid] { grid-template-columns: repeat(4, 1fr) !important; } }
+  @media (min-width: 1900px) { [data-afisha-main] [data-events-grid] { grid-template-columns: repeat(5, 1fr) !important; } }
+  /* below the sidebar breakpoint the filters collapse to the compact bar (age chips + «Фильтры» modal) */
+  @media (max-width: 1200px) {
+    [data-afisha-cols] { flex-direction: column; gap: 14px; margin-top: 0; max-width: 100%; min-width: 0; overflow-x: clip; }
+    [data-afisha-main] { padding-top: 0; width: 100%; max-width: 100%; min-width: 0; overflow-x: clip; }
+    [data-afisha-main] > * { min-width: 0; max-width: 100%; }
+    [data-toolbar] { padding: 28px 28px 10px !important; }
+    [data-filter-rail] { display: none !important; }
+    [data-mobile-filterbar] { display: flex !important; width: 100%; max-width: 100%; }
+    [data-mobile-filterbar] [data-mobile-filters] { max-width: 100%; }
+    [data-mobile-filterbar] [data-age-scroll] { flex-wrap: nowrap !important; overflow-x: auto !important; -webkit-overflow-scrolling: touch; scrollbar-width: none; padding-bottom: 2px; }
+    [data-mobile-filterbar] [data-age-scroll]::-webkit-scrollbar { display: none; }
+    [data-afisha-main] [data-events-grid] > *, [data-afisha-main] [data-events-list] > * { min-width: 0 !important; max-width: 100% !important; }
+  }
+  @media (max-width: 760px) {
+    [data-toolbar] { padding: 22px 16px 6px !important; }
+    [data-afisha-main] [data-events-grid] { grid-template-columns: 1fr !important; }
+    #afisha [data-tb-controls] { display: none !important; }
+    #afisha [data-title-cal] { display: inline-flex !important; }
+    [data-toolbar] > div[data-title-row] { flex-wrap: nowrap !important; }
+    [data-fchips] { margin: 0 -16px; padding-left: 16px !important; padding-right: 16px !important; }
+  }
+  [data-fchips] { scrollbar-width: none; -webkit-overflow-scrolling: touch; }
+  [data-fchips]::-webkit-scrollbar { display: none; }
+  [data-info-tip]:hover [data-info-tip-bubble],
+  [data-info-tip]:focus [data-info-tip-bubble],
+  [data-info-tip]:focus-visible [data-info-tip-bubble] {
+    opacity: 1 !important;
+    visibility: visible !important;
+    transform: translateX(-50%) translateY(0) !important;
+  }
+  @media (max-width: 480px) {
+    [data-info-tip-bubble] { left: auto !important; right: -6px !important; transform: translateY(-4px) !important; max-width: min(220px, calc(100vw - 32px)) !important; }
+    [data-info-tip]:hover [data-info-tip-bubble],
+    [data-info-tip]:focus [data-info-tip-bubble],
+    [data-info-tip]:focus-visible [data-info-tip-bubble] { transform: translateY(0) !important; }
+  }
+  /* Афиша: блок «Все ближайшие события» — ровно 2 ряда карточек */
+  [data-wd-strip] [data-wd-short] { display: none; }
+  /* Афиша на телефоне: без beta/?, «Сегодня» и строки-счётчика; «Календарь» справа от заголовка */
+  @media (max-width: 760px) {
+    [data-ev-mhide] { display: none !important; }
+    [data-wd-strip] button > span:nth-child(4) { display: none !important; }
+    [data-ev-toolbar] { flex-direction: row !important; flex-wrap: nowrap !important; align-items: center !important; justify-content: space-between !important; }
+    [data-ev-toolbar] > div[data-tb-controls] { flex: none; }
+  }
+  @media (min-width: 761px) {
+    [data-wd-strip] button { align-items: flex-start !important; text-align: left; padding-left: 8px !important; padding-right: 8px !important; min-width: 0; overflow: hidden; }
+    [data-wd-strip] button > span { max-width: 100%; overflow: hidden; text-overflow: ellipsis; }
+  }
+  /* Полные названия дней — только когда влезают; иначе «Пн» + «13 занятий» */
+  [data-wd-strip] { container-type: inline-size; }
+  @container (max-width: 869px) {
+    [data-wd-strip] button > span:nth-child(1),
+    [data-wd-strip] button > span:nth-child(2) { display: none !important; }
+    [data-wd-strip] button > span:nth-child(3) { display: inline !important; }
+  }
+  /* Телефон: только «ПН», «ВТ»… — без счётчика под днём */
+  @media (max-width: 760px) {
+    [data-wd-strip] [data-wd-full] { display: none; }
+    [data-wd-strip] button > span:nth-child(3) { text-transform: uppercase; }
+    [data-wd-strip] button > span:nth-child(5) { display: none !important; }
+    [data-wd-strip] button { min-height: 48px !important; }
+  }
+  [data-afisha-all] { grid-template-columns: repeat(4, minmax(0, 1fr)) !important; }
+  [data-afisha-all] > div:nth-child(n+9) { display: none !important; }
+  @media (min-width: 1600px) {
+    [data-afisha-all] { grid-template-columns: repeat(5, minmax(0, 1fr)) !important; }
+    [data-afisha-all] > div:nth-child(n+9) { display: grid !important; }
+    [data-afisha-all] > div:nth-child(n+11) { display: none !important; }
+  }
+  @media (max-width: 1100px) {
+    [data-afisha-all] { grid-template-columns: repeat(3, minmax(0, 1fr)) !important; }
+    [data-afisha-all] > div:nth-child(n+7) { display: none !important; }
+  }
+  @media (max-width: 760px) {
+    [data-afisha-all] { grid-template-columns: minmax(0, 1fr) !important; }
+    [data-afisha-all] > div:nth-child(n+5) { display: none !important; }
+    [data-afisha-sechead] { flex-wrap: wrap; gap: 8px 14px !important; padding-top: 36px !important; }
+    [data-afisha-sechead] > span:first-child { font-size: 22px !important; }
+    [data-afisha-sechead] [data-afisha-rule] { display: none; }
+    [data-afisha-sechead] [data-afisha-more] { margin-left: auto; }
+    [data-cat-grid] { grid-template-columns: repeat(2, minmax(0, 1fr)) !important; gap: 10px !important; }
+  }
+
+/* ===== Наведение: на сайте задаётся атрибутом style-hover, компилятор превращает его в классы .scpN ===== */
+.scp0:hover { transform: translateY(-2px) !important; }
+.scp1:hover { background: #faf8f3 !important; }
+.scp2:hover { text-decoration: underline !important; }
+.scp3:hover { background: #f0f7e4 !important; border-color: #96d63e !important; }
+
+/* ===== Корневой контейнер приложения задаёт шрифт и цвет текста (на сайте — inline у обёртки) ===== */
+.ds-body { margin: 0; background: #ffffff; font-family: Figtree, system-ui, sans-serif; color: #201e1d; }
+
+/* ===== Оформление витрины (не часть сайта) ===== */
+.ds-page { box-sizing: border-box; padding: 24px; display: flex; flex-direction: column; gap: 32px; }
+.ds-var { display: flex; flex-direction: column; gap: 10px; min-width: 0; }
+.ds-cap { font: 600 11px/15px ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; letter-spacing: .04em; text-transform: uppercase; color: #8a7d6a; padding-bottom: 6px; border-bottom: 1px dashed #e7dec9; }
+.ds-note { font-size: 13px; line-height: 19px; color: #6d6357; }
+.ds-stage { min-width: 0; }
+.ds-row { display: flex; flex-wrap: wrap; }
+.ds-map { display: flex; align-items: center; justify-content: center; height: 220px; border-radius: 16px; border: 1px dashed #d9c9ab; background: #f2f2f0; color: #6d6357; font-size: 13px; }
+.ds-icons { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 12px; }
+.ds-icon { margin: 0; display: flex; flex-direction: column; align-items: center; gap: 8px; padding: 16px 8px 12px; border: 1px solid #ece3d0; border-radius: 12px; color: #201e1d; }
+.ds-icon-box { height: 32px; display: flex; align-items: center; justify-content: center; }
+.ds-icon figcaption { font-size: 12px; line-height: 16px; color: #6d6357; text-align: center; }

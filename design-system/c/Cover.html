@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex, nofollow, noarchive">
+<title>Клубок</title>
+<link rel="stylesheet" href="../tokens.css"><link rel="stylesheet" href="../bundle.css">
+<style>
+  html, body { margin:0; height:100%; }
+  body { background:var(--surface); color:var(--ink); font-family:var(--font-sans); overflow:hidden; }
+  .cover { position:relative; width:960px; height:288px; overflow:hidden; }
+  .art { position:absolute; top:0; left:480px; width:480px; height:288px; overflow:hidden; }
+  .art svg { display:block; width:480px; height:288px; }
+  .brand { fill:var(--brand); }
+  .green { fill:var(--accent); }
+  .deep { fill:var(--brand-deep); }
+  .ink { fill:var(--ink); }
+  .tint { fill:var(--age-bg); }
+  .slab { rx:var(--radius-2xl); }
+  .tile { rx:var(--radius-xl); }
+  .yarn { fill:none; stroke:var(--surface); stroke-width:6; stroke-linecap:round; }
+  .yarn-g { fill:none; stroke:var(--accent); stroke-width:6; stroke-linecap:round; }
+  .words { position:absolute; left:28px; bottom:28px; max-width:440px; }
+  .name { margin:0; font-size:112px; line-height:.92; font-weight:800; letter-spacing:-.02em; color:var(--ink-strong); }
+  .tag { margin:14px 0 0 4px; font-size:14px; line-height:20px; color:var(--muted); }
+</style>
+</head>
+<body>
+<div class="cover">
+<div class="art" aria-hidden="true">
+<svg viewBox="0 0 480 288" width="480" height="288">
+<!--
+  blocks      brand 176×264 slab bled off the top (the one colour people know Клубок by) · ink 112×208 bled off the right · brand-deep 112×112 tile · accent 176×56 pill (выбрано) · age-bg 112×72 tint — ≈40% of 960×288
+  arrangement one tall orange slab with satellites, bottoms aligned space-24 above the edge, space-14…space-20 gutters
+  pattern     literal motif — клубок (ball of yarn): concentric arcs wound on the slab in the ground colour, three more in accent on the ink block
+  scales      slab and ink corners radius-2xl (24), tiles radius-xl (16), pill rx = half its height (radius-pill); gutters space-14/space-20; strokes 6px
+-->
+<rect class="brand slab" x="0" y="-24" width="176" height="288" rx="24"/>
+<path class="yarn" d="M40 150 a48 48 0 1 1 96 0"/>
+<path class="yarn" d="M28 150 a60 60 0 0 1 120 0 a60 60 0 0 1 -60 60"/>
+<path class="yarn" d="M56 150 a32 32 0 0 1 64 0 a32 32 0 0 1 -32 32"/>
+<path class="yarn" d="M52 104 q36 40 72 92"/>
+<rect class="deep tile" x="196" y="36" width="112" height="112" rx="16"/>
+<rect class="tint tile" x="196" y="168" width="112" height="72" rx="16"/>
+<rect class="green" x="196" y="-28" width="176" height="56" rx="28"/>
+<rect class="ink slab" x="328" y="48" width="176" height="192" rx="24"/>
+<path class="yarn-g" d="M372 144 a36 36 0 0 1 72 0"/>
+<path class="yarn-g" d="M358 144 a50 50 0 0 1 100 0 a50 50 0 0 1 -50 50"/>
+<path class="yarn-g" d="M386 144 a22 22 0 0 1 44 0"/>
+</svg>
+</div>
+<div class="words">
+  <h1 class="name">Клубок</h1>
+  <p class="tag">Афиша детских кружков и событий в Белграде</p>
+</div>
+</div>
+</body>
+</html>

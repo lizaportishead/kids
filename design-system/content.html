@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow, noarchive">
+<title>Тексты и данные — дизайн-система Клубка</title>
+<link rel="icon" href="/favicon.ico">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700;800&display=swap">
+<link rel="stylesheet" href="site.css"></head>
+<body><div class="app"><aside class="side"><a class="brand" href="./"><img src="/logo.png" alt="Клубок"><span>Дизайн-система</span></a><nav class="nav"><div class="nav-h">Основы</div><a href="./">Обзор</a><a href="tokens.html">Токены</a><a href="content.html" aria-current=page>Тексты и данные</a><a href="layout.html">Сетка и адаптив</a><a href="assets.html">Логотипы</a><div class="nav-h">Компоненты</div><a href="navigation.html">Навигация<small>4</small></a><a href="buttons.html">Кнопки<small>4</small></a><a href="filters.html">Фильтры<small>4</small></a><a href="calendar.html">Календарь<small>3</small></a><a href="cards.html">Карточки<small>7</small></a><a href="headings.html">Заголовки и метки<small>3</small></a><a href="event-page.html">Страница события<small>5</small></a><a href="overlays.html">Окна и состояния<small>4</small></a><a href="mobile.html">Мобильная версия<small>5</small></a><a href="icons.html">Иконки<small>1</small></a></nav></aside>
+<main><div class="wrap"><h1>Тексты и данные</h1><div class="prose"><h3>Голос</h3>
+<ul><li>Пишем по-русски, на «вы», коротко и по делу: «Попробуйте другой день или снимите фильтр», «Нажмите на сердечко у события, чтобы сохранить его».</li><li>Кнопки называют действие: «Добавить событие», «Смотреть все 40 занятий», «Показать 210 событий», «Записаться у @BeSmartSerbia».</li><li>Интерфейс переводится на EN и SRB; тексты событий остаются на языке источника. Сербские описания переводятся на русский, язык события отмечается атрибутом «Язык: сербский».</li><li>Названия площадок пишем как у самой площадки, в том числе сербской кириллицей или латиницей: «Музеј Вука и Доситеја», «Crno-bela mačka».</li></ul>
+<h3>Форматы</h3>
+<ul><li><strong>Возраст</strong> — через короткое тире (–) и с правильным склонением: «4–9 лет», «2–3 года», «1,5–3 года», «3+ лет», «0–12 лет». Дробный возраст — через запятую.</li><li><strong>Время</strong> — 24-часовое, всегда две цифры: «08:30», «17:00».</li><li><strong>Дата в карточке</strong> — «Сб, 26 сентября»; на странице события — «Суббота, 26 сентября · 10:00»; у регулярных — «по понедельникам и четвергам в 10:30».</li><li><strong>Длительность</strong> — словами: «45 минут», «1 час», «1 час 30 минут», «4 часа».</li><li><strong>Счётчики</strong> склоняются: «1 занятие / 2 занятия / 40 занятий», «2 события / 20 событий», «49 мест».</li><li><strong>Цена</strong> — как у источника: «1100 RSD», «4000 дин за 4 часа или 1200 дин за час».</li><li>В строке даты и времени разделитель — средняя точка « · ».</li><li>Разделители групп и подписи атрибутов — ВЕРХНИМ РЕГИСТРОМ (стиль <code>overline</code>, <code>label</code>), в тексте они написаны обычным регистром.</li></ul>
+<h3>Категории</h3>
+<p>Категория — тип активности, а не ключевое слово: Творчество, Языки, Плаванье, Чтение, Раннее развитие, Танцы, Музыка, Подготовка к школе, Шахматы и игры, Наука и логика, Робототехника, Спорт, Спектакли, Кулинария. У событий свои типы: Спектакль, Кино, Мастер-класс, Квест, Выставка и экскурсия, Праздник и встреча, Другое.</p></div></div></main></div><script>
+(function(){
+  function fit(st){
+    var fr=st.querySelector('iframe'), inner=st.querySelector('.stage-in');
+    var w=+st.dataset.w||0, cw=st.clientWidth, lw=w||cw, s=Math.min(1,cw/lw);
+    fr.style.width=lw+'px'; fr.style.transform='scale('+s+')';
+    try{var d=fr.contentDocument; var h=Math.max(d.documentElement.scrollHeight,d.body?d.body.scrollHeight:0); if(h>40){fr.style.height=h+'px'; inner.style.height=Math.ceil(h*s)+'px';}}catch(e){}
+  }
+  var all=[].slice.call(document.querySelectorAll('.stage'));
+  all.forEach(function(st){var fr=st.querySelector('iframe'); fr.addEventListener('load',function(){fit(st); setTimeout(function(){fit(st)},600); setTimeout(function(){fit(st)},2000);});});
+  window.addEventListener('resize',function(){all.forEach(fit)});
+})();
+</script></body></html>
