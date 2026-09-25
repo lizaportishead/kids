@@ -28,6 +28,19 @@ const RUNNERS = { instagram: collectInstagram, prodlenka: collectProdlenka, ente
 
 const now = new Date();
 const sources = JSON.parse(await readFile(resolve(here, 'sources.json'), 'utf8'));
+// Русские тексты для событий с сербских сайтов: ключ — источник + оригинальное название.
+const translations = JSON.parse(await readFile(resolve(here, 'translations.json'), 'utf8'));
+const titleKey = (s) => String(s || '').replace(/\s+/g, ' ').trim().toLowerCase();
+function translate(sourceId, ev) {
+  const bySource = translations[sourceId];
+  if (!bySource) return;
+  const hit = Object.entries(bySource).find(([orig]) => titleKey(orig) === titleKey(ev.title));
+  if (!hit) return;
+  const tr = hit[1];
+  // id и hash уже посчитаны по оригиналу — перевод их не трогает.
+  ev.title = tr.title; ev.short = tr.short; ev.desc = tr.desc;
+  ev.source = { ...ev.source, lang: 'sr' };
+}
 const collected = [];
 const report = [];
 
@@ -37,6 +50,7 @@ for (const source of sources) {
   try {
     const events = await run(source, now);
     for (const ev of events) {
+      translate(source.id, ev);
       if (ev.imageRemote) {
         ev.image = (await saveImage(ev.imageRemote, ev.imageKey || ev.id, IMG_DIR)) || null;
         delete ev.imageRemote; delete ev.imageKey;
