@@ -28,6 +28,7 @@ const SOURCE_OVERRIDES = {
   pinokio: 'theatre',
   panteatar: 'theatre',
   puz: 'theatre',
+  malopozoriste: 'theatre',
   bgf: 'theatre',
   ckvladadivljan: 'theatre',
   uvcsumice: 'theatre'

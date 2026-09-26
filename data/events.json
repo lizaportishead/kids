@@ -12739,6 +12739,74 @@
       "placeLink": null,
       "lat": null,
       "lng": null
+    },
+    {
+      "id": "onestep-contemporary-kids-5-10-vt-1700",
+      "title": "Современный танец",
+      "short": "Современная хореография для детей 5–10 лет в One Step",
+      "desc": "Детская группа современного танца для детей 5–10 лет. В программе — техники модерна, contemporary dance и основы импровизации, floorwork (работа с полом: перекаты, падения, вращения), растяжка, укрепление мышц, чувство ритма и баланс. Группа готовит номера и выступает на местных фестивалях и конкурсах. Стоимость зависит от абонемента, скидка 20% на второй абонемент. Запись — в директ студии.",
+      "date": null,
+      "wd": [
+        1
+      ],
+      "time": "17:00",
+      "dur": "1 час",
+      "place": "One Step Dance Studio",
+      "address": "Булевар деспота Стефана 68А, Палилула, Белград",
+      "placePhone": null,
+      "placeLink": null,
+      "lat": null,
+      "lng": null,
+      "age": [
+        5,
+        10
+      ],
+      "ageLabel": "5–10 лет",
+      "price": "уточняется",
+      "image": "data/images/onestep-contemporary-kids.jpg",
+      "category": "dance",
+      "categoryLabel": "Танцы",
+      "source": {
+        "id": "onestep",
+        "cta": "Записаться в One Step (Instagram DM)",
+        "url": "https://www.instagram.com/p/DdmDv4-gcBc/",
+        "kind": "Расписание студии",
+        "name": "One Step Dance Studio"
+      }
+    },
+    {
+      "id": "onestep-contemporary-kids-5-10-cht-1700",
+      "title": "Современный танец",
+      "short": "Современная хореография для детей 5–10 лет в One Step",
+      "desc": "Детская группа современного танца для детей 5–10 лет. В программе — техники модерна, contemporary dance и основы импровизации, floorwork (работа с полом: перекаты, падения, вращения), растяжка, укрепление мышц, чувство ритма и баланс. Группа готовит номера и выступает на местных фестивалях и конкурсах. Стоимость зависит от абонемента, скидка 20% на второй абонемент. Запись — в директ студии.",
+      "date": null,
+      "wd": [
+        3
+      ],
+      "time": "17:00",
+      "dur": "1 час",
+      "place": "One Step Dance Studio",
+      "address": "Булевар деспота Стефана 68А, Палилула, Белград",
+      "placePhone": null,
+      "placeLink": null,
+      "lat": null,
+      "lng": null,
+      "age": [
+        5,
+        10
+      ],
+      "ageLabel": "5–10 лет",
+      "price": "уточняется",
+      "image": "data/images/onestep-contemporary-kids.jpg",
+      "category": "dance",
+      "categoryLabel": "Танцы",
+      "source": {
+        "id": "onestep",
+        "cta": "Записаться в One Step (Instagram DM)",
+        "url": "https://www.instagram.com/p/DdmDv4-gcBc/",
+        "kind": "Расписание студии",
+        "name": "One Step Dance Studio"
+      }
     }
   ]
 }

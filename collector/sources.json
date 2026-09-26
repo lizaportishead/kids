@@ -124,6 +124,16 @@
     "address": "Радослава Грујића 21, Белград"
   },
   {
+    "id": "malopozoriste",
+    "type": "malopozoriste",
+    "name": "Мало позориште «Душко Радовић»",
+    "kind": "Сайт театра",
+    "url": "https://malopozoriste.co.rs/repertoar/",
+    "cta": "Купить билет на tickets.rs",
+    "place": "Мало позориште «Душко Радовић»",
+    "address": "Абердарева 1, Ташмайдан, Палилула, Белград"
+  },
+  {
     "id": "bgf",
     "type": "bgf",
     "name": "Београдска филхармонија",
