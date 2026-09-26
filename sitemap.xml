@@ -931,6 +931,11 @@
     <priority>0.5</priority>
   </url>
   <url>
+    <loc>https://klubok.kids/lumos/teatralnaya-studiya-8-pn-1930/</loc>
+    <lastmod>2026-09-26</lastmod>
+    <priority>0.5</priority>
+  </url>
+  <url>
     <loc>https://klubok.kids/mostik/vmeste-s-mamoy-1-2-0830/</loc>
     <lastmod>2026-09-26</lastmod>
     <priority>0.5</priority>
@@ -1267,6 +1272,11 @@
   </url>
   <url>
     <loc>https://klubok.kids/swimyou/big-7-10-sr/</loc>
+    <lastmod>2026-09-26</lastmod>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://klubok.kids/lumos/teatralnaya-studiya-8-sr-1930/</loc>
     <lastmod>2026-09-26</lastmod>
     <priority>0.5</priority>
   </url>
@@ -1932,6 +1942,11 @@
   </url>
   <url>
     <loc>https://klubok.kids/rollerland/</loc>
+    <lastmod>2026-09-26</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://klubok.kids/lumos/</loc>
     <lastmod>2026-09-26</lastmod>
     <priority>0.7</priority>
   </url>

@@ -21,6 +21,7 @@ laboratoriya
 lav-i-zhabats
 lozhionitsa
 ludwig-land
+lumos
 mathline
 mostik
 muze-africhke-umetnosti
