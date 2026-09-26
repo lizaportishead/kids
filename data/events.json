@@ -1,7 +1,7 @@
 {
   "updatedAt": "2026-09-26T09:19:18.881Z",
   "city": "Белград",
-  "count": 378,
+  "count": 380,
   "report": [
     {
       "source": "prodlenka",
@@ -12675,6 +12675,70 @@
         "kind": "Расписание школы",
         "name": "SwimYou"
       }
+    },
+    {
+      "id": "portfoodmarket-puteshestvie-vokrug-sveta-2026-09-26",
+      "title": "Детский спектакль «Путешествие вокруг света»",
+      "short": "Детская программа на выходных в Port Food Market",
+      "desc": "Детский спектакль «Путешествие вокруг света» в Port Food Market (Лука Београд). Детская программа Port Food Market на выходных. Регистрация не нужна. Возраст 3–10 лет — оценка сайта Dečiji grad.",
+      "date": "2026-09-26",
+      "wd": null,
+      "time": "17:00",
+      "dur": "1 час",
+      "place": "Port Food Market",
+      "address": "Лука Београд, Жоржа Клемансоа бб, Белград",
+      "age": [
+        3,
+        10
+      ],
+      "ageLabel": "3–10 лет",
+      "price": "уточняется",
+      "image": "data/images/portfoodmarket-vikend.jpg",
+      "category": "theatre",
+      "categoryLabel": "Спектакли",
+      "source": {
+        "id": "portfoodmarket",
+        "name": "Port Food Market",
+        "kind": "Афиша «Dečiji grad»",
+        "url": "https://www.decijigrad.rs/dogadjaji/vikend-program-ya-decu-u-port-food-market/",
+        "cta": "Подробнее на Dečiji grad"
+      },
+      "placePhone": null,
+      "placeLink": null,
+      "lat": null,
+      "lng": null
+    },
+    {
+      "id": "portfoodmarket-klounskoe-magicheskoe-shou-2026-09-27",
+      "title": "Клоунское магическое шоу",
+      "short": "Детская программа на выходных в Port Food Market",
+      "desc": "Клоунское магическое шоу в Port Food Market (Лука Београд). Детская программа Port Food Market на выходных. Регистрация не нужна. Возраст 3–10 лет — оценка сайта Dečiji grad.",
+      "date": "2026-09-27",
+      "wd": null,
+      "time": "17:00",
+      "dur": "1 час",
+      "place": "Port Food Market",
+      "address": "Лука Београд, Жоржа Клемансоа бб, Белград",
+      "age": [
+        3,
+        10
+      ],
+      "ageLabel": "3–10 лет",
+      "price": "уточняется",
+      "image": "data/images/portfoodmarket-vikend.jpg",
+      "category": "theatre",
+      "categoryLabel": "Спектакли",
+      "source": {
+        "id": "portfoodmarket",
+        "name": "Port Food Market",
+        "kind": "Афиша «Dečiji grad»",
+        "url": "https://www.decijigrad.rs/dogadjaji/vikend-program-ya-decu-u-port-food-market/",
+        "cta": "Подробнее на Dečiji grad"
+      },
+      "placePhone": null,
+      "placeLink": null,
+      "lat": null,
+      "lng": null
     }
   ]
 }
