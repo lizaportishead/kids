@@ -1876,6 +1876,11 @@
     <priority>0.5</priority>
   </url>
   <url>
+    <loc>https://klubok.kids/lumos/uspet-do-shkoly-5-sb-1200/</loc>
+    <lastmod>2026-09-26</lastmod>
+    <priority>0.5</priority>
+  </url>
+  <url>
     <loc>https://klubok.kids/nashe-mesto-vrachar/4daa9ba61ecf/</loc>
     <lastmod>2026-09-26</lastmod>
     <priority>0.5</priority>
@@ -2456,12 +2461,12 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://klubok.kids/category/music/</loc>
+    <loc>https://klubok.kids/category/school_prep/</loc>
     <lastmod>2026-09-26</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://klubok.kids/category/school_prep/</loc>
+    <loc>https://klubok.kids/category/music/</loc>
     <lastmod>2026-09-26</lastmod>
     <priority>0.8</priority>
   </url>

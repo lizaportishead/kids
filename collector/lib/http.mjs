@@ -53,7 +53,12 @@ export async function fetchHtml(url, { label = 'fetch', proxy = true } = {}) {
 async function get(url, headers, timeoutMs) {
   const res = await fetch(url, { headers, signal: AbortSignal.timeout(timeoutMs) });
   if (!res.ok) throw new Error('HTTP ' + res.status);
-  return res.text();
+  const text = await res.text();
+  // SiteGround (malopozoriste.co.rs) отвечает адресам дата-центров «200 OK» со
+  // страницей-капчей вместо содержимого — считаем это отказом, чтобы сработал
+  // запасной путь.
+  if (text.length < 5000 && text.includes('/.well-known/sgcaptcha/')) throw new Error('капча SiteGround');
+  return text;
 }
 
 // У undici настоящая причина лежит в err.cause («ECONNRESET», «UND_ERR_CONNECT_TIMEOUT»…),

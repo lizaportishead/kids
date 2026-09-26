@@ -15,6 +15,13 @@ import { iso } from '../lib/text.mjs';
 // («Сцена за децу»). Оттуда же синопсис (content), возраст (таксономия age-group:
 // «Узраст 0-3 / 4-7 / 8-11 / 12-99»), длительность («Трајање 75'») и афиша.
 //
+// SiteGround закрывает сайт капчей для адресов дата-центров: из GitHub Actions
+// API и страницы спектаклей не открываются даже через r.jina.ai, а списки
+// открываются через него. Поэтому, если API недоступен, берём спектакли со
+// страницы `/predstave/scena-za-decu/` (карточки `theater-card`: название,
+// ссылка, афиша, краткое описание, «Узраст …») — без длительности и полного
+// синопсиса; у переведённых спектаклей описание всё равно из translations.json.
+//
 // Молодёжные спектакли той же рубрики (без возрастной группы или в 20:00) и
 // показы без ссылки на tickets.rs не берём: это утренние показы в будни для
 // организованных групп (школы, садики — «Купи карту» ведёт на страницу билетарницы
@@ -31,7 +38,10 @@ const MONTHS = ['јан', 'феб', 'мар', 'апр', 'мај', 'јун', 'ј�
 export async function collectMalopozoriste(source, now = new Date()) {
   const today = iso(now);
   const html = await fetchHtml(BASE + '/repertoar/', { label: 'malopozoriste' });
-  const shows = await fetchShows();
+  const shows = await fetchShows().catch(async (err) => {
+    console.error('malopozoriste: API недоступен (' + (err.message || err) + ') — беру список «Сцена за децу»');
+    return fetchShowsFromList();
+  });
 
   const events = [];
   for (const box of html.split(/<div class=["']event-box/).slice(1)) {
@@ -61,7 +71,7 @@ export async function collectMalopozoriste(source, now = new Date()) {
     const image = show.image || row.image;
     if (image) {
       ev.imageRemote = image;
-      ev.imageKey = 'malopozoriste-' + show.id;
+      ev.imageKey = 'malopozoriste-' + (show.id || imageName(image));
     }
     events.push(ev);
   }
@@ -113,6 +123,36 @@ async function fetchShows() {
     });
   }
   return shows;
+}
+
+// Запасной путь: карточки страницы «Сцена за децу».
+async function fetchShowsFromList() {
+  const html = await fetchHtml(BASE + '/predstave/scena-za-decu/', { label: 'malopozoriste' });
+  const shows = new Map();
+  for (const card of html.split(/<div class=["']theater-card["']/).slice(1)) {
+    const mLink = card.match(/theater-header-link["']?\s+href=["']([^"']+)["'][^>]*>([^<]+)</);
+    if (!mLink) continue;
+    const image = (card.match(/<img[^>]+src=["']([^"']+)["'][^>]*theater-rectangle/) ||
+      card.match(/<img[^>]+src=["'](https?:[^"']+)["']/) || [])[1] || null;
+    const excerpt = decode(((card.match(/theater-excerpt["']?>\s*<span>([\s\S]*?)<\/span>/) || [])[1] || '').replace(/<[^>]+>/g, ''))
+      .replace(/\s+/g, ' ').replace(/\.{3}$/, '…').trim();
+    const ages = [...card.matchAll(/<span>\s*(Узраст[^<]*?)\s*<\/span>/g)].map((m) => m[1]);
+    shows.set(slugOf(mLink[1]), {
+      id: null,
+      title: decode(mLink[2]).trim(),
+      desc: excerpt,
+      age: ageOf(ages),
+      dur: null,
+      image
+    });
+  }
+  if (!shows.size) throw new Error('malopozoriste: на странице «Сцена за децу» не нашлось спектаклей');
+  return shows;
+}
+
+// «…/2024/09/pepeljuga-naslovna.png» → «pepeljuga-naslovna».
+function imageName(url) {
+  return String(url).split('/').pop().replace(/\.[a-z0-9]+$/i, '').replace(/[^a-z0-9-]+/gi, '-').toLowerCase();
 }
 
 // «Узраст 0-3» + «Узраст 4-7» → [0, 7]; «12-99» → верх 16. Малышам 0 лет
