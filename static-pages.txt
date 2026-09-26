@@ -6,7 +6,6 @@ avr-swim-palilula
 avr-swim-vrachar
 begushchiy-gorod
 bela-vrana
-beogradska-filkharmoni-a
 besmart
 biblioteka-bora-stankovi
 crno-bela-ma-ka
