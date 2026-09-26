@@ -1,4 +1,4 @@
-import { UA } from '../lib/images.mjs';
+import { fetchHtml } from '../lib/http.mjs';
 import { normalize } from '../lib/normalize.mjs';
 import { iso } from '../lib/text.mjs';
 
@@ -20,16 +20,24 @@ const PAGE_DELAY_MS = 400;
 export async function collectPinokio(source, now = new Date()) {
   const html = await fetchText(source.url);
 
+  const today = iso(now);
+  const details = new Map();
   const events = [];
   for (const block of html.split('expire-date').slice(1)) {
     const slot = parseBlock(block);
     if (!slot) continue;
+    const date = resolveDate(slot.day, slot.month, now);
+    if (date < today) continue; // прошедший показ, скрытый скриптом сайта
 
-    const detail = await fetchDetail(slot.title).catch((err) => {
-      console.error('pinokio: страница «' + slot.title + '» не загрузилась: ' + (err.message || err));
-      return null;
-    });
-    if (PAGE_DELAY_MS) await sleep(PAGE_DELAY_MS);
+    // Один спектакль идёт по нескольку раз — страницу грузим один раз.
+    if (!details.has(slot.title)) {
+      details.set(slot.title, await fetchDetail(slot.title).catch((err) => {
+        console.error('pinokio: страница «' + slot.title + '» не загрузилась: ' + (err.message || err));
+        return null;
+      }));
+      if (PAGE_DELAY_MS) await sleep(PAGE_DELAY_MS);
+    }
+    const detail = details.get(slot.title);
 
     const title = (detail && detail.title) || titleCase(slot.title);
     const desc = (detail && detail.desc) || title;
@@ -37,7 +45,7 @@ export async function collectPinokio(source, now = new Date()) {
       title,
       desc,
       short: desc.slice(0, 150),
-      date: resolveDate(slot.day, slot.month, now),
+      date,
       time: slot.time,
       dur: slot.dur,
       age: slot.age,
@@ -100,12 +108,14 @@ function parseDurText(text) {
   return m ? m[1] + ' минут' : null;
 }
 
-// Год в репертуаре не пишут — берём ближайшую будущую дату (как resolveYear
-// в lib/text.mjs: прошедшее максимум на 3 дня считаем этим годом).
+// Год в репертуаре не пишут. На следующий год переносим только дату, которая
+// «прошла» больше чем на 3 месяца (в декабре «10.01.» — это январь). Недавно
+// прошедшие показы сайт держит в разметке (скрывает скриптом) — это прошлое,
+// а не показ через год: так 16.09 «12.09.» превратилось в 12.09.2027.
 function resolveDate(day, month, now) {
   const y = now.getFullYear();
   const cand = new Date(y, month - 1, day);
-  const cutoff = new Date(now.getFullYear(), now.getMonth(), now.getDate() - 3);
+  const cutoff = new Date(y, now.getMonth() - 3, now.getDate());
   return iso(cand < cutoff ? new Date(y + 1, month - 1, day) : cand);
 }
 
@@ -149,13 +159,7 @@ async function fetchDetail(rawTitle) {
 
 // --- утилиты -------------------------------------------------------------------
 
-async function fetchText(url) {
-  const res = await fetch(url, {
-    headers: { 'user-agent': UA, 'accept-language': 'sr,ru;q=0.8,en;q=0.6', accept: 'text/html,application/xhtml+xml' }
-  });
-  if (!res.ok) throw new Error('pinokio ' + url + ': HTTP ' + res.status);
-  return res.text();
-}
+const fetchText = (url) => fetchHtml(url, { label: 'pinokio' });
 
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 

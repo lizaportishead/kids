@@ -138,8 +138,10 @@ export const addDays = (d, n) => new Date(d.getFullYear(), d.getMonth(), d.getDa
 
 function resolveYear(monthIndex, day, now) {
   const thisYear = new Date(now.getFullYear(), monthIndex, day);
-  // прошедшую дату считаем следующим годом (анонсы смотрят вперёд)
-  if (thisYear < addDays(now, -3)) return iso(new Date(now.getFullYear() + 1, monthIndex, day));
+  // Анонсы смотрят вперёд, но следующим годом считаем только дату, «прошедшую»
+  // больше чем на 3 месяца (в декабре «10 января» — это январь). Недавнее
+  // прошлое — это прошлое, а не событие через год (так появлялись 2027-е даты).
+  if (thisYear < new Date(now.getFullYear(), now.getMonth() - 3, now.getDate())) return iso(new Date(now.getFullYear() + 1, monthIndex, day));
   return iso(thisYear);
 }
 

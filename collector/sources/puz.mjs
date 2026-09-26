@@ -1,6 +1,6 @@
-import { UA } from '../lib/images.mjs';
+import { fetchHtml } from '../lib/http.mjs';
 import { normalize } from '../lib/normalize.mjs';
-import { iso, addDays } from '../lib/text.mjs';
+import { iso } from '../lib/text.mjs';
 
 // pozoristancepuz.com — «Позориште Пуж» (Белград, Радослава Грујића 21), детский
 // театр Бранка Коцкице. Сайт на самописной CMS, сербская кириллица; отдельной
@@ -30,10 +30,10 @@ const MONTHS_LAT = ['januar', 'februar', 'mart', 'april', 'maj', 'jun', 'jul', '
 export async function collectPuz(source, now = new Date()) {
   const today = iso(now);
   const home = await fetchText(BASE + '/');
-  const block = (home.match(/<div id='repertoar'[\s\S]*?<\/section>\s*<\/div>/) || [home])[0];
+  const block = (home.match(/<div id=['"]repertoar['"][\s\S]*?<\/section>\s*<\/div>/) || [home])[0];
 
   const rows = [];
-  for (const article of block.split(/<article class='(?:this|next)_week/).slice(1)) {
+  for (const article of block.split(/<article class=['"](?:this|next)_week/).slice(1)) {
     for (const row of parseArticle(article.split('</article>')[0], now)) {
       if (row.date >= today) rows.push(row);
     }
@@ -84,15 +84,15 @@ export async function collectPuz(source, now = new Date()) {
 
 // Один блок дня → 1–2 показа. «Субота 19. септембар» + «у 12 и 17 часова».
 function parseArticle(article, now) {
-  const up = decode((article.match(/class='time_up'>([^<]*)</) || [])[1] || '');
+  const up = decode((article.match(/class=['"]time_up['"]>([^<]*)</) || [])[1] || '');
   const mDate = up.toLowerCase().match(/(\d{1,2})\.?\s+([а-я]+)/);
-  const mTitle = article.match(/<h3><a href='([^']+)'[^>]*>([^<]+)<\/a><\/h3>/);
+  const mTitle = article.match(/<h3><a href=['"]([^'"]+)['"][^>]*>([^<]+)<\/a><\/h3>/);
   if (!mDate || !mTitle) return [];
   const mi = MONTHS_CYR.findIndex((m) => mDate[2].startsWith(m.slice(0, 3)));
   if (mi === -1) return [];
   const date = resolveYear(mi, Number(mDate[1]), now);
 
-  const down = decode((article.match(/class='time_down'>([^<]*)</) || [])[1] || '');
+  const down = decode((article.match(/class=['"]time_down['"]>([^<]*)</) || [])[1] || '');
   const times = [...down.replace(/\s+часова?.*$/i, '').matchAll(/(\d{1,2})(?:[:.](\d{2}))?/g)]
     .map((m) => String(m[1]).padStart(2, '0') + ':' + (m[2] || '00'));
 
@@ -100,11 +100,11 @@ function parseArticle(article, now) {
   return times.map((time) => ({ date, time, slug, title: decode(mTitle[2]).trim() }));
 }
 
-// Года в датах нет: прошедшую (больше чем на 3 дня) считаем следующим годом —
-// как resolveYear в lib/text.mjs.
+// Года в датах нет: следующим годом считаем только дату, «прошедшую» больше
+// чем на 3 месяца (в декабре «10. јануар» — это январь), иначе это прошлое.
 function resolveYear(monthIndex, day, now) {
   const thisYear = new Date(now.getFullYear(), monthIndex, day);
-  if (thisYear < addDays(now, -3)) return iso(new Date(now.getFullYear() + 1, monthIndex, day));
+  if (thisYear < new Date(now.getFullYear(), now.getMonth() - 3, now.getDate())) return iso(new Date(now.getFullYear() + 1, monthIndex, day));
   return iso(thisYear);
 }
 
@@ -118,20 +118,20 @@ async function fetchDetail(slug) {
   // заголовок — PNG). «У изградњи...» — заглушка недоделанной страницы.
   const h1 = (main.match(/<h1[^>]*>([\s\S]*?)<\/h1>/) || [])[1] || '';
   let title = clean(h1.replace(/<img[^>]*>/g, ''));
-  if (!title) title = decode((h1.match(/alt='([^']*)'/) || [])[1] || '').trim();
+  if (!title) title = decode((h1.match(/alt=['"]([^'"]*)['"]/) || [])[1] || '').trim();
   if (/изградњ/i.test(title)) title = '';
 
-  const body = (main.match(/<h3>О чему се ради<\/h3><div class='tsize'>([\s\S]*?)<\/div>/) || [])[1] || '';
+  const body = (main.match(/<h3>О чему се ради<\/h3>\s*<div class=['"]tsize['"]>([\s\S]*?)<\/div>/) || [])[1] || '';
   const desc = clean(body);
 
   // Возраст — только если на странице указан числом («5-12 година»); общая
   // фраза «за децу и одрасле» его не задаёт.
-  const uzrast = clean((main.match(/id='p2_uzrast_text'[^>]*>([\s\S]*?)<\/p>/) || [])[1] || '');
+  const uzrast = clean((main.match(/id=['"]p2_uzrast_text['"][^>]*>([\s\S]*?)<\/p>/) || [])[1] || '');
   const mAge = uzrast.match(/(\d{1,2})\s*[-–—]\s*(\d{1,2})/);
   const age = mAge ? [Number(mAge[1]), Number(mAge[2])] : null;
 
   // Фото — первый кадр галереи; у части спектаклей есть уменьшенная копия «(Medium)».
-  const gal = (main.match(/class='p_g_small' src='([^']+)'/) || [])[1] || null;
+  const gal = (main.match(/class=['"]p_g_small['"] src=['"]([^'"]+)['"]/) || [])[1] || null;
   return { title, desc, age, image: gal ? absolute(gal) : null };
 }
 
@@ -140,7 +140,7 @@ async function fetchDetail(slug) {
 async function fetchVignettes() {
   const html = await fetchText(BASE + '/predstave/ove-sezone');
   const map = new Map();
-  for (const m of html.matchAll(/<article id='predstava-([^']+)'[^>]*>\s*<a[^>]*><img[^>]*src='([^']+)'/g)) {
+  for (const m of html.matchAll(/<article id=['"]predstava-([^'"]+)['"][^>]*>\s*<a[^>]*><img[^>]*src=['"]([^'"]+)['"]/g)) {
     map.set(m[1], absolute(m[2]));
   }
   return map;
@@ -166,13 +166,9 @@ async function fetchTickets() {
 
 // --- утилиты -----------------------------------------------------------------
 
-async function fetchText(url) {
-  const res = await fetch(url, {
-    headers: { 'user-agent': UA, 'accept-language': 'sr,ru;q=0.8,en;q=0.6', accept: 'text/html,application/xhtml+xml' }
-  });
-  if (!res.ok) throw new Error('puz ' + url + ': HTTP ' + res.status);
-  return res.text();
-}
+// puz.tickets.rs — другой хост, он из Actions открывается; запасной путь только
+// для сайта театра.
+const fetchText = (url) => fetchHtml(url, { label: 'puz', proxy: !url.startsWith(TICKETS) });
 
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 
