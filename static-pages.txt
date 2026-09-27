@@ -5,10 +5,7 @@ avni-akvari-um-i-tropikari-um
 avr-swim-palilula
 avr-swim-vrachar
 begushchiy-gorod
-bela-vrana
 besmart
-biblioteka-bora-stankovi
-crno-bela-ma-ka
 dech-a-stsena-akademi-a-28
 enter
 indigo-novyy-belgrad
@@ -19,7 +16,6 @@ kinder-garden
 kul-tura
 laboratoriya
 lav-i-zhabats
-lozhionitsa
 ludwig-land
 lumos
 malo-pozorishte-dushko-radovi
@@ -27,7 +23,6 @@ mathline
 mostik
 muze-africhke-umetnosti
 muze-nikole-tesle
-muze-vuka-i-dosite-a
 narodno-pozorishte
 nashe-mesto-novyy-belgrad
 nashe-mesto-vrachar
@@ -35,7 +30,6 @@ one-step-dance-studio
 palata-nauke
 pan-teatar
 port-food-market
-prirod-achki-muze
 prodlenka
 prosto-r
 rollerland
@@ -45,5 +39,4 @@ swimyou
 teatr-kukol-pinokio
 teatr-puzh
 tsentar-za-kulturu-vlada-div-an
-uvts-shumitse
 znanje-pod-lupom
