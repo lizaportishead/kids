@@ -44,6 +44,9 @@ Deno.serve(async (req) => {
   const place = clip(data.place, 300);
   const desc = clip(data.desc, 2000);
   const page = clip(data.page, 300);
+  // Telegram для связи: ник, @ник или ссылка t.me/ник → @ник.
+  let contact = clip(data.tg, 100).replace(/^https?:\/\/(t\.me|telegram\.me)\//i, '');
+  if (/^[A-Za-z0-9_]{3,}$/.test(contact)) contact = '@' + contact;
 
   if (!link && !desc) return json({ error: 'empty' }, 400);
 
@@ -55,6 +58,7 @@ Deno.serve(async (req) => {
     place && `📍 ${place}`,
     desc && `📝 ${desc}`,
     '',
+    contact && `👤 Telegram: ${contact}`,
     page && `↩︎ ${page}`,
   ].filter(Boolean);
 
