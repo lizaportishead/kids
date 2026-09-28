@@ -1,7 +1,7 @@
 {
   "updatedAt": "2026-09-27T09:58:49.992Z",
   "city": "Белград",
-  "count": 465,
+  "count": 533,
   "report": [
     {
       "source": "prodlenka",
@@ -15583,6 +15583,2318 @@
         "url": "https://www.instagram.com/swimyou.club/",
         "kind": "Расписание школы",
         "name": "SwimYou"
+      }
+    },
+    {
+      "id": "roboacademy-nbg-3d-model-sb-1430",
+      "title": "3D-моделирование и печать",
+      "short": "3D-моделирование и печать для детей от 8 лет: от идеи до готовой модели.",
+      "desc": "Занятия по 3D-моделированию: дети проектируют свои объекты на компьютере и печатают их на 3D-принтере, развивая пространственное мышление и инженерные навыки. Центр дополнительного образования RoboAcademy в Новом Белграде, по субботам, 14:30–16:00. Вопросы и запись — @roboacademyofficial, +381 64 597 3001.",
+      "date": null,
+      "wd": [
+        5
+      ],
+      "time": "14:30",
+      "dur": "1 час 30 минут",
+      "place": "RoboAcademy (Новый Белград)",
+      "address": "Булевар Зорана Джинджича 89, Новый Белград, Белград",
+      "placePhone": null,
+      "placeLink": null,
+      "lat": null,
+      "lng": null,
+      "age": [
+        8,
+        14
+      ],
+      "ageLabel": "8+ лет",
+      "price": "уточняется",
+      "image": null,
+      "category": "science",
+      "categoryLabel": "Наука и логика",
+      "source": {
+        "id": "roboacademy",
+        "cta": "Записаться у @roboacademyofficial",
+        "url": "https://www.instagram.com/p/DdjF6VhjEUz/",
+        "kind": "Расписание студии",
+        "name": "RoboAcademy"
+      }
+    },
+    {
+      "id": "roboacademy-nbg-3d-model-sb-1615",
+      "title": "3D-моделирование и печать",
+      "short": "3D-моделирование и печать для детей от 8 лет: от идеи до готовой модели.",
+      "desc": "Занятия по 3D-моделированию: дети проектируют свои объекты на компьютере и печатают их на 3D-принтере, развивая пространственное мышление и инженерные навыки. Центр дополнительного образования RoboAcademy в Новом Белграде, по субботам, 16:15–17:45. Вопросы и запись — @roboacademyofficial, +381 64 597 3001.",
+      "date": null,
+      "wd": [
+        5
+      ],
+      "time": "16:15",
+      "dur": "1 час 30 минут",
+      "place": "RoboAcademy (Новый Белград)",
+      "address": "Булевар Зорана Джинджича 89, Новый Белград, Белград",
+      "placePhone": null,
+      "placeLink": null,
+      "lat": null,
+      "lng": null,
+      "age": [
+        8,
+        14
+      ],
+      "ageLabel": "8+ лет",
+      "price": "уточняется",
+      "image": null,
+      "category": "science",
+      "categoryLabel": "Наука и логика",
+      "source": {
+        "id": "roboacademy",
+        "cta": "Записаться у @roboacademyofficial",
+        "url": "https://www.instagram.com/p/DdjF6VhjEUz/",
+        "kind": "Расписание студии",
+        "name": "RoboAcademy"
+      }
+    },
+    {
+      "id": "roboacademy-nbg-3d-model-sr-1445",
+      "title": "3D-моделирование и печать",
+      "short": "3D-моделирование и печать для детей от 8 лет: от идеи до готовой модели.",
+      "desc": "Занятия по 3D-моделированию: дети проектируют свои объекты на компьютере и печатают их на 3D-принтере, развивая пространственное мышление и инженерные навыки. Центр дополнительного образования RoboAcademy в Новом Белграде, по средам, 14:45–16:15. Вопросы и запись — @roboacademyofficial, +381 64 597 3001.",
+      "date": null,
+      "wd": [
+        2
+      ],
+      "time": "14:45",
+      "dur": "1 час 30 минут",
+      "place": "RoboAcademy (Новый Белград)",
+      "address": "Булевар Зорана Джинджича 89, Новый Белград, Белград",
+      "placePhone": null,
+      "placeLink": null,
+      "lat": null,
+      "lng": null,
+      "age": [
+        8,
+        14
+      ],
+      "ageLabel": "8+ лет",
+      "price": "уточняется",
+      "image": null,
+      "category": "science",
+      "categoryLabel": "Наука и логика",
+      "source": {
+        "id": "roboacademy",
+        "cta": "Записаться у @roboacademyofficial",
+        "url": "https://www.instagram.com/p/DdjF6VhjEUz/",
+        "kind": "Расписание студии",
+        "name": "RoboAcademy"
+      }
+    },
+    {
+      "id": "roboacademy-nbg-3d-model-sr-1615",
+      "title": "3D-моделирование и печать",
+      "short": "3D-моделирование и печать для детей от 8 лет: от идеи до готовой модели.",
+      "desc": "Занятия по 3D-моделированию: дети проектируют свои объекты на компьютере и печатают их на 3D-принтере, развивая пространственное мышление и инженерные навыки. Центр дополнительного образования RoboAcademy в Новом Белграде, по средам, 16:15–17:45. Вопросы и запись — @roboacademyofficial, +381 64 597 3001.",
+      "date": null,
+      "wd": [
+        2
+      ],
+      "time": "16:15",
+      "dur": "1 час 30 минут",
+      "place": "RoboAcademy (Новый Белград)",
+      "address": "Булевар Зорана Джинджича 89, Новый Белград, Белград",
+      "placePhone": null,
+      "placeLink": null,
+      "lat": null,
+      "lng": null,
+      "age": [
+        8,
+        14
+      ],
+      "ageLabel": "8+ лет",
+      "price": "уточняется",
+      "image": null,
+      "category": "science",
+      "categoryLabel": "Наука и логика",
+      "source": {
+        "id": "roboacademy",
+        "cta": "Записаться у @roboacademyofficial",
+        "url": "https://www.instagram.com/p/DdjF6VhjEUz/",
+        "kind": "Расписание студии",
+        "name": "RoboAcademy"
+      }
+    },
+    {
+      "id": "roboacademy-nbg-3d-ruchka-sb-1430",
+      "title": "Рисование 3D-ручкой",
+      "short": "Рисование 3D-ручкой для детей от 7 лет: объёмные поделки своими руками.",
+      "desc": "Творческое занятие с 3D-ручками: дети создают объёмные фигурки и поделки, развивают моторику, фантазию и пространственное воображение. Центр дополнительного образования RoboAcademy в Новом Белграде, по субботам, 14:30–15:30. Вопросы и запись — @roboacademyofficial, +381 64 597 3001.",
+      "date": null,
+      "wd": [
+        5
+      ],
+      "time": "14:30",
+      "dur": "1 час",
+      "place": "RoboAcademy (Новый Белград)",
+      "address": "Булевар Зорана Джинджича 89, Новый Белград, Белград",
+      "placePhone": null,
+      "placeLink": null,
+      "lat": null,
+      "lng": null,
+      "age": [
+        7,
+        12
+      ],
+      "ageLabel": "7+ лет",
+      "price": "уточняется",
+      "image": null,
+      "category": "art",
+      "categoryLabel": "Творчество",
+      "source": {
+        "id": "roboacademy",
+        "cta": "Записаться у @roboacademyofficial",
+        "url": "https://www.instagram.com/p/DdjF6VhjEUz/",
+        "kind": "Расписание студии",
+        "name": "RoboAcademy"
+      }
+    },
+    {
+      "id": "roboacademy-nbg-anim-pt-1445",
+      "title": "Студия мультипликации и стоп-моушн",
+      "short": "Студия мультипликации для детей от 6 лет: снимаем свои мультфильмы в технике стоп-моушн.",
+      "desc": "В студии мультипликации дети придумывают сюжет, создают персонажей и декорации и снимают собственные мультфильмы в технике стоп-моушн. Центр дополнительного образования RoboAcademy в Новом Белграде, по пятницам, 14:45–16:15. Вопросы и запись — @roboacademyofficial, +381 64 597 3001.",
+      "date": null,
+      "wd": [
+        4
+      ],
+      "time": "14:45",
+      "dur": "1 час 30 минут",
+      "place": "RoboAcademy (Новый Белград)",
+      "address": "Булевар Зорана Джинджича 89, Новый Белград, Белград",
+      "placePhone": null,
+      "placeLink": null,
+      "lat": null,
+      "lng": null,
+      "age": [
+        6,
+        12
+      ],
+      "ageLabel": "6+ лет",
+      "price": "уточняется",
+      "image": null,
+      "category": "art",
+      "categoryLabel": "Творчество",
+      "source": {
+        "id": "roboacademy",
+        "cta": "Записаться у @roboacademyofficial",
+        "url": "https://www.instagram.com/p/DdjF6VhjEUz/",
+        "kind": "Расписание студии",
+        "name": "RoboAcademy"
+      }
+    },
+    {
+      "id": "roboacademy-nbg-art-pt-1615",
+      "title": "Арт-клуб",
+      "short": "Арт-клуб для детей от 7 лет: рисование и творчество в разных техниках.",
+      "desc": "Творческий клуб для детей от 7 лет: рисование и работа в разных художественных техниках, развитие фантазии и чувства цвета. Центр дополнительного образования RoboAcademy в Новом Белграде, по пятницам, 16:15–17:45. Вопросы и запись — @roboacademyofficial, +381 64 597 3001.",
+      "date": null,
+      "wd": [
+        4
+      ],
+      "time": "16:15",
+      "dur": "1 час 30 минут",
+      "place": "RoboAcademy (Новый Белград)",
+      "address": "Булевар Зорана Джинджича 89, Новый Белград, Белград",
+      "placePhone": null,
+      "placeLink": null,
+      "lat": null,
+      "lng": null,
+      "age": [
+        7,
+        12
+      ],
+      "ageLabel": "7+ лет",
+      "price": "уточняется",
+      "image": null,
+      "category": "art",
+      "categoryLabel": "Творчество",
+      "source": {
+        "id": "roboacademy",
+        "cta": "Записаться у @roboacademyofficial",
+        "url": "https://www.instagram.com/p/DdjF6VhjEUz/",
+        "kind": "Расписание студии",
+        "name": "RoboAcademy"
+      }
+    },
+    {
+      "id": "roboacademy-nbg-art-sr-1445",
+      "title": "Арт-клуб",
+      "short": "Арт-клуб для детей от 7 лет: рисование и творчество в разных техниках.",
+      "desc": "Творческий клуб для детей от 7 лет: рисование и работа в разных художественных техниках, развитие фантазии и чувства цвета. Центр дополнительного образования RoboAcademy в Новом Белграде, по средам, 14:45–16:15. Вопросы и запись — @roboacademyofficial, +381 64 597 3001.",
+      "date": null,
+      "wd": [
+        2
+      ],
+      "time": "14:45",
+      "dur": "1 час 30 минут",
+      "place": "RoboAcademy (Новый Белград)",
+      "address": "Булевар Зорана Джинджича 89, Новый Белград, Белград",
+      "placePhone": null,
+      "placeLink": null,
+      "lat": null,
+      "lng": null,
+      "age": [
+        7,
+        12
+      ],
+      "ageLabel": "7+ лет",
+      "price": "уточняется",
+      "image": null,
+      "category": "art",
+      "categoryLabel": "Творчество",
+      "source": {
+        "id": "roboacademy",
+        "cta": "Записаться у @roboacademyofficial",
+        "url": "https://www.instagram.com/p/DdjF6VhjEUz/",
+        "kind": "Расписание студии",
+        "name": "RoboAcademy"
+      }
+    },
+    {
+      "id": "roboacademy-nbg-chess6-cht-1445",
+      "title": "Шахматы с Анной Мальцевской",
+      "short": "Шахматный класс с Анной Мальцевской для детей от 6 лет.",
+      "desc": "Шахматный класс с тренером Анной Мальцевской для детей от 6 лет: правила, основы тактики и игровая практика. Центр дополнительного образования RoboAcademy в Новом Белграде, по четвергам, 14:45–15:45. Вопросы и запись — @roboacademyofficial, +381 64 597 3001.",
+      "date": null,
+      "wd": [
+        3
+      ],
+      "time": "14:45",
+      "dur": "1 час",
+      "place": "RoboAcademy (Новый Белград)",
+      "address": "Булевар Зорана Джинджича 89, Новый Белград, Белград",
+      "placePhone": null,
+      "placeLink": null,
+      "lat": null,
+      "lng": null,
+      "age": [
+        6,
+        8
+      ],
+      "ageLabel": "6+ лет",
+      "price": "уточняется",
+      "image": null,
+      "category": "games",
+      "categoryLabel": "Шахматы и игры",
+      "source": {
+        "id": "roboacademy",
+        "cta": "Записаться у @roboacademyofficial",
+        "url": "https://www.instagram.com/p/DdjF6VhjEUz/",
+        "kind": "Расписание студии",
+        "name": "RoboAcademy"
+      }
+    },
+    {
+      "id": "roboacademy-nbg-chess6-vt-1445",
+      "title": "Шахматы с Анной Мальцевской",
+      "short": "Шахматный класс с Анной Мальцевской для детей от 6 лет.",
+      "desc": "Шахматный класс с тренером Анной Мальцевской для детей от 6 лет: правила, основы тактики и игровая практика. Центр дополнительного образования RoboAcademy в Новом Белграде, по вторникам, 14:45–15:45. Вопросы и запись — @roboacademyofficial, +381 64 597 3001.",
+      "date": null,
+      "wd": [
+        1
+      ],
+      "time": "14:45",
+      "dur": "1 час",
+      "place": "RoboAcademy (Новый Белград)",
+      "address": "Булевар Зорана Джинджича 89, Новый Белград, Белград",
+      "placePhone": null,
+      "placeLink": null,
+      "lat": null,
+      "lng": null,
+      "age": [
+        6,
+        8
+      ],
+      "ageLabel": "6+ лет",
+      "price": "уточняется",
+      "image": null,
+      "category": "games",
+      "categoryLabel": "Шахматы и игры",
+      "source": {
+        "id": "roboacademy",
+        "cta": "Записаться у @roboacademyofficial",
+        "url": "https://www.instagram.com/p/DdjF6VhjEUz/",
+        "kind": "Расписание студии",
+        "name": "RoboAcademy"
+      }
+    },
+    {
+      "id": "roboacademy-nbg-chess8-cht-1610",
+      "title": "Шахматы с Анной Мальцевской",
+      "short": "Шахматный класс с Анной Мальцевской для детей от 8 лет.",
+      "desc": "Шахматный класс с тренером Анной Мальцевской для детей от 8 лет: тактика, стратегия и игровая практика. Центр дополнительного образования RoboAcademy в Новом Белграде, по четвергам, 16:10–17:10. Вопросы и запись — @roboacademyofficial, +381 64 597 3001.",
+      "date": null,
+      "wd": [
+        3
+      ],
+      "time": "16:10",
+      "dur": "1 час",
+      "place": "RoboAcademy (Новый Белград)",
+      "address": "Булевар Зорана Джинджича 89, Новый Белград, Белград",
+      "placePhone": null,
+      "placeLink": null,
+      "lat": null,
+      "lng": null,
+      "age": [
+        8,
+        14
+      ],
+      "ageLabel": "8+ лет",
+      "price": "уточняется",
+      "image": null,
+      "category": "games",
+      "categoryLabel": "Шахматы и игры",
+      "source": {
+        "id": "roboacademy",
+        "cta": "Записаться у @roboacademyofficial",
+        "url": "https://www.instagram.com/p/DdjF6VhjEUz/",
+        "kind": "Расписание студии",
+        "name": "RoboAcademy"
+      }
+    },
+    {
+      "id": "roboacademy-nbg-chess8-vt-1610",
+      "title": "Шахматы с Анной Мальцевской",
+      "short": "Шахматный класс с Анной Мальцевской для детей от 8 лет.",
+      "desc": "Шахматный класс с тренером Анной Мальцевской для детей от 8 лет: тактика, стратегия и игровая практика. Центр дополнительного образования RoboAcademy в Новом Белграде, по вторникам, 16:10–17:10. Вопросы и запись — @roboacademyofficial, +381 64 597 3001.",
+      "date": null,
+      "wd": [
+        1
+      ],
+      "time": "16:10",
+      "dur": "1 час",
+      "place": "RoboAcademy (Новый Белград)",
+      "address": "Булевар Зорана Джинджича 89, Новый Белград, Белград",
+      "placePhone": null,
+      "placeLink": null,
+      "lat": null,
+      "lng": null,
+      "age": [
+        8,
+        14
+      ],
+      "ageLabel": "8+ лет",
+      "price": "уточняется",
+      "image": null,
+      "category": "games",
+      "categoryLabel": "Шахматы и игры",
+      "source": {
+        "id": "roboacademy",
+        "cta": "Записаться у @roboacademyofficial",
+        "url": "https://www.instagram.com/p/DdjF6VhjEUz/",
+        "kind": "Расписание студии",
+        "name": "RoboAcademy"
+      }
+    },
+    {
+      "id": "roboacademy-nbg-craft-pt-1600",
+      "title": "Клуб рукодельников",
+      "short": "Клуб рукодельников для детей от 6 лет: поделки и рукоделие своими руками.",
+      "desc": "Клуб рукоделия для детей от 6 лет: дети мастерят поделки из разных материалов, осваивают простые техники рукоделия и развивают мелкую моторику. Центр дополнительного образования RoboAcademy в Новом Белграде, по пятницам, 16:00–17:30. Вопросы и запись — @roboacademyofficial, +381 64 597 3001.",
+      "date": null,
+      "wd": [
+        4
+      ],
+      "time": "16:00",
+      "dur": "1 час 30 минут",
+      "place": "RoboAcademy (Новый Белград)",
+      "address": "Булевар Зорана Джинджича 89, Новый Белград, Белград",
+      "placePhone": null,
+      "placeLink": null,
+      "lat": null,
+      "lng": null,
+      "age": [
+        6,
+        12
+      ],
+      "ageLabel": "6+ лет",
+      "price": "уточняется",
+      "image": null,
+      "category": "art",
+      "categoryLabel": "Творчество",
+      "source": {
+        "id": "roboacademy",
+        "cta": "Записаться у @roboacademyofficial",
+        "url": "https://www.instagram.com/p/DdjF6VhjEUz/",
+        "kind": "Расписание студии",
+        "name": "RoboAcademy"
+      }
+    },
+    {
+      "id": "roboacademy-nbg-craft-sr-1500",
+      "title": "Клуб рукодельников",
+      "short": "Клуб рукодельников для детей от 6 лет: поделки и рукоделие своими руками.",
+      "desc": "Клуб рукоделия для детей от 6 лет: дети мастерят поделки из разных материалов, осваивают простые техники рукоделия и развивают мелкую моторику. Центр дополнительного образования RoboAcademy в Новом Белграде, по средам, 15:00–16:30. Вопросы и запись — @roboacademyofficial, +381 64 597 3001.",
+      "date": null,
+      "wd": [
+        2
+      ],
+      "time": "15:00",
+      "dur": "1 час 30 минут",
+      "place": "RoboAcademy (Новый Белград)",
+      "address": "Булевар Зорана Джинджича 89, Новый Белград, Белград",
+      "placePhone": null,
+      "placeLink": null,
+      "lat": null,
+      "lng": null,
+      "age": [
+        6,
+        12
+      ],
+      "ageLabel": "6+ лет",
+      "price": "уточняется",
+      "image": null,
+      "category": "art",
+      "categoryLabel": "Творчество",
+      "source": {
+        "id": "roboacademy",
+        "cta": "Записаться у @roboacademyofficial",
+        "url": "https://www.instagram.com/p/DdjF6VhjEUz/",
+        "kind": "Расписание студии",
+        "name": "RoboAcademy"
+      }
+    },
+    {
+      "id": "roboacademy-nbg-craft-vs-1230",
+      "title": "Клуб рукодельников",
+      "short": "Клуб рукодельников для детей от 6 лет: поделки и рукоделие своими руками.",
+      "desc": "Клуб рукоделия для детей от 6 лет: дети мастерят поделки из разных материалов, осваивают простые техники рукоделия и развивают мелкую моторику. Центр дополнительного образования RoboAcademy в Новом Белграде, по воскресеньям, 12:30–14:00. Вопросы и запись — @roboacademyofficial, +381 64 597 3001.",
+      "date": null,
+      "wd": [
+        6
+      ],
+      "time": "12:30",
+      "dur": "1 час 30 минут",
+      "place": "RoboAcademy (Новый Белград)",
+      "address": "Булевар Зорана Джинджича 89, Новый Белград, Белград",
+      "placePhone": null,
+      "placeLink": null,
+      "lat": null,
+      "lng": null,
+      "age": [
+        6,
+        12
+      ],
+      "ageLabel": "6+ лет",
+      "price": "уточняется",
+      "image": null,
+      "category": "art",
+      "categoryLabel": "Творчество",
+      "source": {
+        "id": "roboacademy",
+        "cta": "Записаться у @roboacademyofficial",
+        "url": "https://www.instagram.com/p/DdjF6VhjEUz/",
+        "kind": "Расписание студии",
+        "name": "RoboAcademy"
+      }
+    },
+    {
+      "id": "roboacademy-nbg-math12-pt-1630",
+      "title": "Занимательная математика, 1–2 класс",
+      "short": "Занимательная математика для учеников 1–2 класса.",
+      "desc": "Математика в игровой форме для учеников 1–2 класса: логические задачи, счёт и развитие математического мышления. Центр дополнительного образования RoboAcademy в Новом Белграде, по пятницам, 16:30–17:30. Вопросы и запись — @roboacademyofficial, +381 64 597 3001.",
+      "date": null,
+      "wd": [
+        4
+      ],
+      "time": "16:30",
+      "dur": "1 час",
+      "place": "RoboAcademy (Новый Белград)",
+      "address": "Булевар Зорана Джинджича 89, Новый Белград, Белград",
+      "placePhone": null,
+      "placeLink": null,
+      "lat": null,
+      "lng": null,
+      "age": [
+        7,
+        8
+      ],
+      "ageLabel": "1–2 класс",
+      "price": "уточняется",
+      "image": null,
+      "category": "science",
+      "categoryLabel": "Наука и логика",
+      "source": {
+        "id": "roboacademy",
+        "cta": "Записаться у @roboacademyofficial",
+        "url": "https://www.instagram.com/p/DdjF6VhjEUz/",
+        "kind": "Расписание студии",
+        "name": "RoboAcademy"
+      }
+    },
+    {
+      "id": "roboacademy-nbg-math12-sb-1200",
+      "title": "Занимательная математика, 1–2 класс",
+      "short": "Занимательная математика для учеников 1–2 класса.",
+      "desc": "Математика в игровой форме для учеников 1–2 класса: логические задачи, счёт и развитие математического мышления. Центр дополнительного образования RoboAcademy в Новом Белграде, по субботам, 12:00–13:00. Вопросы и запись — @roboacademyofficial, +381 64 597 3001.",
+      "date": null,
+      "wd": [
+        5
+      ],
+      "time": "12:00",
+      "dur": "1 час",
+      "place": "RoboAcademy (Новый Белград)",
+      "address": "Булевар Зорана Джинджича 89, Новый Белград, Белград",
+      "placePhone": null,
+      "placeLink": null,
+      "lat": null,
+      "lng": null,
+      "age": [
+        7,
+        8
+      ],
+      "ageLabel": "1–2 класс",
+      "price": "уточняется",
+      "image": null,
+      "category": "science",
+      "categoryLabel": "Наука и логика",
+      "source": {
+        "id": "roboacademy",
+        "cta": "Записаться у @roboacademyofficial",
+        "url": "https://www.instagram.com/p/DdjF6VhjEUz/",
+        "kind": "Расписание студии",
+        "name": "RoboAcademy"
+      }
+    },
+    {
+      "id": "roboacademy-nbg-mind-pn-1630",
+      "title": "Робототехника LEGO Mindstorms",
+      "short": "Робототехника на LEGO Mindstorms для детей от 9 лет: конструирование и программирование роботов.",
+      "desc": "Продвинутая робототехника на LEGO Mindstorms: сборка сложных моделей, работа с датчиками, программирование поведения робота и решение инженерных задач. Центр дополнительного образования RoboAcademy в Новом Белграде, по понедельникам, 16:30–18:30. Вопросы и запись — @roboacademyofficial, +381 64 597 3001.",
+      "date": null,
+      "wd": [
+        0
+      ],
+      "time": "16:30",
+      "dur": "2 часа",
+      "place": "RoboAcademy (Новый Белград)",
+      "address": "Булевар Зорана Джинджича 89, Новый Белград, Белград",
+      "placePhone": null,
+      "placeLink": null,
+      "lat": null,
+      "lng": null,
+      "age": [
+        9,
+        14
+      ],
+      "ageLabel": "9+ лет",
+      "price": "уточняется",
+      "image": null,
+      "category": "robotics",
+      "categoryLabel": "Робототехника",
+      "source": {
+        "id": "roboacademy",
+        "cta": "Записаться у @roboacademyofficial",
+        "url": "https://www.instagram.com/p/DdjF6VhjEUz/",
+        "kind": "Расписание студии",
+        "name": "RoboAcademy"
+      }
+    },
+    {
+      "id": "roboacademy-nbg-mind-sb-1700",
+      "title": "Робототехника LEGO Mindstorms",
+      "short": "Робототехника на LEGO Mindstorms для детей от 9 лет: конструирование и программирование роботов.",
+      "desc": "Продвинутая робототехника на LEGO Mindstorms: сборка сложных моделей, работа с датчиками, программирование поведения робота и решение инженерных задач. Центр дополнительного образования RoboAcademy в Новом Белграде, по субботам, 17:00–18:30. Вопросы и запись — @roboacademyofficial, +381 64 597 3001.",
+      "date": null,
+      "wd": [
+        5
+      ],
+      "time": "17:00",
+      "dur": "1 час 30 минут",
+      "place": "RoboAcademy (Новый Белград)",
+      "address": "Булевар Зорана Джинджича 89, Новый Белград, Белград",
+      "placePhone": null,
+      "placeLink": null,
+      "lat": null,
+      "lng": null,
+      "age": [
+        9,
+        14
+      ],
+      "ageLabel": "9+ лет",
+      "price": "уточняется",
+      "image": null,
+      "category": "robotics",
+      "categoryLabel": "Робототехника",
+      "source": {
+        "id": "roboacademy",
+        "cta": "Записаться у @roboacademyofficial",
+        "url": "https://www.instagram.com/p/DdjF6VhjEUz/",
+        "kind": "Расписание студии",
+        "name": "RoboAcademy"
+      }
+    },
+    {
+      "id": "roboacademy-nbg-musical-sr-1630",
+      "title": "Школа мюзикла «Show LAB»",
+      "short": "Школа мюзикла «Show LAB» для детей от 6 лет: вокал, актёрское мастерство и сцена.",
+      "desc": "Школа мюзикла «Show LAB»: вокал, актёрское мастерство и движение на сцене — дети готовят номера и выступают. Центр дополнительного образования RoboAcademy в Новом Белграде, по средам, 16:30–19:00. Вопросы и запись — @roboacademyofficial, +381 64 597 3001.",
+      "date": null,
+      "wd": [
+        2
+      ],
+      "time": "16:30",
+      "dur": "2 часа 30 минут",
+      "place": "RoboAcademy (Новый Белград)",
+      "address": "Булевар Зорана Джинджича 89, Новый Белград, Белград",
+      "placePhone": null,
+      "placeLink": null,
+      "lat": null,
+      "lng": null,
+      "age": [
+        6,
+        14
+      ],
+      "ageLabel": "6+ лет",
+      "price": "уточняется",
+      "image": null,
+      "category": "music",
+      "categoryLabel": "Музыка",
+      "source": {
+        "id": "roboacademy",
+        "cta": "Записаться у @roboacademyofficial",
+        "url": "https://www.instagram.com/p/DdjF6VhjEUz/",
+        "kind": "Расписание студии",
+        "name": "RoboAcademy"
+      }
+    },
+    {
+      "id": "roboacademy-nbg-musical-vs-1400",
+      "title": "Школа мюзикла «Show LAB»",
+      "short": "Школа мюзикла «Show LAB» для детей от 6 лет: вокал, актёрское мастерство и сцена.",
+      "desc": "Школа мюзикла «Show LAB»: вокал, актёрское мастерство и движение на сцене — дети готовят номера и выступают. Центр дополнительного образования RoboAcademy в Новом Белграде, по воскресеньям, 14:00–16:30. Вопросы и запись — @roboacademyofficial, +381 64 597 3001.",
+      "date": null,
+      "wd": [
+        6
+      ],
+      "time": "14:00",
+      "dur": "2 часа 30 минут",
+      "place": "RoboAcademy (Новый Белград)",
+      "address": "Булевар Зорана Джинджича 89, Новый Белград, Белград",
+      "placePhone": null,
+      "placeLink": null,
+      "lat": null,
+      "lng": null,
+      "age": [
+        6,
+        14
+      ],
+      "ageLabel": "6+ лет",
+      "price": "уточняется",
+      "image": null,
+      "category": "music",
+      "categoryLabel": "Музыка",
+      "source": {
+        "id": "roboacademy",
+        "cta": "Записаться у @roboacademyofficial",
+        "url": "https://www.instagram.com/p/DdjF6VhjEUz/",
+        "kind": "Расписание студии",
+        "name": "RoboAcademy"
+      }
+    },
+    {
+      "id": "roboacademy-nbg-psych-cht-1715",
+      "title": "Группа психологической гибкости",
+      "short": "Группа психологической гибкости для детей от 9 лет.",
+      "desc": "Групповые занятия для детей от 9 лет: учимся понимать свои эмоции, справляться со стрессом и гибко реагировать на трудные ситуации. Центр дополнительного образования RoboAcademy в Новом Белграде, по четвергам, 17:15–18:15. Вопросы и запись — @roboacademyofficial, +381 64 597 3001.",
+      "date": null,
+      "wd": [
+        3
+      ],
+      "time": "17:15",
+      "dur": "1 час",
+      "place": "RoboAcademy (Новый Белград)",
+      "address": "Булевар Зорана Джинджича 89, Новый Белград, Белград",
+      "placePhone": null,
+      "placeLink": null,
+      "lat": null,
+      "lng": null,
+      "age": [
+        9,
+        14
+      ],
+      "ageLabel": "9+ лет",
+      "price": "уточняется",
+      "image": null,
+      "category": null,
+      "categoryLabel": null,
+      "source": {
+        "id": "roboacademy",
+        "cta": "Записаться у @roboacademyofficial",
+        "url": "https://www.instagram.com/p/DdjF6VhjEUz/",
+        "kind": "Расписание студии",
+        "name": "RoboAcademy"
+      }
+    },
+    {
+      "id": "roboacademy-nbg-roblox-sb-1030",
+      "title": "Программирование в Roblox Studio",
+      "short": "Программирование в Roblox Studio для детей от 8 лет: создаём свои игры.",
+      "desc": "Курс программирования в Roblox Studio: дети строят игровые миры, пишут скрипты и создают собственные игры, попутно осваивая основы логики и программирования. Центр дополнительного образования RoboAcademy в Новом Белграде, по субботам, 10:30–12:00. Вопросы и запись — @roboacademyofficial, +381 64 597 3001.",
+      "date": null,
+      "wd": [
+        5
+      ],
+      "time": "10:30",
+      "dur": "1 час 30 минут",
+      "place": "RoboAcademy (Новый Белград)",
+      "address": "Булевар Зорана Джинджича 89, Новый Белград, Белград",
+      "placePhone": null,
+      "placeLink": null,
+      "lat": null,
+      "lng": null,
+      "age": [
+        8,
+        14
+      ],
+      "ageLabel": "8+ лет",
+      "price": "уточняется",
+      "image": null,
+      "category": "robotics",
+      "categoryLabel": "Робототехника",
+      "source": {
+        "id": "roboacademy",
+        "cta": "Записаться у @roboacademyofficial",
+        "url": "https://www.instagram.com/p/DdjF6VhjEUz/",
+        "kind": "Расписание студии",
+        "name": "RoboAcademy"
+      }
+    },
+    {
+      "id": "roboacademy-nbg-roblox-sb-1200",
+      "title": "Программирование в Roblox Studio",
+      "short": "Программирование в Roblox Studio для детей от 8 лет: создаём свои игры.",
+      "desc": "Курс программирования в Roblox Studio: дети строят игровые миры, пишут скрипты и создают собственные игры, попутно осваивая основы логики и программирования. Центр дополнительного образования RoboAcademy в Новом Белграде, по субботам, 12:00–13:30. Вопросы и запись — @roboacademyofficial, +381 64 597 3001.",
+      "date": null,
+      "wd": [
+        5
+      ],
+      "time": "12:00",
+      "dur": "1 час 30 минут",
+      "place": "RoboAcademy (Новый Белград)",
+      "address": "Булевар Зорана Джинджича 89, Новый Белград, Белград",
+      "placePhone": null,
+      "placeLink": null,
+      "lat": null,
+      "lng": null,
+      "age": [
+        8,
+        14
+      ],
+      "ageLabel": "8+ лет",
+      "price": "уточняется",
+      "image": null,
+      "category": "robotics",
+      "categoryLabel": "Робототехника",
+      "source": {
+        "id": "roboacademy",
+        "cta": "Записаться у @roboacademyofficial",
+        "url": "https://www.instagram.com/p/DdjF6VhjEUz/",
+        "kind": "Расписание студии",
+        "name": "RoboAcademy"
+      }
+    },
+    {
+      "id": "roboacademy-nbg-roblox-vt-1515",
+      "title": "Программирование в Roblox Studio",
+      "short": "Программирование в Roblox Studio для детей от 8 лет: создаём свои игры.",
+      "desc": "Курс программирования в Roblox Studio: дети строят игровые миры, пишут скрипты и создают собственные игры, попутно осваивая основы логики и программирования. Центр дополнительного образования RoboAcademy в Новом Белграде, по вторникам, 15:15–16:45. Вопросы и запись — @roboacademyofficial, +381 64 597 3001.",
+      "date": null,
+      "wd": [
+        1
+      ],
+      "time": "15:15",
+      "dur": "1 час 30 минут",
+      "place": "RoboAcademy (Новый Белград)",
+      "address": "Булевар Зорана Джинджича 89, Новый Белград, Белград",
+      "placePhone": null,
+      "placeLink": null,
+      "lat": null,
+      "lng": null,
+      "age": [
+        8,
+        14
+      ],
+      "ageLabel": "8+ лет",
+      "price": "уточняется",
+      "image": null,
+      "category": "robotics",
+      "categoryLabel": "Робототехника",
+      "source": {
+        "id": "roboacademy",
+        "cta": "Записаться у @roboacademyofficial",
+        "url": "https://www.instagram.com/p/DdjF6VhjEUz/",
+        "kind": "Расписание студии",
+        "name": "RoboAcademy"
+      }
+    },
+    {
+      "id": "roboacademy-nbg-roblox-vt-1700",
+      "title": "Программирование в Roblox Studio",
+      "short": "Программирование в Roblox Studio для детей от 8 лет: создаём свои игры.",
+      "desc": "Курс программирования в Roblox Studio: дети строят игровые миры, пишут скрипты и создают собственные игры, попутно осваивая основы логики и программирования. Центр дополнительного образования RoboAcademy в Новом Белграде, по вторникам, 17:00–18:30. Вопросы и запись — @roboacademyofficial, +381 64 597 3001.",
+      "date": null,
+      "wd": [
+        1
+      ],
+      "time": "17:00",
+      "dur": "1 час 30 минут",
+      "place": "RoboAcademy (Новый Белград)",
+      "address": "Булевар Зорана Джинджича 89, Новый Белград, Белград",
+      "placePhone": null,
+      "placeLink": null,
+      "lat": null,
+      "lng": null,
+      "age": [
+        8,
+        14
+      ],
+      "ageLabel": "8+ лет",
+      "price": "уточняется",
+      "image": null,
+      "category": "robotics",
+      "categoryLabel": "Робототехника",
+      "source": {
+        "id": "roboacademy",
+        "cta": "Записаться у @roboacademyofficial",
+        "url": "https://www.instagram.com/p/DdjF6VhjEUz/",
+        "kind": "Расписание студии",
+        "name": "RoboAcademy"
+      }
+    },
+    {
+      "id": "roboacademy-nbg-wedo-pn-1450",
+      "title": "Робототехника LEGO WeDo",
+      "short": "Робототехника на LEGO WeDo для детей от 6 лет: собираем и программируем первых роботов.",
+      "desc": "Занятие по робототехнике на конструкторе LEGO WeDo: дети собирают движущиеся модели, знакомятся с датчиками и моторами и учатся программировать их в простой визуальной среде. Центр дополнительного образования RoboAcademy в Новом Белграде, по понедельникам, 14:50–16:20. Вопросы и запись — @roboacademyofficial, +381 64 597 3001.",
+      "date": null,
+      "wd": [
+        0
+      ],
+      "time": "14:50",
+      "dur": "1 час 30 минут",
+      "place": "RoboAcademy (Новый Белград)",
+      "address": "Булевар Зорана Джинджича 89, Новый Белград, Белград",
+      "placePhone": null,
+      "placeLink": null,
+      "lat": null,
+      "lng": null,
+      "age": [
+        6,
+        10
+      ],
+      "ageLabel": "6+ лет",
+      "price": "уточняется",
+      "image": null,
+      "category": "robotics",
+      "categoryLabel": "Робототехника",
+      "source": {
+        "id": "roboacademy",
+        "cta": "Записаться у @roboacademyofficial",
+        "url": "https://www.instagram.com/p/DdjF6VhjEUz/",
+        "kind": "Расписание студии",
+        "name": "RoboAcademy"
+      }
+    },
+    {
+      "id": "roboacademy-nbg-wedo-sb-1530",
+      "title": "Робототехника LEGO WeDo",
+      "short": "Робототехника на LEGO WeDo для детей от 6 лет: собираем и программируем первых роботов.",
+      "desc": "Занятие по робототехнике на конструкторе LEGO WeDo: дети собирают движущиеся модели, знакомятся с датчиками и моторами и учатся программировать их в простой визуальной среде. Центр дополнительного образования RoboAcademy в Новом Белграде, по субботам, 15:30–17:00. Вопросы и запись — @roboacademyofficial, +381 64 597 3001.",
+      "date": null,
+      "wd": [
+        5
+      ],
+      "time": "15:30",
+      "dur": "1 час 30 минут",
+      "place": "RoboAcademy (Новый Белград)",
+      "address": "Булевар Зорана Джинджича 89, Новый Белград, Белград",
+      "placePhone": null,
+      "placeLink": null,
+      "lat": null,
+      "lng": null,
+      "age": [
+        6,
+        10
+      ],
+      "ageLabel": "6+ лет",
+      "price": "уточняется",
+      "image": null,
+      "category": "robotics",
+      "categoryLabel": "Робототехника",
+      "source": {
+        "id": "roboacademy",
+        "cta": "Записаться у @roboacademyofficial",
+        "url": "https://www.instagram.com/p/DdjF6VhjEUz/",
+        "kind": "Расписание студии",
+        "name": "RoboAcademy"
+      }
+    },
+    {
+      "id": "roboacademy-vracar-3d-model-cht-1830",
+      "title": "3D-моделирование и печать",
+      "short": "3D-моделирование и печать для детей от 8 лет: от идеи до готовой модели.",
+      "desc": "Занятия по 3D-моделированию: дети проектируют свои объекты на компьютере и печатают их на 3D-принтере, развивая пространственное мышление и инженерные навыки. Центр дополнительного образования RoboAcademy на Врачаре, по четвергам, 18:30–20:00. Вопросы и запись — @roboacademyofficial, +381 64 597 3001.",
+      "date": null,
+      "wd": [
+        3
+      ],
+      "time": "18:30",
+      "dur": "1 час 30 минут",
+      "place": "RoboAcademy (Врачар)",
+      "address": "Луке Вукаловича 6, Врачар, Белград",
+      "placePhone": null,
+      "placeLink": null,
+      "lat": null,
+      "lng": null,
+      "age": [
+        8,
+        14
+      ],
+      "ageLabel": "8+ лет",
+      "price": "уточняется",
+      "image": null,
+      "category": "science",
+      "categoryLabel": "Наука и логика",
+      "source": {
+        "id": "roboacademy",
+        "cta": "Записаться у @roboacademyofficial",
+        "url": "https://www.instagram.com/p/DdjGFTJjL4J/",
+        "kind": "Расписание студии",
+        "name": "RoboAcademy"
+      }
+    },
+    {
+      "id": "roboacademy-vracar-3d-model-vt-1700",
+      "title": "3D-моделирование и печать",
+      "short": "3D-моделирование и печать для детей от 8 лет: от идеи до готовой модели.",
+      "desc": "Занятия по 3D-моделированию: дети проектируют свои объекты на компьютере и печатают их на 3D-принтере, развивая пространственное мышление и инженерные навыки. Центр дополнительного образования RoboAcademy на Врачаре, по вторникам, 17:00–18:30. Вопросы и запись — @roboacademyofficial, +381 64 597 3001.",
+      "date": null,
+      "wd": [
+        1
+      ],
+      "time": "17:00",
+      "dur": "1 час 30 минут",
+      "place": "RoboAcademy (Врачар)",
+      "address": "Луке Вукаловича 6, Врачар, Белград",
+      "placePhone": null,
+      "placeLink": null,
+      "lat": null,
+      "lng": null,
+      "age": [
+        8,
+        14
+      ],
+      "ageLabel": "8+ лет",
+      "price": "уточняется",
+      "image": null,
+      "category": "science",
+      "categoryLabel": "Наука и логика",
+      "source": {
+        "id": "roboacademy",
+        "cta": "Записаться у @roboacademyofficial",
+        "url": "https://www.instagram.com/p/DdjGFTJjL4J/",
+        "kind": "Расписание студии",
+        "name": "RoboAcademy"
+      }
+    },
+    {
+      "id": "roboacademy-vracar-3d-model-vt-1830",
+      "title": "3D-моделирование и печать",
+      "short": "3D-моделирование и печать для детей от 8 лет: от идеи до готовой модели.",
+      "desc": "Занятия по 3D-моделированию: дети проектируют свои объекты на компьютере и печатают их на 3D-принтере, развивая пространственное мышление и инженерные навыки. Центр дополнительного образования RoboAcademy на Врачаре, по вторникам, 18:30–20:00. Вопросы и запись — @roboacademyofficial, +381 64 597 3001.",
+      "date": null,
+      "wd": [
+        1
+      ],
+      "time": "18:30",
+      "dur": "1 час 30 минут",
+      "place": "RoboAcademy (Врачар)",
+      "address": "Луке Вукаловича 6, Врачар, Белград",
+      "placePhone": null,
+      "placeLink": null,
+      "lat": null,
+      "lng": null,
+      "age": [
+        8,
+        14
+      ],
+      "ageLabel": "8+ лет",
+      "price": "уточняется",
+      "image": null,
+      "category": "science",
+      "categoryLabel": "Наука и логика",
+      "source": {
+        "id": "roboacademy",
+        "cta": "Записаться у @roboacademyofficial",
+        "url": "https://www.instagram.com/p/DdjGFTJjL4J/",
+        "kind": "Расписание студии",
+        "name": "RoboAcademy"
+      }
+    },
+    {
+      "id": "roboacademy-vracar-3d-ruchka-sb-1300",
+      "title": "Рисование 3D-ручкой",
+      "short": "Рисование 3D-ручкой для детей от 7 лет: объёмные поделки своими руками.",
+      "desc": "Творческое занятие с 3D-ручками: дети создают объёмные фигурки и поделки, развивают моторику, фантазию и пространственное воображение. Центр дополнительного образования RoboAcademy на Врачаре, по субботам, 13:00–14:00. Вопросы и запись — @roboacademyofficial, +381 64 597 3001.",
+      "date": null,
+      "wd": [
+        5
+      ],
+      "time": "13:00",
+      "dur": "1 час",
+      "place": "RoboAcademy (Врачар)",
+      "address": "Луке Вукаловича 6, Врачар, Белград",
+      "placePhone": null,
+      "placeLink": null,
+      "lat": null,
+      "lng": null,
+      "age": [
+        7,
+        12
+      ],
+      "ageLabel": "7+ лет",
+      "price": "уточняется",
+      "image": null,
+      "category": "art",
+      "categoryLabel": "Творчество",
+      "source": {
+        "id": "roboacademy",
+        "cta": "Записаться у @roboacademyofficial",
+        "url": "https://www.instagram.com/p/DdjGFTJjL4J/",
+        "kind": "Расписание студии",
+        "name": "RoboAcademy"
+      }
+    },
+    {
+      "id": "roboacademy-vracar-3d-ruchka-vs-1300",
+      "title": "Рисование 3D-ручкой",
+      "short": "Рисование 3D-ручкой для детей от 7 лет: объёмные поделки своими руками.",
+      "desc": "Творческое занятие с 3D-ручками: дети создают объёмные фигурки и поделки, развивают моторику, фантазию и пространственное воображение. Центр дополнительного образования RoboAcademy на Врачаре, по воскресеньям, 13:00–14:00. Вопросы и запись — @roboacademyofficial, +381 64 597 3001.",
+      "date": null,
+      "wd": [
+        6
+      ],
+      "time": "13:00",
+      "dur": "1 час",
+      "place": "RoboAcademy (Врачар)",
+      "address": "Луке Вукаловича 6, Врачар, Белград",
+      "placePhone": null,
+      "placeLink": null,
+      "lat": null,
+      "lng": null,
+      "age": [
+        7,
+        12
+      ],
+      "ageLabel": "7+ лет",
+      "price": "уточняется",
+      "image": null,
+      "category": "art",
+      "categoryLabel": "Творчество",
+      "source": {
+        "id": "roboacademy",
+        "cta": "Записаться у @roboacademyofficial",
+        "url": "https://www.instagram.com/p/DdjGFTJjL4J/",
+        "kind": "Расписание студии",
+        "name": "RoboAcademy"
+      }
+    },
+    {
+      "id": "roboacademy-vracar-anim-pt-1645",
+      "title": "Студия мультипликации и стоп-моушн",
+      "short": "Студия мультипликации для детей от 6 лет: снимаем свои мультфильмы в технике стоп-моушн.",
+      "desc": "В студии мультипликации дети придумывают сюжет, создают персонажей и декорации и снимают собственные мультфильмы в технике стоп-моушн. Центр дополнительного образования RoboAcademy на Врачаре, по пятницам, 16:45–18:15. Вопросы и запись — @roboacademyofficial, +381 64 597 3001.",
+      "date": null,
+      "wd": [
+        4
+      ],
+      "time": "16:45",
+      "dur": "1 час 30 минут",
+      "place": "RoboAcademy (Врачар)",
+      "address": "Луке Вукаловича 6, Врачар, Белград",
+      "placePhone": null,
+      "placeLink": null,
+      "lat": null,
+      "lng": null,
+      "age": [
+        6,
+        12
+      ],
+      "ageLabel": "6+ лет",
+      "price": "уточняется",
+      "image": null,
+      "category": "art",
+      "categoryLabel": "Творчество",
+      "source": {
+        "id": "roboacademy",
+        "cta": "Записаться у @roboacademyofficial",
+        "url": "https://www.instagram.com/p/DdjGFTJjL4J/",
+        "kind": "Расписание студии",
+        "name": "RoboAcademy"
+      }
+    },
+    {
+      "id": "roboacademy-vracar-art-pt-1515",
+      "title": "Арт-клуб",
+      "short": "Арт-клуб для детей от 7 лет: рисование и творчество в разных техниках.",
+      "desc": "Творческий клуб для детей от 7 лет: рисование и работа в разных художественных техниках, развитие фантазии и чувства цвета. Центр дополнительного образования RoboAcademy на Врачаре, по пятницам, 15:15–16:45. Вопросы и запись — @roboacademyofficial, +381 64 597 3001.",
+      "date": null,
+      "wd": [
+        4
+      ],
+      "time": "15:15",
+      "dur": "1 час 30 минут",
+      "place": "RoboAcademy (Врачар)",
+      "address": "Луке Вукаловича 6, Врачар, Белград",
+      "placePhone": null,
+      "placeLink": null,
+      "lat": null,
+      "lng": null,
+      "age": [
+        7,
+        12
+      ],
+      "ageLabel": "7+ лет",
+      "price": "уточняется",
+      "image": null,
+      "category": "art",
+      "categoryLabel": "Творчество",
+      "source": {
+        "id": "roboacademy",
+        "cta": "Записаться у @roboacademyofficial",
+        "url": "https://www.instagram.com/p/DdjGFTJjL4J/",
+        "kind": "Расписание студии",
+        "name": "RoboAcademy"
+      }
+    },
+    {
+      "id": "roboacademy-vracar-bakh-sb-1700",
+      "title": "Игра по методике Егора Бахотского",
+      "short": "Развивающие игровые занятия по методике Егора Бахотского для детей от 5 лет.",
+      "desc": "Игровые занятия по методике Егора Бахотского для детей от 5 лет: развитие мышления, внимания и навыков общения через игру. Центр дополнительного образования RoboAcademy на Врачаре, по субботам, 17:00–19:00. Вопросы и запись — @roboacademyofficial, +381 64 597 3001.",
+      "date": null,
+      "wd": [
+        5
+      ],
+      "time": "17:00",
+      "dur": "2 часа",
+      "place": "RoboAcademy (Врачар)",
+      "address": "Луке Вукаловича 6, Врачар, Белград",
+      "placePhone": null,
+      "placeLink": null,
+      "lat": null,
+      "lng": null,
+      "age": [
+        5,
+        12
+      ],
+      "ageLabel": "5+ лет",
+      "price": "уточняется",
+      "image": null,
+      "category": "games",
+      "categoryLabel": "Шахматы и игры",
+      "source": {
+        "id": "roboacademy",
+        "cta": "Записаться у @roboacademyofficial",
+        "url": "https://www.instagram.com/p/DdjGFTJjL4J/",
+        "kind": "Расписание студии",
+        "name": "RoboAcademy"
+      }
+    },
+    {
+      "id": "roboacademy-vracar-bakh-vs-1100",
+      "title": "Игра по методике Егора Бахотского",
+      "short": "Развивающие игровые занятия по методике Егора Бахотского для детей от 5 лет.",
+      "desc": "Игровые занятия по методике Егора Бахотского для детей от 5 лет: развитие мышления, внимания и навыков общения через игру. Центр дополнительного образования RoboAcademy на Врачаре, по воскресеньям, 11:00–13:00. Вопросы и запись — @roboacademyofficial, +381 64 597 3001.",
+      "date": null,
+      "wd": [
+        6
+      ],
+      "time": "11:00",
+      "dur": "2 часа",
+      "place": "RoboAcademy (Врачар)",
+      "address": "Луке Вукаловича 6, Врачар, Белград",
+      "placePhone": null,
+      "placeLink": null,
+      "lat": null,
+      "lng": null,
+      "age": [
+        5,
+        12
+      ],
+      "ageLabel": "5+ лет",
+      "price": "уточняется",
+      "image": null,
+      "category": "games",
+      "categoryLabel": "Шахматы и игры",
+      "source": {
+        "id": "roboacademy",
+        "cta": "Записаться у @roboacademyofficial",
+        "url": "https://www.instagram.com/p/DdjGFTJjL4J/",
+        "kind": "Расписание студии",
+        "name": "RoboAcademy"
+      }
+    },
+    {
+      "id": "roboacademy-vracar-chess6-sr-1510",
+      "title": "Шахматы с Анной Мальцевской",
+      "short": "Шахматный класс с Анной Мальцевской для детей от 6 лет.",
+      "desc": "Шахматный класс с тренером Анной Мальцевской для детей от 6 лет: правила, основы тактики и игровая практика. Центр дополнительного образования RoboAcademy на Врачаре, по средам, 15:10–16:10. Вопросы и запись — @roboacademyofficial, +381 64 597 3001.",
+      "date": null,
+      "wd": [
+        2
+      ],
+      "time": "15:10",
+      "dur": "1 час",
+      "place": "RoboAcademy (Врачар)",
+      "address": "Луке Вукаловича 6, Врачар, Белград",
+      "placePhone": null,
+      "placeLink": null,
+      "lat": null,
+      "lng": null,
+      "age": [
+        6,
+        8
+      ],
+      "ageLabel": "6+ лет",
+      "price": "уточняется",
+      "image": null,
+      "category": "games",
+      "categoryLabel": "Шахматы и игры",
+      "source": {
+        "id": "roboacademy",
+        "cta": "Записаться у @roboacademyofficial",
+        "url": "https://www.instagram.com/p/DdjGFTJjL4J/",
+        "kind": "Расписание студии",
+        "name": "RoboAcademy"
+      }
+    },
+    {
+      "id": "roboacademy-vracar-chess8-sr-1610",
+      "title": "Шахматы с Анной Мальцевской",
+      "short": "Шахматный класс с Анной Мальцевской для детей от 8 лет.",
+      "desc": "Шахматный класс с тренером Анной Мальцевской для детей от 8 лет: тактика, стратегия и игровая практика. Центр дополнительного образования RoboAcademy на Врачаре, по средам, 16:10–17:10. Вопросы и запись — @roboacademyofficial, +381 64 597 3001.",
+      "date": null,
+      "wd": [
+        2
+      ],
+      "time": "16:10",
+      "dur": "1 час",
+      "place": "RoboAcademy (Врачар)",
+      "address": "Луке Вукаловича 6, Врачар, Белград",
+      "placePhone": null,
+      "placeLink": null,
+      "lat": null,
+      "lng": null,
+      "age": [
+        8,
+        14
+      ],
+      "ageLabel": "8+ лет",
+      "price": "уточняется",
+      "image": null,
+      "category": "games",
+      "categoryLabel": "Шахматы и игры",
+      "source": {
+        "id": "roboacademy",
+        "cta": "Записаться у @roboacademyofficial",
+        "url": "https://www.instagram.com/p/DdjGFTJjL4J/",
+        "kind": "Расписание студии",
+        "name": "RoboAcademy"
+      }
+    },
+    {
+      "id": "roboacademy-vracar-craft-pt-1645",
+      "title": "Клуб рукодельников",
+      "short": "Клуб рукодельников для детей от 6 лет: поделки и рукоделие своими руками.",
+      "desc": "Клуб рукоделия для детей от 6 лет: дети мастерят поделки из разных материалов, осваивают простые техники рукоделия и развивают мелкую моторику. Центр дополнительного образования RoboAcademy на Врачаре, по пятницам, 16:45–18:15. Вопросы и запись — @roboacademyofficial, +381 64 597 3001.",
+      "date": null,
+      "wd": [
+        4
+      ],
+      "time": "16:45",
+      "dur": "1 час 30 минут",
+      "place": "RoboAcademy (Врачар)",
+      "address": "Луке Вукаловича 6, Врачар, Белград",
+      "placePhone": null,
+      "placeLink": null,
+      "lat": null,
+      "lng": null,
+      "age": [
+        6,
+        12
+      ],
+      "ageLabel": "6+ лет",
+      "price": "уточняется",
+      "image": null,
+      "category": "art",
+      "categoryLabel": "Творчество",
+      "source": {
+        "id": "roboacademy",
+        "cta": "Записаться у @roboacademyofficial",
+        "url": "https://www.instagram.com/p/DdjGFTJjL4J/",
+        "kind": "Расписание студии",
+        "name": "RoboAcademy"
+      }
+    },
+    {
+      "id": "roboacademy-vracar-craft-sb-1130",
+      "title": "Клуб рукодельников",
+      "short": "Клуб рукодельников для детей от 6 лет: поделки и рукоделие своими руками.",
+      "desc": "Клуб рукоделия для детей от 6 лет: дети мастерят поделки из разных материалов, осваивают простые техники рукоделия и развивают мелкую моторику. Центр дополнительного образования RoboAcademy на Врачаре, по субботам, 11:30–13:00. Вопросы и запись — @roboacademyofficial, +381 64 597 3001.",
+      "date": null,
+      "wd": [
+        5
+      ],
+      "time": "11:30",
+      "dur": "1 час 30 минут",
+      "place": "RoboAcademy (Врачар)",
+      "address": "Луке Вукаловича 6, Врачар, Белград",
+      "placePhone": null,
+      "placeLink": null,
+      "lat": null,
+      "lng": null,
+      "age": [
+        6,
+        12
+      ],
+      "ageLabel": "6+ лет",
+      "price": "уточняется",
+      "image": null,
+      "category": "art",
+      "categoryLabel": "Творчество",
+      "source": {
+        "id": "roboacademy",
+        "cta": "Записаться у @roboacademyofficial",
+        "url": "https://www.instagram.com/p/DdjGFTJjL4J/",
+        "kind": "Расписание студии",
+        "name": "RoboAcademy"
+      }
+    },
+    {
+      "id": "roboacademy-vracar-craft-vt-1440",
+      "title": "Клуб рукодельников",
+      "short": "Клуб рукодельников для детей от 6 лет: поделки и рукоделие своими руками.",
+      "desc": "Клуб рукоделия для детей от 6 лет: дети мастерят поделки из разных материалов, осваивают простые техники рукоделия и развивают мелкую моторику. Центр дополнительного образования RoboAcademy на Врачаре, по вторникам, 14:40–16:10. Вопросы и запись — @roboacademyofficial, +381 64 597 3001.",
+      "date": null,
+      "wd": [
+        1
+      ],
+      "time": "14:40",
+      "dur": "1 час 30 минут",
+      "place": "RoboAcademy (Врачар)",
+      "address": "Луке Вукаловича 6, Врачар, Белград",
+      "placePhone": null,
+      "placeLink": null,
+      "lat": null,
+      "lng": null,
+      "age": [
+        6,
+        12
+      ],
+      "ageLabel": "6+ лет",
+      "price": "уточняется",
+      "image": null,
+      "category": "art",
+      "categoryLabel": "Творчество",
+      "source": {
+        "id": "roboacademy",
+        "cta": "Записаться у @roboacademyofficial",
+        "url": "https://www.instagram.com/p/DdjGFTJjL4J/",
+        "kind": "Расписание студии",
+        "name": "RoboAcademy"
+      }
+    },
+    {
+      "id": "roboacademy-vracar-craft-vt-1610",
+      "title": "Клуб рукодельников",
+      "short": "Клуб рукодельников для детей от 6 лет: поделки и рукоделие своими руками.",
+      "desc": "Клуб рукоделия для детей от 6 лет: дети мастерят поделки из разных материалов, осваивают простые техники рукоделия и развивают мелкую моторику. Центр дополнительного образования RoboAcademy на Врачаре, по вторникам, 16:10–17:40. Вопросы и запись — @roboacademyofficial, +381 64 597 3001.",
+      "date": null,
+      "wd": [
+        1
+      ],
+      "time": "16:10",
+      "dur": "1 час 30 минут",
+      "place": "RoboAcademy (Врачар)",
+      "address": "Луке Вукаловича 6, Врачар, Белград",
+      "placePhone": null,
+      "placeLink": null,
+      "lat": null,
+      "lng": null,
+      "age": [
+        6,
+        12
+      ],
+      "ageLabel": "6+ лет",
+      "price": "уточняется",
+      "image": null,
+      "category": "art",
+      "categoryLabel": "Творчество",
+      "source": {
+        "id": "roboacademy",
+        "cta": "Записаться у @roboacademyofficial",
+        "url": "https://www.instagram.com/p/DdjGFTJjL4J/",
+        "kind": "Расписание студии",
+        "name": "RoboAcademy"
+      }
+    },
+    {
+      "id": "roboacademy-vracar-eng68-sb-1200",
+      "title": "Английский детский клуб",
+      "short": "Английский детский клуб для детей 6–8 лет.",
+      "desc": "Английский в формате детского клуба для 6–8 лет: игры, общение и новые слова. Центр дополнительного образования RoboAcademy на Врачаре, по субботам, 12:00–13:00. Вопросы и запись — @roboacademyofficial, +381 64 597 3001.",
+      "date": null,
+      "wd": [
+        5
+      ],
+      "time": "12:00",
+      "dur": "1 час",
+      "place": "RoboAcademy (Врачар)",
+      "address": "Луке Вукаловича 6, Врачар, Белград",
+      "placePhone": null,
+      "placeLink": null,
+      "lat": null,
+      "lng": null,
+      "age": [
+        6,
+        8
+      ],
+      "ageLabel": "6–8 лет",
+      "price": "уточняется",
+      "image": null,
+      "category": "languages",
+      "categoryLabel": "Языки",
+      "source": {
+        "id": "roboacademy",
+        "cta": "Записаться у @roboacademyofficial",
+        "url": "https://www.instagram.com/p/DdjGFTJjL4J/",
+        "kind": "Расписание студии",
+        "name": "RoboAcademy"
+      }
+    },
+    {
+      "id": "roboacademy-vracar-eng912-sb-1300",
+      "title": "Английский детский клуб",
+      "short": "Английский детский клуб для детей 9–12 лет.",
+      "desc": "Английский в формате детского клуба для 9–12 лет: разговорная практика, игры и общение. Центр дополнительного образования RoboAcademy на Врачаре, по субботам, 13:00–14:00. Вопросы и запись — @roboacademyofficial, +381 64 597 3001.",
+      "date": null,
+      "wd": [
+        5
+      ],
+      "time": "13:00",
+      "dur": "1 час",
+      "place": "RoboAcademy (Врачар)",
+      "address": "Луке Вукаловича 6, Врачар, Белград",
+      "placePhone": null,
+      "placeLink": null,
+      "lat": null,
+      "lng": null,
+      "age": [
+        9,
+        12
+      ],
+      "ageLabel": "9–12 лет",
+      "price": "уточняется",
+      "image": null,
+      "category": "languages",
+      "categoryLabel": "Языки",
+      "source": {
+        "id": "roboacademy",
+        "cta": "Записаться у @roboacademyofficial",
+        "url": "https://www.instagram.com/p/DdjGFTJjL4J/",
+        "kind": "Расписание студии",
+        "name": "RoboAcademy"
+      }
+    },
+    {
+      "id": "roboacademy-vracar-math12-sb-1400",
+      "title": "Занимательная математика, 1–2 класс",
+      "short": "Занимательная математика для учеников 1–2 класса.",
+      "desc": "Математика в игровой форме для учеников 1–2 класса: логические задачи, счёт и развитие математического мышления. Центр дополнительного образования RoboAcademy на Врачаре, по субботам, 14:00–15:00. Вопросы и запись — @roboacademyofficial, +381 64 597 3001.",
+      "date": null,
+      "wd": [
+        5
+      ],
+      "time": "14:00",
+      "dur": "1 час",
+      "place": "RoboAcademy (Врачар)",
+      "address": "Луке Вукаловича 6, Врачар, Белград",
+      "placePhone": null,
+      "placeLink": null,
+      "lat": null,
+      "lng": null,
+      "age": [
+        7,
+        8
+      ],
+      "ageLabel": "1–2 класс",
+      "price": "уточняется",
+      "image": null,
+      "category": "science",
+      "categoryLabel": "Наука и логика",
+      "source": {
+        "id": "roboacademy",
+        "cta": "Записаться у @roboacademyofficial",
+        "url": "https://www.instagram.com/p/DdjGFTJjL4J/",
+        "kind": "Расписание студии",
+        "name": "RoboAcademy"
+      }
+    },
+    {
+      "id": "roboacademy-vracar-math12-vt-1600",
+      "title": "Занимательная математика, 1–2 класс",
+      "short": "Занимательная математика для учеников 1–2 класса.",
+      "desc": "Математика в игровой форме для учеников 1–2 класса: логические задачи, счёт и развитие математического мышления. Центр дополнительного образования RoboAcademy на Врачаре, по вторникам, 16:00–17:00. Вопросы и запись — @roboacademyofficial, +381 64 597 3001.",
+      "date": null,
+      "wd": [
+        1
+      ],
+      "time": "16:00",
+      "dur": "1 час",
+      "place": "RoboAcademy (Врачар)",
+      "address": "Луке Вукаловича 6, Врачар, Белград",
+      "placePhone": null,
+      "placeLink": null,
+      "lat": null,
+      "lng": null,
+      "age": [
+        7,
+        8
+      ],
+      "ageLabel": "1–2 класс",
+      "price": "уточняется",
+      "image": null,
+      "category": "science",
+      "categoryLabel": "Наука и логика",
+      "source": {
+        "id": "roboacademy",
+        "cta": "Записаться у @roboacademyofficial",
+        "url": "https://www.instagram.com/p/DdjGFTJjL4J/",
+        "kind": "Расписание студии",
+        "name": "RoboAcademy"
+      }
+    },
+    {
+      "id": "roboacademy-vracar-math34-vt-1500",
+      "title": "Занимательная математика, 3–4 класс",
+      "short": "Занимательная математика для учеников 3–4 класса.",
+      "desc": "Математика в игровой форме для учеников 3–4 класса: логические и нестандартные задачи, развитие математического мышления. Центр дополнительного образования RoboAcademy на Врачаре, по вторникам, 15:00–16:00. Вопросы и запись — @roboacademyofficial, +381 64 597 3001.",
+      "date": null,
+      "wd": [
+        1
+      ],
+      "time": "15:00",
+      "dur": "1 час",
+      "place": "RoboAcademy (Врачар)",
+      "address": "Луке Вукаловича 6, Врачар, Белград",
+      "placePhone": null,
+      "placeLink": null,
+      "lat": null,
+      "lng": null,
+      "age": [
+        9,
+        10
+      ],
+      "ageLabel": "3–4 класс",
+      "price": "уточняется",
+      "image": null,
+      "category": "science",
+      "categoryLabel": "Наука и логика",
+      "source": {
+        "id": "roboacademy",
+        "cta": "Записаться у @roboacademyofficial",
+        "url": "https://www.instagram.com/p/DdjGFTJjL4J/",
+        "kind": "Расписание студии",
+        "name": "RoboAcademy"
+      }
+    },
+    {
+      "id": "roboacademy-vracar-mind-cht-1630",
+      "title": "Робототехника LEGO Mindstorms",
+      "short": "Робототехника на LEGO Mindstorms для детей от 9 лет: конструирование и программирование роботов.",
+      "desc": "Продвинутая робототехника на LEGO Mindstorms: сборка сложных моделей, работа с датчиками, программирование поведения робота и решение инженерных задач. Центр дополнительного образования RoboAcademy на Врачаре, по четвергам, 16:30–18:30. Вопросы и запись — @roboacademyofficial, +381 64 597 3001.",
+      "date": null,
+      "wd": [
+        3
+      ],
+      "time": "16:30",
+      "dur": "2 часа",
+      "place": "RoboAcademy (Врачар)",
+      "address": "Луке Вукаловича 6, Врачар, Белград",
+      "placePhone": null,
+      "placeLink": null,
+      "lat": null,
+      "lng": null,
+      "age": [
+        9,
+        14
+      ],
+      "ageLabel": "9+ лет",
+      "price": "уточняется",
+      "image": null,
+      "category": "robotics",
+      "categoryLabel": "Робототехника",
+      "source": {
+        "id": "roboacademy",
+        "cta": "Записаться у @roboacademyofficial",
+        "url": "https://www.instagram.com/p/DdjGFTJjL4J/",
+        "kind": "Расписание студии",
+        "name": "RoboAcademy"
+      }
+    },
+    {
+      "id": "roboacademy-vracar-mind-sb-1500",
+      "title": "Робототехника LEGO Mindstorms",
+      "short": "Робототехника на LEGO Mindstorms для детей от 9 лет: конструирование и программирование роботов.",
+      "desc": "Продвинутая робототехника на LEGO Mindstorms: сборка сложных моделей, работа с датчиками, программирование поведения робота и решение инженерных задач. Центр дополнительного образования RoboAcademy на Врачаре, по субботам, 15:00–17:00. Вопросы и запись — @roboacademyofficial, +381 64 597 3001.",
+      "date": null,
+      "wd": [
+        5
+      ],
+      "time": "15:00",
+      "dur": "2 часа",
+      "place": "RoboAcademy (Врачар)",
+      "address": "Луке Вукаловича 6, Врачар, Белград",
+      "placePhone": null,
+      "placeLink": null,
+      "lat": null,
+      "lng": null,
+      "age": [
+        9,
+        14
+      ],
+      "ageLabel": "9+ лет",
+      "price": "уточняется",
+      "image": null,
+      "category": "robotics",
+      "categoryLabel": "Робототехника",
+      "source": {
+        "id": "roboacademy",
+        "cta": "Записаться у @roboacademyofficial",
+        "url": "https://www.instagram.com/p/DdjGFTJjL4J/",
+        "kind": "Расписание студии",
+        "name": "RoboAcademy"
+      }
+    },
+    {
+      "id": "roboacademy-vracar-mind-vs-1500",
+      "title": "Робототехника LEGO Mindstorms",
+      "short": "Робототехника на LEGO Mindstorms для детей от 9 лет: конструирование и программирование роботов.",
+      "desc": "Продвинутая робототехника на LEGO Mindstorms: сборка сложных моделей, работа с датчиками, программирование поведения робота и решение инженерных задач. Центр дополнительного образования RoboAcademy на Врачаре, по воскресеньям, 15:00–17:00. Вопросы и запись — @roboacademyofficial, +381 64 597 3001.",
+      "date": null,
+      "wd": [
+        6
+      ],
+      "time": "15:00",
+      "dur": "2 часа",
+      "place": "RoboAcademy (Врачар)",
+      "address": "Луке Вукаловича 6, Врачар, Белград",
+      "placePhone": null,
+      "placeLink": null,
+      "lat": null,
+      "lng": null,
+      "age": [
+        9,
+        14
+      ],
+      "ageLabel": "9+ лет",
+      "price": "уточняется",
+      "image": null,
+      "category": "robotics",
+      "categoryLabel": "Робототехника",
+      "source": {
+        "id": "roboacademy",
+        "cta": "Записаться у @roboacademyofficial",
+        "url": "https://www.instagram.com/p/DdjGFTJjL4J/",
+        "kind": "Расписание студии",
+        "name": "RoboAcademy"
+      }
+    },
+    {
+      "id": "roboacademy-vracar-minecraft-pn-1515",
+      "title": "Программирование в Minecraft Education",
+      "short": "Программирование в Minecraft Education для детей от 8 лет.",
+      "desc": "Знакомство с программированием через Minecraft Education: дети решают задачи в игровом мире, учатся алгоритмам и основам кода в знакомой и увлекательной среде. Центр дополнительного образования RoboAcademy на Врачаре, по понедельникам, 15:15–16:45. Вопросы и запись — @roboacademyofficial, +381 64 597 3001.",
+      "date": null,
+      "wd": [
+        0
+      ],
+      "time": "15:15",
+      "dur": "1 час 30 минут",
+      "place": "RoboAcademy (Врачар)",
+      "address": "Луке Вукаловича 6, Врачар, Белград",
+      "placePhone": null,
+      "placeLink": null,
+      "lat": null,
+      "lng": null,
+      "age": [
+        8,
+        14
+      ],
+      "ageLabel": "8+ лет",
+      "price": "уточняется",
+      "image": null,
+      "category": "robotics",
+      "categoryLabel": "Робототехника",
+      "source": {
+        "id": "roboacademy",
+        "cta": "Записаться у @roboacademyofficial",
+        "url": "https://www.instagram.com/p/DdjGFTJjL4J/",
+        "kind": "Расписание студии",
+        "name": "RoboAcademy"
+      }
+    },
+    {
+      "id": "roboacademy-vracar-minecraft-sr-1515",
+      "title": "Программирование в Minecraft Education",
+      "short": "Программирование в Minecraft Education для детей от 8 лет.",
+      "desc": "Знакомство с программированием через Minecraft Education: дети решают задачи в игровом мире, учатся алгоритмам и основам кода в знакомой и увлекательной среде. Центр дополнительного образования RoboAcademy на Врачаре, по средам, 15:15–16:45. Вопросы и запись — @roboacademyofficial, +381 64 597 3001.",
+      "date": null,
+      "wd": [
+        2
+      ],
+      "time": "15:15",
+      "dur": "1 час 30 минут",
+      "place": "RoboAcademy (Врачар)",
+      "address": "Луке Вукаловича 6, Врачар, Белград",
+      "placePhone": null,
+      "placeLink": null,
+      "lat": null,
+      "lng": null,
+      "age": [
+        8,
+        14
+      ],
+      "ageLabel": "8+ лет",
+      "price": "уточняется",
+      "image": null,
+      "category": "robotics",
+      "categoryLabel": "Робототехника",
+      "source": {
+        "id": "roboacademy",
+        "cta": "Записаться у @roboacademyofficial",
+        "url": "https://www.instagram.com/p/DdjGFTJjL4J/",
+        "kind": "Расписание студии",
+        "name": "RoboAcademy"
+      }
+    },
+    {
+      "id": "roboacademy-vracar-musical-pn-1630",
+      "title": "Школа мюзикла «Show LAB»",
+      "short": "Школа мюзикла «Show LAB» для детей от 6 лет: вокал, актёрское мастерство и сцена.",
+      "desc": "Школа мюзикла «Show LAB»: вокал, актёрское мастерство и движение на сцене — дети готовят номера и выступают. Центр дополнительного образования RoboAcademy на Врачаре, по понедельникам, 16:30–19:00. Вопросы и запись — @roboacademyofficial, +381 64 597 3001.",
+      "date": null,
+      "wd": [
+        0
+      ],
+      "time": "16:30",
+      "dur": "2 часа 30 минут",
+      "place": "RoboAcademy (Врачар)",
+      "address": "Луке Вукаловича 6, Врачар, Белград",
+      "placePhone": null,
+      "placeLink": null,
+      "lat": null,
+      "lng": null,
+      "age": [
+        6,
+        14
+      ],
+      "ageLabel": "6+ лет",
+      "price": "уточняется",
+      "image": null,
+      "category": "music",
+      "categoryLabel": "Музыка",
+      "source": {
+        "id": "roboacademy",
+        "cta": "Записаться у @roboacademyofficial",
+        "url": "https://www.instagram.com/p/DdjGFTJjL4J/",
+        "kind": "Расписание студии",
+        "name": "RoboAcademy"
+      }
+    },
+    {
+      "id": "roboacademy-vracar-musical-sb-1300",
+      "title": "Школа мюзикла «Show LAB»",
+      "short": "Школа мюзикла «Show LAB» для детей от 6 лет: вокал, актёрское мастерство и сцена.",
+      "desc": "Школа мюзикла «Show LAB»: вокал, актёрское мастерство и движение на сцене — дети готовят номера и выступают. Центр дополнительного образования RoboAcademy на Врачаре, по субботам, 13:00–15:30. Вопросы и запись — @roboacademyofficial, +381 64 597 3001.",
+      "date": null,
+      "wd": [
+        5
+      ],
+      "time": "13:00",
+      "dur": "2 часа 30 минут",
+      "place": "RoboAcademy (Врачар)",
+      "address": "Луке Вукаловича 6, Врачар, Белград",
+      "placePhone": null,
+      "placeLink": null,
+      "lat": null,
+      "lng": null,
+      "age": [
+        6,
+        14
+      ],
+      "ageLabel": "6+ лет",
+      "price": "уточняется",
+      "image": null,
+      "category": "music",
+      "categoryLabel": "Музыка",
+      "source": {
+        "id": "roboacademy",
+        "cta": "Записаться у @roboacademyofficial",
+        "url": "https://www.instagram.com/p/DdjGFTJjL4J/",
+        "kind": "Расписание студии",
+        "name": "RoboAcademy"
+      }
+    },
+    {
+      "id": "roboacademy-vracar-roblox-pn-1700",
+      "title": "Программирование в Roblox Studio",
+      "short": "Программирование в Roblox Studio для детей от 8 лет: создаём свои игры.",
+      "desc": "Курс программирования в Roblox Studio: дети строят игровые миры, пишут скрипты и создают собственные игры, попутно осваивая основы логики и программирования. Центр дополнительного образования RoboAcademy на Врачаре, по понедельникам, 17:00–18:30. Вопросы и запись — @roboacademyofficial, +381 64 597 3001.",
+      "date": null,
+      "wd": [
+        0
+      ],
+      "time": "17:00",
+      "dur": "1 час 30 минут",
+      "place": "RoboAcademy (Врачар)",
+      "address": "Луке Вукаловича 6, Врачар, Белград",
+      "placePhone": null,
+      "placeLink": null,
+      "lat": null,
+      "lng": null,
+      "age": [
+        8,
+        14
+      ],
+      "ageLabel": "8+ лет",
+      "price": "уточняется",
+      "image": null,
+      "category": "robotics",
+      "categoryLabel": "Робототехника",
+      "source": {
+        "id": "roboacademy",
+        "cta": "Записаться у @roboacademyofficial",
+        "url": "https://www.instagram.com/p/DdjGFTJjL4J/",
+        "kind": "Расписание студии",
+        "name": "RoboAcademy"
+      }
+    },
+    {
+      "id": "roboacademy-vracar-roblox-sr-1700",
+      "title": "Программирование в Roblox Studio",
+      "short": "Программирование в Roblox Studio для детей от 8 лет: создаём свои игры.",
+      "desc": "Курс программирования в Roblox Studio: дети строят игровые миры, пишут скрипты и создают собственные игры, попутно осваивая основы логики и программирования. Центр дополнительного образования RoboAcademy на Врачаре, по средам, 17:00–18:30. Вопросы и запись — @roboacademyofficial, +381 64 597 3001.",
+      "date": null,
+      "wd": [
+        2
+      ],
+      "time": "17:00",
+      "dur": "1 час 30 минут",
+      "place": "RoboAcademy (Врачар)",
+      "address": "Луке Вукаловича 6, Врачар, Белград",
+      "placePhone": null,
+      "placeLink": null,
+      "lat": null,
+      "lng": null,
+      "age": [
+        8,
+        14
+      ],
+      "ageLabel": "8+ лет",
+      "price": "уточняется",
+      "image": null,
+      "category": "robotics",
+      "categoryLabel": "Робототехника",
+      "source": {
+        "id": "roboacademy",
+        "cta": "Записаться у @roboacademyofficial",
+        "url": "https://www.instagram.com/p/DdjGFTJjL4J/",
+        "kind": "Расписание студии",
+        "name": "RoboAcademy"
+      }
+    },
+    {
+      "id": "roboacademy-vracar-rus2-pn-1645",
+      "title": "Русский язык (программа 2 класса)",
+      "short": "Русский язык по программе 2 класса.",
+      "desc": "Занятия русским языком по программе 2 класса: грамматика, орфография, чтение и развитие речи. Центр дополнительного образования RoboAcademy на Врачаре, по понедельникам, 16:45–17:30. Вопросы и запись — @roboacademyofficial, +381 64 597 3001.",
+      "date": null,
+      "wd": [
+        0
+      ],
+      "time": "16:45",
+      "dur": "45 минут",
+      "place": "RoboAcademy (Врачар)",
+      "address": "Луке Вукаловича 6, Врачар, Белград",
+      "placePhone": null,
+      "placeLink": null,
+      "lat": null,
+      "lng": null,
+      "age": [
+        8,
+        8
+      ],
+      "ageLabel": "2 класс",
+      "price": "уточняется",
+      "image": null,
+      "category": "languages",
+      "categoryLabel": "Языки",
+      "source": {
+        "id": "roboacademy",
+        "cta": "Записаться у @roboacademyofficial",
+        "url": "https://www.instagram.com/p/DdjGFTJjL4J/",
+        "kind": "Расписание студии",
+        "name": "RoboAcademy"
+      }
+    },
+    {
+      "id": "roboacademy-vracar-rus2-pt-1645",
+      "title": "Русский язык (программа 2 класса)",
+      "short": "Русский язык по программе 2 класса.",
+      "desc": "Занятия русским языком по программе 2 класса: грамматика, орфография, чтение и развитие речи. Центр дополнительного образования RoboAcademy на Врачаре, по пятницам, 16:45–17:30. Вопросы и запись — @roboacademyofficial, +381 64 597 3001.",
+      "date": null,
+      "wd": [
+        4
+      ],
+      "time": "16:45",
+      "dur": "45 минут",
+      "place": "RoboAcademy (Врачар)",
+      "address": "Луке Вукаловича 6, Врачар, Белград",
+      "placePhone": null,
+      "placeLink": null,
+      "lat": null,
+      "lng": null,
+      "age": [
+        8,
+        8
+      ],
+      "ageLabel": "2 класс",
+      "price": "уточняется",
+      "image": null,
+      "category": "languages",
+      "categoryLabel": "Языки",
+      "source": {
+        "id": "roboacademy",
+        "cta": "Записаться у @roboacademyofficial",
+        "url": "https://www.instagram.com/p/DdjGFTJjL4J/",
+        "kind": "Расписание студии",
+        "name": "RoboAcademy"
+      }
+    },
+    {
+      "id": "roboacademy-vracar-rus34-pn-1530",
+      "title": "Русский язык (программа 3–4 класса)",
+      "short": "Русский язык по программе 3–4 класса.",
+      "desc": "Занятия русским языком по программе 3–4 класса: грамматика, орфография, чтение и развитие речи. Центр дополнительного образования RoboAcademy на Врачаре, по понедельникам, 15:30–16:15. Вопросы и запись — @roboacademyofficial, +381 64 597 3001.",
+      "date": null,
+      "wd": [
+        0
+      ],
+      "time": "15:30",
+      "dur": "45 минут",
+      "place": "RoboAcademy (Врачар)",
+      "address": "Луке Вукаловича 6, Врачар, Белград",
+      "placePhone": null,
+      "placeLink": null,
+      "lat": null,
+      "lng": null,
+      "age": [
+        9,
+        10
+      ],
+      "ageLabel": "3–4 класс",
+      "price": "уточняется",
+      "image": null,
+      "category": "languages",
+      "categoryLabel": "Языки",
+      "source": {
+        "id": "roboacademy",
+        "cta": "Записаться у @roboacademyofficial",
+        "url": "https://www.instagram.com/p/DdjGFTJjL4J/",
+        "kind": "Расписание студии",
+        "name": "RoboAcademy"
+      }
+    },
+    {
+      "id": "roboacademy-vracar-rus34-pt-1530",
+      "title": "Русский язык (программа 3–4 класса)",
+      "short": "Русский язык по программе 3–4 класса.",
+      "desc": "Занятия русским языком по программе 3–4 класса: грамматика, орфография, чтение и развитие речи. Центр дополнительного образования RoboAcademy на Врачаре, по пятницам, 15:30–16:15. Вопросы и запись — @roboacademyofficial, +381 64 597 3001.",
+      "date": null,
+      "wd": [
+        4
+      ],
+      "time": "15:30",
+      "dur": "45 минут",
+      "place": "RoboAcademy (Врачар)",
+      "address": "Луке Вукаловича 6, Врачар, Белград",
+      "placePhone": null,
+      "placeLink": null,
+      "lat": null,
+      "lng": null,
+      "age": [
+        9,
+        10
+      ],
+      "ageLabel": "3–4 класс",
+      "price": "уточняется",
+      "image": null,
+      "category": "languages",
+      "categoryLabel": "Языки",
+      "source": {
+        "id": "roboacademy",
+        "cta": "Записаться у @roboacademyofficial",
+        "url": "https://www.instagram.com/p/DdjGFTJjL4J/",
+        "kind": "Расписание студии",
+        "name": "RoboAcademy"
+      }
+    },
+    {
+      "id": "roboacademy-vracar-scratch-cht-1440",
+      "title": "Программирование на Scratch",
+      "short": "Программирование на Scratch для детей от 7 лет: мультфильмы и игры из блоков.",
+      "desc": "Первые шаги в программировании на Scratch: из визуальных блоков дети собирают анимации, интерактивные истории и простые игры и учатся мыслить алгоритмами. Центр дополнительного образования RoboAcademy на Врачаре, по четвергам, 14:40–16:10. Вопросы и запись — @roboacademyofficial, +381 64 597 3001.",
+      "date": null,
+      "wd": [
+        3
+      ],
+      "time": "14:40",
+      "dur": "1 час 30 минут",
+      "place": "RoboAcademy (Врачар)",
+      "address": "Луке Вукаловича 6, Врачар, Белград",
+      "placePhone": null,
+      "placeLink": null,
+      "lat": null,
+      "lng": null,
+      "age": [
+        7,
+        12
+      ],
+      "ageLabel": "7+ лет",
+      "price": "уточняется",
+      "image": null,
+      "category": "robotics",
+      "categoryLabel": "Робототехника",
+      "source": {
+        "id": "roboacademy",
+        "cta": "Записаться у @roboacademyofficial",
+        "url": "https://www.instagram.com/p/DdjGFTJjL4J/",
+        "kind": "Расписание студии",
+        "name": "RoboAcademy"
+      }
+    },
+    {
+      "id": "roboacademy-vracar-scratch-sb-1300",
+      "title": "Программирование на Scratch",
+      "short": "Программирование на Scratch для детей от 7 лет: мультфильмы и игры из блоков.",
+      "desc": "Первые шаги в программировании на Scratch: из визуальных блоков дети собирают анимации, интерактивные истории и простые игры и учатся мыслить алгоритмами. Центр дополнительного образования RoboAcademy на Врачаре, по субботам, 13:00–14:30. Вопросы и запись — @roboacademyofficial, +381 64 597 3001.",
+      "date": null,
+      "wd": [
+        5
+      ],
+      "time": "13:00",
+      "dur": "1 час 30 минут",
+      "place": "RoboAcademy (Врачар)",
+      "address": "Луке Вукаловича 6, Врачар, Белград",
+      "placePhone": null,
+      "placeLink": null,
+      "lat": null,
+      "lng": null,
+      "age": [
+        7,
+        12
+      ],
+      "ageLabel": "7+ лет",
+      "price": "уточняется",
+      "image": null,
+      "category": "robotics",
+      "categoryLabel": "Робототехника",
+      "source": {
+        "id": "roboacademy",
+        "cta": "Записаться у @roboacademyofficial",
+        "url": "https://www.instagram.com/p/DdjGFTJjL4J/",
+        "kind": "Расписание студии",
+        "name": "RoboAcademy"
+      }
+    },
+    {
+      "id": "roboacademy-vracar-serb-cht-1700",
+      "title": "Сербский язык",
+      "short": "Сербский язык для детей от 7 лет.",
+      "desc": "Занятия сербским языком для детей от 7 лет: разговорная речь, чтение и письмо. Центр дополнительного образования RoboAcademy на Врачаре, по четвергам, 17:00–18:00. Вопросы и запись — @roboacademyofficial, +381 64 597 3001.",
+      "date": null,
+      "wd": [
+        3
+      ],
+      "time": "17:00",
+      "dur": "1 час",
+      "place": "RoboAcademy (Врачар)",
+      "address": "Луке Вукаловича 6, Врачар, Белград",
+      "placePhone": null,
+      "placeLink": null,
+      "lat": null,
+      "lng": null,
+      "age": [
+        7,
+        12
+      ],
+      "ageLabel": "7+ лет",
+      "price": "уточняется",
+      "image": null,
+      "category": "languages",
+      "categoryLabel": "Языки",
+      "source": {
+        "id": "roboacademy",
+        "cta": "Записаться у @roboacademyofficial",
+        "url": "https://www.instagram.com/p/DdjGFTJjL4J/",
+        "kind": "Расписание студии",
+        "name": "RoboAcademy"
+      }
+    },
+    {
+      "id": "roboacademy-vracar-serb-vt-1700",
+      "title": "Сербский язык",
+      "short": "Сербский язык для детей от 7 лет.",
+      "desc": "Занятия сербским языком для детей от 7 лет: разговорная речь, чтение и письмо. Центр дополнительного образования RoboAcademy на Врачаре, по вторникам, 17:00–18:00. Вопросы и запись — @roboacademyofficial, +381 64 597 3001.",
+      "date": null,
+      "wd": [
+        1
+      ],
+      "time": "17:00",
+      "dur": "1 час",
+      "place": "RoboAcademy (Врачар)",
+      "address": "Луке Вукаловича 6, Врачар, Белград",
+      "placePhone": null,
+      "placeLink": null,
+      "lat": null,
+      "lng": null,
+      "age": [
+        7,
+        12
+      ],
+      "ageLabel": "7+ лет",
+      "price": "уточняется",
+      "image": null,
+      "category": "languages",
+      "categoryLabel": "Языки",
+      "source": {
+        "id": "roboacademy",
+        "cta": "Записаться у @roboacademyofficial",
+        "url": "https://www.instagram.com/p/DdjGFTJjL4J/",
+        "kind": "Расписание студии",
+        "name": "RoboAcademy"
+      }
+    },
+    {
+      "id": "roboacademy-vracar-wedo-cht-1500",
+      "title": "Робототехника LEGO WeDo",
+      "short": "Робототехника на LEGO WeDo для детей от 6 лет: собираем и программируем первых роботов.",
+      "desc": "Занятие по робототехнике на конструкторе LEGO WeDo: дети собирают движущиеся модели, знакомятся с датчиками и моторами и учатся программировать их в простой визуальной среде. Центр дополнительного образования RoboAcademy на Врачаре, по четвергам, 15:00–16:30. Вопросы и запись — @roboacademyofficial, +381 64 597 3001.",
+      "date": null,
+      "wd": [
+        3
+      ],
+      "time": "15:00",
+      "dur": "1 час 30 минут",
+      "place": "RoboAcademy (Врачар)",
+      "address": "Луке Вукаловича 6, Врачар, Белград",
+      "placePhone": null,
+      "placeLink": null,
+      "lat": null,
+      "lng": null,
+      "age": [
+        6,
+        10
+      ],
+      "ageLabel": "6+ лет",
+      "price": "уточняется",
+      "image": null,
+      "category": "robotics",
+      "categoryLabel": "Робототехника",
+      "source": {
+        "id": "roboacademy",
+        "cta": "Записаться у @roboacademyofficial",
+        "url": "https://www.instagram.com/p/DdjGFTJjL4J/",
+        "kind": "Расписание студии",
+        "name": "RoboAcademy"
+      }
+    },
+    {
+      "id": "roboacademy-vracar-wedo-sb-1100",
+      "title": "Робототехника LEGO WeDo",
+      "short": "Робототехника на LEGO WeDo для детей от 6 лет: собираем и программируем первых роботов.",
+      "desc": "Занятие по робототехнике на конструкторе LEGO WeDo: дети собирают движущиеся модели, знакомятся с датчиками и моторами и учатся программировать их в простой визуальной среде. Центр дополнительного образования RoboAcademy на Врачаре, по субботам, 11:00–13:00. Вопросы и запись — @roboacademyofficial, +381 64 597 3001.",
+      "date": null,
+      "wd": [
+        5
+      ],
+      "time": "11:00",
+      "dur": "2 часа",
+      "place": "RoboAcademy (Врачар)",
+      "address": "Луке Вукаловича 6, Врачар, Белград",
+      "placePhone": null,
+      "placeLink": null,
+      "lat": null,
+      "lng": null,
+      "age": [
+        6,
+        10
+      ],
+      "ageLabel": "6+ лет",
+      "price": "уточняется",
+      "image": null,
+      "category": "robotics",
+      "categoryLabel": "Робототехника",
+      "source": {
+        "id": "roboacademy",
+        "cta": "Записаться у @roboacademyofficial",
+        "url": "https://www.instagram.com/p/DdjGFTJjL4J/",
+        "kind": "Расписание студии",
+        "name": "RoboAcademy"
+      }
+    },
+    {
+      "id": "roboacademy-vracar-wedo-vs-1100",
+      "title": "Робототехника LEGO WeDo",
+      "short": "Робототехника на LEGO WeDo для детей от 6 лет: собираем и программируем первых роботов.",
+      "desc": "Занятие по робототехнике на конструкторе LEGO WeDo: дети собирают движущиеся модели, знакомятся с датчиками и моторами и учатся программировать их в простой визуальной среде. Центр дополнительного образования RoboAcademy на Врачаре, по воскресеньям, 11:00–13:00. Вопросы и запись — @roboacademyofficial, +381 64 597 3001.",
+      "date": null,
+      "wd": [
+        6
+      ],
+      "time": "11:00",
+      "dur": "2 часа",
+      "place": "RoboAcademy (Врачар)",
+      "address": "Луке Вукаловича 6, Врачар, Белград",
+      "placePhone": null,
+      "placeLink": null,
+      "lat": null,
+      "lng": null,
+      "age": [
+        6,
+        10
+      ],
+      "ageLabel": "6+ лет",
+      "price": "уточняется",
+      "image": null,
+      "category": "robotics",
+      "categoryLabel": "Робототехника",
+      "source": {
+        "id": "roboacademy",
+        "cta": "Записаться у @roboacademyofficial",
+        "url": "https://www.instagram.com/p/DdjGFTJjL4J/",
+        "kind": "Расписание студии",
+        "name": "RoboAcademy"
       }
     }
   ]
