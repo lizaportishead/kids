@@ -4,6 +4,7 @@ art-light-kids-vrachar
 avr-swim-palilula
 avr-swim-vrachar
 begushchiy-gorod
+beogradska-filkharmoni-a
 besmart
 enter
 indigo-novyy-belgrad
@@ -24,6 +25,7 @@ narodno-pozorishte
 nashe-mesto-novyy-belgrad
 nashe-mesto-vrachar
 one-step-dance-studio
+pan-teatar
 prodlenka
 prosto-r
 roboacademy-novyy-belgrad
