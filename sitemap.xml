@@ -1306,6 +1306,11 @@
     <priority>0.5</priority>
   </url>
   <url>
+    <loc>https://klubok.kids/pulse-climbing-hub/shkolica-4-6-vt-1700/</loc>
+    <lastmod>2026-09-28</lastmod>
+    <priority>0.5</priority>
+  </url>
+  <url>
     <loc>https://klubok.kids/indigo-vrachar/b759b90d1f25/</loc>
     <lastmod>2026-09-28</lastmod>
     <priority>0.5</priority>
@@ -1327,6 +1332,11 @@
   </url>
   <url>
     <loc>https://klubok.kids/nashe-mesto-vrachar/443f7b9ee0e2/</loc>
+    <lastmod>2026-09-28</lastmod>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://klubok.kids/pulse-climbing-hub/skalolazanie-deti-7-vt-1800/</loc>
     <lastmod>2026-09-28</lastmod>
     <priority>0.5</priority>
   </url>
@@ -1746,6 +1756,11 @@
     <priority>0.5</priority>
   </url>
   <url>
+    <loc>https://klubok.kids/pulse-climbing-hub/skalolazanie-deti-7-cht-1800/</loc>
+    <lastmod>2026-09-28</lastmod>
+    <priority>0.5</priority>
+  </url>
+  <url>
     <loc>https://klubok.kids/roboacademy-vrachar/vracar-3d-model-cht-1830/</loc>
     <lastmod>2026-09-28</lastmod>
     <priority>0.5</priority>
@@ -2046,6 +2061,11 @@
     <priority>0.5</priority>
   </url>
   <url>
+    <loc>https://klubok.kids/pulse-climbing-hub/shkolica-4-6-sb-1100/</loc>
+    <lastmod>2026-09-28</lastmod>
+    <priority>0.5</priority>
+  </url>
+  <url>
     <loc>https://klubok.kids/besmart/c0fe9278f2a0/</loc>
     <lastmod>2026-09-28</lastmod>
     <priority>0.5</priority>
@@ -2092,6 +2112,11 @@
   </url>
   <url>
     <loc>https://klubok.kids/roboacademy-novyy-belgrad/nbg-math12-sb-1200/</loc>
+    <lastmod>2026-09-28</lastmod>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://klubok.kids/pulse-climbing-hub/skalolazanie-deti-7-sb-1200/</loc>
     <lastmod>2026-09-28</lastmod>
     <priority>0.5</priority>
   </url>
@@ -2621,6 +2646,11 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://klubok.kids/pulse-climbing-hub/</loc>
+    <lastmod>2026-09-28</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://klubok.kids/swimyou/</loc>
     <lastmod>2026-09-28</lastmod>
     <priority>0.7</priority>
@@ -2706,6 +2736,11 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://klubok.kids/category/sport/</loc>
+    <lastmod>2026-09-28</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://klubok.kids/category/swimming/</loc>
     <lastmod>2026-09-28</lastmod>
     <priority>0.8</priority>
@@ -2722,11 +2757,6 @@
   </url>
   <url>
     <loc>https://klubok.kids/category/reading/</loc>
-    <lastmod>2026-09-28</lastmod>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://klubok.kids/category/sport/</loc>
     <lastmod>2026-09-28</lastmod>
     <priority>0.8</priority>
   </url>
