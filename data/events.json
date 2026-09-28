@@ -1,7 +1,7 @@
 {
   "updatedAt": "2026-09-28T10:50:13.912Z",
   "city": "Белград",
-  "count": 497,
+  "count": 498,
   "report": [
     {
       "source": "prodlenka",
@@ -16732,6 +16732,38 @@
         "url": "https://www.instagram.com/p/DcyKgdNjlkP/",
         "kind": "Расписание студии",
         "name": "Pulse Climbing Hub"
+      }
+    },
+    {
+      "id": "feniks-fire-trenirovka-13-2026-10-01",
+      "title": "Тренировка фаер-шоу (13+)",
+      "short": "Занятие фаер-группы «Феникс» для подростков 13+",
+      "desc": "Тренировка фаер-группы «Феникс» в Hobbit House для подростков от 13 лет (есть и отдельная группа 18+). Приходите в удобной, не сковывающей движения одежде — весь инвентарь даёт студия. Занятие ведёт опытный мастер, условия абсолютно безопасные. Первое занятие — за свободный донат, подробности и запись — в Телеграм-канале группы.",
+      "date": "2026-10-01",
+      "wd": null,
+      "time": "20:00",
+      "dur": "1 час 30 минут",
+      "place": "Hobbit House",
+      "address": "Драже Павловича 21, Белград",
+      "placePhone": null,
+      "placeLink": null,
+      "lat": null,
+      "lng": null,
+      "age": [
+        13,
+        17
+      ],
+      "ageLabel": "13+ лет",
+      "price": "первое занятие — свободный донат",
+      "image": "data/images/feniks-fire-trenirovka.jpg",
+      "category": "sport",
+      "categoryLabel": "Спорт",
+      "source": {
+        "id": "feniks",
+        "cta": "Подробнее в канале «Феникс»",
+        "url": "https://t.me/feniks_fire_and_show",
+        "kind": "Телеграм-канал «Феникс»",
+        "name": "Фаер-группа «Феникс»"
       }
     }
   ]
