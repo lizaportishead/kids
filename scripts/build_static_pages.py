@@ -112,14 +112,16 @@ h2{font-size:22px;line-height:1.2;margin:36px 0 14px;font-weight:700}
 .lead a,.intro a,.faq a{text-decoration:underline}
 .clist{list-style:none;margin:0;padding:0;border-top:1px solid #f0ebe0}
 .clist li{border-bottom:1px solid #f0ebe0}
-.clist a{display:flex;gap:4px 16px;align-items:baseline;justify-content:space-between;padding:10px 2px;text-decoration:none}
+.clist a{display:flex;gap:4px 16px;align-items:center;padding:10px 2px;text-decoration:none}
+.clist a>div{flex:1 1 auto;min-width:0}
+.clist .lg{width:36px;height:36px;border-radius:10px;font-size:15px;flex:none;align-self:center;object-fit:contain;padding:2px}
 .clist a:hover .t{text-decoration:underline}
 .clist .t{font-weight:600;font-size:16px;line-height:1.3}.clist .p{color:var(--muted);font-size:14px;margin-top:2px}
 .clist .w{flex:none;text-align:right;font-size:14px;font-weight:600;white-space:nowrap}
 details.more summary{cursor:pointer;list-style:none;display:inline-block;margin-top:10px;font-weight:600;font-size:15px;color:var(--orange)}
 details.more summary::-webkit-details-marker{display:none}details.more[open] summary{display:none}
 .vgrid.sm{grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:8px}.vgrid.sm .ecard{padding:10px 12px}.vgrid.sm .t{font-size:15px}.vgrid.sm .s{font-size:13px}
-@media(max-width:640px){.clist a{flex-direction:column}.clist .w{text-align:left;color:var(--orange)}}
+@media(max-width:640px){.clist a{flex-wrap:wrap;align-items:flex-start}.clist a>div{flex-basis:calc(100% - 52px)}.clist .w{flex-basis:100%;padding-left:52px;text-align:left;color:var(--orange);white-space:normal}}
 footer .links{display:flex;flex-wrap:wrap;justify-content:center;gap:6px 14px;margin-top:8px}
 footer{border-top:1px solid #eee6d6;margin-top:24px;padding:24px 28px;font-size:14px;color:var(--muted);text-align:center}
 @media(max-width:900px){.detail{grid-template-columns:1fr;gap:28px}.detail h1{font-size:34px}}
@@ -310,7 +312,7 @@ PIN = ('<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#c05
 
 
 def logo(name, small=False):
-    cls = "logo sm" if small else "logo"
+    cls = "logo lg" if small == "xs" else "logo sm" if small else "logo"
     if VENUE_LOGO.get(name):
         return f'<img class="{cls}" src="/{esc(VENUE_LOGO[name])}" alt="{esc(name)}" loading="lazy">'
     return f'<div class="{cls} mono">{esc((name or "?")[:1].upper())}</div>'
@@ -674,6 +676,13 @@ def main():
             f'{plural(len(es), WHO)}</div></div></a></li>'
             for n, es in sorted(by.items()) if n not in VENUE_HIDDEN)
 
+    def days_label(ds):
+        """(1,2,3,4) -> «вт–пт», (0,3) -> «пн, чт»."""
+        ds = list(ds)
+        if len(ds) >= 3 and ds == list(range(ds[0], ds[-1] + 1)):
+            return f"{WEEKDAYS_SHORT[ds[0]]}–{WEEKDAYS_SHORT[ds[-1]]}"
+        return ", ".join(WEEKDAYS_SHORT[i] for i in ds)
+
     def compact(evs, show=5):
         """Плотный список: одно и то же занятие в разные дни — одна строка
         («пн, ср 17:00»), первые show строк видны, остальные — под «Ещё N»."""
@@ -686,10 +695,14 @@ def main():
             for e in es:
                 for i in (e.get("wd") or []):
                     slots.setdefault(e.get("time") or "", set()).add(i)
-            w = " · ".join(", ".join(WEEKDAYS_SHORT[i] for i in sorted(ds)) + (f" {t}" if t else "")
-                           for t, ds in sorted(slots.items(), key=lambda kv: min(kv[1])))
+            # одинаковые наборы дней — один раз: «вт–пт 08:30, 09:30»
+            by_days = {}
+            for t, ds in slots.items():
+                by_days.setdefault(tuple(sorted(ds)), []).append(t)
+            w = " · ".join(days_label(ds) + (" " + ", ".join(sorted(x for x in ts if x)) if any(ts) else "")
+                           for ds, ts in sorted(by_days.items()))
             sub = " · ".join(x for x in (age, place) if x)
-            lines.append(f'<li><a href="/{epath(es[0])}/"><div><div class="t">{esc(title)}</div>'
+            lines.append(f'<li><a href="/{epath(es[0])}/">{logo(place, "xs")}<div><div class="t">{esc(title)}</div>'
                          f'<div class="p">{esc(sub)}</div></div><span class="w">{esc(w)}</span></a></li>')
         head, rest = lines[:show], lines[show:]
         out = f'<ul class="clist">{"".join(head)}</ul>'
@@ -707,7 +720,7 @@ def main():
         return "".join(f'<h2>{esc(label)} {esc(where)}</h2>{compact(es)}' for label, es in order)
 
     def dated_compact(evs, show=6):
-        lines = [f'<li><a href="/{epath(e)}/"><div><div class="t">{esc(e["title"])}</div>'
+        lines = [f'<li><a href="/{epath(e)}/">{logo(e["place"], "xs")}<div><div class="t">{esc(e["title"])}</div>'
                  f'<div class="p">{esc(" · ".join(x for x in (e.get("ageLabel"), e["place"]) if x))}</div></div>'
                  f'<span class="w">{esc(when(e))}</span></a></li>' for e in evs]
         out = f'<ul class="clist">{"".join(lines[:show])}</ul>'

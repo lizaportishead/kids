@@ -80,14 +80,16 @@ h2{font-size:22px;line-height:1.2;margin:36px 0 14px;font-weight:700}
 .lead a,.intro a,.faq a{text-decoration:underline}
 .clist{list-style:none;margin:0;padding:0;border-top:1px solid #f0ebe0}
 .clist li{border-bottom:1px solid #f0ebe0}
-.clist a{display:flex;gap:4px 16px;align-items:baseline;justify-content:space-between;padding:10px 2px;text-decoration:none}
+.clist a{display:flex;gap:4px 16px;align-items:center;padding:10px 2px;text-decoration:none}
+.clist a>div{flex:1 1 auto;min-width:0}
+.clist .lg{width:36px;height:36px;border-radius:10px;font-size:15px;flex:none;align-self:center;object-fit:contain;padding:2px}
 .clist a:hover .t{text-decoration:underline}
 .clist .t{font-weight:600;font-size:16px;line-height:1.3}.clist .p{color:var(--muted);font-size:14px;margin-top:2px}
 .clist .w{flex:none;text-align:right;font-size:14px;font-weight:600;white-space:nowrap}
 details.more summary{cursor:pointer;list-style:none;display:inline-block;margin-top:10px;font-weight:600;font-size:15px;color:var(--orange)}
 details.more summary::-webkit-details-marker{display:none}details.more[open] summary{display:none}
 .vgrid.sm{grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:8px}.vgrid.sm .ecard{padding:10px 12px}.vgrid.sm .t{font-size:15px}.vgrid.sm .s{font-size:13px}
-@media(max-width:640px){.clist a{flex-direction:column}.clist .w{text-align:left;color:var(--orange)}}
+@media(max-width:640px){.clist a{flex-wrap:wrap;align-items:flex-start}.clist a>div{flex-basis:calc(100% - 52px)}.clist .w{flex-basis:100%;padding-left:52px;text-align:left;color:var(--orange);white-space:normal}}
 footer .links{display:flex;flex-wrap:wrap;justify-content:center;gap:6px 14px;margin-top:8px}
 footer{border-top:1px solid #eee6d6;margin-top:24px;padding:24px 28px;font-size:14px;color:var(--muted);text-align:center}
 @media(max-width:900px){.detail{grid-template-columns:1fr;gap:28px}.detail h1{font-size:34px}}
