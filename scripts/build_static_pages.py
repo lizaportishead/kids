@@ -123,6 +123,9 @@ details.more summary{cursor:pointer;list-style:none;display:inline-block;margin-
 details.more summary::-webkit-details-marker{display:none}details.more[open] summary{display:none}
 .vgrid.sm{grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:8px}.vgrid.sm .ecard{padding:10px 12px}.vgrid.sm .t{font-size:15px}.vgrid.sm img.logo{object-fit:contain;padding:3px}.vgrid.sm .s{font-size:13px}
 @media(max-width:640px){.clist a{flex-wrap:wrap;align-items:flex-start}.clist a>div{flex-basis:calc(100% - 52px)}.clist .w{flex-basis:100%;padding-left:52px;text-align:left;color:var(--orange);white-space:normal}}
+.cover{margin:0 0 24px}.cover img{width:100%;aspect-ratio:36/13;object-fit:cover;border-radius:24px;display:block;background:var(--chip)}
+.cover figcaption{font-size:12px;color:var(--muted);margin-top:6px;text-align:right}.cover a{color:inherit}
+@media(max-width:760px){.cover img{aspect-ratio:2/1;border-radius:18px}}
 .bsec{font-size:13px;letter-spacing:1.2px;text-transform:uppercase;color:#8a8175;font-weight:700;margin:40px 0 14px}
 .bgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:20px;margin:0;padding:0;list-style:none}
 .post{display:flex;flex-direction:column;height:100%;background:#fff;border:1px solid #f0ebe0;border-radius:22px;overflow:hidden;text-decoration:none;box-shadow:0 2px 10px rgba(32,30,29,.04);transition:box-shadow .15s}
@@ -323,6 +326,48 @@ MALYSHI_INTRO = [
     "Ниже занятия разбиты по направлениям, а в конце страницы — ближайшие спектакли и события, "
     "куда можно прийти с ребёнком до четырёх лет.",
 ]
+
+# Обложки статей с Unsplash (подключаются прямой ссылкой, как требуют правила
+# Unsplash, с подписью автора): ключ -> (id фото, автор, username)
+HERO = {
+    "vracar": ("photo-1630610857799-36b59ff3412e", "Ben Asyö", "benasyo"),
+    "stari-grad": ("photo-1632342966904-55e19bed82bf", "Dimitrije Milenkovic", "dimitrije_milenkovic"),
+    "novi-beograd": ("photo-1686687997696-1afe8c95ed40", "Daniela Legotta", "comodinodimarmo"),
+    "malyshi": ("photo-1515488042361-ee00e0ddd4e4", "Yuri Li", "itshoobastank"),
+    "blog": ("photo-1606092195730-5d7b9af1efc5", "Artem Kniaz", "artem_kniaz"),
+    "art": ("photo-1560421683-6856ea585c78", "Dragos Gontariu", "dragos126"),
+    "cooking": ("photo-1615224299941-04a854c101d4", "Brooke Lark", "brookelark"),
+    "dance": ("photo-1508807526345-15e9b5f4eaff", "Michael Afonso", "mafonso"),
+    "early_dev": ("photo-1609811645795-f72ea07f47e9", "Jackie Hope", "jackieboylhart"),
+    "games": ("photo-1714646793130-0dc0c5a04f64", "Vitaly Gariev", "silverkblack"),
+    "languages": ("photo-1577896851231-70ef18881754", "National Cancer Institute", "nci"),
+    "music": ("photo-1504484656217-38f8ffc617f9", "Jelleke Vanooteghem", "ilumire"),
+    "reading": ("photo-1516042438821-0abd7a73c4b3", "Johnny McClung", "johnnymcclung"),
+    "robotics": ("photo-1643199329419-1e46bbacf76c", "RUT MIIT", "rutmiit"),
+    "school_prep": ("photo-1587323655395-b1c77a12c89a", "Gabe Pierce", "gaberce"),
+    "science": ("photo-1613271752699-ede48a285196", "Clint Patterson", "cbpsc1"),
+    "sport": ("photo-1609422644211-a85c36ee36a7", "Debra Brewster", "dbrewster66"),
+    "swimming": ("photo-1627540458907-47a427507e20", "piratedea", "piratedea"),
+    "theatre": ("photo-1432639020363-5632f7f04e0b", "Sagar Dani", "sagardani"),
+}
+UNSPLASH_UTM = "?utm_source=klubok&utm_medium=referral"
+
+
+def hero_url(key, w, h):
+    return f"https://images.unsplash.com/{HERO[key][0]}?w={w}&h={h}&fit=crop&auto=format&q=70"
+
+
+def hero_block(key):
+    """Широкая обложка над заголовком статьи + подпись автора фото."""
+    if key not in HERO:
+        return ""
+    _, name, user = HERO[key]
+    return (f'<figure class="cover"><img src="{esc(hero_url(key, 1440, 520))}" '
+            f'srcset="{esc(hero_url(key, 720, 360))} 720w, {esc(hero_url(key, 1440, 520))} 1440w" '
+            f'sizes="(max-width:760px) 100vw, 1080px" alt="" fetchpriority="high">'
+            f'<figcaption>Фото: <a href="https://unsplash.com/@{esc(user)}{UNSPLASH_UTM}" rel="noopener">{esc(name)}</a>'
+            f' / <a href="https://unsplash.com/{UNSPLASH_UTM}" rel="noopener">Unsplash</a></figcaption></figure>')
+
 
 PIN = ('<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#c05f45" stroke-width="2" '
        'stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/>'
@@ -808,7 +853,7 @@ def main():
                        + (f'<h2>Все занятия</h2>{compact(reg_c, 10)}' if reg_c else "")
                        + (f'<h2>Ближайшие события</h2>{dated_compact(dated_c)}' if dated_c else ""))
         faq_html, faq_ld = faq(evs, "в Белграде")
-        body = (f'{crumbs_back("/category/", "Все категории")}'
+        body = (f'{crumbs_back("/category/", "Все категории")}{hero_block(c)}'
                 f'<h1>{esc(h1)}</h1>{stats(evs, SHOWS if c == "theatre" else WHO)}{more}'
                 f'{listing}{faq_html}'
                 f'<h2>Другие категории</h2><div class="chips">{others}</div>')
@@ -845,7 +890,7 @@ def main():
         regular_l = [e for e in evs if not e.get("date")]
         dated_l = [e for e in evs if e.get("date")]
         faq_html, faq_ld = faq(evs, where, upper)
-        body = (f'{crumbs_back("/kruzhki/", "Кружки по районам")}<h1>{esc(h1)}</h1>{stats(evs, WHO, None if upper else "для детей до 4 лет")}{intro(paras)}'
+        body = (f'{crumbs_back("/kruzhki/", "Кружки по районам")}{hero_block(path.split("/")[-1])}<h1>{esc(h1)}</h1>{stats(evs, WHO, None if upper else "для детей до 4 лет")}{intro(paras)}'
                 f'<a class="btn" href="{esc(cta[0])}" style="display:inline-block;margin:4px 0 0">{esc(cta[1])}</a>'
                 f'<h2>Площадки {esc(where)}</h2><ul class="vgrid sm">{venue_cards(evs)}</ul>'
                 f'{by_category(regular_l, where)}'
@@ -914,7 +959,12 @@ def main():
     # «Блог»: все посадочные страницы карточками
     def post(b, big=False):
         _, href, title, text, meta, img = b
-        pic = f'<img src="/{esc(img)}" alt="" loading="lazy">' if img else '<img alt="">'
+        key = href.strip("/").split("/")[-1]
+        if key in HERO:
+            img = hero_url(key, 1200 if big else 640, 675 if big else 360)
+        elif img:
+            img = "/" + img
+        pic = f'<img src="{esc(img)}" alt="" loading="lazy">' if img else '<img alt="">'
         li = '<li style="grid-column:1/-1">' if big else "<li>"
         cls = "post big" if big else "post"
         return (f'{li}<a class="{cls}" href="{href}">{pic}'
@@ -933,7 +983,7 @@ def main():
     page("blog", "Блог Клубка: гайды по детским кружкам и занятиям в Белграде | Клубок",
          "Гайды Клубка: кружки для детей по районам Белграда (Врачар, Старый Град, Новый Белград), занятия для малышей, "
          "танцы, театры, робототехника, языки и другие направления — с расписанием и ценами.",
-         '<h1>Блог Клубка</h1><p class="lead">Гайды по детским занятиям в Белграде: где заниматься в вашем районе, '
+         hero_block("blog") + '<h1>Блог Клубка</h1><p class="lead">Гайды по детским занятиям в Белграде: где заниматься в вашем районе, '
          'что выбрать для малыша и какие есть студии по каждому направлению. Расписание в статьях обновляется каждый день.</p>'
          + posts, "/blog/", None,
          {"@context": "https://schema.org", "@type": "Blog", "name": "Блог Клубка", "url": SITE + "/blog/",
