@@ -152,8 +152,11 @@ ol.check li::before{content:counter(c);position:absolute;left:0;top:1px;width:26
 .post.big{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr)}.post.big img{height:100%;aspect-ratio:auto;min-height:260px}
 .post.big h3{font-size:28px}.post.big .pb{padding:28px;justify-content:center}.post.big p{font-size:16px}
 @media(max-width:760px){.post.big{display:flex}.post.big img{aspect-ratio:16/9;min-height:0}.post.big h3{font-size:22px}.post.big .pb{padding:16px 18px 18px}}
-footer .links{display:flex;flex-wrap:wrap;justify-content:center;gap:6px 14px;margin-top:8px}
-footer{border-top:1px solid #eee6d6;margin-top:24px;padding:24px 28px;font-size:14px;color:var(--muted);text-align:center}
+.foot{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:14px 24px;margin-top:24px;padding:22px 28px 16px;background:radial-gradient(1270px 1257px at 4.04% 6.11%,rgba(197,250,139,.6) 0%,rgba(237,241,243,.6) 50%,rgba(255,243,186,.6) 100%),#fff;border-top:1px solid #ebe0ca;font-size:13px;line-height:20px;color:#6d6357}
+.foot .fl{display:flex;flex-direction:column;gap:6px;min-width:0}.foot .fa{display:flex;gap:16px}.foot .fa a{font-weight:500;text-decoration:underline;text-underline-offset:2px;padding:2px 0}
+.friend{display:flex;align-items:center;gap:10px;padding:6px 14px 6px 6px;border-radius:8px;background:#fff;border:1px solid #ebe0ca;text-decoration:none}
+.friend img{width:36px;height:36px;border-radius:6px;object-fit:cover;display:block}.friend span{display:flex;flex-direction:column;gap:1px}
+.friend small{font-size:12px;font-weight:500;color:#9a8d79}.friend b{font-size:13px;font-weight:600;color:#35312c}
 @media(max-width:900px){.detail{grid-template-columns:1fr;gap:28px}.detail h1{font-size:34px}}
 .boot{display:none}
 .booting .boot{display:flex;position:fixed;inset:0;z-index:9999;align-items:center;justify-content:center;background:#fffdf7}
@@ -181,6 +184,10 @@ def today_belgrade():
         return datetime.now(ZoneInfo("Europe/Belgrade")).date()
     except Exception:
         return (datetime.now(timezone.utc) + timedelta(hours=2)).date()
+
+
+_t = today_belgrade()
+BUILT = f"{_t.day} {MONTHS[_t.month - 1]}"   # «Расписание обновлено …» в подвале
 
 
 def fmt_date(iso):
@@ -263,6 +270,59 @@ CAT_SEO = {
 # Вступительный текст посадочных страниц категорий (абзацы). Цифры и списки
 # площадок подставляются из афиши, здесь — то, чего в данных нет.
 CAT_INTRO = {
+    "art": [
+        "Творческие занятия — это рисование, живопись, лепка из глины, керамика, рукоделие, скетчинг и даже "
+        "мультипликация. Для малышей это прежде всего сенсорный опыт и свобода, для школьников — техника, "
+        "композиция и собственные проекты. Группы небольшие, есть занятия с полутора лет вместе с мамой.",
+    ],
+    "languages": [
+        "Английский, сербский, китайский и другие языки: игровые группы для дошкольников, курсы и разговорные "
+        "клубы для школьников. Детям, которые недавно переехали, особенно помогают занятия сербским — так проще "
+        "в садике и школе. Малышам обычно подходит игровой формат, с 7–8 лет — занятия по учебнику и разговорные клубы.",
+    ],
+    "reading": [
+        "Книжные клубы, чтение вслух для малышей, литературные кружки и занятия по развитию речи. Здесь дети "
+        "учатся любить книгу и обсуждать прочитанное, а заодно поддерживают русский язык, если растут в сербской среде.",
+    ],
+    "swimming": [
+        "Школы плавания работают в бассейнах разных районов Белграда: есть группы для дошкольников — игровые, "
+        "на мелкой воде, — и секции для школьников с постановкой стилей. Тренировки обычно проходят два раза "
+        "в неделю, группы делят по уровню: начинающие и продолжающие.",
+    ],
+    "music": [
+        "Вокал, хор, фортепиано, музыкальные лаборатории и логоритмика. Малыши знакомятся с ритмом и мелодией "
+        "через игру, дети постарше занимаются вокалом или инструментом и готовятся к выступлениям. Группы обычно "
+        "делят по возрасту, так что занятие найдётся и для трёхлетки, и для подростка.",
+    ],
+    "games": [
+        "Шахматы, настольные игры и ролевые клубы вроде «Подземелий и драконов». Такие занятия развивают логику, "
+        "умение планировать и спокойно проигрывать — и это отличный способ найти друзей. В шахматы обычно "
+        "начинают играть с 5–6 лет.",
+    ],
+    "school_prep": [
+        "Занятия для дошкольников 5–7 лет: чтение, письмо, счёт, логика и привычка работать в группе. В Сербии "
+        "за год до школы обязательна подготовительная программа в садике или школе («припремни предшколски "
+        "програм»); кружки её дополняют, но не заменяют.",
+    ],
+    "sport": [
+        "Гимнастика, футбол, капоэйра, скалолазание, ролики и другие активные секции. Малышам дают общую "
+        "физическую подготовку и подвижные игры, детям постарше — технику выбранного вида спорта. Перед записью "
+        "спросите о пробном занятии.",
+    ],
+    "science": [
+        "Математические кружки, опыты и эксперименты, ТРИЗ, ментальная арифметика и 3D-моделирование. Здесь "
+        "дети учатся задавать вопросы, рассуждать и решать нестандартные задачи — хорошее дополнение к школьной "
+        "программе. Бывают и научные экскурсии, например в Музей Николы Теслы.",
+    ],
+    "robotics": [
+        "Конструирование на LEGO WeDo и SPIKE, робототехника на Mindstorms, программирование в Scratch, "
+        "Minecraft и Roblox. Малыши с 3–5 лет собирают простые движущиеся модели, школьники программируют роботов "
+        "и создают свои игры. Группы делят по возрасту и уровню подготовки.",
+    ],
+    "cooking": [
+        "Кулинарные мастер-классы, где дети сами готовят простые блюда: учатся обращаться с продуктами, "
+        "следовать рецепту и работать в команде. Такие занятия чаще проходят разово — удобно записаться на выходные.",
+    ],
     "dance": [
         "Танцы — одно из самых популярных направлений для детей в Белграде: в студиях есть группы "
         "от двух лет (хореография вместе с мамой) до школьников. Малышам обычно предлагают ритмику "
@@ -310,7 +370,33 @@ DISTRICT_PAGES = {
         "Здесь же — кукольный театр «Пинокио», где каждую неделю идут спектакли для малышей и "
         "дошкольников.",
     ]),
+    "savski-venac": ("Савски венац", "на Савском венце", ["Савски венац"], [
+        "Савски венац — район вдоль Савы: Сеньяк, Дедине, Топчидер, Савамала и новый квартал «Белград на воде». "
+        "Много зелени и парков, а детские места здесь скорее для выходных, чем на каждый день.",
+        "В районе — скалодром Pulse на Сеньяке с детскими тренировками, Музей африканского искусства с "
+        "мастерскими для детей, детский театр «Змай» и книжный Bela Vrana с субботними занятиями.",
+    ]),
+    "palilula": ("Палилула", "на Палилуле", ["Палилула"], [
+        "Палилула — большой район к востоку от центра: Ташмайдан с парком и церковью Святого Марка, "
+        "Карабурма, Котеж и Борча за Дунаем.",
+        "У Ташмайдана работает Малое позориште «Душко Радовић» — один из главных детских театров города. "
+        "Рядом — детские клубы, книжные с занятиями, плавание и танцы.",
+    ]),
+    "vozdovac": ("Вождовац", "на Вождоваце", ["Вождовац"], [
+        "Вождовац — зелёный район на юге Белграда: Баница, Шумице, Йайинци, а дальше — гора Авала "
+        "с телебашней, куда удобно выбраться с детьми на выходные.",
+        "Здесь спортивный центр «Шумице» с детскими программами и школа плавания SwimYou.",
+    ]),
+    "zvezdara": ("Звездара", "на Звездаре", ["Звездара"], [
+        "Звездара — район на холме к востоку от центра, названный в честь обсерватории. Звездарский лес — "
+        "одно из любимых мест Белграда для прогулок с детьми.",
+        "В районе — «Пан театар» с детской сценой, где по выходным идут спектакли, и роллердром RollerLand.",
+    ]),
 }
+# Площадки, у которых в адресе не указан район (подсказка для district_of).
+VENUE_DISTRICT = {"Karavela": "Палилула", "Продлёнка": "Палилула", "Hobbit House": "Палилула",
+                  "Мало позориште «Душко Радовић»": "Палилула", "Театр «Пуж»": "Врачар",
+                  "Bela Vrana": "Савски венац"}
 # Обложки районов в «Блоге» — фото реальных занятий (если файл пропал — берётся картинка из афиши).
 DISTRICT_COVER = {"vracar": "data/images/nashemesto-lego.png",
                   "stari-grad": "data/images/lumos-teatr.jpg",
@@ -319,11 +405,14 @@ DISTRICT_KEYWORDS = ["Врачар", "Дорчол", "Стари Град", "С�
                      "Звездара", "Вождовац", "Чукарица", "Раковица", "Палилула", "Савски венац"]
 DISTRICT_ALIASES = {"Стари Град": "Старый Град", "Нови Београд": "Новый Белград"}
 # Слаги районов в фильтре приложения (?district=…)
-DISTRICT_SLUGS = {"Врачар": "vracar", "Дорчол": "dorcol", "Старый Град": "stari-grad", "Новый Белград": "novi-beograd"}
+DISTRICT_SLUGS = {"Врачар": "vracar", "Дорчол": "dorcol", "Старый Град": "stari-grad", "Новый Белград": "novi-beograd",
+                  "Савски венац": "savski-venac", "Палилула": "palilula", "Вождовац": "vozdovac", "Звездара": "zvezdara"}
 
 
 def district_of(e):
     """Район по адресу — так же, как в приложении (districtOf), но без учёта регистра."""
+    if e.get("place") in VENUE_DISTRICT:
+        return VENUE_DISTRICT[e["place"]]
     text = ", ".join(x for x in (e.get("address"), e.get("place")) if x).lower()
     for kw in DISTRICT_KEYWORDS:
         if kw.lower() in text:
@@ -345,6 +434,10 @@ MALYSHI_INTRO = [
 HERO = {
     "vracar": ("photo-1630610857799-36b59ff3412e", "Ben Asyö", "benasyo"),
     "stari-grad": ("photo-1632342966904-55e19bed82bf", "Dimitrije Milenkovic", "dimitrije_milenkovic"),
+    "palilula": ("photo-1717572494480-ebaf5648f60c", "Suraj Tomer", "meditative"),
+    "savski-venac": ("photo-1708253832369-ce7e621df31a", "Anton Lukin", "antonlukin"),
+    "vozdovac": ("photo-1740701943103-8b29488de9a0", "Nikola Kojević", "nikolaskojevic"),
+    "zvezdara": ("photo-1730205616254-a594de42cd3e", "Tanja Tepavac", "ttepavac"),
     "novi-beograd": ("photo-1686687997696-1afe8c95ed40", "Daniela Legotta", "comodinodimarmo"),
     "malyshi": ("photo-1515488042361-ee00e0ddd4e4", "Yuri Li", "itshoobastank"),
     "blog": ("photo-1606092195730-5d7b9af1efc5", "Artem Kniaz", "artem_kniaz"),
@@ -474,8 +567,12 @@ def page(path, title, description, body, canonical_path, image=None, jsonld=None
 <nav class="nav"><a href="/">Афиша</a><a href="/schedule/"{on("schedule")}>Расписание</a><a href="/venues/"{on("venues")}>Площадки</a></nav>
 </header>
 {body}
-<footer>Клубок — афиша детских занятий и мероприятий в Белграде · <a href="/blog/">Блог: гайды по занятиям</a>
-<div class="links"><a href="/blog/">Блог</a><a href="/kruzhki/vracar/">Кружки на Врачаре</a><a href="/kruzhki/stari-grad/">Кружки в Старом Граде</a><a href="/kruzhki/novi-beograd/">Кружки в Новом Белграде</a><a href="/kruzhki/malyshi/">Занятия для малышей</a><a href="/category/dance/">Танцы для детей</a><a href="/category/theatre/">Детские театры</a></div></footer>
+<footer class="foot">
+<div class="fl"><span>Расписание обновлено {BUILT}</span>
+<span class="fa"><a href="/blog/">Блог</a><a href="https://t.me/liza_portishead" target="_blank" rel="noopener">Обратная связь</a></span></div>
+<a class="friend" href="https://t.me/mamakudaidem" target="_blank" rel="noopener"><img src="/data/images/friend-mamakudaidem.jpg" alt="Мама, куда идём сегодня?" width="36" height="36">
+<span><small>Советуем telegram-канал</small><b>Мама, куда идём сегодня?</b></span></a>
+</footer>
 </body>
 </html>
 """, encoding="utf-8")
@@ -878,11 +975,6 @@ def main():
             cat_venues.setdefault(e["place"], []).append(e)
         n_ev, n_v = len(evs), len(cat_venues)
         names = sorted(cat_venues)
-        shown = ", ".join(names[:6]) + (f" и ещё {len(names) - 6}" if len(names) > 6 else "")
-        ages = age_range(evs)
-        age_txt = f" Возраст детей — от {ages[0]} до {ages[1]} лет." if ages else ""
-        intro_txt = (f"В афише Клубка — {n_ev} {plural(n_ev, ('занятие', 'занятия', 'занятий'))} и событий: {what}. "
-                 f"Площадки: {shown}.{age_txt} Расписание, цены и запись — на страницах занятий.")
         vcards = "".join(
             f'<li><a class="ecard" href="/{slugs[n]}/">{logo(n)}<div><div class="t">{esc(n)}</div>'
             f'<div class="s">{esc(next((e["address"] for e in es if e.get("address")), ""))} · {len(es)} '
@@ -891,7 +983,7 @@ def main():
         others = "".join(
             f'<a class="chip" href="/category/{esc(oc)}/">{esc(oi["label"])}</a>'
             for oc, oi in sorted(cats.items()) if oc != c)
-        more = f'{intro(CAT_INTRO[c])}<p class="lead">{esc(intro_txt)}</p>' if c in CAT_INTRO else f'<p class="lead">{esc(intro_txt)}</p>'
+        more = intro(CAT_INTRO.get(c, []))
         if c == "early_dev":
             more += '<p class="lead">Смотрите также: <a href="/kruzhki/malyshi/">все занятия для малышей в Белграде</a>.</p>'
         reg_c = [e for e in evs if not e.get("date")]
@@ -921,7 +1013,7 @@ def main():
              body, f"/category/{c}/", None, ld)
         urls.append((f"/category/{c}/", "0.8"))
         blog.append(("Направления", f"/category/{c}/", h1,
-                     excerpt(CAT_INTRO[c][0] if c in CAT_INTRO else intro_txt),
+                     excerpt(CAT_INTRO[c][0] if c in CAT_INTRO else f"{h1}: {what}."),
                      f"{n_v} {plural(n_v, ('площадка', 'площадки', 'площадок'))} · {n_ev} {plural(n_ev, SHOWS if c == 'theatre' else WHO)}",
                      cover(evs, c)))
 
@@ -957,7 +1049,7 @@ def main():
                     ("/category/theatre/", "Детские театры"), ("/schedule/", "Всё расписание")]
     for ds, (dname, where, members, paras) in DISTRICT_PAGES.items():
         evs = [e for e in events if district_of(e) in members]
-        if not evs:
+        if len(evs) < 3:   # меньше трёх занятий — страница была бы пустой
             continue
         cats_here = Counter(e["categoryLabel"] for e in evs if e.get("categoryLabel") and not e.get("date"))
         top = ", ".join(l.lower() for l, _ in cats_here.most_common(4))
@@ -984,7 +1076,7 @@ def main():
                 "раннее развитие, занятия с мамой, музыка, хореография, плавание, творчество. Расписание и цены.",
                 MALYSHI_INTRO, toddlers, "для малышей", ("/schedule/?age=2", "Открыть расписание для 2 лет"),
                 [r for r in related_all if r[0] != "/kruzhki/malyshi/"] + [("/category/early_dev/", "Раннее развитие")], upper=False)
-        blog.append(("Для малышей", "/kruzhki/malyshi/", "Занятия для малышей в Белграде", excerpt(MALYSHI_INTRO[0]),
+        blog.append(("Направления", "/kruzhki/malyshi/", "Занятия для малышей в Белграде", excerpt(MALYSHI_INTRO[0]),
                      f"{n_v} {plural(n_v, ('площадка', 'площадки', 'площадок'))} · {len(toddlers)} {plural(len(toddlers), WHO)}",
                      "data/images/placeholder-early_dev.jpg"))
 
@@ -1024,7 +1116,7 @@ def main():
         return (f'{li}<a class="{cls}" href="{href}">{pic}'
                 f'<div class="pb"><span class="tag">{esc(b[0])}</span><h3>{esc(title)}</h3><p>{esc(text)}</p>'
                 f'<div class="meta">{esc(meta if b[0] == "Гайды" else f"{meta} · обновлено {today.day} {MONTHS[today.month - 1]}")}</div></div></a></li>')
-    sections_order = ["Гайды", "Районы", "Для малышей", "Направления"]
+    sections_order = ["Гайды", "Районы", "Направления"]
     # сверху — свежий гайд (или самый насыщенный район), дальше по разделам
     order = {s_: i for i, s_ in enumerate(sections_order)}
     ranked = sorted(blog, key=lambda b: (order[b[0]], -int((re.search(r"· (\d+)", b[4]) or re.search(r"(\d+)", "0")).group(1))))

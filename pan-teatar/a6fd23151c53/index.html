@@ -118,8 +118,11 @@ ol.check li::before{content:counter(c);position:absolute;left:0;top:1px;width:26
 .post.big{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr)}.post.big img{height:100%;aspect-ratio:auto;min-height:260px}
 .post.big h3{font-size:28px}.post.big .pb{padding:28px;justify-content:center}.post.big p{font-size:16px}
 @media(max-width:760px){.post.big{display:flex}.post.big img{aspect-ratio:16/9;min-height:0}.post.big h3{font-size:22px}.post.big .pb{padding:16px 18px 18px}}
-footer .links{display:flex;flex-wrap:wrap;justify-content:center;gap:6px 14px;margin-top:8px}
-footer{border-top:1px solid #eee6d6;margin-top:24px;padding:24px 28px;font-size:14px;color:var(--muted);text-align:center}
+.foot{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:14px 24px;margin-top:24px;padding:22px 28px 16px;background:radial-gradient(1270px 1257px at 4.04% 6.11%,rgba(197,250,139,.6) 0%,rgba(237,241,243,.6) 50%,rgba(255,243,186,.6) 100%),#fff;border-top:1px solid #ebe0ca;font-size:13px;line-height:20px;color:#6d6357}
+.foot .fl{display:flex;flex-direction:column;gap:6px;min-width:0}.foot .fa{display:flex;gap:16px}.foot .fa a{font-weight:500;text-decoration:underline;text-underline-offset:2px;padding:2px 0}
+.friend{display:flex;align-items:center;gap:10px;padding:6px 14px 6px 6px;border-radius:8px;background:#fff;border:1px solid #ebe0ca;text-decoration:none}
+.friend img{width:36px;height:36px;border-radius:6px;object-fit:cover;display:block}.friend span{display:flex;flex-direction:column;gap:1px}
+.friend small{font-size:12px;font-weight:500;color:#9a8d79}.friend b{font-size:13px;font-weight:600;color:#35312c}
 @media(max-width:900px){.detail{grid-template-columns:1fr;gap:28px}.detail h1{font-size:34px}}
 .boot{display:none}
 .booting .boot{display:flex;position:fixed;inset:0;z-index:9999;align-items:center;justify-content:center;background:#fffdf7}
@@ -152,7 +155,11 @@ fetch("/index.html").then(function(r){if(!r.ok)throw r.status;return r.text()}).
 </div>
 <aside><img class="hero" src="/data/images/panteatar-tri-praseta.webp" alt="Tri praseta"><div class="pricecard"><div class="lab">Стоимость</div><div class="price">уточняется</div><a class="btn" href="https://panteatar.rs/repertoar?scene=decja-scena" rel="noopener">Купить билет на сайте театра</a><div class="note">Информация взята из открытого источника — Пан театар</div></div></aside>
 </div></main>
-<footer>Клубок — афиша детских занятий и мероприятий в Белграде · <a href="/blog/">Блог: гайды по занятиям</a>
-<div class="links"><a href="/blog/">Блог</a><a href="/kruzhki/vracar/">Кружки на Врачаре</a><a href="/kruzhki/stari-grad/">Кружки в Старом Граде</a><a href="/kruzhki/novi-beograd/">Кружки в Новом Белграде</a><a href="/kruzhki/malyshi/">Занятия для малышей</a><a href="/category/dance/">Танцы для детей</a><a href="/category/theatre/">Детские театры</a></div></footer>
+<footer class="foot">
+<div class="fl"><span>Расписание обновлено 30 сентября</span>
+<span class="fa"><a href="/blog/">Блог</a><a href="https://t.me/liza_portishead" target="_blank" rel="noopener">Обратная связь</a></span></div>
+<a class="friend" href="https://t.me/mamakudaidem" target="_blank" rel="noopener"><img src="/data/images/friend-mamakudaidem.jpg" alt="Мама, куда идём сегодня?" width="36" height="36">
+<span><small>Советуем telegram-канал</small><b>Мама, куда идём сегодня?</b></span></a>
+</footer>
 </body>
 </html>
