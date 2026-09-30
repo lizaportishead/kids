@@ -110,8 +110,7 @@ h2{font-size:22px;line-height:1.2;margin:36px 0 14px;font-weight:700}
 .vgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:12px;margin:0;padding:0;list-style:none}
 .intro{font-size:17px;line-height:1.6;margin:14px 0 0}.intro p{margin:0 0 12px}
 .stats{display:flex;flex-wrap:wrap;gap:8px;margin:6px 0 4px}.stats span{background:#fff4d6;border-radius:999px;padding:6px 14px;font-size:14px;font-weight:600}
-.faq{margin:0;padding:0}.faq dt{font-weight:700;margin:18px 0 4px}.faq dd{margin:0;color:#3d3833}
-.lead a,.intro a,.faq a{text-decoration:underline}
+.lead a,.intro a{text-decoration:underline}
 .clist{list-style:none;margin:0;padding:0;border-top:1px solid #f0ebe0}
 .clist li{border-bottom:1px solid #f0ebe0}
 .clist a{display:flex;gap:4px 16px;align-items:center;padding:10px 2px;text-decoration:none}
@@ -359,33 +358,30 @@ DISTRICT_PAGES = {
     "stari-grad": ("Старый Град", "в Старом Граде", ["Старый Град", "Дорчол"], [
         "Старый Град — исторический центр Белграда: Дорчол, Калемегдан, Кнез Михаила, Студентский трг. "
         "Здесь работают детские центры с языками, подготовкой к школе и занятиями для "
-        "малышей, а также большие театры и филармония с детскими программами.",
-        "На этой странице — постоянные кружки в Старом Граде и на Дорчоле и ближайшие детские "
-        "события в районе.",
+        "малышей, музыкальные студии, театральная студия и капоэйра.",
+        "На этой странице — все постоянные кружки в Старом Граде и на Дорчоле.",
     ]),
     "novi-beograd": ("Новый Белград", "в Новом Белграде", ["Новый Белград"], [
         "Новый Белград — большой семейный район за Савой с кварталами-блоками, Белвилем и Ушче. "
-        "Детские центры здесь обычно расположены прямо в жилых блоках: робототехника и программирование, "
-        "шахматы, языки, творческие студии, хореография и музыка.",
-        "Здесь же — кукольный театр «Пинокио», где каждую неделю идут спектакли для малышей и "
-        "дошкольников.",
+        "Детские центры здесь обычно расположены прямо в жилых блоках, недалеко от дома: "
+        "робототехника и программирование, шахматы, языки, творческие студии, хореография и музыка.",
     ]),
     "savski-venac": ("Савски венац", "на Савском венце", ["Савски венац"], [
         "Савски венац — район вдоль Савы: Сеньяк, Дедине, Топчидер, Савамала и новый квартал «Белград на воде». "
         "Много зелени и парков, а детские места здесь скорее для выходных, чем на каждый день.",
-        "В районе — скалодром Pulse на Сеньяке с детскими тренировками, Музей африканского искусства с "
-        "мастерскими для детей, детский театр «Змай» и книжный Bela Vrana с субботними занятиями.",
+        "Для детей здесь — скалодром Pulse на Сеньяке с детскими тренировками и Музей африканского "
+        "искусства с занятиями для детей.",
     ]),
     "palilula": ("Палилула", "на Палилуле", ["Палилула"], [
         "Палилула — большой район к востоку от центра: Ташмайдан с парком и церковью Святого Марка, "
         "Карабурма, Котеж и Борча за Дунаем.",
-        "У Ташмайдана работает Малое позориште «Душко Радовић» — один из главных детских театров города. "
-        "Рядом — детские клубы, книжные с занятиями, плавание и танцы.",
+        "Постоянные занятия здесь — плавание в бассейне AVR swim, современный танец в One Step Dance Studio "
+        "и вокал в Art Light Kids.",
     ]),
     "vozdovac": ("Вождовац", "на Вождоваце", ["Вождовац"], [
         "Вождовац — зелёный район на юге Белграда: Баница, Шумице, Йайинци, а дальше — гора Авала "
         "с телебашней, куда удобно выбраться с детьми на выходные.",
-        "Здесь спортивный центр «Шумице» с детскими программами и школа плавания SwimYou.",
+        "Здесь работает школа плавания SwimYou с группами для дошкольников и школьников.",
     ]),
     "zvezdara": ("Звездара", "на Звездаре", ["Звездара"], [
         "Звездара — район на холме к востоку от центра, названный в честь обсерватории. Звездарский лес — "
@@ -808,55 +804,6 @@ def main():
     WHO = ("занятие", "занятия", "занятий")
     SHOWS = ("спектакль", "спектакля", "спектаклей")
 
-    def price_from(e):
-        """Разовая цена в RSD из свободного текста цены (первое число перед RSD/дин)."""
-        m = re.search(r"(\d[\d  .]*)\s*(?:RSD|рсд|дин|din)", e.get("price") or "", re.I)
-        if not m:
-            return None
-        n = int(re.sub(r"\D", "", m.group(1)))
-        return n if 200 <= n <= 20000 else None
-
-    def fmt_rsd(n):
-        return f"{n:,}".replace(",", " ") + " RSD"
-
-    def faq(evs, where, upper=True):
-        """Частые вопросы, ответы — из самой афиши. where — «на Врачаре», «в Белграде»…"""
-        regular = [e for e in evs if not e.get("date")]
-        qa = []
-        pool = regular or evs
-        ages = age_range(pool)
-        if ages:
-            youngest = min((e for e in pool if (e.get("age") or [None])[0] is not None), key=lambda e: e["age"][0])
-            since = "с первых месяцев" if ages[0] == 0 else f"с {ages[0]} {plural(ages[0], ('года', 'лет', 'лет'))}"
-            qa.append((f"С какого возраста есть занятия {where}?",
-                       f"Самые младшие группы — {since} "
-                       f"(например, «{esc(youngest['title'])}», {esc(youngest['place'])})"
-                       + (f", самые старшие — до {ages[1]} лет" if upper else "") + ". Возраст указан у каждого занятия."))
-        if regular:
-            per = Counter(i for e in regular for i in (e.get("wd") or []))
-            top = [WEEKDAYS_DAT[i] for i, _ in per.most_common(2)]
-            wknd = sum(1 for e in regular if set(e.get("wd") or []) & {5, 6})
-            times = sorted(e["time"] for e in regular if e.get("time"))
-            a = f"Больше всего занятий — по {top[0]}" + (f" и {top[1]}" if len(top) > 1 else "") + "."
-            if times:
-                a += f" Самое раннее начинается в {times[0]}, самое позднее — в {times[-1]}."
-            a += (f" По выходным — {wknd} {plural(wknd, WHO)}." if wknd else " По выходным занятий нет.")
-            qa.append(("В какие дни и во сколько проходят занятия?", a))
-            prices = sorted(p for p in (price_from(e) for e in regular) if p)
-            if len(prices) >= 3:
-                qa.append(("Сколько стоит одно занятие?",
-                           f"Разовое занятие стоит от {fmt_rsd(prices[0])} до {fmt_rsd(prices[-1])}, "
-                           f"чаще всего около {fmt_rsd(prices[len(prices) // 2])}. Абонемент на месяц обычно выгоднее — "
-                           "цены указаны на странице каждого занятия."))
-        qa.append(("Как записаться?",
-                   "Откройте занятие — на его странице есть кнопка записи, она ведёт на сайт, в Instagram или "
-                   "Telegram площадки. Афиша Клубка обновляется ежедневно, но перед первым визитом лучше "
-                   "уточнить расписание у площадки."))
-        html_ = "".join(f"<dt>{q}</dt><dd>{a}</dd>" for q, a in qa)
-        ld = {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [
-            {"@type": "Question", "name": q, "acceptedAnswer": {"@type": "Answer", "text": re.sub(r"<[^>]+>", "", a)}}
-            for q, a in qa]}
-        return f'<h2>Частые вопросы</h2><dl class="faq">{html_}</dl>', ld
 
     def venue_cards(evs):
         by = {}
@@ -970,6 +917,8 @@ def main():
         evs = info["events"]
         label = info["label"]
         h1, what, kw = CAT_SEO.get(c, (f"{label} для детей в Белграде", label.lower(), label.lower()))
+        if c != "theatre" and any(not e.get("date") for e in evs):
+            evs = [e for e in evs if not e.get("date")]   # в статьях только постоянные занятия
         cat_venues = {}
         for e in evs:
             cat_venues.setdefault(e["place"], []).append(e)
@@ -994,19 +943,14 @@ def main():
                        + (f'<h2>Театральные студии</h2>{compact(reg_c)}' if reg_c else ""))
         else:
             listing = (f'<h2>Где заниматься</h2><ul class="vgrid sm">{vcards}</ul>'
-                       + (f'<h2>Все занятия</h2>{compact(reg_c, 10)}' if reg_c else "")
-                       + (f'<h2>Ближайшие события</h2>{dated_compact(dated_c)}' if dated_c else ""))
-        faq_html, faq_ld = faq(evs, "в Белграде")
+                       + (f'<h2>Все занятия</h2>{compact(reg_c, 10)}' if reg_c else ""))
         body = (f'{crumbs_back("/blog/", "Блог")}{hero_block(c)}'
                 f'<h1>{esc(h1)}</h1>{stats(evs, SHOWS if c == "theatre" else WHO)}{more}'
-                f'{listing}{faq_html}'
+                f'{listing}'
                 f'<h2>Другие категории</h2><div class="chips">{others}</div>')
         ld = {"@context": "https://schema.org", "@type": "ItemList", "name": h1,
               "itemListElement": [{"@type": "ListItem", "position": i + 1, "url": f"{SITE}/{slugs[n]}/", "name": n}
                                   for i, n in enumerate(names)]}
-        if faq_ld:
-            ld = {"@context": "https://schema.org",
-                  "@graph": [{k: v for k, v in x.items() if k != "@context"} for x in (ld, faq_ld)]}
         page(f"category/{c}", f"{h1} — расписание и цены | Клубок",
              f"{h1}: {n_v} {plural(n_v, ('площадка', 'площадки', 'площадок'))}, {n_ev} {plural(n_ev, SHOWS if c == 'theatre' else WHO)}. "
              f"{kw.capitalize()}. Расписание, возраст и цены.",
@@ -1023,20 +967,16 @@ def main():
     # --- посадочные: кружки по районам и занятия для малышей ---
     def landing(path, h1, title, desc, paras, evs, where, cta, related, upper=True):
         regular_l = [e for e in evs if not e.get("date")]
-        dated_l = [e for e in evs if e.get("date")]
-        faq_html, faq_ld = faq(evs, where, upper)
         body = (f'{crumbs_back("/blog/", "Блог")}{hero_block(path.split("/")[-1])}<h1>{esc(h1)}</h1>{stats(evs, WHO, None if upper else "для детей до 4 лет")}{intro(paras)}'
                 f'<a class="btn" href="{esc(cta[0])}" style="display:inline-block;margin:4px 0 0">{esc(cta[1])}</a>'
                 f'<h2>Площадки {esc(where)}</h2><ul class="vgrid sm">{venue_cards(evs)}</ul>'
                 f'{by_category(regular_l, where)}'
-                + (f'<h2>Ближайшие события {esc(where)}</h2>{dated_compact(dated_l[:20])}' if dated_l else "")
-                + f'{faq_html}<h2>Смотрите также</h2><div class="chips">'
+                + f'<h2>Смотрите также</h2><div class="chips">'
                 + "".join(f'<a class="chip" href="{h}">{esc(t)}</a>' for h, t in related) + "</div>")
         names = sorted({e["place"] for e in evs})
         ld = {"@context": "https://schema.org", "@graph": [
             {"@type": "ItemList", "name": h1, "itemListElement": [
                 {"@type": "ListItem", "position": i + 1, "url": f"{SITE}/{slugs[n]}/", "name": n} for i, n in enumerate(names)]},
-            {k: v for k, v in faq_ld.items() if k != "@context"},
             {"@type": "BreadcrumbList", "itemListElement": [
                 {"@type": "ListItem", "position": 1, "name": "Клубок", "item": SITE + "/"},
                 {"@type": "ListItem", "position": 2, "name": "Блог", "item": SITE + "/blog/"},
@@ -1044,11 +984,15 @@ def main():
         page(path, title, desc, body, f"/{path}/", None, ld)
         urls.append((f"/{path}/", "0.8"))
 
-    related_all = [(f"/kruzhki/{s_}/", f"Кружки {w}") for s_, (_, w, _, _) in DISTRICT_PAGES.items()]
+    # районы, где набирается хотя бы 3 постоянных занятия — только для них есть страница
+    district_evs = {ds: [e for e in events if district_of(e) in members and not e.get("date")]
+                    for ds, (_, _, members, _) in DISTRICT_PAGES.items()}
+    related_all = [(f"/kruzhki/{s_}/", f"Кружки {w}") for s_, (_, w, _, _) in DISTRICT_PAGES.items()
+                   if len(district_evs[s_]) >= 3]
     related_all += [("/kruzhki/malyshi/", "Занятия для малышей"), ("/category/dance/", "Танцы для детей"),
                     ("/category/theatre/", "Детские театры"), ("/schedule/", "Всё расписание")]
     for ds, (dname, where, members, paras) in DISTRICT_PAGES.items():
-        evs = [e for e in events if district_of(e) in members]
+        evs = district_evs[ds]
         if len(evs) < 3:   # меньше трёх занятий — страница была бы пустой
             continue
         cats_here = Counter(e["categoryLabel"] for e in evs if e.get("categoryLabel") and not e.get("date"))
@@ -1066,7 +1010,7 @@ def main():
                      DISTRICT_COVER[ds] if (ROOT / DISTRICT_COVER.get(ds, "-")).exists()
                      else cover([e for e in evs if not e.get("date")] or evs, None, {b[5] for b in blog})))
 
-    toddlers = [e for e in events if isinstance(e.get("age"), list) and len(e["age"]) == 2
+    toddlers = [e for e in events if not e.get("date") and isinstance(e.get("age"), list) and len(e["age"]) == 2
                 and e["age"][0] is not None and e["age"][0] <= 3]
     if toddlers:
         n_v = len({e["place"] for e in toddlers})
