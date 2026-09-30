@@ -119,6 +119,7 @@ h2{font-size:22px;line-height:1.2;margin:36px 0 14px;font-weight:700}
 .clist .lg{width:36px;height:36px;border-radius:10px;font-size:15px;flex:none;align-self:center;object-fit:contain;padding:2px}
 .clist a:hover .t{text-decoration:underline}
 .clist .t{font-weight:600;font-size:16px;line-height:1.3}.clist .p{color:var(--muted);font-size:14px;margin-top:2px}
+.clist .ag{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px}.clist .ag span{background:var(--chip);border-radius:10px;padding:4px 10px;font-size:13px;white-space:nowrap}.clist .ag b{font-weight:600;color:var(--muted);margin-right:2px}
 .clist .w{flex:none;text-align:right;font-size:14px;font-weight:600;white-space:nowrap}
 details.more summary{cursor:pointer;list-style:none;display:inline-block;margin-top:10px;font-weight:600;font-size:15px;color:var(--orange)}
 details.more summary::-webkit-details-marker{display:none}details.more[open] summary{display:none}
@@ -765,29 +766,50 @@ def main():
             return f"{WEEKDAYS_SHORT[ds[0]]}–{WEEKDAYS_SHORT[ds[-1]]}"
         return ", ".join(WEEKDAYS_SHORT[i] for i in ds)
 
+    def slots_of(es):
+        """{(дни,): [время…]} — одинаковые наборы дней вместе: «вт–пт 08:30, 09:30»."""
+        slots = {}
+        for e in es:
+            for d in (e.get("wd") or []):
+                slots.setdefault(e.get("time") or "", set()).add(d)
+        by_days = {}
+        for t, ds in slots.items():
+            by_days.setdefault(tuple(sorted(ds)), []).append(t)
+        return by_days
+
+    def when_str(by_days, with_days=True):
+        return " · ".join((days_label(ds) if with_days else "")
+                          + (" " + ", ".join(sorted(x for x in ts if x)) if any(ts) else "")
+                          for ds, ts in sorted(by_days.items())).strip()
+
     def compact(evs, show=5):
-        """Плотный список: одно и то же занятие в разные дни — одна строка
-        («пн, ср 17:00»), первые show строк видны, остальные — под «Ещё N»."""
+        """Плотный список. Одно занятие одной площадки — одна строка: разные дни
+        склеиваются («пн, ср 17:00»), разные возрастные группы — мини-списком внутри
+        строки. Первые show строк видны, остальные — под «Ещё N»."""
         rows = {}
         for e in evs:
-            rows.setdefault((e["title"], e["place"], e.get("ageLabel")), []).append(e)
+            rows.setdefault((e["title"], e["place"]), {}).setdefault(e.get("ageLabel") or "", []).append(e)
         lines = []
-        for (title, place, age), es in rows.items():
-            slots = {}
-            for e in es:
-                for i in (e.get("wd") or []):
-                    slots.setdefault(e.get("time") or "", set()).add(i)
-            # одинаковые наборы дней — один раз: «вт–пт 08:30, 09:30»
-            by_days = {}
-            for t, ds in slots.items():
-                by_days.setdefault(tuple(sorted(ds)), []).append(t)
-            w = " · ".join(days_label(ds) + (" " + ", ".join(sorted(x for x in ts if x)) if any(ts) else "")
-                           for ds, ts in sorted(by_days.items()))
-            sub = " · ".join(x for x in (age, place) if x)
-            lines.append(f'<li><a href="/{epath(es[0])}/">{logo(place, "xs")}<div><div class="t">{esc(title)}</div>'
-                         f'<div class="p">{esc(sub)}</div></div><span class="w">{esc(w)}</span></a></li>')
-        head, rest = lines[:show], lines[show:]
-        out = f'<ul class="clist">{"".join(head)}</ul>'
+        for (title, place), ages in rows.items():
+            first = next(iter(ages.values()))[0]
+            head = f'<li><a href="/{epath(first)}/">{logo(place, "xs")}<div><div class="t">{esc(title)}</div>'
+            if len(ages) == 1:
+                age, es = next(iter(ages.items()))
+                sub = " · ".join(x for x in (age, place) if x)
+                lines.append(f'{head}<div class="p">{esc(sub)}</div></div><span class="w">{esc(when_str(slots_of(es)))}</span></a></li>')
+                continue
+            groups = sorted(ages.items(), key=lambda kv: ((kv[1][0].get("age") or [99])[0] or 0, kv[0]))
+            per = [(age, slots_of(es)) for age, es in groups]
+            day_sets = {tuple(sorted(per_[1])) for per_ in per}
+            same_days = len(day_sets) == 1   # у всех групп одни и те же дни — пишем их один раз
+            all_days = sorted({d for ds in next(iter(day_sets)) for d in ds}) if same_days else []
+            days_txt = (f"по {WEEKDAYS_DAT[all_days[0]]}" if len(all_days) == 1 else days_label(all_days)) if all_days else ""
+            chips = "".join(f'<span><b>{esc(age or "все возрасты")}</b> {esc(when_str(bd, not same_days))}</span>'
+                            for age, bd in per)
+            sub = " · ".join(x for x in (place, days_txt, f"{len(per)} {plural(len(per), ('группа', 'группы', 'групп'))}") if x)
+            lines.append(f'{head}<div class="p">{esc(sub)}</div><div class="ag">{chips}</div></div></a></li>')
+        head_, rest = lines[:show], lines[show:]
+        out = f'<ul class="clist">{"".join(head_)}</ul>'
         if rest:
             out += (f'<details class="more"><summary>Ещё {len(rest)} {plural(len(rest), WHO)}</summary>'
                     f'<ul class="clist" style="border-top:0">{"".join(rest)}</ul></details>')
@@ -1022,7 +1044,7 @@ def main():
     page("blog", "Блог Клубка: гайды по детским кружкам и занятиям в Белграде | Клубок",
          "Гайды Клубка: кружки для детей по районам Белграда (Врачар, Старый Град, Новый Белград), занятия для малышей, "
          "танцы, театры, робототехника, языки и другие направления — с расписанием и ценами.",
-         hero_block("blog") + '<h1>Блог Клубка</h1><p class="lead">Гайды по детским занятиям в Белграде: где заниматься в вашем районе, '
+         '<h1>Блог Клубка</h1><p class="lead">Гайды по детским занятиям в Белграде: где заниматься в вашем районе, '
          'что выбрать для малыша и какие есть студии по каждому направлению. Расписание в статьях обновляется каждый день.</p>'
          + posts, "/blog/", None,
          {"@context": "https://schema.org", "@type": "Blog", "name": "Блог Клубка", "url": SITE + "/blog/",
