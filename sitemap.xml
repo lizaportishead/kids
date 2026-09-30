@@ -31,6 +31,11 @@
     <priority>0.5</priority>
   </url>
   <url>
+    <loc>https://klubok.kids/lav-i-zhabats/masterskaya-osenniy-les-2026-09-30/</loc>
+    <lastmod>2026-09-30</lastmod>
+    <priority>0.5</priority>
+  </url>
+  <url>
     <loc>https://klubok.kids/karavela/shahmaty-otkrytyj-urok-7-12-2026-09-30/</loc>
     <lastmod>2026-09-30</lastmod>
     <priority>0.5</priority>
@@ -136,6 +141,11 @@
     <priority>0.5</priority>
   </url>
   <url>
+    <loc>https://klubok.kids/bela-vrana/knizhny-subbotnik-emil-i-margo-2026-10-03/</loc>
+    <lastmod>2026-09-30</lastmod>
+    <priority>0.5</priority>
+  </url>
+  <url>
     <loc>https://klubok.kids/teatr-kukol-pinokio/5fe547538059/</loc>
     <lastmod>2026-09-30</lastmod>
     <priority>0.5</priority>
@@ -147,6 +157,16 @@
   </url>
   <url>
     <loc>https://klubok.kids/tsentar-za-kulturu-vlada-div-an/248f0b927789/</loc>
+    <lastmod>2026-09-30</lastmod>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://klubok.kids/teatr-zmay/velikaya-krazha-igrushek-2026-10-03/</loc>
+    <lastmod>2026-09-30</lastmod>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://klubok.kids/hobbit-house/animatsiya-origami-2026-10-03/</loc>
     <lastmod>2026-09-30</lastmod>
     <priority>0.5</priority>
   </url>
@@ -197,6 +217,11 @@
   </url>
   <url>
     <loc>https://klubok.kids/teatr-puzh/c305fe9676e3/</loc>
+    <lastmod>2026-09-30</lastmod>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://klubok.kids/teatr-zmay/popay-i-tayna-zelenogo-vitamina-2026-10-04/</loc>
     <lastmod>2026-09-30</lastmod>
     <priority>0.5</priority>
   </url>
@@ -2491,6 +2516,11 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://klubok.kids/lav-i-zhabats/</loc>
+    <lastmod>2026-09-30</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://klubok.kids/kinder-garden/</loc>
     <lastmod>2026-09-30</lastmod>
     <priority>0.7</priority>
@@ -2516,6 +2546,11 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://klubok.kids/bela-vrana/</loc>
+    <lastmod>2026-09-30</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://klubok.kids/teatr-kukol-pinokio/</loc>
     <lastmod>2026-09-30</lastmod>
     <priority>0.7</priority>
@@ -2527,6 +2562,11 @@
   </url>
   <url>
     <loc>https://klubok.kids/tsentar-za-kulturu-vlada-div-an/</loc>
+    <lastmod>2026-09-30</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://klubok.kids/teatr-zmay/</loc>
     <lastmod>2026-09-30</lastmod>
     <priority>0.7</priority>
   </url>
@@ -2671,11 +2711,6 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://klubok.kids/lav-i-zhabats/</loc>
-    <lastmod>2026-09-30</lastmod>
-    <priority>0.7</priority>
-  </url>
-  <url>
     <loc>https://klubok.kids/art-light-kids-novyy-belgrad/</loc>
     <lastmod>2026-09-30</lastmod>
     <priority>0.7</priority>
@@ -2741,12 +2776,12 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://klubok.kids/category/early_dev/</loc>
+    <loc>https://klubok.kids/category/reading/</loc>
     <lastmod>2026-09-30</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://klubok.kids/category/reading/</loc>
+    <loc>https://klubok.kids/category/early_dev/</loc>
     <lastmod>2026-09-30</lastmod>
     <priority>0.8</priority>
   </url>

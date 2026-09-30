@@ -4,6 +4,7 @@ art-light-kids-vrachar
 avr-swim-palilula
 avr-swim-vrachar
 begushchiy-gorod
+bela-vrana
 beogradska-filkharmoni-a
 besmart
 enter
@@ -38,5 +39,6 @@ studiya-tantsev-procvat
 swimyou
 teatr-kukol-pinokio
 teatr-puzh
+teatr-zmay
 tsentar-za-kulturu-vlada-div-an
 uvts-shumitse
