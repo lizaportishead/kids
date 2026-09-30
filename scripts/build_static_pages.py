@@ -14,6 +14,8 @@
   <venue>/<event>/      — одно занятие или событие (без даты в адресе)
   category/<cat>/       — занятия одной категории (посадочная страница без
                           приложения: такого раздела в приложении нет)
+  kruzhki/<район>/      — кружки в районе (DISTRICT_PAGES), kruzhki/malyshi/ —
+                          занятия для малышей; тоже посадочные без приложения
   404.html              — всё остальное (например, /event/<id>/ для событий,
                           появившихся после сборки) тоже открывает приложение
 
@@ -34,12 +36,12 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 SITE = "https://klubok.kids"
-OWNED_DIRS = ("venues", "category", "events", "schedule", "favs")
+OWNED_DIRS = ("venues", "category", "kruzhki", "events", "schedule", "favs")
 MANIFEST = ROOT / "static-pages.txt"
 # Каталоги в корне сайта, которые нельзя занимать под slug площадки.
 RESERVED = {"en", "sr", "data", "docs", "db", "collector", "scripts", "supabase", "scratch",
             "venues", "category", "events", "assets", "kids", "api", "static",
-            "schedule", "favs", "afisha", "event", "venue"}
+            "schedule", "favs", "afisha", "event", "venue", "kruzhki"}
 
 WEEKDAYS = ["Понедельник", "Вторник", "Среда", "Четверг", "Пятница", "Суббота", "Воскресенье"]
 WEEKDAYS_SHORT = ["пн", "вт", "ср", "чт", "пт", "сб", "вс"]
@@ -104,6 +106,11 @@ h2{font-size:22px;line-height:1.2;margin:36px 0 14px;font-weight:700}
 .price{font-size:26px;font-weight:800;line-height:1.2}.price.long{font-size:17px;font-weight:600}
 .note{color:var(--muted);font-size:13px;text-align:center;margin-top:14px}
 .vgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:12px;margin:0;padding:0;list-style:none}
+.intro{font-size:17px;line-height:1.6;margin:14px 0 0}.intro p{margin:0 0 12px}
+.stats{display:flex;flex-wrap:wrap;gap:8px;margin:6px 0 4px}.stats span{background:#fff4d6;border-radius:999px;padding:6px 14px;font-size:14px;font-weight:600}
+.faq{margin:0;padding:0}.faq dt{font-weight:700;margin:18px 0 4px}.faq dd{margin:0;color:#3d3833}
+.lead a,.intro a,.faq a{text-decoration:underline}
+footer .links{display:flex;flex-wrap:wrap;justify-content:center;gap:6px 14px;margin-top:8px}
 footer{border-top:1px solid #eee6d6;margin-top:24px;padding:24px 28px;font-size:14px;color:var(--muted);text-align:center}
 @media(max-width:900px){.detail{grid-template-columns:1fr;gap:28px}.detail h1{font-size:34px}}
 .boot{display:none}
@@ -200,16 +207,92 @@ CAT_SEO = {
     "reading": ("Чтение и книжные занятия для детей в Белграде", "книжные встречи и занятия по чтению", "книжный клуб, чтение, литература"),
     "swimming": ("Плавание для детей в Белграде: бассейны и школы плавания", "занятия плаванием для малышей и школьников", "бассейн, школа плавания, плавание для малышей"),
     "early_dev": ("Раннее развитие: занятия для малышей в Белграде", "занятия для детей от года вместе с мамой и без", "занятия для малышей, монтессори, развитие с мамой"),
-    "dance": ("Студии танцев для детей в Белграде", "танцы, хореография и ритмика", "танцы, хореография, ритмика для детей"),
+    "dance": ("Танцы для детей в Белграде: балет, хореография, современный танец", "танцы, балет, хореография и ритмика", "танцы для детей, балет, хореография"),
     "music": ("Музыка для детей в Белграде: студии и занятия", "музыкальные занятия и логоритмика", "музыкальные занятия, вокал, музыкальная студия"),
     "games": ("Шахматы и настольные игры для детей в Белграде", "шахматные секции, клубы настольных игр", "шахматы для детей, клуб настольных игр"),
     "school_prep": ("Подготовка к школе в Белграде: занятия для дошкольников", "подготовка к школе и занятия для дошкольников", "подготовка к школе, занятия для дошкольников"),
-    "theatre": ("Детские спектакли в Белграде: афиша театров", "спектакли и представления для детей", "детский театр, спектакли, кукольный театр"),
+    "theatre": ("Детские театры в Белграде: афиша спектаклей для детей", "спектакли и представления для детей", "детский театр, спектакли, кукольный театр"),
     "sport": ("Спортивные секции для детей в Белграде", "спортивные секции и активные занятия", "спортивные секции, детский спорт, ролики"),
     "science": ("Наука и логика для детей в Белграде: математика и эксперименты", "математические кружки, логика и наука", "математический кружок, логика, наука для детей"),
     "robotics": ("Робототехника и программирование для детей в Белграде", "конструирование, робототехника и программирование", "робототехника, программирование для детей"),
     "cooking": ("Кулинарные мастер-классы для детей в Белграде", "детская кулинария и мастер-классы", "кулинарные мастер-классы для детей"),
 }
+
+# Вступительный текст посадочных страниц категорий (абзацы). Цифры и списки
+# площадок подставляются из афиши, здесь — то, чего в данных нет.
+CAT_INTRO = {
+    "dance": [
+        "Танцы — одно из самых популярных направлений для детей в Белграде: в студиях есть группы "
+        "от двух лет (хореография вместе с мамой) до школьников. Малышам обычно предлагают ритмику "
+        "и игровую хореографию, с пяти-шести лет — классический балет и современный танец.",
+        "Большинство занятий проходит по будням после 17:00, группы маленькие, а первое занятие "
+        "во многих студиях можно посетить разово, без абонемента.",
+    ],
+    "theatre": [
+        "В Белграде много театров для детей: кукольные театры, детские сцены больших театров и "
+        "семейные концерты филармонии. Спектакли идут в основном по выходным, в полдень и ранним вечером, "
+        "часть — на сербском языке, часть — без слов или с музыкой, так что их можно смотреть "
+        "и без знания языка.",
+        "Ниже — театры с ближайшими спектаклями и полная афиша по датам. Возраст указан по "
+        "рекомендации театра; билеты обычно продаются в кассе и на сайте театра.",
+    ],
+    "early_dev": [
+        "Занятия раннего развития — для детей примерно от года до трёх-четырёх лет, часто вместе "
+        "с мамой или папой: сенсорика, пальчиковые игры, музыка, первые навыки общения в группе. "
+        "Все занятия для самых маленьких, включая музыку, танцы и плавание, собраны на странице "
+        "«Занятия для малышей».",
+    ],
+}
+
+# Районы, у которых есть своя посадочная страница /kruzhki/<slug>/:
+# slug -> (название, в каком районе (предложный), какие районы из адресов входят, вступление)
+DISTRICT_PAGES = {
+    "vracar": ("Врачар", "на Врачаре", ["Врачар"], [
+        "Врачар — небольшой и очень плотный центральный район Белграда вокруг Храма Святого Саввы, "
+        "Каленич-рынка и Црвеног крста. Здесь много семей, и детских студий на Врачаре, пожалуй, "
+        "больше, чем где-либо в городе: робототехника, языки, творчество, шахматы, танцы, музыка и плавание.",
+        "Почти все площадки — в пешей доступности друг от друга, так что кружки удобно совмещать: "
+        "например, робототехнику и английский в один день.",
+    ]),
+    "stari-grad": ("Старый Град", "в Старом Граде", ["Старый Град", "Дорчол"], [
+        "Старый Град — исторический центр Белграда: Дорчол, Калемегдан, Кнез Михаила, Студентский трг. "
+        "Здесь работают детские центры с языками, подготовкой к школе и занятиями для "
+        "малышей, а также большие театры и филармония с детскими программами.",
+        "На этой странице — постоянные кружки в Старом Граде и на Дорчоле и ближайшие детские "
+        "события в районе.",
+    ]),
+    "novi-beograd": ("Новый Белград", "в Новом Белграде", ["Новый Белград"], [
+        "Новый Белград — большой семейный район за Савой с кварталами-блоками, Белвилем и Ушче. "
+        "Детские центры здесь обычно расположены прямо в жилых блоках: робототехника и программирование, "
+        "шахматы, языки, творческие студии, хореография и музыка.",
+        "Здесь же — кукольный театр «Пинокио», где каждую неделю идут спектакли для малышей и "
+        "дошкольников.",
+    ]),
+}
+DISTRICT_KEYWORDS = ["Врачар", "Дорчол", "Стари Град", "Старый Град", "Нови Београд", "Новый Белград", "Земун",
+                     "Звездара", "Вождовац", "Чукарица", "Раковица", "Палилула", "Савски венац"]
+DISTRICT_ALIASES = {"Стари Град": "Старый Град", "Нови Београд": "Новый Белград"}
+# Слаги районов в фильтре приложения (?district=…)
+DISTRICT_SLUGS = {"Врачар": "vracar", "Дорчол": "dorcol", "Старый Град": "stari-grad", "Новый Белград": "novi-beograd"}
+
+
+def district_of(e):
+    """Район по адресу — так же, как в приложении (districtOf), но без учёта регистра."""
+    text = ", ".join(x for x in (e.get("address"), e.get("place")) if x).lower()
+    for kw in DISTRICT_KEYWORDS:
+        if kw.lower() in text:
+            return DISTRICT_ALIASES.get(kw, kw)
+    return "Другое"
+
+
+MALYSHI_INTRO = [
+    "Для самых маленьких в Белграде есть не только занятия раннего развития: малышей берут "
+    "в группы хореографии, музыки, плавания, творчества и английского, многие — вместе с мамой "
+    "или папой. Здесь собраны все постоянные занятия, куда можно прийти с ребёнком до четырёх лет.",
+    "Есть и утренние группы — для тех, кто ещё не ходит в садик, — и вечерние, после 17:00. "
+    "Ниже занятия разбиты по направлениям, а в конце страницы — ближайшие спектакли и события, "
+    "куда можно прийти с ребёнком до четырёх лет.",
+]
 
 PIN = ('<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#c05f45" stroke-width="2" '
        'stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/>'
@@ -296,7 +379,8 @@ def page(path, title, description, body, canonical_path, image=None, jsonld=None
 <nav class="nav"><a href="/">Афиша</a><a href="/schedule/"{on("schedule")}>Расписание</a><a href="/venues/"{on("venues")}>Площадки</a></nav>
 </header>
 {body}
-<footer>Клубок — афиша детских занятий и мероприятий в Белграде · <a href="/category/">Занятия по категориям</a></footer>
+<footer>Клубок — афиша детских занятий и мероприятий в Белграде · <a href="/category/">Занятия по категориям</a>
+<div class="links"><a href="/kruzhki/vracar/">Кружки на Врачаре</a><a href="/kruzhki/stari-grad/">Кружки в Старом Граде</a><a href="/kruzhki/novi-beograd/">Кружки в Новом Белграде</a><a href="/kruzhki/malyshi/">Занятия для малышей</a><a href="/category/dance/">Танцы для детей</a><a href="/category/theatre/">Детские театры</a></div></footer>
 </body>
 </html>
 """, encoding="utf-8")
@@ -517,6 +601,102 @@ def main():
         m10, m100 = n % 10, n % 100
         return forms[0] if m10 == 1 and m100 != 11 else forms[1] if 2 <= m10 <= 4 and not 12 <= m100 <= 14 else forms[2]
 
+    WHO = ("занятие", "занятия", "занятий")
+    SHOWS = ("спектакль", "спектакля", "спектаклей")
+
+    def price_from(e):
+        """Разовая цена в RSD из свободного текста цены (первое число перед RSD/дин)."""
+        m = re.search(r"(\d[\d  .]*)\s*(?:RSD|рсд|дин|din)", e.get("price") or "", re.I)
+        if not m:
+            return None
+        n = int(re.sub(r"\D", "", m.group(1)))
+        return n if 200 <= n <= 20000 else None
+
+    def fmt_rsd(n):
+        return f"{n:,}".replace(",", " ") + " RSD"
+
+    def faq(evs, where, upper=True):
+        """Частые вопросы, ответы — из самой афиши. where — «на Врачаре», «в Белграде»…"""
+        regular = [e for e in evs if not e.get("date")]
+        qa = []
+        pool = regular or evs
+        ages = age_range(pool)
+        if ages:
+            youngest = min((e for e in pool if (e.get("age") or [None])[0] is not None), key=lambda e: e["age"][0])
+            since = "с первых месяцев" if ages[0] == 0 else f"с {ages[0]} {plural(ages[0], ('года', 'лет', 'лет'))}"
+            qa.append((f"С какого возраста есть занятия {where}?",
+                       f"Самые младшие группы — {since} "
+                       f"(например, «{esc(youngest['title'])}», {esc(youngest['place'])})"
+                       + (f", самые старшие — до {ages[1]} лет" if upper else "") + ". Возраст указан у каждого занятия."))
+        if regular:
+            per = Counter(i for e in regular for i in (e.get("wd") or []))
+            top = [WEEKDAYS_DAT[i] for i, _ in per.most_common(2)]
+            wknd = sum(1 for e in regular if set(e.get("wd") or []) & {5, 6})
+            times = sorted(e["time"] for e in regular if e.get("time"))
+            a = f"Больше всего занятий — по {top[0]}" + (f" и {top[1]}" if len(top) > 1 else "") + "."
+            if times:
+                a += f" Самое раннее начинается в {times[0]}, самое позднее — в {times[-1]}."
+            a += (f" По выходным — {wknd} {plural(wknd, WHO)}." if wknd else " По выходным занятий нет.")
+            qa.append(("В какие дни и во сколько проходят занятия?", a))
+            prices = sorted(p for p in (price_from(e) for e in regular) if p)
+            if len(prices) >= 3:
+                qa.append(("Сколько стоит одно занятие?",
+                           f"Разовое занятие стоит от {fmt_rsd(prices[0])} до {fmt_rsd(prices[-1])}, "
+                           f"чаще всего около {fmt_rsd(prices[len(prices) // 2])}. Абонемент на месяц обычно выгоднее — "
+                           "цены указаны на странице каждого занятия."))
+        qa.append(("Как записаться?",
+                   "Откройте занятие — на его странице есть кнопка записи, она ведёт на сайт, в Instagram или "
+                   "Telegram площадки. Афиша Клубка обновляется ежедневно, но перед первым визитом лучше "
+                   "уточнить расписание у площадки."))
+        html_ = "".join(f"<dt>{q}</dt><dd>{a}</dd>" for q, a in qa)
+        ld = {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [
+            {"@type": "Question", "name": q, "acceptedAnswer": {"@type": "Answer", "text": re.sub(r"<[^>]+>", "", a)}}
+            for q, a in qa]}
+        return f'<h2>Частые вопросы</h2><dl class="faq">{html_}</dl>', ld
+
+    def venue_cards(evs):
+        by = {}
+        for e in evs:
+            by.setdefault(e["place"], []).append(e)
+        return "".join(
+            f'<li><a class="ecard" href="/{slugs[n]}/">{logo(n)}<div><div class="t">{esc(n)}</div>'
+            f'<div class="s">{esc(next((e["address"] for e in es if e.get("address")), ""))} · {len(es)} '
+            f'{plural(len(es), WHO)}</div></div></a></li>'
+            for n, es in sorted(by.items()) if n not in VENUE_HIDDEN)
+
+    def by_category(evs, where):
+        """Занятия, сгруппированные по направлениям: <h2>Танцы на Врачаре</h2> + список."""
+        groups = {}
+        for e in evs:
+            groups.setdefault(e.get("categoryLabel") or "Другие занятия", []).append(e)
+        order = sorted(groups.items(), key=lambda kv: (kv[0] == "Другие занятия", -len(kv[1])))
+        return "".join(f'<h2>{esc(label)} {esc(where)}</h2><ul class="cards">{"".join(event_line(e) for e in es)}</ul>'
+                       for label, es in order)
+
+    def by_date(evs, limit=40):
+        out, cur = "", None
+        for e in evs[:limit]:
+            if e["date"] != cur:
+                if cur:
+                    out += "</ul>"
+                cur = e["date"]
+                d = date.fromisoformat(cur)
+                out += f'<h2>{WEEKDAYS[d.weekday()]}, {d.day} {MONTHS[d.month - 1]}</h2><ul class="cards">'
+            out += event_line(e)
+        return out + ("</ul>" if cur else "")
+
+    def stats(evs, noun=WHO, age_label=None):
+        n_v = len({e["place"] for e in evs})
+        bits = [f"{n_v} {plural(n_v, ('площадка', 'площадки', 'площадок'))}",
+                f"{len(evs)} {plural(len(evs), noun)}"]
+        ages = age_range(evs)
+        if age_label or ages:
+            bits.append(age_label or f"возраст {ages[0]}–{ages[1]} лет")
+        return '<div class="stats">' + "".join(f"<span>{esc(b)}</span>" for b in bits) + "</div>"
+
+    def intro(paras):
+        return '<div class="intro">' + "".join(f"<p>{esc(p)}</p>" for p in paras) + "</div>"
+
     cat_links = []
     for c, info in sorted(cats.items(), key=lambda kv: -len(kv[1]["events"])):
         evs = info["events"]
@@ -530,7 +710,7 @@ def main():
         shown = ", ".join(names[:6]) + (f" и ещё {len(names) - 6}" if len(names) > 6 else "")
         ages = age_range(evs)
         age_txt = f" Возраст детей — от {ages[0]} до {ages[1]} лет." if ages else ""
-        intro = (f"В афише Клубка — {n_ev} {plural(n_ev, ('занятие', 'занятия', 'занятий'))} и событий: {what}. "
+        intro_txt = (f"В афише Клубка — {n_ev} {plural(n_ev, ('занятие', 'занятия', 'занятий'))} и событий: {what}. "
                  f"Площадки: {shown}.{age_txt} Расписание, цены и запись — на страницах занятий.")
         vcards = "".join(
             f'<li><a class="ecard" href="/{slugs[n]}/">{logo(n)}<div><div class="t">{esc(n)}</div>'
@@ -540,16 +720,31 @@ def main():
         others = "".join(
             f'<a class="chip" href="/category/{esc(oc)}/">{esc(oi["label"])}</a>'
             for oc, oi in sorted(cats.items()) if oc != c)
+        more = f'{intro(CAT_INTRO[c])}<p class="lead">{esc(intro_txt)}</p>' if c in CAT_INTRO else f'<p class="lead">{esc(intro_txt)}</p>'
+        if c == "early_dev":
+            more += '<p class="lead">Смотрите также: <a href="/kruzhki/malyshi/">все занятия для малышей в Белграде</a>.</p>'
+        reg_c = [e for e in evs if not e.get("date")]
+        dated_c = [e for e in evs if e.get("date")]
+        if c == "theatre":
+            listing = (f'<h2>Театры и площадки</h2><ul class="cards">{vcards}</ul>'
+                       f'<h2 style="margin-top:44px">Афиша детских спектаклей</h2>{by_date(dated_c, 60)}'
+                       + (f'<h2>Театральные студии</h2><ul class="cards">{"".join(event_line(e) for e in reg_c)}</ul>' if reg_c else ""))
+        else:
+            listing = (f'<h2>Где заниматься</h2><ul class="cards">{vcards}</ul>'
+                       f'<h2>Все занятия</h2><ul class="cards">{"".join(event_line(e) for e in evs)}</ul>')
+        faq_html, faq_ld = faq(evs, "в Белграде") if c in CAT_INTRO else ("", None)
         body = (f'{crumbs_back("/category/", "Все категории")}'
-                f'<h1>{esc(h1)}</h1><p class="lead">{esc(intro)}</p>'
-                f'<h2>Где заниматься</h2><ul class="cards">{vcards}</ul>'
-                f'<h2>Все занятия</h2><ul class="cards">{"".join(event_line(e) for e in evs)}</ul>'
+                f'<h1>{esc(h1)}</h1>{(stats(evs, SHOWS if c == "theatre" else WHO)) if c in CAT_INTRO else ""}{more}'
+                f'{listing}{faq_html}'
                 f'<h2>Другие категории</h2><div class="chips">{others}</div>')
         ld = {"@context": "https://schema.org", "@type": "ItemList", "name": h1,
               "itemListElement": [{"@type": "ListItem", "position": i + 1, "url": f"{SITE}/{slugs[n]}/", "name": n}
                                   for i, n in enumerate(names)]}
+        if faq_ld:
+            ld = {"@context": "https://schema.org",
+                  "@graph": [{k: v for k, v in x.items() if k != "@context"} for x in (ld, faq_ld)]}
         page(f"category/{c}", f"{h1} — расписание и цены | Клубок",
-             f"{h1}: {n_v} {plural(n_v, ('площадка', 'площадки', 'площадок'))}, {n_ev} {plural(n_ev, ('занятие', 'занятия', 'занятий'))}. "
+             f"{h1}: {n_v} {plural(n_v, ('площадка', 'площадки', 'площадок'))}, {n_ev} {plural(n_ev, SHOWS if c == 'theatre' else WHO)}. "
              f"{kw.capitalize()}. Расписание, возраст и цены.",
              body, f"/category/{c}/", None, ld)
         urls.append((f"/category/{c}/", "0.8"))
@@ -565,6 +760,70 @@ def main():
          f'<h1>Занятия для детей в Белграде по категориям</h1><p class="lead">Выберите направление — покажем площадки, расписание и цены.</p>'
          f'<ul class="cards">{hub}</ul>', "/category/")
     urls.append(("/category/", "0.8"))
+
+    # --- посадочные: кружки по районам и занятия для малышей ---
+    def landing(path, h1, title, desc, paras, evs, where, cta, related, upper=True):
+        regular_l = [e for e in evs if not e.get("date")]
+        dated_l = [e for e in evs if e.get("date")]
+        faq_html, faq_ld = faq(evs, where, upper)
+        body = (f'{crumbs_back("/kruzhki/", "Кружки по районам")}<h1>{esc(h1)}</h1>{stats(evs, WHO, None if upper else "для детей до 4 лет")}{intro(paras)}'
+                f'<a class="btn" href="{esc(cta[0])}" style="display:inline-block;margin:4px 0 0">{esc(cta[1])}</a>'
+                f'<h2>Площадки {esc(where)}</h2><ul class="cards">{venue_cards(evs)}</ul>'
+                f'{by_category(regular_l, where)}'
+                + (f'<h2>Ближайшие события {esc(where)}</h2>{by_date(dated_l, 20).replace("<h2>", "<h3>").replace("</h2>", "</h3>")}' if dated_l else "")
+                + f'{faq_html}<h2>Смотрите также</h2><div class="chips">'
+                + "".join(f'<a class="chip" href="{h}">{esc(t)}</a>' for h, t in related) + "</div>")
+        names = sorted({e["place"] for e in evs})
+        ld = {"@context": "https://schema.org", "@graph": [
+            {"@type": "ItemList", "name": h1, "itemListElement": [
+                {"@type": "ListItem", "position": i + 1, "url": f"{SITE}/{slugs[n]}/", "name": n} for i, n in enumerate(names)]},
+            {k: v for k, v in faq_ld.items() if k != "@context"},
+            {"@type": "BreadcrumbList", "itemListElement": [
+                {"@type": "ListItem", "position": 1, "name": "Клубок", "item": SITE + "/"},
+                {"@type": "ListItem", "position": 2, "name": "Кружки по районам", "item": SITE + "/kruzhki/"},
+                {"@type": "ListItem", "position": 3, "name": h1, "item": f"{SITE}/{path}/"}]}]}
+        page(path, title, desc, body, f"/{path}/", None, ld)
+        urls.append((f"/{path}/", "0.8"))
+
+    related_all = [(f"/kruzhki/{s_}/", f"Кружки {w}") for s_, (_, w, _, _) in DISTRICT_PAGES.items()]
+    related_all += [("/kruzhki/malyshi/", "Занятия для малышей"), ("/category/dance/", "Танцы для детей"),
+                    ("/category/theatre/", "Детские театры"), ("/schedule/", "Всё расписание")]
+    hub_items = []
+    for ds, (dname, where, members, paras) in DISTRICT_PAGES.items():
+        evs = [e for e in events if district_of(e) in members]
+        if not evs:
+            continue
+        cats_here = Counter(e["categoryLabel"] for e in evs if e.get("categoryLabel") and not e.get("date"))
+        top = ", ".join(l.lower() for l, _ in cats_here.most_common(4))
+        n_v = len({e["place"] for e in evs})
+        dist_q = ",".join(DISTRICT_SLUGS[m] for m in members if m in DISTRICT_SLUGS)
+        landing(f"kruzhki/{ds}", f"Кружки для детей {where}",
+                f"Кружки и секции для детей {where}, Белград: расписание и цены | Клубок",
+                f"Детские кружки {where} (Белград): {n_v} {plural(n_v, ('площадка', 'площадки', 'площадок'))}, "
+                f"{len(evs)} {plural(len(evs), WHO)} — {top}. Возраст, расписание, цены и запись.",
+                paras, evs, where, (f"/schedule/?district={dist_q}", f"Открыть расписание {where}"),
+                [r for r in related_all if r[0] != f"/kruzhki/{ds}/"])
+        hub_items.append((f"/kruzhki/{ds}/", f"Кружки для детей {where}", f"{n_v} {plural(n_v, ('площадка', 'площадки', 'площадок'))} · {top}"))
+
+    toddlers = [e for e in events if isinstance(e.get("age"), list) and len(e["age"]) == 2
+                and e["age"][0] is not None and e["age"][0] <= 3]
+    if toddlers:
+        n_v = len({e["place"] for e in toddlers})
+        landing("kruzhki/malyshi", "Занятия для малышей в Белграде",
+                "Занятия для малышей в Белграде: развитие, музыка, танцы, плавание от 1 года | Клубок",
+                f"Занятия для детей до 4 лет в Белграде: {n_v} {plural(n_v, ('площадка', 'площадки', 'площадок'))} — "
+                "раннее развитие, занятия с мамой, музыка, хореография, плавание, творчество. Расписание и цены.",
+                MALYSHI_INTRO, toddlers, "для малышей", ("/schedule/?age=2", "Открыть расписание для 2 лет"),
+                [r for r in related_all if r[0] != "/kruzhki/malyshi/"] + [("/category/early_dev/", "Раннее развитие")], upper=False)
+        hub_items.append(("/kruzhki/malyshi/", "Занятия для малышей в Белграде", f"{n_v} {plural(n_v, ('площадка', 'площадки', 'площадок'))} · для детей до 4 лет"))
+
+    page("kruzhki", "Кружки для детей в Белграде по районам: Врачар, Старый Град, Новый Белград | Клубок",
+         "Детские кружки и секции в районах Белграда: Врачар, Старый Град и Дорчол, Новый Белград. Площадки, расписание, возраст и цены.",
+         '<h1>Кружки для детей в Белграде по районам</h1><p class="lead">Выберите район — покажем площадки, расписание и цены. '
+         'Или смотрите <a href="/category/">занятия по направлениям</a>.</p><ul class="cards">'
+         + "".join(f'<li><a class="ecard" href="{h}"><div><div class="t">{esc(t)}</div><div class="s">{esc(sub)}</div></div></a></li>'
+                   for h, t, sub in hub_items) + "</ul>", "/kruzhki/")
+    urls.append(("/kruzhki/", "0.8"))
 
     # «Расписание»: регулярные занятия по дням недели
     regular = [e for e in events if not e.get("date")]

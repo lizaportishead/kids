@@ -74,6 +74,11 @@ h2{font-size:22px;line-height:1.2;margin:36px 0 14px;font-weight:700}
 .price{font-size:26px;font-weight:800;line-height:1.2}.price.long{font-size:17px;font-weight:600}
 .note{color:var(--muted);font-size:13px;text-align:center;margin-top:14px}
 .vgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:12px;margin:0;padding:0;list-style:none}
+.intro{font-size:17px;line-height:1.6;margin:14px 0 0}.intro p{margin:0 0 12px}
+.stats{display:flex;flex-wrap:wrap;gap:8px;margin:6px 0 4px}.stats span{background:#fff4d6;border-radius:999px;padding:6px 14px;font-size:14px;font-weight:600}
+.faq{margin:0;padding:0}.faq dt{font-weight:700;margin:18px 0 4px}.faq dd{margin:0;color:#3d3833}
+.lead a,.intro a,.faq a{text-decoration:underline}
+footer .links{display:flex;flex-wrap:wrap;justify-content:center;gap:6px 14px;margin-top:8px}
 footer{border-top:1px solid #eee6d6;margin-top:24px;padding:24px 28px;font-size:14px;color:var(--muted);text-align:center}
 @media(max-width:900px){.detail{grid-template-columns:1fr;gap:28px}.detail h1{font-size:34px}}
 .boot{display:none}
@@ -102,6 +107,7 @@ fetch("/index.html").then(function(r){if(!r.ok)throw r.status;return r.text()}).
 <div class="pills"><a class="pill" href="https://www.instagram.com/lumosbeograd/" rel="noopener">Instagram</a><a class="pill" href="https://t.me/Lumos_Beograd" rel="noopener">Telegram</a><a class="pill" href="https://www.instagram.com/p/DdCfkHwo-re/" rel="noopener">Instagram</a><a class="pill" href="https://t.me/Lumos_Beograd/1652" rel="noopener">Telegram</a><a class="pill" href="https://t.me/Lumos_Beograd/1645" rel="noopener">Telegram</a></div>
 </div>
 <h2>Регулярные занятия</h2><ul class="cards"><li><a class="ecard" href="/lumos/teatralnaya-studiya-8-pn-1930/"><img class="thumb" src="/data/images/lumos-teatr.jpg" alt="" loading="lazy"><div><div class="t">Театральная студия</div><div class="s">по понедельникам в 19:30 · 8+ лет</div></div></a></li><li><a class="ecard" href="/lumos/teatralnaya-studiya-12-vt-1830/"><img class="logo sm" src="/data/images/venue-lumos.jpg" alt="Lumos" loading="lazy"><div><div class="t">Театральная студия для подростков</div><div class="s">по вторникам в 18:30 · 12+ лет</div></div></a></li><li><a class="ecard" href="/lumos/teatralnaya-studiya-8-sr-1930/"><img class="thumb" src="/data/images/lumos-teatr.jpg" alt="" loading="lazy"><div><div class="t">Театральная студия</div><div class="s">по средам в 19:30 · 8+ лет</div></div></a></li><li><a class="ecard" href="/lumos/teatralnaya-studiya-12-cht-1830/"><img class="logo sm" src="/data/images/venue-lumos.jpg" alt="Lumos" loading="lazy"><div><div class="t">Театральная студия для подростков</div><div class="s">по четвергам в 18:30 · 12+ лет</div></div></a></li><li><a class="ecard" href="/lumos/uspet-do-shkoly-5-sb-1200/"><img class="thumb" src="/data/images/lumos-shkola.jpg" alt="" loading="lazy"><div><div class="t">Успеть до школы: подготовка к школе</div><div class="s">по субботам в 12:00 · 5–7 лет</div></div></a></li></ul></main>
-<footer>Клубок — афиша детских занятий и мероприятий в Белграде · <a href="/category/">Занятия по категориям</a></footer>
+<footer>Клубок — афиша детских занятий и мероприятий в Белграде · <a href="/category/">Занятия по категориям</a>
+<div class="links"><a href="/kruzhki/vracar/">Кружки на Врачаре</a><a href="/kruzhki/stari-grad/">Кружки в Старом Граде</a><a href="/kruzhki/novi-beograd/">Кружки в Новом Белграде</a><a href="/kruzhki/malyshi/">Занятия для малышей</a><a href="/category/dance/">Танцы для детей</a><a href="/category/theatre/">Детские театры</a></div></footer>
 </body>
 </html>

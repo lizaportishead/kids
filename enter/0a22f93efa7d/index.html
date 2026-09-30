@@ -74,6 +74,11 @@ h2{font-size:22px;line-height:1.2;margin:36px 0 14px;font-weight:700}
 .price{font-size:26px;font-weight:800;line-height:1.2}.price.long{font-size:17px;font-weight:600}
 .note{color:var(--muted);font-size:13px;text-align:center;margin-top:14px}
 .vgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:12px;margin:0;padding:0;list-style:none}
+.intro{font-size:17px;line-height:1.6;margin:14px 0 0}.intro p{margin:0 0 12px}
+.stats{display:flex;flex-wrap:wrap;gap:8px;margin:6px 0 4px}.stats span{background:#fff4d6;border-radius:999px;padding:6px 14px;font-size:14px;font-weight:600}
+.faq{margin:0;padding:0}.faq dt{font-weight:700;margin:18px 0 4px}.faq dd{margin:0;color:#3d3833}
+.lead a,.intro a,.faq a{text-decoration:underline}
+footer .links{display:flex;flex-wrap:wrap;justify-content:center;gap:6px 14px;margin-top:8px}
 footer{border-top:1px solid #eee6d6;margin-top:24px;padding:24px 28px;font-size:14px;color:var(--muted);text-align:center}
 @media(max-width:900px){.detail{grid-template-columns:1fr;gap:28px}.detail h1{font-size:34px}}
 .boot{display:none}
@@ -106,6 +111,7 @@ fetch("/index.html").then(function(r){if(!r.ok)throw r.status;return r.text()}).
 </div>
 <aside><img class="hero" src="/data/images/enter-gymnastika-2.png" alt="Гимнастика"><div class="pricecard"><div class="lab">Стоимость</div><div class="price long">1500 RSD (разовое), абонемент от 5400 RSD за 4 занятия</div><a class="btn" href="https://enterspace.rs/classes/gymnastika" rel="noopener">Записаться на сайте Enter</a><div class="note">Информация взята из открытого источника — Enter</div></div></aside>
 </div></main>
-<footer>Клубок — афиша детских занятий и мероприятий в Белграде · <a href="/category/">Занятия по категориям</a></footer>
+<footer>Клубок — афиша детских занятий и мероприятий в Белграде · <a href="/category/">Занятия по категориям</a>
+<div class="links"><a href="/kruzhki/vracar/">Кружки на Врачаре</a><a href="/kruzhki/stari-grad/">Кружки в Старом Граде</a><a href="/kruzhki/novi-beograd/">Кружки в Новом Белграде</a><a href="/kruzhki/malyshi/">Занятия для малышей</a><a href="/category/dance/">Танцы для детей</a><a href="/category/theatre/">Детские театры</a></div></footer>
 </body>
 </html>
