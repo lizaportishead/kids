@@ -120,7 +120,7 @@ h2{font-size:22px;line-height:1.2;margin:36px 0 14px;font-weight:700}
 .clist .w{flex:none;text-align:right;font-size:14px;font-weight:600;white-space:nowrap}
 details.more summary{cursor:pointer;list-style:none;display:inline-block;margin-top:10px;font-weight:600;font-size:15px;color:var(--orange)}
 details.more summary::-webkit-details-marker{display:none}details.more[open] summary{display:none}
-.vgrid.sm{grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:8px}.vgrid.sm .ecard{padding:10px 12px}.vgrid.sm .t{font-size:15px}.vgrid.sm .s{font-size:13px}
+.vgrid.sm{grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:8px}.vgrid.sm .ecard{padding:10px 12px}.vgrid.sm .t{font-size:15px}.vgrid.sm img.logo{object-fit:contain;padding:3px}.vgrid.sm .s{font-size:13px}
 @media(max-width:640px){.clist a{flex-wrap:wrap;align-items:flex-start}.clist a>div{flex-basis:calc(100% - 52px)}.clist .w{flex-basis:100%;padding-left:52px;text-align:left;color:var(--orange);white-space:normal}}
 footer .links{display:flex;flex-wrap:wrap;justify-content:center;gap:6px 14px;margin-top:8px}
 footer{border-top:1px solid #eee6d6;margin-top:24px;padding:24px 28px;font-size:14px;color:var(--muted);text-align:center}
@@ -773,16 +773,13 @@ def main():
             listing = (f'<h2>Театры и площадки</h2><ul class="vgrid sm">{vcards}</ul>'
                        f'<h2>Афиша детских спектаклей</h2>{dated_compact(dated_c[:60], 12)}'
                        + (f'<h2>Театральные студии</h2>{compact(reg_c)}' if reg_c else ""))
-        elif c in CAT_INTRO:
-            listing = (f'<h2>Где заниматься</h2><ul class="vgrid sm">{vcards}</ul>'
-                       f'<h2>Все занятия</h2>{compact(reg_c, 10)}'
-                       + (f'<h2>Ближайшие события</h2>{dated_compact(dated_c)}' if dated_c else ""))
         else:
-            listing = (f'<h2>Где заниматься</h2><ul class="cards">{vcards}</ul>'
-                       f'<h2>Все занятия</h2><ul class="cards">{"".join(event_line(e) for e in evs)}</ul>')
-        faq_html, faq_ld = faq(evs, "в Белграде") if c in CAT_INTRO else ("", None)
+            listing = (f'<h2>Где заниматься</h2><ul class="vgrid sm">{vcards}</ul>'
+                       + (f'<h2>Все занятия</h2>{compact(reg_c, 10)}' if reg_c else "")
+                       + (f'<h2>Ближайшие события</h2>{dated_compact(dated_c)}' if dated_c else ""))
+        faq_html, faq_ld = faq(evs, "в Белграде")
         body = (f'{crumbs_back("/category/", "Все категории")}'
-                f'<h1>{esc(h1)}</h1>{(stats(evs, SHOWS if c == "theatre" else WHO)) if c in CAT_INTRO else ""}{more}'
+                f'<h1>{esc(h1)}</h1>{stats(evs, SHOWS if c == "theatre" else WHO)}{more}'
                 f'{listing}{faq_html}'
                 f'<h2>Другие категории</h2><div class="chips">{others}</div>')
         ld = {"@context": "https://schema.org", "@type": "ItemList", "name": h1,
