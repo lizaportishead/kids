@@ -14,6 +14,7 @@
   <venue>/<event>/      — одно занятие или событие (без даты в адресе)
   category/<cat>/       — занятия одной категории (посадочная страница без
                           приложения: такого раздела в приложении нет)
+  blog/                 — «Блог»: все посадочные страницы карточками-статьями
   kruzhki/<район>/      — кружки в районе (DISTRICT_PAGES), kruzhki/malyshi/ —
                           занятия для малышей; тоже посадочные без приложения
   404.html              — всё остальное (например, /event/<id>/ для событий,
@@ -36,12 +37,12 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 SITE = "https://klubok.kids"
-OWNED_DIRS = ("venues", "category", "kruzhki", "events", "schedule", "favs")
+OWNED_DIRS = ("venues", "category", "kruzhki", "blog", "events", "schedule", "favs")
 MANIFEST = ROOT / "static-pages.txt"
 # Каталоги в корне сайта, которые нельзя занимать под slug площадки.
 RESERVED = {"en", "sr", "data", "docs", "db", "collector", "scripts", "supabase", "scratch",
             "venues", "category", "events", "assets", "kids", "api", "static",
-            "schedule", "favs", "afisha", "event", "venue", "kruzhki"}
+            "schedule", "favs", "afisha", "event", "venue", "kruzhki", "blog"}
 
 WEEKDAYS = ["Понедельник", "Вторник", "Среда", "Четверг", "Пятница", "Суббота", "Воскресенье"]
 WEEKDAYS_SHORT = ["пн", "вт", "ср", "чт", "пт", "сб", "вс"]
@@ -122,6 +123,19 @@ details.more summary{cursor:pointer;list-style:none;display:inline-block;margin-
 details.more summary::-webkit-details-marker{display:none}details.more[open] summary{display:none}
 .vgrid.sm{grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:8px}.vgrid.sm .ecard{padding:10px 12px}.vgrid.sm .t{font-size:15px}.vgrid.sm img.logo{object-fit:contain;padding:3px}.vgrid.sm .s{font-size:13px}
 @media(max-width:640px){.clist a{flex-wrap:wrap;align-items:flex-start}.clist a>div{flex-basis:calc(100% - 52px)}.clist .w{flex-basis:100%;padding-left:52px;text-align:left;color:var(--orange);white-space:normal}}
+.bsec{font-size:13px;letter-spacing:1.2px;text-transform:uppercase;color:#8a8175;font-weight:700;margin:40px 0 14px}
+.bgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:20px;margin:0;padding:0;list-style:none}
+.post{display:flex;flex-direction:column;height:100%;background:#fff;border:1px solid #f0ebe0;border-radius:22px;overflow:hidden;text-decoration:none;box-shadow:0 2px 10px rgba(32,30,29,.04);transition:box-shadow .15s}
+.post:hover{box-shadow:0 10px 30px rgba(32,30,29,.1)}
+.post img{width:100%;aspect-ratio:16/9;object-fit:cover;display:block;background:var(--chip)}
+.post .pb{padding:16px 18px 18px;display:flex;flex-direction:column;gap:8px;flex:1}
+.post .tag{align-self:flex-start;background:var(--chip);border-radius:999px;padding:3px 10px;font-size:12px;font-weight:700;color:#4f483f}
+.post h3{margin:0;font-size:19px;line-height:1.25;font-weight:800}
+.post p{margin:0;color:#4f483f;font-size:15px;line-height:1.5}
+.post .meta{margin-top:auto;padding-top:6px;color:var(--muted);font-size:13px}
+.post.big{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr)}.post.big img{height:100%;aspect-ratio:auto;min-height:260px}
+.post.big h3{font-size:28px}.post.big .pb{padding:28px;justify-content:center}.post.big p{font-size:16px}
+@media(max-width:760px){.post.big{display:flex}.post.big img{aspect-ratio:16/9;min-height:0}.post.big h3{font-size:22px}.post.big .pb{padding:16px 18px 18px}}
 footer .links{display:flex;flex-wrap:wrap;justify-content:center;gap:6px 14px;margin-top:8px}
 footer{border-top:1px solid #eee6d6;margin-top:24px;padding:24px 28px;font-size:14px;color:var(--muted);text-align:center}
 @media(max-width:900px){.detail{grid-template-columns:1fr;gap:28px}.detail h1{font-size:34px}}
@@ -281,6 +295,10 @@ DISTRICT_PAGES = {
         "дошкольников.",
     ]),
 }
+# Обложки районов в «Блоге» — фото реальных занятий (если файл пропал — берётся картинка из афиши).
+DISTRICT_COVER = {"vracar": "data/images/nashemesto-lego.png",
+                  "stari-grad": "data/images/lumos-teatr.jpg",
+                  "novi-beograd": "data/images/nashemesto-3d-modelirovanie.jpg"}
 DISTRICT_KEYWORDS = ["Врачар", "Дорчол", "Стари Град", "Старый Град", "Нови Београд", "Новый Белград", "Земун",
                      "Звездара", "Вождовац", "Чукарица", "Раковица", "Палилула", "Савски венац"]
 DISTRICT_ALIASES = {"Стари Град": "Старый Град", "Нови Београд": "Новый Белград"}
@@ -392,7 +410,7 @@ def page(path, title, description, body, canonical_path, image=None, jsonld=None
 </header>
 {body}
 <footer>Клубок — афиша детских занятий и мероприятий в Белграде · <a href="/category/">Занятия по категориям</a>
-<div class="links"><a href="/kruzhki/vracar/">Кружки на Врачаре</a><a href="/kruzhki/stari-grad/">Кружки в Старом Граде</a><a href="/kruzhki/novi-beograd/">Кружки в Новом Белграде</a><a href="/kruzhki/malyshi/">Занятия для малышей</a><a href="/category/dance/">Танцы для детей</a><a href="/category/theatre/">Детские театры</a></div></footer>
+<div class="links"><a href="/blog/">Блог</a><a href="/kruzhki/vracar/">Кружки на Врачаре</a><a href="/kruzhki/stari-grad/">Кружки в Старом Граде</a><a href="/kruzhki/novi-beograd/">Кружки в Новом Белграде</a><a href="/kruzhki/malyshi/">Занятия для малышей</a><a href="/category/dance/">Танцы для детей</a><a href="/category/theatre/">Детские театры</a></div></footer>
 </body>
 </html>
 """, encoding="utf-8")
@@ -742,6 +760,18 @@ def main():
         return '<div class="intro">' + "".join(f"<p>{esc(p)}</p>" for p in paras) + "</div>"
 
     cat_links = []
+    blog = []   # (раздел, url, заголовок, анонс, meta, картинка)
+
+    def excerpt(text, limit=170):
+        return first_sentence(text, limit)
+
+    def cover(evs, prefer=None, used=()):
+        """Картинка карточки: заглушка категории или фото одного из занятий."""
+        for c_ in ([prefer] if prefer else []) + [e.get("category") for e in evs]:
+            ph = f"data/images/placeholder-{c_}.jpg"
+            if c_ and ph not in used and (ROOT / ph).exists():
+                return ph
+        return next((e["image"] for e in evs if e.get("image") and e["image"] not in used), "og-cover.png")
     for c, info in sorted(cats.items(), key=lambda kv: -len(kv[1]["events"])):
         evs = info["events"]
         label = info["label"]
@@ -794,6 +824,10 @@ def main():
              body, f"/category/{c}/", None, ld)
         urls.append((f"/category/{c}/", "0.8"))
         cat_links.append((c, label, h1, n_ev))
+        blog.append(("Направления", f"/category/{c}/", h1,
+                     excerpt(CAT_INTRO[c][0] if c in CAT_INTRO else intro_txt),
+                     f"{n_v} {plural(n_v, ('площадка', 'площадки', 'площадок'))} · {n_ev} {plural(n_ev, SHOWS if c == 'theatre' else WHO)}",
+                     cover(evs, c)))
 
     # оглавление категорий
     hub = "".join(
@@ -849,6 +883,10 @@ def main():
                 paras, evs, where, (f"/schedule/?district={dist_q}", f"Открыть расписание {where}"),
                 [r for r in related_all if r[0] != f"/kruzhki/{ds}/"])
         hub_items.append((f"/kruzhki/{ds}/", f"Кружки для детей {where}", f"{n_v} {plural(n_v, ('площадка', 'площадки', 'площадок'))} · {top}"))
+        blog.append(("Районы", f"/kruzhki/{ds}/", f"Кружки для детей {where}", excerpt(paras[0]),
+                     f"{n_v} {plural(n_v, ('площадка', 'площадки', 'площадок'))} · {len(evs)} {plural(len(evs), WHO)}",
+                     DISTRICT_COVER[ds] if (ROOT / DISTRICT_COVER.get(ds, "-")).exists()
+                     else cover([e for e in evs if not e.get("date")] or evs, None, {b[5] for b in blog})))
 
     toddlers = [e for e in events if isinstance(e.get("age"), list) and len(e["age"]) == 2
                 and e["age"][0] is not None and e["age"][0] <= 3]
@@ -860,6 +898,9 @@ def main():
                 "раннее развитие, занятия с мамой, музыка, хореография, плавание, творчество. Расписание и цены.",
                 MALYSHI_INTRO, toddlers, "для малышей", ("/schedule/?age=2", "Открыть расписание для 2 лет"),
                 [r for r in related_all if r[0] != "/kruzhki/malyshi/"] + [("/category/early_dev/", "Раннее развитие")], upper=False)
+        blog.append(("Для малышей", "/kruzhki/malyshi/", "Занятия для малышей в Белграде", excerpt(MALYSHI_INTRO[0]),
+                     f"{n_v} {plural(n_v, ('площадка', 'площадки', 'площадок'))} · {len(toddlers)} {plural(len(toddlers), WHO)}",
+                     "data/images/placeholder-early_dev.jpg"))
         hub_items.append(("/kruzhki/malyshi/", "Занятия для малышей в Белграде", f"{n_v} {plural(n_v, ('площадка', 'площадки', 'площадок'))} · для детей до 4 лет"))
 
     page("kruzhki", "Кружки для детей в Белграде по районам: Врачар, Старый Град, Новый Белград | Клубок",
@@ -869,6 +910,37 @@ def main():
          + "".join(f'<li><a class="ecard" href="{h}"><div><div class="t">{esc(t)}</div><div class="s">{esc(sub)}</div></div></a></li>'
                    for h, t, sub in hub_items) + "</ul>", "/kruzhki/")
     urls.append(("/kruzhki/", "0.8"))
+
+    # «Блог»: все посадочные страницы карточками
+    def post(b, big=False):
+        _, href, title, text, meta, img = b
+        pic = f'<img src="/{esc(img)}" alt="" loading="lazy">' if img else '<img alt="">'
+        li = '<li style="grid-column:1/-1">' if big else "<li>"
+        cls = "post big" if big else "post"
+        return (f'{li}<a class="{cls}" href="{href}">{pic}'
+                f'<div class="pb"><span class="tag">{esc(b[0])}</span><h3>{esc(title)}</h3><p>{esc(text)}</p>'
+                f'<div class="meta">{esc(meta)} · обновлено {today.day} {MONTHS[today.month - 1]}</div></div></a></li>')
+    sections_order = ["Районы", "Для малышей", "Направления"]
+    # сверху — самые насыщенные статьи с авторским текстом, дальше по разделам
+    order = {"Районы": 0, "Для малышей": 1, "Направления": 2}
+    ranked = sorted(blog, key=lambda b: (order[b[0]], -int(re.search(r"· (\d+)", b[4]).group(1))))
+    featured = ranked[0]
+    posts = f'<ul class="bgrid">{post(featured, True)}</ul>'
+    for sec in sections_order:
+        items_ = [b for b in ranked if b[0] == sec and b is not featured]
+        if items_:
+            posts += f'<h2 class="bsec">{esc(sec)}</h2><ul class="bgrid">{"".join(post(b) for b in items_)}</ul>'
+    page("blog", "Блог Клубка: гайды по детским кружкам и занятиям в Белграде | Клубок",
+         "Гайды Клубка: кружки для детей по районам Белграда (Врачар, Старый Град, Новый Белград), занятия для малышей, "
+         "танцы, театры, робототехника, языки и другие направления — с расписанием и ценами.",
+         '<h1>Блог Клубка</h1><p class="lead">Гайды по детским занятиям в Белграде: где заниматься в вашем районе, '
+         'что выбрать для малыша и какие есть студии по каждому направлению. Расписание в статьях обновляется каждый день.</p>'
+         + posts, "/blog/", None,
+         {"@context": "https://schema.org", "@type": "Blog", "name": "Блог Клубка", "url": SITE + "/blog/",
+          "blogPost": [{"@type": "BlogPosting", "headline": b[2], "url": SITE + b[1], "description": b[3],
+                        "dateModified": today.isoformat()} for b in ranked]},
+         wide=True)
+    urls.append(("/blog/", "0.8"))
 
     # «Расписание»: регулярные занятия по дням недели
     regular = [e for e in events if not e.get("date")]
