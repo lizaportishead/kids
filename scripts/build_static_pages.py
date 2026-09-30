@@ -474,10 +474,22 @@ def page(path, title, description, body, canonical_path, image=None, jsonld=None
 <nav class="nav"><a href="/">Афиша</a><a href="/schedule/"{on("schedule")}>Расписание</a><a href="/venues/"{on("venues")}>Площадки</a></nav>
 </header>
 {body}
-<footer>Клубок — афиша детских занятий и мероприятий в Белграде · <a href="/category/">Занятия по категориям</a>
+<footer>Клубок — афиша детских занятий и мероприятий в Белграде · <a href="/blog/">Блог: гайды по занятиям</a>
 <div class="links"><a href="/blog/">Блог</a><a href="/kruzhki/vracar/">Кружки на Врачаре</a><a href="/kruzhki/stari-grad/">Кружки в Старом Граде</a><a href="/kruzhki/novi-beograd/">Кружки в Новом Белграде</a><a href="/kruzhki/malyshi/">Занятия для малышей</a><a href="/category/dance/">Танцы для детей</a><a href="/category/theatre/">Детские театры</a></div></footer>
 </body>
 </html>
+""", encoding="utf-8")
+
+
+def redirect(path, to):
+    """Бывшая страница: сразу уводит на to (GitHub Pages не умеет серверных редиректов)."""
+    out = ROOT / path / "index.html"
+    out.parent.mkdir(parents=True, exist_ok=True)
+    out.write_text(f"""<!DOCTYPE html>
+<html lang="ru"><head><meta charset="utf-8"><title>Клубок</title>
+<meta name="robots" content="noindex, follow"><link rel="canonical" href="{SITE}{to}">
+<meta http-equiv="refresh" content="0; url={to}"><script>location.replace("{to}")</script></head>
+<body><a href="{to}">Перейти в блог Клубка</a></body></html>
 """, encoding="utf-8")
 
 
@@ -683,7 +695,7 @@ def main():
         for n in sorted(venues) if n not in VENUE_HIDDEN)
     page("venues", "Площадки: детские студии, кружки и клубы в Белграде | Клубок",
          "Русскоязычные детские студии, кружки, секции и театры в Белграде: адреса, расписание занятий, возраст и цены.",
-         f'<h1>Площадки в Белграде</h1><p class="lead">Детские студии, кружки, секции и театры. <a href="/category/"><u>Смотреть по категориям</u></a></p><ul class="vgrid">{items}</ul>',
+         f'<h1>Площадки в Белграде</h1><p class="lead">Детские студии, кружки, секции и театры. <a href="/blog/"><u>Гайды по районам и направлениям</u></a></p><ul class="vgrid">{items}</ul>',
          "/venues/", route={"route": "venues"})
 
     # категории
@@ -845,7 +857,6 @@ def main():
     def intro(paras):
         return '<div class="intro">' + "".join(f"<p>{esc(p)}</p>" for p in paras) + "</div>"
 
-    cat_links = []
     blog = []   # (раздел, url, заголовок, анонс, meta, картинка)
 
     def excerpt(text, limit=170):
@@ -894,7 +905,7 @@ def main():
                        + (f'<h2>Все занятия</h2>{compact(reg_c, 10)}' if reg_c else "")
                        + (f'<h2>Ближайшие события</h2>{dated_compact(dated_c)}' if dated_c else ""))
         faq_html, faq_ld = faq(evs, "в Белграде")
-        body = (f'{crumbs_back("/category/", "Все категории")}{hero_block(c)}'
+        body = (f'{crumbs_back("/blog/", "Блог")}{hero_block(c)}'
                 f'<h1>{esc(h1)}</h1>{stats(evs, SHOWS if c == "theatre" else WHO)}{more}'
                 f'{listing}{faq_html}'
                 f'<h2>Другие категории</h2><div class="chips">{others}</div>')
@@ -909,29 +920,20 @@ def main():
              f"{kw.capitalize()}. Расписание, возраст и цены.",
              body, f"/category/{c}/", None, ld)
         urls.append((f"/category/{c}/", "0.8"))
-        cat_links.append((c, label, h1, n_ev))
         blog.append(("Направления", f"/category/{c}/", h1,
                      excerpt(CAT_INTRO[c][0] if c in CAT_INTRO else intro_txt),
                      f"{n_v} {plural(n_v, ('площадка', 'площадки', 'площадок'))} · {n_ev} {plural(n_ev, SHOWS if c == 'theatre' else WHO)}",
                      cover(evs, c)))
 
-    # оглавление категорий
-    hub = "".join(
-        f'<li><a class="ecard" href="/category/{c}/"><div><div class="t">{esc(h1)}</div>'
-        f'<div class="s">{n} {plural(n, ("занятие", "занятия", "занятий"))}</div></div></a></li>'
-        for c, label, h1, n in cat_links)
-    page("category", "Занятия для детей в Белграде по категориям: танцы, языки, плавание, творчество | Клубок",
-         "Все виды детских занятий в Белграде: танцы, языки, плавание, творчество, музыка, спорт, шахматы, робототехника и подготовка к школе.",
-         f'<h1>Занятия для детей в Белграде по категориям</h1><p class="lead">Выберите направление — покажем площадки, расписание и цены.</p>'
-         f'<ul class="cards">{hub}</ul>', "/category/")
-    urls.append(("/category/", "0.8"))
+    # /category/ — больше не отдельная страница: всё собрано в «Блоге»
+    redirect("category", "/blog/")
 
     # --- посадочные: кружки по районам и занятия для малышей ---
     def landing(path, h1, title, desc, paras, evs, where, cta, related, upper=True):
         regular_l = [e for e in evs if not e.get("date")]
         dated_l = [e for e in evs if e.get("date")]
         faq_html, faq_ld = faq(evs, where, upper)
-        body = (f'{crumbs_back("/kruzhki/", "Кружки по районам")}{hero_block(path.split("/")[-1])}<h1>{esc(h1)}</h1>{stats(evs, WHO, None if upper else "для детей до 4 лет")}{intro(paras)}'
+        body = (f'{crumbs_back("/blog/", "Блог")}{hero_block(path.split("/")[-1])}<h1>{esc(h1)}</h1>{stats(evs, WHO, None if upper else "для детей до 4 лет")}{intro(paras)}'
                 f'<a class="btn" href="{esc(cta[0])}" style="display:inline-block;margin:4px 0 0">{esc(cta[1])}</a>'
                 f'<h2>Площадки {esc(where)}</h2><ul class="vgrid sm">{venue_cards(evs)}</ul>'
                 f'{by_category(regular_l, where)}'
@@ -945,7 +947,7 @@ def main():
             {k: v for k, v in faq_ld.items() if k != "@context"},
             {"@type": "BreadcrumbList", "itemListElement": [
                 {"@type": "ListItem", "position": 1, "name": "Клубок", "item": SITE + "/"},
-                {"@type": "ListItem", "position": 2, "name": "Кружки по районам", "item": SITE + "/kruzhki/"},
+                {"@type": "ListItem", "position": 2, "name": "Блог", "item": SITE + "/blog/"},
                 {"@type": "ListItem", "position": 3, "name": h1, "item": f"{SITE}/{path}/"}]}]}
         page(path, title, desc, body, f"/{path}/", None, ld)
         urls.append((f"/{path}/", "0.8"))
@@ -953,7 +955,6 @@ def main():
     related_all = [(f"/kruzhki/{s_}/", f"Кружки {w}") for s_, (_, w, _, _) in DISTRICT_PAGES.items()]
     related_all += [("/kruzhki/malyshi/", "Занятия для малышей"), ("/category/dance/", "Танцы для детей"),
                     ("/category/theatre/", "Детские театры"), ("/schedule/", "Всё расписание")]
-    hub_items = []
     for ds, (dname, where, members, paras) in DISTRICT_PAGES.items():
         evs = [e for e in events if district_of(e) in members]
         if not evs:
@@ -968,7 +969,6 @@ def main():
                 f"{len(evs)} {plural(len(evs), WHO)} — {top}. Возраст, расписание, цены и запись.",
                 paras, evs, where, (f"/schedule/?district={dist_q}", f"Открыть расписание {where}"),
                 [r for r in related_all if r[0] != f"/kruzhki/{ds}/"])
-        hub_items.append((f"/kruzhki/{ds}/", f"Кружки для детей {where}", f"{n_v} {plural(n_v, ('площадка', 'площадки', 'площадок'))} · {top}"))
         blog.append(("Районы", f"/kruzhki/{ds}/", f"Кружки для детей {where}", excerpt(paras[0]),
                      f"{n_v} {plural(n_v, ('площадка', 'площадки', 'площадок'))} · {len(evs)} {plural(len(evs), WHO)}",
                      DISTRICT_COVER[ds] if (ROOT / DISTRICT_COVER.get(ds, "-")).exists()
@@ -987,15 +987,8 @@ def main():
         blog.append(("Для малышей", "/kruzhki/malyshi/", "Занятия для малышей в Белграде", excerpt(MALYSHI_INTRO[0]),
                      f"{n_v} {plural(n_v, ('площадка', 'площадки', 'площадок'))} · {len(toddlers)} {plural(len(toddlers), WHO)}",
                      "data/images/placeholder-early_dev.jpg"))
-        hub_items.append(("/kruzhki/malyshi/", "Занятия для малышей в Белграде", f"{n_v} {plural(n_v, ('площадка', 'площадки', 'площадок'))} · для детей до 4 лет"))
 
-    page("kruzhki", "Кружки для детей в Белграде по районам: Врачар, Старый Град, Новый Белград | Клубок",
-         "Детские кружки и секции в районах Белграда: Врачар, Старый Град и Дорчол, Новый Белград. Площадки, расписание, возраст и цены.",
-         '<h1>Кружки для детей в Белграде по районам</h1><p class="lead">Выберите район — покажем площадки, расписание и цены. '
-         'Или смотрите <a href="/category/">занятия по направлениям</a>.</p><ul class="cards">'
-         + "".join(f'<li><a class="ecard" href="{h}"><div><div class="t">{esc(t)}</div><div class="s">{esc(sub)}</div></div></a></li>'
-                   for h, t, sub in hub_items) + "</ul>", "/kruzhki/")
-    urls.append(("/kruzhki/", "0.8"))
+    redirect("kruzhki", "/blog/")
 
     # авторские статьи блога
     for a in ARTICLES:

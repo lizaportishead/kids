@@ -2796,11 +2796,6 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://klubok.kids/category/</loc>
-    <lastmod>2026-09-30</lastmod>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://klubok.kids/kruzhki/vracar/</loc>
     <lastmod>2026-09-30</lastmod>
     <priority>0.8</priority>
@@ -2817,11 +2812,6 @@
   </url>
   <url>
     <loc>https://klubok.kids/kruzhki/malyshi/</loc>
-    <lastmod>2026-09-30</lastmod>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://klubok.kids/kruzhki/</loc>
     <lastmod>2026-09-30</lastmod>
     <priority>0.8</priority>
   </url>
