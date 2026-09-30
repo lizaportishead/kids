@@ -15,6 +15,7 @@
   category/<cat>/       — занятия одной категории (посадочная страница без
                           приложения: такого раздела в приложении нет)
   blog/                 — «Блог»: все посадочные страницы карточками-статьями
+  blog/<slug>/          — авторские статьи из articles/<slug>.html (+ articles/articles.json)
   kruzhki/<район>/      — кружки в районе (DISTRICT_PAGES), kruzhki/malyshi/ —
                           занятия для малышей; тоже посадочные без приложения
   404.html              — всё остальное (например, /event/<id>/ для событий,
@@ -42,7 +43,7 @@ MANIFEST = ROOT / "static-pages.txt"
 # Каталоги в корне сайта, которые нельзя занимать под slug площадки.
 RESERVED = {"en", "sr", "data", "docs", "db", "collector", "scripts", "supabase", "scratch",
             "venues", "category", "events", "assets", "kids", "api", "static",
-            "schedule", "favs", "afisha", "event", "venue", "kruzhki", "blog"}
+            "schedule", "favs", "afisha", "event", "venue", "kruzhki", "blog", "articles"}
 
 WEEKDAYS = ["Понедельник", "Вторник", "Среда", "Четверг", "Пятница", "Суббота", "Воскресенье"]
 WEEKDAYS_SHORT = ["пн", "вт", "ср", "чт", "пт", "сб", "вс"]
@@ -126,6 +127,17 @@ details.more summary::-webkit-details-marker{display:none}details.more[open] sum
 .cover{margin:0 0 24px}.cover img{width:100%;aspect-ratio:36/13;object-fit:cover;border-radius:24px;display:block;background:var(--chip)}
 .cover figcaption{font-size:12px;color:var(--muted);margin-top:6px;text-align:right}.cover a{color:inherit}
 @media(max-width:760px){.cover img{aspect-ratio:2/1;border-radius:18px}}
+.article{max-width:720px;margin:0 auto}.article h1{font-size:40px;line-height:1.1}
+.article .meta{color:var(--muted);font-size:14px;margin:10px 0 0}
+.article .lead{font-size:19px;color:#3d3833;margin:18px 0 22px}
+.article p,.article li{font-size:17px;line-height:1.65}.article h2{font-size:26px;margin:40px 0 12px;scroll-margin-top:16px}
+.article a{text-decoration:underline}.article ul,.article ol{padding-left:22px}.article li{margin:6px 0}
+.toc{display:flex;flex-direction:column;gap:6px;background:var(--chip);border-radius:18px;padding:18px 22px;margin:0 0 20px}
+.toc b{font-size:13px;letter-spacing:1px;text-transform:uppercase;color:#8a8175}.toc a{text-decoration:none;font-weight:600}
+.note-box{border-left:4px solid var(--orange);background:#fff7f2;border-radius:0 14px 14px 0;padding:14px 18px;font-size:15px;line-height:1.55;margin:0 0 8px}
+ol.check{list-style:none;padding:0;counter-reset:c}ol.check li{counter-increment:c;position:relative;padding-left:40px}
+ol.check li::before{content:counter(c);position:absolute;left:0;top:1px;width:26px;height:26px;border-radius:50%;background:var(--orange);color:#fff;font-weight:700;font-size:14px;display:flex;align-items:center;justify-content:center}
+@media(max-width:640px){.article h1{font-size:30px}.article h2{font-size:22px}}
 .bsec{font-size:13px;letter-spacing:1.2px;text-transform:uppercase;color:#8a8175;font-weight:700;margin:40px 0 14px}
 .bgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:20px;margin:0;padding:0;list-style:none}
 .post{display:flex;flex-direction:column;height:100%;background:#fff;border:1px solid #f0ebe0;border-radius:22px;overflow:hidden;text-decoration:none;box-shadow:0 2px 10px rgba(32,30,29,.04);transition:box-shadow .15s}
@@ -351,6 +363,13 @@ HERO = {
     "theatre": ("photo-1432639020363-5632f7f04e0b", "Sagar Dani", "sagardani"),
 }
 UNSPLASH_UTM = "?utm_source=klubok&utm_medium=referral"
+
+
+# Авторские статьи блога: текст — articles/<slug>.html, заголовки и обложка — articles/articles.json
+ARTICLES = json.loads((ROOT / "articles" / "articles.json").read_text(encoding="utf-8")) \
+    if (ROOT / "articles" / "articles.json").exists() else []
+for _a in ARTICLES:
+    HERO[_a["slug"]] = tuple(_a["hero"])
 
 
 def hero_url(key, w, h):
@@ -956,6 +975,25 @@ def main():
                    for h, t, sub in hub_items) + "</ul>", "/kruzhki/")
     urls.append(("/kruzhki/", "0.8"))
 
+    # авторские статьи блога
+    for a in ARTICLES:
+        src = (ROOT / "articles" / f'{a["slug"]}.html').read_text(encoding="utf-8")
+        upd = date.fromisoformat(a["updated"])
+        others = [b for b in blog if b[0] == "Районы"] + [b for b in blog if b[1] == "/kruzhki/malyshi/"]
+        more_ = "".join(f'<a class="chip" href="{b[1]}">{esc(b[2])}</a>' for b in others)
+        body = (f'{crumbs_back("/blog/", "Блог")}<article class="article">{hero_block(a["slug"])}'
+                f'<h1>{esc(a["title"])}</h1><div class="meta">Клубок · обновлено {upd.day} {MONTHS[upd.month - 1]} {upd.year}</div>'
+                f'{src}<h2>Читайте также</h2><div class="chips">{more_}</div></article>')
+        ld = {"@context": "https://schema.org", "@type": "Article", "headline": a["title"], "description": a["description"],
+              "image": hero_url(a["slug"], 1200, 675), "datePublished": a["published"], "dateModified": a["updated"],
+              "inLanguage": "ru", "author": {"@type": "Organization", "name": "Клубок", "url": SITE + "/"},
+              "publisher": {"@type": "Organization", "name": "Клубок", "url": SITE + "/"},
+              "mainEntityOfPage": f'{SITE}/blog/{a["slug"]}/'}
+        page(f'blog/{a["slug"]}', f'{a["seo_title"]} | Клубок', a["description"], body, f'/blog/{a["slug"]}/', None, ld)
+        urls.append((f'/blog/{a["slug"]}/', "0.8"))
+        blog.insert(0, ("Гайды", f'/blog/{a["slug"]}/', a["title"], a["excerpt"],
+                        f'гайд · {upd.day} {MONTHS[upd.month - 1]}', None))
+
     # «Блог»: все посадочные страницы карточками
     def post(b, big=False):
         _, href, title, text, meta, img = b
@@ -964,16 +1002,17 @@ def main():
             img = hero_url(key, 1200 if big else 640, 675 if big else 360)
         elif img:
             img = "/" + img
-        pic = f'<img src="{esc(img)}" alt="" loading="lazy">' if img else '<img alt="">'
+        lazy = "" if big else ' loading="lazy"'
+        pic = f'<img src="{esc(img)}" alt=""{lazy}>' if img else '<img alt="">'
         li = '<li style="grid-column:1/-1">' if big else "<li>"
         cls = "post big" if big else "post"
         return (f'{li}<a class="{cls}" href="{href}">{pic}'
                 f'<div class="pb"><span class="tag">{esc(b[0])}</span><h3>{esc(title)}</h3><p>{esc(text)}</p>'
-                f'<div class="meta">{esc(meta)} · обновлено {today.day} {MONTHS[today.month - 1]}</div></div></a></li>')
-    sections_order = ["Районы", "Для малышей", "Направления"]
-    # сверху — самые насыщенные статьи с авторским текстом, дальше по разделам
-    order = {"Районы": 0, "Для малышей": 1, "Направления": 2}
-    ranked = sorted(blog, key=lambda b: (order[b[0]], -int(re.search(r"· (\d+)", b[4]).group(1))))
+                f'<div class="meta">{esc(meta if b[0] == "Гайды" else f"{meta} · обновлено {today.day} {MONTHS[today.month - 1]}")}</div></div></a></li>')
+    sections_order = ["Гайды", "Районы", "Для малышей", "Направления"]
+    # сверху — свежий гайд (или самый насыщенный район), дальше по разделам
+    order = {s_: i for i, s_ in enumerate(sections_order)}
+    ranked = sorted(blog, key=lambda b: (order[b[0]], -int((re.search(r"· (\d+)", b[4]) or re.search(r"(\d+)", "0")).group(1))))
     featured = ranked[0]
     posts = f'<ul class="bgrid">{post(featured, True)}</ul>'
     for sec in sections_order:
