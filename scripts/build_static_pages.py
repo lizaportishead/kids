@@ -110,6 +110,16 @@ h2{font-size:22px;line-height:1.2;margin:36px 0 14px;font-weight:700}
 .stats{display:flex;flex-wrap:wrap;gap:8px;margin:6px 0 4px}.stats span{background:#fff4d6;border-radius:999px;padding:6px 14px;font-size:14px;font-weight:600}
 .faq{margin:0;padding:0}.faq dt{font-weight:700;margin:18px 0 4px}.faq dd{margin:0;color:#3d3833}
 .lead a,.intro a,.faq a{text-decoration:underline}
+.clist{list-style:none;margin:0;padding:0;border-top:1px solid #f0ebe0}
+.clist li{border-bottom:1px solid #f0ebe0}
+.clist a{display:flex;gap:4px 16px;align-items:baseline;justify-content:space-between;padding:10px 2px;text-decoration:none}
+.clist a:hover .t{text-decoration:underline}
+.clist .t{font-weight:600;font-size:16px;line-height:1.3}.clist .p{color:var(--muted);font-size:14px;margin-top:2px}
+.clist .w{flex:none;text-align:right;font-size:14px;font-weight:600;white-space:nowrap}
+details.more summary{cursor:pointer;list-style:none;display:inline-block;margin-top:10px;font-weight:600;font-size:15px;color:var(--orange)}
+details.more summary::-webkit-details-marker{display:none}details.more[open] summary{display:none}
+.vgrid.sm{grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:8px}.vgrid.sm .ecard{padding:10px 12px}.vgrid.sm .t{font-size:15px}.vgrid.sm .s{font-size:13px}
+@media(max-width:640px){.clist a{flex-direction:column}.clist .w{text-align:left;color:var(--orange)}}
 footer .links{display:flex;flex-wrap:wrap;justify-content:center;gap:6px 14px;margin-top:8px}
 footer{border-top:1px solid #eee6d6;margin-top:24px;padding:24px 28px;font-size:14px;color:var(--muted);text-align:center}
 @media(max-width:900px){.detail{grid-template-columns:1fr;gap:28px}.detail h1{font-size:34px}}
@@ -664,26 +674,47 @@ def main():
             f'{plural(len(es), WHO)}</div></div></a></li>'
             for n, es in sorted(by.items()) if n not in VENUE_HIDDEN)
 
+    def compact(evs, show=5):
+        """Плотный список: одно и то же занятие в разные дни — одна строка
+        («пн, ср 17:00»), первые show строк видны, остальные — под «Ещё N»."""
+        rows = {}
+        for e in evs:
+            rows.setdefault((e["title"], e["place"], e.get("ageLabel")), []).append(e)
+        lines = []
+        for (title, place, age), es in rows.items():
+            slots = {}
+            for e in es:
+                for i in (e.get("wd") or []):
+                    slots.setdefault(e.get("time") or "", set()).add(i)
+            w = " · ".join(", ".join(WEEKDAYS_SHORT[i] for i in sorted(ds)) + (f" {t}" if t else "")
+                           for t, ds in sorted(slots.items(), key=lambda kv: min(kv[1])))
+            sub = " · ".join(x for x in (age, place) if x)
+            lines.append(f'<li><a href="/{epath(es[0])}/"><div><div class="t">{esc(title)}</div>'
+                         f'<div class="p">{esc(sub)}</div></div><span class="w">{esc(w)}</span></a></li>')
+        head, rest = lines[:show], lines[show:]
+        out = f'<ul class="clist">{"".join(head)}</ul>'
+        if rest:
+            out += (f'<details class="more"><summary>Ещё {len(rest)} {plural(len(rest), WHO)}</summary>'
+                    f'<ul class="clist" style="border-top:0">{"".join(rest)}</ul></details>')
+        return out
+
     def by_category(evs, where):
         """Занятия, сгруппированные по направлениям: <h2>Танцы на Врачаре</h2> + список."""
         groups = {}
         for e in evs:
             groups.setdefault(e.get("categoryLabel") or "Другие занятия", []).append(e)
         order = sorted(groups.items(), key=lambda kv: (kv[0] == "Другие занятия", -len(kv[1])))
-        return "".join(f'<h2>{esc(label)} {esc(where)}</h2><ul class="cards">{"".join(event_line(e) for e in es)}</ul>'
-                       for label, es in order)
+        return "".join(f'<h2>{esc(label)} {esc(where)}</h2>{compact(es)}' for label, es in order)
 
-    def by_date(evs, limit=40):
-        out, cur = "", None
-        for e in evs[:limit]:
-            if e["date"] != cur:
-                if cur:
-                    out += "</ul>"
-                cur = e["date"]
-                d = date.fromisoformat(cur)
-                out += f'<h2>{WEEKDAYS[d.weekday()]}, {d.day} {MONTHS[d.month - 1]}</h2><ul class="cards">'
-            out += event_line(e)
-        return out + ("</ul>" if cur else "")
+    def dated_compact(evs, show=6):
+        lines = [f'<li><a href="/{epath(e)}/"><div><div class="t">{esc(e["title"])}</div>'
+                 f'<div class="p">{esc(" · ".join(x for x in (e.get("ageLabel"), e["place"]) if x))}</div></div>'
+                 f'<span class="w">{esc(when(e))}</span></a></li>' for e in evs]
+        out = f'<ul class="clist">{"".join(lines[:show])}</ul>'
+        if lines[show:]:
+            out += (f'<details class="more"><summary>Ещё {len(lines) - show}</summary>'
+                    f'<ul class="clist" style="border-top:0">{"".join(lines[show:])}</ul></details>')
+        return out
 
     def stats(evs, noun=WHO, age_label=None):
         n_v = len({e["place"] for e in evs})
@@ -726,9 +757,13 @@ def main():
         reg_c = [e for e in evs if not e.get("date")]
         dated_c = [e for e in evs if e.get("date")]
         if c == "theatre":
-            listing = (f'<h2>Театры и площадки</h2><ul class="cards">{vcards}</ul>'
-                       f'<h2 style="margin-top:44px">Афиша детских спектаклей</h2>{by_date(dated_c, 60)}'
-                       + (f'<h2>Театральные студии</h2><ul class="cards">{"".join(event_line(e) for e in reg_c)}</ul>' if reg_c else ""))
+            listing = (f'<h2>Театры и площадки</h2><ul class="vgrid sm">{vcards}</ul>'
+                       f'<h2>Афиша детских спектаклей</h2>{dated_compact(dated_c[:60], 12)}'
+                       + (f'<h2>Театральные студии</h2>{compact(reg_c)}' if reg_c else ""))
+        elif c in CAT_INTRO:
+            listing = (f'<h2>Где заниматься</h2><ul class="vgrid sm">{vcards}</ul>'
+                       f'<h2>Все занятия</h2>{compact(reg_c, 10)}'
+                       + (f'<h2>Ближайшие события</h2>{dated_compact(dated_c)}' if dated_c else ""))
         else:
             listing = (f'<h2>Где заниматься</h2><ul class="cards">{vcards}</ul>'
                        f'<h2>Все занятия</h2><ul class="cards">{"".join(event_line(e) for e in evs)}</ul>')
@@ -768,9 +803,9 @@ def main():
         faq_html, faq_ld = faq(evs, where, upper)
         body = (f'{crumbs_back("/kruzhki/", "Кружки по районам")}<h1>{esc(h1)}</h1>{stats(evs, WHO, None if upper else "для детей до 4 лет")}{intro(paras)}'
                 f'<a class="btn" href="{esc(cta[0])}" style="display:inline-block;margin:4px 0 0">{esc(cta[1])}</a>'
-                f'<h2>Площадки {esc(where)}</h2><ul class="cards">{venue_cards(evs)}</ul>'
+                f'<h2>Площадки {esc(where)}</h2><ul class="vgrid sm">{venue_cards(evs)}</ul>'
                 f'{by_category(regular_l, where)}'
-                + (f'<h2>Ближайшие события {esc(where)}</h2>{by_date(dated_l, 20).replace("<h2>", "<h3>").replace("</h2>", "</h3>")}' if dated_l else "")
+                + (f'<h2>Ближайшие события {esc(where)}</h2>{dated_compact(dated_l[:20])}' if dated_l else "")
                 + f'{faq_html}<h2>Смотрите также</h2><div class="chips">'
                 + "".join(f'<a class="chip" href="{h}">{esc(t)}</a>' for h, t in related) + "</div>")
         names = sorted({e["place"] for e in evs})
