@@ -438,7 +438,7 @@ HERO = {
     "malyshi": ("photo-1515488042361-ee00e0ddd4e4", "Yuri Li", "itshoobastank"),
     "blog": ("photo-1606092195730-5d7b9af1efc5", "Artem Kniaz", "artem_kniaz"),
     "art": ("photo-1560421683-6856ea585c78", "Dragos Gontariu", "dragos126"),
-    "cooking": ("photo-1615224299941-04a854c101d4", "Brooke Lark", "brookelark"),
+    "cooking": ("photo-1605433246995-23f532d1e001", "Annie Spratt", "anniespratt"),
     "dance": ("photo-1508807526345-15e9b5f4eaff", "Michael Afonso", "mafonso"),
     "early_dev": ("photo-1609811645795-f72ea07f47e9", "Jackie Hope", "jackieboylhart"),
     "games": ("photo-1714646793130-0dc0c5a04f64", "Vitaly Gariev", "silverkblack"),
