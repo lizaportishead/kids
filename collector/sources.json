@@ -172,5 +172,16 @@
     "cta": "Записаться в «Наше Место»",
     "place": "Наше Место (Новый Белград)",
     "address": "Михаила Пупина 10Z, Новый Белград, Белград"
+    },
+  {
+    "id": "crnobelamacka",
+    "type": "crnobelamacka",
+    "name": "Crno-bela mačka",
+    "kind": "Расписание студии",
+    "url": "https://docs.google.com/forms/d/e/1FAIpQLSe57TLWOd4WehVrPI0dmGjZvgLV0gdeVRsd9isVUA0ephMrZg/viewform",
+    "cta": "Записаться в «Crno-bela mačka»",
+    "place": "Crno-bela mačka",
+    "address": "Миће Поповића 1, Стари Град, Белград",
+    "price": "бесплатно"
   }
 ]
