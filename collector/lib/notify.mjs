@@ -27,10 +27,17 @@ export async function sendRunReport(report, sources, { total, now } = {}) {
     .filter((r) => r.status === 'error')
     .map((r) => `⚠️ ${nameOf.get(r.source) || r.source}: ${r.reason}`);
 
+  // Новые события с сербских сайтов, переведённые машиной: стоит перечитать
+  // и перенести выверенный текст в translations.json.
+  const auto = report
+    .filter((r) => r.status === 'auto' && Array.isArray(r.titles))
+    .flatMap((r) => r.titles.map((t) => `• ${t}`));
+
   const lines = [`🗓 Афиша обновлена · ${stamp} UTC`, ''];
   lines.push(...(venues.length ? venues : ['(ничего не собрано)']));
   if (typeof total === 'number') lines.push('', `Всего в афише: ${total}`);
   if (skipped.length) lines.push('', ...skipped);
+  if (auto.length) lines.push('', '🔤 Автоперевод с сербского — проверить:', ...auto);
   if (errors.length) lines.push('', ...errors);
 
   const res = await fetch(`https://api.telegram.org/bot${TOKEN}/sendMessage`, {

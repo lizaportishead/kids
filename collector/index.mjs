@@ -21,6 +21,7 @@ import { dedupe, filterEvents } from './lib/normalize.mjs';
 import { saveImage } from './lib/images.mjs';
 import { fetchPublicEvents, pushEvents, supabaseEnabled } from './lib/supabase.mjs';
 import { sendRunReport } from './lib/notify.mjs';
+import { looksRussian, machineTranslate } from './lib/translate.mjs';
 
 const here = dirname(fileURLToPath(import.meta.url));
 const root = resolve(here, '..');
@@ -33,13 +34,35 @@ const now = new Date();
 const sources = JSON.parse(await readFile(resolve(here, 'sources.json'), 'utf8'));
 // Русские тексты для событий с сербских сайтов: ключ — источник + оригинальное название.
 const translations = JSON.parse(await readFile(resolve(here, 'translations.json'), 'utf8'));
+// Автопереводы того, чего в translations.json ещё нет (см. lib/translate.mjs).
+const AUTO_TR = resolve(root, 'data/translations-auto.json');
+let autoTr = {};
+try { autoTr = JSON.parse(await readFile(AUTO_TR, 'utf8')); } catch { /* файла ещё нет */ }
+let autoTrDirty = false;
+const autoTranslated = new Set();
+const untranslated = new Set();
 const titleKey = (s) => String(s || '').replace(/\s+/g, ' ').trim().toLowerCase();
-function translate(sourceId, ev) {
+async function translate(sourceId, ev) {
   const bySource = translations[sourceId];
   if (!bySource) return;
   const hit = Object.entries(bySource).find(([orig]) => titleKey(orig) === titleKey(ev.title));
-  if (!hit) return;
-  const tr = hit[1];
+  let tr = hit && hit[1];
+  if (!tr) {
+    if (looksRussian(ev.title + ' ' + (ev.desc || ''))) return;
+    const key = sourceId + '|' + titleKey(ev.title);
+    tr = autoTr[key];
+    if (!tr) {
+      const orig = ev.title;
+      try {
+        tr = autoTr[key] = { orig, ...(await machineTranslate(ev)) };
+        autoTrDirty = true;
+        autoTranslated.add(orig + ' → ' + tr.title);
+      } catch (err) {
+        untranslated.add(orig + ' (' + String(err.message || err) + ')');
+        return;
+      }
+    }
+  }
   // id и hash уже посчитаны по оригиналу — перевод их не трогает.
   ev.title = tr.title; ev.short = tr.short; ev.desc = tr.desc;
   ev.source = { ...ev.source, lang: 'sr' };
@@ -53,7 +76,7 @@ for (const source of sources) {
   try {
     const events = await run(source, now);
     for (const ev of events) {
-      translate(source.id, ev);
+      await translate(source.id, ev);
       if (ev.imageRemote) {
         ev.image = (await saveImage(ev.imageRemote, ev.imageKey || ev.id, IMG_DIR)) || null;
         delete ev.imageRemote; delete ev.imageKey;
@@ -65,6 +88,10 @@ for (const source of sources) {
     report.push({ source: source.id, status: 'error', reason: String(err.message || err) });
   }
 }
+
+if (autoTrDirty) await writeFile(AUTO_TR, JSON.stringify(autoTr, null, 2) + '\n');
+if (autoTranslated.size) report.push({ source: 'translate', status: 'auto', titles: [...autoTranslated] });
+if (untranslated.size) report.push({ source: 'translate', status: 'error', reason: 'остались без перевода: ' + [...untranslated].join('; ') });
 
 const events = filterEvents(dedupe(collected));
 
