@@ -17338,9 +17338,9 @@
       "source": {
         "id": "hobbit-house",
         "name": "Hobbit House",
-        "kind": "Расписание площадки",
-        "url": "https://t.me/feniks_fire_and_show",
-        "cta": "Уточнить и записаться"
+        "kind": "Сайт Hobbit House",
+        "url": "https://hobbithouse.tilda.ws/",
+        "cta": "Записаться на сайте Hobbit House"
       }
     }
   ]
