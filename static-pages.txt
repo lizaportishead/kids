@@ -12,7 +12,6 @@ hobbit-house
 indigo-novyy-belgrad
 indigo-vrachar
 kapoeyra
-karavela
 kinder-garden
 laboratoriya
 lav-i-zhabats
