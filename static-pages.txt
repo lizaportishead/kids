@@ -4,6 +4,7 @@ art-light-kids-vrachar
 avr-swim-palilula
 avr-swim-vrachar
 begushchiy-gorod
+bela-vrana
 besmart
 enter
 future-deti
@@ -29,6 +30,7 @@ narodnyy-muzey-serbii
 nashe-mesto-novyy-belgrad
 nashe-mesto-vrachar
 one-step-dance-studio
+palata-nauke
 pan-teatar
 prodlenka
 prosto-r
