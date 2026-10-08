@@ -1,7 +1,7 @@
 {
   "updatedAt": "2026-09-30T10:27:08.666Z",
   "city": "Белград",
-  "count": 583,
+  "count": 584,
   "report": [
     {
       "source": "prodlenka",
@@ -19542,6 +19542,38 @@
         "cta": "Записаться на сайте «Стоп Угроза»"
       },
       "wd": null,
+      "placePhone": null,
+      "placeLink": null,
+      "lat": null,
+      "lng": null
+    },
+    {
+      "id": "enter-detskiy-swop-2026-10-11",
+      "title": "Детский СВОП",
+      "short": "Обмен детскими вещами, игрушками и книгами в Enter; для детей оборудована большая игровая",
+      "desc": "Детский СВОП в Enter: приносите старые детские вещи, игрушки и книги и обменивайте их на новые. Если вам не с кем оставить ребёнка, можно прийти с детьми — для них оборудована большая игровая.",
+      "date": "2026-10-11",
+      "wd": null,
+      "time": "16:00",
+      "dur": "2 часа",
+      "place": "Enter",
+      "address": "Ресавска 34, Врачар, Белград",
+      "age": [
+        0,
+        99
+      ],
+      "ageLabel": "для всей семьи",
+      "price": "600 дин",
+      "image": "data/images/enter-detskiy-swop.jpg",
+      "category": null,
+      "categoryLabel": null,
+      "source": {
+        "id": "enter",
+        "name": "Enter",
+        "kind": "Instagram Enter",
+        "url": "https://www.instagram.com/p/DeKFbLIjZm7/",
+        "cta": "Подробнее в Instagram Enter"
+      },
       "placePhone": null,
       "placeLink": null,
       "lat": null,
