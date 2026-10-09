@@ -1,7 +1,7 @@
 {
   "updatedAt": "2026-09-30T10:27:08.666Z",
   "city": "Белград",
-  "count": 584,
+  "count": 585,
   "report": [
     {
       "source": "prodlenka",
@@ -19573,6 +19573,38 @@
         "kind": "Instagram Enter",
         "url": "https://www.instagram.com/p/DeKFbLIjZm7/",
         "cta": "Подробнее в Instagram Enter"
+      },
+      "placePhone": null,
+      "placeLink": null,
+      "lat": null,
+      "lng": null
+    },
+    {
+      "id": "mostik-igra-v-glinu-2026-10-11",
+      "title": "Игра в глину",
+      "short": "Сказка, игра в глину и чаепитие в мастерской «Мостика». Разовое занятие для детей от 4 лет, 3 часа.",
+      "desc": "Игра в глину в «Мостике» для детей от 4 лет: сказка, игра в глину, чаепитие. Продолжительность — 3 часа. Стоимость и запись — у организаторов.",
+      "date": "2026-10-11",
+      "wd": null,
+      "time": "11:00",
+      "dur": "3 часа",
+      "place": "Мостик",
+      "address": "Војводе Добрњца 34, Стари Град, Белград",
+      "age": [
+        4,
+        12
+      ],
+      "ageLabel": "от 4 лет",
+      "price": "уточняется",
+      "image": "data/images/mostik-igra-v-glinu.jpg",
+      "category": "art",
+      "categoryLabel": "Творчество",
+      "source": {
+        "id": "mostik",
+        "name": "Мостик",
+        "kind": "Телеграм-канал",
+        "url": "https://t.me/mostik_glina",
+        "cta": "Записаться в Мостик"
       },
       "placePhone": null,
       "placeLink": null,
