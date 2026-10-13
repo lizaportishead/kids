@@ -534,6 +534,15 @@ def page(path, title, description, body, canonical_path, image=None, jsonld=None
     out.write_text(f"""<!DOCTYPE html>
 <html lang="ru">
 <head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-7WVH2BQ1K6"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){{dataLayer.push(arguments);}}
+  gtag('js', new Date());
+
+  gtag('config', 'G-7WVH2BQ1K6');
+</script>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{esc(title)}</title>
@@ -579,7 +588,17 @@ def redirect(path, to):
     out = ROOT / path / "index.html"
     out.parent.mkdir(parents=True, exist_ok=True)
     out.write_text(f"""<!DOCTYPE html>
-<html lang="ru"><head><meta charset="utf-8"><title>Клубок</title>
+<html lang="ru"><head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-7WVH2BQ1K6"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){{dataLayer.push(arguments);}}
+  gtag('js', new Date());
+
+  gtag('config', 'G-7WVH2BQ1K6');
+</script>
+<meta charset="utf-8"><title>Клубок</title>
 <meta name="robots" content="noindex, follow"><link rel="canonical" href="{SITE}{to}">
 <meta http-equiv="refresh" content="0; url={to}"><script>location.replace("{to}")</script></head>
 <body><a href="{to}">Перейти в блог Клубка</a></body></html>
