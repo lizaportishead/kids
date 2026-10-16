@@ -19872,7 +19872,7 @@
       ],
       "ageLabel": "6–10 лет",
       "price": "5000 дин/мес (абонемент)",
-      "image": null,
+      "image": "data/images/londongates-theatre.jpg",
       "category": "theatre",
       "categoryLabel": "Спектакли",
       "source": {
@@ -19906,7 +19906,7 @@
       ],
       "ageLabel": "7–10 лет",
       "price": "5000 дин/мес (абонемент)",
-      "image": null,
+      "image": "data/images/londongates-theatre.jpg",
       "category": "theatre",
       "categoryLabel": "Спектакли",
       "source": {
@@ -19940,7 +19940,7 @@
       ],
       "ageLabel": "7–10 лет",
       "price": "9000 дин/мес (абонемент)",
-      "image": null,
+      "image": "data/images/londongates-theatre.jpg",
       "category": "theatre",
       "categoryLabel": "Спектакли",
       "source": {
@@ -19974,7 +19974,7 @@
       ],
       "ageLabel": "6–10 лет",
       "price": "5000 дин/мес (абонемент)",
-      "image": null,
+      "image": "data/images/londongates-hor.jpg",
       "category": "music",
       "categoryLabel": "Музыка",
       "source": {
@@ -20008,7 +20008,7 @@
       ],
       "ageLabel": "5–6 лет",
       "price": "5000 дин/мес (абонемент)",
-      "image": null,
+      "image": "data/images/londongates-ansambl.jpg",
       "category": "music",
       "categoryLabel": "Музыка",
       "source": {
@@ -20042,7 +20042,7 @@
       ],
       "ageLabel": "7–10 лет",
       "price": "5000 дин/мес (абонемент)",
-      "image": null,
+      "image": "data/images/londongates-ansambl.jpg",
       "category": "music",
       "categoryLabel": "Музыка",
       "source": {
@@ -20076,7 +20076,7 @@
       ],
       "ageLabel": "5–6 лет",
       "price": "5000 дин/мес (абонемент)",
-      "image": null,
+      "image": "data/images/londongates-shahmaty.jpg",
       "category": "games",
       "categoryLabel": "Шахматы и игры",
       "source": {
@@ -20110,7 +20110,7 @@
       ],
       "ageLabel": "7–10 лет",
       "price": "5000 дин/мес (абонемент)",
-      "image": null,
+      "image": "data/images/londongates-shahmaty.jpg",
       "category": "games",
       "categoryLabel": "Шахматы и игры",
       "source": {
@@ -20144,7 +20144,7 @@
       ],
       "ageLabel": "8–10 лет",
       "price": "5000 дин/мес (абонемент)",
-      "image": null,
+      "image": "data/images/londongates-math.jpg",
       "category": "science",
       "categoryLabel": "Наука и логика",
       "source": {
@@ -20178,7 +20178,7 @@
       ],
       "ageLabel": "5–6 лет",
       "price": "5000 дин/мес (абонемент)",
-      "image": null,
+      "image": "data/images/londongates-math.jpg",
       "category": "science",
       "categoryLabel": "Наука и логика",
       "source": {
@@ -20212,7 +20212,7 @@
       ],
       "ageLabel": "7–8 лет",
       "price": "5000 дин/мес (абонемент)",
-      "image": null,
+      "image": "data/images/londongates-math.jpg",
       "category": "science",
       "categoryLabel": "Наука и логика",
       "source": {
@@ -20246,7 +20246,7 @@
       ],
       "ageLabel": "8–10 лет",
       "price": "5000 дин/мес (абонемент)",
-      "image": null,
+      "image": "data/images/londongates-math.jpg",
       "category": "science",
       "categoryLabel": "Наука и логика",
       "source": {
