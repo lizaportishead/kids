@@ -95,6 +95,8 @@
   .event-group-past{opacity:.5;}
   .event-group-past:hover{opacity:.85;transition:opacity .15s;}
   .event-row{background:var(--card);border-radius:16px;box-shadow:var(--shadow);padding:14px 16px;display:flex;align-items:center;gap:14px;margin-bottom:10px;}
+  .event-thumb,.event-title{cursor:pointer;}
+  .event-title:hover{color:var(--orange-dark);}
   .event-thumb{width:52px;height:52px;border-radius:12px;object-fit:cover;flex-shrink:0;background:var(--cream);}
   .event-main{flex:1 0 300px;min-width:0;}
   .event-title{font-weight:700;font-size:14.5px;margin:0 0 4px;overflow-wrap:anywhere;}
@@ -1104,8 +1106,12 @@
 
   $("events-list").addEventListener("click", function(e){
     var btn = e.target.closest("[data-action]");
-    if(!btn) return;
     var row = e.target.closest(".event-row");
+    if(!btn){
+      // клик по фото или названию открывает редактирование
+      if(row && e.target.closest(".event-thumb, .event-title")) openEventModal(row.getAttribute("data-id"));
+      return;
+    }
     var id = row.getAttribute("data-id");
     if(btn.dataset.action === "edit") openEventModal(id);
     if(btn.dataset.action === "delete") openConfirmDelete(id);
