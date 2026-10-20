@@ -169,6 +169,7 @@
   @media (max-width:600px){.modal-overlay.drawer .modal{max-width:none;border-radius:0;}}
 
   .row2{display:grid;grid-template-columns:1fr 1fr;gap:12px;}
+  .row-age-cat{display:grid;grid-template-columns:84px 84px 1fr;gap:12px;}
   .segmented{display:flex;background:var(--cream);border-radius:12px;padding:4px;gap:4px;}
   .segmented button{flex:1;border:none;background:none;padding:9px 10px;border-radius:9px;font-weight:700;font-size:13.5px;color:var(--muted);cursor:pointer;}
   .segmented button.active{background:#fff;color:var(--ink);box-shadow:0 1px 3px rgba(53,49,44,.15);}
@@ -199,6 +200,8 @@
 
   @media (max-width:600px){
     .row2{grid-template-columns:1fr;}
+    .row-age-cat{grid-template-columns:1fr 1fr;}
+    .row-age-cat .field:nth-child(3){grid-column:1/-1;}
     .venue-card{flex-wrap:wrap;}
     .container{padding:18px 14px 70px;}
     .event-meta{flex-direction:column;gap:4px;}
@@ -363,7 +366,7 @@
           <button type="button" class="btn btn-secondary" id="add-slot-btn" style="margin-top:2px;">+ Добавить время</button>
         </div>
 
-        <div class="row2">
+        <div class="row-age-cat">
           <div class="field">
             <label for="f-age-min">Возраст от</label>
             <input id="f-age-min" type="number" min="0" max="18" value="3">
@@ -372,9 +375,6 @@
             <label for="f-age-max">Возраст до</label>
             <input id="f-age-max" type="number" min="0" max="18" value="10">
           </div>
-        </div>
-
-        <div class="row2">
           <div class="field">
             <label for="f-category">Категория</label>
             <select id="f-category">
@@ -395,10 +395,11 @@
               <option value="other">Другое</option>
             </select>
           </div>
-          <div class="field">
-            <label for="f-price">Цена</label>
-            <input id="f-price" type="text" placeholder="Например: 1200 дин.">
-          </div>
+        </div>
+
+        <div class="field">
+          <label for="f-price">Цена</label>
+          <input id="f-price" type="text" placeholder="Например: 1200 дин.">
         </div>
 
         <div class="field">
