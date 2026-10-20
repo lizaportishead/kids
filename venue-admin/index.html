@@ -97,8 +97,15 @@
   .event-row{background:var(--card);border-radius:16px;box-shadow:var(--shadow);padding:14px 16px;display:flex;align-items:center;gap:14px;margin-bottom:10px;}
   .event-thumb{width:52px;height:52px;border-radius:12px;object-fit:cover;flex-shrink:0;background:var(--cream);}
   .event-main{flex:1;min-width:0;}
-  .event-title{font-weight:700;font-size:14.5px;margin:0 0 4px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
-  .event-meta{display:grid;grid-template-columns:minmax(230px,1fr) 90px 170px;column-gap:14px;row-gap:6px;align-items:start;font-size:12.5px;color:var(--muted);}
+  .event-title{font-weight:700;font-size:14.5px;margin:0 0 4px;overflow-wrap:anywhere;}
+  .event-meta{display:flex;gap:14px;align-items:flex-start;flex-shrink:0;font-size:12.5px;color:var(--muted);}
+  .event-meta-schedule{width:230px;flex-direction:column;align-items:flex-start;}
+  .event-meta-age{width:90px;}
+  .event-meta-price{width:170px;}
+  .slot{display:flex;align-items:center;gap:6px;}
+  .slot-link{width:24px;height:24px;border-radius:8px;display:flex;align-items:center;justify-content:center;color:var(--muted);text-decoration:none;flex-shrink:0;}
+  .slot-link:hover{background:var(--line);color:var(--ink);}
+  .slot-link .material-symbols-outlined{font-size:16px;}
   .event-meta-col{display:flex;flex-wrap:wrap;gap:6px;align-items:center;min-height:24px;}
   .pill{display:inline-flex;align-items:center;gap:4px;background:var(--cream);border-radius:999px;padding:3px 10px;font-weight:600;font-size:12px;color:var(--ink);white-space:nowrap;}
   .event-meta .pill{background:none;padding:3px 0;white-space:normal;}
@@ -184,7 +191,8 @@
     .row2{grid-template-columns:1fr;}
     .venue-card{flex-wrap:wrap;}
     .container{padding:18px 14px 70px;}
-    .event-meta{grid-template-columns:1fr;row-gap:4px;}
+    .event-meta{flex-direction:column;gap:4px;}
+    .event-meta-schedule,.event-meta-age,.event-meta-price{width:auto;}
     .venue-table-head{display:none;}
     .venue-row{flex-wrap:wrap;}
     .venue-row-meta{grid-template-columns:1fr 1fr 1fr;width:100%;margin-top:8px;column-gap:10px;row-gap:6px;}
@@ -1001,6 +1009,10 @@
     });
   }
 
+  function slotHtml(pill, rowId){
+    var link = rowId ? '<a class="slot-link" href="'+escapeHtml(siteEventUrl(rowId))+'" target="_blank" rel="noopener" title="Открыть на сайте"><span class="material-symbols-outlined">open_in_new</span></a>' : '';
+    return '<div class="slot">'+pill+link+'</div>';
+  }
   function eventMetaLine(ev){
     var schedule = [];
     if(ev.type === "recurring"){
@@ -1008,18 +1020,17 @@
       if(!slots.length){
         schedule.push('<span class="pill wd">время не выбрано</span>');
       } else {
-        slots.forEach(function(slot){
+        slots.forEach(function(slot, i){
           var days = (slot.wd||[]).slice().sort(function(a,b){return a-b;}).map(function(i){return WD_LABELS[i];}).join(", ");
-          schedule.push('<span class="pill wd">'+(days||"дни не выбраны")+' · '+(slot.time||"—")+(slot.dur ? " · "+escapeHtml(slot.dur) : "")+'</span>');
+          schedule.push(slotHtml('<span class="pill wd">'+(days||"дни не выбраны")+' · '+(slot.time||"—")+'</span>', ev.rowIds && ev.rowIds[i]));
         });
       }
     } else {
-      schedule.push('<span class="pill wd">'+(ev.date ? fmtDate(ev.date) : "дата не выбрана")+'</span>');
-      schedule.push('<span class="pill">'+(ev.time||"—")+(ev.dur ? " · "+escapeHtml(ev.dur) : "")+'</span>');
+      schedule.push(slotHtml('<span class="pill wd">'+(ev.date ? fmtDate(ev.date) : "дата не выбрана")+' · '+(ev.time||"—")+'</span>', ev.rowIds && ev.rowIds[0]));
     }
     return ''+
       '<div class="event-meta-col event-meta-schedule">'+schedule.join("")+'</div>'+
-      '<div class="event-meta-col event-meta-age"><span class="pill">'+ev.age_min+'–'+ev.age_max+' лет</span></div>'+
+      '<div class="event-meta-col event-meta-age"><span class="pill">'+(ev.age_min===ev.age_max ? ev.age_min : ev.age_min+'–'+ev.age_max)+' лет</span></div>'+
       '<div class="event-meta-col event-meta-price">'+(ev.price ? '<span class="pill">'+escapeHtml(ev.price)+'</span>' : '')+'</div>';
   }
 
@@ -1034,8 +1045,7 @@
   fetch(SITE_ORIGIN + "/data/routes.json").then(function(r){ return r.json(); })
     .then(function(j){ siteRoutes = (j && j.e) || {}; try{ renderEvents(); }catch(e){} })
     .catch(function(){});
-  function siteEventUrl(ev){
-    var id = (ev.rowIds && ev.rowIds[0]) || ev.id;
+  function siteEventUrl(id){
     return SITE_ORIGIN + (siteRoutes[id] ? "/" + siteRoutes[id] + "/" : "/event/" + encodeURIComponent(id) + "/");
   }
 
@@ -1049,10 +1059,9 @@
         (ev.image ? '<img class="event-thumb" src="'+escapeHtml(imgSrc(ev.image))+'" alt="">' : '<div class="event-thumb"></div>')+
         '<div class="event-main">'+
           '<div class="event-title-row"><p class="event-title">'+escapeHtml(ev.title||"Без названия")+'</p>'+sourceBadge+'</div>'+
-          '<div class="event-meta">'+eventMetaLine(ev)+'</div>'+
         '</div>'+
+        '<div class="event-meta">'+eventMetaLine(ev)+'</div>'+
         '<div class="event-actions">'+
-          '<a class="icon-btn" href="'+escapeHtml(siteEventUrl(ev))+'" target="_blank" rel="noopener" title="Открыть на сайте"><span class="material-symbols-outlined">open_in_new</span></a>'+
           '<button class="icon-btn" data-action="edit" title="Редактировать"><span class="material-symbols-outlined">edit</span></button>'+
           '<button class="icon-btn del" data-action="delete" title="Удалить"><span class="material-symbols-outlined">delete</span></button>'+
         '</div>'+
