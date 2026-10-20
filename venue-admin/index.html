@@ -334,11 +334,6 @@
         </div>
 
         <div class="field">
-          <label for="f-short">Короткое описание (для карточки)</label>
-          <input id="f-short" type="text" placeholder="Одна строка — видно в списке">
-        </div>
-
-        <div class="field">
           <label for="f-desc">Полное описание</label>
           <textarea id="f-desc" placeholder="Подробности для страницы события"></textarea>
         </div>
@@ -1218,7 +1213,6 @@
     scheduleSlots = [newSlot([], "10:00", "1 час")];
     $("event-form-error").textContent = "";
     $("f-title").value = "";
-    $("f-short").value = "";
     $("f-desc").value = "";
     $("f-date").value = "";
     $("f-time").value = "10:00";
@@ -1243,7 +1237,6 @@
       $("event-modal-title").textContent = "Редактировать событие";
       $("event-delete-btn").hidden = false;
       $("f-title").value = ev.title||"";
-      $("f-short").value = ev.short||"";
       $("f-desc").value = ev.desc||"";
       $("f-age-min").value = ev.age_min;
       $("f-age-max").value = ev.age_max;
@@ -1340,7 +1333,6 @@
       var catLabel = CAT_LABELS[cat] || (existing && existing.categoryLabel) || null;
       var common = {
         title: title,
-        short: $("f-short").value.trim() || null,
         desc: $("f-desc").value.trim() || null,
         place: venue.id,
         age_min: ageMin, age_max: ageMax, age_label: ageLabel(ageMin, ageMax),
