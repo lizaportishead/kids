@@ -1035,9 +1035,9 @@
       schedule.push(slotHtml((ev.date ? fmtDate(ev.date) : "дата не выбрана")+' · '+(ev.time||"—"), ev.rowIds && ev.rowIds[0]));
     }
     return ''+
-      '<div class="event-meta-col event-meta-schedule">'+schedule.join("")+'</div>'+
       '<div class="event-meta-col event-meta-age"><span class="pill">'+(ev.age_min===ev.age_max ? ev.age_min : ev.age_min+'–'+ev.age_max)+' лет</span></div>'+
-      '<div class="event-meta-col event-meta-price">'+(ev.price ? '<span class="pill">'+escapeHtml(ev.price)+'</span>' : '')+'</div>';
+      '<div class="event-meta-col event-meta-price">'+(ev.price ? '<span class="pill">'+escapeHtml(ev.price)+'</span>' : '')+'</div>'+
+      '<div class="event-meta-col event-meta-schedule">'+schedule.join("")+'</div>';
   }
 
   function isPastEvent(ev){
