@@ -157,6 +157,12 @@
   .modal-foot{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:16px 24px;border-top:1px solid var(--line);}
   .modal-foot .right{display:flex;gap:8px;margin-left:auto;}
   .modal.small .modal-body{padding-top:6px;}
+  /* дровер справа: окно события и площадки */
+  .modal-overlay.drawer{padding:0;justify-content:flex-end;align-items:stretch;overflow:hidden;}
+  .modal-overlay.drawer .modal{max-width:560px;height:100%;border-radius:22px 0 0 22px;display:flex;flex-direction:column;animation:drawer-in .22s ease-out;}
+  .modal-overlay.drawer .modal-body{flex:1;max-height:none;}
+  @keyframes drawer-in{from{transform:translateX(40px);opacity:0;}to{transform:none;opacity:1;}}
+  @media (max-width:600px){.modal-overlay.drawer .modal{max-width:none;border-radius:0;}}
 
   .row2{display:grid;grid-template-columns:1fr 1fr;gap:12px;}
   .segmented{display:flex;background:var(--cream);border-radius:12px;padding:4px;gap:4px;}
@@ -299,7 +305,7 @@
 </div>
 
 <!-- ============ EVENT MODAL ============ -->
-<div class="modal-overlay" id="event-modal-overlay" hidden>
+<div class="modal-overlay drawer" id="event-modal-overlay" hidden>
   <div class="modal">
     <div class="modal-head">
       <h3 id="event-modal-title">Новое событие</h3>
@@ -422,7 +428,7 @@
 </div>
 
 <!-- ============ VENUE EDIT MODAL ============ -->
-<div class="modal-overlay" id="venue-modal-overlay" hidden>
+<div class="modal-overlay drawer" id="venue-modal-overlay" hidden>
   <div class="modal">
     <div class="modal-head">
       <h3>Карточка площадки</h3>
