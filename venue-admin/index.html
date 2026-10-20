@@ -563,6 +563,12 @@
   function ageLabel(min, max){
     return min === max ? (min + " " + ruYears(min)) : (min + "–" + max + " " + ruYears(max));
   }
+  // В базе у старых событий картинки лежат относительными путями (data/images/...),
+  // а кабинет живёт в /venue-admin/, поэтому достраиваем путь от корня сайта.
+  function imgSrc(u){
+    if(!u) return u;
+    return /^(https?:|data:|blob:|\/)/.test(u) ? u : "/" + u;
+  }
   function uid(){ return Date.now().toString(36) + Math.random().toString(36).slice(2,6); }
   function setBusy(on, btnId){
     busy = on;
@@ -844,7 +850,7 @@
   function renderVenueRow(v){
     return ''+
       '<div class="venue-row" data-id="'+v.id+'">'+
-        (v.logo ? '<div class="venue-logo"><img src="'+escapeHtml(v.logo)+'" alt=""></div>' : '<div class="venue-logo">'+escapeHtml(initials(v.name))+'</div>')+
+        (v.logo ? '<div class="venue-logo"><img src="'+escapeHtml(imgSrc(v.logo))+'" alt=""></div>' : '<div class="venue-logo">'+escapeHtml(initials(v.name))+'</div>')+
         '<div class="venue-row-main">'+
           '<p class="venue-row-name">'+escapeHtml(v.name)+'</p>'+
           '<p class="venue-row-address">'+escapeHtml(v.address||"Адрес не указан")+'</p>'+
@@ -909,7 +915,7 @@
     setOptionalContact("venue-instagram", v.instagram ? "Instagram: "+v.instagram : "");
     var box = $("venue-logo-box");
     if(v.logo){
-      box.innerHTML = '<img src="'+escapeHtml(v.logo)+'" alt="">';
+      box.innerHTML = '<img src="'+escapeHtml(imgSrc(v.logo))+'" alt="">';
     } else {
       box.textContent = initials(v.name);
     }
@@ -965,7 +971,7 @@
     }
     return ''+
       '<div class="event-row" data-id="'+escapeHtml(ev.id)+'">'+
-        (ev.image ? '<img class="event-thumb" src="'+escapeHtml(ev.image)+'" alt="">' : '<div class="event-thumb"></div>')+
+        (ev.image ? '<img class="event-thumb" src="'+escapeHtml(imgSrc(ev.image))+'" alt="">' : '<div class="event-thumb"></div>')+
         '<div class="event-main">'+
           '<div class="event-title-row"><p class="event-title">'+escapeHtml(ev.title||"Без названия")+'</p>'+sourceBadge+'</div>'+
           '<div class="event-meta">'+eventMetaLine(ev)+'</div>'+
@@ -1161,7 +1167,7 @@
       }
       if(ev.image){
         eventImage = { url: ev.image, blob: null };
-        showPreview($("f-image-preview"), ev.image);
+        showPreview($("f-image-preview"), imgSrc(ev.image));
       }
     } else {
       $("event-modal-title").textContent = "Новое событие";
@@ -1344,7 +1350,7 @@
     $("v-instagram").value = v.instagram||"";
     $("v-logo-file").value = "";
     venueLogo = { url: v.logo || null, blob: null };
-    showPreview($("v-logo-preview"), venueLogo.url);
+    showPreview($("v-logo-preview"), imgSrc(venueLogo.url));
     $("venue-modal-overlay").hidden = false;
   }
   function closeVenueModal(){ $("venue-modal-overlay").hidden = true; }
