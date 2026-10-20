@@ -7726,7 +7726,7 @@
       ],
       "ageLabel": "4–6 лет",
       "price": "1000 RSD",
-      "image": "data/images/pulse-shkolica.jpg",
+      "image": "data/images/skalolazanie.jpg",
       "category": "sport",
       "categoryLabel": "Спорт",
       "source": {
@@ -8543,7 +8543,7 @@
       ],
       "ageLabel": "7–14 лет",
       "price": "1100 RSD",
-      "image": "data/images/pulse-deti.jpg",
+      "image": "data/images/skalolazanie.jpg",
       "category": "sport",
       "categoryLabel": "Спорт",
       "source": {
@@ -13036,7 +13036,7 @@
       ],
       "ageLabel": "4–6 лет",
       "price": "1000 RSD",
-      "image": "data/images/pulse-shkolica.jpg",
+      "image": "data/images/skalolazanie.jpg",
       "category": "sport",
       "categoryLabel": "Спорт",
       "source": {
@@ -15355,7 +15355,7 @@
       ],
       "ageLabel": "7–14 лет",
       "price": "1100 RSD",
-      "image": "data/images/pulse-deti.jpg",
+      "image": "data/images/skalolazanie.jpg",
       "category": "sport",
       "categoryLabel": "Спорт",
       "source": {
@@ -15427,7 +15427,7 @@
       ],
       "ageLabel": "7–14 лет",
       "price": "1100 RSD",
-      "image": "data/images/pulse-deti.jpg",
+      "image": "data/images/skalolazanie.jpg",
       "category": "sport",
       "categoryLabel": "Спорт",
       "source": {
@@ -20824,7 +20824,7 @@
       ],
       "ageLabel": "7–10 лет",
       "price": "5000 дин/мес (абонемент)",
-      "image": null,
+      "image": "data/images/skalolazanie.jpg",
       "category": "sport",
       "categoryLabel": "Спорт",
       "source": {
@@ -20858,7 +20858,7 @@
       ],
       "ageLabel": "7–10 лет",
       "price": "5000 дин/мес (абонемент)",
-      "image": null,
+      "image": "data/images/skalolazanie.jpg",
       "category": "sport",
       "categoryLabel": "Спорт",
       "source": {
