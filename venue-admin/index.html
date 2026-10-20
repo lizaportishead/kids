@@ -1078,11 +1078,11 @@
       '</div>';
   }
 
-  function renderGroup(label, items, isPastGroup){
-    if(!items.length) return "";
+  function renderGroup(label, items, isPastGroup, emptyText){
+    if(!items.length && !emptyText) return "";
     return '<div class="event-group'+(isPastGroup?" event-group-past":"")+'">'+
       '<div class="group-label">'+label+'</div>'+
-      items.map(renderEventRow).join("")+
+      (items.length ? items.map(renderEventRow).join("") : '<div class="empty-state">'+emptyText+'</div>')+
     '</div>';
   }
 
@@ -1094,14 +1094,9 @@
     var past = all.filter(function(ev){ return ev.type === "oneoff" && isPastEvent(ev); })
       .sort(function(a,b){ return (b.date||"").localeCompare(a.date||""); });
 
-    if(!recurring.length && !upcoming.length && !past.length){
-      list.innerHTML = '<div class="empty-state">Пока нет событий.<br>Нажмите «+ Добавить событие», чтобы создать первое.</div>';
-      return;
-    }
-
     list.innerHTML =
       renderGroup("Регулярные", recurring, false) +
-      renderGroup("Будущие", upcoming, false) +
+      renderGroup("Разовые", upcoming, false, "Нет разовых событий. Нажмите «+ Добавить событие» и выберите «Разовое».") +
       renderGroup("Прошедшие", past, true);
   }
 
