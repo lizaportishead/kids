@@ -9359,7 +9359,7 @@
       ],
       "ageLabel": "4+ лет",
       "price": "уточняется",
-      "image": null,
+      "image": "data/images/keramika.jpg",
       "category": "art",
       "categoryLabel": "Творчество",
       "source": {
@@ -12695,7 +12695,7 @@
       ],
       "ageLabel": "5+ лет",
       "price": "2000 RSD (разовое), абонемент 7000 RSD за 4 занятия",
-      "image": null,
+      "image": "data/images/keramika.jpg",
       "category": "art",
       "categoryLabel": "Творчество",
       "source": {
@@ -14877,7 +14877,7 @@
       ],
       "ageLabel": "5+ лет",
       "price": "2000 RSD (разовое), абонемент 7000 RSD за 4 занятия",
-      "image": null,
+      "image": "data/images/keramika.jpg",
       "category": "art",
       "categoryLabel": "Творчество",
       "source": {
@@ -15907,7 +15907,7 @@
       ],
       "ageLabel": "7–12 лет",
       "price": "уточняется",
-      "image": null,
+      "image": "data/images/keramika.jpg",
       "category": "art",
       "categoryLabel": "Творчество",
       "source": {
@@ -19802,7 +19802,7 @@
       ],
       "ageLabel": "5–6 лет",
       "price": "6000 дин/мес (абонемент)",
-      "image": null,
+      "image": "data/images/keramika.jpg",
       "category": "art",
       "categoryLabel": "Творчество",
       "source": {
@@ -19836,7 +19836,7 @@
       ],
       "ageLabel": "7–10 лет",
       "price": "6000 дин/мес (абонемент)",
-      "image": null,
+      "image": "data/images/keramika.jpg",
       "category": "art",
       "categoryLabel": "Творчество",
       "source": {
@@ -19870,7 +19870,7 @@
       ],
       "ageLabel": "7–10 лет",
       "price": "6000 дин/мес (абонемент)",
-      "image": null,
+      "image": "data/images/keramika.jpg",
       "category": "art",
       "categoryLabel": "Творчество",
       "source": {

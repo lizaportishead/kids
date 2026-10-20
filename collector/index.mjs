@@ -81,6 +81,8 @@ for (const source of sources) {
         ev.image = (await saveImage(ev.imageRemote, ev.imageKey || ev.id, IMG_DIR)) || null;
         delete ev.imageRemote; delete ev.imageKey;
       }
+      // Керамика без своей картинки — общая иллюстрация (data/images/keramika.jpg).
+      if (!ev.image && /^керамик/i.test(ev.title)) ev.image = 'data/images/keramika.jpg';
       collected.push(ev);
     }
     report.push({ source: source.id, status: 'ok', events: events.length });
