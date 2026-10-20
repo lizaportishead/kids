@@ -20416,7 +20416,7 @@
       ],
       "ageLabel": "6–10 лет",
       "price": "5000 дин/мес (абонемент)",
-      "image": null,
+      "image": "data/images/placeholder-dance.jpg",
       "category": "sport",
       "categoryLabel": "Спорт",
       "source": {
