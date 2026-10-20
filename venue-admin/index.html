@@ -685,11 +685,72 @@
   }
 
   // ---------- модель: строки базы <-> события кабинета ----------
+  // логотипы площадок из публичного сайта (в базе поле logo пустое) — запасной вариант
+  var STATIC_LOGOS = {
+    "KARTON медиашкола": "data/images/venue-karton.png",
+    "Enter": "data/images/venue-enter.png",
+    "Mathline": "data/images/venue-mathline.png",
+    "Sreda Kids": "data/images/venue-sreda-kids.jpg",
+    "Kinder Garden": "data/images/venue-kinder-garden.png",
+    "Индиго (Врачар)": "data/images/venue-indigo.jpg",
+    "Индиго (Новый Белград)": "data/images/venue-indigo.jpg",
+    "SwimYou": "data/images/venue-swimyou.jpg",
+    "Студия танцев Procvat": "data/images/venue-procvat.jpg",
+    "BeSmart": "data/images/venue-besmart.png",
+    "ЛаборатоРиЯ": "data/images/venue-laboratoriya.jpg",
+    "AVR swim (Врачар)": "data/images/venue-avr.png",
+    "AVR swim (Палилула)": "data/images/venue-avr.png",
+    "RollerLand": "data/images/venue-rollerland.jpg",
+    "Art Light Kids (Врачар)": "data/images/venue-artlightkids.png",
+    "Art Light Kids (Центр)": "data/images/venue-artlightkids.png",
+    "Art Light Kids (Новый Белград)": "data/images/venue-artlightkids.png",
+    "Prosto'R": "data/images/venue-prostor.jpg",
+    "Crno-bela mačka": "data/images/venue-crnobelamacka.jpg",
+    "Сорока-белобока": "data/images/venue-soroka.jpg",
+    "Наше Место (Врачар)": "data/images/venue-nashemesto.png",
+    "Наше Место (Новый Белград)": "data/images/venue-nashemesto.png",
+    "One Step Dance Studio": "data/images/venue-onestep.jpg",
+    "Театр «Змай»": "data/images/venue-zmaj.jpg",
+    "Pulse Climbing Hub": "data/images/venue-pulse.jpg",
+    "London Gates": "data/images/venue-londongates.png",
+    "Lumos": "data/images/venue-lumos.jpg",
+    "RoboAcademy (Новый Белград)": "data/images/venue-roboacademy.jpg",
+    "RoboAcademy (Врачар)": "data/images/venue-roboacademy.jpg",
+    "Bela Vrana": "data/images/venue-belavrana.jpg",
+    "Karavela": "data/images/venue-karavela.jpg",
+    "Мостик": "data/images/venue-mostik.jpg",
+    "Ludwig Land": "data/images/venue-ludwigland.jpg",
+    "Пан театар": "data/images/venue-panteatar.png",
+    "Мало позориште «Душко Радовић»": "data/images/venue-malopozoriste.png",
+    "Лав и Жабац": "data/images/venue-lavizabac.jpg",
+    "Центар за културу „Влада Дивљан“": "data/images/venue-ckvladadivljan.png",
+    "Кул'тура": "data/images/venue-kultura.jpg",
+    "Палата науке": "data/images/venue-palatanauke.jpg",
+    "Музеј Николе Тесле": "data/images/venue-tesla.jpg",
+    "Ложионица": "data/images/venue-lozionica.jpg",
+    "Домик у Маши": "data/images/venue-domikumashi.jpg",
+    "Этнографический музей": "data/images/venue-etnografski.png",
+    "Народный музей Сербии": "data/images/venue-narodnimuzej.png",
+    "Special Place": "data/images/venue-specialplace.jpg",
+    "Future Deti": "data/images/venue-futurekids.jpg",
+    "Дечја библиотека „Чика Јова Змај“": "data/images/venue-decjabiblioteka.jpg",
+    "Библиотека „Бора Станковић“": "data/images/venue-borastankovic.jpg",
+    "Музеј афричке уметности": "data/images/venue-mau.jpg",
+    "Музеј Вука и Доситеја": "data/images/venue-vukidositej.jpg",
+    "Природњачки музеј": "data/images/venue-prirodnjacki.jpg",
+    "Музеј науке и технике": "data/images/venue-mnt.png",
+    "Музеј илузија": "data/images/venue-muzejiluzija.jpg",
+    "Јавни акваријум и тропикаријум": "data/images/venue-akvarijum.png",
+    "Народно позориште": "data/images/venue-narodnopozoriste.png",
+    "Дечја сцена „Академија 28“": "data/images/venue-akademija28.jpg",
+    "Културни центар Чукарица": "data/images/venue-kccukarica.png",
+    "Znanje pod lupom": "data/images/venue-znanjepodlupom.png"
+  };
   function rowToVenue(p){
     return {
       id: p.id, name: p.name, address: p.address || "", phone: p.phone || "",
       site: p.site || "", telegram: p.telegram || "", instagram: p.instagram || "",
-      logo: p.logo || null, events: null, summary: null, updatedDate: null, status: "inactive"
+      logo: p.logo || STATIC_LOGOS[p.name] || null, events: null, summary: null, updatedDate: null, status: "inactive"
     };
   }
   function sourceKind(r){
