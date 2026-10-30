@@ -1,7 +1,7 @@
 {
   "updatedAt": "2026-09-30T10:27:08.666Z",
   "city": "Белград",
-  "count": 651,
+  "count": 653,
   "report": [
     {
       "source": "prodlenka",
@@ -21792,6 +21792,70 @@
         "cta": "Билеты: @crnobela_macka"
       },
       "wd": null,
+      "placePhone": null,
+      "placeLink": null,
+      "lat": null,
+      "lng": null
+    },
+    {
+      "id": "roboacademy-halloween-strashno-veselo-2026-10-31-1100",
+      "title": "Halloween: страшно весело! (4–6 лет)",
+      "short": "Хэллоуинский праздник на 2,5 часа: фоторамка, слайм-слизень, дискотека, пиньята, аквагрим и тыква в подарок",
+      "desc": "Хэллоуинский праздник «Страшно весело» в RoboAcademy (Врачар) для детей 4–6 лет. На 2,5 часа дети погрузятся в мир ведьм, монстров, магии и сладостей. В программе: декор фоторамки в стиле Día de los Muertos; слайм-слизень своими руками; хэллоуинская дискотека и пиньята; аквагрим и колдовская викторина; добрая ведьмочка Виола; чаепитие, призы за лучшие костюмы и общее фото на память. Каждому в подарок тыква. Приходите в костюмах! Запись по форме (forms.gle/J5sdBL1mgzb4yZy28) или по телефонам +381 63 373 483 / +381 64 597 3001. На момент поста мест почти не осталось: на сеанс 11:00 — 2 места.",
+      "time": "11:00",
+      "age": [
+        4,
+        6
+      ],
+      "ageLabel": "4–6 лет",
+      "date": "2026-10-31",
+      "wd": null,
+      "dur": "2 часа 30 минут",
+      "place": "RoboAcademy (Врачар)",
+      "address": "Луке Вукаловича 6, Врачар, Белград",
+      "price": "3500 RSD",
+      "image": "data/images/roboacademy-halloween.jpg",
+      "category": null,
+      "categoryLabel": null,
+      "source": {
+        "id": "roboacademy",
+        "name": "RoboAcademy",
+        "kind": "Instagram RoboAcademy",
+        "url": "https://www.instagram.com/p/DfE9_MACGal/",
+        "cta": "Записаться: форма и +381 63 373 483"
+      },
+      "placePhone": null,
+      "placeLink": null,
+      "lat": null,
+      "lng": null
+    },
+    {
+      "id": "roboacademy-halloween-strashno-veselo-2026-10-31-1800",
+      "title": "Halloween: страшно весело! (7–11 лет)",
+      "short": "Хэллоуинский праздник на 2,5 часа: фоторамка, слайм-слизень, дискотека, пиньята, аквагрим и тыква в подарок",
+      "desc": "Хэллоуинский праздник «Страшно весело» в RoboAcademy (Врачар) для детей 7–11 лет. На 2,5 часа дети погрузятся в мир ведьм, монстров, магии и сладостей. В программе: декор фоторамки в стиле Día de los Muertos; слайм-слизень своими руками; хэллоуинская дискотека и пиньята; аквагрим и колдовская викторина; добрая ведьмочка Виола; чаепитие, призы за лучшие костюмы и общее фото на память. Каждому в подарок тыква. Приходите в костюмах! Запись по форме (forms.gle/J5sdBL1mgzb4yZy28) или по телефонам +381 63 373 483 / +381 64 597 3001. На момент поста мест почти не осталось: на сеанс 18:00 — 1 место.",
+      "time": "18:00",
+      "age": [
+        7,
+        11
+      ],
+      "ageLabel": "7–11 лет",
+      "date": "2026-10-31",
+      "wd": null,
+      "dur": "2 часа 30 минут",
+      "place": "RoboAcademy (Врачар)",
+      "address": "Луке Вукаловича 6, Врачар, Белград",
+      "price": "3500 RSD",
+      "image": "data/images/roboacademy-halloween.jpg",
+      "category": null,
+      "categoryLabel": null,
+      "source": {
+        "id": "roboacademy",
+        "name": "RoboAcademy",
+        "kind": "Instagram RoboAcademy",
+        "url": "https://www.instagram.com/p/DfE9_MACGal/",
+        "cta": "Записаться: форма и +381 63 373 483"
+      },
       "placePhone": null,
       "placeLink": null,
       "lat": null,
