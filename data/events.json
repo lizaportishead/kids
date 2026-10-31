@@ -17869,230 +17869,6 @@
       "lng": null
     },
     {
-      "id": "crnobelamacka-rannee-razvitie-2-3-2026-10-03",
-      "title": "Раннее развитие (2–3 года)",
-      "short": "Бесплатное открытое занятие: раннее развитие для детей 2–3 лет, центр «Crno-bela mačka», Суббота, 3 октября в 10:30.",
-      "desc": "Детский центр «Crno-bela mačka» (Дорчол / Стари Град) приглашает на бесплатное открытое занятие: раннее развитие для детей 2–3 лет. Можно познакомиться с пространством и педагогами. Суббота, 3 октября, 10:30, продолжительность 45 минут.\n\nУчастие бесплатное, запись по ссылке.",
-      "date": "2026-10-03",
-      "time": "10:30",
-      "dur": "45 минут",
-      "place": "Crno-bela mačka",
-      "address": "Миће Поповића 1, Стари Град, Белград",
-      "age": [
-        2,
-        3
-      ],
-      "ageLabel": "2–3 года",
-      "price": "бесплатно",
-      "image": null,
-      "category": "early_dev",
-      "categoryLabel": "Раннее развитие",
-      "source": {
-        "id": "crnobelamacka",
-        "name": "Crno-bela mačka",
-        "kind": "Открытые занятия",
-        "url": "https://docs.google.com/forms/d/e/1FAIpQLSe57TLWOd4WehVrPI0dmGjZvgLV0gdeVRsd9isVUA0ephMrZg/viewform",
-        "cta": "Записаться (по форме)"
-      },
-      "wd": null,
-      "placePhone": null,
-      "placeLink": null,
-      "lat": null,
-      "lng": null
-    },
-    {
-      "id": "crnobelamacka-rannee-razvitie-35-45-2026-10-03",
-      "title": "Раннее развитие (3,5–4,5 года)",
-      "short": "Бесплатное открытое занятие: раннее развитие для детей 3,5–4,5 лет, центр «Crno-bela mačka», Суббота, 3 октября в 11:30.",
-      "desc": "Детский центр «Crno-bela mačka» (Дорчол / Стари Град) приглашает на бесплатное открытое занятие: раннее развитие для детей 3,5–4,5 лет. Можно познакомиться с пространством и педагогами. Суббота, 3 октября, 11:30, продолжительность 45 минут.\n\nУчастие бесплатное, запись по ссылке.",
-      "date": "2026-10-03",
-      "time": "11:30",
-      "dur": "45 минут",
-      "place": "Crno-bela mačka",
-      "address": "Миће Поповића 1, Стари Град, Белград",
-      "age": [
-        3,
-        4
-      ],
-      "ageLabel": "3,5–4,5 года",
-      "price": "бесплатно",
-      "image": null,
-      "category": "early_dev",
-      "categoryLabel": "Раннее развитие",
-      "source": {
-        "id": "crnobelamacka",
-        "name": "Crno-bela mačka",
-        "kind": "Открытые занятия",
-        "url": "https://docs.google.com/forms/d/e/1FAIpQLSe57TLWOd4WehVrPI0dmGjZvgLV0gdeVRsd9isVUA0ephMrZg/viewform",
-        "cta": "Записаться (по форме)"
-      },
-      "wd": null,
-      "placePhone": null,
-      "placeLink": null,
-      "lat": null,
-      "lng": null
-    },
-    {
-      "id": "crnobelamacka-podgotovka-k-shkole-4-55-2026-10-03",
-      "title": "Подготовка к школе (4–5,5 лет)",
-      "short": "Бесплатное открытое занятие: подготовка к школе для детей 4–5,5 лет, центр «Crno-bela mačka», Суббота, 3 октября в 13:30.",
-      "desc": "Детский центр «Crno-bela mačka» (Дорчол / Стари Град) приглашает на бесплатное открытое занятие: подготовка к школе для детей 4–5,5 лет. Можно познакомиться с пространством и педагогами. Суббота, 3 октября, 13:30, продолжительность 50 минут.\n\nУчастие бесплатное, запись по ссылке.",
-      "date": "2026-10-03",
-      "time": "13:30",
-      "dur": "50 минут",
-      "place": "Crno-bela mačka",
-      "address": "Миће Поповића 1, Стари Град, Белград",
-      "age": [
-        4,
-        5
-      ],
-      "ageLabel": "4–5,5 лет",
-      "price": "бесплатно",
-      "image": null,
-      "category": "school_prep",
-      "categoryLabel": "Подготовка к школе",
-      "source": {
-        "id": "crnobelamacka",
-        "name": "Crno-bela mačka",
-        "kind": "Открытые занятия",
-        "url": "https://docs.google.com/forms/d/e/1FAIpQLSe57TLWOd4WehVrPI0dmGjZvgLV0gdeVRsd9isVUA0ephMrZg/viewform",
-        "cta": "Записаться (по форме)"
-      },
-      "wd": null,
-      "placePhone": null,
-      "placeLink": null,
-      "lat": null,
-      "lng": null
-    },
-    {
-      "id": "crnobelamacka-russkiy-prodolzhayuschie-2026-10-03",
-      "title": "Русский язык для продолжающих (уровень 3–4 класса)",
-      "short": "Бесплатное открытое занятие: русский язык для продолжающих, уровень знаний 3–4 класса, центр «Crno-bela mačka», Суббота, 3 октября в 14:30.",
-      "desc": "Детский центр «Crno-bela mačka» (Дорчол / Стари Град) приглашает на бесплатное открытое занятие: русский язык для продолжающих, уровень знаний 3–4 класса. Можно познакомиться с пространством и педагогами. Суббота, 3 октября, 14:30, продолжительность 1 час.\n\nУчастие бесплатное, запись по ссылке.",
-      "date": "2026-10-03",
-      "time": "14:30",
-      "dur": "1 час",
-      "place": "Crno-bela mačka",
-      "address": "Миће Поповића 1, Стари Град, Белград",
-      "age": [
-        8,
-        11
-      ],
-      "ageLabel": "8–11 лет",
-      "price": "бесплатно",
-      "image": null,
-      "category": "languages",
-      "categoryLabel": "Языки",
-      "source": {
-        "id": "crnobelamacka",
-        "name": "Crno-bela mačka",
-        "kind": "Открытые занятия",
-        "url": "https://docs.google.com/forms/d/e/1FAIpQLSe57TLWOd4WehVrPI0dmGjZvgLV0gdeVRsd9isVUA0ephMrZg/viewform",
-        "cta": "Записаться (по форме)"
-      },
-      "wd": null,
-      "placePhone": null,
-      "placeLink": null,
-      "lat": null,
-      "lng": null
-    },
-    {
-      "id": "crnobelamacka-tvorcheskaya-studiya-55-12-2026-10-03",
-      "title": "Творческая студия (5,5–12 лет)",
-      "short": "Бесплатное открытое занятие: творческая студия для детей 5,5–12 лет, центр «Crno-bela mačka», Суббота, 3 октября в 15:30.",
-      "desc": "Детский центр «Crno-bela mačka» (Дорчол / Стари Град) приглашает на бесплатное открытое занятие: творческая студия для детей 5,5–12 лет. Можно познакомиться с пространством и педагогами. Суббота, 3 октября, 15:30, продолжительность 1 час.\n\nУчастие бесплатное, запись по ссылке.",
-      "date": "2026-10-03",
-      "time": "15:30",
-      "dur": "1 час",
-      "place": "Crno-bela mačka",
-      "address": "Миће Поповића 1, Стари Град, Белград",
-      "age": [
-        5,
-        12
-      ],
-      "ageLabel": "5,5–12 лет",
-      "price": "бесплатно",
-      "image": null,
-      "category": "art",
-      "categoryLabel": "Творчество",
-      "source": {
-        "id": "crnobelamacka",
-        "name": "Crno-bela mačka",
-        "kind": "Открытые занятия",
-        "url": "https://docs.google.com/forms/d/e/1FAIpQLSe57TLWOd4WehVrPI0dmGjZvgLV0gdeVRsd9isVUA0ephMrZg/viewform",
-        "cta": "Записаться (по форме)"
-      },
-      "wd": null,
-      "placePhone": null,
-      "placeLink": null,
-      "lat": null,
-      "lng": null
-    },
-    {
-      "id": "crnobelamacka-russkiy-nachinayuschie-2026-10-03",
-      "title": "Русский язык для начинающих (уровень 1–2 класса)",
-      "short": "Бесплатное открытое занятие: русский язык для начинающих, уровень знаний 1–2 класса, центр «Crno-bela mačka», Суббота, 3 октября в 15:40.",
-      "desc": "Детский центр «Crno-bela mačka» (Дорчол / Стари Град) приглашает на бесплатное открытое занятие: русский язык для начинающих, уровень знаний 1–2 класса. Можно познакомиться с пространством и педагогами. Суббота, 3 октября, 15:40, продолжительность 1 час.\n\nУчастие бесплатное, запись по ссылке.",
-      "date": "2026-10-03",
-      "time": "15:40",
-      "dur": "1 час",
-      "place": "Crno-bela mačka",
-      "address": "Миће Поповића 1, Стари Град, Белград",
-      "age": [
-        6,
-        9
-      ],
-      "ageLabel": "6–9 лет",
-      "price": "бесплатно",
-      "image": null,
-      "category": "languages",
-      "categoryLabel": "Языки",
-      "source": {
-        "id": "crnobelamacka",
-        "name": "Crno-bela mačka",
-        "kind": "Открытые занятия",
-        "url": "https://docs.google.com/forms/d/e/1FAIpQLSe57TLWOd4WehVrPI0dmGjZvgLV0gdeVRsd9isVUA0ephMrZg/viewform",
-        "cta": "Записаться (по форме)"
-      },
-      "wd": null,
-      "placePhone": null,
-      "placeLink": null,
-      "lat": null,
-      "lng": null
-    },
-    {
-      "id": "crnobelamacka-serbskiy-s-nositelem-7-15-2026-10-04",
-      "title": "Сербский язык с носителем (7–15 лет)",
-      "short": "Бесплатное открытое занятие: сербский язык с носителем языка для детей 7–15 лет, центр «Crno-bela mačka», Воскресенье, 4 октября в 13:00.",
-      "desc": "Детский центр «Crno-bela mačka» (Дорчол / Стари Град) приглашает на бесплатное открытое занятие: сербский язык с носителем языка для детей 7–15 лет. Можно познакомиться с пространством и педагогами. Воскресенье, 4 октября, 13:00, продолжительность 1 час.\n\nУчастие бесплатное, запись по ссылке.",
-      "date": "2026-10-04",
-      "time": "13:00",
-      "dur": "1 час",
-      "place": "Crno-bela mačka",
-      "address": "Миће Поповића 1, Стари Град, Белград",
-      "age": [
-        7,
-        15
-      ],
-      "ageLabel": "7–15 лет",
-      "price": "бесплатно",
-      "image": null,
-      "category": "languages",
-      "categoryLabel": "Языки",
-      "source": {
-        "id": "crnobelamacka",
-        "name": "Crno-bela mačka",
-        "kind": "Открытые занятия",
-        "url": "https://docs.google.com/forms/d/e/1FAIpQLSe57TLWOd4WehVrPI0dmGjZvgLV0gdeVRsd9isVUA0ephMrZg/viewform",
-        "cta": "Записаться (по форме)"
-      },
-      "wd": null,
-      "placePhone": null,
-      "placeLink": null,
-      "lat": null,
-      "lng": null
-    },
-    {
       "id": "karton-den-otkrytyh-dverey-2026-10-03",
       "title": "День открытых дверей школы KARTON",
       "short": "Квест по четырём направлениям для детей 8–15 лет и лекция «Чему учить ребёнка в эпоху ИИ?» для родителей",
@@ -21855,6 +21631,380 @@
         "kind": "Instagram RoboAcademy",
         "url": "https://www.instagram.com/p/DfE9_MACGal/",
         "cta": "Записаться: форма и +381 63 373 483"
+      },
+      "placePhone": null,
+      "placeLink": null,
+      "lat": null,
+      "lng": null
+    },
+    {
+      "id": "crnobelamacka-rannee-razvitie-2-3-sb-1030",
+      "title": "Раннее развитие",
+      "short": "Занятие раннего развития для детей 2–3 лет в «Crno-bela mačka», по субботам в 10:30.",
+      "desc": "Занятие раннего развития для детей 2–3 лет в детском центре «Crno-bela mačka» (Дорчол). Занятия идут по субботам в 10:30, продолжительность 45 минут. Первое пробное занятие — бесплатно. Запись — через директ или по ссылке в шапке Instagram центра.",
+      "date": null,
+      "wd": [
+        5
+      ],
+      "time": "10:30",
+      "dur": "45 минут",
+      "place": "Crno-bela mačka",
+      "address": "Миће Поповића 1, Стари Град, Белград",
+      "age": [
+        2,
+        3
+      ],
+      "ageLabel": "2–3 года",
+      "price": "первое пробное — бесплатно",
+      "image": null,
+      "category": "early_dev",
+      "categoryLabel": "Раннее развитие",
+      "source": {
+        "id": "crnobelamacka",
+        "name": "Crno-bela mačka",
+        "kind": "Расписание студии",
+        "url": "https://www.instagram.com/p/Dev--5XjSjN/",
+        "cta": "Запись — через директ или ссылку в шапке Instagram"
+      },
+      "placePhone": null,
+      "placeLink": null,
+      "lat": null,
+      "lng": null
+    },
+    {
+      "id": "crnobelamacka-rannee-razvitie-35-45-sb-1130",
+      "title": "Раннее развитие",
+      "short": "Занятие раннего развития для детей 3,5–4,5 лет в «Crno-bela mačka», по субботам в 11:30.",
+      "desc": "Занятие раннего развития для детей 3,5–4,5 лет в детском центре «Crno-bela mačka» (Дорчол). Занятия идут по субботам в 11:30, продолжительность 45 минут. Первое пробное занятие — бесплатно. Запись — через директ или по ссылке в шапке Instagram центра.",
+      "date": null,
+      "wd": [
+        5
+      ],
+      "time": "11:30",
+      "dur": "45 минут",
+      "place": "Crno-bela mačka",
+      "address": "Миће Поповића 1, Стари Град, Белград",
+      "age": [
+        3,
+        4
+      ],
+      "ageLabel": "3,5–4,5 года",
+      "price": "первое пробное — бесплатно",
+      "image": null,
+      "category": "early_dev",
+      "categoryLabel": "Раннее развитие",
+      "source": {
+        "id": "crnobelamacka",
+        "name": "Crno-bela mačka",
+        "kind": "Расписание студии",
+        "url": "https://www.instagram.com/p/Dev--5XjSjN/",
+        "cta": "Запись — через директ или ссылку в шапке Instagram"
+      },
+      "placePhone": null,
+      "placeLink": null,
+      "lat": null,
+      "lng": null
+    },
+    {
+      "id": "crnobelamacka-podgotovka-k-shkole-4-55-sb-1330",
+      "title": "Подготовка к школе",
+      "short": "Подготовка к школе для детей 4–5,5 лет в «Crno-bela mačka», по субботам в 13:30.",
+      "desc": "Подготовка к школе для детей 4–5,5 лет в детском центре «Crno-bela mačka» (Дорчол). Занятия идут по субботам в 13:30, продолжительность 50 минут. Первое пробное занятие — бесплатно. Запись — через директ или по ссылке в шапке Instagram центра.",
+      "date": null,
+      "wd": [
+        5
+      ],
+      "time": "13:30",
+      "dur": "50 минут",
+      "place": "Crno-bela mačka",
+      "address": "Миће Поповића 1, Стари Град, Белград",
+      "age": [
+        4,
+        5
+      ],
+      "ageLabel": "4–5,5 лет",
+      "price": "первое пробное — бесплатно",
+      "image": null,
+      "category": "school_prep",
+      "categoryLabel": "Подготовка к школе",
+      "source": {
+        "id": "crnobelamacka",
+        "name": "Crno-bela mačka",
+        "kind": "Расписание студии",
+        "url": "https://www.instagram.com/p/Dev--5XjSjN/",
+        "cta": "Запись — через директ или ссылку в шапке Instagram"
+      },
+      "placePhone": null,
+      "placeLink": null,
+      "lat": null,
+      "lng": null
+    },
+    {
+      "id": "crnobelamacka-robototehnika-4-6-sb-1230",
+      "title": "Робототехника",
+      "short": "Первые шаги в мир технологий: робототехника для детей 4–6 лет в «Crno-bela mačka», по субботам в 12:30.",
+      "desc": "Первые шаги в мир технологий: робототехника для детей 4–6 лет в детском центре «Crno-bela mačka» (Дорчол). Занятия идут по субботам в 12:30, продолжительность 50 минут. Первое пробное занятие — бесплатно. Запись — через директ или по ссылке в шапке Instagram центра.",
+      "date": null,
+      "wd": [
+        5
+      ],
+      "time": "12:30",
+      "dur": "50 минут",
+      "place": "Crno-bela mačka",
+      "address": "Миће Поповића 1, Стари Град, Белград",
+      "age": [
+        4,
+        6
+      ],
+      "ageLabel": "4–6 лет",
+      "price": "первое пробное — бесплатно",
+      "image": null,
+      "category": "robotics",
+      "categoryLabel": "Робототехника",
+      "source": {
+        "id": "crnobelamacka",
+        "name": "Crno-bela mačka",
+        "kind": "Расписание студии",
+        "url": "https://www.instagram.com/p/Dev--5XjSjN/",
+        "cta": "Запись — через директ или ссылку в шапке Instagram"
+      },
+      "placePhone": null,
+      "placeLink": null,
+      "lat": null,
+      "lng": null
+    },
+    {
+      "id": "crnobelamacka-robototehnika-4-6-sb-1330",
+      "title": "Робототехника",
+      "short": "Первые шаги в мир технологий: робототехника для детей 4–6 лет в «Crno-bela mačka», по субботам в 13:30.",
+      "desc": "Первые шаги в мир технологий: робототехника для детей 4–6 лет в детском центре «Crno-bela mačka» (Дорчол). Занятия идут по субботам в 13:30, продолжительность 50 минут. Первое пробное занятие — бесплатно. Запись — через директ или по ссылке в шапке Instagram центра.",
+      "date": null,
+      "wd": [
+        5
+      ],
+      "time": "13:30",
+      "dur": "50 минут",
+      "place": "Crno-bela mačka",
+      "address": "Миће Поповића 1, Стари Град, Белград",
+      "age": [
+        4,
+        6
+      ],
+      "ageLabel": "4–6 лет",
+      "price": "первое пробное — бесплатно",
+      "image": null,
+      "category": "robotics",
+      "categoryLabel": "Робототехника",
+      "source": {
+        "id": "crnobelamacka",
+        "name": "Crno-bela mačka",
+        "kind": "Расписание студии",
+        "url": "https://www.instagram.com/p/Dev--5XjSjN/",
+        "cta": "Запись — через директ или ссылку в шапке Instagram"
+      },
+      "placePhone": null,
+      "placeLink": null,
+      "lat": null,
+      "lng": null
+    },
+    {
+      "id": "crnobelamacka-robototehnika-5-9-sb-1430",
+      "title": "Робототехника",
+      "short": "Робототехника для детей 5–9 лет в «Crno-bela mačka», по субботам в 14:30.",
+      "desc": "Робототехника для детей 5–9 лет в детском центре «Crno-bela mačka» (Дорчол). Занятия идут по субботам в 14:30, продолжительность 50 минут. Первое пробное занятие — бесплатно. Запись — через директ или по ссылке в шапке Instagram центра.",
+      "date": null,
+      "wd": [
+        5
+      ],
+      "time": "14:30",
+      "dur": "50 минут",
+      "place": "Crno-bela mačka",
+      "address": "Миће Поповића 1, Стари Град, Белград",
+      "age": [
+        5,
+        9
+      ],
+      "ageLabel": "5–9 лет",
+      "price": "первое пробное — бесплатно",
+      "image": null,
+      "category": "robotics",
+      "categoryLabel": "Робототехника",
+      "source": {
+        "id": "crnobelamacka",
+        "name": "Crno-bela mačka",
+        "kind": "Расписание студии",
+        "url": "https://www.instagram.com/p/Dev--5XjSjN/",
+        "cta": "Запись — через директ или ссылку в шапке Instagram"
+      },
+      "placePhone": null,
+      "placeLink": null,
+      "lat": null,
+      "lng": null
+    },
+    {
+      "id": "crnobelamacka-russkiy-3-4-kl-sb-1430",
+      "title": "Русский язык и литературное чтение (3–4 класс)",
+      "short": "Русский язык и литературное чтение, уровень знаний 3–4 класса в «Crno-bela mačka», по субботам в 14:30.",
+      "desc": "Русский язык и литературное чтение, уровень знаний 3–4 класса в детском центре «Crno-bela mačka» (Дорчол). Занятия идут по субботам в 14:30, продолжительность 1 час. Первое пробное занятие — бесплатно. Запись — через директ или по ссылке в шапке Instagram центра.",
+      "date": null,
+      "wd": [
+        5
+      ],
+      "time": "14:30",
+      "dur": "1 час",
+      "place": "Crno-bela mačka",
+      "address": "Миће Поповића 1, Стари Град, Белград",
+      "age": [
+        9,
+        11
+      ],
+      "ageLabel": "уровень 3–4 класса",
+      "price": "первое пробное — бесплатно",
+      "image": null,
+      "category": "languages",
+      "categoryLabel": "Языки",
+      "source": {
+        "id": "crnobelamacka",
+        "name": "Crno-bela mačka",
+        "kind": "Расписание студии",
+        "url": "https://www.instagram.com/p/Dev--5XjSjN/",
+        "cta": "Запись — через директ или ссылку в шапке Instagram"
+      },
+      "placePhone": null,
+      "placeLink": null,
+      "lat": null,
+      "lng": null
+    },
+    {
+      "id": "crnobelamacka-russkiy-1-2-kl-sb-1540",
+      "title": "Русский язык и литературное чтение (1–2 класс)",
+      "short": "Русский язык и литературное чтение, уровень знаний 1–2 класса в «Crno-bela mačka», по субботам в 15:40.",
+      "desc": "Русский язык и литературное чтение, уровень знаний 1–2 класса в детском центре «Crno-bela mačka» (Дорчол). Занятия идут по субботам в 15:40, продолжительность 1 час. Первое пробное занятие — бесплатно. Запись — через директ или по ссылке в шапке Instagram центра.",
+      "date": null,
+      "wd": [
+        5
+      ],
+      "time": "15:40",
+      "dur": "1 час",
+      "place": "Crno-bela mačka",
+      "address": "Миће Поповића 1, Стари Град, Белград",
+      "age": [
+        7,
+        9
+      ],
+      "ageLabel": "уровень 1–2 класса",
+      "price": "первое пробное — бесплатно",
+      "image": null,
+      "category": "languages",
+      "categoryLabel": "Языки",
+      "source": {
+        "id": "crnobelamacka",
+        "name": "Crno-bela mačka",
+        "kind": "Расписание студии",
+        "url": "https://www.instagram.com/p/Dev--5XjSjN/",
+        "cta": "Запись — через директ или ссылку в шапке Instagram"
+      },
+      "placePhone": null,
+      "placeLink": null,
+      "lat": null,
+      "lng": null
+    },
+    {
+      "id": "crnobelamacka-tvorcheskaya-studiya-55-12-sb-1530",
+      "title": "Творческая студия",
+      "short": "Творческая студия: место, где идеи воплощаются в жизнь, для детей 5,5–12 лет в «Crno-bela mačka», по субботам в 15:30.",
+      "desc": "Творческая студия: место, где идеи воплощаются в жизнь, для детей 5,5–12 лет в детском центре «Crno-bela mačka» (Дорчол). Занятия идут по субботам в 15:30, продолжительность 1 час. Первое пробное занятие — бесплатно. Запись — через директ или по ссылке в шапке Instagram центра.",
+      "date": null,
+      "wd": [
+        5
+      ],
+      "time": "15:30",
+      "dur": "1 час",
+      "place": "Crno-bela mačka",
+      "address": "Миће Поповића 1, Стари Град, Белград",
+      "age": [
+        5,
+        12
+      ],
+      "ageLabel": "5,5–12 лет",
+      "price": "первое пробное — бесплатно",
+      "image": null,
+      "category": "art",
+      "categoryLabel": "Творчество",
+      "source": {
+        "id": "crnobelamacka",
+        "name": "Crno-bela mačka",
+        "kind": "Расписание студии",
+        "url": "https://www.instagram.com/p/Dev--5XjSjN/",
+        "cta": "Запись — через директ или ссылку в шапке Instagram"
+      },
+      "placePhone": null,
+      "placeLink": null,
+      "lat": null,
+      "lng": null
+    },
+    {
+      "id": "crnobelamacka-serbskiy-s-nositelem-8-15-vs-1300",
+      "title": "Сербский язык с носителем",
+      "short": "Сербский язык с носителем для детей 8–15 лет в «Crno-bela mačka», по воскресеньям в 13:00.",
+      "desc": "Сербский язык с носителем для детей 8–15 лет в детском центре «Crno-bela mačka» (Дорчол). Занятия идут по воскресеньям в 13:00, продолжительность 1 час. Первое пробное занятие — бесплатно. Запись — через директ или по ссылке в шапке Instagram центра.",
+      "date": null,
+      "wd": [
+        6
+      ],
+      "time": "13:00",
+      "dur": "1 час",
+      "place": "Crno-bela mačka",
+      "address": "Миће Поповића 1, Стари Град, Белград",
+      "age": [
+        8,
+        15
+      ],
+      "ageLabel": "8–15 лет",
+      "price": "первое пробное — бесплатно",
+      "image": null,
+      "category": "languages",
+      "categoryLabel": "Языки",
+      "source": {
+        "id": "crnobelamacka",
+        "name": "Crno-bela mačka",
+        "kind": "Расписание студии",
+        "url": "https://www.instagram.com/p/Dev--5XjSjN/",
+        "cta": "Запись — через директ или ссылку в шапке Instagram"
+      },
+      "placePhone": null,
+      "placeLink": null,
+      "lat": null,
+      "lng": null
+    },
+    {
+      "id": "crnobelamacka-tvorcheskaya-lepka-8-15-vs-1410",
+      "title": "Творческая лепка",
+      "short": "Творческая лепка для детей 8–15 лет в «Crno-bela mačka», по воскресеньям в 14:10.",
+      "desc": "Творческая лепка для детей 8–15 лет в детском центре «Crno-bela mačka» (Дорчол). Занятия идут по воскресеньям в 14:10, продолжительность 1 час. Первое пробное занятие — бесплатно. Запись — через директ или по ссылке в шапке Instagram центра.",
+      "date": null,
+      "wd": [
+        6
+      ],
+      "time": "14:10",
+      "dur": "1 час",
+      "place": "Crno-bela mačka",
+      "address": "Миће Поповића 1, Стари Град, Белград",
+      "age": [
+        8,
+        15
+      ],
+      "ageLabel": "8–15 лет",
+      "price": "первое пробное — бесплатно",
+      "image": null,
+      "category": "art",
+      "categoryLabel": "Творчество",
+      "source": {
+        "id": "crnobelamacka",
+        "name": "Crno-bela mačka",
+        "kind": "Расписание студии",
+        "url": "https://www.instagram.com/p/Dev--5XjSjN/",
+        "cta": "Запись — через директ или ссылку в шапке Instagram"
       },
       "placePhone": null,
       "placeLink": null,
