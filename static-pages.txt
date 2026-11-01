@@ -3,7 +3,6 @@ art-light-kids-tsentr
 art-light-kids-vrachar
 avr-swim-palilula
 avr-swim-vrachar
-bela-vrana
 besmart
 crno-bela-ma-ka
 domik-u-mashi
@@ -27,11 +26,9 @@ mostik
 muze-africhke-umetnosti
 muze-nikole-tesle
 narodno-pozorishte
-narodnyy-muzey-serbii
 nashe-mesto-novyy-belgrad
 nashe-mesto-vrachar
 one-step-dance-studio
-palata-nauke
 pan-teatar
 prodlenka
 prosto-r
