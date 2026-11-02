@@ -5,7 +5,6 @@ avr-swim-palilula
 avr-swim-vrachar
 besmart
 crno-bela-ma-ka
-domik-u-mashi
 enter
 future-deti
 hobbit-house
@@ -17,7 +16,6 @@ kinder-garden
 laboratoriya
 lav-i-zhabats
 london-gates
-lozhionitsa
 ludwig-land
 lumos
 malo-pozorishte-dushko-radovi
@@ -39,6 +37,4 @@ rollerland
 sreda-kids
 studiya-tantsev-procvat
 swimyou
-teatr-kukol-pinokio
 teatr-puzh
-tsentar-za-kulturu-vlada-div-an
