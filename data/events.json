@@ -1,7 +1,7 @@
 {
   "updatedAt": "2026-11-03T11:52:35.580Z",
   "city": "Белград",
-  "count": 514,
+  "count": 522,
   "report": [
     {
       "source": "prodlenka",
@@ -1163,9 +1163,9 @@
     },
     {
       "id": "crnobelamacka-imeninnyj-pirog-dlya-findusa-2026-11-08",
-      "title": "Спектакль «Именинный пирог для Финдуса»",
-      "short": "Спектакль для детей от 4 лет в центре «Crno-bela mačka»",
-      "desc": "Спектакль «Именинный пирог для Финдуса» для детей от 4 лет в центре «Crno-bela mačka». Воскресенье, 18:00. Вопросы, подробности и покупка билета — у @crnobela_macka.",
+      "title": "Читакль «Именинный пирог»",
+      "short": "Живое чтение сказки с элементами театра для детей от 4 лет в центре «Crno-bela mačka»",
+      "desc": "Сказочный вечер в центре «Crno-bela mačka»: трогательный и уютный читакль «Именинный пирог» — живое, атмосферное чтение сказки с элементами театра, которое завораживает с первых минут. Возраст 4+ (можно и чуть младше, если малыш готов посидеть и послушать историю). Билеты — 1000 динар детский и 1000 динар взрослый, покупаются заранее в центре. Вопросы — у @crnobela_macka.",
       "date": "2026-11-08",
       "wd": null,
       "time": "18:00",
@@ -1181,16 +1181,16 @@
         12
       ],
       "ageLabel": "4+ лет",
-      "price": "1000 дин",
-      "image": "data/images/crnobelamacka-findus.jpg",
+      "price": "1000 дин — детский, 1000 дин — взрослый (билеты заранее в центре)",
+      "image": "data/images/crnobelamacka-imeninnyj-pirog.jpg",
       "category": "theatre",
       "categoryLabel": "Спектакли",
       "source": {
         "id": "crnobelamacka",
-        "cta": "Билеты: @crnobela_macka",
-        "url": "https://t.me/crnobela_macka",
+        "name": "Crno-bela mačka",
         "kind": "Контакт площадки",
-        "name": "Crno-bela mačka"
+        "url": "https://t.me/crnobela_macka",
+        "cta": "Билеты в центре, вопросы: @crnobela_macka"
       }
     },
     {
@@ -17411,6 +17411,262 @@
         "url": "https://t.me/kidspsy_maria_sidorkina/83",
         "cta": "Записаться у @minortanya"
       }
+    },
+    {
+      "id": "chemodan-mu-i-kar-2026-11-14",
+      "title": "Спектакль «Му и Кар. История одной дружбы»",
+      "short": "Спектакль Čemodan Theatre по мотивам шведских книг о Маме Му и Вороне: история дружбы двух совершенно разных героев",
+      "desc": "Спектакль по мотивам шведских книг о Маме Му и Вороне — история о дружбе двух совершенно разных героев и их удивительных приключениях. Спектакль с элементами интерактива: после него дети знакомятся с героями поближе. 4+. Детский билет 1500 дин; родители, братья и сёстры — 1000 дин за билет. Запись у @darja_theater.",
+      "date": "2026-11-14",
+      "time": "11:00",
+      "dur": "40 минут",
+      "place": "Ludwig Land",
+      "address": "Светогорска 46, Стари Град, Београд",
+      "age": [
+        4,
+        12
+      ],
+      "ageLabel": "4+ лет",
+      "price": "1500 дин — детский билет, 1000 дин — взрослые и братья/сёстры",
+      "image": "data/images/chemodan-mu-i-kar.jpg",
+      "category": "theatre",
+      "categoryLabel": "Спектакли",
+      "source": {
+        "id": "chemodan",
+        "name": "Čemodan Theatre",
+        "kind": "Телеграм-канал Čemodan Theatre",
+        "url": "https://t.me/chemodan_theater/87",
+        "cta": "Запись: @darja_theater"
+      },
+      "wd": null,
+      "placePhone": null,
+      "placeLink": null,
+      "lat": null,
+      "lng": null
+    },
+    {
+      "id": "chemodan-pesn-kitov-2026-11-21",
+      "title": "Спектакль «Песнь китов»",
+      "short": "Атмосферная морская сказка Čemodan Theatre, навеянная кельтскими легендами: путешествие по подводному миру",
+      "desc": "«Песнь китов» — атмосферная морская сказка, навеянная кельтскими легендами. Можно отправиться в путешествие по подводному миру, где ждут величественные киты и настоящая магия океана. 4+. Детский билет 1500 дин; родители, братья и сёстры — 1000 дин за билет. Запись у @darja_theater.",
+      "date": "2026-11-21",
+      "time": "11:00",
+      "dur": "45 минут",
+      "place": "Ludwig Land",
+      "address": "Светогорска 46, Стари Град, Београд",
+      "age": [
+        4,
+        12
+      ],
+      "ageLabel": "4+ лет",
+      "price": "1500 дин — детский билет, 1000 дин — взрослые и братья/сёстры",
+      "image": "data/images/chemodan-noyabr.jpg",
+      "category": "theatre",
+      "categoryLabel": "Спектакли",
+      "source": {
+        "id": "chemodan",
+        "name": "Čemodan Theatre",
+        "kind": "Телеграм-канал Čemodan Theatre",
+        "url": "https://t.me/chemodan_theater/87",
+        "cta": "Запись: @darja_theater"
+      },
+      "wd": null,
+      "placePhone": null,
+      "placeLink": null,
+      "lat": null,
+      "lng": null
+    },
+    {
+      "id": "chemodan-prazdnik-fonarikov-2026-11-27",
+      "title": "Праздник фонариков. Вечер света и добра",
+      "short": "Теневая сказка от волшебных гномов, игры и мастер-класс для детей 4–8 лет в Čemodan Theatre",
+      "desc": "«Праздник фонариков. Вечер света и добра» для детей 4–8 лет: теневая сказка от волшебных гномов, игры и мастер-класс. Вместе с гномами дети отправятся в сказочное путешествие. Пятница, 18:00–19:30. Детский билет 2400 дин, родители — 1000 дин. Запись у @darja_theater.",
+      "date": "2026-11-27",
+      "time": "18:00",
+      "dur": "1 час 30 минут",
+      "place": "Ludwig Land",
+      "address": "Светогорска 46, Стари Град, Београд",
+      "age": [
+        4,
+        8
+      ],
+      "ageLabel": "4–8 лет",
+      "price": "2400 дин — детский билет, 1000 дин — родители",
+      "image": "data/images/chemodan-noyabr.jpg",
+      "category": "theatre",
+      "categoryLabel": "Спектакли",
+      "source": {
+        "id": "chemodan",
+        "name": "Čemodan Theatre",
+        "kind": "Телеграм-канал Čemodan Theatre",
+        "url": "https://t.me/chemodan_theater/87",
+        "cta": "Запись: @darja_theater"
+      },
+      "wd": null,
+      "placePhone": null,
+      "placeLink": null,
+      "lat": null,
+      "lng": null
+    },
+    {
+      "id": "enter-uhod-za-novorozhdennym-2026-11-07",
+      "title": "Мастер-класс «Как ухаживать за новорождённым и ничего не бояться»",
+      "short": "Практический мастер-класс педиатра Кристины Токмаковой для будущих и недавних родителей: уход, гигиена, кормление",
+      "desc": "Практический мастер-класс с педиатром и детским эндокринологом Кристиной Токмаковой для будущих родителей и тех, у кого недавно появился малыш. В программе: уход и гигиена — как держать, купать, подмывать и пеленать малыша, ухаживать за носиком и ушками; кормление — как готовить смесь, прикладывать к груди и кормить из бутылочки. Практика на кукле и вопросы врачу. С младенцами тоже можно. Длительность 2 часа. Стоимость 2000 RSD за одного, 3000 RSD за пару. Запись на сайте Enter.",
+      "date": "2026-11-07",
+      "time": "17:30",
+      "dur": "2 часа",
+      "place": "Enter",
+      "address": "Ресавска 34, Врачар, Белград",
+      "age": [
+        0,
+        99
+      ],
+      "ageLabel": "для родителей",
+      "price": "2000 дин за одного, 3000 дин за пару",
+      "image": "data/images/enter-uhod-za-novorozhdennym.jpg",
+      "category": null,
+      "categoryLabel": null,
+      "source": {
+        "id": "enter",
+        "name": "Enter",
+        "kind": "Телеграм-канал Enter",
+        "url": "https://enterspace.rs/#rec2485645783",
+        "cta": "Записаться на сайте Enter"
+      },
+      "wd": null,
+      "placePhone": null,
+      "placeLink": null,
+      "lat": null,
+      "lng": null
+    },
+    {
+      "id": "ckvladadivljan-pokahontas-2026-11-08",
+      "title": "Спектакль «Покахонтас»",
+      "short": "Волшебная и смешная история о любви, дружбе и поиске счастья — бесплатный спектакль для детей 2–10 лет",
+      "desc": "Спектакль для детей «Покахонтас» в Центре культуры «Влада Дивљан» — волшебная и смешная история о любви, дружбе и поиске счастья. Она напоминает, что не нужно судить о людях по внешности, а лучше смотреть сердцем и замечать в каждом хорошее. Для детей от 2 до 10 лет. Билеты бесплатные: раздача 5 и 6 ноября в кассе Центра с 10:00 до 18:00.",
+      "date": "2026-11-08",
+      "time": "17:00",
+      "dur": "1 час",
+      "place": "Центар за културу „Влада Дивљан“",
+      "address": "Митрополита Петра 8, Палилула, Белград",
+      "age": [
+        2,
+        10
+      ],
+      "ageLabel": "2–10 лет",
+      "price": "бесплатно",
+      "image": "data/images/vladadivljan-pokahontas.jpg",
+      "category": "theatre",
+      "categoryLabel": "Спектакли",
+      "source": {
+        "id": "ckvladadivljan",
+        "name": "Центр культуры «Влада Дивљан»",
+        "kind": "Анонс в «Мама, куда идём»",
+        "url": "https://t.me/mamakudaidem/2745",
+        "cta": "Бесплатные билеты в кассе 5–6.11"
+      },
+      "wd": null,
+      "placePhone": null,
+      "placeLink": null,
+      "lat": null,
+      "lng": null
+    },
+    {
+      "id": "rollerland-swap-handmade-2026-11-14",
+      "title": "Большой SWAP и детский Handmade Market в Roller Land",
+      "short": "Обмен вещами и игрушками без денег, а рядом юные мастера продают свои работы — вход бесплатный",
+      "desc": "Большой SWAP в Roller Land: приглашаем детей и взрослых на большой обмен вещами. Приносите то, чем больше не пользуетесь, — детскую и взрослую одежду, технику, предметы для дома, игрушки в хорошем состоянии — и забирайте то, что понравилось. Без покупок и продаж, просто обмен. Вещи для SWAP нужно принести в Roller Land заранее, в любой день до 12 ноября включительно. Параллельно пройдёт детский Handmade Market, где юные мастера смогут представить и продать свои работы. Вход и участие бесплатные. Подробности: +381 62 102 3286 или @RollerLandBG.",
+      "date": "2026-11-14",
+      "time": "12:00",
+      "dur": "4 часа",
+      "place": "RollerLand",
+      "address": "Milana Rakića 114, Звездара, Белград",
+      "age": [
+        0,
+        99
+      ],
+      "ageLabel": "для всей семьи",
+      "price": "бесплатно",
+      "image": "data/images/rollerland-swap-14-11.jpg",
+      "category": null,
+      "categoryLabel": null,
+      "source": {
+        "id": "rollerland",
+        "name": "RollerLand",
+        "kind": "Контакт площадки",
+        "url": "https://t.me/RollerLandBG",
+        "cta": "Подробности: +381 62 102 3286, @RollerLandBG"
+      },
+      "wd": null,
+      "placePhone": null,
+      "placeLink": null,
+      "lat": null,
+      "lng": null
+    },
+    {
+      "id": "mtsdvorana-kot-v-shlyape-2026-11-07",
+      "title": "Выходные к фильму «Кот в шляпе»: мастерские и аквагрим",
+      "short": "Творческие мастерские и аквагрим перед показами мультфильма «Кот в шляпе» в кинотеатре MTS Dvorana",
+      "desc": "К показу анимационного фильма «Кот в шляпе» в кинотеатре MTS Dvorana готовят выходные, полные развлечений для всей семьи. В субботу с 12:00 до 16:00 — творческие мастерские и аквагрим. Для всех посетителей подготовлены подарки. Цена и расписание сеансов — на сайте и в Instagram кинотеатра.",
+      "date": "2026-11-07",
+      "time": "12:00",
+      "dur": "4 часа",
+      "place": "MTS Dvorana",
+      "address": "Дечанска 14, Стари Град, Белград",
+      "age": [
+        0,
+        99
+      ],
+      "ageLabel": "для всей семьи",
+      "price": "уточняется",
+      "image": "data/images/mtsdvorana-kot-v-shlyape.jpg",
+      "category": null,
+      "categoryLabel": null,
+      "source": {
+        "id": "mtsdvorana",
+        "name": "MTS Dvorana",
+        "kind": "Instagram кинотеатра",
+        "url": "https://www.instagram.com/mtsdvorana/",
+        "cta": "Подробности в Instagram MTS Dvorana"
+      },
+      "wd": null,
+      "placePhone": null,
+      "placeLink": null,
+      "lat": null,
+      "lng": null
+    },
+    {
+      "id": "mtsdvorana-kot-v-shlyape-2026-11-08",
+      "title": "Выходные к фильму «Кот в шляпе»: мастерские и аквагрим",
+      "short": "Творческие мастерские и аквагрим перед показами мультфильма «Кот в шляпе» в кинотеатре MTS Dvorana",
+      "desc": "К показу анимационного фильма «Кот в шляпе» в кинотеатре MTS Dvorana готовят выходные, полные развлечений для всей семьи. В воскресенье с 12:00 до 16:00 — творческие мастерские и аквагрим. Для всех посетителей подготовлены подарки. Цена и расписание сеансов — на сайте и в Instagram кинотеатра.",
+      "date": "2026-11-08",
+      "time": "12:00",
+      "dur": "4 часа",
+      "place": "MTS Dvorana",
+      "address": "Дечанска 14, Стари Град, Белград",
+      "age": [
+        0,
+        99
+      ],
+      "ageLabel": "для всей семьи",
+      "price": "уточняется",
+      "image": "data/images/mtsdvorana-kot-v-shlyape.jpg",
+      "category": null,
+      "categoryLabel": null,
+      "source": {
+        "id": "mtsdvorana",
+        "name": "MTS Dvorana",
+        "kind": "Instagram кинотеатра",
+        "url": "https://www.instagram.com/mtsdvorana/",
+        "cta": "Подробности в Instagram MTS Dvorana"
+      },
+      "wd": null,
+      "placePhone": null,
+      "placeLink": null,
+      "lat": null,
+      "lng": null
     }
   ]
 }
