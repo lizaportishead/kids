@@ -1,7 +1,7 @@
 {
   "updatedAt": "2026-11-03T11:52:35.580Z",
   "city": "Белград",
-  "count": 522,
+  "count": 523,
   "report": [
     {
       "source": "prodlenka",
@@ -17667,6 +17667,38 @@
       "placeLink": null,
       "lat": null,
       "lng": null
+    },
+    {
+      "id": "sreda-razgovor-veshchey-2026-11-13",
+      "title": "Кукольный спектакль «Разговор вещей»",
+      "short": "Интерактивный кукольный спектакль по сказкам Е. Клюева для детей от 2,5 лет и мастер-класс «Браслет единства». 13 ноября в 17:00.",
+      "desc": "Интерактивный кукольный спектакль по мотивам сказок Е. Клюева: оживают Стол, Стул, поющая Ложка, Чашка и Часы, а когда пропадает Тарелочка, предметы вместе отправляются на поиски. Маленькие зрители помогают героям, играют и танцуют вместе с ними. В завершение — творческий мастер-класс «Браслет единства». Запись в Direct или по телефону +381 61 158 5403.",
+      "date": "2026-11-13",
+      "wd": null,
+      "time": "17:00",
+      "dur": "1 час 30 минут",
+      "place": "Sreda Kids",
+      "address": "Стари Град, Косовска 32",
+      "placePhone": null,
+      "placeLink": null,
+      "lat": null,
+      "lng": null,
+      "age": [
+        2,
+        6
+      ],
+      "ageLabel": "2,5+ лет",
+      "price": "1500 RSD",
+      "image": "data/images/sreda-razgovor-veshchey.jpg",
+      "category": "theatre",
+      "categoryLabel": "Спектакли",
+      "source": {
+        "id": "sreda-kids",
+        "cta": "Записаться в Direct или по телефону",
+        "url": "https://www.instagram.com/p/DfSUJNwtJFq/",
+        "kind": "Instagram Sreda Kids",
+        "name": "Sreda Kids"
+      }
     }
   ]
 }
