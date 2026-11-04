@@ -21,6 +21,7 @@ lumos
 malo-pozorishte-dushko-radovi
 mathline
 mostik
+mts-dvorana
 muze-africhke-umetnosti
 muze-nikole-tesle
 narodno-pozorishte
@@ -38,3 +39,4 @@ sreda-kids
 studiya-tantsev-procvat
 swimyou
 teatr-puzh
+tsentar-za-kulturu-vlada-div-an
