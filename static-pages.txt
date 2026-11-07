@@ -24,6 +24,7 @@ mostik
 mts-dvorana
 muze-africhke-umetnosti
 muze-nikole-tesle
+muze-ugoslavi-e
 narodno-pozorishte
 nashe-mesto-novyy-belgrad
 nashe-mesto-vrachar
@@ -39,4 +40,5 @@ sreda-kids
 studiya-tantsev-procvat
 swimyou
 teatr-puzh
+teatr-zmay
 tsentar-za-kulturu-vlada-div-an
