@@ -1,7 +1,7 @@
 {
   "updatedAt": "2026-11-08T11:14:12.656Z",
   "city": "Белград",
-  "count": 551,
+  "count": 553,
   "report": [
     {
       "source": "prodlenka",
@@ -18598,6 +18598,70 @@
         "url": "https://t.me/enterfamily/446",
         "kind": "Телеграм-канал Enter",
         "name": "Enter"
+      },
+      "wd": null,
+      "placePhone": null,
+      "placeLink": null,
+      "lat": null,
+      "lng": null
+    },
+    {
+      "id": "narodnimuzej-potraga-za-bojama-2026-11-14",
+      "title": "Мастерская «Поиски красок»",
+      "short": "Дети с родителями ищут краски в произведениях постоянной экспозиции и рисуют свои работы",
+      "desc": "Мастерская для детей 5–7 лет в Народном музее Сербии. Во время обхода постоянной экспозиции дети вместе с родителями будут искать любимые цвета в произведениях искусства и узнавать, как художники передавали с их помощью окружающий мир. Затем — практическая часть: участники рисуют и создают собственные работы. Ребёнок приходит в сопровождении родителя. Запись обязательна по e-mail radionice@narodnimuzej.rs и действует только после ответа-подтверждения музея.",
+      "date": "2026-11-14",
+      "time": "13:00",
+      "dur": "1 час",
+      "place": "Народный музей Сербии",
+      "address": "Трг републике 1а, Белград",
+      "age": [
+        5,
+        7
+      ],
+      "ageLabel": "5–7 лет",
+      "price": "уточняется",
+      "image": "data/images/narodnimuzej-potraga-za-bojama.jpg",
+      "category": "art",
+      "categoryLabel": "Творчество",
+      "source": {
+        "id": "decijigrad",
+        "name": "Dečiji grad",
+        "kind": "Афиша «Dečiji grad»",
+        "url": "https://www.decijigrad.rs/dogadjaji/radionica-za-decu-potraga-za-bojama/",
+        "cta": "Подробнее (запись по e-mail)"
+      },
+      "wd": null,
+      "placePhone": null,
+      "placeLink": null,
+      "lat": null,
+      "lng": null
+    },
+    {
+      "id": "narodnimuzej-lepenski-vir-2026-11-21",
+      "title": "Мастерская «Тайна Лепенски-Вира»",
+      "short": "Дети узнают о знаменитом доисторическом поселении Лепенски-Вир: скульптуры, дома, жизнь людей",
+      "desc": "Мастерская для детей 7–10 лет в Народном музее Сербии. Юные участники познакомятся с одним из самых значимых и уникальных памятников ранней доисторической эпохи — археологическим местом Лепенски-Вир: что изображали скульптуры, как жили люди и какие дома они строили. Ведёт музейный советник Ивана Минич. Запись обязательна по e-mail radionice@narodnimuzej.rs и действует только после ответа-подтверждения музея.",
+      "date": "2026-11-21",
+      "time": "13:00",
+      "dur": "1 час 30 минут",
+      "place": "Народный музей Сербии",
+      "address": "Трг републике 1а, Белград",
+      "age": [
+        7,
+        10
+      ],
+      "ageLabel": "7–10 лет",
+      "price": "уточняется",
+      "image": "data/images/narodnimuzej-lepenski-vir.jpg",
+      "category": null,
+      "categoryLabel": null,
+      "source": {
+        "id": "decijigrad",
+        "name": "Dečiji grad",
+        "kind": "Афиша «Dečiji grad»",
+        "url": "https://www.decijigrad.rs/dogadjaji/radionica-za-decu-tajna-lepenskog-vira/",
+        "cta": "Подробнее (запись по e-mail)"
       },
       "wd": null,
       "placePhone": null,
