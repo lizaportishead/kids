@@ -21,11 +21,10 @@ lumos
 malo-pozorishte-dushko-radovi
 mathline
 mostik
-mts-dvorana
 muze-africhke-umetnosti
 muze-nikole-tesle
-muze-ugoslavi-e
 narodno-pozorishte
+narodnyy-muzey-serbii
 nashe-mesto-novyy-belgrad
 nashe-mesto-vrachar
 one-step-dance-studio
@@ -40,5 +39,3 @@ sreda-kids
 studiya-tantsev-procvat
 swimyou
 teatr-puzh
-teatr-zmay
-tsentar-za-kulturu-vlada-div-an
