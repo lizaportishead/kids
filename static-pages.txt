@@ -3,6 +3,7 @@ art-light-kids-tsentr
 art-light-kids-vrachar
 avr-swim-palilula
 avr-swim-vrachar
+bela-vrana
 besmart
 crno-bela-ma-ka
 enter
