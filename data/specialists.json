@@ -51,8 +51,11 @@
       "channel": null,
       "phone": null,
       "site": null,
-      "address": null,
-      "geo": null,
+      "address": "Luke Ćelovića Trebinjca 13, 11000 Beograd",
+      "geo": [
+        44.8052932,
+        20.4528848
+      ],
       "status": "approved",
       "sort": 20,
       "created_at": "2026-11-17T11:35:07.256756+00:00",
