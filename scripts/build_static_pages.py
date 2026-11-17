@@ -38,12 +38,12 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 SITE = "https://klubok.kids"
-OWNED_DIRS = ("venues", "category", "kruzhki", "blog", "events", "schedule", "favs")
+OWNED_DIRS = ("venues", "category", "kruzhki", "blog", "events", "schedule", "favs", "privacy", "terms", "cookies")
 MANIFEST = ROOT / "static-pages.txt"
 # Каталоги в корне сайта, которые нельзя занимать под slug площадки.
 RESERVED = {"en", "sr", "data", "docs", "db", "collector", "scripts", "supabase", "scratch",
             "venues", "category", "events", "assets", "kids", "api", "static",
-            "schedule", "favs", "afisha", "event", "venue", "kruzhki", "blog", "articles"}
+            "schedule", "favs", "privacy", "terms", "cookies", "afisha", "event", "venue", "kruzhki", "blog", "articles"}
 
 WEEKDAYS = ["Понедельник", "Вторник", "Среда", "Четверг", "Пятница", "Суббота", "Воскресенье"]
 WEEKDAYS_SHORT = ["пн", "вт", "ср", "чт", "пт", "сб", "вс"]
@@ -152,7 +152,7 @@ ol.check li::before{content:counter(c);position:absolute;left:0;top:1px;width:26
 .post.big h3{font-size:28px}.post.big .pb{padding:28px;justify-content:center}.post.big p{font-size:16px}
 @media(max-width:760px){.post.big{display:flex}.post.big img{aspect-ratio:16/9;min-height:0}.post.big h3{font-size:22px}.post.big .pb{padding:16px 18px 18px}}
 .foot{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:14px 24px;margin-top:24px;padding:22px 28px 16px;background:radial-gradient(1270px 1257px at 4.04% 6.11%,rgba(197,250,139,.6) 0%,rgba(237,241,243,.6) 50%,rgba(255,243,186,.6) 100%),#fff;border-top:1px solid #ebe0ca;font-size:13px;line-height:20px;color:#6d6357}
-.foot .fl{display:flex;flex-direction:column;gap:6px;min-width:0}.foot .fa{display:flex;gap:16px}.foot .fa a{font-weight:500;text-decoration:underline;text-underline-offset:2px;padding:2px 0}
+.foot .fl{display:flex;flex-direction:column;gap:6px;min-width:0}.foot .fa{display:flex;gap:6px 16px;flex-wrap:wrap}.foot .fa a{font-weight:500;text-decoration:underline;text-underline-offset:2px;padding:2px 0}
 .friend{display:flex;align-items:center;gap:10px;padding:6px 14px 6px 6px;border-radius:8px;background:#fff;border:1px solid #ebe0ca;text-decoration:none}
 .friend img{width:36px;height:36px;border-radius:6px;object-fit:cover;display:block}.friend span{display:flex;flex-direction:column;gap:1px}
 .friend small{font-size:12px;font-weight:500;color:#9a8d79}.friend b{font-size:13px;font-weight:600;color:#35312c}
@@ -534,15 +534,7 @@ def page(path, title, description, body, canonical_path, image=None, jsonld=None
     out.write_text(f"""<!DOCTYPE html>
 <html lang="ru">
 <head>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-7WVH2BQ1K6"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){{dataLayer.push(arguments);}}
-  gtag('js', new Date());
-
-  gtag('config', 'G-7WVH2BQ1K6');
-</script>
+<script src="/consent.js"></script>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{esc(title)}</title>
@@ -574,7 +566,7 @@ def page(path, title, description, body, canonical_path, image=None, jsonld=None
 {body}
 <footer class="foot">
 <div class="fl"><span>Расписание обновлено {BUILT}</span>
-<span class="fa"><a href="/blog/">Блог</a><a href="https://t.me/liza_portishead" target="_blank" rel="noopener">Обратная связь</a></span></div>
+<span class="fa"><a href="/blog/">Блог</a><a href="https://t.me/liza_portishead" target="_blank" rel="noopener">Обратная связь</a><a href="/privacy/">Конфиденциальность</a><a href="/terms/">Условия</a><a href="/cookies/">Cookie</a><a href="#" onclick="window.klubokConsentReset&&klubokConsentReset();return false">Настройки cookie</a></span></div>
 <a class="friend" href="https://t.me/mamakudaidem" target="_blank" rel="noopener"><img src="/data/images/friend-mamakudaidem.jpg" alt="Мама, куда идём сегодня?" width="36" height="36">
 <span><small>Советуем telegram-канал</small><b>Мама, куда идём сегодня?</b></span></a>
 </footer>
@@ -589,15 +581,7 @@ def redirect(path, to):
     out.parent.mkdir(parents=True, exist_ok=True)
     out.write_text(f"""<!DOCTYPE html>
 <html lang="ru"><head>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-7WVH2BQ1K6"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){{dataLayer.push(arguments);}}
-  gtag('js', new Date());
-
-  gtag('config', 'G-7WVH2BQ1K6');
-</script>
+<script src="/consent.js"></script>
 <meta charset="utf-8"><title>Клубок</title>
 <meta name="robots" content="noindex, follow"><link rel="canonical" href="{SITE}{to}">
 <meta http-equiv="refresh" content="0; url={to}"><script>location.replace("{to}")</script></head>
@@ -1137,6 +1121,17 @@ def main():
     page("favs", "Моё избранное | Клубок", "Сохранённые занятия и события.",
          '<h1>Моё избранное</h1><p class="lead">Сохранённые занятия и события.</p>',
          "/favs/", route={"route": "favs"}, noindex=True)
+
+    # юридические страницы (тексты — scripts/legal/*.html)
+    for slug_, ttl, desc_ in (
+            ("privacy", "Политика конфиденциальности", "Какие данные собирает Клубок, зачем, кому передаёт и как их удалить."),
+            ("terms", "Условия использования", "Условия использования сайта Клубок: информация, ответственность, присланные материалы."),
+            ("cookies", "Cookie и аналитика", "Какие cookie использует Клубок и как отказаться от статистики.")):
+        src_ = (ROOT / "scripts" / "legal" / f"{slug_}.html").read_text(encoding="utf-8")
+        page(slug_, f"{ttl} | Клубок", desc_,
+             f'<article class="article"><h1>{esc(ttl)}</h1><div class="meta">Обновлено 17 ноября 2026</div>{src_}</article>',
+             f"/{slug_}/")
+        urls.append((f"/{slug_}/", "0.3"))
 
     # Любой другой адрес: GitHub Pages отдаёт 404.html, приложение разбирает путь само.
     page("", "Клубок — афиша детских занятий и мероприятий в Белграде",
