@@ -19,13 +19,14 @@ import { collectNashemesto } from './sources/nashemesto.mjs';
 import { collectCrnobelamacka } from './sources/crnobelamacka.mjs';
 import { dedupe, filterEvents } from './lib/normalize.mjs';
 import { saveImage } from './lib/images.mjs';
-import { fetchPublicEvents, pushEvents, supabaseEnabled } from './lib/supabase.mjs';
+import { fetchPublicEvents, fetchSpecialists, pushEvents, supabaseEnabled } from './lib/supabase.mjs';
 import { sendRunReport } from './lib/notify.mjs';
 import { looksRussian, machineTranslate } from './lib/translate.mjs';
 
 const here = dirname(fileURLToPath(import.meta.url));
 const root = resolve(here, '..');
 const OUT = resolve(root, 'data/events.json');
+const OUT_SPECIALISTS = resolve(root, 'data/specialists.json');
 const IMG_DIR = resolve(root, 'data/images');
 
 const RUNNERS = { instagram: collectInstagram, prodlenka: collectProdlenka, enterspace: collectEnterspace, mathline: collectMathline, telegram: collectTelegram, beopinokio: collectBeopinokio, besmart: collectBesmart, pinokio: collectPinokio, panteatar: collectPanteatar, puz: collectPuz, bgf: collectBgf, ckvladadivljan: collectCkvladadivljan, uvcsumice: collectUvcsumice, malopozoriste: collectMalopozoriste, nashemesto: collectNashemesto, crnobelamacka: collectCrnobelamacka };
@@ -133,6 +134,20 @@ if (supabaseEnabled) {
     }
   } catch (err) {
     report.push({ source: 'supabase-mirror', status: 'error', reason: String(err.message || err) });
+  }
+}
+
+// Специалисты: зеркалим таблицу specialists в data/specialists.json (сайт читает его, см. loadSpecialists в index.html).
+// Пустой ответ или ошибка не затирают прошлый файл.
+if (supabaseEnabled) {
+  try {
+    const sp = await fetchSpecialists();
+    if (Array.isArray(sp) && sp.length) {
+      await writeFile(OUT_SPECIALISTS, JSON.stringify({ updatedAt: now.toISOString(), count: sp.length, specialists: sp }, null, 2) + '\n');
+      report.push({ source: 'supabase-specialists', status: 'ok', events: sp.length });
+    }
+  } catch (err) {
+    report.push({ source: 'supabase-specialists', status: 'error', reason: String(err.message || err) });
   }
 }
 

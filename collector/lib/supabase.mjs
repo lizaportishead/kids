@@ -59,3 +59,13 @@ export async function fetchPublicEvents() {
   if (!res.ok) throw new Error('Supabase ' + res.status + ': ' + (await res.text()).slice(0, 300));
   return res.json();
 }
+
+// Специалисты: опубликованные строки таблицы specialists (db/specialists.sql) в порядке sort.
+export async function fetchSpecialists() {
+  if (!supabaseEnabled) return null;
+  const res = await fetch(URL_.replace(/\/$/, '') + '/rest/v1/specialists?select=*&status=eq.approved&order=sort.asc', {
+    headers: { apikey: KEY, Authorization: 'Bearer ' + KEY }
+  });
+  if (!res.ok) throw new Error('Supabase ' + res.status + ': ' + (await res.text()).slice(0, 300));
+  return res.json();
+}
