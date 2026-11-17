@@ -231,8 +231,8 @@
       "site": null,
       "address": "Dubljanska 41, 11000 Beograd",
       "geo": [
-        44.7958354,
-        20.4733622
+        44.7958199,
+        20.4733051
       ],
       "status": "approved",
       "sort": 80,
@@ -1421,8 +1421,8 @@
       "site": "https://www.medigroup.rs/lokacije/dom-zdravlja-medigroup-pozeska/",
       "address": "Med Medik - Панчево, Ђердапска 35, 26000 Панчево",
       "geo": [
-        44.8819016,
-        20.6698568
+        44.8819021,
+        20.6698382
       ],
       "status": "approved",
       "sort": 490,
