@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-17T11:36:42.562546+00:00",
+  "updatedAt": "2026-11-17T13:15:29.980Z",
   "count": 17,
   "specialists": [
     {
@@ -26,7 +26,9 @@
       "address": null,
       "geo": null,
       "status": "approved",
-      "sort": 10
+      "sort": 10,
+      "created_at": "2026-11-17T11:35:07.256756+00:00",
+      "updated_at": "2026-11-17T11:35:07.256756+00:00"
     },
     {
       "id": "sp-svetlana-lavrenova",
@@ -52,7 +54,9 @@
       "address": null,
       "geo": null,
       "status": "approved",
-      "sort": 20
+      "sort": 20,
+      "created_at": "2026-11-17T11:35:07.256756+00:00",
+      "updated_at": "2026-11-17T11:35:07.256756+00:00"
     },
     {
       "id": "sp-emiliya-asainova",
@@ -78,7 +82,9 @@
       "address": null,
       "geo": null,
       "status": "approved",
-      "sort": 30
+      "sort": 30,
+      "created_at": "2026-11-17T11:35:07.256756+00:00",
+      "updated_at": "2026-11-17T11:35:07.256756+00:00"
     },
     {
       "id": "sp-kseniya-yurkanova",
@@ -104,7 +110,9 @@
       "address": null,
       "geo": null,
       "status": "approved",
-      "sort": 40
+      "sort": 40,
+      "created_at": "2026-11-17T11:35:07.256756+00:00",
+      "updated_at": "2026-11-17T11:35:07.256756+00:00"
     },
     {
       "id": "sp-olga-pilyugina",
@@ -130,7 +138,9 @@
       "address": null,
       "geo": null,
       "status": "approved",
-      "sort": 50
+      "sort": 50,
+      "created_at": "2026-11-17T11:35:07.256756+00:00",
+      "updated_at": "2026-11-17T11:35:07.256756+00:00"
     },
     {
       "id": "sp-ekaterina-konyuh-sinitsa",
@@ -156,7 +166,9 @@
       "address": null,
       "geo": null,
       "status": "approved",
-      "sort": 60
+      "sort": 60,
+      "created_at": "2026-11-17T11:35:07.256756+00:00",
+      "updated_at": "2026-11-17T11:35:07.256756+00:00"
     },
     {
       "id": "sp-sasha-novi-sad",
@@ -182,7 +194,9 @@
       "address": null,
       "geo": null,
       "status": "approved",
-      "sort": 70
+      "sort": 70,
+      "created_at": "2026-11-17T11:35:07.256756+00:00",
+      "updated_at": "2026-11-17T11:35:07.256756+00:00"
     },
     {
       "id": "sp-igor-shtuchnyy",
@@ -208,7 +222,9 @@
       "address": null,
       "geo": null,
       "status": "approved",
-      "sort": 80
+      "sort": 80,
+      "created_at": "2026-11-17T11:35:07.256756+00:00",
+      "updated_at": "2026-11-17T11:35:07.256756+00:00"
     },
     {
       "id": "sp-aleksandr-dimitrievich",
@@ -234,7 +250,9 @@
       "address": null,
       "geo": null,
       "status": "approved",
-      "sort": 90
+      "sort": 90,
+      "created_at": "2026-11-17T11:35:07.256756+00:00",
+      "updated_at": "2026-11-17T11:35:07.256756+00:00"
     },
     {
       "id": "sp-artem-semenov",
@@ -260,7 +278,9 @@
       "address": null,
       "geo": null,
       "status": "approved",
-      "sort": 100
+      "sort": 100,
+      "created_at": "2026-11-17T11:35:07.256756+00:00",
+      "updated_at": "2026-11-17T11:35:07.256756+00:00"
     },
     {
       "id": "sp-marina-gorbunova",
@@ -286,7 +306,9 @@
       "address": null,
       "geo": null,
       "status": "approved",
-      "sort": 110
+      "sort": 110,
+      "created_at": "2026-11-17T11:35:07.256756+00:00",
+      "updated_at": "2026-11-17T11:35:07.256756+00:00"
     },
     {
       "id": "sp-daria-konovalova",
@@ -312,7 +334,9 @@
       "address": null,
       "geo": null,
       "status": "approved",
-      "sort": 120
+      "sort": 120,
+      "created_at": "2026-11-17T11:35:07.256756+00:00",
+      "updated_at": "2026-11-17T11:35:07.256756+00:00"
     },
     {
       "id": "sp-nadezhda-logoped",
@@ -338,7 +362,9 @@
       "address": null,
       "geo": null,
       "status": "approved",
-      "sort": 130
+      "sort": 130,
+      "created_at": "2026-11-17T11:35:07.256756+00:00",
+      "updated_at": "2026-11-17T11:35:07.256756+00:00"
     },
     {
       "id": "sp-sofya-logoped",
@@ -364,7 +390,9 @@
       "address": null,
       "geo": null,
       "status": "approved",
-      "sort": 140
+      "sort": 140,
+      "created_at": "2026-11-17T11:35:07.256756+00:00",
+      "updated_at": "2026-11-17T11:35:07.256756+00:00"
     },
     {
       "id": "sp-elmira-logoped",
@@ -390,7 +418,9 @@
       "address": null,
       "geo": null,
       "status": "approved",
-      "sort": 150
+      "sort": 150,
+      "created_at": "2026-11-17T11:35:07.256756+00:00",
+      "updated_at": "2026-11-17T11:35:07.256756+00:00"
     },
     {
       "id": "sp-irina-vorontsova",
@@ -416,7 +446,9 @@
       "address": null,
       "geo": null,
       "status": "approved",
-      "sort": 160
+      "sort": 160,
+      "created_at": "2026-11-17T11:35:07.256756+00:00",
+      "updated_at": "2026-11-17T11:35:07.256756+00:00"
     },
     {
       "id": "sp-lena-surzhikova",
@@ -442,7 +474,9 @@
       "address": null,
       "geo": null,
       "status": "approved",
-      "sort": 170
+      "sort": 170,
+      "created_at": "2026-11-17T11:35:07.256756+00:00",
+      "updated_at": "2026-11-17T11:35:07.256756+00:00"
     }
   ]
 }
