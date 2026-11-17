@@ -7,7 +7,7 @@ create table if not exists public.specialists (
   slug       text not null unique,             -- адрес страницы /specialists/<slug>/
   name       text not null,
   type       text not null                     -- психолог / логопед / дефектолог / нейропсихолог / невролог / репетитор
-             check (type in ('psy','logo','defect','neuro','neurol','tutor','massage','gv','doula','pediatr','fampsy','osteo','lor','derm','ophth','psychiatr')),
+             check (type in ('psy','logo','defect','neuro','neurol','tutor','massage','gv','doula','pediatr','fampsy','osteo','lor','derm','ophth','psychiatr','swim')),
   age_from   smallint,                         -- null = возраст неизвестен
   age_to     smallint,
   lang       text,
@@ -60,7 +60,7 @@ update public.specialists set gender = 'm' where id in ('sp-igor-shtuchnyy','sp-
 
 -- ── Данные ───────────────────────────────────────────────────────────────
 alter table public.specialists drop constraint if exists specialists_type_check;
-alter table public.specialists add constraint specialists_type_check check (type in ('psy','logo','defect','neuro','neurol','tutor','massage','gv','doula','pediatr','fampsy','osteo','lor','derm','ophth','psychiatr'));
+alter table public.specialists add constraint specialists_type_check check (type in ('psy','logo','defect','neuro','neurol','tutor','massage','gv','doula','pediatr','fampsy','osteo','lor','derm','ophth','psychiatr','swim'));
 
 insert into public.specialists (id, slug, name, type, age_from, age_to, lang, place, price, fee, dur, photo, short, about, tg, wa, ig, channel, phone, site, address, geo, status, sort) values
   ('sp-maria-sidorkina', 'maria-sidorkina', 'Мария Сидоркина', 'psy', 3, 17, 'Русский', 'Белград, Нови-Сад · кабинет или онлайн', '55 минут · €45', '€45', '55 минут', 'https://optim.tildacdn.pub/tild3930-6162-4661-b536-613730613137/-/resize/920x/-/format/webp/hwMJRtfdCjI_1.jpg.webp', 'Помогает детям-эмигрантам адаптироваться, справиться со страхами и наладить отношения.', 'Детский и подростковый психолог Okids (Вена). Специализируется на работе с детьми-эмигрантами: помогает адаптироваться к новой среде, преодолеть страхи и неуверенность, наладить отношения со сверстниками и близкими. Интегративный подход, в центре — личность ребёнка; использует игровую и арт-терапию.', 'https://t.me/psy_marys', 'https://wa.me/79997194433', 'https://www.instagram.com/psy_marys/', 'https://t.me/kidspsy_maria_sidorkina', null, 'https://maria-sidorkina.tilda.ws/', null, null, 'approved', 10),
