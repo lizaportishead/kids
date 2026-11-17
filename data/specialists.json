@@ -229,8 +229,11 @@
       "channel": null,
       "phone": null,
       "site": null,
-      "address": null,
-      "geo": null,
+      "address": "Dubljanska 41, 11000 Beograd",
+      "geo": [
+        44.7958354,
+        20.4733622
+      ],
       "status": "approved",
       "sort": 80,
       "created_at": "2026-11-17T11:35:07.256756+00:00",
@@ -983,8 +986,11 @@
       "channel": null,
       "phone": "+381 63 1463340",
       "site": null,
-      "address": null,
-      "geo": null,
+      "address": "Omladinskih brigada 86a, Beograd",
+      "geo": [
+        44.8118674,
+        20.4011749
+      ],
       "status": "approved",
       "sort": 340,
       "created_at": "2026-11-17T15:56:36.324066+00:00",
@@ -1041,8 +1047,11 @@
       "channel": "https://t.me/dr_irking",
       "phone": "+381 11 785 7777",
       "site": "https://www.vizim.co.rs/",
-      "address": null,
-      "geo": null,
+      "address": "Zdravka Čelara 14a, Beograd",
+      "geo": [
+        44.81447,
+        20.4825671
+      ],
       "status": "approved",
       "sort": 360,
       "created_at": "2026-11-17T15:56:36.324066+00:00",
@@ -1100,7 +1109,10 @@
       "phone": "+381 65 4770470",
       "site": null,
       "address": "Ćirila i Metodija 16, Novi Sad",
-      "geo": null,
+      "geo": [
+        45.239046,
+        19.8207334
+      ],
       "status": "approved",
       "sort": 380,
       "created_at": "2026-11-17T15:56:36.324066+00:00",
@@ -1158,7 +1170,10 @@
       "phone": "+381 63 497 447",
       "site": "https://alfamedstar.rs/doctors/tokmakova",
       "address": "Milentija Popovića 5v, Beograd",
-      "geo": null,
+      "geo": [
+        44.8109176,
+        20.4344469
+      ],
       "status": "approved",
       "sort": 400,
       "created_at": "2026-11-17T15:56:36.324066+00:00",
@@ -1187,7 +1202,10 @@
       "phone": "+381 64 9510 000",
       "site": "https://nerushai.com/",
       "address": "Vojvode Stepe 250, Beograd",
-      "geo": null,
+      "geo": [
+        44.7695713,
+        20.4785303
+      ],
       "status": "approved",
       "sort": 410,
       "created_at": "2026-11-17T15:56:36.324066+00:00",
@@ -1216,7 +1234,10 @@
       "phone": "011 404 0100",
       "site": "https://agoncharuk.tilda.ws/",
       "address": "Kataničeva 8, Beograd",
-      "geo": null,
+      "geo": [
+        44.7995929,
+        20.4705739
+      ],
       "status": "approved",
       "sort": 420,
       "created_at": "2026-11-17T15:56:36.324066+00:00",
@@ -1245,7 +1266,10 @@
       "phone": null,
       "site": "https://doctorus.rs/",
       "address": "Višegradska 1A, Beograd",
-      "geo": null,
+      "geo": [
+        44.8026301,
+        20.4527323
+      ],
       "status": "approved",
       "sort": 430,
       "created_at": "2026-11-17T15:56:36.324066+00:00",
@@ -1274,7 +1298,10 @@
       "phone": "+381 63 497 447",
       "site": "https://alfamedstar.rs/doctors/elena-bakovich",
       "address": "Milentija Popovića 5v, Beograd",
-      "geo": null,
+      "geo": [
+        44.8109176,
+        20.4344469
+      ],
       "status": "approved",
       "sort": 440,
       "created_at": "2026-11-17T15:56:36.324066+00:00",
@@ -1303,7 +1330,10 @@
       "phone": "+381 63 497 447",
       "site": null,
       "address": "Milentija Popovića 5v, Beograd",
-      "geo": null,
+      "geo": [
+        44.8109176,
+        20.4344469
+      ],
       "status": "approved",
       "sort": 450,
       "created_at": "2026-11-17T15:56:36.324066+00:00",
@@ -1376,21 +1406,24 @@
       "age_from": 0,
       "age_to": null,
       "lang": "Русский",
-      "place": "Белград · MediGroup Požeška, Панчево · онлайн-запись по телефону",
+      "place": "Белград · MediGroup Požeška, Панчево · Med Medik, онлайн-запись по телефону",
       "price": null,
       "fee": null,
       "dur": null,
       "photo": null,
       "short": "ЛОР для взрослых и детей с 0 лет: тимпанометрия, аудиометрия.",
-      "about": "Оториноларинголог (взрослый и детский), выпускница педиатрического факультета РНИМУ, работала педиатром и ЛОРом в клиниках Москвы; лицензия в Сербии. Принимает взрослых и детей от 0 лет: тимпанометрия, импедансометрия, аудиометрия, промывание лакун миндалин, промывание носа методом перемещения. Приём: MediGroup Požeška 156 (Белград) — пн, чт и одна суббота в месяц; MediGroup Панчево (Zmaj Jove Jovanovića 7) — вт, ср, пт и одна суббота в месяц. Запись: 011 40 40 100. Визитка из чата «Медицина в Сербии». Подробности и актуальность контактов уточняйте у специалиста.",
+      "about": "Оториноларинголог (взрослый и детский), выпускница педиатрического факультета РНИМУ, работала педиатром и ЛОРом в клиниках Москвы; лицензия в Сербии. Принимает взрослых и детей от 0 лет: тимпанометрия, импедансометрия, аудиометрия, промывание лакун миндалин, промывание носа методом перемещения. Приём: MediGroup Požeška 156 (Белград) — пн, чт и одна суббота в месяц; Панчево — Med Medik (Ђердапска 35) — вт, ср, пт и одна суббота в месяц. Запись: 011 40 40 100. Визитка из чата «Медицина в Сербии». Подробности и актуальность контактов уточняйте у специалиста.",
       "tg": null,
       "wa": null,
       "ig": null,
       "channel": null,
       "phone": "011 40 40 100",
       "site": "https://www.medigroup.rs/lokacije/dom-zdravlja-medigroup-pozeska/",
-      "address": "Požeška 156, Beograd",
-      "geo": null,
+      "address": "Med Medik - Панчево, Ђердапска 35, 26000 Панчево",
+      "geo": [
+        44.8819016,
+        20.6698568
+      ],
       "status": "approved",
       "sort": 490,
       "created_at": "2026-11-17T16:00:36.119127+00:00",
@@ -1419,7 +1452,10 @@
       "phone": "011 7777 400",
       "site": "https://teslamedical.rs/",
       "address": "Zdravka Čelara 14a, Beograd",
-      "geo": null,
+      "geo": [
+        44.81447,
+        20.4825671
+      ],
       "status": "approved",
       "sort": 500,
       "created_at": "2026-11-17T16:00:36.119127+00:00",
@@ -1448,7 +1484,10 @@
       "phone": "+381 11 4040100",
       "site": "https://www.medigroup.rs/lekari/selina-ekaterina/",
       "address": "Bulevar oslobođenja 321, Beograd",
-      "geo": null,
+      "geo": [
+        44.7617016,
+        20.4802491
+      ],
       "status": "approved",
       "sort": 510,
       "created_at": "2026-11-17T16:00:36.119127+00:00",
@@ -1477,7 +1516,10 @@
       "phone": "+381 63 497 447",
       "site": "https://alfamedstar.rs/",
       "address": "Milentija Popovića 5v, Beograd",
-      "geo": null,
+      "geo": [
+        44.8109176,
+        20.4344469
+      ],
       "status": "approved",
       "sort": 520,
       "created_at": "2026-11-17T16:00:36.119127+00:00",
@@ -1535,7 +1577,10 @@
       "phone": "011 40 40 100",
       "site": null,
       "address": "Požeška 156, Beograd",
-      "geo": null,
+      "geo": [
+        44.7733308,
+        20.4137447
+      ],
       "status": "approved",
       "sort": 540,
       "created_at": "2026-11-17T16:00:36.119127+00:00",
