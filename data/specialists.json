@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-17T13:15:29.980Z",
+  "updatedAt": "2026-11-17T11:36:42.562546+00:00",
   "count": 17,
   "specialists": [
     {
@@ -26,9 +26,7 @@
       "address": null,
       "geo": null,
       "status": "approved",
-      "sort": 10,
-      "created_at": "2026-11-17T11:35:07.256756+00:00",
-      "updated_at": "2026-11-17T11:35:07.256756+00:00"
+      "sort": 10
     },
     {
       "id": "sp-svetlana-lavrenova",
@@ -54,9 +52,7 @@
       "address": null,
       "geo": null,
       "status": "approved",
-      "sort": 20,
-      "created_at": "2026-11-17T11:35:07.256756+00:00",
-      "updated_at": "2026-11-17T11:35:07.256756+00:00"
+      "sort": 20
     },
     {
       "id": "sp-emiliya-asainova",
@@ -82,9 +78,7 @@
       "address": null,
       "geo": null,
       "status": "approved",
-      "sort": 30,
-      "created_at": "2026-11-17T11:35:07.256756+00:00",
-      "updated_at": "2026-11-17T11:35:07.256756+00:00"
+      "sort": 30
     },
     {
       "id": "sp-kseniya-yurkanova",
@@ -110,9 +104,7 @@
       "address": null,
       "geo": null,
       "status": "approved",
-      "sort": 40,
-      "created_at": "2026-11-17T11:35:07.256756+00:00",
-      "updated_at": "2026-11-17T11:35:07.256756+00:00"
+      "sort": 40
     },
     {
       "id": "sp-olga-pilyugina",
@@ -138,9 +130,7 @@
       "address": null,
       "geo": null,
       "status": "approved",
-      "sort": 50,
-      "created_at": "2026-11-17T11:35:07.256756+00:00",
-      "updated_at": "2026-11-17T11:35:07.256756+00:00"
+      "sort": 50
     },
     {
       "id": "sp-ekaterina-konyuh-sinitsa",
@@ -166,9 +156,7 @@
       "address": null,
       "geo": null,
       "status": "approved",
-      "sort": 60,
-      "created_at": "2026-11-17T11:35:07.256756+00:00",
-      "updated_at": "2026-11-17T11:35:07.256756+00:00"
+      "sort": 60
     },
     {
       "id": "sp-sasha-novi-sad",
@@ -194,9 +182,7 @@
       "address": null,
       "geo": null,
       "status": "approved",
-      "sort": 70,
-      "created_at": "2026-11-17T11:35:07.256756+00:00",
-      "updated_at": "2026-11-17T11:35:07.256756+00:00"
+      "sort": 70
     },
     {
       "id": "sp-igor-shtuchnyy",
@@ -222,9 +208,7 @@
       "address": null,
       "geo": null,
       "status": "approved",
-      "sort": 80,
-      "created_at": "2026-11-17T11:35:07.256756+00:00",
-      "updated_at": "2026-11-17T11:35:07.256756+00:00"
+      "sort": 80
     },
     {
       "id": "sp-aleksandr-dimitrievich",
@@ -250,9 +234,7 @@
       "address": null,
       "geo": null,
       "status": "approved",
-      "sort": 90,
-      "created_at": "2026-11-17T11:35:07.256756+00:00",
-      "updated_at": "2026-11-17T11:35:07.256756+00:00"
+      "sort": 90
     },
     {
       "id": "sp-artem-semenov",
@@ -278,9 +260,7 @@
       "address": null,
       "geo": null,
       "status": "approved",
-      "sort": 100,
-      "created_at": "2026-11-17T11:35:07.256756+00:00",
-      "updated_at": "2026-11-17T11:35:07.256756+00:00"
+      "sort": 100
     },
     {
       "id": "sp-marina-gorbunova",
@@ -306,9 +286,7 @@
       "address": null,
       "geo": null,
       "status": "approved",
-      "sort": 110,
-      "created_at": "2026-11-17T11:35:07.256756+00:00",
-      "updated_at": "2026-11-17T11:35:07.256756+00:00"
+      "sort": 110
     },
     {
       "id": "sp-daria-konovalova",
@@ -334,9 +312,7 @@
       "address": null,
       "geo": null,
       "status": "approved",
-      "sort": 120,
-      "created_at": "2026-11-17T11:35:07.256756+00:00",
-      "updated_at": "2026-11-17T11:35:07.256756+00:00"
+      "sort": 120
     },
     {
       "id": "sp-nadezhda-logoped",
@@ -362,9 +338,7 @@
       "address": null,
       "geo": null,
       "status": "approved",
-      "sort": 130,
-      "created_at": "2026-11-17T11:35:07.256756+00:00",
-      "updated_at": "2026-11-17T11:35:07.256756+00:00"
+      "sort": 130
     },
     {
       "id": "sp-sofya-logoped",
@@ -390,9 +364,7 @@
       "address": null,
       "geo": null,
       "status": "approved",
-      "sort": 140,
-      "created_at": "2026-11-17T11:35:07.256756+00:00",
-      "updated_at": "2026-11-17T11:35:07.256756+00:00"
+      "sort": 140
     },
     {
       "id": "sp-elmira-logoped",
@@ -418,9 +390,7 @@
       "address": null,
       "geo": null,
       "status": "approved",
-      "sort": 150,
-      "created_at": "2026-11-17T11:35:07.256756+00:00",
-      "updated_at": "2026-11-17T11:35:07.256756+00:00"
+      "sort": 150
     },
     {
       "id": "sp-irina-vorontsova",
@@ -446,9 +416,7 @@
       "address": null,
       "geo": null,
       "status": "approved",
-      "sort": 160,
-      "created_at": "2026-11-17T11:35:07.256756+00:00",
-      "updated_at": "2026-11-17T11:35:07.256756+00:00"
+      "sort": 160
     },
     {
       "id": "sp-lena-surzhikova",
@@ -474,9 +442,33 @@
       "address": null,
       "geo": null,
       "status": "approved",
-      "sort": 170,
-      "created_at": "2026-11-17T11:35:07.256756+00:00",
-      "updated_at": "2026-11-17T11:35:07.256756+00:00"
+      "sort": 170
+    },
+    {
+      "id": "sp-arina-logoped",
+      "slug": "arina-logoped",
+      "name": "Арина",
+      "type": "logo",
+      "age_from": null,
+      "age_to": null,
+      "lang": "Русский",
+      "place": "Белград · очно и онлайн",
+      "price": null,
+      "fee": null,
+      "dur": null,
+      "photo": "data/images/specialist-arina-logoped.jpg",
+      "short": "Логопед-дефектолог, педагог по подготовке к школе и развитию письменной речи.",
+      "about": "Логопед-дефектолог и педагог по подготовке к школе и развитию письменной речи. Проводит очные и онлайн занятия в Белграде. Найдена в Telegram-канале. Подробности и актуальность контактов уточняйте у специалиста.",
+      "tg": "https://t.me/logoped_zhivanovich",
+      "wa": null,
+      "ig": null,
+      "channel": null,
+      "phone": null,
+      "site": null,
+      "address": null,
+      "geo": null,
+      "status": "approved",
+      "sort": 180
     }
   ]
 }
