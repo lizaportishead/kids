@@ -1,0 +1,304 @@
+{
+ "updatedAt": null,
+ "note": "Список игралок Белграда. status.* заполняет ежедневная проверка сторис в Instagram. storyHint: true = в профиле прямо сказано, что дни/часы публикуют в сторис. weekHours — 7 значений Пн..Вс (null = выходной); today = {date,status:open|closed,hours,note} пишет ежедневная проверка.",
+ "playgrounds": [
+  {
+   "id": "loro",
+   "name": "Loro Kids Bar and Play",
+   "address": "Грчића Миленка 63a",
+   "district": "Воздовац",
+   "phone": "065 4925645",
+   "instagram": "loro_bar_and_play",
+   "bioHours": "пн–пт 15–21, сб–вс 10–21",
+   "ages": "до 7 лет",
+   "storyHint": true,
+   "weekHours": [
+    "15–21",
+    "15–21",
+    "15–21",
+    "15–21",
+    "15–21",
+    "10–21",
+    "10–21"
+   ],
+   "today": {
+    "date": "2026-11-19",
+    "status": "open",
+    "hours": "15–21",
+    "note": "сторис: «danas smo slobodni za igru»"
+   },
+   "lat": 44.7907507,
+   "lng": 20.4893144,
+   "logo": "data/images/playground-loro.jpg"
+  },
+  {
+   "id": "lollipop",
+   "name": "Lollipop Igraonica",
+   "address": "Господара Вучића 176",
+   "district": "Врачар",
+   "phone": "063 370173",
+   "instagram": "lollipop_igraonica",
+   "bioHours": "ежедневно 15–21",
+   "storyHint": true,
+   "weekHours": [
+    "15–21",
+    "15–21",
+    "15–21",
+    "15–21",
+    "15–21",
+    "15–21",
+    "15–21"
+   ],
+   "lat": 44.7907903,
+   "lng": 20.4932275,
+   "logo": "data/images/playground-lollipop.jpg"
+  },
+  {
+   "id": "dofi",
+   "name": "DoFi Bar & Play",
+   "address": "Краља Бодина 9",
+   "district": "Воздовац",
+   "phone": "062 8900389",
+   "instagram": "dofi_barandplay",
+   "bioHours": "пн–пт 15–21, сб–вс 10–21",
+   "weekHours": [
+    "15–21",
+    "15–21",
+    "15–21",
+    "15–21",
+    "15–21",
+    "10–21",
+    "10–21"
+   ],
+   "lat": 44.7889405,
+   "lng": 20.4862411,
+   "logo": "data/images/playground-dofi.jpg"
+  },
+  {
+   "id": "nonna",
+   "name": "Nonna coffee & play",
+   "address": "Беранска 1",
+   "district": "Воздовац",
+   "phone": "065 3328886",
+   "instagram": "nonna_decijaigraonica",
+   "bioHours": "пн–пт 8–22, сб–вс 9–22",
+   "weekHours": [
+    "8–22",
+    "8–22",
+    "8–22",
+    "8–22",
+    "8–22",
+    "9–22",
+    "9–22"
+   ],
+   "lat": 44.7592167,
+   "lng": 20.4824973,
+   "logo": "data/images/playground-nonna.jpg"
+  },
+  {
+   "id": "momo",
+   "name": "MoMo Bar & Play",
+   "address": "Моме капора 4",
+   "district": "Врачар",
+   "phone": "069 4094499",
+   "instagram": "momobarandplay",
+   "bioHours": "бар 9–22, игровая 9–21",
+   "weekHours": [
+    "9–21",
+    "9–21",
+    "9–21",
+    "9–21",
+    "9–21",
+    "9–21",
+    "9–21"
+   ],
+   "lat": 44.7978883,
+   "lng": 20.4712282,
+   "logo": "data/images/playground-momo.jpg"
+  },
+  {
+   "id": "casadelsole",
+   "name": "Casa del Sole",
+   "address": "Жире Адамовића 21",
+   "district": "Земун",
+   "phone": "063 548171",
+   "instagram": "casadelsole_playcafe",
+   "bioHours": "вт–пт 15–21, сб–вс 10–21, пн выходной",
+   "weekHours": [
+    null,
+    "15–21",
+    "15–21",
+    "15–21",
+    "15–21",
+    "10–21",
+    "10–21"
+   ],
+   "lat": 44.8515272,
+   "lng": 20.3560832,
+   "logo": "data/images/playground-casadelsole.jpg"
+  },
+  {
+   "id": "graja",
+   "name": "Graja Bar & Play",
+   "address": "Војводе Степе 260",
+   "district": "Воздовац",
+   "phone": "",
+   "instagram": "graja.barandplay",
+   "bioHours": "пн–пт 13–21, сб–вс 9–21",
+   "weekHours": [
+    "13–21",
+    "13–21",
+    "13–21",
+    "13–21",
+    "13–21",
+    "9–21",
+    "9–21"
+   ],
+   "lat": 44.7690406,
+   "lng": 20.4786918,
+   "logo": "data/images/playground-graja.jpg"
+  },
+  {
+   "id": "malimis",
+   "name": "Mali Miš",
+   "address": "Мадридска 8",
+   "district": "Звездара",
+   "phone": "066 319955",
+   "instagram": "decija_igraonica_mali_mis",
+   "bioHours": "ежедневно 11–21",
+   "note": "игра бесплатная",
+   "weekHours": [
+    "11–21",
+    "11–21",
+    "11–21",
+    "11–21",
+    "11–21",
+    "11–21",
+    "11–21"
+   ],
+   "lat": 44.7866743,
+   "lng": 20.5164808,
+   "logo": "data/images/playground-malimis.jpg"
+  },
+  {
+   "id": "gotivac",
+   "name": "Gotivac",
+   "address": "Устаничка 94",
+   "district": "Воздовац",
+   "phone": "063 8271819",
+   "instagram": "beogradskigotivac",
+   "bioHours": "ежедневно 9–21:30",
+   "weekHours": [
+    "9–21:30",
+    "9–21:30",
+    "9–21:30",
+    "9–21:30",
+    "9–21:30",
+    "9–21:30",
+    "9–21:30"
+   ],
+   "lat": 44.7844347,
+   "lng": 20.4847502,
+   "logo": "data/images/playground-gotivac.jpg"
+  },
+  {
+   "id": "leut",
+   "name": "Leut igraonica",
+   "address": "Тимочка 10",
+   "district": "Врачар",
+   "phone": "064 3210210",
+   "instagram": "igraonicaleut",
+   "bioHours": "",
+   "lat": 44.796301,
+   "lng": 20.4837351,
+   "logo": "data/images/playground-leut.jpg"
+  },
+  {
+   "id": "tresnjica",
+   "name": "Igraonica Trešnjica",
+   "address": "Анастаса Јовановића 1",
+   "district": "Врачар",
+   "phone": "065 5049559",
+   "instagram": "igraonicatresnjica",
+   "bioHours": "ежедневно",
+   "lat": 44.790809,
+   "lng": 20.4720638,
+   "logo": "data/images/playground-tresnjica.jpg"
+  },
+  {
+   "id": "flamingo",
+   "name": "Flamingo Bar & Play",
+   "address": "Поп Стојанова 20",
+   "district": "Врачар",
+   "phone": "069 1234005",
+   "instagram": "flamingo.barandplay",
+   "bioHours": "пн–пт 14–21, сб–вс 10–21",
+   "weekHours": [
+    "14–21",
+    "14–21",
+    "14–21",
+    "14–21",
+    "14–21",
+    "10–21",
+    "10–21"
+   ],
+   "lat": 44.7967097,
+   "lng": 20.4897562,
+   "logo": "data/images/playground-flamingo.jpg"
+  },
+  {
+   "id": "coco",
+   "name": "CoCo Igraonica & Cafe Bar",
+   "address": "Булевар краља Александра 312",
+   "district": "Звездара",
+   "phone": "065 3422291",
+   "instagram": "coco_igraonica",
+   "bioHours": "пн–пт 16–21, сб–вс 10–21",
+   "weekHours": [
+    "16–21",
+    "16–21",
+    "16–21",
+    "16–21",
+    "16–21",
+    "10–21",
+    "10–21"
+   ],
+   "lat": 44.7947528,
+   "lng": 20.4999877,
+   "logo": "data/images/playground-coco.jpg"
+  },
+  {
+   "id": "tiktak",
+   "name": "Igraonica Tik-Tak",
+   "address": "Војислава Илића 28",
+   "district": "Звездара",
+   "phone": "062 770111",
+   "instagram": "decijaigraonicatiktak",
+   "bioHours": "",
+   "lat": 44.7935721,
+   "lng": 20.4942758,
+   "logo": "data/images/playground-tiktak.jpg"
+  },
+  {
+   "id": "goplay",
+   "name": "GO&PLAY Zvezdara",
+   "address": "Анте Богићевића 8",
+   "district": "Звездара",
+   "phone": "063 690490",
+   "instagram": "goplay.igraonica",
+   "bioHours": "",
+   "lat": 44.799604,
+   "lng": 20.498062,
+   "logo": "data/images/playground-goplay.jpg"
+  }
+ ],
+ "notFound": [
+  "Dečija Igraonica SKY (Војислава Илића 67)",
+  "Zvrk i Zrno (Живка Давидовића 24)",
+  "Mali Čičak (Драгутина Милутиновића 1)",
+  "Decija igraonica Vozdovac (Грчића Миленка 56)",
+  "Wonderland",
+  "Didiland",
+  "Toy & Joy"
+ ]
+}
