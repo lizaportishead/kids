@@ -1,5 +1,5 @@
 {
- "updatedAt": "2026-11-20T12:25:00+01:00",
+ "updatedAt": "2026-11-20T15:39:11+01:00",
  "note": "Список игралок Белграда. status.* заполняет ежедневная проверка сторис в Instagram. storyHint: true = в профиле прямо сказано, что дни/часы публикуют в сторис. weekHours — 7 значений Пн..Вс (null = выходной); today = {date,status:open|closed,hours,note} пишет ежедневная проверка.",
  "playgrounds": [
   {
@@ -28,8 +28,8 @@
     "date": "2026-11-20",
     "status": "open",
     "hours": "15–21",
-    "note": "сторис: «Drugari danas smo slobodni od 15h do 21h»",
-    "checkedAt": "12:20"
+    "note": "сторис: «Drugari danas smo slobodni od 15h do 21h za igru i druženje»",
+    "checkedAt": "15:40"
    }
   },
   {
@@ -127,8 +127,8 @@
     "date": "2026-11-20",
     "status": "open",
     "hours": "весь день",
-    "note": "сторис: «Petak: slobodni smo za igru ceo dan!»",
-    "checkedAt": "12:21"
+    "note": "сторис: «Petak: slobodni smo za igru ceo dan»",
+    "checkedAt": "11:36"
    }
   },
   {
@@ -177,7 +177,7 @@
     "status": "open",
     "hours": "13–21",
     "note": "сторис: «Petak, slobodni za igranjac 13–21h»",
-    "checkedAt": "12:21"
+    "checkedAt": "11:36"
    }
   },
   {
@@ -271,8 +271,8 @@
     "date": "2026-11-20",
     "status": "open",
     "hours": "14–21",
-    "note": "сторис: «Radno vreme: Petak 20. novembar, 14h–21h»",
-    "checkedAt": "12:22"
+    "note": "сторис: «Petak 20. novembar, 14h–21h»",
+    "checkedAt": "11:36"
    }
   },
   {
@@ -299,8 +299,8 @@
     "date": "2026-11-20",
     "status": "open",
     "hours": "16–21",
-    "note": "сторис: Светский день ребёнка, «družimo se 16–21h», 2 часа игры со скидкой",
-    "checkedAt": "12:22"
+    "note": "сторис: «Danas je njihov dan» (Всемирный день ребёнка), «Družimo se 16–21h»",
+    "checkedAt": "11:36"
    }
   },
   {
@@ -318,8 +318,8 @@
     "date": "2026-11-20",
     "status": "open",
     "hours": "15–17:30",
-    "note": "сторис: «Petak, otvoreni za igru 15–17:30h», потом день рождения",
-    "checkedAt": "12:22"
+    "note": "сторис: «Petak, otvoreni za igru 15–17:30h, nakon toga slavimo rođendan»",
+    "checkedAt": "15:45"
    }
   },
   {
