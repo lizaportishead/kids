@@ -1,5 +1,5 @@
 {
- "updatedAt": "2026-11-20T11:36:46+01:00",
+ "updatedAt": "2026-11-20T12:25:00+01:00",
  "note": "Список игралок Белграда. status.* заполняет ежедневная проверка сторис в Instagram. storyHint: true = в профиле прямо сказано, что дни/часы публикуют в сторис. weekHours — 7 значений Пн..Вс (null = выходной); today = {date,status:open|closed,hours,note} пишет ежедневная проверка.",
  "playgrounds": [
   {
@@ -23,7 +23,14 @@
    ],
    "lat": 44.7907507,
    "lng": 20.4893144,
-   "logo": "data/images/playground-loro.jpg"
+   "logo": "data/images/playground-loro.jpg",
+   "today": {
+    "date": "2026-11-20",
+    "status": "open",
+    "hours": "15–21",
+    "note": "сторис: «Drugari danas smo slobodni od 15h do 21h»",
+    "checkedAt": "12:20"
+   }
   },
   {
    "id": "lollipop",
@@ -120,8 +127,8 @@
     "date": "2026-11-20",
     "status": "open",
     "hours": "весь день",
-    "note": "сторис: «Petak: slobodni smo za igru ceo dan»",
-    "checkedAt": "11:36"
+    "note": "сторис: «Petak: slobodni smo za igru ceo dan!»",
+    "checkedAt": "12:21"
    }
   },
   {
@@ -170,7 +177,7 @@
     "status": "open",
     "hours": "13–21",
     "note": "сторис: «Petak, slobodni za igranjac 13–21h»",
-    "checkedAt": "11:36"
+    "checkedAt": "12:21"
    }
   },
   {
@@ -264,8 +271,8 @@
     "date": "2026-11-20",
     "status": "open",
     "hours": "14–21",
-    "note": "сторис: «Petak 20. novembar, 14h–21h»",
-    "checkedAt": "11:36"
+    "note": "сторис: «Radno vreme: Petak 20. novembar, 14h–21h»",
+    "checkedAt": "12:22"
    }
   },
   {
@@ -292,8 +299,8 @@
     "date": "2026-11-20",
     "status": "open",
     "hours": "16–21",
-    "note": "сторис: «Danas je njihov dan» (Всемирный день ребёнка), «Družimo se 16–21h»",
-    "checkedAt": "11:36"
+    "note": "сторис: Светский день ребёнка, «družimo se 16–21h», 2 часа игры со скидкой",
+    "checkedAt": "12:22"
    }
   },
   {
@@ -306,7 +313,14 @@
    "bioHours": "",
    "lat": 44.7935721,
    "lng": 20.4942758,
-   "logo": "data/images/playground-tiktak.jpg"
+   "logo": "data/images/playground-tiktak.jpg",
+   "today": {
+    "date": "2026-11-20",
+    "status": "open",
+    "hours": "15–17:30",
+    "note": "сторис: «Petak, otvoreni za igru 15–17:30h», потом день рождения",
+    "checkedAt": "12:22"
+   }
   },
   {
    "id": "goplay",
@@ -340,7 +354,14 @@
    ],
    "lat": 44.8108688,
    "lng": 20.4765981,
-   "logo": "data/images/playground-lagiungla.jpg"
+   "logo": "data/images/playground-lagiungla.jpg",
+   "today": {
+    "date": "2026-11-20",
+    "status": "open",
+    "hours": "12–21",
+    "note": "сторис: «Slobodni za igru 12:00–21:00h»",
+    "checkedAt": "12:23"
+   }
   },
   {
    "id": "liberte",
@@ -361,7 +382,14 @@
    ],
    "lat": 44.7764047,
    "lng": 20.4751751,
-   "logo": "data/images/playground-liberte.jpg"
+   "logo": "data/images/playground-liberte.jpg",
+   "today": {
+    "date": "2026-11-20",
+    "status": "open",
+    "hours": "8–22",
+    "note": "сторис: «Igraonica slobodna: petak 20.11 08:00–22:00h»",
+    "checkedAt": "12:23"
+   }
   }
  ],
  "notFound": [
