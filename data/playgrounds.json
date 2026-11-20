@@ -319,6 +319,49 @@
    "lat": 44.799604,
    "lng": 20.498062,
    "logo": "data/images/playground-goplay.jpg"
+  },
+  {
+   "id": "lagiungla",
+   "name": "La Giungla",
+   "address": "Кнеза Данила 9",
+   "district": "Палилула",
+   "phone": "062 8133823",
+   "instagram": "lagiungla.belgrade",
+   "bioHours": "пн–пт 12–21, сб–вс 9–21",
+   "ages": "0–10 лет",
+   "weekHours": [
+    "12–21",
+    "12–21",
+    "12–21",
+    "12–21",
+    "12–21",
+    "9–21",
+    "9–21"
+   ],
+   "lat": 44.8108688,
+   "lng": 20.4765981,
+   "logo": "data/images/playground-lagiungla.jpg"
+  },
+  {
+   "id": "liberte",
+   "name": "Liberté Igraonica & Café",
+   "address": "Војводе Степе 157",
+   "district": "Воздовац",
+   "phone": "064 3399300",
+   "instagram": "liberte.belgrade",
+   "bioHours": "ежедневно 8–22",
+   "weekHours": [
+    "8–22",
+    "8–22",
+    "8–22",
+    "8–22",
+    "8–22",
+    "8–22",
+    "8–22"
+   ],
+   "lat": 44.7764047,
+   "lng": 20.4751751,
+   "logo": "data/images/playground-liberte.jpg"
   }
  ],
  "notFound": [
