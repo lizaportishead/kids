@@ -390,6 +390,19 @@
     "note": "сторис: «Igraonica slobodna: petak 20.11 08:00–22:00h»",
     "checkedAt": "12:23"
    }
+  },
+  {
+   "id": "kikani",
+   "name": "Kikani Montessori igraonica",
+   "address": "Булевар Вудроа Вилсона 21",
+   "district": "Савски венац",
+   "phone": "060 3033688",
+   "instagram": "kikani.igraonica",
+   "bioHours": "",
+   "lat": 44.8025978,
+   "lng": 20.4481999,
+   "logo": "data/images/playground-kikani.jpg",
+   "note": "Монтессори-игровая и детский сад по часам на Београд на води (напротив ТЦ Galerija), дети до 10 лет; запись ребёнка обязательна. Мастерские и дни рождения."
   }
  ],
  "notFound": [

@@ -1,7 +1,7 @@
 {
   "updatedAt": "2026-11-17T13:15:29.980Z",
   "city": "Белград",
-  "count": 527,
+  "count": 528,
   "report": [
     {
       "source": "prodlenka",
@@ -17830,6 +17830,38 @@
       "placeLink": null,
       "lat": null,
       "lng": null
+    },
+    {
+      "id": "kikani-grozon-masterskaya-2026-11-29",
+      "title": "Грозон (Груффало): мастерская для мам и детей",
+      "short": "Читаем «Грозона», делаем монтессори-активности и лесные украшения вместе с мамой.",
+      "desc": "Мастерская для мам и детей в Kikani Montessori: читаем книгу про Грозона (Груффало), занимаемся монтессори-активностями, вдохновлёнными лесом, и делаем лесные украшения (шишки-совы, лисички, грибочки, ёжики). Место бронируется предоплатой, бронь не возвращается. Стоимость: мама + 1 ребёнок — 2500 RSD, мама + 2 детей — 3500 RSD, мама + 3 детей — 4000 RSD. Запись: 060 303 3688 или директ в Instagram.",
+      "date": "2026-11-29",
+      "wd": null,
+      "time": "11:30",
+      "dur": "1 час 30 минут",
+      "place": "Kikani Montessori",
+      "address": "Булевар Вудроа Вилсона 21, Савски венац, Белград",
+      "placePhone": "060 303 3688",
+      "placeLink": null,
+      "lat": null,
+      "lng": null,
+      "age": [
+        2,
+        6
+      ],
+      "ageLabel": "2–6 лет",
+      "price": "2500 RSD (мама + 1 ребёнок), 3500 (2 детей), 4000 (3 детей)",
+      "image": "data/images/kikani-grozon-radionica-2026-11-29.jpg",
+      "category": "art",
+      "categoryLabel": "Творчество",
+      "source": {
+        "id": "kikani",
+        "name": "Kikani Montessori",
+        "kind": "Пост в Instagram",
+        "url": "https://www.instagram.com/p/DfwxnAXg6vp/",
+        "cta": "Записаться в Kikani (предоплата)"
+      }
     }
   ]
 }
